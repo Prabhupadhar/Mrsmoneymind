@@ -1,0 +1,43 @@
+<template>
+  <style>
+    @font-face { font-family: "InkHand"; src: local("Ink Free"); }
+    #root { position: absolute; inset: 0; background: linear-gradient(120deg, #4c86e6 0%, #6a4fd6 55%, #7a3cc4 100%); overflow: hidden; }
+    #pcard-art { position: absolute; inset: 0; }
+    #pcard-num { position: absolute; left: 0; top: 250px; width: 100%; text-align: center;
+      font-family: "InkHand"; font-size: 64px; color: #ffd2a6; letter-spacing: 0.08em; }
+    #pcard-title { position: absolute; left: 0; top: 360px; width: 100%; text-align: center;
+      font-family: "InkHand"; font-weight: 700; font-size: 132px; line-height: 1.05; color: #ffffff;
+      text-shadow: 0 8px 0 rgba(30,20,80,0.25); }
+    #pcard-title span { display: inline-block; }
+  </style>
+  <div id="root" data-composition-id="pcard" data-width="1920" data-height="1080">
+    <div id="pcard-num" class="clip" data-start="0" data-duration="3">part one</div>
+    <h1 id="pcard-title" class="clip" data-start="0" data-duration="3">
+      <span>F</span><span>u</span><span>t</span><span>u</span><span>r</span><span>e</span>&nbsp;<span>y</span><span>o</span><span>u</span><br>
+      <span>i</span><span>s</span>&nbsp;<span>a</span>&nbsp;<span>s</span><span>t</span><span>r</span><span>a</span><span>n</span><span>g</span><span>e</span><span>r</span><span>.</span>
+    </h1>
+    <svg id="pcard-art" class="clip" data-start="0" data-duration="3" viewBox="0 0 1920 1080" data-layout-allow-overflow>
+      <!-- peeking head, bottom right -->
+      <g transform="translate(1620,960) scale(0.5)"><g id="pcard-peek">
+        <circle cx="16" cy="-12" r="290" fill="#ff8a2a"/>
+        <ellipse cx="-292" cy="20" rx="44" ry="66" fill="#eec2a2" stroke="#0d0f22" stroke-width="12"/>
+        <ellipse cx="292" cy="20" rx="44" ry="66" fill="#eec2a2" stroke="#0d0f22" stroke-width="12"/>
+        <circle cx="0" cy="0" r="290" fill="#f4d2b6" stroke="#0d0f22" stroke-width="12"/>
+        <path d="M-302,-30 C-326,-330 300,-352 306,-40 C262,-150 160,-186 80,-146 C58,-200 -62,-206 -112,-146 C-182,-186 -272,-136 -302,-30 Z" fill="#1c1a30" stroke="#0d0f22" stroke-width="12" stroke-linejoin="round"/>
+        <path d="M10,-300 C-6,-392 96,-410 86,-338 C72,-372 34,-362 44,-306 Z" fill="#1c1a30" stroke="#0d0f22" stroke-width="10"/>
+        <ellipse cx="-104" cy="30" rx="66" ry="76" fill="#fff" stroke="#0d0f22" stroke-width="11"/>
+        <ellipse cx="104" cy="30" rx="66" ry="76" fill="#fff" stroke="#0d0f22" stroke-width="11"/>
+        <circle cx="-126" cy="0" r="42" fill="#151530"/><circle cx="82" cy="0" r="42" fill="#151530"/>
+        <circle cx="-112" cy="-18" r="13" fill="#fff"/><circle cx="96" cy="-18" r="13" fill="#fff"/>
+      </g></g>
+      <g fill="#ffffff" opacity="0.5"><path d="M260,180 l10,26 26,10 -26,10 -10,26 -10,-26 -26,-10 26,-10 z"/><path d="M1600,260 l7,18 18,7 -18,7 -7,18 -7,-18 -18,-7 18,-7 z"/><path d="M380,840 l6,15 15,6 -15,6 -6,15 -6,-15 -15,-6 15,-6 z"/></g>
+    </svg>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#pcard-num", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 0.05);
+    tl.fromTo("#pcard-title span", { opacity: 0.0, y: 24, filter: "blur(4px)" }, { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.2, stagger: 0.045, ease: "back.out(2)" }, 0.2);
+    tl.fromTo("#pcard-peek", { y: 220 }, { y: 0, duration: 0.6, ease: "back.out(1.6)" }, 1.4);
+    window.__timelines["pcard"] = tl;
+  </script>
+</template>

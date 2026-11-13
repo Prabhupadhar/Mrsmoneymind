@@ -1,0 +1,161 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; background: #e2b781; overflow: hidden; }
+    #mirrorr-art { position: absolute; inset: 0; }
+    #mirrorr-title { position: absolute; top: 96px; left: 0; width: 100%; text-align: center;
+      font-family: "Playfair Display"; font-weight: 900; font-size: 92px; line-height: 1; color: #2a1d14; }
+    #mirrorr-title span { display: inline-block; margin: 0 12px; }
+    #mirrorr-title em { color: #c2452b; font-style: italic; }
+    .k { stroke: #21170f; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <div id="root" data-composition-id="mirrorr" data-width="1920" data-height="1080">
+    <svg id="mirrorr-art" class="clip" data-start="0" data-duration="3" viewBox="0 0 1920 1080" data-layout-allow-overflow>
+      <defs>
+        <linearGradient id="mirrorr-wall" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d9a873"/><stop offset="1" stop-color="#eccb9c"/></linearGradient>
+        <pattern id="mirrorr-paper" width="60" height="60" patternUnits="userSpaceOnUse"><rect width="60" height="60" fill="none"/><path d="M30,10 C38,22 38,30 30,40 C22,30 22,22 30,10 Z" fill="#b9814c" opacity="0.18"/></pattern>
+        <linearGradient id="mirrorr-floor" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7a4b2e"/><stop offset="1" stop-color="#4f2f1c"/></linearGradient>
+        <radialGradient id="mirrorr-lamp"><stop offset="0" stop-color="#fff1c9" stop-opacity="0.9"/><stop offset="0.4" stop-color="#ffd58a" stop-opacity="0.35"/><stop offset="1" stop-color="#ffd58a" stop-opacity="0"/></radialGradient>
+        <linearGradient id="mirrorr-gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f6da86"/><stop offset="0.45" stop-color="#b47a2c"/><stop offset="0.7" stop-color="#e9c264"/><stop offset="1" stop-color="#8f5c1f"/></linearGradient>
+        <linearGradient id="mirrorr-glass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e6efe6"/><stop offset="1" stop-color="#b6cfc6"/></linearGradient>
+        <radialGradient id="mirrorr-halo"><stop offset="0" stop-color="#fff7de" stop-opacity="0.85"/><stop offset="1" stop-color="#fff7de" stop-opacity="0"/></radialGradient>
+        <radialGradient id="mirrorr-vig" cx="0.5" cy="0.5" r="0.75"><stop offset="0.55" stop-color="#2a140a" stop-opacity="0"/><stop offset="1" stop-color="#2a140a" stop-opacity="0.5"/></radialGradient>
+        <clipPath id="mirrorr-clip"><ellipse cx="1260" cy="620" rx="240" ry="330"/></clipPath>
+        <clipPath id="mirrorr-yb"><path d="M-80,-160 C-86,-262 -66,-318 0,-320 C66,-318 86,-262 80,-160 Q0,-146 -80,-160 Z"/></clipPath>
+        <clipPath id="mirrorr-yh"><ellipse cx="0" cy="-404" rx="72" ry="78"/></clipPath>
+        <filter id="mirrorr-soft"><feGaussianBlur stdDeviation="1.2"/></filter>
+        <filter id="mirrorr-grain"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="11"/><feColorMatrix type="saturate" values="0"/></filter>
+      </defs>
+
+      <!-- room -->
+      <rect width="1920" height="1080" fill="url(#mirrorr-wall)"/>
+      <rect width="1920" height="720" fill="url(#mirrorr-paper)"/>
+      <rect y="720" width="1920" height="190" fill="#a8703f"/>
+      <g fill="none" stroke="#7c4f2a" stroke-width="5">
+        <rect x="40" y="750" width="360" height="130" rx="6"/><rect x="440" y="750" width="360" height="130" rx="6"/>
+        <rect x="840" y="750" width="360" height="130" rx="6"/><rect x="1240" y="750" width="360" height="130" rx="6"/><rect x="1640" y="750" width="360" height="130" rx="6"/>
+      </g>
+      <rect y="712" width="1920" height="16" fill="#7c4f2a"/>
+      <rect y="905" width="1920" height="175" fill="url(#mirrorr-floor)"/>
+      <g stroke="#3b2414" stroke-width="3" opacity="0.6"><line x1="0" y1="950" x2="1920" y2="950"/><line x1="0" y1="1010" x2="1920" y2="1010"/>
+        <line x1="300" y1="905" x2="300" y2="950"/><line x1="900" y1="905" x2="900" y2="950"/><line x1="1500" y1="905" x2="1500" y2="950"/>
+        <line x1="600" y1="950" x2="600" y2="1010"/><line x1="1200" y1="950" x2="1200" y2="1010"/><line x1="1800" y1="950" x2="1800" y2="1010"/></g>
+
+      <!-- lamp -->
+      <circle id="mirrorr-lampglow" cx="230" cy="420" r="520" fill="url(#mirrorr-lamp)" style="mix-blend-mode:screen"/>
+      <line x1="230" y1="470" x2="230" y2="900" class="k" stroke-width="10"/>
+      <ellipse cx="230" cy="902" rx="70" ry="14" fill="#3b2414"/>
+      <path d="M150,470 L310,470 L270,340 L190,340 Z" fill="#fbe7bd" class="k" stroke-width="6"/>
+
+      <!-- picture frame on wall -->
+      <rect x="1640" y="320" width="170" height="220" rx="4" fill="#efe1c6" class="k" stroke-width="10"/>
+      <path d="M1660,500 L1710,420 L1745,470 L1765,445 L1790,500 Z" fill="#6f9a8b"/>
+      <circle cx="1765" cy="380" r="16" fill="#e8a24b"/>
+
+      <!-- mirror -->
+      <ellipse cx="1260" cy="985" rx="230" ry="18" fill="#2a140a" opacity="0.35"/>
+      <line x1="1150" y1="930" x2="1105" y2="985" class="k" stroke-width="12"/><line x1="1370" y1="930" x2="1415" y2="985" class="k" stroke-width="12"/>
+      <ellipse cx="1260" cy="620" rx="240" ry="330" fill="url(#mirrorr-glass)"/>
+      <g clip-path="url(#mirrorr-clip)">
+        <!-- reflected room -->
+        <rect x="1000" y="280" width="520" height="440" fill="#d5bfa0"/>
+        <rect x="1000" y="720" width="520" height="240" fill="#9c7a5c"/>
+        <circle cx="1260" cy="520" r="260" fill="url(#mirrorr-halo)"/>
+        <!-- young reflection -->
+        <g transform="translate(1270,1010) scale(1.15)"><g id="mirrorr-ry" filter="url(#mirrorr-soft)">
+          <path d="M-80,-160 C-86,-262 -66,-318 0,-320 C66,-318 86,-262 80,-160 Q0,-146 -80,-160 Z" fill="#e3a63a" class="k" stroke-width="6"/>
+          <ellipse cx="0" cy="-404" rx="72" ry="78" fill="#f2d3b5" class="k" stroke-width="6"/>
+          <path d="M-78,-402 C-92,-502 76,-512 82,-408 C70,-436 44,-444 24,-430 C12,-450 -28,-452 -40,-434 C-58,-442 -72,-426 -78,-402 Z" fill="#2a211c" class="k" stroke-width="5"/>
+          <circle cx="-34" cy="-392" r="8" fill="#21170f"/><circle cx="14" cy="-392" r="8" fill="#21170f"/>
+          <ellipse cx="-14" cy="-350" rx="9" ry="12" fill="#21170f"/>
+        </g></g>
+        <!-- old reflection -->
+        <g transform="translate(1270,1010) scale(1.15)"><g id="mirrorr-ro" filter="url(#mirrorr-soft)">
+          <path d="M-84,-160 C-90,-258 -70,-312 0,-314 C70,-312 90,-258 84,-160 Q0,-146 -84,-160 Z" fill="#2f7c72" class="k" stroke-width="6"/>
+          <path d="M0,-312 L0,-160" class="k" stroke-width="4"/>
+          <circle cx="12" cy="-270" r="6" fill="#f3e6c8"/><circle cx="12" cy="-230" r="6" fill="#f3e6c8"/><circle cx="12" cy="-190" r="6" fill="#f3e6c8"/>
+          <path d="M-30,-312 L0,-270 L30,-312" fill="#f3ecdf" class="k" stroke-width="4"/>
+          <rect x="-16" y="-340" width="32" height="30" fill="#d7b08f" class="k" stroke-width="5"/>
+          <ellipse cx="0" cy="-400" rx="72" ry="76" fill="#ecc8a6" class="k" stroke-width="6"/>
+          <path d="M-74,-392 C-96,-420 -84,-462 -52,-462 C-60,-440 -62,-420 -54,-398 Z" fill="#f7f3ea" class="k" stroke-width="5"/>
+          <path d="M74,-392 C96,-420 84,-462 52,-462 C60,-440 62,-420 54,-398 Z" fill="#f7f3ea" class="k" stroke-width="5"/>
+          <path d="M-30,-462 C-14,-472 14,-472 30,-462" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" opacity="0.8"/>
+          <circle cx="-34" cy="-396" r="20" fill="#fff" fill-opacity="0.4" class="k" stroke-width="5"/>
+          <circle cx="14" cy="-396" r="20" fill="#fff" fill-opacity="0.4" class="k" stroke-width="5"/>
+          <line x1="-14" y1="-396" x2="-6" y2="-396" class="k" stroke-width="5"/>
+          <path d="M-42,-398 C-38,-404 -30,-404 -26,-398" fill="none" class="k" stroke-width="5"/>
+          <path d="M6,-398 C10,-404 18,-404 22,-398" fill="none" class="k" stroke-width="5"/>
+          <path d="M-58,-382 L-50,-376 M-58,-372 L-50,-370" class="k" stroke-width="3"/>
+          <path d="M-40,-420 C-32,-426 -22,-426 -16,-422" fill="none" stroke="#f7f3ea" stroke-width="7" stroke-linecap="round"/>
+          <path d="M2,-422 C8,-426 18,-426 26,-420" fill="none" stroke="#f7f3ea" stroke-width="7" stroke-linecap="round"/>
+          <path d="M-38,-356 C-24,-338 2,-338 14,-356" fill="#a8483a" class="k" stroke-width="5"/>
+          <circle cx="-52" cy="-362" r="12" fill="#e8998a" opacity="0.55"/><circle cx="34" cy="-362" r="12" fill="#e8998a" opacity="0.55"/>
+        </g></g>
+        <path d="M1080,360 L1150,300 L1110,520 Z" fill="#fff" opacity="0.35"/>
+        <path d="M1150,330 L1175,310 L1140,450 Z" fill="#fff" opacity="0.25"/>
+      </g>
+      <ellipse cx="1260" cy="620" rx="258" ry="348" fill="none" stroke="url(#mirrorr-gold)" stroke-width="40"/>
+      <ellipse cx="1260" cy="620" rx="280" ry="370" fill="none" class="k" stroke-width="6"/>
+      <ellipse cx="1260" cy="620" rx="238" ry="328" fill="none" class="k" stroke-width="5"/>
+      <path d="M1200,262 C1220,220 1300,220 1320,262 C1290,246 1230,246 1200,262 Z" fill="url(#mirrorr-gold)" class="k" stroke-width="5"/>
+      <circle cx="1260" cy="236" r="18" fill="url(#mirrorr-gold)" class="k" stroke-width="5"/>
+
+      <!-- young you, feet (620,960), facing mirror -->
+      <ellipse cx="620" cy="962" rx="170" ry="20" fill="#2a140a" opacity="0.35"/>
+      <g transform="translate(620,960) scale(1.28)"><g id="mirrorr-kid">
+        <path d="M-30,-160 L-34,-36" class="k" stroke-width="44"/><path d="M-30,-160 L-34,-36" stroke="#3a4777" stroke-width="32" stroke-linecap="round"/>
+        <path d="M30,-160 L34,-36" class="k" stroke-width="44"/><path d="M30,-160 L34,-36" stroke="#2f3b66" stroke-width="32" stroke-linecap="round"/>
+        <path d="M-68,-30 C-68,-48 -10,-50 -8,-30 L-6,-14 L-70,-14 Z" fill="#efeae0" class="k" stroke-width="5"/>
+        <path d="M68,-30 C68,-48 10,-50 8,-30 L6,-14 L70,-14 Z" fill="#efeae0" class="k" stroke-width="5"/>
+        <path d="M-80,-160 C-86,-262 -66,-318 0,-320 C66,-318 86,-262 80,-160 Q0,-146 -80,-160 Z" fill="#e3a63a"/>
+        <g clip-path="url(#mirrorr-yb)"><path d="M30,-330 C70,-280 70,-200 50,-140 L120,-140 L120,-330 Z" fill="#c48a2c"/></g>
+        <path d="M-80,-160 C-86,-262 -66,-318 0,-320 C66,-318 86,-262 80,-160 Q0,-146 -80,-160 Z" fill="none" class="k" stroke-width="6"/>
+        <path d="M-46,-218 L46,-218 L56,-176 L-56,-176 Z" fill="#cf9330" class="k" stroke-width="4"/>
+        <path d="M-50,-314 C-32,-288 32,-288 50,-314 C32,-334 -32,-334 -50,-314 Z" fill="#c48a2c" class="k" stroke-width="5"/>
+        <line x1="-14" y1="-300" x2="-17" y2="-252" stroke="#f3ecdf" stroke-width="4" stroke-linecap="round"/>
+        <line x1="14" y1="-300" x2="17" y2="-252" stroke="#f3ecdf" stroke-width="4" stroke-linecap="round"/>
+        <!-- left arm down, right arm reaching -->
+        <path d="M-64,-286 C-90,-240 -92,-200 -84,-168" fill="none" class="k" stroke-width="40"/>
+        <path d="M-64,-286 C-90,-240 -92,-200 -84,-168" fill="none" stroke="#d99b34" stroke-width="28" stroke-linecap="round"/>
+        <circle cx="-84" cy="-160" r="17" fill="#f2d3b5" class="k" stroke-width="5"/>
+        <g id="mirrorr-arm">
+          <path d="M62,-286 C110,-280 150,-270 190,-250" fill="none" class="k" stroke-width="40"/>
+          <path d="M62,-286 C110,-280 150,-270 190,-250" fill="none" stroke="#c48a2c" stroke-width="28" stroke-linecap="round"/>
+          <circle cx="204" cy="-246" r="17" fill="#f2d3b5" class="k" stroke-width="5"/>
+        </g>
+        <rect x="-16" y="-344" width="32" height="34" fill="#d9b393" class="k" stroke-width="5"/>
+        <ellipse cx="-72" cy="-398" rx="13" ry="19" fill="#eac7a7" class="k" stroke-width="5"/>
+        <ellipse cx="0" cy="-404" rx="72" ry="78" fill="#f2d3b5"/>
+        <g clip-path="url(#mirrorr-yh)"><ellipse cx="-62" cy="-390" rx="40" ry="90" fill="#e0bb9b"/></g>
+        <ellipse cx="0" cy="-404" rx="72" ry="78" fill="none" class="k" stroke-width="6"/>
+        <path d="M-78,-402 C-92,-502 76,-512 82,-408 C70,-436 44,-444 24,-430 C12,-450 -28,-452 -40,-434 C-58,-442 -72,-426 -78,-402 Z" fill="#2a211c" class="k" stroke-width="5"/>
+        <path d="M-40,-474 C-20,-484 10,-484 28,-476" fill="none" stroke="#5c4a3d" stroke-width="5" stroke-linecap="round"/>
+        <ellipse cx="-4" cy="-398" rx="12" ry="14" fill="#fff" class="k" stroke-width="4"/>
+        <ellipse cx="44" cy="-398" rx="12" ry="14" fill="#fff" class="k" stroke-width="4"/>
+        <g transform="translate(2,-398)"><g id="mirrorr-e1"><circle r="7" fill="#21170f"/><circle cx="2" cy="-3" r="2.4" fill="#fff"/></g></g>
+        <g transform="translate(50,-398)"><g id="mirrorr-e2"><circle r="7" fill="#21170f"/><circle cx="2" cy="-3" r="2.4" fill="#fff"/></g></g>
+        <path d="M-18,-430 C-10,-440 4,-440 10,-432" fill="none" class="k" stroke-width="7"/>
+        <path d="M30,-432 C38,-440 52,-440 60,-430" fill="none" class="k" stroke-width="7"/>
+        <path d="M24,-378 C32,-372 32,-366 24,-364" fill="none" class="k" stroke-width="4"/>
+        <circle cx="54" cy="-366" r="12" fill="#e8998a" opacity="0.5"/>
+        <ellipse cx="26" cy="-344" rx="9" ry="12" fill="#5b2a22" class="k" stroke-width="4"/>
+      </g></g>
+
+      <rect width="1920" height="1080" fill="url(#mirrorr-vig)"/>
+      <rect width="1920" height="1080" filter="url(#mirrorr-grain)" opacity="0.1" style="mix-blend-mode:overlay"/>
+    </svg>
+    <h1 id="mirrorr-title" class="clip" data-start="0" data-duration="3">
+      <span>Meet</span><span>the</span><span>person</span><span>you're</span><span><em>building.</em></span>
+    </h1>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#mirrorr-title span", { opacity: 0, filter: "blur(10px)" },
+      { opacity: 1, filter: "blur(0px)", duration: 0.2, stagger: 0.09, ease: "power4.out" }, 0.15);
+    tl.fromTo("#mirrorr-kid", { x: -40, opacity: 0 }, { x: 0, opacity: 1, duration: 0.7, ease: "expo.out" }, 0);
+    tl.fromTo("#mirrorr-arm", { rotation: 40, svgOrigin: "62 -286" }, { rotation: 0, duration: 0.8, ease: "power3.out" }, 0.5);
+    tl.fromTo("#mirrorr-ry", { opacity: 1 }, { opacity: 0, duration: 0.7, ease: "power2.inOut" }, 1.0);
+    tl.fromTo("#mirrorr-ro", { opacity: 0 }, { opacity: 1, duration: 0.7, ease: "power2.inOut" }, 1.0);
+    tl.fromTo(["#mirrorr-e1", "#mirrorr-e2"], { scale: 1 }, { scale: 1.35, duration: 0.25, ease: "back.out(2)" }, 1.5);
+    window.__timelines["mirrorr"] = tl;
+  </script>
+</template>

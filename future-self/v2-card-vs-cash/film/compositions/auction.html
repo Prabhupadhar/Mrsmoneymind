@@ -1,0 +1,87 @@
+<template>
+  <style>
+    @font-face { font-family: "Hand"; src: url("assets/fonts/PatrickHand-Regular.ttf"); }
+    #root { position: absolute; inset: 0; background: #1a2b66; overflow: hidden; }
+    #au-art { position: absolute; inset: 0; }
+    .rk { stroke: #0d0f22; stroke-linecap: round; stroke-linejoin: round; }
+    .pop { font-family: Hand; font-size: 150px; fill: #ffb35c; stroke: #0d0f22; stroke-width: 14px; paint-order: stroke; stroke-linejoin: round; }
+    .lab { font-family: Hand; font-size: 56px; fill: #f4f1ff; }
+  </style>
+  <div id="root" data-composition-id="auction" data-width="1920" data-height="1080">
+    <svg id="au-art" class="clip" data-start="0" data-duration="30" viewBox="0 0 1920 1080" data-layout-allow-overflow>
+      <defs>
+        <radialGradient id="au-bg" cx="0.5" cy="0.55" r="0.75"><stop offset="0" stop-color="#2a4a9f"/><stop offset="1" stop-color="#111c4c"/></radialGradient>
+        <radialGradient id="au-warm"><stop offset="0" stop-color="#ffb35c" stop-opacity="0.75"/><stop offset="1" stop-color="#ff8a2a" stop-opacity="0"/></radialGradient>
+        <g id="au-ticket">
+          <path class="rk" d="M-200,-90 L200,-90 L200,-30 C176,-30 176,30 200,30 L200,90 L-200,90 L-200,30 C-176,30 -176,-30 -200,-30 Z" fill="#ffd27a" stroke-width="10"/>
+          <path d="M100,-80 L100,80" stroke="#0d0f22" stroke-width="5" stroke-dasharray="10 10"/>
+          <circle class="rk" cx="-60" cy="0" r="50" fill="#ff8a2a" stroke-width="7"/>
+          <path d="M-110,0 L-10,0 M-60,-50 L-60,50 M-95,-35 C-75,-10 -75,10 -95,35 M-25,-35 C-45,-10 -45,10 -25,35" fill="none" stroke="#0d0f22" stroke-width="5"/>
+          <path d="M150,-24 l8,18 20,2 -15,13 5,19 -18,-10 -18,10 5,-19 -15,-13 20,-2 z" fill="#ff8a2a"/>
+        </g>
+        <g id="au-cash"><rect class="rk" x="-70" y="-36" width="140" height="72" rx="8" fill="#7fd18b" stroke-width="7"/><text y="16" text-anchor="middle" style="font-family:Hand;font-size:44px;fill:#1f5a33">$</text></g>
+        <g id="au-cardi"><rect class="rk" x="-70" y="-44" width="140" height="88" rx="10" fill="#6a4fd6" stroke-width="7"/><rect x="-50" y="-22" width="32" height="24" rx="4" fill="#ffd27a"/></g>
+      </defs>
+      <rect width="1920" height="1080" fill="url(#au-bg)"/>
+      <g fill="#fff" opacity="0.06"><circle cx="300" cy="160" r="4"/><circle cx="1500" cy="960" r="5"/><circle cx="1760" cy="140" r="4"/></g>
+
+      <!-- 7: a sneaky little auction -->
+      <text class="pop" x="560" y="300" text-anchor="middle" style="font-size:170px" data-in="7,0.55,pop" data-out="8,0,pop">2001</text>
+      <g transform="translate(1260,560)"><g id="au-gavel" data-in="7,0.6,pop" data-out="8,0">
+        <g id="au-gavel-head">
+          <rect class="rk" x="-40" y="-20" width="300" height="40" rx="14" fill="#a8673e" stroke-width="9" transform="rotate(-30)"/>
+          <rect class="rk" x="-120" y="-70" width="160" height="110" rx="20" fill="#8a5a3c" stroke-width="10" transform="rotate(-30)"/>
+        </g>
+        <rect class="rk" x="-170" y="150" width="260" height="60" rx="14" fill="#8a5a3c" stroke-width="9"/>
+      </g></g>
+      <text class="lab" x="560" y="420" text-anchor="middle" data-in="7,0.75,up" data-out="8,0">a sneaky auction at MIT</text>
+
+      <!-- 8: the prize -->
+      <circle id="au-glow" cx="960" cy="520" r="420" fill="url(#au-warm)" opacity="0"/>
+      <g transform="translate(960,520)"><g id="au-prize" opacity="0"><use href="#au-ticket" transform="scale(1.4)"/></g></g>
+      <g transform="translate(1260,330)"><g id="au-sold" data-in="8,0.7,pop" data-out="9,0">
+        <g transform="rotate(14)">
+          <rect x="-190" y="-56" width="380" height="112" rx="14" fill="none" stroke="#ff5f6d" stroke-width="12"/>
+          <text y="22" text-anchor="middle" style="font-family:Hand;font-size:70px;fill:#ff5f6d">SOLD OUT</text>
+        </g>
+      </g></g>
+
+      <!-- 9-11: two groups, same everything -->
+      <path d="M960,240 L960,1000" stroke="#c9d3ef" stroke-width="6" stroke-dasharray="18 18" opacity="0.5" data-in="9,0,fade"/>
+      <g id="au-left" data-in="9,0.1,left">
+        <g transform="translate(400,700) scale(0.32)"><g data-rig="kid" data-p="a1" data-o='{"mouth":"smile","brows":"flat","look":[10,0]}'></g></g>
+        <g transform="translate(640,720) scale(0.3)"><g data-rig="kid" data-p="a2" data-o='{"mouth":"flat","brows":"up","look":[-10,0]}'></g></g>
+        <g transform="translate(520,330)"><g id="au-cashi"><use href="#au-cash" transform="scale(1.5)"/></g></g>
+        <text class="lab" x="520" y="470" text-anchor="middle" style="font-size:70px">pay in cash</text>
+      </g>
+      <g id="au-right" data-in="10,0.05,right">
+        <g transform="translate(1280,700) scale(0.32)"><g data-rig="kid" data-p="a3" data-o='{"mouth":"smile","brows":"flat","look":[10,0]}'></g></g>
+        <g transform="translate(1520,720) scale(0.3)"><g data-rig="kid" data-p="a4" data-o='{"mouth":"flat","brows":"up","look":[-10,0]}'></g></g>
+        <g transform="translate(1400,330)"><g id="au-cardg"><use href="#au-cardi" transform="scale(1.5)"/></g></g>
+        <text class="lab" x="1400" y="470" text-anchor="middle" style="font-size:70px">pay by card</text>
+      </g>
+      <g transform="translate(520,970)"><g data-in="11,0.1,pop"><use href="#au-ticket" transform="scale(0.45)"/></g></g>
+      <g transform="translate(1400,970)"><g data-in="11,0.25,pop"><use href="#au-ticket" transform="scale(0.45)"/></g></g>
+      <text class="pop" x="960" y="1010" text-anchor="middle" style="font-size:150px" data-in="11,0.55,pop">=</text>
+    </svg>
+  </div>
+  <script>
+    Rig.fill();
+    const tl = gsap.timeline({ paused: true }), A = s => Rig.at(s, "auction");
+    Rig.run(tl, "auction");
+    // 7: gavel bangs twice
+    tl.to("#au-gavel-head", { rotation: 24, svgOrigin: "100 60", duration: 0.12, yoyo: true, repeat: 3, ease: "power2.in" }, A("7,0.8"));
+    // 8: the ticket spins in and glows
+    tl.set("#au-prize", { opacity: 1 }, A("8,0.15"));
+    tl.fromTo("#au-prize", { scale: 0.2, rotation: -200, transformOrigin: "50% 50%" }, { scale: 1, rotation: -6, transformOrigin: "50% 50%", duration: 0.7, ease: "back.out(1.6)" }, A("8,0.15"));
+    tl.to("#au-glow", { opacity: 1, duration: 0.5 }, A("8,0.3"));
+    tl.to("#au-prize", { y: -16, duration: 0.5, yoyo: true, repeat: 3, ease: "sine.inOut" }, A("8,0.9"));
+    tl.to(["#au-prize", "#au-glow"], { opacity: 0, duration: 0.25 }, A("9,0"));
+    // group faces blink and bob so nobody freezes
+    ["a1", "a2"].forEach((p, i) => Rig.blinks(tl, p, A("9,0") + i * 0.4, A("12,0")));
+    ["a3", "a4"].forEach((p, i) => Rig.blinks(tl, p, A("10,0") + i * 0.4, A("12,0")));
+    tl.to("#au-cashi", { y: -14, duration: 0.4, yoyo: true, repeat: 3, ease: "sine.inOut" }, A("9,0.5"));
+    tl.to("#au-cardg", { y: -14, duration: 0.4, yoyo: true, repeat: 3, ease: "sine.inOut" }, A("10,0.5"));
+    window.__timelines["auction"] = tl;
+  </script>
+</template>

@@ -1,0 +1,112 @@
+<template>
+  <style>
+    @font-face { font-family: "Hand"; src: url("assets/fonts/PatrickHand-Regular.ttf"); }
+    #root { position: absolute; inset: 0; background: #1a2b66; overflow: hidden; }
+    #mv-art { position: absolute; inset: 0; }
+    .rk { stroke: #0d0f22; stroke-linecap: round; stroke-linejoin: round; }
+    .pop { font-family: Hand; font-size: 150px; fill: #ffb35c; stroke: #0d0f22; stroke-width: 14px; paint-order: stroke; stroke-linejoin: round; }
+    .lab { font-family: Hand; font-size: 64px; fill: #f4f1ff; }
+    .num { font-family: Hand; font-size: 120px; fill: #fff; }
+  </style>
+  <div id="root" data-composition-id="moves" data-width="1920" data-height="1080">
+    <svg id="mv-art" class="clip" data-start="0" data-duration="30" viewBox="0 0 1920 1080" data-layout-allow-overflow>
+      <defs>
+        <radialGradient id="mv-bg" cx="0.5" cy="0.55" r="0.75"><stop offset="0" stop-color="#2a4a9f"/><stop offset="1" stop-color="#111c4c"/></radialGradient>
+        <g id="mv-badge"><circle class="rk" r="90" fill="#ff8a2a" stroke-width="10"/></g>
+      </defs>
+      <rect width="1920" height="1080" fill="url(#mv-bg)"/>
+      <g fill="#fff" opacity="0.06"><circle cx="300" cy="160" r="4"/><circle cx="1500" cy="960" r="5"/><circle cx="1760" cy="140" r="4"/></g>
+
+      <g transform="translate(1460,650) scale(0.55)"><g id="mv-kid">
+        <g data-rig="kid" data-p="mk" data-o='{"mouth":"smile","brows":"up","look":[-40,0]}'></g>
+      </g></g>
+
+      <!-- 33: alert for every payment -->
+      <g id="mv-s1" data-in="33,0,fade" data-out="34,0">
+        <g transform="translate(240,200)"><g data-in="33,0.02,pop"><use href="#mv-badge"/><text class="num" y="42" text-anchor="middle">1</text></g></g>
+        <text class="lab" x="370" y="222">alert on every payment</text>
+        <g transform="translate(700,640)"><g id="mv-phone" data-in="33,0.2,up">
+          <rect class="rk" x="-130" y="-230" width="260" height="440" rx="36" fill="#141428" stroke-width="10"/>
+          <rect x="-106" y="-200" width="212" height="380" rx="18" fill="#2d4fa8"/>
+          <g id="mv-note" opacity="0">
+            <rect class="rk" x="-96" y="-140" width="192" height="110" rx="14" fill="#f7f3ea" stroke-width="6"/>
+            <text y="-104" text-anchor="middle" style="font-family:Hand;font-size:30px;fill:#2f7c72">Card payment</text>
+            <text y="-52" text-anchor="middle" style="font-family:Hand;font-size:50px;fill:#b0263c">-$6.40</text>
+          </g>
+        </g></g>
+        <g fill="none" stroke="#ffd27a" stroke-width="10" stroke-linecap="round" id="mv-waves" opacity="0">
+          <path d="M880,560 C910,600 910,660 880,700"/><path d="M930,520 C980,580 980,680 930,740"/>
+        </g>
+      </g>
+
+      <!-- 34: delete the saved card -->
+      <g id="mv-s2" data-in="34,0,fade" data-out="35,0">
+        <g transform="translate(240,200)"><g data-in="34,0.02,pop"><use href="#mv-badge"/><text class="num" y="42" text-anchor="middle">2</text></g></g>
+        <text class="lab" x="370" y="222">delete saved cards</text>
+        <g transform="translate(700,600)">
+          <rect class="rk" x="-320" y="-150" width="640" height="300" rx="24" fill="#f7f3ea" stroke-width="10" data-in="34,0.15,up"/>
+          <g data-in="34,0.2,up">
+            <rect class="rk" x="-260" y="-80" width="90" height="90" rx="14" fill="#fff" stroke-width="9"/>
+            <path id="mv-tick" d="M-245,-40 L-220,-10 L-180,-70" fill="none" stroke="#2f7c72" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+            <text x="-140" y="-16" style="font-family:Hand;font-size:60px;fill:#0d0f22">Save my card</text>
+            <text x="-260" y="100" style="font-family:Hand;font-size:44px;fill:#7a809c">for faster checkout</text>
+          </g>
+        </g>
+        <text class="pop" x="700" y="900" text-anchor="middle" style="font-size:120px" data-in="34,0.7,pop">+10 sec</text>
+      </g>
+
+      <!-- 35: cash only for one weak spot -->
+      <g id="mv-s3" data-in="35,0,fade" data-out="36,0">
+        <g transform="translate(240,200)"><g data-in="35,0.02,pop"><use href="#mv-badge"/><text class="num" y="42" text-anchor="middle">3</text></g></g>
+        <text class="lab" x="370" y="222">cash for one weak spot</text>
+        <g transform="translate(700,640)"><g id="mv-env" data-in="35,0.4,pop">
+          <g id="mv-bills">
+            <rect class="rk" x="-150" y="-170" width="300" height="140" rx="10" fill="#7fd18b" stroke-width="8"/>
+            <text y="-78" text-anchor="middle" style="font-family:Hand;font-size:70px;fill:#1f5a33">$</text>
+          </g>
+          <rect class="rk" x="-220" y="-110" width="440" height="270" rx="16" fill="#f3e6c8" stroke-width="10"/>
+          <path class="rk" d="M-220,-110 L0,40 L220,-110" fill="none" stroke-width="9"/>
+          <text y="120" text-anchor="middle" style="font-family:Hand;font-size:72px;fill:#b0263c">TAKEOUT</text>
+        </g></g>
+      </g>
+
+      <!-- 36: "eh, maybe not" -->
+      <g transform="translate(1120,830)"><g id="mv-donut" data-in="36,0.05,pop">
+        <circle class="rk" r="80" fill="#d9a066" stroke-width="9"/>
+        <path d="M-70,-20 C-60,-70 60,-70 70,-20 C50,-40 30,-10 10,-30 C-10,-10 -40,-40 -70,-20 Z" fill="#ff8fb1"/>
+        <circle class="rk" r="26" fill="#1a2b66" stroke-width="8"/>
+      </g></g>
+      <text x="640" y="420" text-anchor="middle" style="font-family:Hand;font-size:100px;fill:#f4f1ff" data-in="36,0.1,pop" data-out="36,0.5,pop">"I want it"</text>
+      <text class="pop" x="640" y="660" text-anchor="middle" style="font-size:130px" data-in="36,0.55,pop">"eh, maybe not."</text>
+    </svg>
+  </div>
+  <script>
+    Rig.fill();
+    const tl = gsap.timeline({ paused: true }), A = s => Rig.at(s, "moves");
+    tl.fromTo("#mv-kid", { opacity: 0, x: 60 }, { opacity: 1, x: 0, duration: 0.45, ease: "expo.out" }, 0);
+    Rig.run(tl, "moves");
+    Rig.blinks(tl, "mk", 0, 30);
+    // 33: phone buzzes and says the number
+    tl.set(["#mv-note", "#mv-waves"], { opacity: 1 }, A("33,0.55"));
+    tl.fromTo("#mv-note", { scale: 0.5, transformOrigin: "50% 50%" }, { scale: 1, transformOrigin: "50% 50%", duration: 0.3, ease: "back.out(2)" }, A("33,0.55"));
+    tl.to("#mv-phone", { x: 8, duration: 0.05, yoyo: true, repeat: 9 }, A("33,0.55"));
+    tl.to("#mv-waves", { opacity: 0.3, duration: 0.2, yoyo: true, repeat: 5 }, A("33,0.7"));
+    Rig.squint(tl, "mk", A("33,0.65"), 0.4);
+    // 34: untick the box
+    tl.to("#mv-tick", { opacity: 0, duration: 0.15 }, A("34,0.45"));
+    Rig.look(tl, "mk", -40, 10, A("34,0.3"));
+    tl.to("#mv-kid", { y: 18, duration: 0.18, yoyo: true, repeat: 1 }, A("34,0.5"));
+    // 35: excited, cash slides into the envelope
+    Rig.mouth(tl, "mk", "smile", "grin", A("35,0.3"));
+    tl.fromTo("#mv-bills", { y: -160 }, { y: 0, duration: 0.5, ease: "power2.in" }, A("35,0.7"));
+    tl.to("#mv-kid", { y: -20, duration: 0.18, yoyo: true, repeat: 3, ease: "power2.out" }, A("35,0.5"));
+    // 36: holds the donut, shrugs, puts it down
+    Rig.mouth(tl, "mk", "grin", "smile", A("36,0"));
+    Rig.look(tl, "mk", -30, 30, A("36,0.1"));
+    tl.to("#mv-kid", { rotation: -8, svgOrigin: "0 300", duration: 0.25, yoyo: true, repeat: 1, ease: "sine.inOut" }, A("36,0.5"));
+    Rig.mouth(tl, "mk", "smile", "flat", A("36,0.5"));
+    Rig.brows(tl, "mk", "flat", A("36,0.5"));
+    tl.to("#mv-donut", { y: 220, opacity: 0, duration: 0.6, ease: "power2.in" }, A("36,0.75"));
+    window.__timelines["moves"] = tl;
+  </script>
+</template>

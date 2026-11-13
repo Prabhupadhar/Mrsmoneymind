@@ -1,0 +1,80 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; background: #f3ecdf; overflow: hidden; }
+    #gap-title { position: absolute; top: 120px; left: 0; width: 100%; text-align: center;
+      font-family: "Archivo Black"; font-size: 84px; line-height: 1; color: #1f1a17; }
+    #gap-title span { display: inline-block; margin: 0 10px; }
+    #gap-title .hot { color: #d2553a; }
+    #gap-art { position: absolute; inset: 0; }
+    .ink { stroke: #1f1a17; stroke-width: 7; stroke-linecap: round; stroke-linejoin: round; }
+    .lbl { font-family: Nunito; font-weight: 900; font-size: 34px; fill: #1f1a17; letter-spacing: 0.05em; }
+    .note-t { font-family: "Archivo Black"; font-size: 30px; fill: #1f1a17; }
+  </style>
+  <div id="root" data-composition-id="gap" data-width="1920" data-height="1080">
+    <h1 id="gap-title" class="clip" data-start="0" data-duration="3">
+      <span>SAVING</span><span>FEELS</span><span>LIKE</span><span class="hot">CHARITY</span>
+    </h1>
+    <svg id="gap-art" class="clip" data-start="0" data-duration="3" viewBox="0 0 1920 1080" data-layout-allow-overflow>
+      <defs>
+        <linearGradient id="gap-depth" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5a5048"/><stop offset="1" stop-color="#1f1a17"/></linearGradient>
+      </defs>
+      <!-- chasm -->
+      <rect x="800" y="720" width="320" height="400" fill="url(#gap-depth)"/>
+      <!-- cliffs -->
+      <path class="ink" d="M-20,720 L790,720 C810,780 790,860 820,940 C800,1000 830,1060 815,1100 L-20,1100 Z" fill="#e7dcc8"/>
+      <path class="ink" d="M1940,720 L1130,720 C1110,790 1135,850 1100,930 C1120,1000 1095,1050 1110,1100 L1940,1100 Z" fill="#e7dcc8"/>
+
+      <!-- falling notes -->
+      <g transform="translate(950,640)"><g id="gap-f1"><rect class="ink" x="-50" y="-26" width="100" height="52" rx="6" fill="#9fc9a3" stroke-width="5"/><text x="0" y="11" text-anchor="middle" class="note-t">$</text></g></g>
+      <g transform="translate(975,640)"><g id="gap-f2"><rect class="ink" x="-50" y="-26" width="100" height="52" rx="6" fill="#9fc9a3" stroke-width="5"/><text x="0" y="11" text-anchor="middle" class="note-t">$</text></g></g>
+      <g transform="translate(960,640)"><g id="gap-f3"><rect class="ink" x="-50" y="-26" width="100" height="52" rx="6" fill="#9fc9a3" stroke-width="5"/><text x="0" y="11" text-anchor="middle" class="note-t">$</text></g></g>
+
+      <!-- young you, feet (560,720) -->
+      <g transform="translate(560,722) scale(1.05)"><g id="gap-kid">
+        <line class="ink" x1="-28" y1="-150" x2="-34" y2="-12"/><line class="ink" x1="28" y1="-150" x2="34" y2="-12"/>
+        <ellipse class="ink" cx="-42" cy="-8" rx="26" ry="11" fill="#1f1a17"/><ellipse class="ink" cx="42" cy="-8" rx="26" ry="11" fill="#1f1a17"/>
+        <path class="ink" d="M-72,-145 C-80,-250 -62,-302 0,-304 C62,-302 80,-250 72,-145 Z" fill="#e3a63a"/>
+        <path class="ink" d="M-60,-270 C-85,-230 -88,-200 -78,-170" fill="none"/>
+        <path class="ink" d="M60,-270 C120,-250 180,-240 230,-245" fill="none"/>
+        <g transform="translate(262,-248) rotate(-8)"><rect class="ink" x="-50" y="-26" width="100" height="52" rx="6" fill="#9fc9a3" stroke-width="5"/><text x="0" y="11" text-anchor="middle" class="note-t">$</text></g>
+        <circle class="ink" cx="0" cy="-378" r="78" fill="#f2d9c0"/>
+        <path class="ink" d="M-76,-392 C-74,-470 64,-478 78,-390 C52,-428 -6,-442 -76,-392 Z" fill="#1f1a17"/>
+        <circle cx="-14" cy="-372" r="7" fill="#1f1a17"/><circle cx="36" cy="-372" r="7" fill="#1f1a17"/>
+        <path class="ink" d="M-26,-398 L0,-394" fill="none" stroke-width="6"/><path class="ink" d="M26,-394 L52,-398" fill="none" stroke-width="6"/>
+        <path class="ink" d="M6,-330 L34,-332" fill="none" stroke-width="6"/>
+      </g></g>
+      <text x="560" y="810" text-anchor="middle" class="lbl">YOU · TODAY</text>
+
+      <!-- future you, faded, feet (1400,720) -->
+      <g transform="translate(1400,722) scale(1.05)"><g id="gap-old" opacity="0.4">
+        <line class="ink" x1="-28" y1="-150" x2="-34" y2="-12"/><line class="ink" x1="28" y1="-150" x2="34" y2="-12"/>
+        <ellipse class="ink" cx="-42" cy="-8" rx="26" ry="11" fill="#1f1a17"/><ellipse class="ink" cx="42" cy="-8" rx="26" ry="11" fill="#1f1a17"/>
+        <path class="ink" d="M-72,-145 C-80,-250 -62,-302 0,-304 C62,-302 80,-250 72,-145 Z" fill="#2c7a74"/>
+        <path class="ink" d="M-60,-270 C-85,-230 -88,-200 -78,-170" fill="none"/>
+        <path class="ink" d="M60,-270 C85,-230 88,-200 78,-170" fill="none"/>
+        <circle class="ink" cx="0" cy="-378" r="78" fill="#ead2bb"/>
+        <ellipse class="ink" cx="-72" cy="-392" rx="24" ry="34" fill="#f4f1ea" stroke-width="5"/>
+        <ellipse class="ink" cx="72" cy="-392" rx="24" ry="34" fill="#f4f1ea" stroke-width="5"/>
+        <circle class="ink" cx="-26" cy="-372" r="19" fill="none" stroke-width="5"/><circle class="ink" cx="20" cy="-372" r="19" fill="none" stroke-width="5"/>
+        <circle cx="-26" cy="-372" r="6" fill="#1f1a17"/><circle cx="20" cy="-372" r="6" fill="#1f1a17"/>
+        <path class="ink" d="M-18,-334 C-8,-322 8,-322 18,-334" fill="none" stroke-width="6"/>
+      </g></g>
+      <text id="gap-oldlbl" x="1400" y="810" text-anchor="middle" class="lbl" opacity="0.5">YOU · 2056</text>
+    </svg>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#gap-title span", { opacity: 0, filter: "blur(8px)" },
+      { opacity: 1, filter: "blur(0px)", duration: 0.16, stagger: 0.09, ease: "power4.out" }, 0.1);
+    tl.fromTo("#gap-kid", { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: 0.6, ease: "expo.out" }, 0);
+    tl.fromTo("#gap-old", { opacity: 0 }, { opacity: 0.4, duration: 0.9, ease: "power2.out" }, 0.3);
+    ["#gap-f1", "#gap-f2", "#gap-f3"].forEach((id, i) => {
+      const t = 0.7 + i * 0.5;
+      tl.fromTo(id, { opacity: 0, y: 0, rotation: -10 },
+        { opacity: 1, duration: 0.08 }, t);
+      tl.fromTo(id, { y: 0, rotation: -10 },
+        { y: 560, rotation: 50 + i * 30, duration: 1.1, ease: "power2.in", immediateRender: false }, t);
+    });
+    window.__timelines["gap"] = tl;
+  </script>
+</template>

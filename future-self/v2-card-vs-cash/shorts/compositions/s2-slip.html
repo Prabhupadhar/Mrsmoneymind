@@ -1,0 +1,61 @@
+<template>
+  <style>
+    @font-face { font-family: "Hand"; src: url("assets/fonts/PatrickHand-Regular.ttf"); }
+    #root { position: absolute; inset: 0; background: #1a2b66; overflow: hidden; }
+    #ss-art { position: absolute; inset: 0; }
+    .rk { stroke: #0d0f22; stroke-linecap: round; stroke-linejoin: round; }
+    .pop { font-family: Hand; font-size: 150px; fill: #ffb35c; stroke: #0d0f22; stroke-width: 14px; paint-order: stroke; stroke-linejoin: round; }
+  </style>
+  <div id="root" data-composition-id="s2slip" data-width="1080" data-height="1920">
+    <svg id="ss-art" class="clip" data-start="0" data-duration="40" viewBox="0 0 1080 1920" data-layout-allow-overflow>
+      <defs>
+        <radialGradient id="ss-bg" cx="0.5" cy="0.55" r="0.8"><stop offset="0" stop-color="#2a4a9f"/><stop offset="1" stop-color="#111c4c"/></radialGradient>
+        <g id="ss-coin"><circle class="rk" r="30" fill="#ffd27a" stroke-width="6"/><text y="12" text-anchor="middle" style="font-family:Hand;font-size:36px;fill:#a8673e">$</text></g>
+      </defs>
+      <rect width="1080" height="1920" fill="url(#ss-bg)"/>
+
+      <!-- 21: a tap barely whispers -->
+      <g id="ss-tap" data-out="22,0">
+        <g transform="translate(540,760)"><g id="ss-bell" data-in="21,0.05,pop">
+          <path class="rk" d="M-50,27 C-50,-27 -32,-58 0,-58 C32,-58 50,-27 50,27 L63,45 L-63,45 Z" fill="#ff5f6d" stroke-width="7"/>
+          <circle class="rk" cx="0" cy="53" r="12" fill="#ffd27a" stroke-width="6"/>
+        </g></g>
+        <g transform="translate(540,1100)"><g data-in="21,0,up">
+          <rect class="rk" x="-160" y="-100" width="320" height="200" rx="22" fill="#6a4fd6" stroke-width="10"/>
+          <rect x="-118" y="-50" width="72" height="54" rx="8" fill="#ffd27a"/>
+          <rect x="-118" y="50" width="220" height="16" rx="8" fill="#c7bcff"/>
+        </g></g>
+        <text x="540" y="920" text-anchor="middle" style="font-family:Hand;font-size:80px;fill:#c9d3ef" data-in="21,0.4,fade">shh...</text>
+      </g>
+
+      <!-- 22: the money slips out -->
+      <g transform="translate(540,1080) scale(0.55)"><g id="ss-kid" data-in="22,0,up">
+        <g data-rig="kid" data-p="sk" data-o='{"mouth":"sad","brows":"worry","look":[0,40]}'></g>
+      </g></g>
+      <g data-in="22,0.05,fade">
+        <path d="M120,1400 L960,1400" stroke="#c9d3ef" stroke-width="8" stroke-linecap="round"/>
+        <path d="M520,1400 L550,1430 L530,1460 L565,1500" fill="none" stroke="#0d0f22" stroke-width="10" stroke-linejoin="round"/>
+      </g>
+      <g transform="translate(560,1380)">
+        <g id="ss-c1" opacity="0"><use href="#ss-coin"/></g>
+        <g id="ss-c2" opacity="0"><use href="#ss-coin"/></g>
+        <g id="ss-c3" opacity="0"><use href="#ss-coin"/></g>
+      </g>
+      <text class="pop" x="540" y="620" text-anchor="middle" style="font-size:140px" data-in="22,0.5,pop">slips out</text>
+    </svg>
+  </div>
+  <script>
+    Rig.fill();
+    const tl = gsap.timeline({ paused: true }), A = s => Rig.at(s, "s2slip");
+    Rig.run(tl, "s2slip");
+    tl.to("#ss-bell", { rotation: 4, svgOrigin: "0 -58", duration: 0.4, yoyo: true, repeat: 3, ease: "sine.inOut" }, A("21,0.3"));
+    ["#ss-c1", "#ss-c2", "#ss-c3"].forEach((id, i) => {
+      const t = A("22," + (0.15 + i * 0.22).toFixed(2));
+      tl.set(id, { opacity: 1 }, t);
+      tl.fromTo(id, { x: -60 + i * 30, y: -40 }, { x: 0, y: 110, opacity: 0, duration: 0.6, ease: "power2.in" }, t);
+    });
+    Rig.blinks(tl, "sk", A("22,0"), A("22,1") + 2, 0.8);
+    tl.to("#sk-tears", { opacity: 1, duration: 0.4 }, A("22,0.7"));
+    window.__timelines["s2slip"] = tl;
+  </script>
+</template>

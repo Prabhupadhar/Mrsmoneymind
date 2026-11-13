@@ -1,0 +1,242 @@
+[
+ {
+  "text": "Okay. Quick question.",
+  "mood": "curious",
+  "start": 0.3,
+  "end": 1.721
+ },
+ {
+  "text": "When did you last tap your card... and actually feel something?",
+  "mood": "curious",
+  "start": 2.021,
+  "end": 5.199
+ },
+ {
+  "text": "Nothing? Not even a tiny sting?",
+  "mood": "shocked",
+  "start": 5.499,
+  "end": 7.388
+ },
+ {
+  "text": "Now picture handing over a fat stack of real cash for the same thing.",
+  "mood": "firm",
+  "start": 7.688,
+  "end": 11.659
+ },
+ {
+  "text": "Yeah. That one hurts.",
+  "mood": "warm",
+  "start": 11.959,
+  "end": 13.227
+ },
+ {
+  "text": "And that little ouch? It's doing a job. A job your card quietly fired it from.",
+  "mood": "curious",
+  "start": 13.527,
+  "end": 18.32
+ },
+ {
+  "text": "Stick around, because this changes how you'll see every checkout.",
+  "mood": "warm",
+  "start": 18.62,
+  "end": 22.138
+ },
+ {
+  "text": "So, back in two thousand one, two researchers at MIT ran a sneaky little auction.",
+  "mood": "neutral",
+  "start": 22.838,
+  "end": 27.977
+ },
+ {
+  "text": "The prize? Tickets to a sold-out Boston Celtics game.",
+  "mood": "curious",
+  "start": 28.277,
+  "end": 31.713
+ },
+ {
+  "text": "Half the students were told: if you win, you pay in cash.",
+  "mood": "neutral",
+  "start": 32.013,
+  "end": 35.178
+ },
+ {
+  "text": "The other half: you pay by credit card.",
+  "mood": "neutral",
+  "start": 35.478,
+  "end": 37.735
+ },
+ {
+  "text": "Same tickets. Same game. Same kind of people.",
+  "mood": "curious",
+  "start": 38.035,
+  "end": 41.015
+ },
+ {
+  "text": "And the card group bid... more than double.",
+  "mood": "excited",
+  "start": 41.315,
+  "end": 43.365
+ },
+ {
+  "text": "Double! For the exact same seats!",
+  "mood": "shocked",
+  "start": 43.665,
+  "end": 45.552
+ },
+ {
+  "text": "And no, it wasn't because they were short on cash. The card bidders still had to pay the very next day.",
+  "mood": "firm",
+  "start": 45.852,
+  "end": 51.819
+ },
+ {
+  "text": "The card didn't give them more money. It just made spending it feel... lighter.",
+  "mood": "warm",
+  "start": 52.119,
+  "end": 56.443
+ },
+ {
+  "text": "Psychologists have a name for that ouch. The pain of paying.",
+  "mood": "neutral",
+  "start": 57.143,
+  "end": 60.551
+ },
+ {
+  "text": "And it's not just a figure of speech.",
+  "mood": "curious",
+  "start": 60.851,
+  "end": 62.656
+ },
+ {
+  "text": "In brain scans, a high price lights up a region tied to pain and disgust, the insula.",
+  "mood": "firm",
+  "start": 62.956,
+  "end": 68.438
+ },
+ {
+  "text": "When that alarm goes off, people walk away.",
+  "mood": "neutral",
+  "start": 68.738,
+  "end": 70.978
+ },
+ {
+  "text": "Cash rings that alarm loud. You see it leave. You feel the wallet get thinner.",
+  "mood": "curious",
+  "start": 71.278,
+  "end": 75.593
+ },
+ {
+  "text": "A tap? The alarm barely whispers.",
+  "mood": "whisper",
+  "start": 75.893,
+  "end": 78.494
+ },
+ {
+  "text": "And that whisper is exactly where the money slips out.",
+  "mood": "sad",
+  "start": 78.794,
+  "end": 82.562
+ },
+ {
+  "text": "Here's where it gets personal.",
+  "mood": "curious",
+  "start": 83.262,
+  "end": 84.709
+ },
+ {
+  "text": "One study tracked a thousand households and six months of real grocery trips.",
+  "mood": "neutral",
+  "start": 85.009,
+  "end": 89.666
+ },
+ {
+  "text": "When people paid by card, more of the cart was the impulse stuff. Candy, chips, cookies.",
+  "mood": "excited",
+  "start": 89.966,
+  "end": 94.944
+ },
+ {
+  "text": "Cash shoppers? Fewer of those. The ouch was saying \"do you really need that?\"",
+  "mood": "sad",
+  "start": 95.244,
+  "end": 100.688
+ },
+ {
+  "text": "And here's the scary part. Ask card payers what they spent, and many can't tell you.",
+  "mood": "shocked",
+  "start": 100.988,
+  "end": 105.593
+ },
+ {
+  "text": "You can't feel what you can't even remember.",
+  "mood": "sad",
+  "start": 105.893,
+  "end": 108.617
+ },
+ {
+  "text": "Now, honesty time. That double bid was one auction.",
+  "mood": "firm",
+  "start": 109.317,
+  "end": 112.43
+ },
+ {
+  "text": "When researchers pooled seventy-one studies, the card effect was smaller. But it was real, and it showed up again and again.",
+  "mood": "neutral",
+  "start": 112.73,
+  "end": 119.765
+ },
+ {
+  "text": "Small leaks, every single day, still sink ships.",
+  "mood": "warm",
+  "start": 120.065,
+  "end": 122.977
+ },
+ {
+  "text": "So you don't have to go back to cash. You just have to bring the ouch back.",
+  "mood": "warm",
+  "start": 123.677,
+  "end": 127.589
+ },
+ {
+  "text": "One. Turn on an alert for every single payment. Let your phone say the number out loud.",
+  "mood": "firm",
+  "start": 127.889,
+  "end": 133.043
+ },
+ {
+  "text": "Two. Delete your saved card from shopping apps. Make buying take ten more seconds.",
+  "mood": "firm",
+  "start": 133.343,
+  "end": 138.415
+ },
+ {
+  "text": "Three. Pick one weak spot, like snacks or takeout, and pay for it in cash only.",
+  "mood": "excited",
+  "start": 138.715,
+  "end": 143.582
+ },
+ {
+  "text": "Watch how fast \"I want it\" turns into \"eh, maybe not.\"",
+  "mood": "whisper",
+  "start": 143.882,
+  "end": 148.329
+ },
+ {
+  "text": "That little sting isn't your enemy. It's the one part of you still guarding your money.",
+  "mood": "warm",
+  "start": 149.029,
+  "end": 153.799
+ },
+ {
+  "text": "Let it do its job.",
+  "mood": "warm",
+  "start": 154.099,
+  "end": 155.331
+ },
+ {
+  "text": "And if this made you look at your card a little differently, subscribe. There's a lot more your brain isn't telling you.",
+  "mood": "curious",
+  "start": 155.631,
+  "end": 161.618
+ }
+]

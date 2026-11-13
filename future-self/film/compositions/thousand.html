@@ -1,0 +1,78 @@
+<template>
+  <style>
+    @font-face { font-family: "Hand"; src: url("assets/fonts/PatrickHand-Regular.ttf"); }
+    #root { position: absolute; inset: 0; background: #1a2b66; overflow: hidden; }
+    #th-art { position: absolute; inset: 0; }
+    .rk { stroke: #0d0f22; stroke-linecap: round; stroke-linejoin: round; }
+    .pop { font-family: Hand; font-size: 150px; fill: #ffb35c; stroke: #0d0f22; stroke-width: 14px; paint-order: stroke; stroke-linejoin: round; }
+    .lab { font-family: Hand; font-size: 46px; fill: #f4f1ff; }
+  </style>
+  <div id="root" data-composition-id="thousand" data-width="1920" data-height="1080">
+    <svg id="th-art" class="clip" data-start="0" data-duration="30" viewBox="0 0 1920 1080" data-layout-allow-overflow>
+      <defs>
+        <radialGradient id="th-bg" cx="0.5" cy="0.55" r="0.75"><stop offset="0" stop-color="#2a4a9f"/><stop offset="1" stop-color="#111c4c"/></radialGradient>
+        <radialGradient id="th-warm"><stop offset="0" stop-color="#ffb35c" stop-opacity="0.7"/><stop offset="0.5" stop-color="#ff8a2a" stop-opacity="0.25"/><stop offset="1" stop-color="#ff8a2a" stop-opacity="0"/></radialGradient>
+      </defs>
+      <rect width="1920" height="1080" fill="url(#th-bg)"/>
+      <g fill="#fff" opacity="0.06"><circle cx="300" cy="160" r="4"/><circle cx="1500" cy="960" r="5"/><circle cx="1760" cy="140" r="4"/></g>
+
+      <!-- 36: a thousand dollars, how much for retirement? -->
+      <text class="pop" x="960" y="330" text-anchor="middle" style="font-size:200px" data-in="36,0.38,down" data-out="37,0,pop">$1,000</text>
+      <g transform="translate(960,740)"><g id="th-jar" data-in="36,0.8,pop" data-out="37,0">
+        <path class="rk" d="M-130,-150 L130,-150 L150,170 C150,200 130,210 100,210 L-100,210 C-130,210 -150,200 -150,170 Z" fill="#bfe8ff" fill-opacity="0.55" stroke-width="10"/>
+        <rect class="rk" x="-150" y="-190" width="300" height="50" rx="12" fill="#2f7c72" stroke-width="9"/>
+        <rect class="rk" x="-130" y="-10" width="260" height="80" rx="10" fill="#f7f3ea" stroke-width="7"/>
+        <text y="46" text-anchor="middle" style="font-family:Hand;font-size:50px;fill:#0d0f22">retirement</text>
+      </g></g>
+
+      <!-- 37: twice as much -->
+      <g id="th-chart" data-in="37,0.05,fade" data-out="38,0">
+        <path d="M520,880 L1400,880" stroke="#c9d3ef" stroke-width="8" stroke-linecap="round"/>
+        <rect class="rk" x="620" y="640" width="260" height="240" rx="10" fill="#7d86c4" stroke-width="10" data-in="37,0.25,grow"/>
+        <rect class="rk" x="1040" y="400" width="260" height="480" rx="10" fill="#ff8a2a" stroke-width="10" data-in="37,0.5,grow"/>
+        <text class="lab" x="750" y="950" text-anchor="middle">normal photo</text>
+        <text class="lab" x="1170" y="950" text-anchor="middle">their older face</text>
+      </g>
+      <text class="pop" x="1170" y="350" text-anchor="middle" style="font-size:170px" data-in="37,0.78,pop" data-out="38,0,pop">2&#215;</text>
+
+      <!-- 38: same people, same money -->
+      <g transform="translate(680,640) scale(0.48)"><g id="th-k1" data-in="38,0.05,up" data-out="39,0">
+        <g data-rig="kid" data-p="t1" data-o='{"mouth":"flat","brows":"flat"}'></g>
+      </g></g>
+      <g transform="translate(1240,640) scale(0.48)"><g id="th-k2" data-in="38,0.15,up" data-out="39,0">
+        <g data-rig="kid" data-p="t2" data-o='{"mouth":"flat","brows":"flat"}'></g>
+      </g></g>
+      <text class="pop" x="960" y="640" text-anchor="middle" style="font-size:150px" data-in="38,0.6,pop" data-out="39,0,pop">=</text>
+
+      <!-- 39-40: the stranger becomes a person -->
+      <circle id="th-glow" cx="960" cy="600" r="560" fill="url(#th-warm)" opacity="0"/>
+      <g transform="translate(960,620) scale(0.6)"><g id="th-person" data-in="39,0.05,fade">
+        <g data-rig="old" data-p="tp" data-o='{"mouth":"smile"}'></g>
+        <g id="th-sil"><g data-rig="sil" data-p="tsil"></g></g>
+      </g></g>
+      <g transform="translate(1600,200)"><g id="th-stamp" data-in="40,0.3,pop">
+        <g transform="rotate(-12)">
+          <rect x="-200" y="-70" width="400" height="140" rx="16" fill="none" stroke="#ff5f6d" stroke-width="12"/>
+          <text y="28" text-anchor="middle" style="font-family:Hand;font-size:84px;fill:#ff5f6d">on paper</text>
+        </g>
+      </g></g>
+    </svg>
+  </div>
+  <script>
+    Rig.fill();
+    const tl = gsap.timeline({ paused: true }), A = s => Rig.at(s, "thousand");
+    Rig.run(tl, "thousand");
+    tl.to("#th-jar", { y: -16, duration: 0.5, yoyo: true, repeat: 3, ease: "sine.inOut" }, A("36,0.9"));
+    // 38: identical blinks
+    ["t1", "t2"].forEach(p => Rig.blinks(tl, p, A("38,0"), A("39,0")));
+    // 39: silhouette fills in with colour and a smile
+    const f = A("39,0.62");
+    tl.to("#th-sil", { opacity: 0, duration: 0.7, ease: "power2.inOut" }, f);
+    tl.to("#th-glow", { opacity: 1, duration: 0.8, ease: "power2.out" }, f);
+    tl.fromTo("#th-person", { scale: 1 }, { scale: 1.06, svgOrigin: "0 200", duration: 0.5, ease: "back.out(2)" }, f + 0.3);
+    Rig.mouth(tl, "tp", "smile", "grin", f + 0.5);
+    // 40: gentle nod during the honesty note
+    tl.to("#th-person", { y: 16, duration: 0.25, yoyo: true, repeat: 3, ease: "sine.inOut" }, A("40,0.75"));
+    window.__timelines["thousand"] = tl;
+  </script>
+</template>

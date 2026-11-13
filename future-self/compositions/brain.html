@@ -1,0 +1,94 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; background: #f3ecdf; overflow: hidden; }
+    #brain-title { position: absolute; top: 120px; left: 0; width: 100%; text-align: center;
+      font-family: "Archivo Black"; font-size: 84px; line-height: 1; color: #1f1a17; }
+    #brain-title span { display: inline-block; margin: 0 9px; }
+    #brain-title .hot { color: #d2553a; }
+    #brain-art { position: absolute; inset: 0; }
+    .ink { stroke: #1f1a17; stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; }
+    .lbl { font-family: Nunito; font-weight: 900; font-size: 38px; fill: #1f1a17; letter-spacing: 0.04em; }
+    .sub { font-family: Nunito; font-weight: 800; font-size: 32px; fill: #8a8175; letter-spacing: 0.06em; }
+  </style>
+  <div id="root" data-composition-id="brain" data-width="1920" data-height="1080">
+    <h1 id="brain-title" class="clip" data-start="0" data-duration="3">
+      <span>FUTURE</span><span>YOU</span><span>IS</span><span>A</span><span class="hot">STRANGER</span>
+    </h1>
+    <svg id="brain-art" class="clip" data-start="0" data-duration="3" viewBox="0 0 1920 1080" data-layout-allow-overflow>
+      <defs>
+        <radialGradient id="brain-glow"><stop offset="0" stop-color="#3fb3a6" stop-opacity="0.9"/><stop offset="1" stop-color="#3fb3a6" stop-opacity="0"/></radialGradient>
+        <path id="brain-shape" d="M-60,10 C-82,-10 -72,-46 -45,-50 C-40,-76 -5,-82 5,-60 C20,-82 62,-72 60,-45 C86,-40 86,-4 66,6 C72,32 40,46 20,36 C5,52 -30,52 -36,36 C-62,40 -76,24 -60,10 Z"/>
+      </defs>
+
+      <!-- card 1: me today -->
+      <g transform="translate(330,250)"><g id="brain-c1">
+        <rect x="12" y="12" width="400" height="560" rx="30" fill="#1f1a17"/>
+        <rect class="ink" width="400" height="560" rx="30" fill="#fffaf1"/>
+        <circle id="brain-g1" cx="200" cy="120" r="120" fill="url(#brain-glow)"/>
+        <use href="#brain-shape" class="ink" transform="translate(200,120)" fill="#3fb3a6"/>
+        <path class="ink" d="M200,70 C190,95 210,120 198,160" fill="none"/>
+        <circle class="ink" cx="200" cy="300" r="62" fill="#f2d9c0"/>
+        <path class="ink" d="M140,290 C140,226 262,222 262,288 C240,258 180,250 140,290 Z" fill="#1f1a17"/>
+        <circle cx="180" cy="305" r="6" fill="#1f1a17"/><circle cx="222" cy="305" r="6" fill="#1f1a17"/>
+        <path class="ink" d="M184,330 C194,340 208,340 218,330" fill="none"/>
+        <path class="ink" d="M110,440 C120,385 280,385 290,440 Z" fill="#e3a63a"/>
+        <rect x="60" y="470" width="280" height="22" rx="11" fill="#e6ddcd"/>
+        <rect id="brain-m1" x="60" y="470" width="280" height="22" rx="11" fill="#2c7a74"/>
+        <text x="200" y="640" text-anchor="middle" class="lbl">ME, TODAY</text>
+      </g></g>
+
+      <!-- card 2: stranger -->
+      <g transform="translate(760,250)"><g id="brain-c2">
+        <rect x="12" y="12" width="400" height="560" rx="30" fill="#1f1a17"/>
+        <rect class="ink" width="400" height="560" rx="30" fill="#fffaf1"/>
+        <use href="#brain-shape" class="ink" transform="translate(200,120)" fill="#cfc7b8"/>
+        <path class="ink" d="M200,70 C190,95 210,120 198,160" fill="none"/>
+        <circle class="ink" cx="200" cy="300" r="62" fill="#d9d2c4"/>
+        <text x="200" y="326" text-anchor="middle" style="font-family:'Archivo Black';font-size:72px;fill:#8a8175">?</text>
+        <path class="ink" d="M110,440 C120,385 280,385 290,440 Z" fill="#b9b2a6"/>
+        <rect x="60" y="470" width="280" height="22" rx="11" fill="#e6ddcd"/>
+        <rect id="brain-m2" x="60" y="470" width="280" height="22" rx="11" fill="#8a8175"/>
+        <text x="200" y="640" text-anchor="middle" class="lbl">A STRANGER</text>
+      </g></g>
+
+      <!-- card 3: future me -->
+      <g transform="translate(1190,250)"><g id="brain-c3">
+        <rect x="12" y="12" width="400" height="560" rx="30" fill="#1f1a17"/>
+        <rect class="ink" width="400" height="560" rx="30" fill="#fffaf1"/>
+        <use href="#brain-shape" class="ink" transform="translate(200,120)" fill="#cfc7b8"/>
+        <path class="ink" d="M200,70 C190,95 210,120 198,160" fill="none"/>
+        <circle class="ink" cx="200" cy="300" r="62" fill="#ead2bb"/>
+        <ellipse class="ink" cx="143" cy="280" rx="20" ry="28" fill="#f4f1ea" stroke-width="5"/>
+        <ellipse class="ink" cx="257" cy="280" rx="20" ry="28" fill="#f4f1ea" stroke-width="5"/>
+        <circle class="ink" cx="180" cy="305" r="17" fill="none" stroke-width="5"/>
+        <circle class="ink" cx="222" cy="305" r="17" fill="none" stroke-width="5"/>
+        <line class="ink" x1="197" y1="305" x2="205" y2="305" stroke-width="5"/>
+        <circle cx="180" cy="305" r="5" fill="#1f1a17"/><circle cx="222" cy="305" r="5" fill="#1f1a17"/>
+        <path class="ink" d="M184,336 C194,344 208,344 218,336" fill="none"/>
+        <path class="ink" d="M110,440 C120,385 280,385 290,440 Z" fill="#2c7a74"/>
+        <rect x="60" y="470" width="280" height="22" rx="11" fill="#e6ddcd"/>
+        <rect id="brain-m3" x="60" y="470" width="280" height="22" rx="11" fill="#8a8175"/>
+        <text x="200" y="640" text-anchor="middle" class="lbl">ME, AT 60</text>
+      </g></g>
+
+      <!-- "same" bracket under cards 2 + 3 -->
+      <path id="brain-br" class="ink" d="M800,930 C800,960 820,960 1000,960 L1160,960 C1340,960 1560,960 1560,930" fill="none" stroke="#d2553a" stroke-width="7"/>
+      <text id="brain-same" x="1180" y="1010" text-anchor="middle" class="sub" style="fill:#d2553a">SAME BRAIN RESPONSE</text>
+    </svg>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#brain-title span", { opacity: 0, filter: "blur(8px)" },
+      { opacity: 1, filter: "blur(0px)", duration: 0.14, stagger: 0.06, ease: "power4.out" }, 0.05);
+    tl.fromTo(["#brain-c1", "#brain-c2", "#brain-c3"], { opacity: 0, y: 60 },
+      { opacity: 1, y: 0, duration: 0.6, stagger: 0.12, ease: "expo.out" }, 0.1);
+    tl.fromTo("#brain-g1", { opacity: 0, scale: 0.4, transformOrigin: "50% 50%" },
+      { opacity: 1, scale: 1, duration: 0.7, ease: "power2.out" }, 0.8);
+    tl.fromTo("#brain-m1", { scaleX: 0, transformOrigin: "0% 50%" }, { scaleX: 0.92, duration: 0.8, ease: "power3.out" }, 0.9);
+    tl.fromTo("#brain-m2", { scaleX: 0, transformOrigin: "0% 50%" }, { scaleX: 0.22, duration: 0.8, ease: "power3.out" }, 1.0);
+    tl.fromTo("#brain-m3", { scaleX: 0, transformOrigin: "0% 50%" }, { scaleX: 0.26, duration: 0.8, ease: "power3.out" }, 1.1);
+    tl.fromTo("#brain-br", { strokeDasharray: 900, strokeDashoffset: 900 }, { strokeDashoffset: 0, duration: 0.5, ease: "power2.inOut" }, 1.8);
+    tl.fromTo("#brain-same", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 2.15);
+    window.__timelines["brain"] = tl;
+  </script>
+</template>

@@ -1,0 +1,52 @@
+<template>
+  <style>
+    @font-face { font-family: "Hand"; src: url("assets/fonts/PatrickHand-Regular.ttf"); }
+    #root { position: absolute; inset: 0; background: #1a2b66; overflow: hidden; }
+    #vw-art { position: absolute; inset: 0; }
+    .rk { stroke: #0d0f22; stroke-linecap: round; stroke-linejoin: round; }
+    .pop { font-family: Hand; font-size: 150px; fill: #ffb35c; stroke: #0d0f22; stroke-width: 14px; paint-order: stroke; stroke-linejoin: round; }
+    .lab { font-family: Hand; font-size: 64px; fill: #f4f1ff; }
+  </style>
+  <div id="root" data-composition-id="v3bwindow" data-width="1080" data-height="1920">
+    <svg id="vw-art" class="clip" data-start="0" data-duration="40" viewBox="0 0 1080 1920" data-layout-allow-overflow>
+      <defs>
+        <radialGradient id="vw-bg" cx="0.5" cy="0.5" r="0.8"><stop offset="0" stop-color="#2a4a9f"/><stop offset="1" stop-color="#111c4c"/></radialGradient>
+      </defs>
+      <rect width="1080" height="1920" fill="url(#vw-bg)"/>
+
+      <defs><clipPath id="vw-clip"><rect x="190" y="450" width="700" height="460" rx="18"/></clipPath></defs>
+      <rect x="190" y="450" width="700" height="460" rx="18" fill="#3a5ab8"/>
+      <g clip-path="url(#vw-clip)">
+        <rect x="190" y="760" width="700" height="160" fill="#2f7c52"/>
+        <g transform="translate(540,780)"><path class="rk" d="M-200,40 L-200,-20 C-190,-50 -150,-60 -110,-60 L-70,-120 L90,-120 L140,-60 C190,-58 210,-40 210,0 L210,40 Z" fill="#7cf0a8" stroke-width="10"/>
+          <path class="rk" d="M-50,-104 L-80,-62 L20,-62 L20,-104 Z M40,-104 L40,-62 L116,-62 L82,-104 Z" fill="#9fe3ff" stroke-width="7"/>
+          <circle class="rk" cx="-110" cy="44" r="42" fill="#2b2f45" stroke-width="9"/><circle cx="-110" cy="44" r="16" fill="#c9d3ef"/>
+          <circle class="rk" cx="120" cy="44" r="42" fill="#2b2f45" stroke-width="9"/><circle cx="120" cy="44" r="16" fill="#c9d3ef"/></g>
+        <g transform="translate(440,690)"><g id="vw-glint" opacity="0"><path d="M0,-50 L12,-12 L50,0 L12,12 L0,50 L-12,12 L-50,0 L-12,-12 Z" fill="#fff"/></g></g>
+      </g>
+      <rect class="rk" x="190" y="450" width="700" height="460" rx="18" fill="none" stroke-width="12"/>
+      <rect class="rk" x="160" y="900" width="760" height="40" rx="10" fill="#f3e6c8" stroke-width="10"/>
+      <g transform="translate(540,1190) scale(0.5)"><g id="vw-kid"><g data-rig="kid" data-p="vwk" data-o='{"mouth":"flat","brows":"flat","look":[0,0]}'></g></g></g>
+      <g transform="translate(780,1360)"><g id="vw-mug" data-in="26,0,up">
+        <path class="rk" d="M70,-40 C130,-40 130,40 70,40" fill="none" stroke-width="22"/>
+        <rect id="vw-cup" class="rk" x="-80" y="-80" width="160" height="170" rx="20" fill="#ff8a2a" stroke-width="10"/>
+        <g id="vw-steam" fill="none" stroke="#f4f1ff" stroke-width="10" stroke-linecap="round" opacity="0.8"><path d="M-30,-110 C-50,-150 -10,-170 -30,-210"/><path d="M30,-110 C10,-150 50,-170 30,-210"/></g>
+      </g></g>
+    </svg>
+  </div>
+  <script>
+    Rig.fill();
+    const tl = gsap.timeline({ paused: true }), A = s => Rig.at(s, "v3bwindow");
+    Rig.run(tl, "v3bwindow");
+    Rig.blinks(tl, "vwk", 0, 10);
+    tl.to("#vw-kid", { rotation: 6, svgOrigin: "0 300", duration: 0.14, yoyo: true, repeat: 5, ease: "sine.inOut" }, A("25,0.3"));
+    Rig.look(tl, "vwk", 0, -50, A("26,0.15"));
+    Rig.mouth(tl, "vwk", "flat", "sad", A("26,0.4")); Rig.brows(tl, "vwk", "worry", A("26,0.4"));
+    tl.to("#vw-steam", { y: -20, duration: 0.6, yoyo: true, repeat: 3, ease: "sine.inOut" }, A("26,0"));
+    tl.set("#vw-glint", { opacity: 1 }, A("26,0.45"));
+    tl.fromTo("#vw-glint", { scale: 0.2, rotation: 0, transformOrigin: "50% 50%" }, { scale: 1.3, rotation: 90, transformOrigin: "50% 50%", duration: 0.4, yoyo: true, repeat: 3, ease: "sine.inOut" }, A("26,0.45"));
+    tl.to("#vw-steam", { opacity: 0, duration: 0.8 }, A("26,0.75"));
+    tl.to("#vw-cup", { fill: "#7a86b8", duration: 0.8 }, A("26,0.75"));
+    window.__timelines["v3bwindow"] = tl;
+  </script>
+</template>

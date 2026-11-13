@@ -1,0 +1,121 @@
+<template>
+  <style>
+    @font-face { font-family: "Hand"; src: url("assets/fonts/PatrickHand-Regular.ttf"); }
+    #root { position: absolute; inset: 0; background: #1a2b66; overflow: hidden; }
+    #vr-art { position: absolute; inset: 0; }
+    .k { stroke: #0d0f22; stroke-linecap: round; stroke-linejoin: round; }
+    .pop { font-family: Hand; fill: #ffb35c; stroke: #0d0f22; stroke-width: 14px; paint-order: stroke; stroke-linejoin: round; }
+  </style>
+  <div id="root" data-composition-id="v1reveal" data-width="1080" data-height="1920">
+    <svg id="vr-art" class="clip" data-start="0" data-duration="20" viewBox="0 0 1080 1920" data-layout-allow-overflow>
+      <defs>
+        <radialGradient id="vr-bg" cx="0.5" cy="0.6" r="0.8"><stop offset="0" stop-color="#2a4a9f"/><stop offset="1" stop-color="#111c4c"/></radialGradient>
+        <radialGradient id="vr-warm"><stop offset="0" stop-color="#ffb35c" stop-opacity="0.6"/><stop offset="1" stop-color="#ff8a2a" stop-opacity="0"/></radialGradient>
+        <radialGradient id="vr-qglow"><stop offset="0" stop-color="#ff8a2a" stop-opacity="0.55"/><stop offset="1" stop-color="#ff8a2a" stop-opacity="0"/></radialGradient>
+        <g id="vr-ysil">
+          <path d="M-330,520 C-330,330 -200,280 0,280 C200,280 330,330 330,520 Z"/>
+          <ellipse cx="-292" cy="20" rx="44" ry="66"/><ellipse cx="292" cy="20" rx="44" ry="66"/>
+          <circle cx="0" cy="0" r="290"/>
+          <path d="M-302,-30 C-326,-330 300,-352 306,-40 C262,-150 160,-186 80,-146 C58,-200 -62,-206 -112,-146 C-182,-186 -272,-136 -302,-30 Z"/>
+          <path d="M10,-300 C-6,-392 96,-410 86,-338 C72,-372 34,-362 44,-306 Z"/>
+        </g>
+        <g id="vr-osil">
+          <path d="M-340,560 C-340,340 -210,286 0,286 C210,286 340,340 340,560 Z"/>
+          <ellipse cx="-292" cy="20" rx="44" ry="66"/><ellipse cx="292" cy="20" rx="44" ry="66"/>
+          <circle cx="0" cy="0" r="290"/>
+          <path d="M-296,40 C-350,-40 -320,-170 -230,-190 C-250,-100 -250,-20 -220,50 Z"/>
+          <path d="M296,40 C350,-40 320,-170 230,-190 C250,-100 250,-20 220,50 Z"/>
+        </g>
+      </defs>
+      <rect width="1080" height="1920" fill="url(#vr-bg)"/>
+      <circle id="vr-warmglow" cx="790" cy="1130" r="380" fill="url(#vr-warm)" opacity="0"/>
+
+      <!-- you, today -->
+      <g transform="translate(290,1130) scale(0.48)"><g id="vr-young">
+        <use href="#vr-ysil" transform="translate(16,-12)" fill="#ff8a2a"/>
+        <use href="#vr-ysil" transform="translate(-10,8)" fill="#8f7dff" opacity="0.8"/>
+        <path class="k" d="M-330,520 C-330,330 -200,280 0,280 C200,280 330,330 330,520 Z" fill="#e3a63a" stroke-width="12"/>
+        <path class="k" d="M-150,300 C-80,360 80,360 150,300" fill="#c98b2c" stroke-width="10"/>
+        <ellipse class="k" cx="-292" cy="20" rx="44" ry="66" fill="#eec2a2" stroke-width="12"/>
+        <ellipse class="k" cx="292" cy="20" rx="44" ry="66" fill="#eec2a2" stroke-width="12"/>
+        <circle class="k" cx="0" cy="0" r="290" fill="#f4d2b6" stroke-width="12"/>
+        <path class="k" d="M-302,-30 C-326,-330 300,-352 306,-40 C262,-150 160,-186 80,-146 C58,-200 -62,-206 -112,-146 C-182,-186 -272,-136 -302,-30 Z" fill="#1c1a30" stroke-width="12"/>
+        <path class="k" d="M10,-300 C-6,-392 96,-410 86,-338 C72,-372 34,-362 44,-306 Z" fill="#1c1a30" stroke-width="10"/>
+        <ellipse class="k" cx="-104" cy="30" rx="66" ry="76" fill="#fff" stroke-width="11"/>
+        <ellipse class="k" cx="104" cy="30" rx="66" ry="76" fill="#fff" stroke-width="11"/>
+        <g transform="translate(-104,30)"><g id="vr-p1"><circle r="42" fill="#151530"/><circle cx="14" cy="-18" r="13" fill="#fff"/><circle cx="-16" cy="18" r="6" fill="#fff"/></g></g>
+        <g transform="translate(104,30)"><g id="vr-p2"><circle r="42" fill="#151530"/><circle cx="14" cy="-18" r="13" fill="#fff"/><circle cx="-16" cy="18" r="6" fill="#fff"/></g></g>
+        <path class="k" d="M-170,-60 C-130,-70 -84,-88 -52,-112" fill="none" stroke-width="18"/>
+        <path class="k" d="M52,-112 C84,-88 130,-70 170,-60" fill="none" stroke-width="18"/>
+        <ellipse cx="-190" cy="130" rx="44" ry="26" fill="#ff8f86" opacity="0.45"/><ellipse cx="190" cy="130" rx="44" ry="26" fill="#ff8f86" opacity="0.45"/>
+        <ellipse class="k" cx="10" cy="186" rx="26" ry="32" fill="#4a1f28" stroke-width="10"/>
+      </g></g>
+
+      <!-- link between them -->
+      <path id="vr-dots" d="M460,1110 L620,1110" stroke="#8f7dff" stroke-width="10" stroke-linecap="round" stroke-dasharray="2 30" opacity="0.8"/>
+      <path id="vr-line" d="M460,1110 C510,1075 570,1075 620,1110" fill="none" stroke="#ff8a2a" stroke-width="10" stroke-linecap="round" opacity="0"/>
+
+      <!-- future you: lit underneath, dark stranger on top -->
+      <g transform="translate(790,1130) scale(0.48)"><g id="vr-old">
+        <g id="vr-oldlit">
+          <use href="#vr-osil" transform="translate(16,-12)" fill="#ff8a2a"/>
+          <path class="k" d="M-340,560 C-340,340 -210,286 0,286 C210,286 340,340 340,560 Z" fill="#2f7c72" stroke-width="12"/>
+          <path class="k" d="M-90,296 L0,400 L90,296" fill="#f3ecdf" stroke-width="10"/>
+          <line class="k" x1="0" y1="400" x2="0" y2="560" stroke-width="9"/>
+          <ellipse class="k" cx="-292" cy="20" rx="44" ry="66" fill="#eac0a0" stroke-width="12"/>
+          <ellipse class="k" cx="292" cy="20" rx="44" ry="66" fill="#eac0a0" stroke-width="12"/>
+          <circle class="k" cx="0" cy="0" r="290" fill="#efcaa9" stroke-width="12"/>
+          <path class="k" d="M-296,40 C-350,-40 -320,-170 -230,-190 C-250,-100 -250,-20 -220,50 Z" fill="#f7f3ea" stroke-width="10"/>
+          <path class="k" d="M296,40 C350,-40 320,-170 230,-190 C250,-100 250,-20 220,50 Z" fill="#f7f3ea" stroke-width="10"/>
+          <path class="k" d="M10,-300 C-6,-392 96,-410 86,-338 C72,-372 34,-362 44,-306 Z" fill="#f7f3ea" stroke-width="10"/>
+          <path class="k" d="M-150,10 C-130,-14 -80,-14 -60,10" fill="none" stroke-width="12"/>
+          <path class="k" d="M60,10 C80,-14 130,-14 150,10" fill="none" stroke-width="12"/>
+          <circle class="k" cx="-104" cy="20" r="74" fill="#fff" fill-opacity="0.25" stroke-width="11"/>
+          <circle class="k" cx="104" cy="20" r="74" fill="#fff" fill-opacity="0.25" stroke-width="11"/>
+          <line class="k" x1="-30" y1="20" x2="30" y2="20" stroke-width="10"/>
+          <path class="k" d="M-170,-90 C-130,-110 -90,-110 -60,-96" fill="none" stroke="#f7f3ea" stroke-width="18"/>
+          <path class="k" d="M60,-96 C90,-110 130,-110 170,-90" fill="none" stroke="#f7f3ea" stroke-width="18"/>
+          <ellipse cx="-190" cy="140" rx="46" ry="26" fill="#ff8f86" opacity="0.55"/><ellipse cx="190" cy="140" rx="46" ry="26" fill="#ff8f86" opacity="0.55"/>
+          <path class="k" d="M-90,150 C-50,220 50,220 90,150 Z" fill="#a8483a" stroke-width="11"/>
+        </g>
+        <g id="vr-olddark">
+          <use href="#vr-osil" transform="translate(-16,-12)" fill="#b9a6ff"/>
+          <use href="#vr-osil" fill="#0c1433"/>
+          <circle cx="-104" cy="30" r="74" fill="none" stroke="#b9a6ff" stroke-width="10" opacity="0.55"/>
+          <circle cx="104" cy="30" r="74" fill="none" stroke="#b9a6ff" stroke-width="10" opacity="0.55"/>
+          <line x1="-30" y1="30" x2="30" y2="30" stroke="#b9a6ff" stroke-width="10" opacity="0.55"/>
+        </g>
+      </g></g>
+      <circle id="vr-qg" cx="790" cy="800" r="120" fill="url(#vr-qglow)" opacity="0"/>
+      <text id="vr-q" x="790" y="850" text-anchor="middle" style="font-family:Hand;font-size:170px;fill:#ff8a2a" opacity="0">?</text>
+      <text id="vr-someone" class="pop" x="540" y="640" text-anchor="middle" style="font-size:150px" opacity="0">someone</text>
+      <text id="vr-you" class="pop" x="540" y="640" text-anchor="middle" style="font-size:170px" opacity="0">you.</text>
+      <text id="vr-yl" x="290" y="1470" text-anchor="middle" style="font-family:Hand;font-size:52px;fill:#f4f1ff">you, today</text>
+      <text id="vr-ol" x="790" y="1470" text-anchor="middle" style="font-family:Hand;font-size:52px;fill:#ffb35c" opacity="0">you, in 30 years</text>
+    </svg>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true }), A = s => Rig.at(s, "v1reveal");
+    tl.fromTo("#vr-young", { opacity: 0, x: -150 }, { opacity: 1, x: 0, duration: 0.5, ease: "expo.out" }, 0);
+    tl.fromTo("#vr-old", { opacity: 0 }, { opacity: 1, duration: 0.6, ease: "power2.out" }, 0.1);
+    tl.fromTo("#vr-yl", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 0.2);
+    tl.fromTo("#vr-dots", { strokeDashoffset: 240 }, { strokeDashoffset: 0, duration: 0.8, ease: "power2.inOut" }, 0.2);
+    tl.to(["#vr-p1", "#vr-p2"], { x: 20, duration: 0.3, ease: "power3.out" }, 0.4);
+    tl.fromTo(["#vr-q", "#vr-qg"], { opacity: 0, scale: 0.4, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.45, ease: "back.out(2)" }, A("3,0.35"));
+    tl.fromTo("#vr-someone", { opacity: 0, scale: 0.3, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.35, ease: "back.out(2.2)" }, A("3,0.8"));
+    // 4: "And you've definitely met him." the stranger lights up as you
+    const t5 = A("4,0.15");
+    tl.to(["#vr-q", "#vr-qg", "#vr-someone"], { opacity: 0, duration: 0.2, ease: "power3.in" }, t5 - 0.1);
+    tl.to("#vr-olddark", { opacity: 0, duration: 0.45, ease: "power2.inOut" }, t5);
+    tl.to("#vr-warmglow", { opacity: 1, duration: 0.6, ease: "power2.out" }, t5);
+    tl.to("#vr-dots", { opacity: 0, duration: 0.2 }, t5);
+    tl.fromTo("#vr-line", { opacity: 1, strokeDasharray: 240, strokeDashoffset: 240 }, { opacity: 1, strokeDashoffset: 0, duration: 0.5, ease: "power2.out" }, t5 + 0.1);
+    tl.to(["#vr-p1", "#vr-p2"], { scale: 1.25, duration: 0.25, ease: "back.out(2)" }, t5 + 0.15);
+    tl.to("#vr-ol", { opacity: 1, duration: 0.3 }, t5 + 0.3);
+    tl.fromTo("#vr-you", { opacity: 0, scale: 0.3, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.35, ease: "back.out(2.2)" }, A("4,0.75"));
+    // 5: "Stick around..." both sway a little
+    tl.to("#vr-old", { y: -14, duration: 0.4, yoyo: true, repeat: 3, ease: "sine.inOut" }, A("5,0.1"));
+    tl.to("#vr-young", { y: -14, duration: 0.4, yoyo: true, repeat: 3, ease: "sine.inOut" }, A("5,0.3"));
+    window.__timelines["v1reveal"] = tl;
+  </script>
+</template>

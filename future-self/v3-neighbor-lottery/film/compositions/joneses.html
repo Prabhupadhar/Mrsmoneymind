@@ -1,0 +1,66 @@
+<template>
+  <style>
+    @font-face { font-family: "Hand"; src: url("assets/fonts/PatrickHand-Regular.ttf"); }
+    #root { position: absolute; inset: 0; background: #1a2b66; overflow: hidden; }
+    #jo-art { position: absolute; inset: 0; }
+    .rk { stroke: #0d0f22; stroke-linecap: round; stroke-linejoin: round; }
+    .pop { font-family: Hand; font-size: 150px; fill: #ffb35c; stroke: #0d0f22; stroke-width: 14px; paint-order: stroke; stroke-linejoin: round; }
+    .lab { font-family: Hand; font-size: 56px; fill: #f4f1ff; }
+    .num { font-family: Hand; font-size: 120px; fill: #fff; }
+  </style>
+  <div id="root" data-composition-id="joneses" data-width="1920" data-height="1080">
+    <svg id="jo-art" class="clip" data-start="0" data-duration="30" viewBox="0 0 1920 1080" data-layout-allow-overflow>
+      <defs>
+        <radialGradient id="jo-bg" cx="0.5" cy="0.55" r="0.75"><stop offset="0" stop-color="#2a4a9f"/><stop offset="1" stop-color="#111c4c"/></radialGradient>
+      </defs>
+      <rect width="1920" height="1080" fill="url(#jo-bg)"/>
+      <g fill="#fff" opacity="0.06"><circle cx="300" cy="160" r="4"/><circle cx="1500" cy="960" r="5"/><circle cx="1760" cy="140" r="4"/></g>
+
+      <!-- 23: kid and neighbor on a see-saw -->
+      <g id="jo-saw" data-in="23,0,fade" data-out="24,0">
+        <path class="rk" d="M960,1000 L880,1080 L1040,1080 Z" fill="#8a5a3c" stroke-width="10"/>
+        <g id="jo-plank">
+          <rect class="rk" x="300" y="960" width="1320" height="44" rx="14" fill="#ffb35c" stroke-width="10"/>
+          <g transform="translate(520,700) scale(0.5)"><g data-rig="kid" data-p="jk" data-o='{"mouth":"worry","brows":"worry","look":[40,-10]}'></g></g>
+          <g transform="translate(1400,700) scale(0.5)"><g data-rig="nb" data-p="jn" data-o='{"mouth":"smile","brows":"flat","look":[-40,0]}'></g></g>
+        </g>
+      </g>
+      <!-- 24: the Dutch postcode lottery: a new car, then another -->
+      <g id="jo-drive" data-in="24,0,fade">
+        <rect x="0" y="860" width="1920" height="220" fill="#2f7c52"/>
+        <g transform="translate(500,620)"><rect class="rk" x="-160" y="-100" width="320" height="220" fill="#e9dcc6" stroke-width="10"/>
+          <path class="rk" d="M-200,-90 L0,-240 L200,-90 Z" fill="#c2504a" stroke-width="10"/>
+          <rect class="rk" x="-40" y="10" width="80" height="110" rx="6" fill="#8a5a3c" stroke-width="8"/>
+          <rect class="rk" x="-130" y="-50" width="70" height="60" rx="6" fill="#ffd27a" stroke-width="7"/>
+          <rect class="rk" x="60" y="-50" width="70" height="60" rx="6" fill="#ffd27a" stroke-width="7"/></g>
+        <g transform="translate(1420,620)"><rect class="rk" x="-160" y="-100" width="320" height="220" fill="#e9dcc6" stroke-width="10"/>
+          <path class="rk" d="M-200,-90 L0,-240 L200,-90 Z" fill="#6a4fd6" stroke-width="10"/>
+          <rect class="rk" x="-40" y="10" width="80" height="110" rx="6" fill="#8a5a3c" stroke-width="8"/>
+          <rect class="rk" x="-130" y="-50" width="70" height="60" rx="6" fill="#ffd27a" stroke-width="7"/>
+          <rect class="rk" x="60" y="-50" width="70" height="60" rx="6" fill="#ffd27a" stroke-width="7"/></g>
+        <g transform="translate(500,330)"><g data-in="24,0.25,pop"><path class="rk" d="M0,-60 l18,38 42,6 -30,28 8,42 -38,-20 -38,20 8,-42 -30,-28 42,-6 z" fill="#ffd23a" stroke-width="8"/></g></g>
+        <path d="M0,910 L1920,910" stroke="#4a4f6a" stroke-width="60"/>
+        <g transform="translate(500,880) scale(0.8)"><g id="jo-car1"><path class="rk" d="M-200,40 L-200,-20 C-190,-50 -150,-60 -110,-60 L-70,-120 L90,-120 L140,-60 C190,-58 210,-40 210,0 L210,40 Z" fill="#ff5f6d" stroke-width="10"/>
+          <path class="rk" d="M-50,-104 L-80,-62 L20,-62 L20,-104 Z M40,-104 L40,-62 L116,-62 L82,-104 Z" fill="#9fe3ff" stroke-width="7"/>
+          <circle class="rk" cx="-110" cy="44" r="42" fill="#2b2f45" stroke-width="9"/><circle cx="-110" cy="44" r="16" fill="#c9d3ef"/>
+          <circle class="rk" cx="120" cy="44" r="42" fill="#2b2f45" stroke-width="9"/><circle cx="120" cy="44" r="16" fill="#c9d3ef"/></g></g>
+        <g transform="translate(1420,880) scale(0.8)"><g id="jo-car2"><path class="rk" d="M-200,40 L-200,-20 C-190,-50 -150,-60 -110,-60 L-70,-120 L90,-120 L140,-60 C190,-58 210,-40 210,0 L210,40 Z" fill="#7cf0a8" stroke-width="10"/>
+          <path class="rk" d="M-50,-104 L-80,-62 L20,-62 L20,-104 Z M40,-104 L40,-62 L116,-62 L82,-104 Z" fill="#9fe3ff" stroke-width="7"/>
+          <circle class="rk" cx="-110" cy="44" r="42" fill="#2b2f45" stroke-width="9"/><circle cx="-110" cy="44" r="16" fill="#c9d3ef"/>
+          <circle class="rk" cx="120" cy="44" r="42" fill="#2b2f45" stroke-width="9"/><circle cx="120" cy="44" r="16" fill="#c9d3ef"/></g></g>
+      </g>
+    </svg>
+  </div>
+  <script>
+    Rig.fill();
+    const tl = gsap.timeline({ paused: true }), A = s => Rig.at(s, "joneses");
+    Rig.run(tl, "joneses");
+    Rig.blinks(tl, "jk", 0, 8); Rig.blinks(tl, "jn", 0, 8, 0.6);
+    // 23: the see-saw rocks back and forth
+    tl.fromTo("#jo-plank", { rotation: -6, svgOrigin: "960 1000" }, { rotation: 6, svgOrigin: "960 1000", duration: 0.7, yoyo: true, repeat: 3, ease: "sine.inOut" }, A("23,0"));
+    // 24: winner's car rolls in, then the neighbor's
+    tl.fromTo("#jo-car1", { x: -1200 }, { x: 0, duration: 0.9, ease: "power3.out" }, A("24,0.3"));
+    tl.fromTo("#jo-car2", { x: 1200 }, { x: 0, duration: 0.9, ease: "power3.out" }, A("24,0.78"));
+    window.__timelines["joneses"] = tl;
+  </script>
+</template>

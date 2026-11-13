@@ -1,0 +1,83 @@
+<template>
+  <style>
+    @font-face { font-family: "Hand"; src: url("assets/fonts/PatrickHand-Regular.ttf"); }
+    #root { position: absolute; inset: 0; background: #1a2b66; overflow: hidden; }
+    #br-art { position: absolute; inset: 0; }
+    .rk { stroke: #0d0f22; stroke-linecap: round; stroke-linejoin: round; }
+    .pop { font-family: Hand; font-size: 150px; fill: #ffb35c; stroke: #0d0f22; stroke-width: 14px; paint-order: stroke; stroke-linejoin: round; }
+    .lab { font-family: Hand; font-size: 56px; fill: #f4f1ff; }
+  </style>
+  <div id="root" data-composition-id="brain" data-width="1920" data-height="1080">
+    <svg id="br-art" class="clip" data-start="0" data-duration="30" viewBox="0 0 1920 1080" data-layout-allow-overflow>
+      <defs>
+        <radialGradient id="br-bg" cx="0.6" cy="0.55" r="0.75"><stop offset="0" stop-color="#2a4a9f"/><stop offset="1" stop-color="#111c4c"/></radialGradient>
+        <radialGradient id="br-hot"><stop offset="0" stop-color="#ff3b4a" stop-opacity="1"/><stop offset="0.5" stop-color="#ff5f6d" stop-opacity="0.6"/><stop offset="1" stop-color="#ff5f6d" stop-opacity="0"/></radialGradient>
+      </defs>
+      <rect width="1920" height="1080" fill="url(#br-bg)"/>
+      <g fill="#fff" opacity="0.06"><circle cx="300" cy="160" r="4"/><circle cx="1500" cy="960" r="5"/><circle cx="1760" cy="140" r="4"/></g>
+
+      <text class="pop" x="960" y="200" text-anchor="middle" style="font-size:140px" data-in="16,0.6,pop" data-out="17,0.2,pop">the pain of paying</text>
+
+      <!-- kid -->
+      <g transform="translate(520,640) scale(0.55)"><g id="br-kid">
+        <g data-rig="kid" data-p="bk" data-o='{"mouth":"smile","brows":"up","look":[20,-10]}'></g>
+      </g></g>
+      <text class="lab" x="520" y="250" text-anchor="middle" style="font-size:72px" data-in="17,0.4,pop" data-out="18,0">not a metaphor</text>
+
+      <!-- 18: the brain -->
+      <g transform="translate(1340,560)"><g id="br-brain" data-in="18,0,pop">
+        <path class="rk" d="M-260,40 C-300,-80 -220,-200 -100,-210 C-60,-260 60,-260 100,-210 C220,-200 300,-90 260,30 C300,120 220,220 110,200 C60,250 -60,250 -110,200 C-220,220 -300,130 -260,40 Z" fill="#ffb3c7" stroke-width="12"/>
+        <path d="M-160,-120 C-120,-80 -160,-30 -110,0 M0,-200 C-30,-140 30,-100 0,-40 M120,-150 C90,-100 150,-60 120,-10 M-200,80 C-140,60 -110,110 -60,90 M60,110 C110,80 150,130 200,100" fill="none" stroke="#d27a94" stroke-width="10" stroke-linecap="round"/>
+        <circle id="br-spot" cx="-40" cy="40" r="120" fill="url(#br-hot)" opacity="0"/>
+        <circle id="br-dot" cx="-40" cy="40" r="26" fill="#ff3b4a" class="rk" stroke-width="6" opacity="0"/>
+      </g></g>
+      <text class="lab" x="1240" y="900" text-anchor="middle" data-in="18,0.82,up" data-out="19,0.5">the insula</text>
+      <path d="M1250,850 L1290,640" stroke="#f4f1ff" stroke-width="5" stroke-linecap="round" data-in="18,0.82,fade" data-out="19,0.5"/>
+      <g transform="translate(1660,250)"><g id="br-tag" data-in="18,0.25,down" data-out="19,0.6">
+        <path d="M0,-80 L0,-10" stroke="#c9d3ef" stroke-width="5"/>
+        <g transform="rotate(10)">
+          <path class="rk" d="M-90,-10 L90,-10 L90,110 L-90,110 Z" fill="#ffd27a" stroke-width="9"/>
+          <circle cx="0" cy="12" r="10" fill="#1a2b66"/>
+          <text y="86" text-anchor="middle" style="font-family:Hand;font-size:60px;fill:#0d0f22">$249</text>
+        </g>
+      </g></g>
+      <text class="pop" x="1680" y="560" text-anchor="middle" style="font-size:130px" data-in="18,0.6,pop" data-out="19,0,pop">ouch</text>
+
+      <!-- 19: put it back and walk away -->
+      <g transform="translate(860,700)"><g id="br-box" data-in="19,0,pop" data-out="20,0">
+        <rect class="rk" x="-110" y="-80" width="220" height="160" rx="14" fill="#9fe3ff" stroke-width="9"/>
+        <path d="M-110,-20 L110,-20" stroke="#0d0f22" stroke-width="8"/>
+        <text y="56" text-anchor="middle" style="font-family:Hand;font-size:44px;fill:#0d0f22">$249</text>
+      </g></g>
+      <text class="pop" x="960" y="200" text-anchor="middle" style="font-size:130px" data-in="19,0.6,pop" data-out="20,0,pop">nope.</text>
+    </svg>
+  </div>
+  <script>
+    Rig.fill();
+    const tl = gsap.timeline({ paused: true }), A = s => Rig.at(s, "brain");
+    tl.fromTo("#br-kid", { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 0.45, ease: "expo.out" }, 0);
+    Rig.run(tl, "brain");
+    Rig.blinks(tl, "bk", 0, 16);
+    // 17: taps own head, curious
+    Rig.look(tl, "bk", 0, -40, A("17,0.2"));
+    tl.to("#br-kid", { rotation: -8, svgOrigin: "0 300", duration: 0.3, yoyo: true, repeat: 1, ease: "sine.inOut" }, A("17,0.3"));
+    // 18: the price lands and the insula lights up
+    Rig.look(tl, "bk", 40, 0, A("18,0.1"));
+    const hit = A("18,0.55");
+    tl.set(["#br-spot", "#br-dot"], { opacity: 1 }, hit);
+    tl.fromTo("#br-spot", { scale: 0.3, transformOrigin: "50% 50%" }, { scale: 1, transformOrigin: "50% 50%", duration: 0.35, ease: "back.out(2)" }, hit);
+    tl.to("#br-spot", { scale: 1.2, transformOrigin: "50% 50%", duration: 0.3, yoyo: true, repeat: 5, ease: "sine.inOut" }, hit + 0.4);
+    tl.to("#br-tag", { rotation: 12, svgOrigin: "0 -80", duration: 0.4, yoyo: true, repeat: 3, ease: "sine.inOut" }, A("18,0.4"));
+    Rig.squint(tl, "bk", hit, 0.5);
+    Rig.mouth(tl, "bk", "smile", "worry", hit);
+    Rig.brows(tl, "bk", "worry", hit);
+    // 19: puts it back and walks away
+    tl.to("#br-box", { x: -260, y: 260, rotation: -10, opacity: 0, duration: 0.6, ease: "power2.in" }, A("19,0.35"));
+    tl.to("#br-kid", { rotation: 6, svgOrigin: "0 300", duration: 0.14, yoyo: true, repeat: 3, ease: "sine.inOut" }, A("19,0.4"));
+    Rig.mouth(tl, "bk", "worry", "flat", A("19,0.4"));
+    Rig.brows(tl, "bk", "mad", A("19,0.4"));
+    tl.to("#br-spot", { opacity: 0, duration: 0.4 }, A("19,0.5"));
+    tl.to("#br-kid", { x: -400, duration: 0.7, ease: "power2.in" }, A("19,0.9"));
+    window.__timelines["brain"] = tl;
+  </script>
+</template>

@@ -1,0 +1,62 @@
+<template>
+  <style>
+    @font-face { font-family: "Hand"; src: url("assets/fonts/PatrickHand-Regular.ttf"); }
+    #root { position: absolute; inset: 0; background: #1a2b66; overflow: hidden; }
+    #sb-art { position: absolute; inset: 0; }
+    .rk { stroke: #0d0f22; stroke-linecap: round; stroke-linejoin: round; }
+    .pop { font-family: Hand; font-size: 150px; fill: #ffb35c; stroke: #0d0f22; stroke-width: 14px; paint-order: stroke; stroke-linejoin: round; }
+    .lab { font-family: Hand; font-size: 64px; fill: #f4f1ff; }
+  </style>
+  <div id="root" data-composition-id="s1bids" data-width="1080" data-height="1920">
+    <svg id="sb-art" class="clip" data-start="0" data-duration="40" viewBox="0 0 1080 1920" data-layout-allow-overflow>
+      <defs>
+        <radialGradient id="sb-bg" cx="0.5" cy="0.5" r="0.8"><stop offset="0" stop-color="#2a4a9f"/><stop offset="1" stop-color="#111c4c"/></radialGradient>
+      </defs>
+      <rect width="1080" height="1920" fill="url(#sb-bg)"/>
+
+      <g id="sb-chart" data-in="12,0,fade" data-out="15,0">
+        <path d="M140,1250 L940,1250" stroke="#c9d3ef" stroke-width="8" stroke-linecap="round"/>
+        <rect class="rk" x="200" y="950" width="260" height="300" rx="10" fill="#7fd18b" stroke-width="10" data-in="12,0.1,grow"/>
+        <g id="sb-tall"><rect class="rk" x="600" y="620" width="260" height="630" rx="10" fill="#8f7dff" stroke-width="10" data-in="12,0.4,grow"/></g>
+        <text class="lab" x="330" y="1330" text-anchor="middle">cash</text>
+        <text class="lab" x="730" y="1330" text-anchor="middle">card</text>
+        <text class="lab" x="330" y="920" text-anchor="middle" style="font-size:76px" data-in="12,0.3,up">$29</text>
+        <text class="lab" x="730" y="590" text-anchor="middle" style="font-size:76px" data-in="12,0.7,up">$61</text>
+        <text class="lab" x="540" y="1410" text-anchor="middle" style="font-size:44px;fill:#c9d3ef" data-in="12,0.7,fade">average bid</text>
+      </g>
+      <text class="pop" x="330" y="740" text-anchor="middle" style="font-size:200px" data-in="12,0.85,pop" data-out="14,0,pop">2&#215;</text>
+
+      <g transform="translate(330,700)"><g data-in="14,0.5,pop" data-out="15,0">
+        <rect class="rk" x="-130" y="-120" width="260" height="240" rx="18" fill="#f7f3ea" stroke-width="10"/>
+        <rect class="rk" x="-130" y="-120" width="260" height="70" rx="18" fill="#ff5f6d" stroke-width="10"/>
+        <text y="-68" text-anchor="middle" style="font-family:Hand;font-size:46px;fill:#fff">tomorrow</text>
+        <rect class="rk" x="-70" y="-10" width="140" height="72" rx="8" fill="#7fd18b" stroke-width="7"/>
+        <text y="42" text-anchor="middle" style="font-family:Hand;font-size:44px;fill:#1f5a33">$</text>
+      </g></g>
+
+      <g transform="translate(540,960)"><g id="sb-wallet" data-in="15,0.35,up">
+        <path d="M0,90 C-20,170 20,230 -10,330" fill="none" stroke="#c9d3ef" stroke-width="5"/>
+        <ellipse class="rk" cx="0" cy="-60" rx="150" ry="170" fill="#ff8a2a" stroke-width="10"/>
+        <path d="M-12,108 L12,108 L0,90 Z" fill="#ff8a2a" class="rk" stroke-width="6"/>
+        <g transform="translate(0,-60)">
+          <rect class="rk" x="-90" y="-60" width="180" height="120" rx="18" fill="#8a5a3c" stroke-width="8"/>
+          <path class="rk" d="M-90,-20 L40,-20 C64,-20 90,-6 90,16" fill="none" stroke-width="6"/>
+          <circle class="rk" cx="50" cy="10" r="11" fill="#f3e6c8" stroke-width="5"/>
+        </g>
+      </g></g>
+      <text class="pop" x="540" y="610" text-anchor="middle" style="font-size:170px" data-in="15,0.8,pop">lighter</text>
+      <g transform="translate(270,1300) scale(0.32)"><g id="sb-kid2" data-in="15,0.2,up">
+        <g data-rig="kid" data-p="sw" data-o='{"mouth":"smile","brows":"up","look":[30,-30]}'></g>
+      </g></g>
+    </svg>
+  </div>
+  <script>
+    Rig.fill();
+    const tl = gsap.timeline({ paused: true }), A = s => Rig.at(s, "s1bids");
+    Rig.run(tl, "s1bids");
+    tl.to("#sb-tall", { y: -18, duration: 0.12, yoyo: true, repeat: 3, ease: "sine.inOut" }, A("13,0.2"));
+    tl.to("#sb-wallet", { y: -60, rotation: 4, duration: 3, ease: "sine.inOut" }, A("15,0.5"));
+    Rig.blinks(tl, "sw", A("15,0"), A("15,1") + 2);
+    window.__timelines["s1bids"] = tl;
+  </script>
+</template>

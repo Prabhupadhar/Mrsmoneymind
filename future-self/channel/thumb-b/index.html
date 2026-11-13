@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1280, height=720" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+    <script src="assets/rig.js"></script>
+    <style>
+      @font-face { font-family: "Hand"; src: url("assets/fonts/PatrickHand-Regular.ttf"); }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1280px; height: 720px; overflow: hidden; background: #111c4c; }
+      #root { width: 100%; height: 100%; position: relative; }
+      #art { position: absolute; inset: 0; }
+      .rk { stroke: #0d0f22; stroke-linecap: round; stroke-linejoin: round; }
+      .big { font-family: Hand; font-size: 130px; stroke: #0d0f22; stroke-width: 16px; paint-order: stroke; stroke-linejoin: round; }
+    </style>
+  </head>
+  <body>
+    <!-- Thumbnail B: "ROBBING HIM" — warm you hugging the money, future you cold and crying. -->
+    <div id="root" data-composition-id="main" data-start="0" data-duration="1" data-width="1280" data-height="720">
+      <svg id="art" class="clip" data-start="0" data-duration="1" viewBox="0 0 1280 720" data-layout-allow-overflow>
+        <defs>
+          <linearGradient id="split" x1="0" x2="1"><stop offset="0.45" stop-color="#3a2a6a"/><stop offset="0.55" stop-color="#0e2a5a"/></linearGradient>
+          <radialGradient id="warm"><stop offset="0" stop-color="#ffb35c" stop-opacity="0.8"/><stop offset="1" stop-color="#ff8a2a" stop-opacity="0"/></radialGradient>
+          <radialGradient id="cold"><stop offset="0" stop-color="#7fc4ff" stop-opacity="0.45"/><stop offset="1" stop-color="#7fc4ff" stop-opacity="0"/></radialGradient>
+          <path id="flake" d="M0,-12 L0,12 M-10,-6 L10,6 M-10,6 L10,-6" stroke="#e8f4ff" stroke-width="4" stroke-linecap="round"/>
+        </defs>
+        <rect width="1280" height="720" fill="url(#split)"/>
+        <circle cx="320" cy="470" r="360" fill="url(#warm)"/>
+        <circle cx="960" cy="470" r="360" fill="url(#cold)"/>
+        <g opacity="0.9"><use href="#flake" x="760" y="240"/><use href="#flake" x="1180" y="300"/><use href="#flake" x="840" y="560"/><use href="#flake" x="1220" y="620"/><use href="#flake" x="1080" y="230"/><use href="#flake" x="720" y="420"/></g>
+        <path d="M640,200 L640,720" stroke="#f4f1ff" stroke-width="6" stroke-dasharray="14 14" opacity="0.5"/>
+        <g transform="translate(960,520) scale(0.6)"><g opacity="0.75">
+          <g data-rig="old" data-p="bo" data-o='{"eyes":"open","mouth":"sad","sadbrows":true,"tears":true,"look":[-20,10]}'></g>
+        </g></g>
+        <g transform="translate(320,470) scale(0.6)">
+          <g data-rig="kid" data-p="bk" data-o='{"happy":true,"mouth":"grin","brows":"up"}'></g>
+        </g>
+        <g transform="translate(320,700)">
+          <rect class="rk" x="-130" y="-66" width="260" height="132" rx="12" fill="#7fd18b" stroke-width="9"/>
+          <text y="28" text-anchor="middle" style="font-family:Hand;font-size:84px;fill:#1f5a33">$</text>
+          <path class="rk" d="M-220,40 C-170,-20 -120,-20 -80,6 M220,40 C170,-20 120,-20 80,6" fill="none" stroke="#e3a63a" stroke-width="48"/>
+        </g>
+        <text x="640" y="150" text-anchor="middle" class="big" style="fill:#fff">ROBBING <tspan style="fill:#ffb35c">HIM</tspan></text>
+      </svg>
+    </div>
+    <script>
+      Rig.fill();
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = gsap.timeline({ paused: true });
+    </script>
+  </body>
+</html>

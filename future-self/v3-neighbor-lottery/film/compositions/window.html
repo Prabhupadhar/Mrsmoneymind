@@ -1,0 +1,64 @@
+<template>
+  <style>
+    @font-face { font-family: "Hand"; src: url("assets/fonts/PatrickHand-Regular.ttf"); }
+    #root { position: absolute; inset: 0; background: #1a2b66; overflow: hidden; }
+    #wi-art { position: absolute; inset: 0; }
+    .rk { stroke: #0d0f22; stroke-linecap: round; stroke-linejoin: round; }
+    .pop { font-family: Hand; font-size: 150px; fill: #ffb35c; stroke: #0d0f22; stroke-width: 14px; paint-order: stroke; stroke-linejoin: round; }
+    .lab { font-family: Hand; font-size: 56px; fill: #f4f1ff; }
+    .num { font-family: Hand; font-size: 120px; fill: #fff; }
+  </style>
+  <div id="root" data-composition-id="window" data-width="1920" data-height="1080">
+    <svg id="wi-art" class="clip" data-start="0" data-duration="30" viewBox="0 0 1920 1080" data-layout-allow-overflow>
+      <defs>
+        <radialGradient id="wi-bg" cx="0.5" cy="0.55" r="0.75"><stop offset="0" stop-color="#2a4a9f"/><stop offset="1" stop-color="#111c4c"/></radialGradient>
+      </defs>
+      <rect width="1920" height="1080" fill="url(#wi-bg)"/>
+      <g fill="#fff" opacity="0.06"><circle cx="300" cy="160" r="4"/><circle cx="1500" cy="960" r="5"/><circle cx="1760" cy="140" r="4"/></g>
+
+      <defs><clipPath id="wi-clip"><rect x="1010" y="200" width="760" height="620" rx="18"/></clipPath></defs>
+      <!-- outside: the shiny car -->
+      <rect x="1010" y="200" width="760" height="620" rx="18" fill="#3a5ab8"/>
+      <g clip-path="url(#wi-clip)">
+        <rect x="1010" y="640" width="760" height="200" fill="#2f7c52"/>
+        <g transform="translate(1390,650)"><g id="wi-car"><path class="rk" d="M-200,40 L-200,-20 C-190,-50 -150,-60 -110,-60 L-70,-120 L90,-120 L140,-60 C190,-58 210,-40 210,0 L210,40 Z" fill="#7cf0a8" stroke-width="10"/>
+          <path class="rk" d="M-50,-104 L-80,-62 L20,-62 L20,-104 Z M40,-104 L40,-62 L116,-62 L82,-104 Z" fill="#9fe3ff" stroke-width="7"/>
+          <circle class="rk" cx="-110" cy="44" r="42" fill="#2b2f45" stroke-width="9"/><circle cx="-110" cy="44" r="16" fill="#c9d3ef"/>
+          <circle class="rk" cx="120" cy="44" r="42" fill="#2b2f45" stroke-width="9"/><circle cx="120" cy="44" r="16" fill="#c9d3ef"/></g></g>
+        <g transform="translate(1290,560)"><g id="wi-glint" opacity="0"><path d="M0,-50 L12,-12 L50,0 L12,12 L0,50 L-12,12 L-50,0 L-12,-12 Z" fill="#fff"/></g></g>
+      </g>
+      <rect class="rk" x="1010" y="200" width="760" height="620" rx="18" fill="none" stroke-width="12"/>
+      <path d="M1390,200 L1390,820" stroke="#0d0f22" stroke-width="10" opacity="0.5"/>
+      <rect class="rk" x="980" y="810" width="820" height="40" rx="10" fill="#f3e6c8" stroke-width="10"/>
+      <!-- the kid with a coffee -->
+      <g transform="translate(560,660) scale(0.62)"><g id="wi-kid">
+        <g data-rig="kid" data-p="wk" data-o='{"mouth":"flat","brows":"flat","look":[0,0]}'></g>
+      </g></g>
+      <g transform="translate(760,900)"><g id="wi-mug" data-in="26,0,up">
+        <path class="rk" d="M70,-40 C130,-40 130,40 70,40" fill="none" stroke-width="22"/>
+        <rect id="wi-cup" class="rk" x="-80" y="-80" width="160" height="170" rx="20" fill="#ff8a2a" stroke-width="10"/>
+        <g id="wi-steam" fill="none" stroke="#f4f1ff" stroke-width="10" stroke-linecap="round" opacity="0.8">
+          <path d="M-30,-110 C-50,-150 -10,-170 -30,-210"/><path d="M30,-110 C10,-150 50,-170 30,-210"/>
+        </g>
+      </g></g>
+    </svg>
+  </div>
+  <script>
+    Rig.fill();
+    const tl = gsap.timeline({ paused: true }), A = s => Rig.at(s, "window");
+    Rig.run(tl, "window");
+    Rig.blinks(tl, "wk", 0, 10);
+    // 25: "nobody decides that": head shake
+    tl.to("#wi-kid", { rotation: 6, svgOrigin: "0 300", duration: 0.14, yoyo: true, repeat: 5, ease: "sine.inOut" }, A("25,0.3"));
+    // 26: sips, stares out at the car; the coffee goes cold
+    Rig.look(tl, "wk", 50, 0, A("26,0.15"));
+    Rig.mouth(tl, "wk", "flat", "sad", A("26,0.4"));
+    Rig.brows(tl, "wk", "worry", A("26,0.4"));
+    tl.to("#wi-steam", { y: -20, duration: 0.6, yoyo: true, repeat: 3, ease: "sine.inOut" }, A("26,0"));
+    tl.set("#wi-glint", { opacity: 1 }, A("26,0.45"));
+    tl.fromTo("#wi-glint", { scale: 0.2, rotation: 0, transformOrigin: "50% 50%" }, { scale: 1.3, rotation: 90, transformOrigin: "50% 50%", duration: 0.4, yoyo: true, repeat: 3, ease: "sine.inOut" }, A("26,0.45"));
+    tl.to("#wi-steam", { opacity: 0, duration: 0.8 }, A("26,0.75"));
+    tl.to("#wi-cup", { fill: "#7a86b8", duration: 0.8 }, A("26,0.75"));
+    window.__timelines["window"] = tl;
+  </script>
+</template>

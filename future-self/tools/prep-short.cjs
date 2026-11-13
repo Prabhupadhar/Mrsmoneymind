@@ -1,0 +1,96 @@
+// Builds one vertical Short (1080x1920) in shorts/: cuts the film voice, writes timing + index.html.
+//   node tools/prep-short.cjs v1a|v1b|v2a|v2b|v3a|v3b    then: cd shorts && npx hyperframes render -o renders/<out>.mp4
+// VO keeps the film's line numbers, so scenes use the same data-in="line,frac" as the film.
+const fs = require('fs'), path = require('path'), { execFileSync } = require('child_process');
+const root = path.join(__dirname, '..'), dir = path.join(root, 'shorts');
+const FF = process.env.FFMPEG || path.join(root, '..', 'little-wonder-woods', 'tools', 'ffmpeg', 'ffmpeg.exe');
+const r = x => Math.round(x * 100) / 100;
+const O = t => `<tspan style="fill:#ffb35c">${t}</tspan>`;
+
+const SHORTS = {
+  v1a: { film: 'film', out: 'v1-short1-robbing-someone', lines: [[0, 5]], head: ["You're robbing", O('someone you know.')],
+         scenes: L => [['v1hook', 'v1a-hook', 0], ['v1reveal', 'v1a-reveal', L(3) - 0.05]] },
+  v1b: { film: 'film', out: 'v1-short2-saving-is-charity', lines: [[16, 20]], head: ['Saving feels awful?', O("Here's why.")],
+         scenes: L => [['v1charity', 'v1b-charity', 0]] },
+  v2a: { film: 'v2-card-vs-cash/film', out: 'v2-short1-double-same-seats', lines: [[7, 15]], head: ['Pay by card,', 'pay ' + O('DOUBLE?')],
+         scenes: L => [['s1auction', 'v2a-auction', 0], ['s1bids', 'v2a-bids', L(12) - 0.15]] },
+  v2b: { film: 'v2-card-vs-cash/film', out: 'v2-short2-tap-doesnt-hurt', lines: [[0, 5], [21, 22]], head: ['Why tapping', 'your card ' + O("doesn't hurt")],
+         scenes: L => [['s2tap', 'v2b-tap', 0], ['s2cash', 'v2b-cash', L(3) - 0.1], ['s2slip', 'v2b-slip', L(21) - 0.2]] },
+  v3a: { film: 'v3-neighbor-lottery/film', out: 'v3-short1-neighbor-won', lines: [[0, 6], [14, 16]], head: ['Your neighbor won.', O('You went broke?')],
+         scenes: L => [['v3ahook', 'v3a-hook', 0], ['v3acrack', 'v3a-crack', L(5) - 0.15], ['v3abars', 'v3a-bars', L(14) - 0.2]] },
+  v3b: { film: 'v3-neighbor-lottery/film', out: 'v3-short2-neighbors-new-car', lines: [[18, 26]], head: ["Your neighbor's new car", 'costs ' + O('YOU')],
+         scenes: L => [['v3bowned', 'v3b-owned', 0], ['v3bjoneses', 'v3b-joneses', L(23) - 0.2], ['v3bwindow', 'v3b-window', L(25) - 0.2]] },
+};
+const S = SHORTS[process.argv[2]];
+if (!S) throw new Error('usage: prep-short.cjs ' + Object.keys(SHORTS).join('|'));
+S.title = S.out;
+const filmDir = path.join(root, S.film);
+const V = JSON.parse(fs.readFileSync(path.join(filmDir, 'assets', 'vo.json'), 'utf8'));
+
+// cut and join voice segments; remap line times onto the short's clock
+const lead = 0.3, gap = 0.35, tail = 2.0;
+const VO = V.map(() => ({ start: -100, end: -99 }));
+let t = lead; const parts = [];
+for (const [a, b] of S.lines) {
+  const from = V[a].start - 0.05, to = V[b].end + 0.1;
+  for (let i = a; i <= b; i++) VO[i] = { start: r(V[i].start - from + t), end: r(V[i].end - from + t) };
+  parts.push([from, to, t]); t += to - from + gap;
+}
+const total = r(t - gap + tail);
+const L = (i, f = 0) => VO[i].start + (VO[i].end - VO[i].start) * f;
+// concat: lead silence, segment, gap silence, segment, ..., tail silence (old ffmpeg: no amix normalize)
+const sil = (d, n) => `aevalsrc=0:d=${d.toFixed(3)}:s=24000[s${n}]`;
+const chain = ['[s0]'], defs = [sil(lead, 0)];
+parts.forEach(([a, b], i) => {
+  defs.push(`[0:a]atrim=${a.toFixed(3)}:${b.toFixed(3)},asetpts=PTS-STARTPTS[a${i}]`); chain.push(`[a${i}]`);
+  defs.push(sil(i + 1 < parts.length ? gap : tail, i + 1)); chain.push(`[s${i + 1}]`);
+});
+const filt = defs.join(';') + ';' + chain.join('') + `concat=n=${chain.length}:v=0:a=1[out]`;
+execFileSync(FF, ['-y', '-v', 'error', '-i', path.join(filmDir, 'assets', 'vo.wav'), '-filter_complex', filt, '-map', '[out]', path.join(dir, 'assets', 'vo.wav')]);
+
+const scenes = S.scenes(L).map(([id, f, s]) => [id, f, r(s)]);
+fs.writeFileSync(path.join(dir, 'assets', 'timing.js'),
+  `window.VO = ${JSON.stringify(VO)};\nwindow.SCENES = ${JSON.stringify(Object.fromEntries(scenes.map(s => [s[0], s[2]])))};\n`);
+const hosts = scenes.map(([id, f, s], i) => {
+  const end = i + 1 < scenes.length ? scenes[i + 1][2] : total;
+  return `      <div id="${id}" data-composition-id="${id}" data-composition-src="compositions/${f}.html"
+        data-start="${s}" data-duration="${r(end - s)}" data-track-index="1" data-track-kind="graphics" data-width="1080" data-height="1920"></div>`;
+}).join('\n');
+fs.writeFileSync(path.join(dir, 'index.html'), `<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+    <script src="assets/timing.js"></script>
+    <script src="assets/rig.js"></script>
+    <style>
+      @font-face { font-family: "Hand"; src: url("assets/fonts/PatrickHand-Regular.ttf"); }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #1a2b66; }
+      #root { width: 100%; height: 100%; position: relative; }
+      #head { position: absolute; inset: 0; z-index: 5; }
+    </style>
+  </head>
+  <body>
+    <!-- Short: ${S.title}. Generated by tools/prep-short.cjs: edit there. -->
+    <div id="root" data-composition-id="main" data-start="0" data-duration="${total}" data-width="1080" data-height="1920">
+${hosts}
+      <svg id="head" class="clip" data-start="0" data-duration="${total}" data-track-index="3" viewBox="0 0 1080 1920">
+        <text x="540" y="230" text-anchor="middle" style="font-family:Hand;font-size:104px;fill:#fff;stroke:#0d0f22;stroke-width:14px;paint-order:stroke;stroke-linejoin:round">${S.head[0]}</text>
+        <text x="540" y="350" text-anchor="middle" style="font-family:Hand;font-size:104px;fill:#fff;stroke:#0d0f22;stroke-width:14px;paint-order:stroke;stroke-linejoin:round">${S.head[1]}</text>
+        <text id="foot" x="540" y="1540" text-anchor="middle" style="font-family:Hand;font-size:60px;fill:#ffd2a6">full video on the channel</text>
+      </svg>
+      <audio id="vo" src="assets/vo.wav" data-start="0" data-volume="1" data-track-index="2"></audio>
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#head text:not(#foot)", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.35, stagger: 0.12, ease: "back.out(2)" }, 0);
+      tl.fromTo("#foot", { opacity: 0 }, { opacity: 1, duration: 0.4 }, ${r(total - tail - 1.5)});
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
+`);
+console.log(S.title, '\n' + scenes.map(s => s.join(' ')).join('\n'), '\ntotal', total);

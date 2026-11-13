@@ -1,0 +1,60 @@
+<template>
+  <style>
+    @font-face { font-family: "Hand"; src: url("assets/fonts/PatrickHand-Regular.ttf"); }
+    #root { position: absolute; inset: 0; background: #1a2b66; overflow: hidden; }
+    #vj-art { position: absolute; inset: 0; }
+    .rk { stroke: #0d0f22; stroke-linecap: round; stroke-linejoin: round; }
+    .pop { font-family: Hand; font-size: 150px; fill: #ffb35c; stroke: #0d0f22; stroke-width: 14px; paint-order: stroke; stroke-linejoin: round; }
+    .lab { font-family: Hand; font-size: 64px; fill: #f4f1ff; }
+  </style>
+  <div id="root" data-composition-id="v3bjoneses" data-width="1080" data-height="1920">
+    <svg id="vj-art" class="clip" data-start="0" data-duration="40" viewBox="0 0 1080 1920" data-layout-allow-overflow>
+      <defs>
+        <radialGradient id="vj-bg" cx="0.5" cy="0.5" r="0.8"><stop offset="0" stop-color="#2a4a9f"/><stop offset="1" stop-color="#111c4c"/></radialGradient>
+      </defs>
+      <rect width="1080" height="1920" fill="url(#vj-bg)"/>
+
+      <g id="vj-saw" data-in="23,0,fade" data-out="24,0">
+        <path class="rk" d="M540,1240 L470,1330 L610,1330 Z" fill="#8a5a3c" stroke-width="10"/>
+        <g id="vj-plank">
+          <rect class="rk" x="80" y="1200" width="920" height="44" rx="14" fill="#ffb35c" stroke-width="10"/>
+          <g transform="translate(260,1000) scale(0.36)"><g data-rig="kid" data-p="vjk" data-o='{"mouth":"worry","brows":"worry","look":[40,-10]}'></g></g>
+          <g transform="translate(820,1000) scale(0.36)"><g data-rig="nb" data-p="vjn" data-o='{"mouth":"smile","brows":"flat","look":[-40,0]}'></g></g>
+        </g>
+      </g>
+      <g id="vj-drive" data-in="24,0,fade">
+        <rect x="0" y="1180" width="1080" height="740" fill="#2f7c52"/>
+        <g transform="translate(290,1020) scale(0.6)"><rect class="rk" x="-160" y="-100" width="320" height="220" fill="#e9dcc6" stroke-width="10"/>
+          <path class="rk" d="M-200,-90 L0,-240 L200,-90 Z" fill="#c2504a" stroke-width="10"/>
+          <rect class="rk" x="-40" y="10" width="80" height="110" rx="6" fill="#8a5a3c" stroke-width="8"/>
+          <rect class="rk" x="-130" y="-50" width="70" height="60" rx="6" fill="#ffd27a" stroke-width="7"/>
+          <rect class="rk" x="60" y="-50" width="70" height="60" rx="6" fill="#ffd27a" stroke-width="7"/></g>
+        <g transform="translate(790,1020) scale(0.6)"><rect class="rk" x="-160" y="-100" width="320" height="220" fill="#e9dcc6" stroke-width="10"/>
+          <path class="rk" d="M-200,-90 L0,-240 L200,-90 Z" fill="#6a4fd6" stroke-width="10"/>
+          <rect class="rk" x="-40" y="10" width="80" height="110" rx="6" fill="#8a5a3c" stroke-width="8"/>
+          <rect class="rk" x="-130" y="-50" width="70" height="60" rx="6" fill="#ffd27a" stroke-width="7"/>
+          <rect class="rk" x="60" y="-50" width="70" height="60" rx="6" fill="#ffd27a" stroke-width="7"/></g>
+        <g transform="translate(290,800)"><g data-in="24,0.25,pop"><path class="rk" d="M0,-60 l18,38 42,6 -30,28 8,42 -38,-20 -38,20 8,-42 -30,-28 42,-6 z" fill="#ffd23a" stroke-width="8"/></g></g>
+        <path d="M0,1230 L1080,1230" stroke="#4a4f6a" stroke-width="60"/>
+        <g transform="translate(290,1210) scale(0.55)"><g id="vj-car1"><path class="rk" d="M-200,40 L-200,-20 C-190,-50 -150,-60 -110,-60 L-70,-120 L90,-120 L140,-60 C190,-58 210,-40 210,0 L210,40 Z" fill="#ff5f6d" stroke-width="10"/>
+          <path class="rk" d="M-50,-104 L-80,-62 L20,-62 L20,-104 Z M40,-104 L40,-62 L116,-62 L82,-104 Z" fill="#9fe3ff" stroke-width="7"/>
+          <circle class="rk" cx="-110" cy="44" r="42" fill="#2b2f45" stroke-width="9"/><circle cx="-110" cy="44" r="16" fill="#c9d3ef"/>
+          <circle class="rk" cx="120" cy="44" r="42" fill="#2b2f45" stroke-width="9"/><circle cx="120" cy="44" r="16" fill="#c9d3ef"/></g></g>
+        <g transform="translate(790,1210) scale(0.55)"><g id="vj-car2"><path class="rk" d="M-200,40 L-200,-20 C-190,-50 -150,-60 -110,-60 L-70,-120 L90,-120 L140,-60 C190,-58 210,-40 210,0 L210,40 Z" fill="#7cf0a8" stroke-width="10"/>
+          <path class="rk" d="M-50,-104 L-80,-62 L20,-62 L20,-104 Z M40,-104 L40,-62 L116,-62 L82,-104 Z" fill="#9fe3ff" stroke-width="7"/>
+          <circle class="rk" cx="-110" cy="44" r="42" fill="#2b2f45" stroke-width="9"/><circle cx="-110" cy="44" r="16" fill="#c9d3ef"/>
+          <circle class="rk" cx="120" cy="44" r="42" fill="#2b2f45" stroke-width="9"/><circle cx="120" cy="44" r="16" fill="#c9d3ef"/></g></g>
+      </g>
+    </svg>
+  </div>
+  <script>
+    Rig.fill();
+    const tl = gsap.timeline({ paused: true }), A = s => Rig.at(s, "v3bjoneses");
+    Rig.run(tl, "v3bjoneses");
+    Rig.blinks(tl, "vjk", 0, 8); Rig.blinks(tl, "vjn", 0, 8, 0.6);
+    tl.fromTo("#vj-plank", { rotation: -6, svgOrigin: "540 1240" }, { rotation: 6, svgOrigin: "540 1240", duration: 0.7, yoyo: true, repeat: 3, ease: "sine.inOut" }, A("23,0"));
+    tl.fromTo("#vj-car1", { x: -1600 }, { x: 0, duration: 0.9, ease: "power3.out" }, A("24,0.3"));
+    tl.fromTo("#vj-car2", { x: 1600 }, { x: 0, duration: 0.9, ease: "power3.out" }, A("24,0.78"));
+    window.__timelines["v3bjoneses"] = tl;
+  </script>
+</template>

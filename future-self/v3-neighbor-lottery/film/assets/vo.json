@@ -1,0 +1,260 @@
+[
+ {
+  "text": "Okay. Imagine this.",
+  "mood": "curious",
+  "start": 0.3,
+  "end": 1.723
+ },
+ {
+  "text": "Your next-door neighbor wins the lottery.",
+  "mood": "excited",
+  "start": 2.023,
+  "end": 3.923
+ },
+ {
+  "text": "Not millions. Just, like, a year's salary.",
+  "mood": "curious",
+  "start": 4.273,
+  "end": 6.678
+ },
+ {
+  "text": "Good for him, right?",
+  "mood": "warm",
+  "start": 6.978,
+  "end": 8.139
+ },
+ {
+  "text": "Here's the weird part.",
+  "mood": "curious",
+  "start": 8.589,
+  "end": 9.78
+ },
+ {
+  "text": "Researchers found that his win makes you more likely to go broke.",
+  "mood": "shocked",
+  "start": 10.08,
+  "end": 13.697
+ },
+ {
+  "text": "You. The neighbor who didn't win a thing.",
+  "mood": "firm",
+  "start": 14.097,
+  "end": 15.955
+ },
+ {
+  "text": "Stick around, because this explains a lot of what's in your cart.",
+  "mood": "warm",
+  "start": 16.455,
+  "end": 19.859
+ },
+ {
+  "text": "So, three economists got their hands on something kind of amazing.",
+  "mood": "neutral",
+  "start": 20.959,
+  "end": 24.864
+ },
+ {
+  "text": "Every lottery winner in one Canadian province. And every bankruptcy. Names and addresses.",
+  "mood": "curious",
+  "start": 25.214,
+  "end": 31.045
+ },
+ {
+  "text": "Ten years of it. Two thousand four to two thousand fourteen.",
+  "mood": "neutral",
+  "start": 31.345,
+  "end": 34.893
+ },
+ {
+  "text": "And in Canada, a postal code can be tiny. About thirteen homes. Basically one street.",
+  "mood": "curious",
+  "start": 35.243,
+  "end": 40.738
+ },
+ {
+  "text": "So they could see exactly who won... and what happened next door.",
+  "mood": "curious",
+  "start": 41.038,
+  "end": 44.363
+ },
+ {
+  "text": "Here's what they found.",
+  "mood": "firm",
+  "start": 44.863,
+  "end": 46.031
+ },
+ {
+  "text": "The bigger the win, the more bankruptcies on that street.",
+  "mood": "shocked",
+  "start": 46.331,
+  "end": 49.097
+ },
+ {
+  "text": "A win about the size of one year's income meant nearly seven percent more bankruptcies next door, over the next three years.",
+  "mood": "firm",
+  "start": 49.447,
+  "end": 56.972
+ },
+ {
+  "text": "And remember... the neighbors didn't win a cent.",
+  "mood": "sad",
+  "start": 57.422,
+  "end": 60.437
+ },
+ {
+  "text": "So what's going on?",
+  "mood": "neutral",
+  "start": 61.537,
+  "end": 62.715
+ },
+ {
+  "text": "The researchers looked at what the bankrupt neighbors owned.",
+  "mood": "curious",
+  "start": 63.015,
+  "end": 65.854
+ },
+ {
+  "text": "Cash? Savings? Pensions? Nothing special.",
+  "mood": "neutral",
+  "start": 66.154,
+  "end": 68.994
+ },
+ {
+  "text": "But houses... and cars? Bigger.",
+  "mood": "shocked",
+  "start": 69.344,
+  "end": 71.417
+ },
+ {
+  "text": "The stuff your neighbors can see.",
+  "mood": "firm",
+  "start": 71.717,
+  "end": 73.214
+ },
+ {
+  "text": "And people on those streets were borrowing more.",
+  "mood": "sad",
+  "start": 73.564,
+  "end": 76.473
+ },
+ {
+  "text": "There's an old name for this. Keeping up with the Joneses.",
+  "mood": "warm",
+  "start": 76.923,
+  "end": 80.239
+ },
+ {
+  "text": "A Dutch study found it too. When someone won their postcode lottery, the neighbors were more likely to buy a new car.",
+  "mood": "curious",
+  "start": 80.589,
+  "end": 87.139
+ },
+ {
+  "text": "Nobody ever decides, I'd like to go broke now.",
+  "mood": "warm",
+  "start": 87.589,
+  "end": 90.672
+ },
+ {
+  "text": "It's just... his new car is parked outside your window. Every single morning.",
+  "mood": "sad",
+  "start": 90.972,
+  "end": 96.292
+ },
+ {
+  "text": "And you don't need a lottery for this.",
+  "mood": "firm",
+  "start": 97.392,
+  "end": 99.112
+ },
+ {
+  "text": "Your feed is basically a street with a million neighbors.",
+  "mood": "curious",
+  "start": 99.412,
+  "end": 102.394
+ },
+ {
+  "text": "A friend's new kitchen. A coworker's trip. Someone's watch.",
+  "mood": "excited",
+  "start": 102.694,
+  "end": 105.851
+ },
+ {
+  "text": "One economist found that when your neighbors earn more, you report being less happy, even with the exact same paycheck.",
+  "mood": "sad",
+  "start": 106.251,
+  "end": 114.915
+ },
+ {
+  "text": "Your paycheck didn't change. Your street did.",
+  "mood": "firm",
+  "start": 115.315,
+  "end": 117.858
+ },
+ {
+  "text": "Now, honesty time.",
+  "mood": "warm",
+  "start": 118.958,
+  "end": 120.355
+ },
+ {
+  "text": "Bankruptcy is rare. Seven percent more of a small number is still a small number.",
+  "mood": "neutral",
+  "start": 120.655,
+  "end": 125.21
+ },
+ {
+  "text": "And this was one province, with smaller prizes.",
+  "mood": "neutral",
+  "start": 125.51,
+  "end": 128.174
+ },
+ {
+  "text": "But the direction is the point. Their luck changed what people spent.",
+  "mood": "firm",
+  "start": 128.574,
+  "end": 132.358
+ },
+ {
+  "text": "So here's what actually helps.",
+  "mood": "warm",
+  "start": 133.458,
+  "end": 135.228
+ },
+ {
+  "text": "One. Before a big buy, ask: would I still want this if nobody could see it?",
+  "mood": "curious",
+  "start": 135.678,
+  "end": 139.948
+ },
+ {
+  "text": "Two. Mute the street. Unfollow a few accounts that always make you want something.",
+  "mood": "firm",
+  "start": 140.448,
+  "end": 145.249
+ },
+ {
+  "text": "Three. Pick your own Joneses. Compare yourself with you, last year.",
+  "mood": "warm",
+  "start": 145.749,
+  "end": 149.545
+ },
+ {
+  "text": "Your neighbor's win was never your loss.",
+  "mood": "warm",
+  "start": 150.645,
+  "end": 152.816
+ },
+ {
+  "text": "Unless you make it one.",
+  "mood": "whisper",
+  "start": 153.316,
+  "end": 155.01
+ },
+ {
+  "text": "Subscribe, and I'll see you next door.",
+  "mood": "warm",
+  "start": 155.91,
+  "end": 157.942
+ }
+]

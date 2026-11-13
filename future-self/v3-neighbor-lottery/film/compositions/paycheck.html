@@ -1,0 +1,65 @@
+<template>
+  <style>
+    @font-face { font-family: "Hand"; src: url("assets/fonts/PatrickHand-Regular.ttf"); }
+    #root { position: absolute; inset: 0; background: #1a2b66; overflow: hidden; }
+    #pc-art { position: absolute; inset: 0; }
+    .rk { stroke: #0d0f22; stroke-linecap: round; stroke-linejoin: round; }
+    .pop { font-family: Hand; font-size: 150px; fill: #ffb35c; stroke: #0d0f22; stroke-width: 14px; paint-order: stroke; stroke-linejoin: round; }
+    .lab { font-family: Hand; font-size: 56px; fill: #f4f1ff; }
+    .num { font-family: Hand; font-size: 120px; fill: #fff; }
+  </style>
+  <div id="root" data-composition-id="paycheck" data-width="1920" data-height="1080">
+    <svg id="pc-art" class="clip" data-start="0" data-duration="30" viewBox="0 0 1920 1080" data-layout-allow-overflow>
+      <defs>
+        <radialGradient id="pc-bg" cx="0.5" cy="0.55" r="0.75"><stop offset="0" stop-color="#2a4a9f"/><stop offset="1" stop-color="#111c4c"/></radialGradient>
+      </defs>
+      <rect width="1920" height="1080" fill="url(#pc-bg)"/>
+      <g fill="#fff" opacity="0.06"><circle cx="300" cy="160" r="4"/><circle cx="1500" cy="960" r="5"/><circle cx="1760" cy="140" r="4"/></g>
+
+      <g transform="translate(130,1080)"><g class="pc-h" id="pc-h0">
+          <rect class="rk" x="-90" y="-260" width="180" height="260" fill="#6a76a8" stroke-width="9"/>
+          <rect x="-50" y="-220" width="36" height="36" fill="#ffd27a"/><rect x="14" y="-220" width="36" height="36" fill="#ffd27a"/>
+          <rect x="-50" y="-150" width="36" height="36" fill="#ffd27a"/><rect x="14" y="-150" width="36" height="36" fill="#ffd27a"/>
+        </g></g><g transform="translate(350,1080)"><g class="pc-h" id="pc-h1">
+          <rect class="rk" x="-90" y="-260" width="180" height="260" fill="#7a86b8" stroke-width="9"/>
+          <rect x="-50" y="-220" width="36" height="36" fill="#ffd27a"/><rect x="14" y="-220" width="36" height="36" fill="#ffd27a"/>
+          <rect x="-50" y="-150" width="36" height="36" fill="#ffd27a"/><rect x="14" y="-150" width="36" height="36" fill="#ffd27a"/>
+        </g></g><g transform="translate(1570,1080)"><g class="pc-h" id="pc-h2">
+          <rect class="rk" x="-90" y="-260" width="180" height="260" fill="#7a86b8" stroke-width="9"/>
+          <rect x="-50" y="-220" width="36" height="36" fill="#ffd27a"/><rect x="14" y="-220" width="36" height="36" fill="#ffd27a"/>
+          <rect x="-50" y="-150" width="36" height="36" fill="#ffd27a"/><rect x="14" y="-150" width="36" height="36" fill="#ffd27a"/>
+        </g></g><g transform="translate(1790,1080)"><g class="pc-h" id="pc-h3">
+          <rect class="rk" x="-90" y="-260" width="180" height="260" fill="#6a76a8" stroke-width="9"/>
+          <rect x="-50" y="-220" width="36" height="36" fill="#ffd27a"/><rect x="14" y="-220" width="36" height="36" fill="#ffd27a"/>
+          <rect x="-50" y="-150" width="36" height="36" fill="#ffd27a"/><rect x="14" y="-150" width="36" height="36" fill="#ffd27a"/>
+        </g></g>
+      <g transform="translate(960,650) scale(0.6)"><g id="pc-kid">
+        <g data-rig="kid" data-p="pk" data-o='{"mouth":"smile","brows":"flat","look":[0,20]}'></g>
+      </g></g>
+      <g transform="translate(960,920)"><g id="pc-check" data-in="30,0.25,up">
+        <rect class="rk" x="-230" y="-90" width="460" height="180" rx="12" fill="#f7f3ea" stroke-width="10"/>
+        <rect x="-230" y="-90" width="460" height="36" rx="12" fill="#7fd18b"/>
+        <text y="50" text-anchor="middle" style="font-family:Hand;font-size:90px;fill:#1f5a33">paycheck</text>
+      </g></g>
+      <text class="pop" x="960" y="180" text-anchor="middle" style="font-size:150px" data-in="31,0.55,pop">your street did.</text>
+    </svg>
+  </div>
+  <script>
+    Rig.fill();
+    const tl = gsap.timeline({ paused: true }), A = s => Rig.at(s, "paycheck");
+    Rig.run(tl, "paycheck");
+    Rig.blinks(tl, "pk", 0, 12);
+    // 30: the neighbors' houses grow taller around the kid
+    tl.to(".pc-h", { scaleY: 3.2, transformOrigin: "50% 100%", duration: A("31,0") - A("30,0.4"), ease: "power1.in", stagger: 0.2 }, A("30,0.4"));
+    Rig.look(tl, "pk", -50, -40, A("30,0.5"));
+    Rig.look(tl, "pk", 50, -40, A("30,0.7"));
+    Rig.mouth(tl, "pk", "smile", "sad", A("30,0.6"));
+    Rig.brows(tl, "pk", "worry", A("30,0.6"));
+    tl.to("#pc-kid", { scale: 0.92, transformOrigin: "50% 100%", duration: 2, ease: "sine.inOut" }, A("30,0.6"));
+    // 31: firm look straight out
+    Rig.look(tl, "pk", 0, 0, A("31,0"));
+    Rig.brows(tl, "pk", "flat", A("31,0.5"));
+    Rig.mouth(tl, "pk", "sad", "flat", A("31,0.5"));
+    window.__timelines["paycheck"] = tl;
+  </script>
+</template>

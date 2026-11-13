@@ -1,0 +1,64 @@
+<template>
+  <style>
+    @font-face { font-family: "Hand"; src: url("assets/fonts/PatrickHand-Regular.ttf"); }
+    #root { position: absolute; inset: 0; background: #1a2b66; overflow: hidden; }
+    #fa-art { position: absolute; inset: 0; }
+    .rk { stroke: #0d0f22; stroke-linecap: round; stroke-linejoin: round; }
+    .pop { font-family: Hand; font-size: 150px; fill: #ffb35c; stroke: #0d0f22; stroke-width: 14px; paint-order: stroke; stroke-linejoin: round; }
+    .lab { font-family: Hand; font-size: 56px; fill: #f4f1ff; }
+    .num { font-family: Hand; font-size: 120px; fill: #fff; }
+  </style>
+  <div id="root" data-composition-id="fair" data-width="1920" data-height="1080">
+    <svg id="fa-art" class="clip" data-start="0" data-duration="30" viewBox="0 0 1920 1080" data-layout-allow-overflow>
+      <defs>
+        <radialGradient id="fa-bg" cx="0.5" cy="0.55" r="0.75"><stop offset="0" stop-color="#2a4a9f"/><stop offset="1" stop-color="#111c4c"/></radialGradient>
+      </defs>
+      <rect width="1920" height="1080" fill="url(#fa-bg)"/>
+      <g fill="#fff" opacity="0.06"><circle cx="300" cy="160" r="4"/><circle cx="1500" cy="960" r="5"/><circle cx="1760" cy="140" r="4"/></g>
+
+      <!-- 33: a tiny dot, a slightly bigger dot -->
+      <g id="fa-dots" data-out="34,0">
+        <circle class="rk" cx="700" cy="560" r="14" fill="#ff5f6d" stroke-width="5" data-in="33,0.15,pop"/>
+        <path d="M800,560 L1060,560" stroke="#c9d3ef" stroke-width="8" stroke-linecap="round" data-in="33,0.45,growx"/>
+        <path d="M1040,540 L1070,560 L1040,580" fill="none" stroke="#c9d3ef" stroke-width="8" stroke-linecap="round" data-in="33,0.5,fade"/>
+        <circle class="rk" cx="1200" cy="560" r="16" fill="#ff5f6d" stroke-width="5" data-in="33,0.55,pop"/>
+        <text class="pop" x="960" y="820" text-anchor="middle" style="font-size:150px" data-in="33,0.8,pop">still small</text>
+      </g>
+      <!-- 34: one province -->
+      <g transform="translate(960,560)"><g id="fa-prov" data-in="34,0,pop" data-out="35,0">
+        <path class="rk" d="M-300,-200 L-120,-260 L40,-220 L120,-280 L280,-180 L320,0 L240,160 L260,260 L60,240 L-80,280 L-260,200 L-320,40 Z" fill="#7fd18b" stroke-width="12"/>
+        <path d="M-120,-60 L-20,-100 L80,-40 L40,60 L-80,80 Z" fill="#5fb46e" opacity="0.6"/>
+        <g transform="translate(40,-30)"><path class="rk" d="M0,0 C-50,-50 -40,-110 0,-110 C40,-110 50,-50 0,0 Z" fill="#ff5f6d" stroke-width="8"/><circle cx="0" cy="-74" r="14" fill="#fff"/></g>
+      </g></g>
+      <!-- 35: from the winner's house to the neighbor's wallet -->
+      <g id="fa-dir" data-in="35,0,fade">
+        <g transform="translate(460,600) scale(0.9)"><rect class="rk" x="-160" y="-100" width="320" height="220" fill="#e9dcc6" stroke-width="10"/>
+          <path class="rk" d="M-200,-90 L0,-240 L200,-90 Z" fill="#c2504a" stroke-width="10"/>
+          <rect class="rk" x="-40" y="10" width="80" height="110" rx="6" fill="#8a5a3c" stroke-width="8"/>
+          <rect class="rk" x="-130" y="-50" width="70" height="60" rx="6" fill="#ffd27a" stroke-width="7"/>
+          <rect class="rk" x="60" y="-50" width="70" height="60" rx="6" fill="#ffd27a" stroke-width="7"/></g>
+        <g transform="translate(460,320)"><path class="rk" d="M0,-60 l18,38 42,6 -30,28 8,42 -38,-20 -38,20 8,-42 -30,-28 42,-6 z" fill="#ffd23a" stroke-width="8"/></g>
+        <path d="M680,600 C900,420 1100,420 1300,560" fill="none" stroke="#ffb35c" stroke-width="22" stroke-linecap="round" data-len="760" data-in="35,0.3,draw"/>
+        <path d="M1250,500 L1320,575 L1220,600" fill="none" stroke="#ffb35c" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" data-in="35,0.55,fade"/>
+        <g transform="translate(1480,640)"><g id="fa-wallet" data-in="35,0.1,pop">
+          <rect class="rk" x="-150" y="-100" width="300" height="200" rx="26" fill="#8a5a3c" stroke-width="10"/>
+          <path class="rk" d="M-150,-40 L70,-40 C110,-40 150,-14 150,24" fill="none" stroke-width="8"/>
+          <circle class="rk" cx="90" cy="10" r="16" fill="#f3e6c8" stroke-width="6"/>
+        </g></g>
+      </g>
+      <g transform="translate(1760,1010) scale(0.4)"><g id="fa-nb" data-in="33,0,up">
+        <g data-rig="nb" data-p="fn" data-o='{"mouth":"smile","brows":"flat","look":[-50,-20]}'></g>
+      </g></g>
+    </svg>
+  </div>
+  <script>
+    Rig.fill();
+    const tl = gsap.timeline({ paused: true }), A = s => Rig.at(s, "fair");
+    Rig.run(tl, "fair");
+    Rig.blinks(tl, "fn", 0, 14);
+    tl.to("#fa-wallet", { x: 10, duration: 0.05, yoyo: true, repeat: 7 }, A("35,0.6"));
+    Rig.mouth(tl, "fn", "smile", "o", A("35,0.6"));
+    Rig.brows(tl, "fn", "up", A("35,0.6"));
+    window.__timelines["fair"] = tl;
+  </script>
+</template>

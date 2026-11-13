@@ -1,0 +1,242 @@
+[
+ [
+  "Okay. Quick question.",
+  0.3,
+  1,
+  "curious"
+ ],
+ [
+  "When did you last tap your card... and actually feel something?",
+  0.3,
+  1,
+  "curious"
+ ],
+ [
+  "Nothing? Not even a tiny sting?",
+  0.3,
+  1,
+  "shocked"
+ ],
+ [
+  "Now picture handing over a fat stack of real cash for the same thing.",
+  0.3,
+  1,
+  "firm"
+ ],
+ [
+  "Yeah. That one hurts.",
+  0.3,
+  1,
+  "warm"
+ ],
+ [
+  "And that little ouch? It's doing a job. A job your card quietly fired it from.",
+  0.3,
+  1,
+  "curious"
+ ],
+ [
+  "Stick around, because this changes how you'll see every checkout.",
+  0.3,
+  1,
+  "warm"
+ ],
+ [
+  "So, back in two thousand one, two researchers at MIT ran a sneaky little auction.",
+  0.7,
+  1,
+  "neutral"
+ ],
+ [
+  "The prize? Tickets to a sold-out Boston Celtics game.",
+  0.3,
+  1,
+  "curious"
+ ],
+ [
+  "Half the students were told: if you win, you pay in cash.",
+  0.3,
+  1,
+  "neutral"
+ ],
+ [
+  "The other half: you pay by credit card.",
+  0.3,
+  1,
+  "neutral"
+ ],
+ [
+  "Same tickets. Same game. Same kind of people.",
+  0.3,
+  1,
+  "curious"
+ ],
+ [
+  "And the card group bid... more than double.",
+  0.3,
+  1,
+  "excited"
+ ],
+ [
+  "Double! For the exact same seats!",
+  0.3,
+  1,
+  "shocked"
+ ],
+ [
+  "And no, it wasn't because they were short on cash. The card bidders still had to pay the very next day.",
+  0.3,
+  1,
+  "firm"
+ ],
+ [
+  "The card didn't give them more money. It just made spending it feel... lighter.",
+  0.3,
+  1,
+  "warm"
+ ],
+ [
+  "Psychologists have a name for that ouch. The pain of paying.",
+  0.7,
+  1,
+  "neutral"
+ ],
+ [
+  "And it's not just a figure of speech.",
+  0.3,
+  1,
+  "curious"
+ ],
+ [
+  "In brain scans, a high price lights up a region tied to pain and disgust, the insula.",
+  0.3,
+  1,
+  "firm"
+ ],
+ [
+  "When that alarm goes off, people walk away.",
+  0.3,
+  1,
+  "neutral"
+ ],
+ [
+  "Cash rings that alarm loud. You see it leave. You feel the wallet get thinner.",
+  0.3,
+  1,
+  "curious"
+ ],
+ [
+  "A tap? The alarm barely whispers.",
+  0.3,
+  1,
+  "whisper"
+ ],
+ [
+  "And that whisper is exactly where the money slips out.",
+  0.3,
+  1,
+  "sad"
+ ],
+ [
+  "Here's where it gets personal.",
+  0.7,
+  1,
+  "curious"
+ ],
+ [
+  "One study tracked a thousand households and six months of real grocery trips.",
+  0.3,
+  1,
+  "neutral"
+ ],
+ [
+  "When people paid by card, more of the cart was the impulse stuff. Candy, chips, cookies.",
+  0.3,
+  1,
+  "excited"
+ ],
+ [
+  "Cash shoppers? Fewer of those. The ouch was saying \"do you really need that?\"",
+  0.3,
+  1,
+  "sad"
+ ],
+ [
+  "And here's the scary part. Ask card payers what they spent, and many can't tell you.",
+  0.3,
+  1,
+  "shocked"
+ ],
+ [
+  "You can't feel what you can't even remember.",
+  0.3,
+  1,
+  "sad"
+ ],
+ [
+  "Now, honesty time. That double bid was one auction.",
+  0.7,
+  1,
+  "firm"
+ ],
+ [
+  "When researchers pooled seventy-one studies, the card effect was smaller. But it was real, and it showed up again and again.",
+  0.3,
+  1,
+  "neutral"
+ ],
+ [
+  "Small leaks, every single day, still sink ships.",
+  0.3,
+  1,
+  "warm"
+ ],
+ [
+  "So you don't have to go back to cash. You just have to bring the ouch back.",
+  0.7,
+  1,
+  "warm"
+ ],
+ [
+  "One. Turn on an alert for every single payment. Let your phone say the number out loud.",
+  0.3,
+  1,
+  "firm"
+ ],
+ [
+  "Two. Delete your saved card from shopping apps. Make buying take ten more seconds.",
+  0.3,
+  1,
+  "firm"
+ ],
+ [
+  "Three. Pick one weak spot, like snacks or takeout, and pay for it in cash only.",
+  0.3,
+  1,
+  "excited"
+ ],
+ [
+  "Watch how fast \"I want it\" turns into \"eh, maybe not.\"",
+  0.3,
+  1,
+  "whisper"
+ ],
+ [
+  "That little sting isn't your enemy. It's the one part of you still guarding your money.",
+  0.7,
+  1,
+  "warm"
+ ],
+ [
+  "Let it do its job.",
+  0.3,
+  1,
+  "warm"
+ ],
+ [
+  "And if this made you look at your card a little differently, subscribe. There's a lot more your brain isn't telling you.",
+  0.3,
+  1,
+  "curious"
+ ]
+]

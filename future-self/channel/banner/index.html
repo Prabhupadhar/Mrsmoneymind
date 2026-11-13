@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=2560, height=1440" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+    <script src="assets/rig.js"></script>
+    <style>
+      @font-face { font-family: "Hand"; src: url("assets/fonts/PatrickHand-Regular.ttf"); }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 2560px; height: 1440px; overflow: hidden; background: #111c4c; }
+      #root { width: 100%; height: 100%; position: relative; }
+      #art { position: absolute; inset: 0; }
+      .rk { stroke: #0d0f22; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+  </head>
+  <body>
+    <!-- YouTube banner 2560x1440. Safe area on every device: centre 1546x423 (x 507-2053, y 508-931). -->
+    <div id="root" data-composition-id="main" data-start="0" data-duration="1" data-width="2560" data-height="1440">
+      <svg id="art" class="clip" data-start="0" data-duration="1" viewBox="0 0 2560 1440" data-layout-allow-overflow>
+        <defs>
+          <radialGradient id="bg" cx="0.5" cy="0.5" r="0.7"><stop offset="0" stop-color="#2d4fa8"/><stop offset="1" stop-color="#0d1640"/></radialGradient>
+          <radialGradient id="warm"><stop offset="0" stop-color="#ffb35c" stop-opacity="0.45"/><stop offset="1" stop-color="#ff8a2a" stop-opacity="0"/></radialGradient>
+        </defs>
+        <rect width="2560" height="1440" fill="url(#bg)"/>
+        <g fill="#fff" opacity="0.5">
+          <path d="M380,560 l10,26 26,10 -26,10 -10,26 -10,-26 -26,-10 26,-10 z"/><path d="M2200,600 l8,20 20,8 -20,8 -8,20 -8,-20 -20,-8 20,-8 z"/>
+          <path d="M1060,560 l6,15 15,6 -15,6 -6,15 -6,-15 -15,-6 15,-6 z"/><path d="M1560,880 l6,15 15,6 -15,6 -6,15 -6,-15 -15,-6 15,-6 z"/>
+        </g>
+        <g fill="#fff" opacity="0.12"><circle cx="200" cy="300" r="5"/><circle cx="600" cy="1200" r="6"/><circle cx="2300" cy="260" r="5"/><circle cx="2400" cy="1150" r="6"/><circle cx="1280" cy="200" r="4"/></g>
+        <circle cx="1280" cy="720" r="700" fill="url(#warm)"/>
+        <path d="M880,880 C1040,940 1520,940 1680,880" fill="none" stroke="#ff8a2a" stroke-width="8" stroke-dasharray="4 22" stroke-linecap="round" opacity="0.7"/>
+        <g transform="translate(700,760) scale(0.36)"><g data-rig="kid" data-p="bk" data-o='{"mouth":"smile","brows":"up","look":[30,-6]}'></g></g>
+        <g transform="translate(1860,760) scale(0.36)"><g data-rig="old" data-p="bo"></g></g>
+        <text x="1280" y="720" text-anchor="middle" style="font-family:Hand;font-size:130px;fill:#fff;stroke:#0d0f22;stroke-width:16px;paint-order:stroke;stroke-linejoin:round">Mrs. <tspan style="fill:#ffb35c">Money Mind</tspan></text>
+        <text x="1280" y="830" text-anchor="middle" style="font-family:Hand;font-size:48px;fill:#f4f1ff">your mind, your money, and the future you</text>
+      </svg>
+    </div>
+    <script>
+      Rig.fill();
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = gsap.timeline({ paused: true });
+    </script>
+  </body>
+</html>

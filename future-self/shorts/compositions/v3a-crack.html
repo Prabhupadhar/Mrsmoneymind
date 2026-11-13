@@ -1,0 +1,59 @@
+<template>
+  <style>
+    @font-face { font-family: "Hand"; src: url("assets/fonts/PatrickHand-Regular.ttf"); }
+    #root { position: absolute; inset: 0; background: #1a2b66; overflow: hidden; }
+    #vc-art { position: absolute; inset: 0; }
+    .rk { stroke: #0d0f22; stroke-linecap: round; stroke-linejoin: round; }
+    .pop { font-family: Hand; font-size: 150px; fill: #ffb35c; stroke: #0d0f22; stroke-width: 14px; paint-order: stroke; stroke-linejoin: round; }
+    .lab { font-family: Hand; font-size: 64px; fill: #f4f1ff; }
+  </style>
+  <div id="root" data-composition-id="v3acrack" data-width="1080" data-height="1920">
+    <svg id="vc-art" class="clip" data-start="0" data-duration="40" viewBox="0 0 1080 1920" data-layout-allow-overflow>
+      <defs>
+        <radialGradient id="vc-bg" cx="0.5" cy="0.5" r="0.8"><stop offset="0" stop-color="#2a4a9f"/><stop offset="1" stop-color="#111c4c"/></radialGradient>
+      </defs>
+      <rect width="1080" height="1920" fill="url(#vc-bg)"/>
+
+      <defs><radialGradient id="vc-red"><stop offset="0" stop-color="#ff3b4a" stop-opacity="0.55"/><stop offset="1" stop-color="#ff3b4a" stop-opacity="0"/></radialGradient></defs>
+      <circle id="vc-alarm" cx="540" cy="900" r="460" fill="url(#vc-red)" opacity="0"/>
+      <g transform="translate(540,900) scale(0.85)"><g id="vc-pig" data-in="5,0,pop">
+        <path class="rk" d="M-150,120 L-150,210 L-90,210 L-90,140 M90,140 L90,210 L150,210 L150,120" fill="#ff9fb8" stroke-width="10"/>
+        <ellipse class="rk" cx="0" cy="0" rx="280" ry="210" fill="#ffb3c7" stroke-width="12"/>
+        <path class="rk" d="M-140,-170 L-170,-270 L-60,-200 Z" fill="#ff9fb8" stroke-width="10"/>
+        <ellipse class="rk" cx="290" cy="20" rx="56" ry="70" fill="#ff9fb8" stroke-width="10"/>
+        <circle cx="280" cy="0" r="10" fill="#0d0f22"/><circle cx="280" cy="42" r="10" fill="#0d0f22"/>
+        <circle cx="170" cy="-50" r="18" fill="#0d0f22"/>
+        <rect class="rk" x="-80" y="-206" width="160" height="26" rx="13" fill="#7a3a4c" stroke-width="8"/>
+        <path id="vc-line" d="M10,-200 L-30,-120 L30,-60 L-20,20 L40,90 L0,200" fill="none" stroke="#0d0f22" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" data-len="520" data-in="5,0.62,draw"/>
+      </g></g>
+      <text class="pop" x="540" y="620" text-anchor="middle" style="font-size:180px" data-in="5,0.86,pop">you?</text>
+      <g transform="translate(540,1400) scale(0.42)"><g id="vc-kid">
+        <g data-rig="kid" data-p="vck" data-o='{"mouth":"smile","brows":"flat","look":[0,-30]}'></g>
+      </g></g>
+      <g transform="translate(330,1540)"><g id="vc-hand" opacity="0">
+        <path class="rk" d="M-200,80 C-120,40 -60,20 -20,10" fill="none" style="stroke:#e3a63a" stroke-width="60"/>
+        <circle class="rk" cx="10" cy="0" r="42" fill="#f4d2b6" stroke-width="9"/>
+        <path class="rk" d="M40,-20 L110,-46" fill="none" stroke-width="28"/>
+        <path d="M40,-20 L110,-46" fill="none" stroke="#f4d2b6" stroke-width="14" stroke-linecap="round"/>
+      </g></g>
+    </svg>
+  </div>
+  <script>
+    Rig.fill();
+    const tl = gsap.timeline({ paused: true }), A = s => Rig.at(s, "v3acrack");
+    Rig.run(tl, "v3acrack");
+    tl.fromTo("#vc-kid", { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 0.4, ease: "expo.out" }, 0);
+    Rig.blinks(tl, "vck", 0, 7);
+    Rig.brows(tl, "vck", "worry", A("5,0.3")); Rig.mouth(tl, "vck", "smile", "worry", A("5,0.3"));
+    const c = A("5,0.62");
+    tl.to("#vc-pig", { x: 10, duration: 0.05, yoyo: true, repeat: 9 }, c);
+    tl.to("#vc-alarm", { opacity: 1, duration: 0.3 }, c);
+    Rig.widen(tl, "vck", c); Rig.mouth(tl, "vck", "worry", "o", c + 0.1);
+    const p = A("6,0");
+    tl.set("#vc-hand", { opacity: 1 }, p);
+    tl.fromTo("#vc-hand", { x: -300, y: 200 }, { x: 0, y: 0, duration: 0.35, ease: "back.out(1.6)" }, p);
+    tl.to("#vc-hand", { x: 12, duration: 0.12, yoyo: true, repeat: 5, ease: "sine.inOut" }, p + 0.4);
+    Rig.brows(tl, "vck", "up", p); Rig.look(tl, "vck", 0, 0, p);
+    window.__timelines["v3acrack"] = tl;
+  </script>
+</template>
