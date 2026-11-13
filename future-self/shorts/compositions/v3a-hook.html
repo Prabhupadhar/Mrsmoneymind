@@ -1,0 +1,69 @@
+<template>
+  <style>
+    @font-face { font-family: "Hand"; src: url("assets/fonts/PatrickHand-Regular.ttf"); }
+    #root { position: absolute; inset: 0; background: #1a2b66; overflow: hidden; }
+    #vh-art { position: absolute; inset: 0; }
+    .rk { stroke: #0d0f22; stroke-linecap: round; stroke-linejoin: round; }
+    .pop { font-family: Hand; font-size: 150px; fill: #ffb35c; stroke: #0d0f22; stroke-width: 14px; paint-order: stroke; stroke-linejoin: round; }
+    .lab { font-family: Hand; font-size: 64px; fill: #f4f1ff; }
+  </style>
+  <div id="root" data-composition-id="v3ahook" data-width="1080" data-height="1920">
+    <svg id="vh-art" class="clip" data-start="0" data-duration="40" viewBox="0 0 1080 1920" data-layout-allow-overflow>
+      <defs>
+        <radialGradient id="vh-bg" cx="0.5" cy="0.5" r="0.8"><stop offset="0" stop-color="#2a4a9f"/><stop offset="1" stop-color="#111c4c"/></radialGradient>
+      </defs>
+      <rect width="1080" height="1920" fill="url(#vh-bg)"/>
+
+      <defs><clipPath id="vh-clip"><rect x="290" y="440" width="500" height="460" rx="16"/></clipPath><radialGradient id="vh-glow"><stop offset="0" stop-color="#ffd27a" stop-opacity="0.7"/><stop offset="1" stop-color="#ffd27a" stop-opacity="0"/></radialGradient></defs>
+      <!-- neighbor's lawn, house, check -->
+      <path d="M0,1330 C300,1300 780,1300 1080,1320 L1080,1920 L0,1920 Z" fill="#2f7c52"/>
+      <g transform="translate(540,1180) scale(0.8)"><rect class="rk" x="-160" y="-100" width="320" height="220" fill="#e9dcc6" stroke-width="10"/>
+          <path class="rk" d="M-200,-90 L0,-240 L200,-90 Z" fill="#c2504a" stroke-width="10"/>
+          <rect class="rk" x="-40" y="10" width="80" height="110" rx="6" fill="#8a5a3c" stroke-width="8"/>
+          <rect class="rk" x="-130" y="-50" width="70" height="60" rx="6" fill="#ffd27a" stroke-width="7"/>
+          <rect class="rk" x="60" y="-50" width="70" height="60" rx="6" fill="#ffd27a" stroke-width="7"/></g>
+      <circle id="vh-gl" cx="540" cy="1250" r="420" fill="url(#vh-glow)" opacity="0"/>
+      <g transform="translate(540,1215) scale(0.4)"><g id="vh-nb"><g data-rig="nb" data-p="vn" data-o='{"mouth":"grin","brows":"up","happy":true}'></g></g></g>
+      <g transform="translate(540,1420) scale(0.8)"><g id="vh-check">
+        <rect class="rk" x="-300" y="-120" width="600" height="240" rx="14" fill="#f7f3ea" stroke-width="10"/>
+        <rect x="-300" y="-120" width="600" height="46" rx="14" fill="#7fd18b"/>
+        <text x="-270" y="-84" style="font-family:Hand;font-size:34px;fill:#1f5a33">LOTTERY WIN</text>
+        <text id="vh-amt" x="0" y="50" text-anchor="middle" style="font-family:Hand;font-size:120px;fill:#1f5a33">$29,000</text>
+      </g></g>
+      <g id="vh-conf" opacity="0"><rect x="160" y="980" width="20" height="30" fill="#ff8a2a" transform="rotate(20 160 980)"/><rect x="300" y="1040" width="20" height="30" fill="#8f7dff" transform="rotate(-30 300 1040)"/><rect x="440" y="960" width="20" height="30" fill="#7cf0a8" transform="rotate(50 440 960)"/><rect x="620" y="1010" width="20" height="30" fill="#ffd27a" transform="rotate(-10 620 1010)"/><rect x="780" y="970" width="20" height="30" fill="#ff5f6d" transform="rotate(35 780 970)"/><rect x="920" y="1030" width="20" height="30" fill="#9fe3ff" transform="rotate(-40 920 1030)"/><rect x="230" y="1120" width="20" height="30" fill="#ffd27a" transform="rotate(10 230 1120)"/><rect x="860" y="1120" width="20" height="30" fill="#8f7dff" transform="rotate(60 860 1120)"/></g>
+      <!-- the kid's window -->
+      <rect x="290" y="440" width="500" height="460" rx="16" fill="#3a5ab8"/>
+      <g clip-path="url(#vh-clip)">
+        <g transform="translate(540,760) scale(0.5)"><g id="vh-kid"><g data-rig="kid" data-p="vk" data-o='{"mouth":"flat","brows":"flat","look":[0,40]}'></g></g></g>
+        <g transform="translate(720,860)"><g id="vh-hand" opacity="0"><circle class="rk" r="40" fill="#f4d2b6" stroke-width="8"/><path class="rk" d="M-24,-26 L-30,-70 M0,-36 L0,-82 M24,-30 L32,-74" stroke-width="18"/><path d="M-24,-26 L-30,-70 M0,-36 L0,-82 M24,-30 L32,-74" stroke="#f4d2b6" stroke-width="8" stroke-linecap="round"/></g></g>
+      </g>
+      <rect class="rk" x="290" y="440" width="500" height="460" rx="16" fill="none" stroke-width="12"/>
+      <rect class="rk" x="260" y="890" width="560" height="36" rx="10" fill="#f3e6c8" stroke-width="10"/>
+    </svg>
+  </div>
+  <script>
+    Rig.fill();
+    const tl = gsap.timeline({ paused: true }), A = s => Rig.at(s, "v3ahook");
+    Rig.run(tl, "v3ahook");
+    Rig.blinks(tl, "vk", 0, 10);
+    tl.fromTo("#vh-kid", { y: 60 }, { y: 0, duration: 0.6, ease: "expo.out" }, 0);
+    const win = A("1,0.1");
+    tl.fromTo("#vh-nb", { y: 3200 }, { y: 0, duration: 0.5, ease: "back.out(1.4)" }, win);
+    tl.fromTo("#vh-check", { y: 900 }, { y: 0, duration: 0.5, ease: "back.out(1.4)" }, win + 0.05);
+    tl.to(["#vh-nb", "#vh-check"], { y: -50, duration: 0.22, yoyo: true, repeat: 7, ease: "power2.out" }, win + 0.6);
+    tl.set("#vh-conf", { opacity: 1 }, win + 0.3);
+    tl.fromTo("#vh-conf", { y: -200 }, { y: 300, duration: 5, ease: "none" }, win + 0.3);
+    tl.to("#vh-gl", { opacity: 1, duration: 0.4 }, win + 0.3);
+    Rig.widen(tl, "vk", A("1,0.4")); Rig.brows(tl, "vk", "up", A("1,0.4")); Rig.mouth(tl, "vk", "flat", "o", A("1,0.4"));
+    tl.fromTo("#vh-amt", { opacity: 0, scale: 0.3, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, transformOrigin: "50% 50%", duration: 0.35, ease: "back.out(2.2)" }, A("2,0.55"));
+    Rig.mouth(tl, "vk", "o", "smile", A("3,0")); Rig.brows(tl, "vk", "flat", A("3,0"));
+    tl.set("#vh-hand", { opacity: 1 }, A("3,0.05"));
+    tl.fromTo("#vh-hand", { y: 200 }, { y: 0, duration: 0.3, ease: "back.out(1.6)" }, A("3,0.05"));
+    tl.to("#vh-hand", { rotation: 18, svgOrigin: "0 40", duration: 0.16, yoyo: true, repeat: 5, ease: "sine.inOut" }, A("3,0.35"));
+    const fr = A("4,0.15");
+    tl.to("#vh-hand", { y: 200, duration: 0.35, ease: "power2.in" }, fr);
+    Rig.look(tl, "vk", 0, 0, fr); Rig.brows(tl, "vk", "worry", fr);
+    tl.to("#vk-sweat", { opacity: 1, duration: 0.25 }, fr + 0.2);
+    window.__timelines["v3ahook"] = tl;
+  </script>
+</template>

@@ -1,0 +1,59 @@
+<template>
+  <style>
+    @font-face { font-family: "Hand"; src: url("assets/fonts/PatrickHand-Regular.ttf"); }
+    #root { position: absolute; inset: 0; background: #1a2b66; overflow: hidden; }
+    #vb-art { position: absolute; inset: 0; }
+    .rk { stroke: #0d0f22; stroke-linecap: round; stroke-linejoin: round; }
+    .pop { font-family: Hand; font-size: 150px; fill: #ffb35c; stroke: #0d0f22; stroke-width: 14px; paint-order: stroke; stroke-linejoin: round; }
+    .lab { font-family: Hand; font-size: 64px; fill: #f4f1ff; }
+  </style>
+  <div id="root" data-composition-id="v3abars" data-width="1080" data-height="1920">
+    <svg id="vb-art" class="clip" data-start="0" data-duration="40" viewBox="0 0 1080 1920" data-layout-allow-overflow>
+      <defs>
+        <radialGradient id="vb-bg" cx="0.5" cy="0.5" r="0.8"><stop offset="0" stop-color="#2a4a9f"/><stop offset="1" stop-color="#111c4c"/></radialGradient>
+      </defs>
+      <rect width="1080" height="1920" fill="url(#vb-bg)"/>
+
+      <g id="vb-chart" data-in="14,0,fade" data-out="16,0">
+        <path d="M140,1250 L940,1250" stroke="#c9d3ef" stroke-width="8" stroke-linecap="round"/>
+        <rect id="vb-win" class="rk" x="200" y="650" width="260" height="600" rx="10" fill="#ffd23a" stroke-width="10"/>
+        <rect id="vb-bk" class="rk" x="620" y="650" width="260" height="600" rx="10" fill="#ff5f6d" stroke-width="10"/>
+        <text class="lab" x="330" y="1330" text-anchor="middle">win</text>
+        <text class="lab" x="750" y="1330" text-anchor="middle">bankruptcies</text>
+        <text class="lab" x="750" y="1395" text-anchor="middle" style="font-size:44px;fill:#c9d3ef">next door</text>
+      </g>
+      <g data-out="16,0">
+        <text class="pop" x="750" y="580" text-anchor="middle" style="font-size:200px" data-in="15,0.5,pop">+7%</text>
+        <text class="lab" x="330" y="580" text-anchor="middle" style="font-size:80px" data-in="15,0.82,up">3 years</text>
+      </g>
+      <g id="vb-broke" data-in="16,0,fade">
+        <g transform="translate(350,1150) rotate(35) scale(0.8)"><g id="vb-pl"><path class="rk" d="M-60,0 C-70,60 -50,120 0,130 C50,120 70,60 60,0 Z" fill="#f4f1ff" stroke-width="8"/></g></g>
+        <g transform="translate(730,1150) rotate(-35) scale(0.8)"><g id="vb-pr"><path class="rk" d="M-60,0 C-70,60 -50,120 0,130 C50,120 70,60 60,0 Z" fill="#f4f1ff" stroke-width="8"/></g></g>
+        <g transform="translate(540,940) scale(0.62)"><g data-rig="kid" data-p="vbk" data-o='{"mouth":"sad","brows":"worry","look":[0,30]}'></g></g>
+        <g transform="translate(800,600)"><g id="vb-moth" opacity="0">
+          <ellipse class="rk" cx="-26" cy="0" rx="30" ry="20" fill="#c9d3ef" stroke-width="6"/><ellipse class="rk" cx="26" cy="0" rx="30" ry="20" fill="#c9d3ef" stroke-width="6"/><ellipse cx="0" cy="0" rx="8" ry="22" fill="#0d0f22"/>
+        </g></g>
+      </g>
+    </svg>
+  </div>
+  <script>
+    Rig.fill();
+    const tl = gsap.timeline({ paused: true }), A = s => Rig.at(s, "v3abars");
+    Rig.run(tl, "v3abars");
+    tl.set("#vb-win", { scaleY: 0.08, transformOrigin: "50% 100%" }, 0);
+    tl.set("#vb-bk", { scaleY: 0.08, transformOrigin: "50% 100%" }, 0);
+    [0.2, 0.5, 0.8].forEach((f, i) => {
+      tl.to("#vb-win", { scaleY: [0.35, 0.65, 1][i], transformOrigin: "50% 100%", duration: 0.45, ease: "back.out(1.6)" }, A("14," + f));
+      tl.to("#vb-bk", { scaleY: [0.3, 0.5, 0.72][i], transformOrigin: "50% 100%", duration: 0.45, ease: "back.out(1.6)" }, A("14," + f) + 0.1);
+    });
+    tl.to("#vb-chart", { scale: 1.05, svgOrigin: "540 1250", duration: A("15,0.5") - A("15,0"), ease: "sine.inOut" }, A("15,0"));
+    tl.to("#vb-win", { y: -14, duration: 0.3, yoyo: true, repeat: 1, ease: "power2.out" }, A("15,0.12"));
+    tl.fromTo(["#vb-pl", "#vb-pr"], { scaleY: 0, transformOrigin: "50% 0%" }, { scaleY: 1, transformOrigin: "50% 0%", duration: 0.35, ease: "back.out(2)" }, A("16,0.35"));
+    tl.set("#vb-moth", { opacity: 1 }, A("16,0.55"));
+    tl.fromTo("#vb-moth", { x: -300, y: 500 }, { x: 100, y: -60, duration: 1.6, ease: "power1.out" }, A("16,0.55"));
+    tl.to("#vb-moth", { scaleY: 0.3, duration: 0.08, yoyo: true, repeat: 15 }, A("16,0.55"));
+    Rig.blinks(tl, "vbk", A("16,0"), A("16,1") + 2);
+    Rig.look(tl, "vbk", 40, -30, A("16,0.7"));
+    window.__timelines["v3abars"] = tl;
+  </script>
+</template>

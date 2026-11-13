@@ -1,5 +1,5 @@
 // Builds one vertical Short (1080x1920) in shorts/: cuts the film voice, writes timing + index.html.
-//   node tools/prep-short.cjs v1a|v1b|v2a|v2b    then: cd shorts && npx hyperframes render -o renders/<out>.mp4
+//   node tools/prep-short.cjs v1a|v1b|v2a|v2b|v3a|v3b    then: cd shorts && npx hyperframes render -o renders/<out>.mp4
 // VO keeps the film's line numbers, so scenes use the same data-in="line,frac" as the film.
 const fs = require('fs'), path = require('path'), { execFileSync } = require('child_process');
 const root = path.join(__dirname, '..'), dir = path.join(root, 'shorts');
@@ -16,6 +16,10 @@ const SHORTS = {
          scenes: L => [['s1auction', 'v2a-auction', 0], ['s1bids', 'v2a-bids', L(12) - 0.15]] },
   v2b: { film: 'v2-card-vs-cash/film', out: 'v2-short2-tap-doesnt-hurt', lines: [[0, 5], [21, 22]], head: ['Why tapping', 'your card ' + O("doesn't hurt")],
          scenes: L => [['s2tap', 'v2b-tap', 0], ['s2cash', 'v2b-cash', L(3) - 0.1], ['s2slip', 'v2b-slip', L(21) - 0.2]] },
+  v3a: { film: 'v3-neighbor-lottery/film', out: 'v3-short1-neighbor-won', lines: [[0, 6], [14, 16]], head: ['Your neighbor won.', O('You went broke?')],
+         scenes: L => [['v3ahook', 'v3a-hook', 0], ['v3acrack', 'v3a-crack', L(5) - 0.15], ['v3abars', 'v3a-bars', L(14) - 0.2]] },
+  v3b: { film: 'v3-neighbor-lottery/film', out: 'v3-short2-neighbors-new-car', lines: [[18, 26]], head: ["Your neighbor's new car", 'costs ' + O('YOU')],
+         scenes: L => [['v3bowned', 'v3b-owned', 0], ['v3bjoneses', 'v3b-joneses', L(23) - 0.2], ['v3bwindow', 'v3b-window', L(25) - 0.2]] },
 };
 const S = SHORTS[process.argv[2]];
 if (!S) throw new Error('usage: prep-short.cjs ' + Object.keys(SHORTS).join('|'));
