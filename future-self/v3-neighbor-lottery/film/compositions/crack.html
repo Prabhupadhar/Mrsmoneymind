@@ -1,0 +1,73 @@
+<template>
+  <style>
+    @font-face { font-family: "Hand"; src: url("assets/fonts/PatrickHand-Regular.ttf"); }
+    #root { position: absolute; inset: 0; background: #1a2b66; overflow: hidden; }
+    #cr-art { position: absolute; inset: 0; }
+    .rk { stroke: #0d0f22; stroke-linecap: round; stroke-linejoin: round; }
+    .pop { font-family: Hand; font-size: 150px; fill: #ffb35c; stroke: #0d0f22; stroke-width: 14px; paint-order: stroke; stroke-linejoin: round; }
+  </style>
+  <div id="root" data-composition-id="crack" data-width="1920" data-height="1080">
+    <svg id="cr-art" class="clip" data-start="0" data-duration="30" viewBox="0 0 1920 1080" data-layout-allow-overflow>
+      <defs>
+        <radialGradient id="cr-bg" cx="0.4" cy="0.55" r="0.75"><stop offset="0" stop-color="#2a4a9f"/><stop offset="1" stop-color="#111c4c"/></radialGradient>
+        <radialGradient id="cr-red"><stop offset="0" stop-color="#ff3b4a" stop-opacity="0.55"/><stop offset="1" stop-color="#ff3b4a" stop-opacity="0"/></radialGradient>
+      </defs>
+      <rect width="1920" height="1080" fill="url(#cr-bg)"/>
+      <g fill="#fff" opacity="0.06"><circle cx="300" cy="160" r="4"/><circle cx="1500" cy="960" r="5"/><circle cx="1760" cy="140" r="4"/></g>
+      <circle id="cr-alarm" cx="640" cy="620" r="460" fill="url(#cr-red)" opacity="0"/>
+
+      <!-- piggy bank -->
+      <g transform="translate(640,640)"><g id="cr-pig" data-in="5,0,pop">
+        <path class="rk" d="M-150,120 L-150,210 L-90,210 L-90,140 M90,140 L90,210 L150,210 L150,120" fill="#ff9fb8" stroke-width="10"/>
+        <ellipse class="rk" cx="0" cy="0" rx="280" ry="210" fill="#ffb3c7" stroke-width="12"/>
+        <path class="rk" d="M-140,-170 L-170,-270 L-60,-200 Z" fill="#ff9fb8" stroke-width="10"/>
+        <ellipse class="rk" cx="290" cy="20" rx="56" ry="70" fill="#ff9fb8" stroke-width="10"/>
+        <circle cx="280" cy="0" r="10" fill="#0d0f22"/><circle cx="280" cy="42" r="10" fill="#0d0f22"/>
+        <circle cx="170" cy="-50" r="18" fill="#0d0f22"/>
+        <rect class="rk" x="-80" y="-206" width="160" height="26" rx="13" fill="#7a3a4c" stroke-width="8"/>
+        <path d="M-300,-10 C-360,-40 -340,-90 -300,-70" fill="none" stroke="#0d0f22" stroke-width="10" stroke-linecap="round"/>
+        <path id="cr-line" d="M10,-200 L-30,-120 L30,-60 L-20,20 L40,90 L0,200" fill="none" stroke="#0d0f22" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" data-len="520" data-in="5,0.62,draw"/>
+      </g></g>
+      <g transform="translate(640,850)"><g id="cr-coin" opacity="0"><circle class="rk" r="34" fill="#ffd27a" stroke-width="7"/><text y="14" text-anchor="middle" style="font-family:Hand;font-size:42px;fill:#a8673e">$</text></g></g>
+      <text class="pop" x="640" y="250" text-anchor="middle" style="font-size:180px" data-in="5,0.86,pop">you?</text>
+
+      <!-- kid -->
+      <g transform="translate(1400,660) scale(0.62)"><g id="cr-kid">
+        <g data-rig="kid" data-p="ck" data-o='{"mouth":"smile","brows":"flat","look":[-30,10]}'></g>
+      </g></g>
+      <!-- 6: points at themself -->
+      <g transform="translate(1180,1000)"><g id="cr-hand" opacity="0">
+        <path class="rk" d="M-200,80 C-120,40 -60,20 -20,10" fill="none" style="stroke:#e3a63a" stroke-width="70"/>
+        <circle class="rk" cx="10" cy="0" r="48" fill="#f4d2b6" stroke-width="9"/>
+        <path class="rk" d="M40,-20 L120,-50" fill="none" stroke-width="30"/>
+        <path d="M40,-20 L120,-50" fill="none" stroke="#f4d2b6" stroke-width="16" stroke-linecap="round"/>
+      </g></g>
+    </svg>
+  </div>
+  <script>
+    Rig.fill();
+    const tl = gsap.timeline({ paused: true }), A = s => Rig.at(s, "crack");
+    tl.fromTo("#cr-kid", { opacity: 0, x: 60 }, { opacity: 1, x: 0, duration: 0.4, ease: "expo.out" }, 0);
+    Rig.run(tl, "crack");
+    Rig.blinks(tl, "ck", 0, 7);
+    // 5: the smile drops as the crack runs down the pig
+    Rig.brows(tl, "ck", "worry", A("5,0.3"));
+    Rig.mouth(tl, "ck", "smile", "worry", A("5,0.3"));
+    const c = A("5,0.62");
+    tl.to("#cr-pig", { x: 10, duration: 0.05, yoyo: true, repeat: 9 }, c);
+    tl.to("#cr-alarm", { opacity: 1, duration: 0.3 }, c);
+    tl.set("#cr-coin", { opacity: 1 }, c + 0.3);
+    tl.fromTo("#cr-coin", { y: -60 }, { y: 120, duration: 0.5, ease: "bounce.out" }, c + 0.3);
+    Rig.widen(tl, "ck", c);
+    Rig.mouth(tl, "ck", "worry", "o", c + 0.1);
+    // 6: "me?" point, eyebrows way up
+    const p = A("6,0");
+    tl.set("#cr-hand", { opacity: 1 }, p);
+    tl.fromTo("#cr-hand", { x: -200, y: 200 }, { x: 0, y: 0, duration: 0.35, ease: "back.out(1.6)" }, p);
+    tl.to("#cr-hand", { x: 14, duration: 0.12, yoyo: true, repeat: 5, ease: "sine.inOut" }, p + 0.4);
+    Rig.brows(tl, "ck", "up", p);
+    Rig.look(tl, "ck", 0, 0, p);
+    tl.to("#ck-br", { y: -20, duration: 0.2, yoyo: true, repeat: 1, ease: "power2.out" }, A("6,0.5"));
+    window.__timelines["crack"] = tl;
+  </script>
+</template>

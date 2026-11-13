@@ -1,0 +1,30 @@
+<template>
+  <style>
+    @font-face { font-family: "Hand"; src: url("assets/fonts/PatrickHand-Regular.ttf"); }
+    #root { position: absolute; inset: 0; background: linear-gradient(120deg, #4c86e6 0%, #6a4fd6 55%, #7a3cc4 100%); overflow: hidden; }
+    #card4-art { position: absolute; inset: 0; }
+    #card4-num { position: absolute; left: 0; top: 300px; width: 100%; text-align: center;
+      font-family: "Hand"; font-size: 72px; color: #ffd2a6; letter-spacing: 0.08em; }
+    #card4-title { position: absolute; left: 0; top: 400px; width: 100%; text-align: center;
+      font-family: "Hand"; font-size: 160px; line-height: 1.05; color: #fff; text-shadow: 0 10px 0 rgba(30,20,80,0.3); }
+    #card4-title span { display: inline-block; }
+    .rk { stroke: #0d0f22; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <div id="root" data-composition-id="card4" data-width="1920" data-height="1080">
+    <div id="card4-num" class="clip" data-start="0" data-duration="10">to be fair</div>
+    <h1 id="card4-title" class="clip" data-start="0" data-duration="10"><span>f</span><span>a</span><span>c</span><span>t</span>&nbsp;<span>c</span><span>h</span><span>e</span><span>c</span><span>k</span></h1>
+    <svg id="card4-art" class="clip" data-start="0" data-duration="10" viewBox="0 0 1920 1080" data-layout-allow-overflow>
+      <g fill="#fff" opacity="0.5"><path d="M260,180 l10,26 26,10 -26,10 -10,26 -10,-26 -26,-10 26,-10 z"/><path d="M1600,260 l7,18 18,7 -18,7 -7,18 -7,-18 -18,-7 18,-7 z"/><path d="M380,840 l6,15 15,6 -15,6 -6,15 -6,-15 -15,-6 15,-6 z"/></g>
+      <g transform="translate(1640,1010) scale(0.5)"><g id="card4-peek"><g data-rig="nb" data-p="c4k" data-o='{"look":[-24,-10],"mouth":"smile","brows":"up"}'></g></g></g>
+    </svg>
+  </div>
+  <script>
+    Rig.fill();
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#card4-num", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.3 }, 0.05);
+    tl.fromTo("#card4-title span", { opacity: 0, y: 24, filter: "blur(4px)" }, { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.2, stagger: 0.045, ease: "back.out(2)" }, 0.2);
+    tl.fromTo("#card4-peek", { y: 260 }, { y: 0, duration: 0.6, ease: "back.out(1.6)" }, 0.9);
+    Rig.blinks(tl, "c4k", 0, 6);
+    window.__timelines["card4"] = tl;
+  </script>
+</template>

@@ -1,0 +1,127 @@
+<template>
+  <style>
+    @font-face { font-family: "Hand"; src: url("assets/fonts/PatrickHand-Regular.ttf"); }
+    #root { position: absolute; inset: 0; background: #1a2b66; overflow: hidden; }
+    #st-art { position: absolute; inset: 0; }
+    .rk { stroke: #0d0f22; stroke-linecap: round; stroke-linejoin: round; }
+    .pop { font-family: Hand; font-size: 150px; fill: #ffb35c; stroke: #0d0f22; stroke-width: 14px; paint-order: stroke; stroke-linejoin: round; }
+  </style>
+  <div id="root" data-composition-id="street" data-width="1920" data-height="1080">
+    <svg id="st-art" class="clip" data-start="0" data-duration="30" viewBox="0 0 1920 1080" data-layout-allow-overflow>
+      <defs>
+        <radialGradient id="st-bg" cx="0.5" cy="0.55" r="0.75"><stop offset="0" stop-color="#2a4a9f"/><stop offset="1" stop-color="#111c4c"/></radialGradient>
+        <radialGradient id="st-gold"><stop offset="0" stop-color="#ffd23a" stop-opacity="0.8"/><stop offset="1" stop-color="#ffd23a" stop-opacity="0"/></radialGradient>
+      </defs>
+      <rect width="1920" height="1080" fill="url(#st-bg)"/>
+
+      <!-- 11: the wide map, then zoom into one postal code -->
+      <g id="st-map">
+        <rect x="-400" y="-300" width="2800" height="1700" fill="#2f7c52"/>
+        <g fill="#c9d3ef" opacity="0.55"><rect x="-300" y="-200" width="200" height="130" rx="10"/><rect x="-300" y="-10" width="200" height="130" rx="10"/><rect x="-300" y="180" width="200" height="130" rx="10"/><rect x="-300" y="370" width="200" height="130" rx="10"/><rect x="-300" y="560" width="200" height="130" rx="10"/><rect x="-300" y="750" width="200" height="130" rx="10"/><rect x="-300" y="940" width="200" height="130" rx="10"/><rect x="-300" y="1130" width="200" height="130" rx="10"/><rect x="-40" y="-200" width="200" height="130" rx="10"/><rect x="-40" y="-10" width="200" height="130" rx="10"/><rect x="-40" y="180" width="200" height="130" rx="10"/><rect x="-40" y="370" width="200" height="130" rx="10"/><rect x="-40" y="560" width="200" height="130" rx="10"/><rect x="-40" y="750" width="200" height="130" rx="10"/><rect x="-40" y="940" width="200" height="130" rx="10"/><rect x="-40" y="1130" width="200" height="130" rx="10"/><rect x="220" y="-200" width="200" height="130" rx="10"/><rect x="220" y="-10" width="200" height="130" rx="10"/><rect x="220" y="180" width="200" height="130" rx="10"/><rect x="220" y="370" width="200" height="130" rx="10"/><rect x="220" y="560" width="200" height="130" rx="10"/><rect x="220" y="750" width="200" height="130" rx="10"/><rect x="220" y="940" width="200" height="130" rx="10"/><rect x="220" y="1130" width="200" height="130" rx="10"/><rect x="480" y="-200" width="200" height="130" rx="10"/><rect x="480" y="-10" width="200" height="130" rx="10"/><rect x="480" y="180" width="200" height="130" rx="10"/><rect x="480" y="370" width="200" height="130" rx="10"/><rect x="480" y="560" width="200" height="130" rx="10"/><rect x="480" y="750" width="200" height="130" rx="10"/><rect x="480" y="940" width="200" height="130" rx="10"/><rect x="480" y="1130" width="200" height="130" rx="10"/><rect x="740" y="-200" width="200" height="130" rx="10"/><rect x="740" y="-10" width="200" height="130" rx="10"/><rect x="740" y="180" width="200" height="130" rx="10"/><rect x="740" y="370" width="200" height="130" rx="10"/><rect x="740" y="560" width="200" height="130" rx="10"/><rect x="740" y="750" width="200" height="130" rx="10"/><rect x="740" y="940" width="200" height="130" rx="10"/><rect x="740" y="1130" width="200" height="130" rx="10"/><rect x="1000" y="-200" width="200" height="130" rx="10"/><rect x="1000" y="-10" width="200" height="130" rx="10"/><rect x="1000" y="180" width="200" height="130" rx="10"/><rect x="1000" y="370" width="200" height="130" rx="10"/><rect x="1000" y="560" width="200" height="130" rx="10"/><rect x="1000" y="750" width="200" height="130" rx="10"/><rect x="1000" y="940" width="200" height="130" rx="10"/><rect x="1000" y="1130" width="200" height="130" rx="10"/><rect x="1260" y="-200" width="200" height="130" rx="10"/><rect x="1260" y="-10" width="200" height="130" rx="10"/><rect x="1260" y="180" width="200" height="130" rx="10"/><rect x="1260" y="370" width="200" height="130" rx="10"/><rect x="1260" y="560" width="200" height="130" rx="10"/><rect x="1260" y="750" width="200" height="130" rx="10"/><rect x="1260" y="940" width="200" height="130" rx="10"/><rect x="1260" y="1130" width="200" height="130" rx="10"/><rect x="1520" y="-200" width="200" height="130" rx="10"/><rect x="1520" y="-10" width="200" height="130" rx="10"/><rect x="1520" y="180" width="200" height="130" rx="10"/><rect x="1520" y="370" width="200" height="130" rx="10"/><rect x="1520" y="560" width="200" height="130" rx="10"/><rect x="1520" y="750" width="200" height="130" rx="10"/><rect x="1520" y="940" width="200" height="130" rx="10"/><rect x="1520" y="1130" width="200" height="130" rx="10"/><rect x="1780" y="-200" width="200" height="130" rx="10"/><rect x="1780" y="-10" width="200" height="130" rx="10"/><rect x="1780" y="180" width="200" height="130" rx="10"/><rect x="1780" y="370" width="200" height="130" rx="10"/><rect x="1780" y="560" width="200" height="130" rx="10"/><rect x="1780" y="750" width="200" height="130" rx="10"/><rect x="1780" y="940" width="200" height="130" rx="10"/><rect x="1780" y="1130" width="200" height="130" rx="10"/><rect x="2040" y="-200" width="200" height="130" rx="10"/><rect x="2040" y="-10" width="200" height="130" rx="10"/><rect x="2040" y="180" width="200" height="130" rx="10"/><rect x="2040" y="370" width="200" height="130" rx="10"/><rect x="2040" y="560" width="200" height="130" rx="10"/><rect x="2040" y="750" width="200" height="130" rx="10"/><rect x="2040" y="940" width="200" height="130" rx="10"/><rect x="2040" y="1130" width="200" height="130" rx="10"/></g>
+        <rect x="900" y="465" width="200" height="130" rx="10" fill="#ffb35c"/>
+      </g>
+
+      <g id="st-street" opacity="0">
+        <rect x="0" y="0" width="1920" height="1080" fill="#2f7c52"/>
+        <rect x="0" y="555" width="1920" height="110" fill="#4a4f6a"/>
+        <path d="M0,610 L1920,610" stroke="#f3e6c8" stroke-width="8" stroke-dasharray="40 40"/>
+        <circle id="st-glow" cx="970" cy="400" r="260" fill="url(#st-gold)" opacity="0"/>
+        <g transform="translate(250,430)"><g id="st-h0">
+          <rect class="rk" x="-80" y="-60" width="160" height="120" fill="#e9dcc6" stroke-width="8"/>
+          <path class="rk" d="M-100,-56 L0,-140 L100,-56 Z" fill="#c2504a" stroke-width="8"/>
+          <rect class="rk" id="st-w0" x="-50" y="-30" width="44" height="40" rx="5" fill="#3a4a80" stroke-width="6"/>
+          <rect class="rk" x="16" y="-6" width="36" height="66" rx="4" fill="#8a5a3c" stroke-width="6"/>
+        </g></g><g transform="translate(490,430)"><g id="st-h1">
+          <rect class="rk" x="-80" y="-60" width="160" height="120" fill="#e9dcc6" stroke-width="8"/>
+          <path class="rk" d="M-100,-56 L0,-140 L100,-56 Z" fill="#6a4fd6" stroke-width="8"/>
+          <rect class="rk" id="st-w1" x="-50" y="-30" width="44" height="40" rx="5" fill="#3a4a80" stroke-width="6"/>
+          <rect class="rk" x="16" y="-6" width="36" height="66" rx="4" fill="#8a5a3c" stroke-width="6"/>
+        </g></g><g transform="translate(730,430)"><g id="st-h2">
+          <rect class="rk" x="-80" y="-60" width="160" height="120" fill="#e9dcc6" stroke-width="8"/>
+          <path class="rk" d="M-100,-56 L0,-140 L100,-56 Z" fill="#2f7c72" stroke-width="8"/>
+          <rect class="rk" id="st-w2" x="-50" y="-30" width="44" height="40" rx="5" fill="#3a4a80" stroke-width="6"/>
+          <rect class="rk" x="16" y="-6" width="36" height="66" rx="4" fill="#8a5a3c" stroke-width="6"/>
+        </g></g><g transform="translate(970,430)"><g id="st-h3">
+          <rect class="rk" x="-80" y="-60" width="160" height="120" fill="#e9dcc6" stroke-width="8"/>
+          <path class="rk" d="M-100,-56 L0,-140 L100,-56 Z" fill="#ff8a2a" stroke-width="8"/>
+          <rect class="rk" id="st-w3" x="-50" y="-30" width="44" height="40" rx="5" fill="#3a4a80" stroke-width="6"/>
+          <rect class="rk" x="16" y="-6" width="36" height="66" rx="4" fill="#8a5a3c" stroke-width="6"/>
+        </g></g><g transform="translate(1210,430)"><g id="st-h4">
+          <rect class="rk" x="-80" y="-60" width="160" height="120" fill="#e9dcc6" stroke-width="8"/>
+          <path class="rk" d="M-100,-56 L0,-140 L100,-56 Z" fill="#c2504a" stroke-width="8"/>
+          <rect class="rk" id="st-w4" x="-50" y="-30" width="44" height="40" rx="5" fill="#3a4a80" stroke-width="6"/>
+          <rect class="rk" x="16" y="-6" width="36" height="66" rx="4" fill="#8a5a3c" stroke-width="6"/>
+        </g></g><g transform="translate(1450,430)"><g id="st-h5">
+          <rect class="rk" x="-80" y="-60" width="160" height="120" fill="#e9dcc6" stroke-width="8"/>
+          <path class="rk" d="M-100,-56 L0,-140 L100,-56 Z" fill="#6a4fd6" stroke-width="8"/>
+          <rect class="rk" id="st-w5" x="-50" y="-30" width="44" height="40" rx="5" fill="#3a4a80" stroke-width="6"/>
+          <rect class="rk" x="16" y="-6" width="36" height="66" rx="4" fill="#8a5a3c" stroke-width="6"/>
+        </g></g><g transform="translate(1690,430)"><g id="st-h6">
+          <rect class="rk" x="-80" y="-60" width="160" height="120" fill="#e9dcc6" stroke-width="8"/>
+          <path class="rk" d="M-100,-56 L0,-140 L100,-56 Z" fill="#2f7c72" stroke-width="8"/>
+          <rect class="rk" id="st-w6" x="-50" y="-30" width="44" height="40" rx="5" fill="#3a4a80" stroke-width="6"/>
+          <rect class="rk" x="16" y="-6" width="36" height="66" rx="4" fill="#8a5a3c" stroke-width="6"/>
+        </g></g><g transform="translate(370,780)"><g id="st-h7">
+          <rect class="rk" x="-80" y="-60" width="160" height="120" fill="#e9dcc6" stroke-width="8"/>
+          <path class="rk" d="M-100,-56 L0,-140 L100,-56 Z" fill="#ff8a2a" stroke-width="8"/>
+          <rect class="rk" id="st-w7" x="-50" y="-30" width="44" height="40" rx="5" fill="#3a4a80" stroke-width="6"/>
+          <rect class="rk" x="16" y="-6" width="36" height="66" rx="4" fill="#8a5a3c" stroke-width="6"/>
+        </g></g><g transform="translate(610,780)"><g id="st-h8">
+          <rect class="rk" x="-80" y="-60" width="160" height="120" fill="#e9dcc6" stroke-width="8"/>
+          <path class="rk" d="M-100,-56 L0,-140 L100,-56 Z" fill="#2f7c72" stroke-width="8"/>
+          <rect class="rk" id="st-w8" x="-50" y="-30" width="44" height="40" rx="5" fill="#3a4a80" stroke-width="6"/>
+          <rect class="rk" x="16" y="-6" width="36" height="66" rx="4" fill="#8a5a3c" stroke-width="6"/>
+        </g></g><g transform="translate(850,780)"><g id="st-h9">
+          <rect class="rk" x="-80" y="-60" width="160" height="120" fill="#e9dcc6" stroke-width="8"/>
+          <path class="rk" d="M-100,-56 L0,-140 L100,-56 Z" fill="#c2504a" stroke-width="8"/>
+          <rect class="rk" id="st-w9" x="-50" y="-30" width="44" height="40" rx="5" fill="#3a4a80" stroke-width="6"/>
+          <rect class="rk" x="16" y="-6" width="36" height="66" rx="4" fill="#8a5a3c" stroke-width="6"/>
+        </g></g><g transform="translate(1090,780)"><g id="st-h10">
+          <rect class="rk" x="-80" y="-60" width="160" height="120" fill="#e9dcc6" stroke-width="8"/>
+          <path class="rk" d="M-100,-56 L0,-140 L100,-56 Z" fill="#6a4fd6" stroke-width="8"/>
+          <rect class="rk" id="st-w10" x="-50" y="-30" width="44" height="40" rx="5" fill="#3a4a80" stroke-width="6"/>
+          <rect class="rk" x="16" y="-6" width="36" height="66" rx="4" fill="#8a5a3c" stroke-width="6"/>
+        </g></g><g transform="translate(1330,780)"><g id="st-h11">
+          <rect class="rk" x="-80" y="-60" width="160" height="120" fill="#e9dcc6" stroke-width="8"/>
+          <path class="rk" d="M-100,-56 L0,-140 L100,-56 Z" fill="#ff8a2a" stroke-width="8"/>
+          <rect class="rk" id="st-w11" x="-50" y="-30" width="44" height="40" rx="5" fill="#3a4a80" stroke-width="6"/>
+          <rect class="rk" x="16" y="-6" width="36" height="66" rx="4" fill="#8a5a3c" stroke-width="6"/>
+        </g></g><g transform="translate(1570,780)"><g id="st-h12">
+          <rect class="rk" x="-80" y="-60" width="160" height="120" fill="#e9dcc6" stroke-width="8"/>
+          <path class="rk" d="M-100,-56 L0,-140 L100,-56 Z" fill="#c2504a" stroke-width="8"/>
+          <rect class="rk" id="st-w12" x="-50" y="-30" width="44" height="40" rx="5" fill="#3a4a80" stroke-width="6"/>
+          <rect class="rk" x="16" y="-6" width="36" height="66" rx="4" fill="#8a5a3c" stroke-width="6"/>
+        </g></g>
+        <g transform="translate(970,250)"><g id="st-star" data-in="12,0.3,pop">
+          <path class="rk" d="M0,-70 l20,42 46,6 -34,32 8,46 -40,-22 -40,22 8,-46 -34,-32 46,-6 z" fill="#ffd23a" stroke-width="8"/>
+        </g></g>
+      </g>
+      <text class="pop" x="960" y="160" text-anchor="middle" style="font-size:160px" data-in="11,0.5,pop" data-out="12,0,pop">13 homes</text>
+
+      <g transform="translate(1780,1020) scale(0.36)"><g id="st-kid" data-in="11,0.75,up">
+        <g data-rig="kid" data-p="sk" data-o='{"mouth":"smile","brows":"up","look":[-50,-30]}'></g>
+      </g></g>
+    </svg>
+  </div>
+  <script>
+    Rig.fill();
+    const tl = gsap.timeline({ paused: true }), A = s => Rig.at(s, "street");
+    Rig.run(tl, "street");
+    Rig.blinks(tl, "sk", 0, 11);
+    // 11: zoom from the province map into one tiny postal code
+    const z = A("11,0.25");
+    tl.to("#st-map", { scale: 6, svgOrigin: "1000 530", duration: 1.2, ease: "power3.inOut" }, z);
+    tl.to("#st-street", { opacity: 1, duration: 0.4 }, z + 0.9);
+    tl.fromTo("#st-street", { scale: 0.6, svgOrigin: "960 540" }, { scale: 1, svgOrigin: "960 540", duration: 0.7, ease: "power3.out" }, z + 0.9);
+    // 12: the winner glows, then every neighbor lights up
+    tl.to("#st-glow", { opacity: 1, duration: 0.4 }, A("12,0.3"));
+    tl.to("#st-h3", { y: -20, duration: 0.2, yoyo: true, repeat: 3, ease: "power2.out" }, A("12,0.3"));
+    tl.to(["#st-w0", "#st-w1", "#st-w2", "#st-w3", "#st-w4", "#st-w5", "#st-w6", "#st-w7", "#st-w8", "#st-w9", "#st-w10", "#st-w11", "#st-w12"], { fill: "#ffd27a", duration: 0.15, stagger: 0.07 }, A("12,0.65"));
+    Rig.mouth(tl, "sk", "smile", "o", A("12,0.7"));
+    // 13: the street holds still
+    Rig.mouth(tl, "sk", "o", "flat", A("13,0"));
+    Rig.brows(tl, "sk", "flat", A("13,0"));
+    Rig.look(tl, "sk", 0, 0, A("13,0"));
+    window.__timelines["street"] = tl;
+  </script>
+</template>

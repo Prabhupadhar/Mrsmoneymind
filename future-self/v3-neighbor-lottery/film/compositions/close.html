@@ -1,0 +1,60 @@
+<template>
+  <style>
+    @font-face { font-family: "Hand"; src: url("assets/fonts/PatrickHand-Regular.ttf"); }
+    #root { position: absolute; inset: 0; background: #1a2b66; overflow: hidden; }
+    #cl-art { position: absolute; inset: 0; }
+    .rk { stroke: #0d0f22; stroke-linecap: round; stroke-linejoin: round; }
+    .pop { font-family: Hand; font-size: 150px; fill: #ffb35c; stroke: #0d0f22; stroke-width: 14px; paint-order: stroke; stroke-linejoin: round; }
+    .lab { font-family: Hand; font-size: 56px; fill: #f4f1ff; }
+    .num { font-family: Hand; font-size: 120px; fill: #fff; }
+  </style>
+  <div id="root" data-composition-id="close" data-width="1920" data-height="1080">
+    <svg id="cl-art" class="clip" data-start="0" data-duration="30" viewBox="0 0 1920 1080" data-layout-allow-overflow>
+      <defs>
+        <radialGradient id="cl-bg" cx="0.5" cy="0.55" r="0.75"><stop offset="0" stop-color="#2a4a9f"/><stop offset="1" stop-color="#111c4c"/></radialGradient>
+      </defs>
+      <rect width="1920" height="1080" fill="url(#cl-bg)"/>
+      <g fill="#fff" opacity="0.06"><circle cx="300" cy="160" r="4"/><circle cx="1500" cy="960" r="5"/><circle cx="1760" cy="140" r="4"/></g>
+
+      <!-- 40: wave over the fence -->
+      <g transform="translate(560,620) scale(0.55)"><g id="cl-kid"><g data-rig="kid" data-p="lk" data-o='{"mouth":"smile","brows":"up","look":[40,0]}'></g></g></g>
+      <g transform="translate(1360,620) scale(0.55)"><g id="cl-nb"><g data-rig="nb" data-p="ln" data-o='{"mouth":"smile","brows":"up","look":[-40,0]}'></g></g></g>
+      <g id="cl-fence">
+        <rect class="rk" x="0" y="800" width="1920" height="34" fill="#f3e6c8" stroke-width="8"/>
+        <rect class="rk" x="0" y="940" width="1920" height="34" fill="#f3e6c8" stroke-width="8"/>
+        <g fill="#f7f3ea" class="rk" stroke-width="8">
+          <path class="rk" d="M80,1080 L80,760 L120,720 L160,760 L160,1080 Z M260,1080 L260,760 L300,720 L340,760 L340,1080 Z M440,1080 L440,760 L480,720 L520,760 L520,1080 Z M620,1080 L620,760 L660,720 L700,760 L700,1080 Z M800,1080 L800,760 L840,720 L880,760 L880,1080 Z M980,1080 L980,760 L1020,720 L1060,760 L1060,1080 Z M1160,1080 L1160,760 L1200,720 L1240,760 L1240,1080 Z M1340,1080 L1340,760 L1380,720 L1420,760 L1420,1080 Z M1520,1080 L1520,760 L1560,720 L1600,760 L1600,1080 Z M1700,1080 L1700,760 L1740,720 L1780,760 L1780,1080 Z" fill="#f7f3ea" stroke-width="8"/>
+        </g>
+      </g>
+      <g transform="translate(820,700)"><g id="cl-hk"><circle class="rk" r="40" fill="#f4d2b6" stroke-width="8"/><path class="rk" d="M-24,-26 L-30,-70 M0,-36 L0,-82 M24,-30 L32,-74" stroke-width="18"/><path d="M-24,-26 L-30,-70 M0,-36 L0,-82 M24,-30 L32,-74" stroke="#f4d2b6" stroke-width="8" stroke-linecap="round"/></g></g>
+      <g transform="translate(1100,700)"><g id="cl-hn"><circle class="rk" r="40" fill="#c98d66" stroke-width="8"/><path class="rk" d="M-24,-30 L-32,-74 M0,-36 L0,-82 M24,-26 L30,-70" stroke-width="18"/><path d="M-24,-30 L-32,-74 M0,-36 L0,-82 M24,-26 L30,-70" stroke="#c98d66" stroke-width="8" stroke-linecap="round"/></g></g>
+      <!-- 41: closes the shopping app -->
+      <g transform="translate(960,560)"><g id="cl-app" opacity="0">
+        <rect class="rk" x="-180" y="-320" width="360" height="640" rx="40" fill="#141428" stroke-width="12"/>
+        <rect x="-150" y="-280" width="300" height="560" rx="16" fill="#f7f3ea"/>
+        <path class="rk" d="M-80,-120 L-50,-120 L-20,20 L90,20 L110,-80 L-40,-80" fill="none" stroke-width="12"/>
+        <circle cx="-10" cy="60" r="16" fill="#0d0f22"/><circle cx="80" cy="60" r="16" fill="#0d0f22"/>
+        <rect x="-110" y="140" width="220" height="70" rx="35" fill="#ff8a2a"/>
+        <text y="190" text-anchor="middle" style="font-family:Hand;font-size:44px;fill:#fff">buy now</text>
+      </g></g>
+    </svg>
+  </div>
+  <script>
+    Rig.fill();
+    const tl = gsap.timeline({ paused: true }), A = s => Rig.at(s, "close");
+    Rig.run(tl, "close");
+    Rig.blinks(tl, "lk", 0, 8); Rig.blinks(tl, "ln", 0, 8, 0.7);
+    // 40: both wave over the fence
+    tl.to(["#cl-hk", "#cl-hn"], { rotation: 18, svgOrigin: "0 40", duration: 0.16, yoyo: true, repeat: 7, ease: "sine.inOut" }, A("40,0.15"));
+    Rig.mouth(tl, "lk", "smile", "grin", A("40,0.2"));
+    Rig.mouth(tl, "ln", "smile", "grin", A("40,0.25"));
+    // 41: the app opens over everything, then the kid shuts it
+    tl.to(["#cl-hk", "#cl-hn"], { y: 300, duration: 0.3, ease: "power2.in" }, A("41,0"));
+    tl.set("#cl-app", { opacity: 1 }, A("41,0"));
+    tl.fromTo("#cl-app", { y: 700 }, { y: 0, duration: 0.35, ease: "power3.out" }, A("41,0"));
+    tl.to("#cl-app", { scale: 0, transformOrigin: "50% 50%", duration: 0.3, ease: "back.in(2)" }, A("41,0.75"));
+    Rig.mouth(tl, "lk", "grin", "smile", A("41,0"));
+    Rig.look(tl, "lk", 0, 0, A("41,0.9"));
+    window.__timelines["close"] = tl;
+  </script>
+</template>

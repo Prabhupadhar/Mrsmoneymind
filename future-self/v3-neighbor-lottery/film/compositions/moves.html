@@ -1,0 +1,101 @@
+<template>
+  <style>
+    @font-face { font-family: "Hand"; src: url("assets/fonts/PatrickHand-Regular.ttf"); }
+    #root { position: absolute; inset: 0; background: #1a2b66; overflow: hidden; }
+    #mv-art { position: absolute; inset: 0; }
+    .rk { stroke: #0d0f22; stroke-linecap: round; stroke-linejoin: round; }
+    .pop { font-family: Hand; font-size: 150px; fill: #ffb35c; stroke: #0d0f22; stroke-width: 14px; paint-order: stroke; stroke-linejoin: round; }
+    .lab { font-family: Hand; font-size: 56px; fill: #f4f1ff; }
+    .num { font-family: Hand; font-size: 120px; fill: #fff; }
+  </style>
+  <div id="root" data-composition-id="moves" data-width="1920" data-height="1080">
+    <svg id="mv-art" class="clip" data-start="0" data-duration="30" viewBox="0 0 1920 1080" data-layout-allow-overflow>
+      <defs>
+        <radialGradient id="mv-bg" cx="0.5" cy="0.55" r="0.75"><stop offset="0" stop-color="#2a4a9f"/><stop offset="1" stop-color="#111c4c"/></radialGradient>
+      </defs>
+      <rect width="1920" height="1080" fill="url(#mv-bg)"/>
+      <g fill="#fff" opacity="0.06"><circle cx="300" cy="160" r="4"/><circle cx="1500" cy="960" r="5"/><circle cx="1760" cy="140" r="4"/></g>
+
+      <defs><g id="mv-badge"><circle class="rk" r="90" fill="#ff8a2a" stroke-width="10"/></g></defs>
+      <!-- 37: the car in an empty desert -->
+      <g id="mv-s1" data-in="37,0,fade" data-out="38,0">
+        <g transform="translate(240,200)"><g data-in="37,0.02,pop"><use href="#mv-badge"/><text class="num" y="42" text-anchor="middle">1</text></g></g>
+        <path d="M0,820 C300,760 600,800 960,780 C1300,760 1600,800 1920,770 L1920,1080 L0,1080 Z" fill="#e3b66a"/>
+        <path d="M0,900 C400,860 800,920 1200,880 C1500,850 1700,900 1920,880" fill="none" stroke="#c9974a" stroke-width="8"/>
+        <circle cx="1650" cy="300" r="90" fill="#ffd23a" opacity="0.9"/>
+        <g transform="translate(1600,780)"><path class="rk" d="M0,0 L0,-170 M0,-90 L-50,-90 L-50,-140 M0,-60 L44,-60 L44,-120" fill="none" style="stroke:#2f7c52" stroke-width="30"/></g>
+        <g transform="translate(860,760)"><g id="mv-car" data-in="37,0.3,pop"><path class="rk" d="M-200,40 L-200,-20 C-190,-50 -150,-60 -110,-60 L-70,-120 L90,-120 L140,-60 C190,-58 210,-40 210,0 L210,40 Z" fill="#7cf0a8" stroke-width="10"/>
+          <path class="rk" d="M-50,-104 L-80,-62 L20,-62 L20,-104 Z M40,-104 L40,-62 L116,-62 L82,-104 Z" fill="#9fe3ff" stroke-width="7"/>
+          <circle class="rk" cx="-110" cy="44" r="42" fill="#2b2f45" stroke-width="9"/><circle cx="-110" cy="44" r="16" fill="#c9d3ef"/>
+          <circle class="rk" cx="120" cy="44" r="42" fill="#2b2f45" stroke-width="9"/><circle cx="120" cy="44" r="16" fill="#c9d3ef"/></g></g>
+        <text class="pop" x="860" y="400" text-anchor="middle" style="font-size:150px" data-in="37,0.7,pop">still want it?</text>
+      </g>
+      <!-- 38: unfollow; the feed goes quiet -->
+      <g id="mv-s2" data-in="38,0,fade" data-out="39,0">
+        <g transform="translate(240,200)"><g data-in="38,0.02,pop"><use href="#mv-badge"/><text class="num" y="42" text-anchor="middle">2</text></g></g>
+        <g transform="translate(760,580)"><g data-in="38,0.1,up">
+          <rect class="rk" x="-200" y="-360" width="400" height="720" rx="44" fill="#141428" stroke-width="12"/>
+          <rect x="-170" y="-320" width="340" height="640" rx="18" fill="#2d4fa8"/>
+          <g id="mv-loud">
+            <g transform="translate(-70,-180) scale(0.4)"><rect class="rk" x="-160" y="-100" width="320" height="220" fill="#e9dcc6" stroke-width="10"/>
+          <path class="rk" d="M-200,-90 L0,-240 L200,-90 Z" fill="#c2504a" stroke-width="10"/>
+          <rect class="rk" x="-40" y="10" width="80" height="110" rx="6" fill="#8a5a3c" stroke-width="8"/>
+          <rect class="rk" x="-130" y="-50" width="70" height="60" rx="6" fill="#ffd27a" stroke-width="7"/>
+          <rect class="rk" x="60" y="-50" width="70" height="60" rx="6" fill="#ffd27a" stroke-width="7"/></g><g transform="translate(80,-180) scale(0.4)"><rect class="rk" x="-160" y="-100" width="320" height="220" fill="#e9dcc6" stroke-width="10"/>
+          <path class="rk" d="M-200,-90 L0,-240 L200,-90 Z" fill="#6a4fd6" stroke-width="10"/>
+          <rect class="rk" x="-40" y="10" width="80" height="110" rx="6" fill="#8a5a3c" stroke-width="8"/>
+          <rect class="rk" x="-130" y="-50" width="70" height="60" rx="6" fill="#ffd27a" stroke-width="7"/>
+          <rect class="rk" x="60" y="-50" width="70" height="60" rx="6" fill="#ffd27a" stroke-width="7"/></g>
+            <g transform="translate(-70,40) scale(0.4)"><rect class="rk" x="-160" y="-100" width="320" height="220" fill="#e9dcc6" stroke-width="10"/>
+          <path class="rk" d="M-200,-90 L0,-240 L200,-90 Z" fill="#ff8a2a" stroke-width="10"/>
+          <rect class="rk" x="-40" y="10" width="80" height="110" rx="6" fill="#8a5a3c" stroke-width="8"/>
+          <rect class="rk" x="-130" y="-50" width="70" height="60" rx="6" fill="#ffd27a" stroke-width="7"/>
+          <rect class="rk" x="60" y="-50" width="70" height="60" rx="6" fill="#ffd27a" stroke-width="7"/></g><g transform="translate(80,40) scale(0.4)"><rect class="rk" x="-160" y="-100" width="320" height="220" fill="#e9dcc6" stroke-width="10"/>
+          <path class="rk" d="M-200,-90 L0,-240 L200,-90 Z" fill="#2f7c72" stroke-width="10"/>
+          <rect class="rk" x="-40" y="10" width="80" height="110" rx="6" fill="#8a5a3c" stroke-width="8"/>
+          <rect class="rk" x="-130" y="-50" width="70" height="60" rx="6" fill="#ffd27a" stroke-width="7"/>
+          <rect class="rk" x="60" y="-50" width="70" height="60" rx="6" fill="#ffd27a" stroke-width="7"/></g>
+          </g>
+          <g transform="translate(0,230)"><g id="mv-btn">
+            <rect class="rk" x="-130" y="-44" width="260" height="88" rx="44" fill="#ff5f6d" stroke-width="8"/>
+            <text y="16" text-anchor="middle" style="font-family:Hand;font-size:48px;fill:#fff">unfollow</text>
+          </g></g>
+        </g></g>
+        <g transform="translate(860,900)"><g id="mv-tap" opacity="0"><circle class="rk" r="44" fill="#f4d2b6" stroke-width="8"/><path class="rk" d="M0,-40 L-10,-110" stroke-width="30"/><path d="M0,-40 L-10,-110" stroke="#f4d2b6" stroke-width="16" stroke-linecap="round"/></g></g>
+      </g>
+      <!-- 39: compare with you, last year -->
+      <g id="mv-s3" data-in="39,0,fade">
+        <g transform="translate(240,200)"><g data-in="39,0.02,pop"><use href="#mv-badge"/><text class="num" y="42" text-anchor="middle">3</text></g></g>
+        <g transform="translate(720,720) scale(0.42)"><g id="mv-past" data-in="39,0.45,up">
+          <g data-rig="kid" data-p="pk2" data-o='{"mouth":"grin","brows":"up","happy":true}'></g>
+        </g></g>
+        <text class="lab" x="720" y="460" text-anchor="middle" style="font-size:64px" data-in="39,0.55,up">you, last year</text>
+      </g>
+      <g transform="translate(1440,650) scale(0.55)"><g id="mv-kid">
+        <g data-rig="kid" data-p="mk" data-o='{"mouth":"smile","brows":"up","look":[-40,0]}'></g>
+      </g></g>
+    </svg>
+  </div>
+  <script>
+    Rig.fill();
+    const tl = gsap.timeline({ paused: true }), A = s => Rig.at(s, "moves");
+    Rig.run(tl, "moves");
+    tl.fromTo("#mv-kid", { opacity: 0, x: 60 }, { opacity: 1, x: 0, duration: 0.45, ease: "expo.out" }, A("38,0"));
+    Rig.blinks(tl, "mk", 0, 16);
+    // 38: tap unfollow, feed goes quiet
+    const t = A("38,0.45");
+    tl.set("#mv-tap", { opacity: 1 }, t - 0.4);
+    tl.fromTo("#mv-tap", { x: 200, y: 200 }, { x: 0, y: 0, duration: 0.35, ease: "power3.out" }, t - 0.4);
+    tl.to("#mv-btn", { scale: 0.9, transformOrigin: "50% 50%", duration: 0.08, yoyo: true, repeat: 1 }, t);
+    tl.to("#mv-loud", { opacity: 0.15, duration: 0.6 }, t + 0.1);
+    tl.to("#mv-tap", { x: 200, y: 200, opacity: 0, duration: 0.4 }, t + 0.5);
+    Rig.mouth(tl, "mk", "smile", "flat", A("38,0.1"));
+    Rig.brows(tl, "mk", "flat", A("38,0.1"));
+    // 39: both grin
+    Rig.look(tl, "mk", -60, 20, A("39,0.5"));
+    Rig.mouth(tl, "mk", "flat", "grin", A("39,0.7"));
+    Rig.brows(tl, "mk", "up", A("39,0.7"));
+    tl.to(["#mv-kid", "#mv-past"], { y: -20, duration: 0.18, yoyo: true, repeat: 3, ease: "power2.out" }, A("39,0.8"));
+    window.__timelines["moves"] = tl;
+  </script>
+</template>

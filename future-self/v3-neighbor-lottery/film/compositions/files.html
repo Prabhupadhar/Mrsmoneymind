@@ -1,0 +1,102 @@
+<template>
+  <style>
+    @font-face { font-family: "Hand"; src: url("assets/fonts/PatrickHand-Regular.ttf"); }
+    #root { position: absolute; inset: 0; background: #1a2b66; overflow: hidden; }
+    #fi-art { position: absolute; inset: 0; }
+    .rk { stroke: #0d0f22; stroke-linecap: round; stroke-linejoin: round; }
+    .pop { font-family: Hand; font-size: 150px; fill: #ffb35c; stroke: #0d0f22; stroke-width: 14px; paint-order: stroke; stroke-linejoin: round; }
+    .yr { font-family: Hand; font-size: 190px; fill: #0d0f22; }
+  </style>
+  <div id="root" data-composition-id="files" data-width="1920" data-height="1080">
+    <svg id="fi-art" class="clip" data-start="0" data-duration="30" viewBox="0 0 1920 1080" data-layout-allow-overflow>
+      <defs>
+        <radialGradient id="fi-bg" cx="0.5" cy="0.55" r="0.75"><stop offset="0" stop-color="#2a4a9f"/><stop offset="1" stop-color="#111c4c"/></radialGradient>
+        <g id="fi-cab">
+          <rect class="rk" x="-220" y="-300" width="440" height="600" rx="18" fill="#7a86b8" stroke-width="10"/>
+          <rect class="rk" x="-180" y="40" width="360" height="220" rx="12" fill="#6a76a8" stroke-width="8"/>
+          <rect class="rk" x="-60" y="120" width="120" height="30" rx="15" fill="#c9d3ef" stroke-width="7"/>
+        </g>
+        <g id="fi-drawer">
+          <rect class="rk" x="-180" y="-120" width="360" height="200" rx="10" fill="#f3e6c8" stroke-width="8"/>
+          <rect class="rk" x="-200" y="80" width="400" height="200" rx="12" fill="#8f9bcc" stroke-width="9"/>
+          <rect class="rk" x="-60" y="160" width="120" height="30" rx="15" fill="#c9d3ef" stroke-width="7"/>
+        </g>
+        <g id="fi-paper">
+          <rect class="rk" x="-90" y="-60" width="180" height="120" rx="8" fill="#fff" stroke-width="6"/>
+          <path d="M-60,-24 L60,-24 M-60,4 L40,4 M-60,32 L20,32" stroke="#7a809c" stroke-width="8" stroke-linecap="round"/>
+        </g>
+      </defs>
+      <rect width="1920" height="1080" fill="url(#fi-bg)"/>
+      <g fill="#fff" opacity="0.06"><circle cx="300" cy="160" r="4"/><circle cx="1500" cy="960" r="5"/><circle cx="1760" cy="140" r="4"/></g>
+
+      <g id="fi-cabs" data-out="10,0">
+        <!-- winners -->
+        <g transform="translate(600,640)"><g id="fi-c1" data-in="9,0.02,up">
+          <use href="#fi-cab"/>
+          <g id="fi-d1"><use href="#fi-drawer" transform="translate(0,-260)"/></g>
+          <path d="M0,-210 l26,52 58,8 -42,40 10,58 -52,-28 -52,28 10,-58 -42,-40 58,-8 z" fill="#ffd23a" class="rk" stroke-width="8" transform="translate(0,20)"/>
+        </g></g>
+        <!-- bankruptcies -->
+        <g transform="translate(1320,640)"><g id="fi-c2" data-in="9,0.5,up">
+          <use href="#fi-cab"/>
+          <g id="fi-d2"><use href="#fi-drawer" transform="translate(0,-260)"/></g>
+          <g transform="translate(0,-150) scale(0.55)">
+            <ellipse class="rk" cx="0" cy="0" rx="150" ry="110" fill="#ffb3c7" stroke-width="14"/>
+            <ellipse class="rk" cx="150" cy="10" rx="34" ry="42" fill="#ff9fb8" stroke-width="12"/>
+            <path d="M10,-110 L-20,-40 L20,0 L-10,50 L20,110" fill="none" stroke="#0d0f22" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+        </g></g>
+        <!-- names and addresses fly out -->
+        <g transform="translate(600,330)"><g id="fi-p1" data-in="9,0.74,pop"><use href="#fi-paper"/></g></g>
+        <g transform="translate(1320,330)"><g id="fi-p2" data-in="9,0.8,pop"><use href="#fi-paper"/></g></g>
+        <g transform="translate(860,220)"><g id="fi-p3" data-in="9,0.86,pop"><use href="#fi-paper" transform="rotate(-8)"/></g></g>
+        <g transform="translate(1080,240)"><g id="fi-p4" data-in="9,0.9,pop"><use href="#fi-paper" transform="rotate(7)"/></g></g>
+      </g>
+
+      <!-- 10: calendar flips 2004 to 2014 -->
+      <g transform="translate(960,560)"><g id="fi-cal" data-in="10,0,pop">
+        <rect class="rk" x="-300" y="-260" width="600" height="520" rx="26" fill="#f7f3ea" stroke-width="12"/>
+        <rect class="rk" x="-300" y="-260" width="600" height="130" rx="26" fill="#ff5f6d" stroke-width="12"/>
+        <circle cx="-160" cy="-260" r="18" fill="#0d0f22"/><circle cx="160" cy="-260" r="18" fill="#0d0f22"/>
+        <path d="M-200,170 L200,170" stroke="#c9d3ef" stroke-width="8" stroke-linecap="round"/>
+        <g id="fi-years">
+          <text class="yr" id="fi-y0" y="90" text-anchor="middle">2004</text>
+          <text class="yr" id="fi-y1" y="90" text-anchor="middle" opacity="0">2005</text>
+          <text class="yr" id="fi-y2" y="90" text-anchor="middle" opacity="0">2006</text>
+          <text class="yr" id="fi-y3" y="90" text-anchor="middle" opacity="0">2007</text>
+          <text class="yr" id="fi-y4" y="90" text-anchor="middle" opacity="0">2008</text>
+          <text class="yr" id="fi-y5" y="90" text-anchor="middle" opacity="0">2009</text>
+          <text class="yr" id="fi-y6" y="90" text-anchor="middle" opacity="0">2010</text>
+          <text class="yr" id="fi-y7" y="90" text-anchor="middle" opacity="0">2011</text>
+          <text class="yr" id="fi-y8" y="90" text-anchor="middle" opacity="0">2012</text>
+          <text class="yr" id="fi-y9" y="90" text-anchor="middle" opacity="0">2013</text>
+          <text class="yr" id="fi-y10" y="90" text-anchor="middle" opacity="0" style="fill:#b0263c">2014</text>
+        </g>
+      </g></g>
+
+      <g transform="translate(1720,1000) scale(0.42)"><g id="fi-kid" data-in="9,0.1,up">
+        <g data-rig="kid" data-p="fk" data-o='{"mouth":"o","brows":"up","look":[-40,-20]}'></g>
+      </g></g>
+    </svg>
+  </div>
+  <script>
+    Rig.fill();
+    const tl = gsap.timeline({ paused: true }), A = s => Rig.at(s, "files");
+    Rig.run(tl, "files");
+    Rig.blinks(tl, "fk", 0, 10);
+    // drawers slide open
+    tl.fromTo("#fi-d1", { y: 260 }, { y: 0, duration: 0.5, ease: "power3.out" }, A("9,0.3"));
+    tl.fromTo("#fi-d2", { y: 260 }, { y: 0, duration: 0.5, ease: "power3.out" }, A("9,0.62"));
+    Rig.look(tl, "fk", -60, -10, A("9,0.5"));
+    // 10: years flip, one per step
+    const y0 = A("10,0.35"), step = (A("10,0.7") - y0) / 10;
+    for (let i = 1; i <= 10; i++) {
+      tl.set("#fi-y" + (i - 1), { opacity: 0 }, y0 + i * step);
+      tl.set("#fi-y" + i, { opacity: 1 }, y0 + i * step);
+    }
+    tl.to("#fi-cal", { rotation: -3, svgOrigin: "0 260", duration: 0.12, yoyo: true, repeat: 9, ease: "sine.inOut" }, y0);
+    Rig.mouth(tl, "fk", "o", "smile", A("10,0.2"));
+    Rig.look(tl, "fk", -60, -40, A("10,0.1"));
+    window.__timelines["files"] = tl;
+  </script>
+</template>

@@ -1,5 +1,5 @@
 // Shared character rig + declarative animation for "The Stranger You're Robbing".
-// Characters: <g data-rig="kid|old|sil" data-p="prefix" data-o='{"look":[x,y],...}'> filled by Rig.fill().
+// Characters: <g data-rig="kid|old|sil|nb" data-p="prefix" data-o='{"look":[x,y],...}'> filled by Rig.fill().
 // Animation:  data-in="line,frac[,kind]"  data-out="line,frac[,kind]"  on any element.
 // Times come from window.VO (voice timing) and window.SCENES (scene start), written by tools/prep-film.cjs.
 (function () {
@@ -112,6 +112,48 @@
     </g>`;
   }
 
+
+  // the neighbor: friendly guy next door, red cap, green jacket
+  const NB_SIL = `<path d="M-340,540 C-340,330 -210,280 0,280 C210,280 340,330 340,540 Z"/>
+    <ellipse cx="-292" cy="20" rx="44" ry="66"/><ellipse cx="292" cy="20" rx="44" ry="66"/><circle r="290"/>
+    <path d="M-290,-140 C-300,-410 300,-410 290,-140 Z"/><path d="M-330,-150 C-200,-100 200,-100 330,-150 C318,-196 -318,-196 -330,-150 Z"/>`;
+  function nb(p, o) {
+    const b = BROWS[o.brows || 'flat'];
+    return `<g id="${p}-rig">
+      <g transform="translate(16,-12)" fill="${ORANGE}">${NB_SIL}</g>
+      <path ${k('M-340,540 C-340,330 -210,280 0,280 C210,280 340,330 340,540 Z', 'fill="#3fae5a" stroke-width="10"')}/>
+      <path ${k('M-70,290 L0,380 L70,290', 'fill="#f4f1ff" stroke-width="8"')}/>
+      <path ${k('M-150,296 L-70,290 L-20,420 Z', 'fill="#2e8a45" stroke-width="8"')}/>
+      <path ${k('M150,296 L70,290 L20,420 Z', 'fill="#2e8a45" stroke-width="8"')}/>
+      <line class="rk" x1="0" y1="400" x2="0" y2="540" stroke-width="8"/>
+      <rect x="-250" y="420" width="70" height="12" rx="6" fill="#2e8a45"/>
+      <ellipse class="rk" cx="-292" cy="20" rx="44" ry="66" fill="#b97c58" stroke-width="10"/>
+      <ellipse class="rk" cx="292" cy="20" rx="44" ry="66" fill="#b97c58" stroke-width="10"/>
+      <circle class="rk" r="290" fill="#c98d66" stroke-width="10"/>
+      <path d="M150,-170 C260,-100 280,60 210,190 C270,60 250,-80 150,-170 Z" fill="#b07a55" opacity="0.7"/>
+      <path d="M-282,-120 L-250,-120 L-254,40 C-272,10 -284,-60 -282,-120 Z M282,-120 L250,-120 L254,40 C272,10 284,-60 282,-120 Z" fill="#3a2a22"/>
+      <path d="M-200,150 C-160,300 160,300 200,150 C150,250 -150,250 -200,150 Z" fill="#5a3d2c" opacity="0.35"/>
+      <path ${k('M-290,-140 C-300,-410 300,-410 290,-140 Z', 'fill="#e8483f" stroke-width="10"')}/>
+      <path d="M0,-370 L0,-150" stroke="#b8322b" stroke-width="7"/>
+      <circle class="rk" cx="0" cy="-372" r="16" fill="#e8483f" stroke-width="7"/>
+      <path d="M90,-280 l12,26 28,4 -20,19 5,28 -25,-13 -25,13 5,-28 -20,-19 28,-4 z" fill="#fff"/>
+      <path ${k('M-330,-150 C-200,-100 200,-100 330,-150 C318,-196 -318,-196 -330,-150 Z', 'fill="#c23a32" stroke-width="10"')}/>
+      <g id="${p}-eyes">${o.happy ? HAPPY : `
+        <ellipse class="rk" cx="-104" cy="30" rx="62" ry="70" fill="#fff" stroke-width="9"/>
+        <ellipse class="rk" cx="104" cy="30" rx="62" ry="70" fill="#fff" stroke-width="9"/>
+        ${pupil(p, 1, -104, o.dollar)}${pupil(p, 2, 104, o.dollar)}`}
+      </g>
+      <path id="${p}-bl" ${k(b[0], 'fill="none" stroke-width="16"')}/>
+      <path id="${p}-br" ${k(b[1], 'fill="none" stroke-width="16"')}/>
+      <path ${k('M0,90 C14,104 12,118 -2,124', 'fill="none" stroke-width="8"')}/>
+      <ellipse cx="-190" cy="130" rx="44" ry="26" fill="#ff8f86" opacity="0.35"/>
+      <ellipse cx="190" cy="130" rx="44" ry="26" fill="#ff8f86" opacity="0.35"/>
+      ${mouthSet(p, KID_MOUTHS, o.mouth || 'smile')}
+      <path id="${p}-sweat" ${k('M238,-100 C222,-70 220,-46 240,-40 C260,-46 256,-72 238,-100 Z', `fill="#9fe3ff" stroke-width="6" opacity="${o.sweat ? 1 : 0}"`)}/>
+      ${tears(p, o)}
+    </g>`;
+  }
+
   function sil(p) {
     return `<g id="${p}-rig">
       <g transform="translate(-16,-12)" fill="#b9a6ff">${OLD_SIL}</g>
@@ -126,7 +168,7 @@
       document.querySelectorAll('[data-rig]:not([data-rigged])').forEach(el => {
         const o = JSON.parse(el.getAttribute('data-o') || '{}'), p = el.getAttribute('data-p');
         const kind = el.getAttribute('data-rig');
-        el.innerHTML = kind === 'kid' ? kid(p, o) : kind === 'old' ? old(p, o) : sil(p);
+        el.innerHTML = kind === 'kid' ? kid(p, o) : kind === 'nb' ? nb(p, o) : kind === 'old' ? old(p, o) : sil(p);
         el.setAttribute('data-rigged', '1');
         if (o.look) gsap.set([`#${p}-p1`, `#${p}-p2`], { x: o.look[0], y: o.look[1] });
       });

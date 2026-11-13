@@ -1,0 +1,75 @@
+<template>
+  <style>
+    @font-face { font-family: "Hand"; src: url("assets/fonts/PatrickHand-Regular.ttf"); }
+    #root { position: absolute; inset: 0; background: #1a2b66; overflow: hidden; }
+    #ba-art { position: absolute; inset: 0; }
+    .rk { stroke: #0d0f22; stroke-linecap: round; stroke-linejoin: round; }
+    .pop { font-family: Hand; font-size: 150px; fill: #ffb35c; stroke: #0d0f22; stroke-width: 14px; paint-order: stroke; stroke-linejoin: round; }
+    .lab { font-family: Hand; font-size: 56px; fill: #f4f1ff; }
+  </style>
+  <div id="root" data-composition-id="bars" data-width="1920" data-height="1080">
+    <svg id="ba-art" class="clip" data-start="0" data-duration="30" viewBox="0 0 1920 1080" data-layout-allow-overflow>
+      <defs>
+        <radialGradient id="ba-bg" cx="0.5" cy="0.55" r="0.75"><stop offset="0" stop-color="#2a4a9f"/><stop offset="1" stop-color="#111c4c"/></radialGradient>
+      </defs>
+      <rect width="1920" height="1080" fill="url(#ba-bg)"/>
+      <g fill="#fff" opacity="0.06"><circle cx="300" cy="160" r="4"/><circle cx="1500" cy="960" r="5"/><circle cx="1760" cy="140" r="4"/></g>
+
+      <!-- 14-15: prize size and bankruptcies grow together -->
+      <g id="ba-chart" data-in="14,0,fade" data-out="16,0">
+        <path d="M380,880 L1160,880" stroke="#c9d3ef" stroke-width="8" stroke-linecap="round"/>
+        <rect id="ba-win" class="rk" x="460" y="280" width="260" height="600" rx="10" fill="#ffd23a" stroke-width="10"/>
+        <rect id="ba-bk" class="rk" x="820" y="280" width="260" height="600" rx="10" fill="#ff5f6d" stroke-width="10"/>
+        <text class="lab" x="590" y="950" text-anchor="middle">win</text>
+        <text class="lab" x="950" y="950" text-anchor="middle">bankruptcies</text>
+        <text class="lab" x="950" y="1020" text-anchor="middle" style="font-size:38px;fill:#c9d3ef">next door</text>
+      </g>
+      <g data-out="16,0">
+        <text class="pop" x="1490" y="500" text-anchor="middle" style="font-size:230px" data-in="15,0.5,pop">+7%</text>
+        <text class="lab" x="1490" y="620" text-anchor="middle" style="font-size:80px" data-in="15,0.82,up">3 years</text>
+      </g>
+
+      <!-- 16: the neighbors didn't win a cent -->
+      <g id="ba-broke" data-in="16,0,fade">
+        <g transform="translate(770,900) rotate(28)"><g id="ba-pl">
+          <path class="rk" d="M-60,0 C-70,60 -50,120 0,130 C50,120 70,60 60,0 Z" fill="#f4f1ff" stroke-width="8"/>
+          <path d="M-40,20 C-44,60 -30,100 0,108" fill="none" stroke="#c9d3ef" stroke-width="5" stroke-dasharray="10 10"/>
+        </g></g>
+        <g transform="translate(1150,900) rotate(-28)"><g id="ba-pr">
+          <path class="rk" d="M-60,0 C-70,60 -50,120 0,130 C50,120 70,60 60,0 Z" fill="#f4f1ff" stroke-width="8"/>
+          <path d="M-40,20 C-44,60 -30,100 0,108" fill="none" stroke="#c9d3ef" stroke-width="5" stroke-dasharray="10 10"/>
+        </g></g>
+        <g transform="translate(960,640) scale(0.6)"><g id="ba-kid">
+          <g data-rig="kid" data-p="bk" data-o='{"mouth":"sad","brows":"worry","look":[0,30]}'></g>
+        </g></g>
+        <g transform="translate(1300,330)"><g id="ba-moth" opacity="0">
+          <ellipse class="rk" cx="-26" cy="0" rx="30" ry="20" fill="#c9d3ef" stroke-width="6"/>
+          <ellipse class="rk" cx="26" cy="0" rx="30" ry="20" fill="#c9d3ef" stroke-width="6"/>
+          <ellipse cx="0" cy="0" rx="8" ry="22" fill="#0d0f22"/>
+        </g></g>
+      </g>
+    </svg>
+  </div>
+  <script>
+    Rig.fill();
+    const tl = gsap.timeline({ paused: true }), A = s => Rig.at(s, "bars");
+    Rig.run(tl, "bars");
+    // 14: both bars climb in steps, side by side
+    tl.set(["#ba-win", "#ba-bk"], { scaleY: 0.08, transformOrigin: "50% 100%" }, 0);
+    [0.2, 0.5, 0.8].forEach((f, i) => {
+      tl.to("#ba-win", { scaleY: [0.35, 0.65, 1][i], transformOrigin: "50% 100%", duration: 0.45, ease: "back.out(1.6)" }, A("14," + f));
+      tl.to("#ba-bk", { scaleY: [0.3, 0.5, 0.72][i], transformOrigin: "50% 100%", duration: 0.45, ease: "back.out(1.6)" }, A("14," + f) + 0.1);
+    });
+    tl.to("#ba-chart", { scale: 1.06, svgOrigin: "770 880", duration: A("15,0.5") - A("15,0"), ease: "sine.inOut" }, A("15,0"));
+    tl.to("#ba-win", { y: -14, duration: 0.3, yoyo: true, repeat: 1, ease: "power2.out" }, A("15,0.12"));
+    tl.to("#ba-bk", { x: 6, duration: 0.05, yoyo: true, repeat: 5 }, A("15,0.5"));
+    // 16: pockets pop out, a moth flutters away
+    tl.fromTo(["#ba-pl", "#ba-pr"], { scaleY: 0, transformOrigin: "50% 0%" }, { scaleY: 1, transformOrigin: "50% 0%", duration: 0.35, ease: "back.out(2)" }, A("16,0.35"));
+    tl.set("#ba-moth", { opacity: 1 }, A("16,0.55"));
+    tl.fromTo("#ba-moth", { x: -300, y: 500, scaleY: 1 }, { x: 200, y: -100, duration: 1.6, ease: "power1.out" }, A("16,0.55"));
+    tl.to("#ba-moth", { scaleY: 0.3, duration: 0.08, yoyo: true, repeat: 15 }, A("16,0.55"));
+    Rig.blinks(tl, "bk", A("16,0"), A("16,1") + 1);
+    Rig.look(tl, "bk", 40, -30, A("16,0.7"));
+    window.__timelines["bars"] = tl;
+  </script>
+</template>
