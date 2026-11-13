@@ -1,0 +1,98 @@
+<template>
+  <style>
+    @font-face { font-family: "Hand"; src: url("assets/fonts/PatrickHand-Regular.ttf"); }
+    #root { position: absolute; inset: 0; background: #1a2b66; overflow: hidden; }
+    #vc-art { position: absolute; inset: 0; }
+    .rk { stroke: #0d0f22; stroke-linecap: round; stroke-linejoin: round; }
+    .pop { font-family: Hand; font-size: 150px; fill: #ffb35c; stroke: #0d0f22; stroke-width: 14px; paint-order: stroke; stroke-linejoin: round; }
+  </style>
+  <div id="root" data-composition-id="v1charity" data-width="1080" data-height="1920">
+    <svg id="vc-art" class="clip" data-start="0" data-duration="30" viewBox="0 0 1080 1920" data-layout-allow-overflow>
+      <defs>
+        <radialGradient id="vc-bg" cx="0.5" cy="0.55" r="0.8"><stop offset="0" stop-color="#2a4a9f"/><stop offset="1" stop-color="#111c4c"/></radialGradient>
+        <g id="vc-bill">
+          <rect class="rk" x="-120" y="-60" width="240" height="120" rx="12" fill="#7fd18b" stroke-width="9"/>
+          <rect x="-96" y="-38" width="192" height="76" rx="8" fill="none" stroke="#2f7a45" stroke-width="5"/>
+          <text y="24" text-anchor="middle" style="font-family:Hand;font-size:72px;fill:#1f5a33">$</text>
+        </g>
+        <path id="vc-heart" d="M0,20 C-40,-10 -30,-46 0,-30 C30,-46 40,-10 0,20 Z"/>
+      </defs>
+      <rect width="1080" height="1920" fill="url(#vc-bg)"/>
+
+      <!-- 18: gap to a stranger -->
+      <path d="M560,760 L560,1460" stroke="#c9d3ef" stroke-width="6" stroke-dasharray="18 18" opacity="0.5" data-in="18,0.1,fade" data-out="19,0.3"/>
+      <g transform="translate(800,1050) scale(0.4)"><g data-in="18,0.1,right" data-out="19,0.35">
+        <g opacity="0.45"><g data-rig="old" data-p="vco" data-o='{"eyes":"open","mouth":"worry","look":[-20,0]}'></g></g>
+      </g></g>
+      <text class="pop" x="800" y="720" text-anchor="middle" style="font-size:110px" data-in="18,0.72,pop" data-out="19,0.25,pop">a stranger?</text>
+
+      <!-- 16: today-you -->
+      <g transform="translate(310,1020) scale(0.55)"><g id="vc-kid">
+        <g data-rig="kid" data-p="vck" data-o='{"mouth":"flat","brows":"flat","look":[0,10]}'></g>
+      </g></g>
+      <g transform="translate(310,1370)"><g data-in="16,0.3,pop" data-out="17,0.1,pop">
+        <rect class="rk" x="-120" y="-80" width="240" height="160" rx="22" fill="#8a5a3c" stroke-width="10"/>
+        <path class="rk" d="M-120,-30 L60,-30 C90,-30 120,-10 120,20" fill="none" stroke-width="8"/>
+        <circle cx="70" cy="10" r="14" fill="#f3e6c8" class="rk" stroke-width="6"/>
+      </g></g>
+      <text class="pop" x="540" y="620" text-anchor="middle" style="font-size:130px" data-in="16,0.45,pop" data-out="17,0.1,pop">saving =</text>
+      <!-- 17: hug the money -->
+      <g transform="translate(310,1360)"><g data-in="17,0.15,pop" data-out="18,0.05">
+        <use href="#vc-bill"/>
+        <path class="rk" d="M-200,40 C-150,-10 -110,-10 -70,10 M200,40 C150,-10 110,-10 70,10" fill="none" stroke="#e3a63a" stroke-width="44"/>
+      </g></g>
+      <g fill="#ff6f8f"><use href="#vc-heart" x="120" y="820" data-in="17,0.6,pop" data-out="18,0.05"/><use href="#vc-heart" x="470" y="790" data-in="17,0.7,pop" data-out="18,0.05"/></g>
+
+      <!-- 18: arm stretches across the gap -->
+      <path d="M450,1250 C540,1170 620,1150 720,1160" fill="none" stroke="#0d0f22" stroke-width="50" stroke-linecap="round" data-len="340" data-in="18,0.2,draw" data-out="19,0.3"/>
+      <path d="M450,1250 C540,1170 620,1150 720,1160" fill="none" stroke="#e3a63a" stroke-width="36" stroke-linecap="round" data-len="340" data-in="18,0.2,draw" data-out="19,0.3"/>
+      <g transform="translate(730,1140)"><g data-in="18,0.55,pop" data-out="19,0.3">
+        <use href="#vc-bill" transform="rotate(-8) scale(0.65)"/>
+      </g></g>
+
+      <!-- 19: into the charity jar -->
+      <text class="pop" x="540" y="620" text-anchor="middle" style="font-size:170px" data-in="19,0.72,pop" data-out="20,0,pop">charity</text>
+      <g transform="translate(790,1230) scale(0.75)"><g data-in="19,0.45,up" data-out="20,0">
+        <path class="rk" d="M-130,-150 L130,-150 L150,170 C150,200 130,210 100,210 L-100,210 C-130,210 -150,200 -150,170 Z" fill="#bfe8ff" fill-opacity="0.55" stroke-width="10"/>
+        <rect class="rk" x="-150" y="-190" width="300" height="50" rx="12" fill="#ff8a2a" stroke-width="9"/>
+        <rect class="rk" x="-120" y="-20" width="240" height="90" rx="10" fill="#f7f3ea" stroke-width="7"/>
+        <text y="44" text-anchor="middle" style="font-family:Hand;font-size:60px;fill:#0d0f22">DONATE</text>
+        <use href="#vc-heart" y="150" fill="#ff6f8f" class="rk" stroke-width="6"/>
+      </g></g>
+      <g transform="translate(790,1000)"><g id="vc-drop" opacity="0"><use href="#vc-bill" transform="scale(0.55)"/></g></g>
+
+      <!-- 20: clutch the paycheck -->
+      <g transform="translate(310,1370) scale(0.8)"><g data-in="20,0.25,pop">
+        <rect class="rk" x="-190" y="-90" width="380" height="180" rx="12" fill="#f7f3ea" stroke-width="10"/>
+        <text x="-160" y="-30" style="font-family:Hand;font-size:44px;fill:#2f7c72">PAYCHECK</text>
+        <text x="0" y="50" text-anchor="middle" style="font-family:Hand;font-size:62px;fill:#0d0f22">$3,200</text>
+        <path class="rk" d="M-250,70 C-200,10 -160,0 -120,20 M250,70 C200,10 160,0 120,20" fill="none" stroke="#e3a63a" stroke-width="44"/>
+      </g></g>
+      <text class="pop" x="790" y="1100" text-anchor="middle" style="font-size:130px" data-in="20,0.55,pop">nope.</text>
+    </svg>
+  </div>
+  <script>
+    Rig.fill();
+    const tl = gsap.timeline({ paused: true }), A = s => Rig.at(s, "v1charity");
+    tl.fromTo("#vc-kid", { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 0.45, ease: "expo.out" }, 0);
+    Rig.run(tl, "v1charity");
+    Rig.blinks(tl, "vck", 0, 20);
+    Rig.blinks(tl, "vco", A("18,0"), A("19,0.4"), 0.7);
+    Rig.mouth(tl, "vck", "flat", "smile", A("17,0.2"));
+    Rig.brows(tl, "vck", "up", A("17,0.2"));
+    Rig.look(tl, "vck", 0, 20, A("17,0.2"));
+    tl.to("#vc-kid", { rotation: -5, svgOrigin: "0 300", duration: 0.4, yoyo: true, repeat: 1, ease: "sine.inOut" }, A("17,0.5"));
+    Rig.look(tl, "vck", 34, 0, A("18,0.1"));
+    Rig.mouth(tl, "vck", "smile", "worry", A("18,0.3"));
+    Rig.brows(tl, "vck", "worry", A("18,0.3"));
+    tl.set("#vc-drop", { opacity: 1 }, A("19,0.6"));
+    tl.fromTo("#vc-drop", { y: 0 }, { y: 170, duration: 0.4, ease: "power2.in" }, A("19,0.6"));
+    tl.to("#vc-drop", { opacity: 0, duration: 0.1 }, A("19,0.6") + 0.4);
+    Rig.widen(tl, "vck", A("19,0.75"));
+    Rig.look(tl, "vck", -10, 18, A("20,0.2"));
+    Rig.brows(tl, "vck", "mad", A("20,0.4"));
+    Rig.mouth(tl, "vck", "worry", "flat", A("20,0.4"));
+    tl.to("#vc-kid", { rotation: 7, svgOrigin: "0 300", duration: 0.14, yoyo: true, repeat: 5, ease: "sine.inOut" }, A("20,0.5"));
+    window.__timelines["v1charity"] = tl;
+  </script>
+</template>

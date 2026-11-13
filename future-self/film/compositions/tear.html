@@ -1,0 +1,29 @@
+<template>
+  <style>
+    @font-face { font-family: "Hand"; src: url("assets/fonts/PatrickHand-Regular.ttf"); }
+    #root { position: absolute; inset: 0; background: #16235a; overflow: hidden; }
+    #tr-art { position: absolute; inset: 0; }
+    .rk { stroke: #0d0f22; stroke-linecap: round; stroke-linejoin: round; }
+    .pop { font-family: Hand; font-size: 150px; fill: #ffb35c; stroke: #0d0f22; stroke-width: 14px; paint-order: stroke; stroke-linejoin: round; }
+  </style>
+  <div id="root" data-composition-id="tear" data-width="1920" data-height="1080">
+    <svg id="tr-art" class="clip" data-start="0" data-duration="10" viewBox="0 0 1920 1080" data-layout-allow-overflow>
+      <circle id="tr-sun" cx="1060" cy="560" r="440" fill="#ff8a2a"/>
+      <g transform="translate(1060,660) scale(0.95)"><g id="tr-old">
+        <g data-rig="old" data-p="to" data-o='{"eyes":"open","mouth":"sad","sadbrows":true,"look":[-8,6]}'></g>
+      </g></g>
+      <text class="pop" x="420" y="330" text-anchor="middle" transform="rotate(-8 420 330)" data-in="32,0.3,pop">exactly</text>
+    </svg>
+  </div>
+  <script>
+    Rig.fill();
+    const tl = gsap.timeline({ paused: true }), A = s => Rig.at(s, "tear");
+    tl.fromTo("#tr-sun", { scale: 0.6, svgOrigin: "1060 560" }, { scale: 1, duration: 0.6, ease: "expo.out" }, 0);
+    tl.fromTo("#tr-old", { scale: 0.9, y: 40 }, { scale: 1.05, y: 0, duration: 3, ease: "power1.out" }, 0);
+    Rig.run(tl, "tear");
+    tl.fromTo("#to-tears", { opacity: 0, scaleY: 0.2, svgOrigin: "0 100" }, { opacity: 1, scaleY: 1, duration: 0.9, ease: "power2.out" }, A("32,0.45"));
+    Rig.look(tl, "to", 0, 0, A("32,0.2"));
+    Rig.blinks(tl, "to", 0, 4, 0.3);
+    window.__timelines["tear"] = tl;
+  </script>
+</template>

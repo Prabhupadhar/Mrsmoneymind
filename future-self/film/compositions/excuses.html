@@ -1,0 +1,108 @@
+<template>
+  <style>
+    @font-face { font-family: "Hand"; src: url("assets/fonts/PatrickHand-Regular.ttf"); }
+    #root { position: absolute; inset: 0; background: #1a2b66; overflow: hidden; }
+    #ex-art { position: absolute; inset: 0; }
+    .rk { stroke: #0d0f22; stroke-linecap: round; stroke-linejoin: round; }
+    .pop { font-family: Hand; font-size: 96px; fill: #ffb35c; stroke: #0d0f22; stroke-width: 12px; paint-order: stroke; stroke-linejoin: round; }
+  </style>
+  <div id="root" data-composition-id="excuses" data-width="1920" data-height="1080">
+    <svg id="ex-art" class="clip" data-start="0" data-duration="30" viewBox="0 0 1920 1080" data-layout-allow-overflow>
+      <defs>
+        <radialGradient id="ex-bg" cx="0.5" cy="0.55" r="0.75"><stop offset="0" stop-color="#2a4a9f"/><stop offset="1" stop-color="#111c4c"/></radialGradient>
+      </defs>
+      <rect width="1920" height="1080" fill="url(#ex-bg)"/>
+      <g fill="#fff" opacity="0.06"><circle cx="300" cy="160" r="4"/><circle cx="1500" cy="960" r="5"/><circle cx="1760" cy="140" r="4"/></g>
+
+      <g transform="translate(330,660) scale(0.5)"><g id="ex-kid">
+        <g data-rig="kid" data-p="ek" data-o='{"mouth":"smile","brows":"up"}'></g>
+      </g></g>
+
+      <!-- excuse 1: next raise -->
+      <g id="ex-c1" data-in="26,0.05,pop" data-out="29,0">
+        <rect class="rk" x="620" y="290" width="320" height="380" rx="28" fill="#0f1a40" stroke-width="10"/>
+        <rect class="rk" x="670" y="350" width="220" height="230" rx="16" fill="#f7f3ea" stroke-width="8"/>
+        <rect x="674" y="354" width="212" height="56" fill="#ff5f6d"/>
+        <path d="M720,334 L720,372 M840,334 L840,372" stroke="#0d0f22" stroke-width="12" stroke-linecap="round"/>
+        <g id="ex-page"><rect x="676" y="412" width="208" height="164" fill="#f7f3ea"/>
+        <text x="780" y="540" text-anchor="middle" style="font-family:Hand;font-size:110px;fill:#0d0f22">?</text></g>
+        <path d="M780,640 L780,600 M760,620 L780,600 L800,620" stroke="#8ee0a6" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      <!-- excuse 2: diet starts Monday -->
+      <g id="ex-c2" data-in="27,0.05,pop" data-out="29,0">
+        <rect class="rk" x="1020" y="290" width="320" height="380" rx="28" fill="#0f1a40" stroke-width="10"/>
+        <path class="rk" d="M1180,620 L1070,360 C1140,330 1220,330 1290,360 Z" fill="#ffcf6b" stroke-width="10"/>
+        <path d="M1074,368 C1140,338 1220,338 1286,368" stroke="#c98b2c" stroke-width="26" fill="none"/>
+        <circle cx="1150" cy="430" r="22" fill="#d9483b"/><circle cx="1215" cy="470" r="20" fill="#d9483b"/><circle cx="1170" cy="530" r="18" fill="#d9483b"/>
+      </g>
+      <!-- excuse 3: payment plan -->
+      <g id="ex-c3" data-in="28,0.05,pop" data-out="29,0">
+        <rect class="rk" x="1420" y="290" width="320" height="380" rx="28" fill="#0f1a40" stroke-width="10"/>
+        <rect class="rk" x="1450" y="420" width="260" height="120" rx="60" fill="#ff8a2a" stroke-width="9"/>
+        <text x="1580" y="470" text-anchor="middle" style="font-family:Hand;font-size:42px;fill:#0d0f22">BUY NOW</text>
+        <text x="1580" y="516" text-anchor="middle" style="font-family:Hand;font-size:36px;fill:#0d0f22">pay later</text>
+        <path class="rk" d="M1640,520 L1640,600 L1660,584 L1676,620 L1690,612 L1674,578 L1700,576 Z" fill="#f7f3ea" stroke-width="6"/>
+      </g>
+      <g id="ex-w1g"><text id="ex-w1" class="pop" x="780" y="790" text-anchor="middle" data-in="26,0.6,pop">next raise</text></g>
+      <g id="ex-w2g"><text id="ex-w2" class="pop" x="1180" y="790" text-anchor="middle" data-in="27,0.5,pop">Monday</text></g>
+      <g id="ex-w3g"><text id="ex-w3" class="pop" x="1580" y="790" text-anchor="middle" data-in="28,0.6,pop">later</text></g>
+
+      <!-- future-you gets the bill -->
+      <g transform="translate(1480,700) scale(0.5)"><g id="ex-old" data-in="29,0.15,right">
+        <g id="ex-wob"><g data-rig="old" data-p="eo" data-o='{"eyes":"open","mouth":"o","look":[0,-24]}'></g></g>
+      </g></g>
+      <g id="ex-items">
+        <g transform="translate(1290,340)"><g id="ex-i1" opacity="0">
+          <circle class="rk" r="62" fill="#f7f3ea" stroke-width="9"/><path d="M0,-38 L0,0 L28,16" stroke="#0d0f22" stroke-width="9" fill="none" stroke-linecap="round"/>
+        </g></g>
+        <g transform="translate(1480,250)"><g id="ex-i2" opacity="0">
+          <rect class="rk" x="-90" y="-45" width="180" height="90" rx="10" fill="#7fd18b" stroke-width="8"/>
+          <text y="24" text-anchor="middle" style="font-family:Hand;font-size:64px;fill:#1f5a33">$</text>
+        </g></g>
+        <g transform="translate(1670,340)"><g id="ex-i3" opacity="0">
+          <rect class="rk" x="-70" y="-10" width="140" height="20" rx="8" fill="#c9d3ef" stroke-width="7"/>
+          <rect class="rk" x="-100" y="-44" width="34" height="88" rx="10" fill="#5b6290" stroke-width="8"/>
+          <rect class="rk" x="66" y="-44" width="34" height="88" rx="10" fill="#5b6290" stroke-width="8"/>
+        </g></g>
+      </g>
+    </svg>
+  </div>
+  <script>
+    Rig.fill();
+    const tl = gsap.timeline({ paused: true }), A = s => Rig.at(s, "excuses");
+    tl.fromTo("#ex-kid", { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 0.45, ease: "expo.out" }, 0);
+    Rig.run(tl, "excuses");
+    Rig.blinks(tl, "ek", 0, 24);
+    // 25: knowing shrug at camera
+    Rig.mouth(tl, "ek", "smile", "grin", A("25,0.5"));
+    tl.to("#ex-kid", { rotation: -6, svgOrigin: "0 300", duration: 0.3, ease: "power2.out" }, A("25,0.5"));
+    // 26-28: eyes follow each excuse
+    Rig.look(tl, "ek", 30, -6, A("26,0"));
+    tl.to("#ex-kid", { rotation: 0, svgOrigin: "0 300", duration: 0.3 }, A("26,0"));
+    tl.fromTo("#ex-page", { scaleY: 1, svgOrigin: "780 412" }, { scaleY: 0, duration: 0.18, yoyo: true, repeat: 3, ease: "power1.in" }, A("26,0.2"));
+    Rig.look(tl, "ek", 36, -4, A("27,0"));
+    Rig.look(tl, "ek", 40, -2, A("28,0"));
+    // 29: every "later" lands on future-you
+    Rig.mouth(tl, "ek", "grin", "smile", A("29,0"));
+    [["#ex-w1g", 700, -330], ["#ex-w2g", 300, -420], ["#ex-w3g", -100, -510]].forEach(([id, x, y], i) =>
+      tl.to(id, { x, y, duration: 0.55, ease: "power3.inOut" }, A("29,0.55") + i * 0.12));
+    tl.to("#ex-wob", { rotation: -8, svgOrigin: "0 500", duration: 0.2, yoyo: true, repeat: 5, ease: "sine.inOut" }, A("29,0.75"));
+    // 30: juggling time, money, willpower
+    tl.to(["#ex-w1g", "#ex-w2g", "#ex-w3g"], { opacity: 0, duration: 0.25 }, A("30,0.25"));
+    ["#ex-i1", "#ex-i2", "#ex-i3"].forEach((id, i) => {
+      tl.fromTo(id, { opacity: 0, y: 80 }, { opacity: 1, y: 0, duration: 0.3, ease: "back.out(2)" }, A("30," + (0.42 + i * 0.16)));
+      tl.to(id, { y: -50, duration: 0.32, yoyo: true, repeat: 5, ease: "sine.inOut" }, A("30," + (0.42 + i * 0.16)) + 0.3 + i * 0.1);
+    });
+    Rig.mouth(tl, "eo", "o", "worry", A("30,0.3"));
+    tl.to("#ex-wob", { rotation: 6, svgOrigin: "0 500", duration: 0.3, yoyo: true, repeat: 5, ease: "sine.inOut" }, A("30,0.5"));
+    // 31: he drops everything
+    ["#ex-i1", "#ex-i2", "#ex-i3"].forEach((id, i) =>
+      tl.to(id, { y: 760, rotation: 50 - i * 40, duration: 0.6, ease: "power2.in", overwrite: false }, A("31,0.3") + i * 0.08));
+    Rig.look(tl, "eo", 0, 20, A("31,0.3"));
+    Rig.mouth(tl, "eo", "worry", "sad", A("31,0.5"));
+    Rig.look(tl, "ek", 40, 10, A("31,0.3"));
+    Rig.mouth(tl, "ek", "smile", "worry", A("31,0.5"));
+    Rig.brows(tl, "ek", "worry", A("31,0.5"));
+    window.__timelines["excuses"] = tl;
+  </script>
+</template>

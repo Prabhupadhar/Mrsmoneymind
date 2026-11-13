@@ -1,0 +1,73 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; background: #f3ecdf; overflow: hidden; }
+    #mirror-title { position: absolute; top: 120px; left: 0; width: 100%; text-align: center;
+      font-family: "Archivo Black"; font-size: 80px; line-height: 1; color: #1f1a17; }
+    #mirror-title span { display: inline-block; margin: 0 10px; }
+    #mirror-title .hot { color: #d2553a; }
+    #mirror-art { position: absolute; inset: 0; }
+    .ink { stroke: #1f1a17; stroke-width: 7; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <div id="root" data-composition-id="mirror" data-width="1920" data-height="1080">
+    <h1 id="mirror-title" class="clip" data-start="0" data-duration="3">
+      <span>MEET</span><span>THE</span><span>PERSON</span><span>YOU'RE</span><span class="hot">BUILDING</span>
+    </h1>
+    <svg id="mirror-art" class="clip" data-start="0" data-duration="3" viewBox="0 0 1920 1080" data-layout-allow-overflow>
+      <defs><clipPath id="mirror-clip"><ellipse cx="1240" cy="620" rx="250" ry="340"/></clipPath></defs>
+      <path class="ink" d="M300,985 C800,975 1300,990 1640,982" fill="none" stroke-width="6"/>
+      <!-- mirror stand + frame -->
+      <line class="ink" x1="1140" y1="940" x2="1100" y2="985"/><line class="ink" x1="1340" y1="940" x2="1380" y2="985"/>
+      <ellipse cx="1240" cy="620" rx="250" ry="340" fill="#dfeeea"/>
+      <g clip-path="url(#mirror-clip)">
+        <path d="M1060,380 L1150,300 L1120,500 Z" fill="#ffffff" opacity="0.6"/>
+        <!-- reflection: young (fades out) -->
+        <g transform="translate(1250,1010) scale(1.25)"><g id="mirror-ry">
+          <path class="ink" d="M-72,-145 C-80,-250 -62,-302 0,-304 C62,-302 80,-250 72,-145 Z" fill="#e3a63a"/>
+          <circle class="ink" cx="0" cy="-378" r="78" fill="#f2d9c0"/>
+          <path class="ink" d="M-76,-392 C-74,-470 64,-478 78,-390 C52,-428 -6,-442 -76,-392 Z" fill="#1f1a17"/>
+          <circle cx="-36" cy="-370" r="7" fill="#1f1a17"/><circle cx="14" cy="-370" r="7" fill="#1f1a17"/>
+          <path class="ink" d="M-26,-330 L2,-330" fill="none" stroke-width="6"/>
+        </g></g>
+        <!-- reflection: old (fades in) -->
+        <g transform="translate(1250,1010) scale(1.25)"><g id="mirror-ro">
+          <path class="ink" d="M-72,-145 C-80,-250 -62,-302 0,-304 C62,-302 80,-250 72,-145 Z" fill="#2c7a74"/>
+          <circle class="ink" cx="0" cy="-378" r="78" fill="#ead2bb"/>
+          <ellipse class="ink" cx="-72" cy="-392" rx="24" ry="34" fill="#f4f1ea" stroke-width="5"/>
+          <ellipse class="ink" cx="72" cy="-392" rx="24" ry="34" fill="#f4f1ea" stroke-width="5"/>
+          <circle class="ink" cx="-36" cy="-370" r="19" fill="none" stroke-width="5"/><circle class="ink" cx="12" cy="-370" r="19" fill="none" stroke-width="5"/>
+          <circle cx="-36" cy="-370" r="6" fill="#1f1a17"/><circle cx="12" cy="-370" r="6" fill="#1f1a17"/>
+          <path class="ink" d="M-34,-334 C-22,-322 -2,-322 10,-334" fill="none" stroke-width="6"/>
+        </g></g>
+      </g>
+      <ellipse class="ink" cx="1240" cy="620" rx="250" ry="340" fill="none" style="stroke:#b9772a;stroke-width:26"/>
+      <ellipse class="ink" cx="1240" cy="620" rx="266" ry="356" fill="none" stroke-width="6"/>
+      <ellipse class="ink" cx="1240" cy="620" rx="236" ry="326" fill="none" stroke-width="5"/>
+
+      <!-- young you, facing mirror -->
+      <ellipse cx="640" cy="984" rx="150" ry="14" fill="#1f1a17" opacity="0.12"/>
+      <g transform="translate(640,980) scale(1.4)"><g id="mirror-kid">
+        <line class="ink" x1="-28" y1="-150" x2="-34" y2="-12"/><line class="ink" x1="28" y1="-150" x2="34" y2="-12"/>
+        <ellipse class="ink" cx="-42" cy="-8" rx="26" ry="11" fill="#1f1a17"/><ellipse class="ink" cx="42" cy="-8" rx="26" ry="11" fill="#1f1a17"/>
+        <path class="ink" d="M-72,-145 C-80,-250 -62,-302 0,-304 C62,-302 80,-250 72,-145 Z" fill="#e3a63a"/>
+        <path class="ink" d="M-60,-270 C-85,-230 -88,-200 -78,-170" fill="none"/>
+        <path class="ink" d="M60,-270 C85,-230 88,-200 78,-170" fill="none"/>
+        <circle class="ink" cx="0" cy="-378" r="78" fill="#f2d9c0"/>
+        <path class="ink" d="M-76,-392 C-74,-470 64,-478 78,-390 C52,-428 -6,-442 -76,-392 Z" fill="#1f1a17"/>
+        <g transform="translate(-14,-372)"><g id="mirror-e1"><circle r="8" fill="#1f1a17"/></g></g>
+        <g transform="translate(40,-372)"><g id="mirror-e2"><circle r="8" fill="#1f1a17"/></g></g>
+        <path class="ink" d="M-26,-402 L0,-410" fill="none" stroke-width="6"/><path class="ink" d="M26,-410 L54,-402" fill="none" stroke-width="6"/>
+        <ellipse class="ink" cx="22" cy="-330" rx="10" ry="13" fill="#1f1a17" stroke-width="4"/>
+      </g></g>
+    </svg>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#mirror-title span", { opacity: 0, filter: "blur(8px)" },
+      { opacity: 1, filter: "blur(0px)", duration: 0.16, stagger: 0.08, ease: "power4.out" }, 0.1);
+    tl.fromTo("#mirror-kid", { opacity: 0, x: -50 }, { opacity: 1, x: 0, duration: 0.6, ease: "expo.out" }, 0);
+    tl.fromTo("#mirror-ry", { opacity: 1 }, { opacity: 0, duration: 0.6, ease: "power2.inOut" }, 1.0);
+    tl.fromTo("#mirror-ro", { opacity: 0 }, { opacity: 1, duration: 0.6, ease: "power2.inOut" }, 1.0);
+    tl.fromTo(["#mirror-e1", "#mirror-e2"], { scale: 1 }, { scale: 1.5, duration: 0.25, ease: "back.out(2)" }, 1.4);
+    window.__timelines["mirror"] = tl;
+  </script>
+</template>

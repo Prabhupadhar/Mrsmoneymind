@@ -1,0 +1,150 @@
+<template>
+  <style>
+    @font-face { font-family: "Hand"; src: url("assets/fonts/PatrickHand-Regular.ttf"); }
+    #root { position: absolute; inset: 0; background: #1a2b66; overflow: hidden; }
+    #scan-art { position: absolute; inset: 0; }
+    .rk { stroke: #0d0f22; stroke-linecap: round; stroke-linejoin: round; }
+    .pop { font-family: Hand; font-size: 150px; fill: #ffb35c; stroke: #0d0f22; stroke-width: 14px; paint-order: stroke; stroke-linejoin: round; }
+    .lab { font-family: Hand; font-size: 46px; fill: #f4f1ff; }
+  </style>
+  <div id="root" data-composition-id="scan" data-width="1920" data-height="1080">
+    <svg id="scan-art" class="clip" data-start="0" data-duration="40" viewBox="0 0 1920 1080" data-layout-allow-overflow>
+      <defs>
+        <radialGradient id="scan-bg" cx="0.45" cy="0.55" r="0.75"><stop offset="0" stop-color="#2a4a9f"/><stop offset="1" stop-color="#111c4c"/></radialGradient>
+        <radialGradient id="scan-glow"><stop offset="0" stop-color="#ffb35c" stop-opacity="0.9"/><stop offset="0.45" stop-color="#ff8a2a" stop-opacity="0.35"/><stop offset="1" stop-color="#ff8a2a" stop-opacity="0"/></radialGradient>
+        <clipPath id="scan-clip"><circle r="112"/></clipPath>
+        <clipPath id="scan-drawerclip"><rect x="-400" y="408" width="800" height="190"/></clipPath>
+        <path id="scan-brain" d="M-62,8 C-84,-30 -54,-72 -14,-62 C-2,-84 40,-84 52,-58 C88,-62 98,-16 72,4 C88,36 58,62 32,52 C16,72 -24,72 -36,52 C-72,58 -88,30 -62,8 Z"/>
+      </defs>
+      <rect width="1920" height="1080" fill="url(#scan-bg)"/>
+      <g fill="#fff" opacity="0.06"><circle cx="300" cy="160" r="4"/><circle cx="520" cy="960" r="5"/><circle cx="1760" cy="140" r="4"/><circle cx="820" cy="120" r="3"/></g>
+      <text class="pop" x="470" y="200" text-anchor="middle" data-in="6,0.68,pop" data-out="7,0.1,pop">2009</text>
+
+      <!-- scanner ring behind the character -->
+      <g id="scan-ring" data-in="7,0.05,fade" data-out="14,0,fade">
+        <circle cx="470" cy="560" r="290" fill="none" stroke="#0d0f22" stroke-width="110"/>
+        <circle cx="470" cy="560" r="290" fill="none" stroke="#c9d3ef" stroke-width="92"/>
+        <circle cx="470" cy="560" r="248" fill="none" stroke="#ff8a2a" stroke-width="10" opacity="0.7"/>
+        <rect x="160" y="890" width="620" height="60" rx="30" fill="#c9d3ef" class="rk" stroke-width="9"/>
+      </g>
+      <g id="scan-scanline" opacity="0"><rect x="200" y="0" width="540" height="10" rx="5" fill="#ffb35c" opacity="0.65"/></g>
+
+      <!-- the character -->
+      <g transform="translate(470,600) scale(0.55)"><g id="scan-kid" data-in="6,0.62,up">
+        <g data-rig="kid" data-p="sk" data-o='{"look":[30,-4],"mouth":"smile","brows":"flat"}'></g>
+      </g></g>
+
+      <!-- monitor with three slots -->
+      <g id="scan-mon" data-in="7,0.35,right">
+        <rect class="rk" x="870" y="150" width="960" height="760" rx="40" fill="#0f1a40" stroke-width="12"/>
+        <rect x="890" y="170" width="920" height="720" rx="28" fill="none" stroke="#ff8a2a" stroke-width="4" opacity="0.45"/>
+        <circle cx="920" cy="200" r="9" fill="#ff5f6d"/>
+      </g>
+      <g id="scan-slots">
+        <g transform="translate(1080,620)"><g id="scan-s1">
+          <circle id="scan-g1" cy="-280" r="150" fill="url(#scan-glow)" opacity="0"/>
+          <use href="#scan-brain" y="-280" fill="#5b6290" class="rk" stroke-width="8" data-in="7,0.6,pop"/>
+          <use id="scan-b1" href="#scan-brain" y="-280" fill="#ffb35c" class="rk" stroke-width="8" opacity="0"/>
+          <circle r="120" fill="none" stroke="#c9d3ef" stroke-width="6" stroke-dasharray="14 14" data-in="7,0.6,pop"/>
+          <g clip-path="url(#scan-clip)" data-in="8,0.25,pop"><circle r="112" fill="#2b3f86"/>
+            <g transform="translate(0,40) scale(0.27)"><g data-rig="kid" data-p="s1" data-o='{"mouth":"smile","brows":"up"}'></g></g></g>
+          <text class="lab" y="190" text-anchor="middle" data-in="8,0.25,up">me, now</text>
+        </g></g>
+        <g transform="translate(1350,620)"><g id="scan-s2">
+          <circle id="scan-g2" cy="-280" r="150" fill="url(#scan-glow)" opacity="0"/>
+          <use href="#scan-brain" y="-280" fill="#5b6290" class="rk" stroke-width="8" data-in="7,0.7,pop"/>
+          <circle r="120" fill="none" stroke="#c9d3ef" stroke-width="6" stroke-dasharray="14 14" data-in="7,0.7,pop"/>
+          <g clip-path="url(#scan-clip)" data-in="9,0.2,pop"><circle r="112" fill="#2b3f86"/>
+            <g transform="translate(0,40) scale(0.27)"><g data-rig="sil" data-p="s2"></g></g>
+            <text y="30" text-anchor="middle" style="font-family:Hand;font-size:120px;fill:#ffb35c">?</text></g>
+          <text class="lab" y="190" text-anchor="middle" data-in="9,0.2,up" data-out="13,0.35">a stranger</text>
+        </g></g>
+        <g transform="translate(1620,620)"><g id="scan-s3">
+          <circle id="scan-g3" cy="-280" r="150" fill="url(#scan-glow)" opacity="0"/>
+          <use href="#scan-brain" y="-280" fill="#5b6290" class="rk" stroke-width="8" data-in="7,0.8,pop"/>
+          <use id="scan-b3" href="#scan-brain" y="-280" fill="#ffb35c" class="rk" stroke-width="8" opacity="0"/>
+          <circle r="120" fill="none" stroke="#c9d3ef" stroke-width="6" stroke-dasharray="14 14" data-in="7,0.8,pop"/>
+          <g clip-path="url(#scan-clip)" data-in="10,0.55,pop"><circle r="112" fill="#2b3f86"/>
+            <g transform="translate(0,40) scale(0.27)"><g data-rig="old" data-p="s3"></g></g></g>
+          <text class="lab" y="190" text-anchor="middle" data-in="10,0.55,up" data-out="13,0.35">me, in 10 years</text>
+        </g></g>
+        <text id="scan-approx" class="pop" x="1485" y="250" text-anchor="middle" style="font-size:180px" opacity="0">&#8776;</text>
+      </g>
+
+      <!-- filing cabinet -->
+      <g transform="translate(1380,0)"><g id="scan-cab" opacity="0">
+        <rect class="rk" x="-260" y="380" width="520" height="640" rx="20" fill="#6c7bb8" stroke-width="12"/>
+        <rect x="-230" y="408" width="460" height="190" fill="#0d1433"/>
+        <g clip-path="url(#scan-drawerclip)"><g id="scan-photo">
+          <g transform="rotate(-6)">
+            <rect class="rk" x="-100" y="-130" width="200" height="230" rx="8" fill="#f7f3ea" stroke-width="9"/>
+            <rect x="-82" y="-112" width="164" height="160" fill="#2b3f86"/>
+            <g transform="translate(0,-30) scale(0.24)"><g data-rig="old" data-p="cp"></g></g>
+          </g>
+        </g></g>
+        <g id="scan-front">
+          <rect class="rk" x="-230" y="408" width="460" height="190" rx="12" fill="#8796d4" stroke-width="10"/>
+          <rect class="rk" x="-150" y="440" width="300" height="70" rx="6" fill="#f7f3ea" stroke-width="7"/>
+          <text x="0" y="491" text-anchor="middle" style="font-family:Hand;font-size:52px;fill:#0d0f22">OTHER PEOPLE</text>
+          <rect class="rk" x="-70" y="540" width="140" height="28" rx="14" fill="#c9d3ef" stroke-width="7"/>
+        </g>
+        <rect class="rk" x="-230" y="620" width="460" height="180" rx="12" fill="#8796d4" stroke-width="10"/>
+        <rect class="rk" x="-70" y="700" width="140" height="28" rx="14" fill="#c9d3ef" stroke-width="7"/>
+        <rect class="rk" x="-230" y="822" width="460" height="180" rx="12" fill="#8796d4" stroke-width="10"/>
+        <rect class="rk" x="-70" y="900" width="140" height="28" rx="14" fill="#c9d3ef" stroke-width="7"/>
+      </g></g>
+      <g id="scan-slam" opacity="0" stroke="#ffb35c" stroke-width="12" stroke-linecap="round">
+        <path d="M1080,400 L1030,370 M1070,450 L1010,450 M1680,400 L1730,370 M1690,450 L1750,450"/>
+      </g>
+    </svg>
+  </div>
+  <script>
+    Rig.fill();
+    const tl = gsap.timeline({ paused: true }), A = s => Rig.at(s, "scan");
+    Rig.run(tl, "scan");
+    Rig.blinks(tl, "sk", 0, A("14,1") + 2);
+    // line 7: into the scanner, a scan sweep
+    tl.fromTo("#scan-scanline", { opacity: 0, y: 300 }, { opacity: 1, y: 300, duration: 0.2 }, A("7,0.2"));
+    tl.to("#scan-scanline", { y: 820, duration: 1.1, ease: "sine.inOut", yoyo: true, repeat: 1 }, A("7,0.2"));
+    tl.to("#scan-scanline", { opacity: 0, duration: 0.2 }, A("7,0.2") + 2.2);
+    Rig.look(tl, "sk", 34, -8, A("7,0.5"));
+    // line 8: me now, bright
+    tl.to("#scan-b1", { opacity: 1, duration: 0.3 }, A("8,0.4"));
+    tl.fromTo("#scan-g1", { opacity: 0, scale: 0.6, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(2)" }, A("8,0.4"));
+    // line 9: stranger stays dim; brows up
+    Rig.brows(tl, "sk", "up", A("9,0.2"));
+    // line 10: future you
+    Rig.widen(tl, "sk", A("10,0.6"));
+    // line 11: confident nods, slot 3 starts to warm up
+    Rig.brows(tl, "sk", "flat", A("11,0"));
+    Rig.mouth(tl, "sk", "smile", "grin", A("11,0.3"));
+    [0, 1, 2].forEach(i => tl.to("#scan-kid", { y: 22, duration: 0.18, yoyo: true, repeat: 1, ease: "sine.inOut" }, A("11,0.35") + i * 0.42));
+    tl.to("#scan-g3", { opacity: 0.45, duration: 0.6 }, A("11,0.5"));
+    tl.to("#scan-b3", { opacity: 0.5, duration: 0.6 }, A("11,0.5"));
+    // line 12: slot 3 goes dark, smile drops
+    tl.to(["#scan-g3", "#scan-b3"], { opacity: 0, duration: 0.25, ease: "power3.in" }, A("12,0.25"));
+    Rig.mouth(tl, "sk", "grin", "o", A("12,0.25"));
+    Rig.brows(tl, "sk", "worry", A("12,0.25"));
+    tl.to(["#sk-p1", "#sk-p2"], { scale: 0.8, duration: 0.2 }, A("12,0.25"));
+    // line 13: stranger and future you slide together
+    tl.to("#scan-s1", { opacity: 0.35, duration: 0.4 }, A("13,0.3"));
+    tl.to("#scan-s2", { x: 48, duration: 0.6, ease: "power3.inOut" }, A("13,0.4"));
+    tl.to("#scan-s3", { x: -48, duration: 0.6, ease: "power3.inOut" }, A("13,0.4"));
+    tl.fromTo("#scan-approx", { opacity: 0, scale: 0.3, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.35, ease: "back.out(2.2)" }, A("13,0.75"));
+    Rig.mouth(tl, "sk", "o", "worry", A("13,0.5"));
+    // line 14: files future you under "other people"
+    tl.to(["#scan-mon", "#scan-slots"], { x: 1200, duration: 0.45, ease: "power3.in" }, A("14,0") - 0.1);
+    tl.to("#scan-kid", { x: -60, duration: 0.6, ease: "power2.inOut" }, A("14,0"));
+    tl.fromTo("#scan-cab", { opacity: 0, y: 500 }, { opacity: 1, y: 0, duration: 0.5, ease: "expo.out" }, A("14,0") + 0.25);
+    tl.set("#scan-front", { y: 210 }, 0);
+    Rig.look(tl, "sk", 40, 4, A("14,0.2"));
+    tl.fromTo("#scan-photo", { y: -200, x: 120, rotation: 20, svgOrigin: "0 0" }, { y: 505, x: 0, rotation: 0, duration: 0.55, ease: "power2.in" }, A("14,0.4"));
+    tl.to("#scan-front", { y: 0, duration: 0.14, ease: "power4.in" }, A("14,0.84"));
+    tl.fromTo("#scan-cab", { x: 0 }, { x: 10, duration: 0.05, yoyo: true, repeat: 3 }, A("14,0.84") + 0.14);
+    tl.fromTo("#scan-slam", { opacity: 0, scale: 0.7, svgOrigin: "1380 420" }, { opacity: 1, scale: 1, duration: 0.15 }, A("14,0.84") + 0.14);
+    tl.to("#scan-slam", { opacity: 0, duration: 0.3 }, A("14,0.84") + 0.5);
+    Rig.squint(tl, "sk", A("14,0.84") + 0.1, 0.4);
+    Rig.mouth(tl, "sk", "worry", "sad", A("14,1"));
+    window.__timelines["scan"] = tl;
+  </script>
+</template>

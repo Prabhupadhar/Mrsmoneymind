@@ -1,0 +1,72 @@
+<template>
+  <style>
+    @font-face { font-family: "InkHand"; src: local("Ink Free"); }
+    #root { position: absolute; inset: 0; background: #16245c; overflow: hidden; }
+    #ptear-art { position: absolute; inset: 0; }
+    #ptear-cap { position: absolute; left: 140px; top: 380px; width: 780px;
+      font-family: "InkHand"; font-size: 80px; line-height: 1.15; color: #f4f1ff; }
+    #ptear-cap span { display: inline-block; margin-right: 16px; }
+    #ptear-cap .hot { color: #ff8a2a; }
+    .k { stroke: #0d0f22; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <div id="root" data-composition-id="ptear" data-width="1920" data-height="1080">
+    <svg id="ptear-art" class="clip" data-start="0" data-duration="3" viewBox="0 0 1920 1080" data-layout-allow-overflow>
+      <defs>
+        <g id="ptear-sil">
+          <path d="M-330,520 C-330,330 -200,280 0,280 C200,280 330,330 330,520 Z"/>
+          <ellipse cx="-292" cy="20" rx="44" ry="66"/><ellipse cx="292" cy="20" rx="44" ry="66"/>
+          <circle cx="0" cy="0" r="290"/>
+          <path d="M-302,-30 C-326,-330 300,-352 306,-40 C262,-150 160,-186 80,-146 C58,-200 -62,-206 -112,-146 C-182,-186 -272,-136 -302,-30 Z"/>
+          <path d="M10,-300 C-6,-392 96,-410 86,-338 C72,-372 34,-362 44,-306 Z"/>
+        </g>
+        <clipPath id="ptear-e1"><ellipse cx="-104" cy="40" rx="66" ry="64"/></clipPath>
+        <clipPath id="ptear-e2"><ellipse cx="104" cy="40" rx="66" ry="64"/></clipPath>
+      </defs>
+      <rect width="1920" height="1080" fill="#16245c"/>
+      <circle id="ptear-sun" cx="1250" cy="560" r="380" fill="#ff8a2a"/>
+      <circle cx="1250" cy="560" r="380" fill="none" stroke="#ffb35c" stroke-width="14" opacity="0.6"/>
+
+      <g transform="translate(1250,620) scale(0.95)"><g id="ptear-head">
+        <use href="#ptear-sil" transform="translate(-12,-10)" fill="#8f7dff"/>
+        <path class="k" d="M-330,520 C-330,330 -200,280 0,280 C200,280 330,330 330,520 Z" fill="#e3a63a" stroke-width="11"/>
+        <path class="k" d="M-150,300 C-80,360 80,360 150,300" fill="#c98b2c" stroke-width="9"/>
+        <ellipse class="k" cx="-292" cy="20" rx="44" ry="66" fill="#eec2a2" stroke-width="11"/>
+        <ellipse class="k" cx="292" cy="20" rx="44" ry="66" fill="#eec2a2" stroke-width="11"/>
+        <circle class="k" cx="0" cy="0" r="290" fill="#f4d2b6" stroke-width="11"/>
+        <path class="k" d="M-302,-30 C-326,-330 300,-352 306,-40 C262,-150 160,-186 80,-146 C58,-200 -62,-206 -112,-146 C-182,-186 -272,-136 -302,-30 Z" fill="#1c1a30" stroke-width="11"/>
+        <path class="k" d="M10,-300 C-6,-392 96,-410 86,-338 C72,-372 34,-362 44,-306 Z" fill="#1c1a30" stroke-width="9"/>
+        <!-- teary eyes looking down -->
+        <ellipse class="k" cx="-104" cy="40" rx="66" ry="64" fill="#fff" stroke-width="10"/>
+        <ellipse class="k" cx="104" cy="40" rx="66" ry="64" fill="#fff" stroke-width="10"/>
+        <g clip-path="url(#ptear-e1)"><circle cx="-104" cy="70" r="44" fill="#151530"/><circle cx="-90" cy="52" r="13" fill="#fff"/><circle cx="-120" cy="88" r="6" fill="#fff"/>
+          <path d="M-180,82 C-140,70 -70,70 -30,82 L-30,120 L-180,120 Z" fill="#9fe3ff" opacity="0.7"/></g>
+        <g clip-path="url(#ptear-e2)"><circle cx="104" cy="70" r="44" fill="#151530"/><circle cx="118" cy="52" r="13" fill="#fff"/><circle cx="88" cy="88" r="6" fill="#fff"/>
+          <path d="M30,82 C70,70 140,70 180,82 L180,120 L30,120 Z" fill="#9fe3ff" opacity="0.7"/></g>
+        <path id="ptear-lid1" class="k" d="M-172,26 C-140,-6 -70,-6 -38,26 C-70,10 -140,10 -172,26 Z" fill="#e8bfa1" stroke-width="9"/>
+        <path id="ptear-lid2" class="k" d="M38,26 C70,-6 140,-6 172,26 C140,10 70,10 38,26 Z" fill="#e8bfa1" stroke-width="9"/>
+        <path class="k" d="M-170,-50 C-130,-56 -86,-76 -54,-104" fill="none" stroke-width="16"/>
+        <path class="k" d="M54,-104 C86,-76 130,-56 170,-50" fill="none" stroke-width="16"/>
+        <ellipse cx="-190" cy="140" rx="46" ry="26" fill="#ff8f86" opacity="0.55"/><ellipse cx="190" cy="140" rx="46" ry="26" fill="#ff8f86" opacity="0.55"/>
+        <path class="k" d="M-50,200 C-30,186 -10,202 10,190 C30,180 46,196 56,190" fill="none" stroke-width="9"/>
+        <!-- tear streams -->
+        <path id="ptear-s1" class="k" d="M-150,100 C-162,150 -150,200 -160,250 C-140,252 -128,200 -132,102 Z" fill="#9fe3ff" stroke-width="7"/>
+        <path id="ptear-s2" class="k" d="M150,100 C162,150 150,200 160,250 C140,252 128,200 132,102 Z" fill="#9fe3ff" stroke-width="7"/>
+      </g></g>
+      <g transform="translate(1098,872)"><g id="ptear-drop"><path class="k" d="M0,-24 C-14,0 -16,20 0,24 C16,20 14,0 0,-24 Z" fill="#9fe3ff" stroke-width="6"/></g></g>
+    </svg>
+    <div id="ptear-cap" class="clip" data-start="0" data-duration="3">
+      <span>He'll</span><span>have</span><span class="hot">exactly</span><br><span>what</span><span>you</span><span>leave</span><span>him.</span>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#ptear-sun", { scale: 0.85, transformOrigin: "50% 50%" }, { scale: 1, duration: 1.2, ease: "power2.out" }, 0);
+    tl.fromTo("#ptear-head", { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, ease: "expo.out" }, 0);
+    tl.fromTo("#ptear-cap span", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.18, stagger: 0.12, ease: "power4.out" }, 0.3);
+    tl.fromTo(["#ptear-lid1", "#ptear-lid2"], { y: -14 }, { y: 0, duration: 0.4, ease: "power2.inOut" }, 0.8);
+    tl.fromTo(["#ptear-s1", "#ptear-s2"], { scaleY: 0, transformOrigin: "50% 0%" }, { scaleY: 1, duration: 0.8, ease: "power2.out" }, 1.0);
+    tl.fromTo("#ptear-drop", { opacity: 0, y: -40 }, { opacity: 1, y: 0, duration: 0.25, ease: "power2.in" }, 1.6);
+    tl.fromTo("#ptear-drop", { y: 0 }, { y: 260, duration: 0.7, ease: "power2.in", immediateRender: false }, 1.85);
+    window.__timelines["ptear"] = tl;
+  </script>
+</template>

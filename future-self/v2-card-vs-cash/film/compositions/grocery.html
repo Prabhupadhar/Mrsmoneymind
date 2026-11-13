@@ -1,0 +1,96 @@
+<template>
+  <style>
+    @font-face { font-family: "Hand"; src: url("assets/fonts/PatrickHand-Regular.ttf"); }
+    #root { position: absolute; inset: 0; background: #1a2b66; overflow: hidden; }
+    #gr-art { position: absolute; inset: 0; }
+    .rk { stroke: #0d0f22; stroke-linecap: round; stroke-linejoin: round; }
+    .pop { font-family: Hand; font-size: 150px; fill: #ffb35c; stroke: #0d0f22; stroke-width: 14px; paint-order: stroke; stroke-linejoin: round; }
+    .lab { font-family: Hand; font-size: 64px; fill: #f4f1ff; }
+  </style>
+  <div id="root" data-composition-id="grocery" data-width="1920" data-height="1080">
+    <svg id="gr-art" class="clip" data-start="0" data-duration="30" viewBox="0 0 1920 1080" data-layout-allow-overflow>
+      <defs>
+        <radialGradient id="gr-bg" cx="0.5" cy="0.55" r="0.75"><stop offset="0" stop-color="#2a4a9f"/><stop offset="1" stop-color="#111c4c"/></radialGradient>
+        <g id="gr-receipt">
+          <path class="rk" d="M-90,-130 L90,-130 L90,130 L70,115 L50,130 L30,115 L10,130 L-10,115 L-30,130 L-50,115 L-70,130 L-90,115 Z" fill="#f7f3ea" stroke-width="8"/>
+          <path d="M-60,-90 L60,-90 M-60,-50 L40,-50 M-60,-10 L50,-10 M-60,30 L20,30" stroke="#9aa3c4" stroke-width="10" stroke-linecap="round"/>
+        </g>
+        <g id="gr-cart">
+          <path class="rk" d="M-240,-160 L-200,-160 L-160,100 L190,100 L230,-90 L-180,-90" fill="#ffffff" fill-opacity="0.08" style="stroke:#c9d3ef" stroke-width="12"/>
+          <circle class="rk" cx="-120" cy="150" r="30" fill="#2b2f45" stroke-width="9"/><circle class="rk" cx="150" cy="150" r="30" fill="#2b2f45" stroke-width="9"/>
+        </g>
+        <g id="gr-candy"><path class="rk" d="M-60,0 L-90,-26 L-90,26 Z M60,0 L90,-26 L90,26 Z" fill="#ff8fb1" stroke-width="6"/><ellipse class="rk" rx="60" ry="34" fill="#ff5f8f" stroke-width="7"/></g>
+        <g id="gr-chips"><path class="rk" d="M-55,-75 L55,-75 L48,75 L-48,75 Z" fill="#ffd23a" stroke-width="7"/><text y="14" text-anchor="middle" style="font-family:Hand;font-size:40px;fill:#b0263c">CHIPS</text></g>
+        <g id="gr-cookie"><circle class="rk" r="46" fill="#d9a066" stroke-width="7"/><circle cx="-14" cy="-10" r="8" fill="#5a3418"/><circle cx="16" cy="8" r="8" fill="#5a3418"/><circle cx="-4" cy="22" r="7" fill="#5a3418"/></g>
+        <g id="gr-apple"><circle class="rk" r="44" fill="#7fd18b" stroke-width="7"/><path d="M0,-44 L6,-66" stroke="#0d0f22" stroke-width="7" stroke-linecap="round"/></g>
+      </defs>
+      <rect width="1920" height="1080" fill="url(#gr-bg)"/>
+      <g fill="#fff" opacity="0.06"><circle cx="300" cy="160" r="4"/><circle cx="1500" cy="960" r="5"/><circle cx="1760" cy="140" r="4"/></g>
+
+      <!-- 23-24: the study -->
+      <text class="pop" x="1300" y="560" text-anchor="middle" style="font-size:150px" data-in="23,0.2,pop" data-out="24,0.1,pop">it gets personal</text>
+      <g transform="translate(480,640) scale(0.55)"><g id="gr-kid">
+        <g data-rig="kid" data-p="gk" data-o='{"mouth":"smile","brows":"up","look":[30,0]}'></g>
+      </g></g>
+      <g id="gr-study" data-out="25,0">
+        <g transform="translate(1200,580)"><g data-in="24,0.2,pop"><use href="#gr-receipt" transform="rotate(-12)"/></g></g>
+        <g transform="translate(1400,560)"><g data-in="24,0.3,pop"><use href="#gr-receipt" transform="rotate(4)"/></g></g>
+        <g transform="translate(1600,600)"><g data-in="24,0.4,pop"><use href="#gr-receipt" transform="rotate(14)"/></g></g>
+        <text class="pop" x="1400" y="290" text-anchor="middle" style="font-size:130px" data-in="24,0.3,pop">1,000 homes</text>
+        <text class="lab" x="1400" y="860" text-anchor="middle" data-in="24,0.75,up">6 months of real trips</text>
+      </g>
+
+      <!-- 25-26: two carts -->
+      <g id="gr-carts" data-in="25,0,fade" data-out="27,0">
+        <text class="lab" x="1000" y="320" text-anchor="middle">cash</text>
+        <text class="lab" x="1560" y="320" text-anchor="middle">card</text>
+        <g transform="translate(1000,700)"><use href="#gr-cart" transform="scale(0.9)"/></g>
+        <g transform="translate(1560,700)"><use href="#gr-cart" transform="scale(0.9)"/></g>
+        <!-- cash cart: mostly apples, one snack going back -->
+        <g transform="translate(940,610)"><use href="#gr-apple"/></g>
+        <g transform="translate(1040,610)"><use href="#gr-apple"/></g>
+        <g transform="translate(1000,540)"><g id="gr-back" data-in="26,0,pop"><use href="#gr-chips" transform="scale(0.8)"/></g></g>
+        <!-- card cart: piles up -->
+        <g transform="translate(1480,620)"><g data-in="25,0.45,down"><use href="#gr-candy"/></g></g>
+        <g transform="translate(1600,600)"><g data-in="25,0.6,down"><use href="#gr-chips"/></g></g>
+        <g transform="translate(1520,520)"><g data-in="25,0.72,down"><use href="#gr-cookie"/></g></g>
+        <g transform="translate(1660,520)"><g data-in="25,0.82,down"><use href="#gr-candy" transform="scale(0.8)"/></g></g>
+        <g transform="translate(1580,450)"><g data-in="25,0.9,down"><use href="#gr-cookie" transform="scale(0.9)"/></g></g>
+      </g>
+      <text class="pop" x="1560" y="200" text-anchor="middle" style="font-size:130px" data-in="25,0.4,pop" data-out="26,0,pop">impulse</text>
+      <text x="1000" y="200" text-anchor="middle" style="font-family:Hand;font-size:72px;fill:#ffd2a6" data-in="26,0.6,pop" data-out="27,0">really need that?</text>
+
+      <!-- 27-28: what did you spend? -->
+      <g transform="translate(1300,560)"><g id="gr-blank" data-in="27,0.45,pop" data-out="28,0.6,fade">
+        <use href="#gr-receipt" transform="scale(1.6)"/>
+        <text y="170" text-anchor="middle" style="font-family:Hand;font-size:110px;fill:#b0263c">$ ???</text>
+      </g></g>
+      <text class="pop" x="1300" y="200" text-anchor="middle" style="font-size:120px" data-in="28,0.5,pop">can't feel it</text>
+    </svg>
+  </div>
+  <script>
+    Rig.fill();
+    const tl = gsap.timeline({ paused: true }), A = s => Rig.at(s, "grocery");
+    tl.fromTo("#gr-kid", { opacity: 0, x: -60 }, { opacity: 1, x: 0, duration: 0.45, ease: "expo.out" }, 0);
+    Rig.run(tl, "grocery");
+    Rig.blinks(tl, "gk", 0, 30);
+    // 25: excited at the full cart
+    Rig.look(tl, "gk", 40, -10, A("25,0.4"));
+    Rig.mouth(tl, "gk", "smile", "grin", A("25,0.5"));
+    tl.to("#gr-kid", { y: -20, duration: 0.18, yoyo: true, repeat: 3, ease: "power2.out" }, A("25,0.6"));
+    // 26: the snack goes back on the shelf
+    tl.to("#gr-back", { x: -300, y: -60, rotation: -30, opacity: 0, duration: 0.7, ease: "power2.in" }, A("26,0.75"));
+    Rig.mouth(tl, "gk", "grin", "flat", A("26,0.2"));
+    Rig.brows(tl, "gk", "flat", A("26,0.2"));
+    // 27: shocked at the blank receipt
+    Rig.widen(tl, "gk", A("27,0.5"));
+    Rig.brows(tl, "gk", "up", A("27,0.5"));
+    Rig.mouth(tl, "gk", "flat", "o", A("27,0.5"));
+    tl.to("#gr-blank", { rotation: 4, svgOrigin: "0 0", duration: 0.5, yoyo: true, repeat: 3, ease: "sine.inOut" }, A("27,0.7"));
+    // 28: sad
+    Rig.mouth(tl, "gk", "o", "sad", A("28,0.1"));
+    Rig.brows(tl, "gk", "worry", A("28,0.1"));
+    Rig.look(tl, "gk", 0, 30, A("28,0.2"));
+    window.__timelines["grocery"] = tl;
+  </script>
+</template>

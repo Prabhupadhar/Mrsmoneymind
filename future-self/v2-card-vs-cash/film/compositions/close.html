@@ -1,0 +1,64 @@
+<template>
+  <style>
+    @font-face { font-family: "Hand"; src: url("assets/fonts/PatrickHand-Regular.ttf"); }
+    #root { position: absolute; inset: 0; background: #1a2b66; overflow: hidden; }
+    #cl-art { position: absolute; inset: 0; }
+    .rk { stroke: #0d0f22; stroke-linecap: round; stroke-linejoin: round; }
+    .pop { font-family: Hand; font-size: 150px; fill: #ffb35c; stroke: #0d0f22; stroke-width: 14px; paint-order: stroke; stroke-linejoin: round; }
+  </style>
+  <div id="root" data-composition-id="close" data-width="1920" data-height="1080">
+    <svg id="cl-art" class="clip" data-start="0" data-duration="30" viewBox="0 0 1920 1080" data-layout-allow-overflow>
+      <defs>
+        <radialGradient id="cl-bg" cx="0.5" cy="0.6" r="0.75"><stop offset="0" stop-color="#3a5ab8"/><stop offset="1" stop-color="#111c4c"/></radialGradient>
+        <radialGradient id="cl-warm"><stop offset="0" stop-color="#ffb35c" stop-opacity="0.6"/><stop offset="1" stop-color="#ff8a2a" stop-opacity="0"/></radialGradient>
+      </defs>
+      <rect width="1920" height="1080" fill="url(#cl-bg)"/>
+      <circle id="cl-glow" cx="760" cy="620" r="460" fill="url(#cl-warm)" opacity="0"/>
+
+      <g transform="translate(1380,650) scale(0.55)"><g id="cl-kid">
+        <g data-rig="kid" data-p="lk" data-o='{"mouth":"smile","brows":"up","look":[-40,10]}'></g>
+      </g></g>
+
+      <!-- the little ouch guarding the wallet -->
+      <g transform="translate(560,860)"><g id="cl-wallet" data-in="37,0.55,up">
+        <rect class="rk" x="-130" y="-90" width="260" height="180" rx="24" fill="#8a5a3c" stroke-width="10"/>
+        <path class="rk" d="M-130,-40 L60,-40 C96,-40 130,-14 130,20" fill="none" stroke-width="8"/>
+        <circle class="rk" cx="76" cy="6" r="15" fill="#f3e6c8" stroke-width="6"/>
+      </g></g>
+      <g transform="translate(800,620)"><g id="cl-ouch" data-in="37,0.05,pop">
+        <path class="rk" d="M-70,150 L-90,230 M70,150 L90,230" fill="none" stroke-width="16"/>
+        <ellipse class="rk" cx="0" cy="40" rx="140" ry="150" fill="#ff5f6d" stroke-width="10"/>
+        <ellipse class="rk" cx="-48" cy="20" rx="30" ry="36" fill="#fff" stroke-width="7"/>
+        <ellipse class="rk" cx="48" cy="20" rx="30" ry="36" fill="#fff" stroke-width="7"/>
+        <circle cx="-44" cy="26" r="16" fill="#151530"/><circle cx="52" cy="26" r="16" fill="#151530"/>
+        <path class="rk" d="M-40,90 C-20,116 20,116 40,90" fill="none" stroke-width="8"/>
+        <g id="cl-arm"><path class="rk" d="M120,20 L200,-60" fill="none" stroke-width="16"/><circle class="rk" cx="205" cy="-66" r="18" fill="#ff5f6d" stroke-width="7"/></g>
+        <g id="cl-hat" opacity="0">
+          <path class="rk" d="M-110,-70 C-110,-170 110,-170 110,-70 Z" fill="#ffd23a" stroke-width="9"/>
+          <rect class="rk" x="-140" y="-84" width="280" height="30" rx="12" fill="#ffd23a" stroke-width="9"/>
+          <path d="M0,-160 L0,-90" stroke="#0d0f22" stroke-width="8"/>
+        </g>
+      </g></g>
+      <text class="pop" x="800" y="200" text-anchor="middle" style="font-size:140px" data-in="37,0.6,pop" data-out="37,0.92,pop">your guard</text>
+      <text class="pop" x="800" y="200" text-anchor="middle" style="font-size:140px" data-in="37,0.95,pop">back on duty</text>
+    </svg>
+  </div>
+  <script>
+    Rig.fill();
+    const tl = gsap.timeline({ paused: true }), A = s => Rig.at(s, "close");
+    tl.fromTo("#cl-kid", { opacity: 0, x: 60 }, { opacity: 1, x: 0, duration: 0.45, ease: "expo.out" }, 0);
+    Rig.run(tl, "close");
+    Rig.blinks(tl, "lk", 0, 14);
+    tl.to("#cl-glow", { opacity: 1, duration: 1.2, ease: "power2.out" }, A("37,0.3"));
+    // the hard hat drops back on
+    tl.set("#cl-hat", { opacity: 1 }, A("37,0.25"));
+    tl.fromTo("#cl-hat", { y: -500, rotation: -30 }, { y: 0, rotation: 0, duration: 0.6, ease: "bounce.out" }, A("37,0.25"));
+    tl.to("#cl-ouch", { y: -14, duration: 0.3, yoyo: true, repeat: 5, ease: "sine.inOut" }, A("37,0.7"));
+    Rig.mouth(tl, "lk", "smile", "grin", A("37,0.3"));
+    // 38: salute
+    tl.fromTo("#cl-arm", { rotation: 0, svgOrigin: "120 20" }, { rotation: -25, svgOrigin: "120 20", duration: 0.25, ease: "back.out(2)" }, A("38,0.1"));
+    Rig.mouth(tl, "lk", "grin", "smile", A("38,0"));
+    tl.to("#cl-kid", { y: 18, duration: 0.2, yoyo: true, repeat: 1, ease: "sine.inOut" }, A("38,0.2"));
+    window.__timelines["close"] = tl;
+  </script>
+</template>

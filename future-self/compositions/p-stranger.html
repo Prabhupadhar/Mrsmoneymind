@@ -1,0 +1,86 @@
+<template>
+  <style>
+    @font-face { font-family: "InkHand"; src: local("Ink Free"); }
+    #root { position: absolute; inset: 0; background: #1a2b66; overflow: hidden; }
+    #pstr-art { position: absolute; inset: 0; }
+    #pstr-cap { position: absolute; left: 0; top: 110px; width: 100%; text-align: center;
+      font-family: "InkHand"; font-size: 80px; line-height: 1.1; color: #f4f1ff; }
+    #pstr-cap span { display: inline-block; margin: 0 10px; }
+    #pstr-cap .hot { color: #ff8a2a; }
+    .k { stroke: #0d0f22; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <div id="root" data-composition-id="pstr" data-width="1920" data-height="1080">
+    <svg id="pstr-art" class="clip" data-start="0" data-duration="3" viewBox="0 0 1920 1080" data-layout-allow-overflow>
+      <defs>
+        <radialGradient id="pstr-bg" cx="0.5" cy="0.6" r="0.75"><stop offset="0" stop-color="#2a4a9f"/><stop offset="1" stop-color="#111c4c"/></radialGradient>
+        <radialGradient id="pstr-qglow"><stop offset="0" stop-color="#ff8a2a" stop-opacity="0.55"/><stop offset="1" stop-color="#ff8a2a" stop-opacity="0"/></radialGradient>
+        <g id="pstr-ysil">
+          <path d="M-330,520 C-330,330 -200,280 0,280 C200,280 330,330 330,520 Z"/>
+          <ellipse cx="-292" cy="20" rx="44" ry="66"/><ellipse cx="292" cy="20" rx="44" ry="66"/>
+          <circle cx="0" cy="0" r="290"/>
+          <path d="M-302,-30 C-326,-330 300,-352 306,-40 C262,-150 160,-186 80,-146 C58,-200 -62,-206 -112,-146 C-182,-186 -272,-136 -302,-30 Z"/>
+          <path d="M10,-300 C-6,-392 96,-410 86,-338 C72,-372 34,-362 44,-306 Z"/>
+        </g>
+        <g id="pstr-osil">
+          <path d="M-340,560 C-340,340 -210,286 0,286 C210,286 340,340 340,560 Z"/>
+          <ellipse cx="-292" cy="20" rx="44" ry="66"/><ellipse cx="292" cy="20" rx="44" ry="66"/>
+          <circle cx="0" cy="0" r="290"/>
+          <path d="M-296,40 C-350,-40 -320,-170 -230,-190 C-250,-100 -250,-20 -220,50 Z"/>
+          <path d="M296,40 C350,-40 320,-170 230,-190 C250,-100 250,-20 220,50 Z"/>
+        </g>
+      </defs>
+      <rect width="1920" height="1080" fill="url(#pstr-bg)"/>
+
+      <!-- young you, left -->
+      <g transform="translate(560,630) scale(0.62)"><g id="pstr-young">
+        <use href="#pstr-ysil" transform="translate(16,-12)" fill="#ff8a2a"/>
+        <use href="#pstr-ysil" transform="translate(-10,8)" fill="#8f7dff" opacity="0.8"/>
+        <path class="k" d="M-330,520 C-330,330 -200,280 0,280 C200,280 330,330 330,520 Z" fill="#e3a63a" stroke-width="12"/>
+        <path class="k" d="M-150,300 C-80,360 80,360 150,300" fill="#c98b2c" stroke-width="10"/>
+        <ellipse class="k" cx="-292" cy="20" rx="44" ry="66" fill="#eec2a2" stroke-width="12"/>
+        <ellipse class="k" cx="292" cy="20" rx="44" ry="66" fill="#eec2a2" stroke-width="12"/>
+        <circle class="k" cx="0" cy="0" r="290" fill="#f4d2b6" stroke-width="12"/>
+        <path class="k" d="M-302,-30 C-326,-330 300,-352 306,-40 C262,-150 160,-186 80,-146 C58,-200 -62,-206 -112,-146 C-182,-186 -272,-136 -302,-30 Z" fill="#1c1a30" stroke-width="12"/>
+        <path class="k" d="M10,-300 C-6,-392 96,-410 86,-338 C72,-372 34,-362 44,-306 Z" fill="#1c1a30" stroke-width="10"/>
+        <ellipse class="k" cx="-104" cy="30" rx="66" ry="76" fill="#fff" stroke-width="11"/>
+        <ellipse class="k" cx="104" cy="30" rx="66" ry="76" fill="#fff" stroke-width="11"/>
+        <g transform="translate(-104,30)"><g id="pstr-p1"><circle r="42" fill="#151530"/><circle cx="14" cy="-18" r="13" fill="#fff"/><circle cx="-16" cy="18" r="6" fill="#fff"/></g></g>
+        <g transform="translate(104,30)"><g id="pstr-p2"><circle r="42" fill="#151530"/><circle cx="14" cy="-18" r="13" fill="#fff"/><circle cx="-16" cy="18" r="6" fill="#fff"/></g></g>
+        <path class="k" d="M-170,-60 C-130,-70 -84,-88 -52,-112" fill="none" stroke-width="18"/>
+        <path class="k" d="M52,-112 C84,-88 130,-70 170,-60" fill="none" stroke-width="18"/>
+        <ellipse cx="-190" cy="130" rx="44" ry="26" fill="#ff8f86" opacity="0.45"/><ellipse cx="190" cy="130" rx="44" ry="26" fill="#ff8f86" opacity="0.45"/>
+        <ellipse class="k" cx="10" cy="186" rx="26" ry="32" fill="#4a1f28" stroke-width="10"/>
+      </g></g>
+
+      <!-- dotted gap -->
+      <path id="pstr-dots" d="M840,570 L1110,570" stroke="#8f7dff" stroke-width="10" stroke-linecap="round" stroke-dasharray="2 34" opacity="0.8"/>
+
+      <!-- future you: a stranger silhouette -->
+      <g transform="translate(1400,630) scale(0.62)"><g id="pstr-old">
+        <use href="#pstr-osil" transform="translate(-16,-12)" fill="#b9a6ff"/>
+        <use href="#pstr-osil" fill="#0c1433"/>
+        <circle cx="-104" cy="30" r="74" fill="none" stroke="#b9a6ff" stroke-width="10" opacity="0.55"/>
+        <circle cx="104" cy="30" r="74" fill="none" stroke="#b9a6ff" stroke-width="10" opacity="0.55"/>
+        <line x1="-30" y1="30" x2="30" y2="30" stroke="#b9a6ff" stroke-width="10" opacity="0.55"/>
+      </g></g>
+      <circle id="pstr-qg" cx="1400" cy="360" r="150" fill="url(#pstr-qglow)"/>
+      <text id="pstr-q" x="1400" y="420" text-anchor="middle" style="font-family:InkHand;font-weight:700;font-size:200px;fill:#ff8a2a">?</text>
+      <text x="560" y="1045" text-anchor="middle" style="font-family:InkHand;font-size:48px;fill:#f4f1ff">you, today</text>
+      <text id="pstr-ol" x="1400" y="1045" text-anchor="middle" style="font-family:InkHand;font-size:48px;fill:#b9a6ff">you, at 60</text>
+    </svg>
+    <div id="pstr-cap" class="clip" data-start="0" data-duration="3">
+      <span>Your</span><span>brain</span><span>files</span><span>him</span><span>under...</span><span class="hot">stranger.</span>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#pstr-young", { opacity: 0, x: -60 }, { opacity: 1, x: 0, duration: 0.7, ease: "expo.out" }, 0);
+    tl.fromTo("#pstr-old", { opacity: 0 }, { opacity: 1, duration: 0.9, ease: "power2.out" }, 0.4);
+    tl.fromTo("#pstr-dots", { strokeDashoffset: 300 }, { strokeDashoffset: 0, duration: 0.8, ease: "power2.inOut" }, 0.5);
+    tl.fromTo(["#pstr-p1", "#pstr-p2"], { x: 0 }, { x: 20, duration: 0.3, ease: "power3.out" }, 0.7);
+    tl.fromTo("#pstr-cap span", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.18, stagger: 0.11, ease: "power4.out" }, 0.3);
+    tl.fromTo(["#pstr-q", "#pstr-qg"], { opacity: 0, scale: 0.4, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(2)" }, 1.4);
+    tl.fromTo("#pstr-ol", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 1.2);
+    window.__timelines["pstr"] = tl;
+  </script>
+</template>

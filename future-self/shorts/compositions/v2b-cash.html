@@ -1,0 +1,109 @@
+<template>
+  <style>
+    @font-face { font-family: "Hand"; src: url("assets/fonts/PatrickHand-Regular.ttf"); }
+    #root { position: absolute; inset: 0; background: #1a2b66; overflow: hidden; }
+    #sc-art { position: absolute; inset: 0; }
+    .rk { stroke: #0d0f22; stroke-linecap: round; stroke-linejoin: round; }
+    .pop { font-family: Hand; font-size: 150px; fill: #ffb35c; stroke: #0d0f22; stroke-width: 14px; paint-order: stroke; stroke-linejoin: round; }
+    .lab { font-family: Hand; font-size: 56px; fill: #f4f1ff; }
+  </style>
+  <div id="root" data-composition-id="s2cash" data-width="1080" data-height="1920">
+    <svg id="sc-art" class="clip" data-start="0" data-duration="40" viewBox="0 0 1080 1920" data-layout-allow-overflow>
+      <defs>
+        <radialGradient id="sc-bg" cx="0.5" cy="0.55" r="0.8"><stop offset="0" stop-color="#2a4a9f"/><stop offset="1" stop-color="#111c4c"/></radialGradient>
+        <g id="sc-bill">
+          <rect class="rk" x="-120" y="-60" width="240" height="120" rx="12" fill="#7fd18b" stroke-width="9"/>
+          <rect x="-96" y="-38" width="192" height="76" rx="8" fill="none" stroke="#2f7a45" stroke-width="5"/>
+          <text y="24" text-anchor="middle" style="font-family:Hand;font-size:72px;fill:#1f5a33">$</text>
+        </g>
+      </defs>
+      <rect width="1080" height="1920" fill="url(#sc-bg)"/>
+
+      <g transform="translate(720,1120) scale(0.5)"><g id="sc-kid">
+        <g data-rig="kid" data-p="ck" data-o='{"mouth":"flat","brows":"flat","look":[-34,20]}'></g>
+      </g></g>
+
+      <!-- 3: bills leave one by one -->
+      <g id="sc-count" data-in="3,0.05,fade" data-out="5,0">
+        <g transform="translate(330,1300)">
+          <use href="#sc-bill" y="24"/><use href="#sc-bill" y="12"/><use href="#sc-bill"/>
+          <circle class="rk" cx="90" cy="40" r="56" fill="#f4d2b6" stroke-width="9"/>
+        </g>
+        <g transform="translate(330,1300)">
+          <g id="sc-b1" opacity="0"><use href="#sc-bill"/></g>
+          <g id="sc-b2" opacity="0"><use href="#sc-bill"/></g>
+          <g id="sc-b3" opacity="0"><use href="#sc-bill"/></g>
+          <g id="sc-b4" opacity="0"><use href="#sc-bill"/></g>
+        </g>
+      </g>
+      <text class="pop" x="540" y="580" text-anchor="middle" data-in="3,0.8,pop" data-out="4,0.9,pop">ouch.</text>
+
+      <!-- 5: the little ouch gets fired -->
+      <g transform="translate(300,1080) scale(0.8)"><g id="sc-ouch" data-in="5,0.05,pop">
+        <g id="sc-ouch-body">
+          <path class="rk" d="M-70,150 L-90,230 M70,150 L90,230" fill="none" stroke-width="16"/>
+          <ellipse class="rk" cx="0" cy="40" rx="140" ry="150" fill="#ff5f6d" stroke-width="10"/>
+          <ellipse class="rk" cx="-48" cy="20" rx="30" ry="36" fill="#fff" stroke-width="7"/>
+          <ellipse class="rk" cx="48" cy="20" rx="30" ry="36" fill="#fff" stroke-width="7"/>
+          <circle cx="-44" cy="26" r="16" fill="#151530"/><circle cx="52" cy="26" r="16" fill="#151530"/>
+          <path id="sc-o-smile" class="rk" d="M-40,90 C-20,116 20,116 40,90" fill="none" stroke-width="8"/>
+          <path id="sc-o-sad" class="rk" d="M-36,110 C-16,88 16,88 36,110" fill="none" stroke-width="8" opacity="0"/>
+        </g>
+        <g id="sc-hat">
+          <path class="rk" d="M-110,-70 C-110,-170 110,-170 110,-70 Z" fill="#ffd23a" stroke-width="9"/>
+          <rect class="rk" x="-140" y="-84" width="280" height="30" rx="12" fill="#ffd23a" stroke-width="9"/>
+          <path d="M0,-160 L0,-90" stroke="#0d0f22" stroke-width="8"/>
+        </g>
+      </g></g>
+      <text class="lab" x="300" y="1340" text-anchor="middle" data-in="5,0.25,up" data-out="5,0.6">the little ouch</text>
+      <g transform="translate(560,840)"><g id="sc-card" opacity="0">
+        <rect class="rk" x="-120" y="-75" width="240" height="150" rx="16" fill="#6a4fd6" stroke-width="9"/>
+        <rect x="-90" y="-36" width="54" height="40" rx="6" fill="#ffd27a"/>
+        <rect x="-90" y="34" width="170" height="12" rx="6" fill="#c7bcff"/>
+      </g></g>
+      <g transform="translate(400,880)"><g id="sc-slip" opacity="0">
+        <g transform="rotate(-10)">
+          <rect class="rk" x="-90" y="-56" width="180" height="112" rx="8" fill="#ffc2d6" stroke-width="7"/>
+          <text y="18" text-anchor="middle" style="font-family:Hand;font-size:54px;fill:#b0263c">FIRED</text>
+        </g>
+      </g></g>
+      <text class="pop" x="540" y="580" text-anchor="middle" data-in="5,0.86,pop">fired.</text>
+    </svg>
+  </div>
+  <script>
+    Rig.fill();
+    const tl = gsap.timeline({ paused: true }), A = s => Rig.at(s, "s2cash");
+    tl.fromTo("#sc-kid", { opacity: 0, x: 60 }, { opacity: 1, x: 0, duration: 0.4, ease: "expo.out" }, 0);
+    Rig.run(tl, "s2cash");
+    Rig.blinks(tl, "ck", 0, 14);
+    ["#sc-b1", "#sc-b2", "#sc-b3", "#sc-b4"].forEach((id, i) => {
+      const t = A("3," + (0.3 + i * 0.13).toFixed(2));
+      tl.set(id, { opacity: 1 }, t);
+      tl.fromTo(id, { x: 0, y: 0, rotation: 0 }, { x: -120 + i * 70, y: -620, rotation: -20 + i * 12, opacity: 0, duration: 0.7, ease: "power2.out" }, t);
+    });
+    Rig.brows(tl, "ck", "worry", A("3,0.35"));
+    Rig.mouth(tl, "ck", "flat", "worry", A("3,0.45"));
+    Rig.squint(tl, "ck", A("3,0.72"), 0.5);
+    tl.to("#ck-sweat", { opacity: 1, duration: 0.25 }, A("3,0.72"));
+    tl.to("#sc-kid", { x: 10, duration: 0.05, yoyo: true, repeat: 7 }, A("3,0.75"));
+    Rig.mouth(tl, "ck", "worry", "smile", A("4,0.3"));
+    Rig.look(tl, "ck", 0, 0, A("4,0"));
+    tl.to("#sc-kid", { rotation: -6, svgOrigin: "0 300", duration: 0.3, ease: "power2.out" }, A("4,0.2"));
+    tl.to("#ck-sweat", { opacity: 0, duration: 0.3 }, A("5,0"));
+    tl.to("#sc-kid", { rotation: 0, svgOrigin: "0 300", duration: 0.3 }, A("5,0"));
+    Rig.look(tl, "ck", -40, 0, A("5,0.1"));
+    Rig.brows(tl, "ck", "up", A("5,0.1"));
+    tl.to("#sc-ouch-body", { y: -14, duration: 0.25, yoyo: true, repeat: 5, ease: "sine.inOut" }, A("5,0.3"));
+    const f = A("5,0.62");
+    tl.set("#sc-card", { opacity: 1 }, f);
+    tl.fromTo("#sc-card", { x: 500, y: -300, rotation: 20 }, { x: 0, y: 0, rotation: -8, duration: 0.45, ease: "power3.out" }, f);
+    tl.set("#sc-slip", { opacity: 1 }, f + 0.45);
+    tl.fromTo("#sc-slip", { x: 160, scale: 0.4, transformOrigin: "50% 50%" }, { x: 0, scale: 1, duration: 0.35, ease: "back.out(2)" }, f + 0.45);
+    tl.to("#sc-o-smile", { opacity: 0, duration: 0.1 }, f + 0.8);
+    tl.to("#sc-o-sad", { opacity: 1, duration: 0.1 }, f + 0.8);
+    tl.to("#sc-hat", { y: 220, x: -160, rotation: -40, opacity: 0, duration: 0.6, ease: "power2.in" }, f + 0.9);
+    Rig.mouth(tl, "ck", "smile", "o", f + 0.8);
+    Rig.widen(tl, "ck", f + 0.8);
+    window.__timelines["s2cash"] = tl;
+  </script>
+</template>

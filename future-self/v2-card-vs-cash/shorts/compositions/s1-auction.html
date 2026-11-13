@@ -1,0 +1,94 @@
+<template>
+  <style>
+    @font-face { font-family: "Hand"; src: url("assets/fonts/PatrickHand-Regular.ttf"); }
+    #root { position: absolute; inset: 0; background: #1a2b66; overflow: hidden; }
+    #sa-art { position: absolute; inset: 0; }
+    .rk { stroke: #0d0f22; stroke-linecap: round; stroke-linejoin: round; }
+    .pop { font-family: Hand; font-size: 150px; fill: #ffb35c; stroke: #0d0f22; stroke-width: 14px; paint-order: stroke; stroke-linejoin: round; }
+    .lab { font-family: Hand; font-size: 64px; fill: #f4f1ff; }
+  </style>
+  <div id="root" data-composition-id="s1auction" data-width="1080" data-height="1920">
+    <svg id="sa-art" class="clip" data-start="0" data-duration="40" viewBox="0 0 1080 1920" data-layout-allow-overflow>
+      <defs>
+        <radialGradient id="sa-bg" cx="0.5" cy="0.5" r="0.8"><stop offset="0" stop-color="#2a4a9f"/><stop offset="1" stop-color="#111c4c"/></radialGradient>
+        <radialGradient id="sa-warm"><stop offset="0" stop-color="#ffb35c" stop-opacity="0.75"/><stop offset="1" stop-color="#ff8a2a" stop-opacity="0"/></radialGradient>
+        <g id="sa-ticket">
+          <path class="rk" d="M-200,-90 L200,-90 L200,-30 C176,-30 176,30 200,30 L200,90 L-200,90 L-200,30 C-176,30 -176,-30 -200,-30 Z" fill="#ffd27a" stroke-width="10"/>
+          <path d="M100,-80 L100,80" stroke="#0d0f22" stroke-width="5" stroke-dasharray="10 10"/>
+          <circle class="rk" cx="-60" cy="0" r="50" fill="#ff8a2a" stroke-width="7"/>
+          <path d="M-110,0 L-10,0 M-60,-50 L-60,50 M-95,-35 C-75,-10 -75,10 -95,35 M-25,-35 C-45,-10 -45,10 -25,35" fill="none" stroke="#0d0f22" stroke-width="5"/>
+          <path d="M150,-24 l8,18 20,2 -15,13 5,19 -18,-10 -18,10 5,-19 -15,-13 20,-2 z" fill="#ff8a2a"/>
+        </g>
+        <g id="sa-cash"><rect class="rk" x="-70" y="-36" width="140" height="72" rx="8" fill="#7fd18b" stroke-width="7"/><text y="16" text-anchor="middle" style="font-family:Hand;font-size:44px;fill:#1f5a33">$</text></g>
+        <g id="sa-cardi"><rect class="rk" x="-70" y="-44" width="140" height="88" rx="10" fill="#6a4fd6" stroke-width="7"/><rect x="-50" y="-22" width="32" height="24" rx="4" fill="#ffd27a"/></g>
+      </defs>
+      <rect width="1080" height="1920" fill="url(#sa-bg)"/>
+
+      <!-- hook: the kid with the card, before the story starts -->
+      <g transform="translate(540,1080) scale(0.6)"><g id="sa-kid" data-out="7,0.45,pop">
+        <g data-rig="kid" data-p="sk" data-o='{"mouth":"o","brows":"up","look":[0,0]}'></g>
+      </g></g>
+      <g transform="translate(820,820)"><g id="sa-card" data-out="7,0.45,pop">
+        <g transform="rotate(14)"><rect class="rk" x="-110" y="-70" width="220" height="140" rx="16" fill="#6a4fd6" stroke-width="9"/><rect x="-80" y="-34" width="50" height="38" rx="6" fill="#ffd27a"/></g>
+      </g></g>
+      <!-- 7 -->
+      <text class="pop" x="540" y="620" text-anchor="middle" style="font-size:190px" data-in="7,0.5,pop" data-out="8,0,pop">2001</text>
+      <text class="lab" x="540" y="760" text-anchor="middle" data-in="7,0.7,up" data-out="8,0">a sneaky auction at MIT</text>
+      <g transform="translate(600,1060)"><g id="sa-gavel" data-in="7,0.55,pop" data-out="8,0">
+        <g id="sa-gavel-head">
+          <rect class="rk" x="-40" y="-20" width="300" height="40" rx="14" fill="#a8673e" stroke-width="9" transform="rotate(-30)"/>
+          <rect class="rk" x="-120" y="-70" width="160" height="110" rx="20" fill="#8a5a3c" stroke-width="10" transform="rotate(-30)"/>
+        </g>
+        <rect class="rk" x="-170" y="150" width="260" height="60" rx="14" fill="#8a5a3c" stroke-width="9"/>
+      </g></g>
+
+      <!-- 8 -->
+      <circle id="sa-glow" cx="540" cy="940" r="420" fill="url(#sa-warm)" opacity="0"/>
+      <g transform="translate(540,940)"><g id="sa-prize" opacity="0"><use href="#sa-ticket" transform="scale(1.15)"/></g></g>
+      <g transform="translate(720,740)"><g data-in="8,0.7,pop" data-out="9,0">
+        <g transform="rotate(12)">
+          <rect x="-190" y="-56" width="380" height="112" rx="14" fill="none" stroke="#ff5f6d" stroke-width="12"/>
+          <text y="22" text-anchor="middle" style="font-family:Hand;font-size:70px;fill:#ff5f6d">SOLD OUT</text>
+        </g>
+      </g></g>
+
+      <!-- 9-11 -->
+      <path d="M540,600 L540,1400" stroke="#c9d3ef" stroke-width="6" stroke-dasharray="18 18" opacity="0.5" data-in="9,0,fade"/>
+      <g id="sa-left" data-in="9,0.1,left">
+        <g transform="translate(270,680)"><g id="sa-cashi"><use href="#sa-cash" transform="scale(1.4)"/></g></g>
+        <text class="lab" x="270" y="830" text-anchor="middle" style="font-size:72px">cash</text>
+        <g transform="translate(180,1060) scale(0.25)"><g data-rig="kid" data-p="s1" data-o='{"mouth":"smile","brows":"flat","look":[10,0]}'></g></g>
+        <g transform="translate(370,1080) scale(0.23)"><g data-rig="kid" data-p="s2" data-o='{"mouth":"flat","brows":"up","look":[-10,0]}'></g></g>
+      </g>
+      <g id="sa-right" data-in="10,0.05,right">
+        <g transform="translate(810,680)"><g id="sa-cardg"><use href="#sa-cardi" transform="scale(1.4)"/></g></g>
+        <text class="lab" x="810" y="830" text-anchor="middle" style="font-size:72px">card</text>
+        <g transform="translate(720,1060) scale(0.25)"><g data-rig="kid" data-p="s3" data-o='{"mouth":"smile","brows":"flat","look":[10,0]}'></g></g>
+        <g transform="translate(910,1080) scale(0.23)"><g data-rig="kid" data-p="s4" data-o='{"mouth":"flat","brows":"up","look":[-10,0]}'></g></g>
+      </g>
+      <g transform="translate(270,1310)"><g data-in="11,0.1,pop"><use href="#sa-ticket" transform="scale(0.5)"/></g></g>
+      <g transform="translate(810,1310)"><g data-in="11,0.25,pop"><use href="#sa-ticket" transform="scale(0.5)"/></g></g>
+      <text class="pop" x="540" y="1350" text-anchor="middle" style="font-size:150px" data-in="11,0.55,pop">=</text>
+    </svg>
+  </div>
+  <script>
+    Rig.fill();
+    const tl = gsap.timeline({ paused: true }), A = s => Rig.at(s, "s1auction");
+    Rig.run(tl, "s1auction");
+    tl.fromTo("#sa-kid", { y: 300 }, { y: 0, duration: 0.5, ease: "back.out(1.6)" }, 0);
+    tl.fromTo("#sa-card", { scale: 0.3, transformOrigin: "50% 50%" }, { scale: 1, transformOrigin: "50% 50%", duration: 0.4, ease: "back.out(2.2)" }, 0.3);
+    tl.to("#sa-card", { y: -14, duration: 0.4, yoyo: true, repeat: 3, ease: "sine.inOut" }, 0.8);
+    Rig.blinks(tl, "sk", 0, 4);
+    tl.to("#sa-gavel-head", { rotation: 24, svgOrigin: "100 60", duration: 0.12, yoyo: true, repeat: 3, ease: "power2.in" }, A("7,0.75"));
+    tl.set("#sa-prize", { opacity: 1 }, A("8,0.15"));
+    tl.fromTo("#sa-prize", { scale: 0.2, rotation: -200, transformOrigin: "50% 50%" }, { scale: 1, rotation: -6, transformOrigin: "50% 50%", duration: 0.7, ease: "back.out(1.6)" }, A("8,0.15"));
+    tl.to("#sa-glow", { opacity: 1, duration: 0.5 }, A("8,0.3"));
+    tl.to("#sa-prize", { y: -16, duration: 0.5, yoyo: true, repeat: 3, ease: "sine.inOut" }, A("8,0.9"));
+    tl.to(["#sa-prize", "#sa-glow"], { opacity: 0, duration: 0.25 }, A("9,0"));
+    ["s1", "s2"].forEach((p, i) => Rig.blinks(tl, p, A("9,0") + i * 0.4, A("12,0")));
+    ["s3", "s4"].forEach((p, i) => Rig.blinks(tl, p, A("10,0") + i * 0.4, A("12,0")));
+    tl.to("#sa-cashi", { y: -14, duration: 0.4, yoyo: true, repeat: 3, ease: "sine.inOut" }, A("9,0.5"));
+    tl.to("#sa-cardg", { y: -14, duration: 0.4, yoyo: true, repeat: 3, ease: "sine.inOut" }, A("10,0.5"));
+    window.__timelines["s1auction"] = tl;
+  </script>
+</template>

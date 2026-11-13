@@ -1,0 +1,68 @@
+<template>
+  <style>
+    @font-face { font-family: "Hand"; src: url("assets/fonts/PatrickHand-Regular.ttf"); }
+    #root { position: absolute; inset: 0; background: #1a2b66; overflow: hidden; }
+    #ag-art { position: absolute; inset: 0; }
+    .rk { stroke: #0d0f22; stroke-linecap: round; stroke-linejoin: round; }
+    .lab { font-family: Hand; font-size: 46px; fill: #f4f1ff; }
+  </style>
+  <div id="root" data-composition-id="aging" data-width="1920" data-height="1080">
+    <svg id="ag-art" class="clip" data-start="0" data-duration="20" viewBox="0 0 1920 1080" data-layout-allow-overflow>
+      <defs>
+        <radialGradient id="ag-bg" cx="0.5" cy="0.5" r="0.75"><stop offset="0" stop-color="#2a4a9f"/><stop offset="1" stop-color="#111c4c"/></radialGradient>
+        <radialGradient id="ag-warm"><stop offset="0" stop-color="#ffb35c" stop-opacity="0.5"/><stop offset="1" stop-color="#ff8a2a" stop-opacity="0"/></radialGradient>
+        <clipPath id="ag-photo"><rect x="740" y="200" width="440" height="480" rx="6"/></clipPath>
+        <clipPath id="ag-age"><rect id="ag-agerect" x="740" y="200" width="0" height="480"/></clipPath>
+      </defs>
+      <rect width="1920" height="1080" fill="url(#ag-bg)"/>
+
+      <!-- photo frame with an ageing slider -->
+      <g id="ag-frame" data-in="34,0.05,pop" data-out="35,0,pop">
+        <rect class="rk" x="700" y="160" width="520" height="700" rx="18" fill="#f7f3ea" stroke-width="12"/>
+        <g clip-path="url(#ag-photo)">
+          <rect x="740" y="200" width="440" height="480" fill="#2b3f86"/>
+          <g transform="translate(960,470) scale(0.55)"><g data-rig="kid" data-p="ay" data-o='{"mouth":"smile","brows":"flat"}'></g></g>
+          <g clip-path="url(#ag-age)">
+            <rect x="740" y="200" width="440" height="480" fill="#2f4a8f"/>
+            <g transform="translate(960,470) scale(0.55)"><g data-rig="old" data-p="ao"></g></g>
+          </g>
+          <rect id="ag-edge" x="736" y="200" width="8" height="480" fill="#ff8a2a"/>
+        </g>
+        <rect x="780" y="760" width="360" height="14" rx="7" fill="#c9d3ef"/>
+        <rect id="ag-fill" x="780" y="760" width="0" height="14" rx="7" fill="#ff8a2a"/>
+        <circle id="ag-knob" class="rk" cx="780" cy="767" r="26" fill="#ffb35c" stroke-width="8"/>
+        <text x="780" y="830" text-anchor="middle" style="font-family:Hand;font-size:36px;fill:#0d0f22">now</text>
+        <text x="1140" y="830" text-anchor="middle" style="font-family:Hand;font-size:36px;fill:#0d0f22">+40</text>
+      </g>
+
+      <!-- face to face -->
+      <circle id="ag-glow" cx="960" cy="560" r="520" fill="url(#ag-warm)" opacity="0"/>
+      <g transform="translate(540,640) scale(0.55)"><g id="ag-young" data-in="35,0.05,left">
+        <g data-rig="kid" data-p="fy" data-o='{"mouth":"o","brows":"up","look":[30,0]}'></g>
+      </g></g>
+      <g transform="translate(1380,640) scale(0.55)"><g id="ag-old" data-in="35,0.05,right">
+        <g data-rig="old" data-p="fo" data-o='{"eyes":"open","mouth":"smile","look":[-30,0]}'></g>
+      </g></g>
+      <path id="ag-line" d="M680,656 L1240,656" stroke="#ffb35c" stroke-width="8" stroke-dasharray="6 22" stroke-linecap="round" data-in="35,0.35,fade"/>
+    </svg>
+  </div>
+  <script>
+    Rig.fill();
+    const tl = gsap.timeline({ paused: true }), A = s => Rig.at(s, "aging");
+    Rig.run(tl, "aging");
+    Rig.blinks(tl, "ay", 0, A("35,0"));
+    // 34: drag the slider, the face ages
+    const t0 = A("34,0.4"), d = A("34,0.95") - t0;
+    tl.to("#ag-agerect", { attr: { width: 440 }, duration: d, ease: "power1.inOut" }, t0);
+    tl.to("#ag-edge", { attr: { x: 1176 }, duration: d, ease: "power1.inOut" }, t0);
+    tl.to("#ag-fill", { attr: { width: 360 }, duration: d, ease: "power1.inOut" }, t0);
+    tl.to("#ag-knob", { attr: { cx: 1140 }, duration: d, ease: "power1.inOut" }, t0);
+    Rig.mouth(tl, "ay", "smile", "o", t0 + 0.2);
+    // 35: they look at each other, both blink
+    tl.to("#ag-glow", { opacity: 1, duration: 0.8 }, A("35,0.2"));
+    const b = A("35,0.7");
+    ["fy", "fo"].forEach(p => Rig.squint(tl, p, b, 0.08));
+    Rig.mouth(tl, "fy", "o", "smile", b + 0.4);
+    window.__timelines["aging"] = tl;
+  </script>
+</template>

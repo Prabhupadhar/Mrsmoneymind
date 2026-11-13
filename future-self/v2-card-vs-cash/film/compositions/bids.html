@@ -1,0 +1,83 @@
+<template>
+  <style>
+    @font-face { font-family: "Hand"; src: url("assets/fonts/PatrickHand-Regular.ttf"); }
+    #root { position: absolute; inset: 0; background: #1a2b66; overflow: hidden; }
+    #bi-art { position: absolute; inset: 0; }
+    .rk { stroke: #0d0f22; stroke-linecap: round; stroke-linejoin: round; }
+    .pop { font-family: Hand; font-size: 150px; fill: #ffb35c; stroke: #0d0f22; stroke-width: 14px; paint-order: stroke; stroke-linejoin: round; }
+    .lab { font-family: Hand; font-size: 56px; fill: #f4f1ff; }
+  </style>
+  <div id="root" data-composition-id="bids" data-width="1920" data-height="1080">
+    <svg id="bi-art" class="clip" data-start="0" data-duration="30" viewBox="0 0 1920 1080" data-layout-allow-overflow>
+      <defs>
+        <radialGradient id="bi-bg" cx="0.5" cy="0.55" r="0.75"><stop offset="0" stop-color="#2a4a9f"/><stop offset="1" stop-color="#111c4c"/></radialGradient>
+      </defs>
+      <rect width="1920" height="1080" fill="url(#bi-bg)"/>
+      <g fill="#fff" opacity="0.06"><circle cx="300" cy="160" r="4"/><circle cx="1500" cy="960" r="5"/><circle cx="1760" cy="140" r="4"/></g>
+
+      <!-- 12-14: average bids -->
+      <g id="bi-chart" data-in="12,0,fade" data-out="15,0">
+        <path d="M640,880 L1480,880" stroke="#c9d3ef" stroke-width="8" stroke-linecap="round"/>
+        <rect class="rk" x="720" y="640" width="260" height="240" rx="10" fill="#7fd18b" stroke-width="10" data-in="12,0.1,grow"/>
+        <g id="bi-tall"><rect class="rk" x="1140" y="375" width="260" height="505" rx="10" fill="#8f7dff" stroke-width="10" data-in="12,0.4,grow"/></g>
+        <text class="lab" x="850" y="950" text-anchor="middle">cash</text>
+        <text class="lab" x="1270" y="950" text-anchor="middle">card</text>
+        <text class="lab" x="850" y="610" text-anchor="middle" style="font-size:64px" data-in="12,0.3,up">$29</text>
+        <text class="lab" x="1270" y="345" text-anchor="middle" style="font-size:64px" data-in="12,0.7,up">$61</text>
+        <text class="lab" x="1060" y="1030" text-anchor="middle" style="font-size:36px;fill:#c9d3ef" data-in="12,0.7,fade">average bid</text>
+      </g>
+      <text class="pop" x="1620" y="330" text-anchor="middle" style="font-size:190px" data-in="12,0.85,pop" data-out="14,0,pop">2&#215;</text>
+
+      <!-- shocked kid in the corner -->
+      <g transform="translate(330,800) scale(0.45)"><g id="bi-kid" data-in="12,0.2,up" data-out="15,0">
+        <g data-rig="kid" data-p="bk" data-o='{"mouth":"flat","brows":"flat","look":[40,-10]}'></g>
+      </g></g>
+
+      <!-- 14: card bidders still paid the next day -->
+      <g transform="translate(1660,560)"><g id="bi-cal" data-in="14,0.5,pop" data-out="15,0">
+        <rect class="rk" x="-130" y="-120" width="260" height="240" rx="18" fill="#f7f3ea" stroke-width="10"/>
+        <rect class="rk" x="-130" y="-120" width="260" height="70" rx="18" fill="#ff5f6d" stroke-width="10"/>
+        <text y="-68" text-anchor="middle" style="font-family:Hand;font-size:46px;fill:#fff">tomorrow</text>
+        <rect class="rk" x="-70" y="-10" width="140" height="72" rx="8" fill="#7fd18b" stroke-width="7"/>
+        <text y="42" text-anchor="middle" style="font-family:Hand;font-size:44px;fill:#1f5a33">$</text>
+      </g></g>
+      <text class="lab" x="1660" y="760" text-anchor="middle" data-in="14,0.6,up" data-out="15,0">pay up next day</text>
+
+      <!-- 15: the wallet floats like a balloon -->
+      <g transform="translate(960,620)"><g id="bi-wallet" data-in="15,0.35,up">
+        <path d="M0,90 C-20,170 20,230 -10,330" fill="none" stroke="#c9d3ef" stroke-width="5"/>
+        <ellipse class="rk" cx="0" cy="-60" rx="150" ry="170" fill="#ff8a2a" stroke-width="10"/>
+        <path d="M-12,108 L12,108 L0,90 Z" fill="#ff8a2a" class="rk" stroke-width="6"/>
+        <g transform="translate(0,-60)">
+          <rect class="rk" x="-90" y="-60" width="180" height="120" rx="18" fill="#8a5a3c" stroke-width="8"/>
+          <path class="rk" d="M-90,-20 L40,-20 C64,-20 90,-6 90,16" fill="none" stroke-width="6"/>
+          <circle class="rk" cx="50" cy="10" r="11" fill="#f3e6c8" stroke-width="5"/>
+        </g>
+      </g></g>
+      <text class="pop" x="960" y="180" text-anchor="middle" style="font-size:170px" data-in="15,0.82,pop">lighter</text>
+      <g transform="translate(560,820) scale(0.42)"><g id="bi-kid2" data-in="15,0.2,up">
+        <g data-rig="kid" data-p="bw" data-o='{"mouth":"smile","brows":"up","look":[30,-30]}'></g>
+      </g></g>
+    </svg>
+  </div>
+  <script>
+    Rig.fill();
+    const tl = gsap.timeline({ paused: true }), A = s => Rig.at(s, "bids");
+    Rig.run(tl, "bids");
+    Rig.blinks(tl, "bk", 0, A("15,0"));
+    // 13: double!
+    Rig.widen(tl, "bk", A("13,0"));
+    Rig.mouth(tl, "bk", "flat", "o", A("13,0"));
+    Rig.brows(tl, "bk", "up", A("13,0"));
+    tl.to("#bi-kid", { y: -40, duration: 0.15, yoyo: true, repeat: 1, ease: "power2.out" }, A("13,0"));
+    tl.to("#bi-tall", { y: -18, duration: 0.12, yoyo: true, repeat: 3, ease: "sine.inOut" }, A("13,0.3"));
+    // 14: firm head shake "no"
+    Rig.mouth(tl, "bk", "o", "flat", A("14,0"));
+    Rig.brows(tl, "bk", "flat", A("14,0"));
+    tl.to("#bi-kid", { rotation: 6, svgOrigin: "0 300", duration: 0.14, yoyo: true, repeat: 3, ease: "sine.inOut" }, A("14,0.1"));
+    // 15: the wallet drifts upward
+    tl.to("#bi-wallet", { y: -60, rotation: 4, duration: 3, ease: "sine.inOut" }, A("15,0.5"));
+    Rig.blinks(tl, "bw", A("15,0"), A("15,1") + 1);
+    window.__timelines["bids"] = tl;
+  </script>
+</template>

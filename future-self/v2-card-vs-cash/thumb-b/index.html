@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1280, height=720" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+    <script src="assets/rig.js"></script>
+    <style>
+      @font-face { font-family: "Hand"; src: url("assets/fonts/PatrickHand-Regular.ttf"); }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1280px; height: 720px; overflow: hidden; background: #111c4c; }
+      #root { width: 100%; height: 100%; position: relative; }
+      #art { position: absolute; inset: 0; }
+      .rk { stroke: #0d0f22; stroke-linecap: round; stroke-linejoin: round; }
+      .big { font-family: Hand; stroke: #0d0f22; stroke-width: 18px; paint-order: stroke; stroke-linejoin: round; }
+    </style>
+  </head>
+  <body>
+    <!-- Thumbnail B: "NO PAIN?" — card taps reader, the little ouch gets fired. -->
+    <div id="root" data-composition-id="main" data-start="0" data-duration="1" data-width="1280" data-height="720">
+      <svg id="art" class="clip" data-start="0" data-duration="1" viewBox="0 0 1280 720" data-layout-allow-overflow>
+        <defs>
+          <radialGradient id="bg" cx="0.3" cy="0.6" r="0.8"><stop offset="0" stop-color="#2d4fa8"/><stop offset="1" stop-color="#0b1236"/></radialGradient>
+          <radialGradient id="glow"><stop offset="0" stop-color="#7cf0a8" stop-opacity="0.7"/><stop offset="1" stop-color="#7cf0a8" stop-opacity="0"/></radialGradient>
+        </defs>
+        <rect width="1280" height="720" fill="url(#bg)"/>
+        <!-- reader + card tap -->
+        <circle cx="300" cy="430" r="260" fill="url(#glow)"/>
+        <g transform="translate(300,460)">
+          <rect class="rk" x="-120" y="-180" width="240" height="340" rx="28" fill="#2b2f45" stroke-width="10"/>
+          <rect x="-88" y="-150" width="176" height="110" rx="12" fill="#7cf0a8"/>
+          <text x="0" y="-78" text-anchor="middle" style="font-family:Hand;font-size:48px;fill:#0d0f22">$47.80</text>
+        </g>
+        <g transform="translate(420,560) rotate(-16)">
+          <rect class="rk" x="-150" y="-95" width="300" height="190" rx="20" fill="#6a4fd6" stroke-width="11"/>
+          <rect x="-112" y="-50" width="66" height="50" rx="8" fill="#ffd27a"/>
+        </g>
+        <!-- the little ouch, fired -->
+        <g transform="translate(930,470) scale(0.95)">
+          <path class="rk" d="M-70,150 L-90,230 M70,150 L90,230" fill="none" stroke-width="16"/>
+          <ellipse class="rk" cx="0" cy="40" rx="140" ry="150" fill="#ff5f6d" stroke-width="10"/>
+          <ellipse class="rk" cx="-48" cy="20" rx="30" ry="36" fill="#fff" stroke-width="7"/>
+          <ellipse class="rk" cx="48" cy="20" rx="30" ry="36" fill="#fff" stroke-width="7"/>
+          <circle cx="-44" cy="30" r="16" fill="#151530"/><circle cx="52" cy="30" r="16" fill="#151530"/>
+          <path class="rk" d="M-36,110 C-16,88 16,88 36,110" fill="none" stroke-width="8"/>
+          <path d="M-70,58 C-74,74 -66,84 -62,84" fill="none" stroke="#8fd3ff" stroke-width="10" stroke-linecap="round"/>
+        </g>
+        <g transform="translate(1140,330) rotate(12)">
+          <rect class="rk" x="-100" y="-60" width="200" height="120" rx="8" fill="#ffc2d6" stroke-width="8"/>
+          <text y="20" text-anchor="middle" style="font-family:Hand;font-size:60px;fill:#b0263c">FIRED</text>
+        </g>
+        <g transform="translate(760,640) rotate(-30)">
+          <path class="rk" d="M-110,-70 C-110,-170 110,-170 110,-70 Z" fill="#ffd23a" stroke-width="9" transform="scale(0.6)"/>
+          <rect class="rk" x="-84" y="-50" width="168" height="18" rx="8" fill="#ffd23a" stroke-width="6"/>
+        </g>
+        <text x="640" y="160" text-anchor="middle" class="big" style="font-size:150px;fill:#fff">WHY IT <tspan style="fill:#ffb35c">DOESN'T HURT</tspan></text>
+      </svg>
+    </div>
+    <script>
+      Rig.fill();
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = gsap.timeline({ paused: true });
+    </script>
+  </body>
+</html>

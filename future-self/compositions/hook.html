@@ -1,0 +1,90 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; background: #f3ecdf; overflow: hidden; }
+    #hook-title { position: absolute; top: 120px; left: 0; width: 100%; text-align: center;
+      font-family: "Archivo Black"; font-size: 84px; line-height: 1; color: #1f1a17; letter-spacing: -0.01em; }
+    #hook-title span { display: inline-block; margin: 0 10px; }
+    #hook-title .hot { color: #d2553a; }
+    #hook-art { position: absolute; inset: 0; }
+    .ink { stroke: #1f1a17; stroke-width: 7; stroke-linecap: round; stroke-linejoin: round; }
+    .card-t { font-family: Nunito; font-weight: 900; font-size: 44px; fill: #1f1a17; }
+    .card-s { font-family: Nunito; font-weight: 700; font-size: 28px; fill: #8a8175; }
+  </style>
+  <div id="root" data-composition-id="hook" data-width="1920" data-height="1080">
+    <h1 id="hook-title" class="clip" data-start="0" data-duration="3">
+      <span>EVERY</span><span>MONTH,</span><span>YOU</span><span class="hot">ROB</span><span>SOMEONE</span>
+    </h1>
+    <svg id="hook-art" class="clip" data-start="0" data-duration="3" viewBox="0 0 1920 1080" data-layout-allow-overflow>
+      <defs>
+        <filter id="hook-wobble"><feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="1" seed="4"/><feDisplacementMap in="SourceGraphic" scale="2.5"/></filter>
+      </defs>
+      <g filter="url(#hook-wobble)">
+        <!-- floor line -->
+        <path class="ink" d="M380,985 C800,975 1200,990 1560,982" fill="none" stroke-width="6"/>
+        <ellipse cx="720" cy="984" rx="150" ry="14" fill="#1f1a17" opacity="0.12"/>
+        <!-- kid, feet at (720,980), scale 1.45 -->
+        <g transform="translate(720,980) scale(1.45)"><g id="hook-kid">
+          <line class="ink" x1="-28" y1="-150" x2="-34" y2="-12"/>
+          <line class="ink" x1="28" y1="-150" x2="34" y2="-12"/>
+          <ellipse class="ink" cx="-42" cy="-8" rx="26" ry="11" fill="#1f1a17"/>
+          <ellipse class="ink" cx="42" cy="-8" rx="26" ry="11" fill="#1f1a17"/>
+          <path class="ink" d="M-72,-145 C-80,-250 -62,-302 0,-304 C62,-302 80,-250 72,-145 Z" fill="#e3a63a"/>
+          <path class="ink" d="M-55,-275 C-30,-235 20,-225 52,-232" fill="none"/>
+          <path class="ink" d="M58,-275 C75,-250 80,-235 66,-228" fill="none"/>
+          <g transform="translate(58,-262)"><g id="hook-phone">
+            <rect class="ink" x="-22" y="-40" width="44" height="76" rx="9" fill="#2c3e50"/>
+            <rect x="-14" y="-31" width="28" height="54" rx="4" fill="#9fd3cc"/>
+          </g></g>
+          <circle class="ink" cx="0" cy="-378" r="78" fill="#f2d9c0"/>
+          <path class="ink" d="M-76,-392 C-74,-470 64,-478 78,-390 C52,-428 -6,-442 -76,-392 Z" fill="#1f1a17"/>
+          <circle cx="-22" cy="-370" r="7" fill="#1f1a17"/>
+          <circle cx="30" cy="-370" r="7" fill="#1f1a17"/>
+          <path class="ink" d="M-36,-394 L-10,-398" fill="none" stroke-width="6"/>
+          <path class="ink" d="M18,-398 L44,-394" fill="none" stroke-width="6"/>
+          <path class="ink" d="M-2,-330 C8,-336 20,-336 28,-330" fill="none" stroke-width="6"/>
+        </g></g>
+        <!-- ping lines -->
+        <g id="hook-pings" class="ink" fill="none" stroke-width="6">
+          <path d="M838,560 L880,532"/><path d="M846,590 L898,586"/><path d="M836,520 L866,482"/>
+        </g>
+      </g>
+      <!-- debit notifications -->
+      <g transform="translate(1020,400)"><g id="hook-n1">
+        <rect x="10" y="10" width="640" height="130" rx="26" fill="#1f1a17"/><rect class="ink" width="640" height="130" rx="26" fill="#fffaf1" stroke-width="6"/>
+        <circle class="ink" cx="68" cy="65" r="40" fill="#d2553a" stroke-width="6"/>
+        <text x="68" y="81" text-anchor="middle" class="card-t" fill="#fff" style="fill:#fff">$</text>
+        <text x="132" y="62" class="card-t">$24.99 charged</text>
+        <text x="132" y="102" class="card-s">Food delivery &#183; 1:12 AM</text>
+      </g></g>
+      <g transform="translate(1020,560)"><g id="hook-n2">
+        <rect x="10" y="10" width="640" height="130" rx="26" fill="#1f1a17"/><rect class="ink" width="640" height="130" rx="26" fill="#fffaf1" stroke-width="6"/>
+        <circle class="ink" cx="68" cy="65" r="40" fill="#d2553a" stroke-width="6"/>
+        <text x="68" y="81" text-anchor="middle" class="card-t" style="fill:#fff">$</text>
+        <text x="132" y="62" class="card-t">$89.00 charged</text>
+        <text x="132" y="102" class="card-s">Sneakers &#183; 1:20 AM</text>
+      </g></g>
+      <g transform="translate(1020,720)"><g id="hook-n3">
+        <rect x="10" y="10" width="640" height="130" rx="26" fill="#1f1a17"/><rect class="ink" width="640" height="130" rx="26" fill="#fffaf1" stroke-width="6"/>
+        <circle class="ink" cx="68" cy="65" r="40" fill="#d2553a" stroke-width="6"/>
+        <text x="68" y="81" text-anchor="middle" class="card-t" style="fill:#fff">$</text>
+        <text x="132" y="62" class="card-t">$14.99 charged</text>
+        <text x="132" y="102" class="card-s">New subscription &#183; 1:31 AM</text>
+      </g></g>
+    </svg>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#hook-title span", { opacity: 0, filter: "blur(8px)" },
+      { opacity: 1, filter: "blur(0px)", duration: 0.16, stagger: 0.08, ease: "power4.out" }, 0.1);
+    tl.fromTo("#hook-kid", { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: "expo.out" }, 0);
+    ["#hook-n1", "#hook-n2", "#hook-n3"].forEach((id, i) => {
+      const t = 0.7 + i * 0.45;
+      tl.fromTo(id, { opacity: 0, x: -60, scale: 0.85, transformOrigin: "0% 50%" },
+        { opacity: 1, x: 0, scale: 1, duration: 0.5, ease: "back.out(1.6)" }, t);
+      tl.fromTo("#hook-phone", { rotation: 0 }, { rotation: 8, duration: 0.05, yoyo: true, repeat: 3, ease: "none" }, t);
+      tl.fromTo("#hook-pings", { opacity: 0 }, { opacity: 1, duration: 0.05, yoyo: true, repeat: 1 }, t);
+    });
+    window.__timelines["hook"] = tl;
+  </script>
+</template>
+

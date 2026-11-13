@@ -1,0 +1,157 @@
+<template>
+  <style>
+    @font-face { font-family: "Hand"; src: url("assets/fonts/PatrickHand-Regular.ttf"); }
+    #root { position: absolute; inset: 0; background: #1a2b66; overflow: hidden; }
+    #mv-art { position: absolute; inset: 0; }
+    .rk { stroke: #0d0f22; stroke-linecap: round; stroke-linejoin: round; }
+    .pop { font-family: Hand; font-size: 130px; fill: #ffb35c; stroke: #0d0f22; stroke-width: 14px; paint-order: stroke; stroke-linejoin: round; }
+    .lab { font-family: Hand; font-size: 46px; fill: #f4f1ff; }
+    .num { font-family: Hand; font-size: 110px; fill: #0d0f22; }
+  </style>
+  <div id="root" data-composition-id="moves" data-width="1920" data-height="1080">
+    <svg id="mv-art" class="clip" data-start="0" data-duration="50" viewBox="0 0 1920 1080" data-layout-allow-overflow>
+      <defs>
+        <radialGradient id="mv-bg" cx="0.5" cy="0.55" r="0.75"><stop offset="0" stop-color="#2a4a9f"/><stop offset="1" stop-color="#111c4c"/></radialGradient>
+        <clipPath id="mv-screen"><rect x="790" y="250" width="340" height="620" rx="30"/></clipPath>
+        <g id="mv-coin"><circle class="rk" r="44" fill="#ffcf6b" stroke-width="8"/><text y="20" text-anchor="middle" style="font-family:Hand;font-size:58px;fill:#a8701a">$</text></g>
+      </defs>
+      <rect width="1920" height="1080" fill="url(#mv-bg)"/>
+      <g fill="#fff" opacity="0.06"><circle cx="300" cy="460" r="4"/><circle cx="1500" cy="960" r="5"/><circle cx="1760" cy="140" r="4"/></g>
+
+      <!-- step badge -->
+      <g id="mv-badge" data-in="42,0,pop" data-out="49,0,pop">
+        <circle class="rk" cx="150" cy="150" r="82" fill="#ffb35c" stroke-width="10"/>
+        <text id="mv-n1" class="num" x="150" y="186" text-anchor="middle">1</text>
+        <text id="mv-n2" class="num" x="150" y="186" text-anchor="middle" opacity="0">2</text>
+        <text id="mv-n3" class="num" x="150" y="186" text-anchor="middle" opacity="0">3</text>
+      </g>
+
+      <!-- move 1: see him -->
+      <g id="mv-1" data-out="43,0">
+        <g id="mv-phone" data-in="42,0.05,up">
+          <rect class="rk" x="760" y="210" width="400" height="700" rx="50" fill="#141428" stroke-width="12"/>
+          <g clip-path="url(#mv-screen)">
+            <rect x="790" y="250" width="340" height="620" fill="#ffc27a"/>
+            <g transform="translate(960,600) scale(0.5)"><g data-rig="old" data-p="m1o" data-o='{"eyes":"open","mouth":"smile","look":[-14,0]}'></g></g>
+          </g>
+          <rect x="910" y="226" width="100" height="14" rx="7" fill="#2a2a44"/>
+        </g>
+        <g id="mv-timer" data-in="42,0.62,pop">
+          <circle cx="1340" cy="300" r="76" fill="#0f1a40" stroke="#5b6290" stroke-width="14"/>
+          <circle id="mv-ring" cx="1340" cy="300" r="76" fill="none" stroke="#ff8a2a" stroke-width="14" stroke-linecap="round" stroke-dasharray="478" stroke-dashoffset="478" transform="rotate(-90 1340 300)"/>
+          <text x="1340" y="326" text-anchor="middle" style="font-family:Hand;font-size:72px;fill:#f4f1ff">10</text>
+        </g>
+        <g transform="translate(420,800) scale(0.5)"><g id="mv-kid1" data-in="42,0.15,left">
+          <g data-rig="kid" data-p="m1k" data-o='{"mouth":"o","brows":"up","look":[34,-10]}'></g>
+        </g></g>
+        <text class="pop" x="1480" y="760" text-anchor="middle" transform="rotate(-6 1480 760)" data-in="42,0.18,pop">see him</text>
+      </g>
+
+      <!-- move 2: today-you loses the arm wrestle -->
+      <g id="mv-2" data-in="43,0.05,fade" data-out="45,0">
+        <g transform="translate(470,640) scale(0.45)"><g id="mv-kl"><g data-rig="kid" data-p="m2a" data-o='{"mouth":"worry","brows":"mad","look":[30,-6]}'></g></g></g>
+        <g transform="translate(1450,640) scale(0.45)"><g id="mv-kr"><g data-rig="kid" data-p="m2b" data-o='{"mouth":"flat","brows":"mad","look":[-30,-6]}'></g></g></g>
+        <rect class="rk" x="520" y="790" width="880" height="60" rx="14" fill="#8a5a3c" stroke-width="10"/>
+        <path d="M600,770 L900,770 M1320,770 L1020,770" stroke="#0d0f22" stroke-width="70" stroke-linecap="round"/>
+        <path d="M600,770 L900,770 M1320,770 L1020,770" stroke="#e3a63a" stroke-width="54" stroke-linecap="round"/>
+        <g id="mv-fore">
+          <path d="M900,770 L955,580 M1020,770 L965,580" stroke="#0d0f22" stroke-width="70" stroke-linecap="round"/>
+          <path d="M900,770 L955,580 M1020,770 L965,580" stroke="#e3a63a" stroke-width="54" stroke-linecap="round"/>
+          <circle class="rk" cx="960" cy="560" r="58" fill="#f4d2b6" stroke-width="10"/>
+        </g>
+        <text class="lab" x="470" y="960" text-anchor="middle">today you</text>
+        <g id="mv-bang" opacity="0" stroke="#ffb35c" stroke-width="12" stroke-linecap="round"><path d="M700,700 L650,650 M760,690 L760,620 M640,780 L580,770"/></g>
+      </g>
+
+      <!-- move 2b: automatic transfer on payday -->
+      <g id="mv-3" data-in="45,0.02,fade" data-out="46,0">
+        <g id="mv-cal">
+          <rect class="rk" x="340" y="380" width="320" height="320" rx="20" fill="#f7f3ea" stroke-width="10"/>
+          <rect x="345" y="385" width="310" height="80" fill="#2f7c72"/>
+          <text x="500" y="442" text-anchor="middle" style="font-family:Hand;font-size:52px;fill:#fff">PAYDAY</text>
+          <text x="500" y="630" text-anchor="middle" style="font-family:Hand;font-size:150px;fill:#0d0f22">1</text>
+        </g>
+        <g id="mv-pig">
+          <ellipse class="rk" cx="1420" cy="640" rx="220" ry="160" fill="#ff9fb4" stroke-width="10"/>
+          <circle class="rk" cx="1620" cy="610" r="56" fill="#ff9fb4" stroke-width="9"/>
+          <circle cx="1606" cy="604" r="8" fill="#0d0f22"/><circle cx="1636" cy="604" r="8" fill="#0d0f22"/>
+          <path class="rk" d="M1300,780 L1300,830 M1520,780 L1520,830" stroke-width="40"/>
+          <rect x="1370" y="476" width="100" height="16" rx="8" fill="#0d0f22"/>
+          <rect class="rk" x="1370" y="600" width="100" height="80" rx="12" fill="#ffcf6b" stroke-width="8"/>
+          <path d="M1390,600 L1390,570 C1390,540 1450,540 1450,570 L1450,600" fill="none" stroke="#0d0f22" stroke-width="10"/>
+        </g>
+        <use id="mv-c1" href="#mv-coin" x="500" y="540" opacity="0"/>
+        <use id="mv-c2" href="#mv-coin" x="500" y="540" opacity="0"/>
+        <text class="pop" x="960" y="230" text-anchor="middle" style="font-size:120px" data-in="45,0.72,pop">before you see it</text>
+      </g>
+
+      <!-- move 3: future raises -->
+      <g id="mv-4" data-in="46,0.02,fade" data-out="47,0.1">
+        <path d="M380,880 L560,720 L680,780 L880,560 L980,610 L1130,400" fill="none" stroke="#8ee0a6" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" data-len="1100" data-in="46,0.1,draw"/>
+        <path d="M1080,390 L1140,390 L1140,450" fill="none" stroke="#8ee0a6" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" data-in="46,0.3,pop"/>
+        <text class="pop" x="620" y="560" text-anchor="middle" style="font-size:110px" data-in="46,0.25,pop">raise</text>
+        <path d="M1130,400 C1260,380 1330,420 1400,500" fill="none" stroke="#ffb35c" stroke-width="16" stroke-linecap="round" data-len="400" data-in="46,0.5,draw"/>
+        <g transform="translate(1560,680) scale(0.42)"><g id="mv-old3" data-in="46,0.45,right">
+          <g data-rig="old" data-p="m3o"></g>
+        </g></g>
+      </g>
+
+      <!-- Save More Tomorrow -->
+      <text class="pop" x="960" y="210" text-anchor="middle" style="font-size:140px" data-in="47,0.35,pop" data-out="49,0,pop">Save More Tomorrow</text>
+      <g id="mv-5" data-in="48,0,fade" data-out="49,0">
+        <g fill="#8ee0a6"><path d="M300,800 l30,-40 30,40 z" data-in="48,0.1,pop"/><path d="M380,740 l30,-40 30,40 z" data-in="48,0.22,pop"/><path d="M460,680 l30,-40 30,40 z" data-in="48,0.34,pop"/></g>
+        <path d="M560,900 L1360,900" stroke="#c9d3ef" stroke-width="8" stroke-linecap="round"/>
+        <rect class="rk" x="640" y="766" width="240" height="134" rx="10" fill="#7d86c4" stroke-width="10" data-in="48,0.5,grow"/>
+        <rect class="rk" x="1040" y="380" width="240" height="520" rx="10" fill="#ff8a2a" stroke-width="10" data-in="48,0.75,grow"/>
+        <text class="pop" x="760" y="730" text-anchor="middle" style="font-size:90px" data-in="48,0.6,pop">3.5%</text>
+        <text class="pop" x="1160" y="350" text-anchor="middle" style="font-size:90px" data-in="48,0.88,pop">13.6%</text>
+        <text class="lab" x="760" y="965" text-anchor="middle">before</text>
+        <text class="lab" x="1160" y="965" text-anchor="middle">about 3.5 years later</text>
+      </g>
+
+      <!-- relax in a hammock -->
+      <g id="mv-6" data-in="49,0.05,fade">
+        <path d="M520,420 L520,980 M1400,420 L1400,980" stroke="#8a5a3c" stroke-width="34" stroke-linecap="round"/>
+        <path class="rk" d="M520,470 C700,820 1220,820 1400,470 L1400,500 C1220,880 700,880 520,500 Z" fill="#ff8a2a" stroke-width="10"/>
+        <g transform="translate(960,640) rotate(-72) scale(0.42)"><g id="mv-lazy"><g data-rig="kid" data-p="m6k" data-o='{"happy":true,"mouth":"smile","brows":"flat"}'></g></g></g>
+        <text class="pop" x="1140" y="360" style="font-size:80px" data-in="49,0.4,pop">z</text>
+        <text class="pop" x="1210" y="290" style="font-size:100px" data-in="49,0.55,pop">z</text>
+      </g>
+    </svg>
+  </div>
+  <script>
+    Rig.fill();
+    const tl = gsap.timeline({ paused: true }), A = s => Rig.at(s, "moves");
+    Rig.run(tl, "moves");
+    Rig.blinks(tl, "m1k", 0, A("43,0"));
+    Rig.blinks(tl, "m1o", 0, A("43,0"), 0.8);
+    const num = (n, t) => { [1, 2, 3].forEach(i => tl.to("#mv-n" + i, { opacity: i === n ? 1 : 0, duration: 0.1 }, t)); tl.fromTo("#mv-badge", { scale: 1.3, transformOrigin: "50% 50%" }, { scale: 1, duration: 0.3, ease: "back.out(2)" }, t); };
+    // 42: ten-second look
+    const r0 = A("42,0.72");
+    tl.to("#mv-ring", { strokeDashoffset: 0, duration: A("43,0") - r0, ease: "none" }, r0);
+    // 43-44: arm wrestle, today-you loses
+    num(2, A("43,0"));
+    tl.fromTo("#mv-fore", { rotation: -8, svgOrigin: "960 780" }, { rotation: 8, duration: 0.3, yoyo: true, repeat: 7, ease: "sine.inOut" }, A("43,0.2"));
+    const s = A("44,0.62");
+    tl.to("#mv-fore", { rotation: -68, svgOrigin: "960 780", duration: 0.14, ease: "power4.in" }, s);
+    tl.fromTo("#mv-bang", { opacity: 0 }, { opacity: 1, duration: 0.06 }, s + 0.14);
+    tl.to("#mv-bang", { opacity: 0, duration: 0.3 }, s + 0.5);
+    Rig.squint(tl, "m2a", s + 0.1, 0.5);
+    Rig.mouth(tl, "m2a", "worry", "sad", s + 0.15);
+    Rig.mouth(tl, "m2b", "flat", "grin", s + 0.15);
+    // 45: coins hop from payday into the locked piggy bank
+    [["#mv-c1", A("45,0.3")], ["#mv-c2", A("45,0.5")]].forEach(([id, t]) => {
+      tl.set(id, { opacity: 1 }, t);
+      tl.fromTo(id, { x: 0 }, { x: 920, duration: 0.8, ease: "none" }, t);
+      tl.fromTo(id, { y: 0 }, { y: -320, duration: 0.4, ease: "power2.out" }, t);
+      tl.to(id, { y: -60, duration: 0.4, ease: "power2.in" }, t + 0.4);
+      tl.to(id, { opacity: 0, duration: 0.08 }, t + 0.8);
+      tl.fromTo("#mv-pig", { scale: 1 }, { scale: 1.06, svgOrigin: "1420 640", duration: 0.1, yoyo: true, repeat: 1 }, t + 0.8);
+    });
+    // 46: step three
+    num(3, A("46,0"));
+    // 49: easy does it
+    tl.fromTo("#mv-lazy", { rotation: -3, svgOrigin: "0 0" }, { rotation: 3, duration: 1.1, yoyo: true, repeat: 3, ease: "sine.inOut" }, A("49,0.1"));
+    window.__timelines["moves"] = tl;
+  </script>
+</template>

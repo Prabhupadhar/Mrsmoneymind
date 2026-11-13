@@ -1,0 +1,102 @@
+<template>
+  <style>
+    @font-face { font-family: "InkHand"; src: local("Ink Free"); }
+    #root { position: absolute; inset: 0; background: #1a2b66; overflow: hidden; }
+    #phook-art { position: absolute; inset: 0; }
+    #phook-cap { position: absolute; left: 150px; top: 330px; width: 640px;
+      font-family: "InkHand"; font-size: 84px; line-height: 1.15; color: #f4f1ff; }
+    #phook-cap span { display: inline-block; margin-right: 18px; }
+    #phook-cap .hot { color: #ff8a2a; }
+    .k { stroke: #0d0f22; stroke-linecap: round; stroke-linejoin: round; }
+    .tag { font-family: "InkHand"; font-weight: 700; font-size: 58px; fill: #ff9a3c; }
+  </style>
+  <div id="root" data-composition-id="phook" data-width="1920" data-height="1080">
+    <svg id="phook-art" class="clip" data-start="0" data-duration="3" viewBox="0 0 1920 1080" data-layout-allow-overflow>
+      <defs>
+        <radialGradient id="phook-bg" cx="0.62" cy="0.55" r="0.7"><stop offset="0" stop-color="#2d4fa8"/><stop offset="1" stop-color="#121f52"/></radialGradient>
+        <radialGradient id="phook-glow"><stop offset="0" stop-color="#ffb35c" stop-opacity="0.8"/><stop offset="0.4" stop-color="#ff8a2a" stop-opacity="0.3"/><stop offset="1" stop-color="#ff8a2a" stop-opacity="0"/></radialGradient>
+        <g id="phook-sil">
+          <path d="M-330,520 C-330,330 -200,280 0,280 C200,280 330,330 330,520 Z"/>
+          <ellipse cx="-292" cy="20" rx="44" ry="66"/><ellipse cx="292" cy="20" rx="44" ry="66"/>
+          <circle cx="0" cy="0" r="290"/>
+          <path d="M-302,-30 C-326,-330 300,-352 306,-40 C262,-150 160,-186 80,-146 C58,-200 -62,-206 -112,-146 C-182,-186 -272,-136 -302,-30 Z"/>
+          <path d="M10,-300 C-6,-392 96,-410 86,-338 C72,-372 34,-362 44,-306 Z"/>
+        </g>
+      </defs>
+      <rect width="1920" height="1080" fill="url(#phook-bg)"/>
+      <g fill="#ffffff" opacity="0.06"><circle cx="300" cy="160" r="4"/><circle cx="520" cy="900" r="5"/><circle cx="1700" cy="200" r="4"/><circle cx="1780" cy="760" r="6"/><circle cx="640" cy="240" r="3"/></g>
+
+      <!-- close-up, centred (1240,600) -->
+      <g transform="translate(1240,600)"><g id="phook-head">
+        <!-- rim glow: offset silhouette -->
+        <use href="#phook-sil" transform="translate(16,-12)" fill="#ff8a2a"/>
+        <use href="#phook-sil" transform="translate(-10,8)" fill="#8f7dff" opacity="0.8"/>
+        <!-- hoodie -->
+        <path class="k" d="M-330,520 C-330,330 -200,280 0,280 C200,280 330,330 330,520 Z" fill="#e3a63a" stroke-width="10"/>
+        <path class="k" d="M-150,300 C-80,360 80,360 150,300" fill="#c98b2c" stroke-width="8"/>
+        <path d="M-60,340 L-66,470 M60,340 L66,470" stroke="#f4f1ff" stroke-width="9" stroke-linecap="round"/>
+        <!-- ears + head -->
+        <ellipse class="k" cx="-292" cy="20" rx="44" ry="66" fill="#eec2a2" stroke-width="10"/>
+        <ellipse class="k" cx="292" cy="20" rx="44" ry="66" fill="#eec2a2" stroke-width="10"/>
+        <circle class="k" cx="0" cy="0" r="290" fill="#f4d2b6" stroke-width="10"/>
+        <path d="M150,-210 C260,-120 280,60 210,190 C270,60 250,-100 150,-210 Z" fill="#e3b394" opacity="0.7"/>
+        <!-- hair -->
+        <path class="k" d="M-302,-30 C-326,-330 300,-352 306,-40 C262,-150 160,-186 80,-146 C58,-200 -62,-206 -112,-146 C-182,-186 -272,-136 -302,-30 Z" fill="#1c1a30" stroke-width="10"/>
+        <path class="k" d="M10,-300 C-6,-392 96,-410 86,-338 C72,-372 34,-362 44,-306 Z" fill="#1c1a30" stroke-width="8"/>
+        
+        <!-- eyes -->
+        <ellipse class="k" cx="-104" cy="30" rx="66" ry="76" fill="#ffffff" stroke-width="9"/>
+        <ellipse class="k" cx="104" cy="30" rx="66" ry="76" fill="#ffffff" stroke-width="9"/>
+        <g transform="translate(-104,30)"><g id="phook-p1">
+          <circle r="44" fill="#151530"/><text x="0" y="16" text-anchor="middle" style="font-family:'Archivo Black';font-size:40px;fill:#ff8a2a">$</text>
+          <circle cx="16" cy="-20" r="13" fill="#fff"/><circle cx="-18" cy="20" r="6" fill="#fff"/>
+        </g></g>
+        <g transform="translate(104,30)"><g id="phook-p2">
+          <circle r="44" fill="#151530"/><text x="0" y="16" text-anchor="middle" style="font-family:'Archivo Black';font-size:40px;fill:#ff8a2a">$</text>
+          <circle cx="16" cy="-20" r="13" fill="#fff"/><circle cx="-18" cy="20" r="6" fill="#fff"/>
+        </g></g>
+        <!-- brows: worried -->
+        <path class="k" d="M-170,-60 C-130,-70 -84,-88 -52,-112" fill="none" stroke-width="16"/>
+        <path class="k" d="M52,-112 C84,-88 130,-70 170,-60" fill="none" stroke-width="16"/>
+        <!-- nose, cheeks, mouth -->
+        <path class="k" d="M0,90 C14,104 12,118 -2,124" fill="none" stroke-width="8"/>
+        <ellipse cx="-190" cy="130" rx="44" ry="26" fill="#ff8f86" opacity="0.45"/>
+        <ellipse cx="190" cy="130" rx="44" ry="26" fill="#ff8f86" opacity="0.45"/>
+        <path class="k" d="M-60,190 C-40,176 -20,196 0,182 C20,168 40,190 62,178" fill="none" stroke-width="9"/>
+        <!-- sweat drop -->
+        <path id="phook-sweat" class="k" d="M238,-120 C222,-90 220,-66 240,-60 C260,-66 256,-92 238,-120 Z" fill="#9fe3ff" stroke-width="6"/>
+      </g></g>
+
+      <!-- phone + its glow -->
+      <circle id="phook-glow" cx="900" cy="860" r="420" fill="url(#phook-glow)" style="mix-blend-mode:screen"/>
+      <g transform="translate(900,900) rotate(-14)"><g id="phook-phone">
+        <rect class="k" x="-80" y="-140" width="160" height="270" rx="26" fill="#141428" stroke-width="10"/>
+        <rect x="-62" y="-120" width="124" height="220" rx="12" fill="#ffc27a"/>
+        <circle class="k" cx="-92" cy="20" r="44" fill="#f4d2b6" stroke-width="9"/>
+        <circle class="k" cx="92" cy="40" r="44" fill="#eec2a2" stroke-width="9"/>
+      </g></g>
+      <!-- money leaving -->
+      <text id="phook-t1" x="470" y="830" class="tag">-$24.99</text>
+      <text id="phook-t2" x="560" y="730" class="tag">-$89.00</text>
+      <text id="phook-t3" x="450" y="630" class="tag">-$14.99</text>
+    </svg>
+    <div id="phook-cap" class="clip" data-start="0" data-duration="3">
+      <span>Every</span><span>month...</span><br><span>you</span><span class="hot">rob</span><span>someone.</span>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#phook-head", { scale: 0.94, opacity: 0, transformOrigin: "50% 50%" }, { scale: 1, opacity: 1, duration: 0.7, ease: "expo.out" }, 0);
+    tl.fromTo("#phook-phone", { y: 160 }, { y: 0, duration: 0.6, ease: "expo.out" }, 0.15);
+    tl.fromTo("#phook-cap span", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.18, stagger: 0.12, ease: "power4.out" }, 0.3);
+    tl.fromTo(["#phook-p1", "#phook-p2"], { x: 0, y: 0 }, { x: -16, y: 20, duration: 0.3, ease: "power3.out" }, 0.6);
+    tl.fromTo(["#phook-p1", "#phook-p2"], { scale: 1 }, { scale: 1.18, duration: 0.25, ease: "back.out(2)" }, 1.7);
+    tl.fromTo("#phook-sweat", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3, ease: "power2.out" }, 1.8);
+    ["#phook-t1", "#phook-t2", "#phook-t3"].forEach((id, i) => {
+      const t = 0.7 + i * 0.45;
+      tl.fromTo(id, { opacity: 0, x: 300, y: 140 }, { opacity: 1, x: 0, y: 0, duration: 0.55, ease: "expo.out" }, t);
+      tl.fromTo("#phook-glow", { opacity: 0.6 }, { opacity: 1, duration: 0.08, yoyo: true, repeat: 1 }, t);
+    });
+    window.__timelines["phook"] = tl;
+  </script>
+</template>

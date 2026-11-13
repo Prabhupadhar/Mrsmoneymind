@@ -1,0 +1,51 @@
+[
+ ["Okay. Imagine this.", 0.3, 1, "curious"],
+ ["Your next-door neighbor wins the lottery.", 0.3, 1, "excited"],
+ ["Not millions. Just, like, a year's salary.", 0.35, 1, "curious"],
+ ["Good for him, right?", 0.3, 1, "warm"],
+ ["Here's the weird part.", 0.45, 1, "curious"],
+ ["Researchers found that his win makes you more likely to go broke.", 0.3, 1, "shocked"],
+ ["You. The neighbor who didn't win a thing.", 0.4, 1, "firm"],
+ ["Stick around, because this explains a lot of what's in your cart.", 0.5, 1, "warm"],
+
+ ["So, three economists got their hands on something kind of amazing.", 1.1, 1, "neutral"],
+ ["Every lottery winner in one Canadian province. And every bankruptcy. Names and addresses.", 0.35, 1, "curious"],
+ ["Ten years of it. Two thousand four to two thousand fourteen.", 0.3, 1, "neutral"],
+ ["And in Canada, a postal code can be tiny. About thirteen homes. Basically one street.", 0.35, 1, "curious"],
+ ["So they could see exactly who won... and what happened next door.", 0.3, 1, "curious"],
+ ["Here's what they found.", 0.5, 1, "firm"],
+ ["The bigger the win, the more bankruptcies on that street.", 0.3, 1, "shocked"],
+ ["A win about the size of one year's income meant nearly seven percent more bankruptcies next door, over the next three years.", 0.35, 1, "firm"],
+ ["And remember... the neighbors didn't win a cent.", 0.45, 1, "sad"],
+
+ ["So what's going on?", 1.1, 1, "neutral"],
+ ["The researchers looked at what the bankrupt neighbors owned.", 0.3, 1, "curious"],
+ ["Cash? Savings? Pensions? Nothing special.", 0.3, 1, "neutral"],
+ ["But houses... and cars? Bigger.", 0.35, 1, "shocked"],
+ ["The stuff your neighbors can see.", 0.3, 1, "firm"],
+ ["And people on those streets were borrowing more.", 0.35, 1, "sad"],
+ ["There's an old name for this. Keeping up with the Joneses.", 0.45, 1, "warm"],
+ ["A Dutch study found it too. When someone won their postcode lottery, the neighbors were more likely to buy a new car.", 0.35, 1, "curious"],
+ ["Nobody ever decides, I'd like to go broke now.", 0.45, 1, "warm"],
+ ["It's just... his new car is parked outside your window. Every single morning.", 0.3, 1, "sad"],
+
+ ["And you don't need a lottery for this.", 1.1, 1, "firm"],
+ ["Your feed is basically a street with a million neighbors.", 0.3, 1, "curious"],
+ ["A friend's new kitchen. A coworker's trip. Someone's watch.", 0.3, 1, "excited"],
+ ["One economist found that when your neighbors earn more, you report being less happy, even with the exact same paycheck.", 0.4, 1, "sad"],
+ ["Your paycheck didn't change. Your street did.", 0.4, 1, "firm"],
+
+ ["Now, honesty time.", 1.1, 1, "warm"],
+ ["Bankruptcy is rare. Seven percent more of a small number is still a small number.", 0.3, 1, "neutral"],
+ ["And this was one province, with smaller prizes.", 0.3, 1, "neutral"],
+ ["But the direction is the point. Their luck changed what people spent.", 0.4, 1, "firm"],
+
+ ["So here's what actually helps.", 1.1, 1, "warm"],
+ ["One. Before a big buy, ask: would I still want this if nobody could see it?", 0.45, 1, "curious"],
+ ["Two. Mute the street. Unfollow a few accounts that always make you want something.", 0.5, 1, "firm"],
+ ["Three. Pick your own Joneses. Compare yourself with you, last year.", 0.5, 1, "warm"],
+
+ ["Your neighbor's win was never your loss.", 1.1, 1, "warm"],
+ ["Unless you make it one.", 0.5, 1, "whisper"],
+ ["Subscribe, and I'll see you next door.", 0.9, 1, "warm"]
+]

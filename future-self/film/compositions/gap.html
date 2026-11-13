@@ -1,0 +1,110 @@
+<template>
+  <style>
+    @font-face { font-family: "Hand"; src: url("assets/fonts/PatrickHand-Regular.ttf"); }
+    #root { position: absolute; inset: 0; background: #1a2b66; overflow: hidden; }
+    #gap-art { position: absolute; inset: 0; }
+    .rk { stroke: #0d0f22; stroke-linecap: round; stroke-linejoin: round; }
+    .pop { font-family: Hand; font-size: 150px; fill: #ffb35c; stroke: #0d0f22; stroke-width: 14px; paint-order: stroke; stroke-linejoin: round; }
+    .lab { font-family: Hand; font-size: 46px; fill: #f4f1ff; }
+  </style>
+  <div id="root" data-composition-id="gap" data-width="1920" data-height="1080">
+    <svg id="gap-art" class="clip" data-start="0" data-duration="30" viewBox="0 0 1920 1080" data-layout-allow-overflow>
+      <defs>
+        <radialGradient id="gap-bg" cx="0.5" cy="0.55" r="0.75"><stop offset="0" stop-color="#2a4a9f"/><stop offset="1" stop-color="#111c4c"/></radialGradient>
+        <radialGradient id="gap-cold" cx="0.5" cy="0.5" r="0.7"><stop offset="0" stop-color="#3d6fb8"/><stop offset="1" stop-color="#0c1436"/></radialGradient>
+        <clipPath id="gap-clip"><circle r="112"/></clipPath>
+        <path id="gap-flake" d="M0,-18 L0,18 M-16,-9 L16,9 M-16,9 L16,-9" stroke="#e8f4ff" stroke-width="5" stroke-linecap="round"/>
+      </defs>
+      <rect width="1920" height="1080" fill="url(#gap-bg)"/>
+      <rect id="gap-coldbg" width="1920" height="1080" fill="url(#gap-cold)" opacity="0"/>
+
+      <!-- back to the monitor: me now vs me later -->
+      <g id="gap-mon" data-in="21,0,fade" data-out="23,0.05">
+        <rect class="rk" x="360" y="170" width="1200" height="700" rx="40" fill="#0f1a40" stroke-width="12"/>
+        <rect x="380" y="190" width="1160" height="660" rx="28" fill="none" stroke="#ff8a2a" stroke-width="4" opacity="0.45"/>
+        <g transform="translate(700,520)">
+          <circle r="120" fill="none" stroke="#c9d3ef" stroke-width="6" stroke-dasharray="14 14"/>
+          <g clip-path="url(#gap-clip)"><circle r="112" fill="#2b3f86"/>
+            <g transform="translate(0,40) scale(0.27)"><g data-rig="kid" data-p="g1" data-o='{"mouth":"smile","brows":"up"}'></g></g></g>
+          <text class="lab" y="190" text-anchor="middle">me, now</text>
+        </g>
+        <g transform="translate(1000,520)"><g id="gap-s3">
+          <circle r="120" fill="none" stroke="#c9d3ef" stroke-width="6" stroke-dasharray="14 14"/>
+          <g clip-path="url(#gap-clip)"><circle r="112" fill="#2b3f86"/>
+            <g transform="translate(0,40) scale(0.27)"><g data-rig="old" data-p="g3"></g></g></g>
+          <text class="lab" y="190" text-anchor="middle">me, later</text>
+        </g></g>
+        <g id="gap-ruler" opacity="0">
+          <path id="gap-rline" d="M830,330 L1090,330" stroke="#ffb35c" stroke-width="10" stroke-linecap="round"/>
+          <path d="M830,300 L830,360" stroke="#ffb35c" stroke-width="10" stroke-linecap="round"/>
+          <path id="gap-rend" d="M1090,300 L1090,360" stroke="#ffb35c" stroke-width="10" stroke-linecap="round"/>
+        </g>
+        <text id="gap-word" class="pop" x="1100" y="290" text-anchor="middle" style="font-size:120px" data-in="22,0.62,pop">gap</text>
+      </g>
+
+      <!-- now vs later buttons -->
+      <g id="gap-btns" data-in="23,0.1,up" data-out="24,0">
+        <g transform="translate(620,600)"><g id="gap-now">
+          <ellipse cx="0" cy="40" rx="190" ry="70" fill="#0d0f22"/>
+          <ellipse class="rk" cx="0" cy="20" rx="180" ry="66" fill="#c4581a" stroke-width="10"/>
+          <g id="gap-nowtop"><rect class="rk" x="-180" y="-60" width="360" height="80" fill="#ff8a2a" stroke-width="0"/>
+          <ellipse class="rk" cx="0" cy="-60" rx="180" ry="66" fill="#ffb35c" stroke-width="10"/>
+          <text y="-38" text-anchor="middle" style="font-family:Hand;font-size:72px;fill:#0d0f22">$ now</text></g>
+        </g></g>
+        <g transform="translate(1300,560)">
+          <ellipse cx="0" cy="70" rx="320" ry="110" fill="#0d0f22"/>
+          <ellipse class="rk" cx="0" cy="50" rx="310" ry="104" fill="#3f8a5a" stroke-width="10"/>
+          <rect x="-310" y="-70" width="620" height="120" fill="#5cb87a"/>
+          <ellipse class="rk" cx="0" cy="-70" rx="310" ry="104" fill="#8ee0a6" stroke-width="10"/>
+          <text y="-40" text-anchor="middle" style="font-family:Hand;font-size:110px;fill:#0d0f22">$$$ later</text>
+        </g>
+      </g>
+      <g transform="translate(620,0)"><g id="gap-hand" opacity="0">
+        <path d="M0,-200 L0,330" stroke="#0d0f22" stroke-width="96" stroke-linecap="round"/>
+        <path d="M0,-200 L0,330" stroke="#e3a63a" stroke-width="80" stroke-linecap="round"/>
+        <circle class="rk" cx="0" cy="390" r="76" fill="#f4d2b6" stroke-width="10"/>
+      </g></g>
+      <g id="gap-burst" opacity="0" stroke="#ffb35c" stroke-width="12" stroke-linecap="round">
+        <path d="M380,520 L320,490 M370,600 L300,610 M860,520 L920,490 M870,600 L940,610"/>
+      </g>
+
+      <!-- future-you left out in the cold -->
+      <g transform="translate(960,620) scale(0.6)"><g id="gap-old" data-in="24,0.05,fade">
+        <g opacity="0.7"><g id="gap-shiver"><g data-rig="old" data-p="go" data-o='{"eyes":"open","mouth":"sad","sadbrows":true,"look":[0,12]}'></g></g></g>
+      </g></g>
+      <g id="gap-snow" opacity="0">
+        <use href="#gap-flake" x="300" y="0"/><use href="#gap-flake" x="560" y="-200"/><use href="#gap-flake" x="820" y="-60"/>
+        <use href="#gap-flake" x="1120" y="-260"/><use href="#gap-flake" x="1380" y="-120"/><use href="#gap-flake" x="1640" y="-30"/>
+        <use href="#gap-flake" x="440" y="-420"/><use href="#gap-flake" x="1000" y="-480"/><use href="#gap-flake" x="1520" y="-400"/>
+      </g>
+    </svg>
+  </div>
+  <script>
+    Rig.fill();
+    const tl = gsap.timeline({ paused: true }), A = s => Rig.at(s, "gap");
+    Rig.run(tl, "gap");
+    Rig.blinks(tl, "g1", 0, A("23,0"));
+    Rig.blinks(tl, "g3", 0, A("23,0"), 1.4);
+    tl.fromTo("#gap-s3", { y: 0 }, { y: -14, duration: 0.6, yoyo: true, repeat: 1, ease: "sine.inOut" }, A("21,0.4"));
+    // 22: the gap widens
+    tl.to("#gap-ruler", { opacity: 1, duration: 0.2 }, A("22,0.35"));
+    tl.to("#gap-s3", { x: 460, duration: 1.2, ease: "power2.inOut" }, A("22,0.35"));
+    tl.to("#gap-rline", { attr: { d: "M830,330 L1550,330" }, duration: 1.2, ease: "power2.inOut" }, A("22,0.35"));
+    tl.to("#gap-rend", { x: 460, duration: 1.2, ease: "power2.inOut" }, A("22,0.35"));
+    tl.to("#gap-word", { x: 90, duration: 1.2, ease: "power2.inOut" }, A("22,0.35"));
+    // 23: hand slams "now"
+    const slam = A("23,0.72");
+    tl.fromTo("#gap-hand", { opacity: 1, y: -700 }, { y: -40, duration: 0.25, ease: "power3.in" }, slam - 0.25);
+    tl.to("#gap-nowtop", { y: 40, duration: 0.06 }, slam);
+    tl.fromTo("#gap-burst", { opacity: 0 }, { opacity: 1, duration: 0.08 }, slam);
+    tl.to("#gap-burst", { opacity: 0, duration: 0.3 }, slam + 0.35);
+    tl.to("#gap-hand", { y: -700, duration: 0.4, ease: "power2.in" }, slam + 0.6);
+    // 24: cold and faded
+    tl.to("#gap-coldbg", { opacity: 1, duration: 0.6 }, A("24,0"));
+    tl.to("#gap-snow", { opacity: 1, duration: 0.3 }, A("24,0"));
+    tl.fromTo("#gap-snow", { y: 0 }, { y: 1500, duration: 6, ease: "none" }, A("24,0"));
+    tl.fromTo("#gap-shiver", { x: -6 }, { x: 6, duration: 0.06, yoyo: true, repeat: 50, ease: "none" }, A("24,0.1"));
+    Rig.blinks(tl, "go", A("24,0"), A("24,1") + 1.5);
+    window.__timelines["gap"] = tl;
+  </script>
+</template>

@@ -1,0 +1,35 @@
+<template>
+  <style>
+    @font-face { font-family: "Hand"; src: url("assets/fonts/PatrickHand-Regular.ttf"); }
+    #root { position: absolute; inset: 0; background: linear-gradient(120deg, #4c86e6 0%, #6a4fd6 55%, #7a3cc4 100%); overflow: hidden; }
+    #end-art { position: absolute; inset: 0; }
+    #end-text { position: absolute; left: 0; top: 300px; width: 100%; text-align: center;
+      font-family: "Hand"; font-size: 180px; color: #fff; text-shadow: 0 10px 0 rgba(30,20,80,0.3); }
+    #end-text span { display: inline-block; }
+    .rk { stroke: #0d0f22; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <div id="root" data-composition-id="endcard" data-width="1920" data-height="1080">
+    <h1 id="end-text" class="clip" data-start="0" data-duration="10"><span>Be</span> <span>kind</span> <span>to</span> <span style="color:#ffb35c">him.</span></h1>
+    <svg id="end-art" class="clip" data-start="0" data-duration="10" viewBox="0 0 1920 1080" data-layout-allow-overflow>
+      <g fill="#fff" opacity="0.5"><path d="M260,180 l10,26 26,10 -26,10 -10,26 -10,-26 -26,-10 26,-10 z"/><path d="M1660,220 l7,18 18,7 -18,7 -7,18 -7,-18 -18,-7 18,-7 z"/></g>
+      <g transform="translate(960,690)"><g id="end-sub">
+        <rect class="rk" x="-230" y="-58" width="460" height="116" rx="58" fill="#ff3b4a" stroke-width="10"/>
+        <text x="-20" y="22" text-anchor="middle" style="font-family:Hand;font-size:64px;fill:#fff">Subscribe</text>
+        <path d="M150,-24 C150,-46 186,-46 186,-24 L190,10 L146,10 Z M160,16 C160,28 176,28 176,16" fill="#fff"/>
+      </g></g>
+      <g transform="translate(260,1010) scale(0.5)"><g id="end-kid"><g data-rig="kid" data-p="ek2" data-o='{"mouth":"smile","brows":"up","look":[24,-10]}'></g></g></g>
+      <g transform="translate(1660,1010) scale(0.5)"><g id="end-old"><g data-rig="old" data-p="eo2"></g></g></g>
+    </svg>
+  </div>
+  <script>
+    Rig.fill();
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#end-text span", { opacity: 0, y: 40, scale: 0.8 }, { opacity: 1, y: 0, scale: 1, duration: 0.4, stagger: 0.14, ease: "back.out(2)" }, 0.2);
+    tl.fromTo("#end-kid", { y: 260 }, { y: 0, duration: 0.6, ease: "back.out(1.6)" }, 0.7);
+    tl.fromTo("#end-old", { y: 260 }, { y: 0, duration: 0.6, ease: "back.out(1.6)" }, 0.9);
+    tl.fromTo("#end-sub", { opacity: 0, scale: 0.4, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, transformOrigin: "50% 50%", duration: 0.4, ease: "back.out(2)" }, 1.3);
+    tl.to("#end-sub", { scale: 1.06, transformOrigin: "50% 50%", duration: 0.4, yoyo: true, repeat: 3, ease: "sine.inOut" }, 1.9);
+    Rig.blinks(tl, "ek2", 0, 4);
+    window.__timelines["endcard"] = tl;
+  </script>
+</template>
