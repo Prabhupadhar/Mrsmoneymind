@@ -1,287 +1,344 @@
 [
  {
   "text": "Okay. Quick question.",
+  "mood": "neutral",
   "start": 0.3,
-  "end": 1.7
+  "end": 1.684
  },
  {
   "text": "When did you last open your bank app at one a.m.... and wince?",
-  "start": 2.05,
-  "end": 5.267
+  "mood": "neutral",
+  "start": 2.034,
+  "end": 5.357
  },
  {
   "text": "Yeah. Me too.",
-  "start": 5.717,
-  "end": 6.67
+  "mood": "neutral",
+  "start": 5.807,
+  "end": 6.789
  },
  {
   "text": "Here's the weird part. That money? You're taking it from someone.",
-  "start": 7.22,
-  "end": 10.656
+  "mood": "neutral",
+  "start": 7.339,
+  "end": 10.77
  },
  {
   "text": "And you've definitely met him.",
-  "start": 11.156,
-  "end": 12.669
+  "mood": "neutral",
+  "start": 11.27,
+  "end": 12.758
  },
  {
   "text": "Stick around, because once you see this, you can't unsee it.",
-  "start": 13.269,
-  "end": 16.241
+  "mood": "neutral",
+  "start": 13.358,
+  "end": 16.311
  },
  {
   "text": "So, back in two thousand nine, some researchers at Stanford did something kind of brilliant.",
-  "start": 17.341,
-  "end": 22.609
+  "mood": "neutral",
+  "start": 17.411,
+  "end": 22.657
  },
  {
   "text": "They put people inside a brain scanner, and asked them to think about three people.",
-  "start": 23.009,
-  "end": 27.248
+  "mood": "neutral",
+  "start": 23.057,
+  "end": 27.34
  },
  {
   "text": "One: themselves, right now.",
-  "start": 27.698,
-  "end": 29.321
+  "mood": "neutral",
+  "start": 27.79,
+  "end": 29.361
  },
  {
   "text": "Two: a stranger. Someone they'd never met.",
-  "start": 29.721,
-  "end": 32.358
+  "mood": "neutral",
+  "start": 29.761,
+  "end": 32.416
  },
  {
   "text": "And three: themselves... ten years from now.",
-  "start": 32.758,
-  "end": 35.369
+  "mood": "neutral",
+  "start": 32.816,
+  "end": 35.389
  },
  {
   "text": "Now you'd expect future me to look a lot like me, right? It's literally the same person.",
-  "start": 35.919,
-  "end": 40.634
+  "mood": "neutral",
+  "start": 35.939,
+  "end": 40.601
  },
  {
   "text": "Except... for a lot of people, it didn't.",
-  "start": 41.134,
-  "end": 43.304
+  "mood": "neutral",
+  "start": 41.101,
+  "end": 43.271
  },
  {
   "text": "Thinking about their future self looked more like thinking about someone else.",
-  "start": 43.754,
-  "end": 47.468
+  "mood": "neutral",
+  "start": 43.721,
+  "end": 47.413
  },
  {
   "text": "Your brain kind of... files future you under other people.",
-  "start": 47.918,
-  "end": 51.102
+  "mood": "neutral",
+  "start": 47.863,
+  "end": 51.079
  },
  {
   "text": "And here's why that matters.",
-  "start": 52.202,
-  "end": 53.69
+  "mood": "neutral",
+  "start": 52.179,
+  "end": 53.644
  },
  {
   "text": "Think about what saving actually is.",
-  "start": 54.09,
-  "end": 55.99
+  "mood": "neutral",
+  "start": 54.044,
+  "end": 55.944
  },
  {
   "text": "You take money away from you, today. The person you can actually feel.",
-  "start": 56.39,
-  "end": 60.224
+  "mood": "neutral",
+  "start": 56.344,
+  "end": 60.2
  },
  {
   "text": "And you hand it to a guy your brain treats like a stranger.",
-  "start": 60.524,
-  "end": 63.585
+  "mood": "neutral",
+  "start": 60.5,
+  "end": 63.452
  },
  {
   "text": "That's not saving. To your brain, that's charity.",
-  "start": 64.085,
-  "end": 66.791
+  "mood": "neutral",
+  "start": 63.952,
+  "end": 66.581
  },
  {
   "text": "And nobody gives their whole paycheck to a stranger.",
-  "start": 67.241,
-  "end": 70.049
+  "mood": "neutral",
+  "start": 67.031,
+  "end": 69.864
  },
  {
   "text": "The researchers noticed something else, too.",
-  "start": 70.649,
-  "end": 72.726
+  "mood": "neutral",
+  "start": 70.464,
+  "end": 72.486
  },
  {
   "text": "The people whose brains showed the biggest gap between me now, and me later...",
-  "start": 73.126,
-  "end": 77.184
+  "mood": "neutral",
+  "start": 72.886,
+  "end": 76.885
  },
  {
   "text": "were the ones who'd rather take a smaller amount of money today, than wait for more later.",
-  "start": 77.434,
-  "end": 82.012
+  "mood": "neutral",
+  "start": 77.135,
+  "end": 81.629
  },
  {
   "text": "The more future you felt like a stranger, the less you looked after him.",
-  "start": 82.512,
-  "end": 86.23
+  "mood": "neutral",
+  "start": 82.129,
+  "end": 85.901
  },
  {
   "text": "And honestly? You do this all the time. You just don't call it that.",
-  "start": 87.33,
-  "end": 90.716
+  "mood": "neutral",
+  "start": 87.001,
+  "end": 90.346
  },
  {
   "text": "I'll start saving after my next raise.",
-  "start": 91.166,
-  "end": 93.245
+  "mood": "neutral",
+  "start": 90.796,
+  "end": 92.833
  },
  {
   "text": "Diet starts Monday.",
-  "start": 93.595,
-  "end": 94.788
+  "mood": "neutral",
+  "start": 93.183,
+  "end": 94.355
  },
  {
   "text": "It's fine, I'll put it on a payment plan.",
-  "start": 95.138,
-  "end": 97.265
+  "mood": "neutral",
+  "start": 94.705,
+  "end": 96.853
  },
  {
   "text": "Notice the pattern? Future me will handle it.",
-  "start": 97.815,
-  "end": 100.299
+  "mood": "neutral",
+  "start": 97.403,
+  "end": 99.889
  },
  {
   "text": "As if he's some other guy. With more time, more money, more willpower.",
-  "start": 100.699,
-  "end": 104.571
+  "mood": "neutral",
+  "start": 100.289,
+  "end": 104.139
  },
  {
   "text": "He won't have more of anything.",
-  "start": 105.071,
-  "end": 106.656
+  "mood": "neutral",
+  "start": 104.639,
+  "end": 106.224
  },
  {
   "text": "He'll have exactly what you leave him.",
-  "start": 107.106,
-  "end": 109.016
+  "mood": "neutral",
+  "start": 106.674,
+  "end": 108.58
  },
  {
   "text": "So, the researchers tried something a bit strange.",
-  "start": 110.216,
-  "end": 112.788
+  "mood": "neutral",
+  "start": 109.78,
+  "end": 112.353
  },
  {
   "text": "They took photos of young people, and digitally aged them. Grey hair, wrinkles, the whole thing.",
-  "start": 113.188,
-  "end": 118.42
+  "mood": "neutral",
+  "start": 112.753,
+  "end": 118.027
  },
  {
   "text": "Then they had people look their future self in the eye.",
-  "start": 118.82,
-  "end": 121.622
+  "mood": "neutral",
+  "start": 118.427,
+  "end": 121.185
  },
  {
   "text": "And then they asked: say you suddenly got a thousand dollars. How much would you put away for retirement?",
-  "start": 122.122,
-  "end": 127.805
+  "mood": "neutral",
+  "start": 121.685,
+  "end": 127.433
  },
  {
   "text": "In one experiment, people who'd just seen their older face set aside about twice as much.",
-  "start": 128.355,
-  "end": 133.475
+  "mood": "neutral",
+  "start": 127.983,
+  "end": 133.082
  },
  {
   "text": "Same people. Same money.",
-  "start": 133.925,
-  "end": 135.686
+  "mood": "neutral",
+  "start": 133.532,
+  "end": 135.236
  },
  {
   "text": "The only thing that changed? For a moment, the stranger became a person.",
-  "start": 136.136,
-  "end": 140.441
+  "mood": "neutral",
+  "start": 135.686,
+  "end": 139.97
  },
  {
   "text": "Quick honesty note: that was money on paper, not their real bank account. But the direction is the point.",
-  "start": 141.141,
-  "end": 147.045
+  "mood": "neutral",
+  "start": 140.67,
+  "end": 146.573
  },
  {
   "text": "So how do you close the gap? Three things.",
-  "start": 148.145,
-  "end": 150.522
+  "mood": "neutral",
+  "start": 147.673,
+  "end": 150.007
  },
  {
   "text": "One: see him. Use any face aging filter, and look at yourself at seventy. Don't laugh it off. Ten seconds. Just look.",
-  "start": 150.972,
-  "end": 158.392
+  "mood": "neutral",
+  "start": 150.457,
+  "end": 157.938
  },
  {
   "text": "Two: take the decision away from today you.",
-  "start": 158.992,
-  "end": 161.311
+  "mood": "neutral",
+  "start": 158.538,
+  "end": 160.897
  },
  {
   "text": "Because today you will lose that fight, every single time.",
-  "start": 161.661,
-  "end": 164.679
+  "mood": "neutral",
+  "start": 161.247,
+  "end": 164.36
  },
  {
   "text": "Set up an automatic transfer that leaves on payday, before you ever see the money.",
-  "start": 165.129,
-  "end": 169.641
+  "mood": "neutral",
+  "start": 164.81,
+  "end": 169.314
  },
  {
   "text": "Three: promise him your future raises, not your current paycheck.",
-  "start": 170.241,
-  "end": 173.89
+  "mood": "neutral",
+  "start": 169.914,
+  "end": 173.564
  },
  {
   "text": "There's a famous program called Save More Tomorrow, that did exactly this.",
-  "start": 174.34,
-  "end": 178.514
+  "mood": "neutral",
+  "start": 174.014,
+  "end": 178.207
  },
  {
   "text": "People agreed, ahead of time, to save part of each future raise. In about three and a half years, their savings rate went from three and a half percent, to over thirteen.",
-  "start": 178.914,
-  "end": 188.734
+  "mood": "neutral",
+  "start": 178.607,
+  "end": 188.491
  },
  {
   "text": "No extra willpower. Just a decision made before temptation showed up.",
-  "start": 189.234,
-  "end": 193.658
+  "mood": "neutral",
+  "start": 188.991,
+  "end": 193.491
  },
  {
   "text": "Somewhere out there, there's an older version of you.",
-  "start": 194.858,
-  "end": 197.651
+  "mood": "neutral",
+  "start": 194.691,
+  "end": 197.509
  },
  {
   "text": "He'll live in the home you chose. In the body you built. With the money you didn't spend.",
-  "start": 198.151,
-  "end": 202.903
+  "mood": "neutral",
+  "start": 198.009,
+  "end": 202.72
  },
  {
   "text": "He can't call you. He can't text.",
-  "start": 203.403,
-  "end": 205.421
+  "mood": "neutral",
+  "start": 203.22,
+  "end": 205.263
  },
  {
   "text": "But he's counting on you.",
-  "start": 205.821,
-  "end": 207.241
+  "mood": "neutral",
+  "start": 205.663,
+  "end": 207.028
  },
  {
   "text": "So tonight, do one small thing for him.",
-  "start": 207.841,
-  "end": 210.035
+  "mood": "neutral",
+  "start": 207.628,
+  "end": 209.843
  },
  {
   "text": "Because he's not a stranger. He's the only person you'll spend your whole life with.",
-  "start": 210.535,
-  "end": 215.412
+  "mood": "neutral",
+  "start": 210.343,
+  "end": 215.076
  },
  {
   "text": "Be kind to him.",
-  "start": 216.112,
-  "end": 217.307
+  "mood": "neutral",
+  "start": 215.776,
+  "end": 216.94
  }
 ]

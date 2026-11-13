@@ -3,240 +3,240 @@
   "text": "Okay. Quick question.",
   "mood": "curious",
   "start": 0.3,
-  "end": 1.721
+  "end": 1.71
  },
  {
   "text": "When did you last tap your card... and actually feel something?",
   "mood": "curious",
-  "start": 2.021,
-  "end": 5.199
+  "start": 2.01,
+  "end": 5.234
  },
  {
   "text": "Nothing? Not even a tiny sting?",
   "mood": "shocked",
-  "start": 5.499,
-  "end": 7.388
+  "start": 5.534,
+  "end": 7.423
  },
  {
   "text": "Now picture handing over a fat stack of real cash for the same thing.",
   "mood": "firm",
-  "start": 7.688,
-  "end": 11.659
+  "start": 7.723,
+  "end": 11.718
  },
  {
   "text": "Yeah. That one hurts.",
   "mood": "warm",
-  "start": 11.959,
-  "end": 13.227
+  "start": 12.018,
+  "end": 13.241
  },
  {
   "text": "And that little ouch? It's doing a job. A job your card quietly fired it from.",
   "mood": "curious",
-  "start": 13.527,
-  "end": 18.32
+  "start": 13.541,
+  "end": 18.27
  },
  {
   "text": "Stick around, because this changes how you'll see every checkout.",
   "mood": "warm",
-  "start": 18.62,
-  "end": 22.138
+  "start": 18.57,
+  "end": 22.161
  },
  {
   "text": "So, back in two thousand one, two researchers at MIT ran a sneaky little auction.",
   "mood": "neutral",
-  "start": 22.838,
-  "end": 27.977
+  "start": 22.861,
+  "end": 28.013
  },
  {
   "text": "The prize? Tickets to a sold-out Boston Celtics game.",
   "mood": "curious",
-  "start": 28.277,
-  "end": 31.713
+  "start": 28.313,
+  "end": 31.749
  },
  {
   "text": "Half the students were told: if you win, you pay in cash.",
   "mood": "neutral",
-  "start": 32.013,
-  "end": 35.178
+  "start": 32.049,
+  "end": 35.279
  },
  {
   "text": "The other half: you pay by credit card.",
   "mood": "neutral",
-  "start": 35.478,
-  "end": 37.735
+  "start": 35.578,
+  "end": 37.819
  },
  {
   "text": "Same tickets. Same game. Same kind of people.",
   "mood": "curious",
-  "start": 38.035,
-  "end": 41.015
+  "start": 38.119,
+  "end": 41.093
  },
  {
   "text": "And the card group bid... more than double.",
   "mood": "excited",
-  "start": 41.315,
-  "end": 43.365
+  "start": 41.393,
+  "end": 43.443
  },
  {
   "text": "Double! For the exact same seats!",
   "mood": "shocked",
-  "start": 43.665,
-  "end": 45.552
+  "start": 43.743,
+  "end": 45.609
  },
  {
   "text": "And no, it wasn't because they were short on cash. The card bidders still had to pay the very next day.",
   "mood": "firm",
-  "start": 45.852,
-  "end": 51.819
+  "start": 45.909,
+  "end": 51.751
  },
  {
   "text": "The card didn't give them more money. It just made spending it feel... lighter.",
   "mood": "warm",
-  "start": 52.119,
-  "end": 56.443
+  "start": 52.051,
+  "end": 56.329
  },
  {
   "text": "Psychologists have a name for that ouch. The pain of paying.",
   "mood": "neutral",
-  "start": 57.143,
-  "end": 60.551
+  "start": 57.029,
+  "end": 60.44
  },
  {
   "text": "And it's not just a figure of speech.",
   "mood": "curious",
-  "start": 60.851,
-  "end": 62.656
+  "start": 60.74,
+  "end": 62.564
  },
  {
   "text": "In brain scans, a high price lights up a region tied to pain and disgust, the insula.",
   "mood": "firm",
-  "start": 62.956,
-  "end": 68.438
+  "start": 62.864,
+  "end": 68.397
  },
  {
   "text": "When that alarm goes off, people walk away.",
   "mood": "neutral",
-  "start": 68.738,
-  "end": 70.978
+  "start": 68.697,
+  "end": 70.96
  },
  {
   "text": "Cash rings that alarm loud. You see it leave. You feel the wallet get thinner.",
   "mood": "curious",
-  "start": 71.278,
-  "end": 75.593
+  "start": 71.26,
+  "end": 75.532
  },
  {
   "text": "A tap? The alarm barely whispers.",
   "mood": "whisper",
-  "start": 75.893,
-  "end": 78.494
+  "start": 75.832,
+  "end": 78.458
  },
  {
   "text": "And that whisper is exactly where the money slips out.",
   "mood": "sad",
-  "start": 78.794,
-  "end": 82.562
+  "start": 78.758,
+  "end": 82.569
  },
  {
   "text": "Here's where it gets personal.",
   "mood": "curious",
-  "start": 83.262,
-  "end": 84.709
+  "start": 83.269,
+  "end": 84.701
  },
  {
   "text": "One study tracked a thousand households and six months of real grocery trips.",
   "mood": "neutral",
-  "start": 85.009,
-  "end": 89.666
+  "start": 85.001,
+  "end": 89.677
  },
  {
   "text": "When people paid by card, more of the cart was the impulse stuff. Candy, chips, cookies.",
   "mood": "excited",
-  "start": 89.966,
-  "end": 94.944
+  "start": 89.977,
+  "end": 94.996
  },
  {
   "text": "Cash shoppers? Fewer of those. The ouch was saying \"do you really need that?\"",
   "mood": "sad",
-  "start": 95.244,
-  "end": 100.688
+  "start": 95.296,
+  "end": 100.741
  },
  {
   "text": "And here's the scary part. Ask card payers what they spent, and many can't tell you.",
   "mood": "shocked",
-  "start": 100.988,
-  "end": 105.593
+  "start": 101.041,
+  "end": 105.645
  },
  {
   "text": "You can't feel what you can't even remember.",
   "mood": "sad",
-  "start": 105.893,
-  "end": 108.617
+  "start": 105.945,
+  "end": 108.675
  },
  {
   "text": "Now, honesty time. That double bid was one auction.",
   "mood": "firm",
-  "start": 109.317,
-  "end": 112.43
+  "start": 109.375,
+  "end": 112.492
  },
  {
   "text": "When researchers pooled seventy-one studies, the card effect was smaller. But it was real, and it showed up again and again.",
   "mood": "neutral",
-  "start": 112.73,
-  "end": 119.765
+  "start": 112.792,
+  "end": 119.87
  },
  {
   "text": "Small leaks, every single day, still sink ships.",
   "mood": "warm",
-  "start": 120.065,
-  "end": 122.977
+  "start": 120.17,
+  "end": 123.128
  },
  {
   "text": "So you don't have to go back to cash. You just have to bring the ouch back.",
   "mood": "warm",
-  "start": 123.677,
-  "end": 127.589
+  "start": 123.828,
+  "end": 127.761
  },
  {
   "text": "One. Turn on an alert for every single payment. Let your phone say the number out loud.",
   "mood": "firm",
-  "start": 127.889,
-  "end": 133.043
+  "start": 128.061,
+  "end": 133.246
  },
  {
   "text": "Two. Delete your saved card from shopping apps. Make buying take ten more seconds.",
   "mood": "firm",
-  "start": 133.343,
-  "end": 138.415
+  "start": 133.546,
+  "end": 138.643
  },
  {
   "text": "Three. Pick one weak spot, like snacks or takeout, and pay for it in cash only.",
   "mood": "excited",
-  "start": 138.715,
-  "end": 143.582
+  "start": 138.943,
+  "end": 143.789
  },
  {
   "text": "Watch how fast \"I want it\" turns into \"eh, maybe not.\"",
   "mood": "whisper",
-  "start": 143.882,
-  "end": 148.329
+  "start": 144.089,
+  "end": 148.617
  },
  {
   "text": "That little sting isn't your enemy. It's the one part of you still guarding your money.",
   "mood": "warm",
-  "start": 149.029,
-  "end": 153.799
+  "start": 149.317,
+  "end": 154.057
  },
  {
   "text": "Let it do its job.",
   "mood": "warm",
-  "start": 154.099,
-  "end": 155.331
+  "start": 154.357,
+  "end": 155.576
  },
  {
   "text": "And if this made you look at your card a little differently, subscribe. There's a lot more your brain isn't telling you.",
   "mood": "curious",
-  "start": 155.631,
-  "end": 161.618
+  "start": 155.876,
+  "end": 161.786
  }
 ]
