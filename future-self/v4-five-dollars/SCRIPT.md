@@ -1,13 +1,13 @@
 # The $5 Experiment (v1 script)
 
-About 540 spoken words. Expect roughly 2:40 of voice, based on video 3's pace. Voice only (Kokoro), and each line has a **mood** (curious, shocked, firm, excited, sad, whisper, warm or neutral).
+About 420 spoken words. Expect roughly 2:05 of voice, based on video 3's pace. Voice only (Kokoro), and each line has a **mood** (curious, shocked, firm, excited, sad, whisper, warm or neutral).
 The narrator talks to the viewer. The screen never reads the line back. Pop words are in **bold**.
 The look and characters are the same as videos 1 to 3: the kid in the mustard hoodie, navy and orange scenes, handwritten pop words. The neighbor (cap, green jacket) from video 3 comes back, this time as the person the kid buys a coffee for.
 New: **a toddler** (a smaller, rounder kid with a bib) and **Monkey**, a sock puppet.
 
 ---
 
-## 0. Cold open (0:00–0:25)
+## 0. Cold open (0:00–0:20)
 
 | Mood | Voice | Screen |
 |---|---|---|
@@ -18,7 +18,7 @@ New: **a toddler** (a smaller, rounder kid with a bib) and **Monkey**, a sock pu
 | firm | Researchers tested it. And most people are wrong. Twice. | Big red **✗✗** over the "on me" side. |
 | warm | This one's a nice one, I promise. | Title card: **The $5 Experiment** |
 
-## 1. The envelope (0:25–1:05)
+## 1. The envelope (0:20–0:50)
 
 | Mood | Voice | Screen |
 |---|---|---|
@@ -32,7 +32,7 @@ New: **a toddler** (a smaller, rounder kid with a bib) and **Monkey**, a sock pu
 | excited | The people who spent on someone else were happier. | Right lane's smiley jumps up. **happier** |
 | shocked | And the twenty dollars? Made no difference. Five worked just as well. | $20 and $5 side by side with an **=** between. |
 
-## 2. Doubly wrong (1:05–1:40)
+## 2. Doubly wrong (0:50–1:15)
 
 | Mood | Voice | Screen |
 |---|---|---|
@@ -43,7 +43,7 @@ New: **a toddler** (a smaller, rounder kid with a bib) and **Monkey**, a sock pu
 | sad | But the "me" money wasn't linked to happiness at all. The "others" money was. | The tall tower greys out; the tiny stack glows. |
 | curious | Even with a work bonus of about five thousand dollars, what mattered weeks later wasn't how big it was. It was how much of it went to other people. | A bonus cheque splits: a small slice flies to friends and glows. |
 
-## 3. Built in early (1:40–2:05)
+## 3. Built in early (1:15–1:35)
 
 | Mood | Voice | Screen |
 |---|---|---|
@@ -53,7 +53,7 @@ New: **a toddler** (a smaller, rounder kid with a bib) and **Monkey**, a sock pu
 | warm | They looked happier giving Monkey a cracker than getting one themselves. | Toddler gives a cracker. Big grin. |
 | whisper | Happiest of all? When it was their own cracker. | Toddler hands over a cracker from their own bowl. Hearts. **their own** |
 
-## 4. To be fair (2:05–2:25)
+## 4. To be fair (1:35–1:50)
 
 | Mood | Voice | Screen |
 |---|---|---|
@@ -62,7 +62,7 @@ New: **a toddler** (a smaller, rounder kid with a bib) and **Monkey**, a sock pu
 | firm | It showed up best when people actually spent on someone. Not when they just remembered doing it. | Kid handing a gift: glows. Kid with a memory bubble: stays grey. |
 | warm | So it's not magic. But it's real, and it's cheap to try. | **cheap to try** |
 
-## 5. Three moves (2:25–2:50)
+## 5. Three moves (1:50–2:05)
 
 | Mood | Voice | Screen |
 |---|---|---|
@@ -71,7 +71,7 @@ New: **a toddler** (a smaller, rounder kid with a bib) and **Monkey**, a sock pu
 | firm | Two. Give your spending a tiny "others" line. Even one coffee a month. | Badge **2**. A budget list; a new line "others" gets ticked. |
 | warm | Three. This gift season, swap one thing for you for one small thing for someone else. | Badge **3**. A shopping cart: one item swaps out for a wrapped gift. |
 
-## 6. Close (2:50–3:05)
+## 6. Close (2:05–2:15)
 
 | Mood | Voice | Screen |
 |---|---|---|
