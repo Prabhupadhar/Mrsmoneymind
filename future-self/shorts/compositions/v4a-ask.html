@@ -1,0 +1,52 @@
+<template>
+  <style>
+    @font-face { font-family: "Hand"; src: url("assets/fonts/PatrickHand-Regular.ttf"); }
+    #root { position: absolute; inset: 0; background: #1a2b66; overflow: hidden; }
+    #va-art { position: absolute; inset: 0; }
+    .rk { stroke: #0d0f22; stroke-linecap: round; stroke-linejoin: round; }
+    .pop { font-family: Hand; font-size: 150px; fill: #ffb35c; stroke: #0d0f22; stroke-width: 14px; paint-order: stroke; stroke-linejoin: round; }
+    .lab { font-family: Hand; font-size: 64px; fill: #f4f1ff; }
+  </style>
+  <div id="root" data-composition-id="v4aask" data-width="1080" data-height="1920">
+    <svg id="va-art" class="clip" data-start="0" data-duration="40" viewBox="0 0 1080 1920" data-layout-allow-overflow>
+      <defs>
+        <radialGradient id="va-bg" cx="0.5" cy="0.5" r="0.8"><stop offset="0" stop-color="#2a4a9f"/><stop offset="1" stop-color="#111c4c"/></radialGradient>
+      </defs>
+      <rect width="1080" height="1920" fill="url(#va-bg)"/>
+
+      <g id="va-close" data-out="2,0.12">
+        <g transform="translate(540,1080) scale(0.62)"><g id="va-kid"><g data-rig="kid" data-p="vak" data-o='{"mouth":"smile","brows":"up","look":[0,-20]}'></g></g></g>
+        <g transform="translate(540,620) rotate(-6) scale(0.9)"><g id="va-bill"><rect class="rk" x="-170" y="-80" width="340" height="160" rx="14" fill="#7fd18b" stroke-width="10"/>
+          <rect x="-140" y="-54" width="280" height="108" rx="10" fill="none" stroke="#1f5a33" stroke-width="5" opacity="0.6"/>
+          <text y="34" text-anchor="middle" style="font-family:Hand;font-size:100px;fill:#1f5a33">$20</text></g></g>
+      </g>
+      <g id="va-split" data-in="2,0.15,fade">
+        <rect id="va-glow" x="0" y="440" width="1080" height="510" fill="#ffb35c" opacity="0"/>
+        <path d="M80,965 L1000,965" stroke="#c9d3ef" stroke-width="6" stroke-dasharray="18 18" opacity="0.6"/>
+        <g data-in="2,0.25,up">
+          <text class="lab" x="540" y="520" text-anchor="middle" style="font-size:76px">me</text>
+          <g transform="translate(360,850) scale(0.36)"><g data-rig="kid" data-p="val" data-o='{"mouth":"smile","brows":"up","look":[40,10]}'></g></g>
+          <g transform="translate(720,830) scale(0.85)"><path class="rk" d="M-90,-60 L90,-60 L110,110 L-110,110 Z" fill="#8f7dff" stroke-width="10"/><path class="rk" d="M-40,-60 C-40,-130 40,-130 40,-60" fill="none" stroke-width="10"/></g>
+        </g>
+        <g data-in="2,0.6,up">
+          <text class="lab" x="540" y="1060" text-anchor="middle" style="font-size:76px">someone else</text>
+          <g transform="translate(260,1380) scale(0.34)"><g data-rig="kid" data-p="var" data-o='{"mouth":"smile","brows":"up","look":[50,0]}'></g></g>
+          <g transform="translate(820,1380) scale(0.34)"><g data-rig="nb" data-p="van" data-o='{"mouth":"smile","brows":"up","look":[-50,0]}'></g></g>
+          <g transform="translate(540,1400) scale(0.8)"><rect class="rk" x="-80" y="-50" width="160" height="120" rx="10" fill="#ff5f6d" stroke-width="9"/><rect x="-14" y="-50" width="28" height="120" fill="#ffd23a"/><rect class="rk" x="-92" y="-80" width="184" height="40" rx="8" fill="#ff5f6d" stroke-width="9"/><path class="rk" d="M0,-80 C-40,-130 -70,-90 0,-80 C70,-90 40,-130 0,-80" fill="#ffd23a" stroke-width="7"/></g>
+        </g>
+      </g>
+    </svg>
+  </div>
+  <script>
+    Rig.fill();
+    const tl = gsap.timeline({ paused: true }), A = s => Rig.at(s, "v4aask");
+    Rig.run(tl, "v4aask");
+    Rig.blinks(tl, "vak", 0, 5);
+    tl.fromTo("#va-bill", { x: 1300, rotation: 20 }, { x: 0, rotation: 0, duration: 0.6, ease: "power3.out" }, A("1,0.05"));
+    Rig.look(tl, "vak", 0, -50, A("1,0.2"));
+    Rig.mouth(tl, "vak", "smile", "grin", A("1,0.4"));
+    Rig.blinks(tl, "val", A("2,0"), A("2,1") + 1); Rig.blinks(tl, "var", A("2,0"), A("2,1") + 1, 0.5);
+    tl.to("#va-glow", { opacity: 0.15, duration: 0.4 }, A("2,0.4"));
+    window.__timelines["v4aask"] = tl;
+  </script>
+</template>

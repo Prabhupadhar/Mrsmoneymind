@@ -1,0 +1,71 @@
+<template>
+  <style>
+    @font-face { font-family: "Hand"; src: url("assets/fonts/PatrickHand-Regular.ttf"); }
+    #root { position: absolute; inset: 0; background: #1a2b66; overflow: hidden; }
+    #td-art { position: absolute; inset: 0; }
+    .rk { stroke: #0d0f22; stroke-linecap: round; stroke-linejoin: round; }
+    .pop { font-family: Hand; font-size: 150px; fill: #ffb35c; stroke: #0d0f22; stroke-width: 14px; paint-order: stroke; stroke-linejoin: round; }
+    .lab { font-family: Hand; font-size: 56px; fill: #f4f1ff; }
+  </style>
+  <div id="root" data-composition-id="toddler" data-width="1920" data-height="1080">
+    <svg id="td-art" class="clip" data-start="0" data-duration="30" viewBox="0 0 1920 1080" data-layout-allow-overflow>
+      <defs>
+        <radialGradient id="td-bg" cx="0.5" cy="0.55" r="0.75"><stop offset="0" stop-color="#2a4a9f"/><stop offset="1" stop-color="#111c4c"/></radialGradient>
+      </defs>
+      <rect width="1920" height="1080" fill="url(#td-bg)"/>
+      <g fill="#fff" opacity="0.06"><circle cx="300" cy="160" r="4"/><circle cx="1500" cy="960" r="5"/><circle cx="1760" cy="140" r="4"/></g>
+
+      <g transform="translate(600,620) scale(0.55)"><g id="td-kid">
+        <g data-rig="kid" data-p="tdk" data-o='{"mouth":"smile","brows":"up","look":[40,10],"bib":true,"shirt":"#9fe3ff"}'></g>
+      </g></g>
+      <g transform="translate(600,960)"><g data-in="22,0.55,up">
+        <g id="td-bowlfish"><g transform="translate(-60,-34) rotate(10)"><path class="rk" d="M-22,0 C-10,-16 14,-16 22,0 C14,16 -10,16 -22,0 Z M22,0 L36,-12 L36,12 Z" fill="#ff8a2a" stroke-width="4"/><circle cx="-10" cy="-3" r="3" fill="#0d0f22"/></g><g transform="translate(-10,-44) rotate(-15)"><path class="rk" d="M-22,0 C-10,-16 14,-16 22,0 C14,16 -10,16 -22,0 Z M22,0 L36,-12 L36,12 Z" fill="#ff8a2a" stroke-width="4"/><circle cx="-10" cy="-3" r="3" fill="#0d0f22"/></g><g transform="translate(40,-36) rotate(20)"><path class="rk" d="M-22,0 C-10,-16 14,-16 22,0 C14,16 -10,16 -22,0 Z M22,0 L36,-12 L36,12 Z" fill="#ff8a2a" stroke-width="4"/><circle cx="-10" cy="-3" r="3" fill="#0d0f22"/></g><g transform="translate(-30,-58) rotate(-5)"><path class="rk" d="M-22,0 C-10,-16 14,-16 22,0 C14,16 -10,16 -22,0 Z M22,0 L36,-12 L36,12 Z" fill="#ff8a2a" stroke-width="4"/><circle cx="-10" cy="-3" r="3" fill="#0d0f22"/></g><g transform="translate(20,-60) rotate(8)"><path class="rk" d="M-22,0 C-10,-16 14,-16 22,0 C14,16 -10,16 -22,0 Z M22,0 L36,-12 L36,12 Z" fill="#ff8a2a" stroke-width="4"/><circle cx="-10" cy="-3" r="3" fill="#0d0f22"/></g></g>
+        <path class="rk" d="M-140,-30 L140,-30 C130,50 80,80 0,80 C-80,80 -130,50 -140,-30 Z" fill="#8f7dff" stroke-width="10"/>
+      </g></g>
+      <!-- Monkey the sock puppet -->
+      <g transform="translate(1380,760)"><g id="td-monkey">
+        <path class="rk" d="M-130,400 L-130,-60 C-130,-230 130,-230 130,-60 L130,400 Z" fill="#a8673e" stroke-width="12"/>
+        <circle class="rk" cx="-140" cy="-120" r="50" fill="#a8673e" stroke-width="10"/><circle class="rk" cx="140" cy="-120" r="50" fill="#a8673e" stroke-width="10"/>
+        <ellipse cx="0" cy="-20" rx="100" ry="80" fill="#e9c39b"/>
+        <circle class="rk" cx="-45" cy="-110" r="30" fill="#fff" stroke-width="7"/><circle class="rk" cx="45" cy="-110" r="30" fill="#fff" stroke-width="7"/>
+        <circle cx="-40" cy="-104" r="13" fill="#0d0f22"/><circle cx="50" cy="-104" r="13" fill="#0d0f22"/>
+        <ellipse id="td-mouth" class="rk" cx="0" cy="10" rx="60" ry="30" fill="#b0263c" stroke-width="8"/>
+        <path d="M-130,300 L130,300 M-130,340 L130,340" stroke="#8a5a3c" stroke-width="10"/>
+      </g></g>
+      <text class="lab" x="1380" y="420" text-anchor="middle" style="font-size:80px;fill:#ffd27a" data-in="23,0.6,pop" data-out="24,0">mmm!</text>
+      <!-- 24: a found cracker, given -->
+      <g id="td-found" opacity="0"><g transform="translate(0,0) rotate(0)"><path class="rk" d="M-22,0 C-10,-16 14,-16 22,0 C14,16 -10,16 -22,0 Z M22,0 L36,-12 L36,12 Z" fill="#ff8a2a" stroke-width="4"/><circle cx="-10" cy="-3" r="3" fill="#0d0f22"/></g></g>
+      <!-- 25: a cracker from the toddler's own bowl -->
+      <g id="td-own" opacity="0"><g transform="translate(0,0) rotate(0)"><path class="rk" d="M-22,0 C-10,-16 14,-16 22,0 C14,16 -10,16 -22,0 Z M22,0 L36,-12 L36,12 Z" fill="#ff8a2a" stroke-width="4"/><circle cx="-10" cy="-3" r="3" fill="#0d0f22"/></g></g>
+      <g id="td-hearts" opacity="0"><path transform="translate(1000,380) scale(1.2)" d="M0,30 C-50,-10 -30,-50 0,-25 C30,-50 50,-10 0,30 Z" fill="#ff5f6d" class="rk" stroke-width="5"/><path transform="translate(1140,300) scale(0.9)" d="M0,30 C-50,-10 -30,-50 0,-25 C30,-50 50,-10 0,30 Z" fill="#ff5f6d" class="rk" stroke-width="5"/><path transform="translate(880,280) scale(0.8)" d="M0,30 C-50,-10 -30,-50 0,-25 C30,-50 50,-10 0,30 Z" fill="#ff5f6d" class="rk" stroke-width="5"/></g>
+      <text class="pop" x="960" y="200" text-anchor="middle" style="font-size:150px" data-in="25,0.55,pop">their own</text>
+    </svg>
+  </div>
+  <script>
+    Rig.fill();
+    const tl = gsap.timeline({ paused: true }), A = s => Rig.at(s, "toddler");
+    Rig.run(tl, "toddler");
+    Rig.blinks(tl, "tdk", 0, 18);
+    // 23: Monkey pops up, hungry
+    tl.fromTo("#td-monkey", { y: 900 }, { y: 0, duration: 0.5, ease: "back.out(1.4)" }, A("23,0.25"));
+    tl.to("#td-mouth", { ry: 42, duration: 0.15, yoyo: true, repeat: 5 }, A("23,0.55"));
+    Rig.look(tl, "tdk", 60, -10, A("23,0.3"));
+    Rig.mouth(tl, "tdk", "smile", "o", A("23,0.35"));
+    // 24: a "found" cracker drops in; the toddler hands it to Monkey and beams
+    tl.set("#td-found", { opacity: 1 }, A("24,0.05"));
+    tl.fromTo("#td-found", { x: 760, y: -100 }, { x: 760, y: 700, duration: 0.5, ease: "bounce.out" }, A("24,0.05"));
+    tl.to("#td-found", { x: 1380, y: 770, scale: 1.4, duration: 0.6, ease: "power2.inOut" }, A("24,0.4"));
+    tl.to("#td-found", { opacity: 0, duration: 0.15 }, A("24,0.4") + 0.6);
+    Rig.mouth(tl, "tdk", "o", "grin", A("24,0.55"));
+    tl.to("#td-kid", { y: -20, duration: 0.18, yoyo: true, repeat: 3, ease: "power2.out" }, A("24,0.6"));
+    // 25: from their own bowl, hearts
+    tl.set("#td-own", { opacity: 1 }, A("25,0.1"));
+    tl.fromTo("#td-own", { x: 610, y: 910 }, { x: 1380, y: 770, scale: 1.4, duration: 0.8, ease: "power2.inOut" }, A("25,0.1"));
+    tl.to("#td-own", { opacity: 0, duration: 0.15 }, A("25,0.1") + 0.8);
+    tl.to("#td-bowlfish g:first-child", { opacity: 0, duration: 0.1 }, A("25,0.1"));
+    tl.set("#td-hearts", { opacity: 1 }, A("25,0.45"));
+    tl.fromTo("#td-hearts", { y: 80, scale: 0.6, transformOrigin: "50% 50%" }, { y: -40, scale: 1, duration: 1.2, ease: "power2.out" }, A("25,0.45"));
+    tl.to("#td-kid", { y: -24, duration: 0.18, yoyo: true, repeat: 3, ease: "power2.out" }, A("25,0.5"));
+    window.__timelines["toddler"] = tl;
+  </script>
+</template>

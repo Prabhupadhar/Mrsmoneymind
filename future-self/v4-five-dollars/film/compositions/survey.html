@@ -1,0 +1,63 @@
+<template>
+  <style>
+    @font-face { font-family: "Hand"; src: url("assets/fonts/PatrickHand-Regular.ttf"); }
+    #root { position: absolute; inset: 0; background: #1a2b66; overflow: hidden; }
+    #sv-art { position: absolute; inset: 0; }
+    .rk { stroke: #0d0f22; stroke-linecap: round; stroke-linejoin: round; }
+    .pop { font-family: Hand; font-size: 150px; fill: #ffb35c; stroke: #0d0f22; stroke-width: 14px; paint-order: stroke; stroke-linejoin: round; }
+    .lab { font-family: Hand; font-size: 56px; fill: #f4f1ff; }
+  </style>
+  <div id="root" data-composition-id="survey" data-width="1920" data-height="1080">
+    <svg id="sv-art" class="clip" data-start="0" data-duration="30" viewBox="0 0 1920 1080" data-layout-allow-overflow>
+      <defs>
+        <radialGradient id="sv-bg" cx="0.5" cy="0.55" r="0.75"><stop offset="0" stop-color="#2a4a9f"/><stop offset="1" stop-color="#111c4c"/></radialGradient>
+      </defs>
+      <rect width="1920" height="1080" fill="url(#sv-bg)"/>
+      <g fill="#fff" opacity="0.06"><circle cx="300" cy="160" r="4"/><circle cx="1500" cy="960" r="5"/><circle cx="1760" cy="140" r="4"/></g>
+
+      <g id="sv-stacks" data-in="18,0.2,fade" data-out="20,0">
+        <g transform="translate(650,900)"><g id="sv-me"><ellipse class="rk me-c" cx="0" cy="0" rx="110" ry="30" fill="#ffd27a" stroke-width="7"/><ellipse class="rk me-c" cx="0" cy="-34" rx="110" ry="30" fill="#ffd27a" stroke-width="7"/><ellipse class="rk me-c" cx="0" cy="-68" rx="110" ry="30" fill="#ffd27a" stroke-width="7"/><ellipse class="rk me-c" cx="0" cy="-102" rx="110" ry="30" fill="#ffd27a" stroke-width="7"/><ellipse class="rk me-c" cx="0" cy="-136" rx="110" ry="30" fill="#ffd27a" stroke-width="7"/><ellipse class="rk me-c" cx="0" cy="-170" rx="110" ry="30" fill="#ffd27a" stroke-width="7"/><ellipse class="rk me-c" cx="0" cy="-204" rx="110" ry="30" fill="#ffd27a" stroke-width="7"/><ellipse class="rk me-c" cx="0" cy="-238" rx="110" ry="30" fill="#ffd27a" stroke-width="7"/><ellipse class="rk me-c" cx="0" cy="-272" rx="110" ry="30" fill="#ffd27a" stroke-width="7"/><ellipse class="rk me-c" cx="0" cy="-306" rx="110" ry="30" fill="#ffd27a" stroke-width="7"/><ellipse class="rk me-c" cx="0" cy="-340" rx="110" ry="30" fill="#ffd27a" stroke-width="7"/><ellipse class="rk me-c" cx="0" cy="-374" rx="110" ry="30" fill="#ffd27a" stroke-width="7"/><ellipse class="rk me-c" cx="0" cy="-408" rx="110" ry="30" fill="#ffd27a" stroke-width="7"/><ellipse class="rk me-c" cx="0" cy="-442" rx="110" ry="30" fill="#ffd27a" stroke-width="7"/></g></g>
+        <g transform="translate(1270,900)"><g id="sv-oth"><ellipse class="rk" cx="0" cy="0" rx="110" ry="30" fill="#ffd27a" stroke-width="7"/></g></g>
+        <circle id="sv-glow" cx="1270" cy="890" r="160" fill="#ffd27a" opacity="0"/>
+        <text class="lab" x="650" y="1000" text-anchor="middle" style="font-size:72px">me</text>
+        <text class="lab" x="1270" y="1000" text-anchor="middle" style="font-size:72px">others</text>
+        <text class="pop" x="1270" y="420" text-anchor="middle" style="font-size:220px" data-in="18,0.72,pop">10&#215;</text>
+      </g>
+      <!-- 20: the bonus, a slice goes to others -->
+      <g id="sv-bonus" data-in="20,0.05,fade">
+        <g transform="translate(330,720) scale(0.42)"><g data-rig="kid" data-p="sk" data-o='{"mouth":"smile","brows":"up","look":[50,0]}'></g></g>
+        <g transform="translate(1640,720) scale(0.42)"><g data-rig="nb" data-p="sn" data-o='{"mouth":"smile","brows":"flat","look":[-50,0]}'></g></g>
+        <g transform="translate(900,560)"><g data-in="20,0.1,pop">
+          <rect class="rk" x="-260" y="-110" width="400" height="220" rx="12" fill="#f7f3ea" stroke-width="10"/>
+          <rect x="-260" y="-110" width="400" height="44" rx="12" fill="#7fd18b"/>
+          <text x="-60" y="40" text-anchor="middle" style="font-family:Hand;font-size:90px;fill:#1f5a33">BONUS</text>
+        </g></g>
+        <g transform="translate(1140,560)"><g id="sv-slice" data-in="20,0.1,pop">
+          <circle id="sv-sglow" r="140" fill="#ffd27a" opacity="0"/>
+          <rect class="rk" x="0" y="-110" width="120" height="220" rx="12" fill="#f7f3ea" stroke-width="10" transform="translate(-100,0)"/>
+          <path d="M-90,-110 L-80,-80 L-95,-50 L-80,-20 L-95,10 L-80,40 L-95,70 L-85,110" fill="none" stroke="#0d0f22" stroke-width="6"/>
+          <path transform="translate(-40,0) scale(1.1)" d="M0,30 C-50,-10 -30,-50 0,-25 C30,-50 50,-10 0,30 Z" fill="#ff5f6d" class="rk" stroke-width="5"/>
+        </g></g>
+      </g>
+    </svg>
+  </div>
+  <script>
+    Rig.fill();
+    const tl = gsap.timeline({ paused: true }), A = s => Rig.at(s, "survey");
+    Rig.run(tl, "survey");
+    // 18: the "me" tower climbs, the "others" stack stays tiny
+    tl.fromTo(".me-c", { opacity: 0 }, { opacity: 1, duration: 0.08, stagger: 0.1 }, A("18,0.25"));
+    tl.to("#sv-me", { rotation: 3, svgOrigin: "0 0", duration: 0.35, yoyo: true, repeat: 5, ease: "sine.inOut" }, A("18,0.85"));
+    // 19: "me" greys out, "others" glows
+    tl.to(".me-c", { fill: "#8b8fa3", duration: 0.5 }, A("19,0.25"));
+    tl.to("#sv-glow", { opacity: 0.5, duration: 0.5 }, A("19,0.75"));
+    tl.to("#sv-glow", { scale: 1.2, transformOrigin: "50% 50%", duration: 0.5, yoyo: true, repeat: 3, ease: "sine.inOut" }, A("19,0.8"));
+    // 20: a slice of the bonus flies to the neighbor and glows
+    tl.to("#sv-slice", { x: 300, y: 60, rotation: 12, duration: 0.8, ease: "power2.inOut" }, A("20,0.55"));
+    tl.to("#sv-sglow", { opacity: 0.6, duration: 0.4 }, A("20,0.7"));
+    Rig.blinks(tl, "sk", A("20,0"), A("20,1") + 1); Rig.blinks(tl, "sn", A("20,0"), A("20,1") + 1, 0.6);
+    Rig.mouth(tl, "sn", "smile", "grin", A("20,0.75"));
+    Rig.mouth(tl, "sk", "smile", "grin", A("20,0.85"));
+    window.__timelines["survey"] = tl;
+  </script>
+</template>

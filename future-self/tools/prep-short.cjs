@@ -1,5 +1,5 @@
 // Builds one vertical Short (1080x1920) in shorts/: cuts the film voice, writes timing + index.html.
-//   node tools/prep-short.cjs v1a|v1b|v2a|v2b|v3a|v3b    then: cd shorts && npx hyperframes render -o renders/<out>.mp4
+//   node tools/prep-short.cjs v1a|v1b|v2a|v2b|v3a|v3b|v4a|v4b    then: cd shorts && npx hyperframes render -o renders/<out>.mp4
 // VO keeps the film's line numbers, so scenes use the same data-in="line,frac" as the film.
 const fs = require('fs'), path = require('path'), { execFileSync } = require('child_process');
 const root = path.join(__dirname, '..'), dir = path.join(root, 'shorts');
@@ -20,6 +20,10 @@ const SHORTS = {
          scenes: L => [['v3ahook', 'v3a-hook', 0], ['v3acrack', 'v3a-crack', L(5) - 0.15], ['v3abars', 'v3a-bars', L(14) - 0.2]] },
   v3b: { film: 'v3-neighbor-lottery/film', out: 'v3-short2-neighbors-new-car', lines: [[18, 26]], head: ["Your neighbor's new car", 'costs ' + O('YOU')],
          scenes: L => [['v3bowned', 'v3b-owned', 0], ['v3bjoneses', 'v3b-joneses', L(23) - 0.2], ['v3bwindow', 'v3b-window', L(25) - 0.2]] },
+  v4a: { film: 'v4-five-dollars/film', out: 'v4-short1-spend-five', lines: [[0, 2], [8, 14]], head: ['Spend $5 on someone.', O("Here's what happened.")],
+         scenes: L => [['v4aask', 'v4a-ask', 0], ['v4aenv', 'v4a-envelope', L(8) - 0.2], ['v4alanes', 'v4a-lanes', L(10) - 0.2], ['v4aeve', 'v4a-evening', L(12) - 0.2]] },
+  v4b: { film: 'v4-five-dollars/film', out: 'v4-short2-toddlers-know', lines: [[21, 25]], head: ['Toddlers already', O('know this')],
+         scenes: L => [['v4btod', 'v4b-toddler', 0]] },
 };
 const S = SHORTS[process.argv[2]];
 if (!S) throw new Error('usage: prep-short.cjs ' + Object.keys(SHORTS).join('|'));
