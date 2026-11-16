@@ -1,0 +1,45 @@
+[
+ ["Okay. Quick question.", 0.3, 1, "curious"],
+ ["If I handed you twenty dollars right now...", 0.3, 1, "curious"],
+ ["what would make you happier? Spending it on you... or on someone else?", 0.25, 1, "curious"],
+ ["Yeah. Most people pick, on me.", 0.45, 1, "warm"],
+ ["Researchers tested it. And most people are wrong. Twice.", 0.4, 1, "firm"],
+ ["This one's a nice one, I promise.", 0.5, 1, "warm"],
+
+ ["So. Some researchers in Vancouver ran a little experiment on a university campus.", 1.1, 1, "neutral"],
+ ["First, they asked: how happy are you this morning?", 0.35, 1, "curious"],
+ ["Then they handed over an envelope. Five dollars, or twenty.", 0.35, 1, "excited"],
+ ["With one rule. Spend it by five p.m. today.", 0.35, 1, "curious"],
+ ["Half of them had to spend it on themselves. A bill, or a little treat.", 0.4, 1, "neutral"],
+ ["The other half had to spend it on someone else. A gift, or a donation.", 0.3, 1, "warm"],
+ ["That evening, the phone rings. So... how happy are you now?", 0.5, 1, "curious"],
+ ["The people who spent on someone else were happier.", 0.45, 1, "excited"],
+ ["And the twenty dollars? Made no difference. Five worked just as well.", 0.4, 1, "shocked"],
+
+ ["Here's the funny part.", 1.1, 1, "neutral"],
+ ["They asked another group of students to guess what would happen.", 0.3, 1, "curious"],
+ ["Most guessed spending on yourself would feel better. And that twenty beats five.", 0.35, 1, "firm"],
+ ["And in real life? A survey of over six hundred Americans found people spend more than ten times as much on themselves as on others.", 0.45, 1, "curious"],
+ ["But the me money wasn't linked to happiness at all. The others money was.", 0.4, 1, "sad"],
+ ["Even with a work bonus of about five thousand dollars, what mattered weeks later wasn't how big it was. It was how much of it went to other people.", 0.45, 1, "curious"],
+
+ ["And this might start really early.", 1.1, 1, "warm"],
+ ["In another study, toddlers, not even two years old, got a bowl of crackers.", 0.35, 1, "curious"],
+ ["Then a puppet named Monkey showed up, hungry.", 0.35, 1, "excited"],
+ ["They looked happier giving Monkey a cracker than getting one themselves.", 0.4, 1, "warm"],
+ ["Happiest of all? When it was their own cracker.", 0.45, 1, "whisper"],
+
+ ["Now, honesty time.", 1.1, 1, "warm"],
+ ["When other teams repeated the envelope test, the effect was smaller. One found no clear difference at all.", 0.3, 1, "neutral"],
+ ["It showed up best when people actually spent on someone. Not when they just remembered doing it.", 0.4, 1, "firm"],
+ ["So it's not magic. But it's real, and it's cheap to try.", 0.4, 1, "warm"],
+
+ ["So here's what you can try this week.", 1.1, 1, "warm"],
+ ["One. The five dollar test. Spend five on someone else, on purpose, and notice how you feel tonight.", 0.45, 1, "curious"],
+ ["Two. Give your spending a tiny others line. Even one coffee a month.", 0.5, 1, "firm"],
+ ["Three. This gift season, swap one thing for you for one small thing for someone else.", 0.5, 1, "warm"],
+
+ ["Money can buy you a better day.", 1.1, 1, "warm"],
+ ["It just works better when it's not for you.", 0.5, 1, "whisper"],
+ ["Subscribe, and go find someone to spend five dollars on.", 0.9, 1, "warm"]
+]
