@@ -1,0 +1,65 @@
+<template>
+  <style>
+    @font-face { font-family: "Hand"; src: url("assets/fonts/PatrickHand-Regular.ttf"); }
+    #root { position: absolute; inset: 0; background: #1a2b66; overflow: hidden; }
+    #ev-art { position: absolute; inset: 0; }
+    .rk { stroke: #0d0f22; stroke-linecap: round; stroke-linejoin: round; }
+    .pop { font-family: Hand; font-size: 150px; fill: #ffb35c; stroke: #0d0f22; stroke-width: 14px; paint-order: stroke; stroke-linejoin: round; }
+    .lab { font-family: Hand; font-size: 56px; fill: #f4f1ff; }
+  </style>
+  <div id="root" data-composition-id="envelope" data-width="1920" data-height="1080">
+    <svg id="ev-art" class="clip" data-start="0" data-duration="30" viewBox="0 0 1920 1080" data-layout-allow-overflow>
+      <defs>
+        <radialGradient id="ev-bg" cx="0.5" cy="0.55" r="0.75"><stop offset="0" stop-color="#2a4a9f"/><stop offset="1" stop-color="#111c4c"/></radialGradient>
+      </defs>
+      <rect width="1920" height="1080" fill="url(#ev-bg)"/>
+      <g fill="#fff" opacity="0.06"><circle cx="300" cy="160" r="4"/><circle cx="1500" cy="960" r="5"/><circle cx="1760" cy="140" r="4"/></g>
+
+      <circle id="ev-sun" cx="230" cy="200" r="90" fill="#ffd23a" opacity="0.9"/>
+      <g fill="none" stroke="#ffd23a" stroke-width="10" stroke-linecap="round" opacity="0.7" id="ev-rays">
+        <path d="M230,70 L230,40 M230,330 L230,360 M100,200 L70,200 M360,200 L390,200 M140,110 L118,88 M320,290 L342,312 M320,110 L342,88 M140,290 L118,312"/></g>
+      <!-- 7: morning happiness scale -->
+      <g transform="translate(960,480)"><g id="ev-scale" data-in="7,0.2,up" data-out="8,0"><g transform="translate(-260,0)"><circle class="rk" r="52" fill="#ff5f6d" stroke-width="8"/><circle cx="-18" cy="-12" r="7" fill="#0d0f22"/><circle cx="18" cy="-12" r="7" fill="#0d0f22"/><path d="M-22,20 Q0,-2 22,20" fill="none" stroke="#0d0f22" stroke-width="7" stroke-linecap="round"/></g><g transform="translate(-130,0)"><circle class="rk" r="52" fill="#ff8a2a" stroke-width="8"/><circle cx="-18" cy="-12" r="7" fill="#0d0f22"/><circle cx="18" cy="-12" r="7" fill="#0d0f22"/><path d="M-22,20 Q0,9 22,20" fill="none" stroke="#0d0f22" stroke-width="7" stroke-linecap="round"/></g><g transform="translate(0,0)"><circle class="rk" r="52" fill="#ffd23a" stroke-width="8"/><circle cx="-18" cy="-12" r="7" fill="#0d0f22"/><circle cx="18" cy="-12" r="7" fill="#0d0f22"/><path d="M-22,20 Q0,20 22,20" fill="none" stroke="#0d0f22" stroke-width="7" stroke-linecap="round"/></g><g transform="translate(130,0)"><circle class="rk" r="52" fill="#a6e36b" stroke-width="8"/><circle cx="-18" cy="-12" r="7" fill="#0d0f22"/><circle cx="18" cy="-12" r="7" fill="#0d0f22"/><path d="M-22,20 Q0,31 22,20" fill="none" stroke="#0d0f22" stroke-width="7" stroke-linecap="round"/></g><g transform="translate(260,0)"><circle class="rk" r="52" fill="#7cf0a8" stroke-width="8"/><circle cx="-18" cy="-12" r="7" fill="#0d0f22"/><circle cx="18" cy="-12" r="7" fill="#0d0f22"/><path d="M-22,20 Q0,42 22,20" fill="none" stroke="#0d0f22" stroke-width="7" stroke-linecap="round"/></g>
+        <g data-in="7,0.75,pop"><g transform="translate(0,-90)"><path class="rk" d="M-26,0 L-6,22 L30,-26" fill="none" style="stroke:#fff" stroke-width="14"/></g></g></g></g>
+      <!-- 8: two envelopes, $5 and $20 -->
+      <g id="ev-envs" data-out="9,0">
+        <g transform="translate(700,600)"><g data-in="8,0.25,pop"><rect class="rk" x="-180" y="-110" width="360" height="230" rx="12" fill="#e9dcc6" stroke-width="10"/><g id="ev-b5"><g transform="scale(0.8)"><rect class="rk" x="-170" y="-80" width="340" height="160" rx="14" fill="#7fd18b" stroke-width="10"/>
+          <rect x="-140" y="-54" width="280" height="108" rx="10" fill="none" stroke="#1f5a33" stroke-width="5" opacity="0.6"/>
+          <text y="34" text-anchor="middle" style="font-family:Hand;font-size:100px;fill:#1f5a33">$5</text></g></g><path class="rk" d="M-180,-40 L0,60 L180,-40 L180,120 L-180,120 Z" fill="#f3e6c8" stroke-width="10"/></g></g>
+        <g transform="translate(1220,600)"><g data-in="8,0.7,pop"><rect class="rk" x="-180" y="-110" width="360" height="230" rx="12" fill="#e9dcc6" stroke-width="10"/><g id="ev-b20"><g transform="scale(0.8)"><rect class="rk" x="-170" y="-80" width="340" height="160" rx="14" fill="#7fd18b" stroke-width="10"/>
+          <rect x="-140" y="-54" width="280" height="108" rx="10" fill="none" stroke="#1f5a33" stroke-width="5" opacity="0.6"/>
+          <text y="34" text-anchor="middle" style="font-family:Hand;font-size:100px;fill:#1f5a33">$20</text></g></g><path class="rk" d="M-180,-40 L0,60 L180,-40 L180,120 L-180,120 Z" fill="#f3e6c8" stroke-width="10"/></g></g>
+      </g>
+      <!-- 9: spend it by 5 p.m. -->
+      <g transform="translate(960,580)"><g id="ev-clock" data-in="9,0.1,pop">
+        <path class="rk" d="M-130,-200 C-170,-240 -230,-180 -190,-140 Z M130,-200 C170,-240 230,-180 190,-140 Z" fill="#ffd23a" stroke-width="9"/>
+        <circle class="rk" r="210" fill="#f7f3ea" stroke-width="14"/>
+        <g fill="#0d0f22"><circle cx="0" cy="-170" r="10"/><circle cx="170" cy="0" r="10"/><circle cx="0" cy="170" r="10"/><circle cx="-170" cy="0" r="10"/></g>
+        <path d="M0,0 L0,-150" stroke="#0d0f22" stroke-width="14" stroke-linecap="round"/>
+        <path d="M0,0 L55,95" stroke="#0d0f22" stroke-width="20" stroke-linecap="round"/>
+        <circle r="16" fill="#ff5f6d"/>
+      </g></g>
+      <text class="pop" x="960" y="200" text-anchor="middle" style="font-size:140px" data-in="9,0.55,pop">by 5 p.m.</text>
+      <g transform="translate(1720,1010) scale(0.42)"><g id="ev-kid" data-in="7,0,up">
+        <g data-rig="kid" data-p="ek" data-o='{"mouth":"smile","brows":"flat","look":[-50,-30]}'></g>
+      </g></g>
+    </svg>
+  </div>
+  <script>
+    Rig.fill();
+    const tl = gsap.timeline({ paused: true }), A = s => Rig.at(s, "envelope");
+    Rig.run(tl, "envelope");
+    Rig.blinks(tl, "ek", 0, 16);
+    tl.to("#ev-rays", { rotation: 20, svgOrigin: "230 200", duration: 8, ease: "none" }, 0);
+    // 8: bills rise out of the envelopes
+    tl.fromTo("#ev-b5", { y: 60 }, { y: -110, duration: 0.5, ease: "back.out(1.6)" }, A("8,0.35"));
+    tl.fromTo("#ev-b20", { y: 60 }, { y: -110, duration: 0.5, ease: "back.out(1.6)" }, A("8,0.8"));
+    Rig.mouth(tl, "ek", "smile", "grin", A("8,0.4"));
+    Rig.brows(tl, "ek", "up", A("8,0.4"));
+    Rig.widen(tl, "ek", A("8,0.4"));
+    // 9: the clock rings at five
+    tl.to("#ev-clock", { rotation: 6, svgOrigin: "0 0", duration: 0.06, yoyo: true, repeat: 11, ease: "sine.inOut" }, A("9,0.5"));
+    Rig.mouth(tl, "ek", "grin", "o", A("9,0.5"));
+    window.__timelines["envelope"] = tl;
+  </script>
+</template>

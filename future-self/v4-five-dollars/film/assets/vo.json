@@ -1,0 +1,224 @@
+[
+ {
+  "text": "Okay. Quick question.",
+  "mood": "curious",
+  "start": 0.3,
+  "end": 1.71
+ },
+ {
+  "text": "If I handed you twenty dollars right now...",
+  "mood": "curious",
+  "start": 2.01,
+  "end": 4.198
+ },
+ {
+  "text": "what would make you happier? Spending it on you... or on someone else?",
+  "mood": "curious",
+  "start": 4.448,
+  "end": 7.819
+ },
+ {
+  "text": "Yeah. Most people pick, on me.",
+  "mood": "warm",
+  "start": 8.269,
+  "end": 10.216
+ },
+ {
+  "text": "Researchers tested it. And most people are wrong. Twice.",
+  "mood": "firm",
+  "start": 10.616,
+  "end": 13.905
+ },
+ {
+  "text": "This one's a nice one, I promise.",
+  "mood": "warm",
+  "start": 14.405,
+  "end": 16.383
+ },
+ {
+  "text": "So. Some researchers in Vancouver ran a little experiment on a university campus.",
+  "mood": "neutral",
+  "start": 17.483,
+  "end": 22.472
+ },
+ {
+  "text": "First, they asked: how happy are you this morning?",
+  "mood": "curious",
+  "start": 22.822,
+  "end": 25.428
+ },
+ {
+  "text": "Then they handed over an envelope. Five dollars, or twenty.",
+  "mood": "excited",
+  "start": 25.778,
+  "end": 28.97
+ },
+ {
+  "text": "With one rule. Spend it by five p.m. today.",
+  "mood": "curious",
+  "start": 29.32,
+  "end": 32.382
+ },
+ {
+  "text": "Half of them had to spend it on themselves. A bill, or a little treat.",
+  "mood": "neutral",
+  "start": 32.782,
+  "end": 36.563
+ },
+ {
+  "text": "The other half had to spend it on someone else. A gift, or a donation.",
+  "mood": "warm",
+  "start": 36.863,
+  "end": 41.176
+ },
+ {
+  "text": "That evening, the phone rings. So... how happy are you now?",
+  "mood": "curious",
+  "start": 41.676,
+  "end": 44.77
+ },
+ {
+  "text": "The people who spent on someone else were happier.",
+  "mood": "excited",
+  "start": 45.22,
+  "end": 47.373
+ },
+ {
+  "text": "And the twenty dollars? Made no difference. Five worked just as well.",
+  "mood": "shocked",
+  "start": 47.773,
+  "end": 51.631
+ },
+ {
+  "text": "Here's the funny part.",
+  "mood": "neutral",
+  "start": 52.731,
+  "end": 54.002
+ },
+ {
+  "text": "They asked another group of students to guess what would happen.",
+  "mood": "curious",
+  "start": 54.302,
+  "end": 57.403
+ },
+ {
+  "text": "Most guessed spending on yourself would feel better. And that twenty beats five.",
+  "mood": "firm",
+  "start": 57.753,
+  "end": 61.886
+ },
+ {
+  "text": "And in real life? A survey of over six hundred Americans found people spend more than ten times as much on themselves as on others.",
+  "mood": "curious",
+  "start": 62.336,
+  "end": 70.432
+ },
+ {
+  "text": "But the me money wasn't linked to happiness at all. The others money was.",
+  "mood": "sad",
+  "start": 70.832,
+  "end": 75.717
+ },
+ {
+  "text": "Even with a work bonus of about five thousand dollars, what mattered weeks later wasn't how big it was. It was how much of it went to other people.",
+  "mood": "curious",
+  "start": 76.167,
+  "end": 84.458
+ },
+ {
+  "text": "And this might start really early.",
+  "mood": "warm",
+  "start": 85.558,
+  "end": 87.307
+ },
+ {
+  "text": "In another study, toddlers, not even two years old, got a bowl of crackers.",
+  "mood": "curious",
+  "start": 87.657,
+  "end": 92.022
+ },
+ {
+  "text": "Then a puppet named Monkey showed up, hungry.",
+  "mood": "excited",
+  "start": 92.372,
+  "end": 94.519
+ },
+ {
+  "text": "They looked happier giving Monkey a cracker than getting one themselves.",
+  "mood": "warm",
+  "start": 94.919,
+  "end": 98.442
+ },
+ {
+  "text": "Happiest of all? When it was their own cracker.",
+  "mood": "whisper",
+  "start": 98.892,
+  "end": 102.419
+ },
+ {
+  "text": "Now, honesty time.",
+  "mood": "warm",
+  "start": 103.519,
+  "end": 104.916
+ },
+ {
+  "text": "When other teams repeated the envelope test, the effect was smaller. One found no clear difference at all.",
+  "mood": "neutral",
+  "start": 105.216,
+  "end": 111.336
+ },
+ {
+  "text": "It showed up best when people actually spent on someone. Not when they just remembered doing it.",
+  "mood": "firm",
+  "start": 111.736,
+  "end": 117.147
+ },
+ {
+  "text": "So it's not magic. But it's real, and it's cheap to try.",
+  "mood": "warm",
+  "start": 117.547,
+  "end": 121.012
+ },
+ {
+  "text": "So here's what you can try this week.",
+  "mood": "warm",
+  "start": 122.112,
+  "end": 124.058
+ },
+ {
+  "text": "One. The five dollar test. Spend five on someone else, on purpose, and notice how you feel tonight.",
+  "mood": "curious",
+  "start": 124.508,
+  "end": 130.198
+ },
+ {
+  "text": "Two. Give your spending a tiny others line. Even one coffee a month.",
+  "mood": "firm",
+  "start": 130.698,
+  "end": 134.473
+ },
+ {
+  "text": "Three. This gift season, swap one thing for you for one small thing for someone else.",
+  "mood": "warm",
+  "start": 134.973,
+  "end": 139.892
+ },
+ {
+  "text": "Money can buy you a better day.",
+  "mood": "warm",
+  "start": 140.992,
+  "end": 142.745
+ },
+ {
+  "text": "It just works better when it's not for you.",
+  "mood": "whisper",
+  "start": 143.245,
+  "end": 146.161
+ },
+ {
+  "text": "Subscribe, and go find someone to spend five dollars on.",
+  "mood": "warm",
+  "start": 147.061,
+  "end": 150.376
+ }
+]
