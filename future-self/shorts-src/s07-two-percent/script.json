@@ -1,0 +1,38 @@
+[
+ [
+  "Free money. Only two percent would buy this.",
+  0.3,
+  1,
+  "shocked"
+ ],
+ [
+  "Researchers asked ninety-eight working adults: you get forty dollars next week. What do you buy?",
+  0.35,
+  1,
+  "curious"
+ ],
+ [
+  "They wrote down whatever came to mind.",
+  0.35,
+  1,
+  "neutral"
+ ],
+ [
+  "Only two percent thought of buying back their time. Paying someone to clean, cook, or run an errand.",
+  0.4,
+  1,
+  "firm"
+ ],
+ [
+  "Yet in the same research, spending to save time lifted people's mood more than buying things.",
+  0.4,
+  1,
+  "warm"
+ ],
+ [
+  "So what would your forty dollars buy?",
+  0.45,
+  1,
+  "curious"
+ ]
+]

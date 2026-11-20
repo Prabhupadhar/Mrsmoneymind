@@ -13,19 +13,19 @@ the end, one source named in the caption. "Payoff" is what the end of the Short 
 
 | # | Hook (first 3 s) | Payoff | Source | Status |
 |---|---|---|---|---|
-| 1 | "A bigger bonus didn't make them happier." | What mattered weeks later was the share given to others (16 employees, ~$4,900 bonus) | Dunn, Aknin & Norton 2008, *Science* | verified |
-| 2 | "Only 2% would spend free money on this." | Buying time (chores, errands); most people never think of it | Whillans et al. 2017, *PNAS* (study 9, n = 98) | verified |
-| 3 | "Half these millionaires won't pay to skip chores." | Just under half of 818 Dutch millionaires spent nothing outsourcing disliked tasks | Whillans et al. 2017, *PNAS* | verified |
-| 4 | "Forty dollars. Two weekends. One felt calmer." | A time-saving purchase lowered time stress vs a material one (60 adults, Vancouver) | Whillans et al. 2017, *PNAS* (study 8) | verified |
-| 5 | "Your brain has a price alarm." | The insula lit up at high prices and predicted not buying | Knutson et al. 2007, *Neuron* | verified |
+| 1 | "A bigger bonus didn't make them happier." | What mattered weeks later was the share given to others (16 employees, ~$4,900 bonus) | Dunn, Aknin & Norton 2008, *Science* | scheduled 2026-11-30 (s06) |
+| 2 | "Only 2% would spend free money on this." | Buying time (chores, errands); most people never think of it | Whillans et al. 2017, *PNAS* (study 9, n = 98) | scheduled 2026-12-01 (s07) |
+| 3 | "Millionaires. Still doing their own chores." (softened: paper text says just under half, its table about 40%) | Just under half of 818 Dutch millionaires spent nothing outsourcing disliked tasks | Whillans et al. 2017, *PNAS* | scheduled 2026-12-02 (s08) |
+| 4 | "Forty dollars. Two weekends. One felt calmer." | A time-saving purchase lowered time stress vs a material one (60 adults, Vancouver) | Whillans et al. 2017, *PNAS* (study 8) | scheduled 2026-12-03 (s09) |
+| 5 | "Your brain has a price alarm." | The insula lit up at high prices and predicted not buying | Knutson et al. 2007, *Neuron* | scheduled 2026-12-04 (s10) |
 | 6 | "Can you remember what you spent this week?" | Card payers recalled their spending less accurately | Soman 2001, *J. Consumer Research* | verified |
 | 7 | "71 studies. Does cashless make you spend more?" | Yes, but the effect is small | Schomburgk, Belli & Hoffmann 2024, *J. Retailing* | verified |
-| 8 | "Your neighbor won. You bought the car." | Neighbors of Dutch postcode-lottery winners spent more on cars | Kuhn et al. 2011, *AER* | verified |
+| 8 | "Your neighbor won. You bought the car." | Neighbors of Dutch postcode-lottery winners spent more on cars | Kuhn et al. 2011, *AER* | dropped: duplicate of the v3b Short (neighbor's new car, published 2026-11-20) |
 | 9 | "They saved four times more without trying." | Save More Tomorrow: saving rate 3.5% to 13.6% over 40 months | Thaler & Benartzi 2004, *JPE* | verified |
 | 10 | "This famous happiness study only partly held up." | Honest science: the $5 experiment's replications were mixed | Aknin et al. 2020 *JPSP*; Kim et al. 2022 *PLoS ONE* | verified |
 | 11 | "Your brain files future you as a stranger." | Thinking of your future self looked more like thinking of others | Ersner-Hershfield, Wimmer & Knutson 2009, *SCAN* | verified |
-| 12 | "Twenty-two months old, and already generous." | Toddlers gave away their own treats and looked happiest doing it | Aknin, Hamlin & Dunn 2012, *PLoS ONE* | verified |
-| 13 | "Happier people spend a bit more on others." | 632-person survey: prosocial spending, not personal, linked to happiness | Dunn, Aknin & Norton 2008, *Science* | verified |
+| 12 | "Twenty-two months old, and already generous." | Toddlers gave away their own treats and looked happiest doing it | Aknin, Hamlin & Dunn 2012, *PLoS ONE* | dropped: duplicate of the v4b Short (toddlers, scheduled 2026-11-27) |
+| 13 | "Happier people spend a bit more on others." | 632-person survey: prosocial spending, not personal, linked to happiness | Dunn, Aknin & Norton 2008, *Science* | dropped: duplicate of s01 (632-person survey, scheduled 2026-11-27) |
 | 14 | "You'd sell this mug for double." | Endowment effect: owners asked about twice what buyers offered | Kahneman, Knetsch & Thaler 1990, *JPE* | to verify |
 | 15 | "Paying full price made them show up more." | Sunk cost: full-price season-ticket holders attended more plays | Arkes & Blumer 1985, *OBHDP* | to verify |
 | 16 | "Mondays actually work." | Fresh-start effect: gym visits rise after Mondays, birthdays, New Year | Dai, Milkman & Riis 2014, *Management Science* | to verify |

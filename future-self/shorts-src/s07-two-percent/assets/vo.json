@@ -1,0 +1,38 @@
+[
+ {
+  "text": "Free money. Only two percent would buy this.",
+  "mood": "shocked",
+  "start": 0.3,
+  "end": 2.794
+ },
+ {
+  "text": "Researchers asked ninety-eight working adults: you get forty dollars next week. What do you buy?",
+  "mood": "curious",
+  "start": 3.144,
+  "end": 8.742
+ },
+ {
+  "text": "They wrote down whatever came to mind.",
+  "mood": "neutral",
+  "start": 9.092,
+  "end": 10.956
+ },
+ {
+  "text": "Only two percent thought of buying back their time. Paying someone to clean, cook, or run an errand.",
+  "mood": "firm",
+  "start": 11.356,
+  "end": 17.315
+ },
+ {
+  "text": "Yet in the same research, spending to save time lifted people's mood more than buying things.",
+  "mood": "warm",
+  "start": 17.715,
+  "end": 23.33
+ },
+ {
+  "text": "So what would your forty dollars buy?",
+  "mood": "curious",
+  "start": 23.78,
+  "end": 25.548
+ }
+]

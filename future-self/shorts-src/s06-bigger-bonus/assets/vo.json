@@ -1,0 +1,38 @@
+[
+ {
+  "text": "A bigger bonus didn't make them happier.",
+  "mood": "shocked",
+  "start": 0.3,
+  "end": 2.301
+ },
+ {
+  "text": "Sixteen employees got a work bonus. About five thousand dollars, on average.",
+  "mood": "neutral",
+  "start": 2.651,
+  "end": 7.464
+ },
+ {
+  "text": "Six to eight weeks later, researchers asked how happy they were.",
+  "mood": "curious",
+  "start": 7.814,
+  "end": 11.326
+ },
+ {
+  "text": "The size of the bonus didn't predict it.",
+  "mood": "firm",
+  "start": 11.726,
+  "end": 13.701
+ },
+ {
+  "text": "What did? How much of it they spent on other people. Gifts, donations.",
+  "mood": "warm",
+  "start": 14.101,
+  "end": 18.337
+ },
+ {
+  "text": "It's a tiny study, so hold it loosely. But where did your last bonus go?",
+  "mood": "curious",
+  "start": 18.787,
+  "end": 22.978
+ }
+]
