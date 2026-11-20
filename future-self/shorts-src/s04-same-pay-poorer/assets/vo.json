@@ -1,0 +1,32 @@
+[
+ {
+  "text": "Same paycheck. Same job. So why do you feel poorer?",
+  "mood": "curious",
+  "start": 0.3,
+  "end": 3.602
+ },
+ {
+  "text": "An economist compared how happy people were with what their neighbors earned.",
+  "mood": "neutral",
+  "start": 3.952,
+  "end": 8.162
+ },
+ {
+  "text": "When the neighbors earned more, people said they were less happy. Even with the exact same income.",
+  "mood": "sad",
+  "start": 8.562,
+  "end": 15.102
+ },
+ {
+  "text": "Your paycheck didn't change. Your street did.",
+  "mood": "firm",
+  "start": 15.552,
+  "end": 18.095
+ },
+ {
+  "text": "So who are you really comparing yourself to?",
+  "mood": "curious",
+  "start": 18.545,
+  "end": 20.706
+ }
+]

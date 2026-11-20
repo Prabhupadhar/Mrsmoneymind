@@ -1,0 +1,32 @@
+[
+ [
+  "Quick question. Who do you spend more money on? You... or everyone else?",
+  0.3,
+  1,
+  "curious"
+ ],
+ [
+  "In one survey of over six hundred Americans, people spent more than ten times as much on themselves.",
+  0.35,
+  1,
+  "firm"
+ ],
+ [
+  "But the money they spent on themselves? Not linked to happiness at all.",
+  0.4,
+  1,
+  "shocked"
+ ],
+ [
+  "The money they spent on other people was.",
+  0.4,
+  1,
+  "warm"
+ ],
+ [
+  "So next time you buy something... ask yourself. Who's it for?",
+  0.45,
+  1,
+  "curious"
+ ]
+]

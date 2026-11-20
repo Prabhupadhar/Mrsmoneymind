@@ -1,0 +1,32 @@
+[
+ [
+  "Same paycheck. Same job. So why do you feel poorer?",
+  0.3,
+  1,
+  "curious"
+ ],
+ [
+  "An economist compared how happy people were with what their neighbors earned.",
+  0.35,
+  1,
+  "neutral"
+ ],
+ [
+  "When the neighbors earned more, people said they were less happy. Even with the exact same income.",
+  0.4,
+  1,
+  "sad"
+ ],
+ [
+  "Your paycheck didn't change. Your street did.",
+  0.45,
+  1,
+  "firm"
+ ],
+ [
+  "So who are you really comparing yourself to?",
+  0.45,
+  1,
+  "curious"
+ ]
+]

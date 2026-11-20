@@ -1,0 +1,38 @@
+[
+ {
+  "text": "Would twenty dollars make you happier than five?",
+  "mood": "curious",
+  "start": 0.3,
+  "end": 2.596
+ },
+ {
+  "text": "Researchers asked a hundred and nine students. Ninety-four said yes.",
+  "mood": "firm",
+  "start": 2.946,
+  "end": 7.111
+ },
+ {
+  "text": "Then they actually handed people five or twenty dollars, to spend by five p.m.",
+  "mood": "curious",
+  "start": 7.461,
+  "end": 12.32
+ },
+ {
+  "text": "The amount made no difference to how happy they were that evening.",
+  "mood": "shocked",
+  "start": 12.72,
+  "end": 15.78
+ },
+ {
+  "text": "What mattered was who they spent it on.",
+  "mood": "warm",
+  "start": 16.18,
+  "end": 18.169
+ },
+ {
+  "text": "So. Would twenty really make you happier than five?",
+  "mood": "curious",
+  "start": 18.619,
+  "end": 21.063
+ }
+]

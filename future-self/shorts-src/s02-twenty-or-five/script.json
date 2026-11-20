@@ -1,0 +1,38 @@
+[
+ [
+  "Would twenty dollars make you happier than five?",
+  0.3,
+  1,
+  "curious"
+ ],
+ [
+  "Researchers asked a hundred and nine students. Ninety-four said yes.",
+  0.35,
+  1,
+  "firm"
+ ],
+ [
+  "Then they actually handed people five or twenty dollars, to spend by five p.m.",
+  0.35,
+  1,
+  "curious"
+ ],
+ [
+  "The amount made no difference to how happy they were that evening.",
+  0.4,
+  1,
+  "shocked"
+ ],
+ [
+  "What mattered was who they spent it on.",
+  0.4,
+  1,
+  "warm"
+ ],
+ [
+  "So. Would twenty really make you happier than five?",
+  0.45,
+  1,
+  "curious"
+ ]
+]

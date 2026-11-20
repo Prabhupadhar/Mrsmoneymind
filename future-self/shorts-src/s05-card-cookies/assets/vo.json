@@ -1,0 +1,32 @@
+[
+ {
+  "text": "Why does paying by card put more cookies in your cart?",
+  "mood": "curious",
+  "start": 0.3,
+  "end": 3.216
+ },
+ {
+  "text": "Researchers tracked the shopping of a thousand households for six months.",
+  "mood": "neutral",
+  "start": 3.566,
+  "end": 7.372
+ },
+ {
+  "text": "When people paid by card, more unhealthy, impulse foods ended up in the cart.",
+  "mood": "shocked",
+  "start": 7.772,
+  "end": 12.382
+ },
+ {
+  "text": "Their idea: cash makes you feel the price. A card doesn't. So the craving wins.",
+  "mood": "curious",
+  "start": 12.782,
+  "end": 17.362
+ },
+ {
+  "text": "Next grocery run, try cash for the snack aisle. And see what lands in your cart.",
+  "mood": "warm",
+  "start": 17.812,
+  "end": 22.735
+ }
+]

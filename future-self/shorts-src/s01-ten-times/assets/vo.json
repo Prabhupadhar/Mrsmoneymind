@@ -1,0 +1,32 @@
+[
+ {
+  "text": "Quick question. Who do you spend more money on? You... or everyone else?",
+  "mood": "curious",
+  "start": 0.3,
+  "end": 4.258
+ },
+ {
+  "text": "In one survey of over six hundred Americans, people spent more than ten times as much on themselves.",
+  "mood": "firm",
+  "start": 4.608,
+  "end": 10.589
+ },
+ {
+  "text": "But the money they spent on themselves? Not linked to happiness at all.",
+  "mood": "shocked",
+  "start": 10.989,
+  "end": 14.614
+ },
+ {
+  "text": "The money they spent on other people was.",
+  "mood": "warm",
+  "start": 15.014,
+  "end": 17.142
+ },
+ {
+  "text": "So next time you buy something... ask yourself. Who's it for?",
+  "mood": "curious",
+  "start": 17.592,
+  "end": 20.796
+ }
+]
