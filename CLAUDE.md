@@ -11,7 +11,8 @@ The owner does not want to approve each step. Run the pipeline end to end withou
   was scheduled, with the planner links.
 - Default cadence: about 5 standalone Shorts a week (Mon-Fri, 20:30 IST) and one long video
   every two weeks (Wednesday 16:00 IST, its Shorts on the next two days at 16:00).
-- Do not merge pull requests into `main` unless the owner asks; push to the working branch.
+- Do not merge pull requests into `main` unless the owner asks; push to `claude/loving-turing-6gvkvm`.
+- What to make next, and the weekly run's steps: `future-self/CONTENT-PLAN.md`.
 
 ## Never automated (stop and ask)
 - Facts: every number must come from the original paper, read in full. If a paper cannot be
