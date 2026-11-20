@@ -1,21 +1,21 @@
 [
  [
-  "Would twenty dollars make you happier than five?",
+  "Ninety-four out of a hundred and nine people got this wrong.",
   0.3,
+  1,
+  "shocked"
+ ],
+ [
+  "The question: would twenty dollars make you happier than five?",
+  0.35,
   1,
   "curious"
  ],
  [
-  "Researchers asked a hundred and nine students. Ninety-four said yes.",
+  "Most said yes. So researchers handed people five or twenty dollars, to spend by five p.m.",
   0.35,
   1,
   "firm"
- ],
- [
-  "Then they actually handed people five or twenty dollars, to spend by five p.m.",
-  0.35,
-  1,
-  "curious"
  ],
  [
   "The amount made no difference to how happy they were that evening.",
@@ -30,7 +30,7 @@
   "warm"
  ],
  [
-  "So. Would twenty really make you happier than five?",
+  "Still think twenty beats five?",
   0.45,
   1,
   "curious"

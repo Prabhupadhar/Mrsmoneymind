@@ -1,9 +1,9 @@
 [
  [
-  "Why does paying by card put more cookies in your cart?",
+  "Your card is buying you cookies.",
   0.3,
   1,
-  "curious"
+  "shocked"
  ],
  [
   "Researchers tracked the shopping of a thousand households for six months.",
@@ -15,7 +15,7 @@
   "When people paid by card, more unhealthy, impulse foods ended up in the cart.",
   0.4,
   1,
-  "shocked"
+  "curious"
  ],
  [
   "Their idea: cash makes you feel the price. A card doesn't. So the craving wins.",
@@ -24,7 +24,7 @@
   "curious"
  ],
  [
-  "Next grocery run, try cash for the snack aisle. And see what lands in your cart.",
+  "Next grocery run, try cash for the snack aisle. See what's left in your cart.",
   0.45,
   1,
   "warm"

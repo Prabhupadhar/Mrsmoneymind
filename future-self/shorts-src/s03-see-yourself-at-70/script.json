@@ -1,21 +1,21 @@
 [
  [
-  "What if you could see yourself at seventy... today?",
+  "This one photo made people save twice as much.",
   0.3,
   1,
-  "curious"
+  "excited"
  ],
  [
-  "In one online experiment, some people saw an aged photo of their own face.",
+  "In an online experiment, some people saw an aged photo of their own face.",
   0.35,
   1,
-  "neutral"
+  "curious"
  ],
  [
   "Then they chose how to split money between now and retirement.",
   0.3,
   1,
-  "curious"
+  "neutral"
  ],
  [
   "The ones who met their older self put about twice as much aside for later.",
@@ -30,7 +30,7 @@
   "firm"
  ],
  [
-  "So. Have you met yourself at seventy yet?",
+  "So. Have you met yourself at seventy?",
   0.45,
   1,
   "warm"

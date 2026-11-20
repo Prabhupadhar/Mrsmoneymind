@@ -25,11 +25,11 @@ const SHORTS = {
   v4b: { film: 'v4-five-dollars/film', out: 'v4-short2-toddlers-know', lines: [[21, 25]], head: ['Toddlers already', O('know this')],
          scenes: L => [['v4btod', 'v4b-toddler', 0]] },
   // standalone Shorts: voice made by tools/vo-film.py from shorts-src/<name>/script.json
-  s01: { film: 'shorts-src/s01-ten-times', out: 's01-ten-times', lines: [[0, 4]], head: ['People spend 10&#215; more', O('on themselves.')], scenes: L => [['s01', 's01-ten-times', 0]] },
-  s02: { film: 'shorts-src/s02-twenty-or-five', out: 's02-twenty-or-five', lines: [[0, 5]], head: ['$20 or $5?', O('Guess which wins.')], scenes: L => [['s02', 's02-twenty-or-five', 0]] },
-  s03: { film: 'shorts-src/s03-see-yourself-at-70', out: 's03-see-yourself-at-70', lines: [[0, 5]], head: ['See yourself at 70.', O('Save twice as much?')], scenes: L => [['s03', 's03-see-yourself-at-70', 0]] },
-  s04: { film: 'shorts-src/s04-same-pay-poorer', out: 's04-same-pay-poorer', lines: [[0, 4]], head: ['Same pay.', O('Why feel poorer?')], scenes: L => [['s04', 's04-same-pay-poorer', 0]] },
-  s05: { film: 'shorts-src/s05-card-cookies', out: 's05-card-cookies', lines: [[0, 4]], head: ['Pay by card,', O('eat more junk?')], scenes: L => [['s05', 's05-card-cookies', 0]] },
+  s01: { film: 'shorts-src/s01-ten-times', out: 's01-ten-times', lines: [[0, 4]], head: ['Ten on you.', O('One on others.')], scenes: L => [['s01', 's01-ten-times', 0]] },
+  s02: { film: 'shorts-src/s02-twenty-or-five', out: 's02-twenty-or-five', lines: [[0, 5]], head: ['94 of 109', O('got this wrong.')], scenes: L => [['s02', 's02-twenty-or-five', 0]] },
+  s03: { film: 'shorts-src/s03-see-yourself-at-70', out: 's03-see-yourself-at-70', lines: [[0, 5]], head: ['One photo.', O('Twice the savings?')], scenes: L => [['s03', 's03-see-yourself-at-70', 0]] },
+  s04: { film: 'shorts-src/s04-same-pay-poorer', out: 's04-same-pay-poorer', lines: [[0, 4]], head: ["Your neighbor's raise", O('makes you sadder?')], scenes: L => [['s04', 's04-same-pay-poorer', 0]] },
+  s05: { film: 'shorts-src/s05-card-cookies', out: 's05-card-cookies', lines: [[0, 4]], head: ['Your card is', O('buying you cookies.')], scenes: L => [['s05', 's05-card-cookies', 0]] },
 };
 const S = SHORTS[process.argv[2]];
 if (!S) throw new Error('usage: prep-short.cjs ' + Object.keys(SHORTS).join('|'));

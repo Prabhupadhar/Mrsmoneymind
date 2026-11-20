@@ -1,32 +1,32 @@
 [
  {
-  "text": "Same paycheck. Same job. So why do you feel poorer?",
-  "mood": "curious",
+  "text": "Your neighbor's raise can make you less happy.",
+  "mood": "shocked",
   "start": 0.3,
-  "end": 3.602
+  "end": 2.472
  },
  {
   "text": "An economist compared how happy people were with what their neighbors earned.",
   "mood": "neutral",
-  "start": 3.952,
-  "end": 8.162
+  "start": 2.822,
+  "end": 7.032
  },
  {
   "text": "When the neighbors earned more, people said they were less happy. Even with the exact same income.",
   "mood": "sad",
-  "start": 8.562,
-  "end": 15.102
+  "start": 7.432,
+  "end": 13.971
  },
  {
   "text": "Your paycheck didn't change. Your street did.",
   "mood": "firm",
-  "start": 15.552,
-  "end": 18.095
+  "start": 14.421,
+  "end": 16.964
  },
  {
-  "text": "So who are you really comparing yourself to?",
+  "text": "So whose raise are you really feeling?",
   "mood": "curious",
-  "start": 18.545,
-  "end": 20.706
+  "start": 17.414,
+  "end": 19.272
  }
 ]
