@@ -1,0 +1,12 @@
+[
+ ["You lost ten bucks. Still buying the ticket?", 0.1, 1, "curious"],
+ ["Picture it. You're at the theater. A ticket costs ten dollars.", 0.4, 1, "neutral"],
+ ["You open your wallet, and a ten dollar bill is gone.", 0.3, 1, "sad"],
+ ["Researchers asked students. Would you still buy the ticket?", 0.35, 1, "curious"],
+ ["Eighty-eight percent said yes.", 0.4, 1, "warm"],
+ ["But change one thing. You already bought the ticket, and you lost the ticket.", 0.45, 1, "curious"],
+ ["Same ten dollars gone.", 0.4, 1, "firm"],
+ ["Now only forty-six percent would buy another.", 0.5, 1, "shocked"],
+ ["Your brain keeps money in separate jars. A second ticket feels like paying twenty.", 0.45, 1, "warm"],
+ ["So you lost ten bucks. Which ten was it?", 0.4, 1, "whisper"]
+]
