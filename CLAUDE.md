@@ -15,6 +15,8 @@ The owner does not want to approve each step. Run the pipeline end to end withou
     Short at 13:00 IST (an A/B test of the two styles on the same days);
   - from 7 Dec 2026: **Pop Art is the default** for all new Shorts, 5 a week at 13:00 IST. Build them
     with `future-self/popart/README.md`. Long videos keep the classic HyperFrames pipeline.
+  - Pick each Short's format from its story (cartoon scene for people in a situation, Pop Art wall/grid for
+    crowds and percentages, chart for a changing number, split frame for a choice); never the same format two days running.
 - Do not merge pull requests into `main` unless the owner asks; push to `claude/loving-turing-6gvkvm`.
 - What to make next, and the weekly run's steps: `future-self/CONTENT-PLAN.md`.
 

@@ -25,11 +25,11 @@ finding, but the run must read the paper in full before writing a single line; `
 | ID | Date | Hook | Source | Status |
 |---|---|---|---|---|
 | P01 | 2026-11-23 | "Your neighbor won. Why are THEY going broke?" (remake of v3a in Pop Art: style A/B) | Agarwal, Mikhed & Scholnick 2020 | scheduled 2026-11-23 |
-| P02 | 2026-11-24 | H01 "They nearly quadrupled their savings." | Thaler & Benartzi 2004 | built |
-| P03 | 2026-11-25 | H02 "They fined late parents. Lateness got worse." | Gneezy & Rustichini 2000 (read in full) | built |
-| P04 | 2026-11-26 | H17 "Give someone a mug. Its price doubles." | Kahneman, Knetsch & Thaler 1990, exp. 6 (read in full) | built |
-| P05 | 2026-11-27 | next hook from the bank | | to build |
-The hook bank below now feeds the Pop Art slot (H01, H02 and H17 are used).
+| P02 | 2026-11-24 | H01 "They nearly quadrupled their savings." (Pop Art chart) | Thaler & Benartzi 2004 | scheduled 2026-11-24 |
+| P03 | 2026-11-25 | H02 "They fined late parents. Lateness got worse." (cartoon scene, `p03-fine-mc`) | Gneezy & Rustichini 2000 (read in full) | scheduled 2026-11-25 |
+| P04 | 2026-11-26 | H17 "Give someone a mug. Its price doubles." (cartoon split, `p04-mug-mc`) | Kahneman, Knetsch & Thaler 1990, exp. 6 (read in full) | scheduled 2026-11-26 |
+| P05 | 2026-11-27 | H09 "You lost ten bucks. Still buying the ticket?" (Pop Art grid + jars) | Tversky & Kahneman 1981, problems 8-9 (read in full) | scheduled 2026-11-27 |
+The hook bank below now feeds the 13:00 slot (H01, H02, H09 and H17 are used). H14 (drive 20 minutes, same 1981 paper: 68% vs 29%) is verified.
 
 ### Hook bank: 50 Shorts (build in this order)
 Every Short follows the storytelling formula in `CLAUDE.md`. The hook must stay exactly true to the
