@@ -1,0 +1,62 @@
+[
+ {
+  "text": "Give someone a mug. Its price doubles.",
+  "mood": "excited",
+  "start": 0.1,
+  "end": 2.105
+ },
+ {
+  "text": "Same mug. Same classroom. Two very different prices.",
+  "mood": "curious",
+  "start": 2.505,
+  "end": 5.863
+ },
+ {
+  "text": "Researchers gave coffee mugs to some students. The rest got nothing.",
+  "mood": "neutral",
+  "start": 6.213,
+  "end": 10.142
+ },
+ {
+  "text": "Then they asked. Owners, what would you sell it for?",
+  "mood": "curious",
+  "start": 10.442,
+  "end": 12.897
+ },
+ {
+  "text": "Everyone else, what would you pay?",
+  "mood": "curious",
+  "start": 13.197,
+  "end": 14.759
+ },
+ {
+  "text": "Buyers said about three dollars.",
+  "mood": "neutral",
+  "start": 15.209,
+  "end": 16.925
+ },
+ {
+  "text": "Owners? About seven.",
+  "mood": "shocked",
+  "start": 17.425,
+  "end": 18.838
+ },
+ {
+  "text": "They had owned it for a few minutes.",
+  "mood": "whisper",
+  "start": 19.338,
+  "end": 21.46
+ },
+ {
+  "text": "That's why your old stuff feels worth more than anyone will pay.",
+  "mood": "warm",
+  "start": 21.86,
+  "end": 25.005
+ },
+ {
+  "text": "Owning it was enough to double it.",
+  "mood": "firm",
+  "start": 25.405,
+  "end": 27.073
+ }
+]
