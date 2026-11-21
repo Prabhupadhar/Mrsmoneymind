@@ -20,6 +20,16 @@ The owner does not want to approve each step. Run the pipeline end to end withou
 - Do not merge pull requests into `main` unless the owner asks; push to `claude/loving-turing-6gvkvm`.
 - What to make next, and the weekly run's steps: `future-self/CONTENT-PLAN.md`.
 
+## Style test: decision rule (fixed 21 Nov 2026, before any results)
+Freeze formats, slots and cadence until the test ends. Test window: Shorts published 23 Nov - 4 Dec 2026
+(classic s01-s10 at 20:30 vs new-format P01-P10 at 13:00). On or after 7 Dec, from YouTube Studio
+(Metricool lags; ask the owner for screenshots if Studio is not readable) compare per Short:
+**"viewed" % in "viewed vs swiped away"** (primary) and **average % viewed** (secondary). Raw views only break ties.
+- A format **wins** if its median "viewed" % beats the classic median by **10 points or more** across at least 3 Shorts.
+- Within 10 points: no winner; keep the new formats (cheaper to make) and pick the better-performing slot.
+- Classic wins by 10+ points: go back to classic for people stories and tell the owner.
+- After the test: one Short a day in the winning slot; record the numbers and the decision in the data section below.
+
 ## Never automated (stop and ask)
 - Facts: every number must come from the original paper, read in full. If a paper cannot be
   read, or the evidence is weak or mixed, say so in the script's fact check; if it is too weak
@@ -30,10 +40,11 @@ The owner does not want to approve each step. Run the pipeline end to end withou
 ## Shorts rules
 - The first 3 seconds carry the hook: 8 words or fewer, a surprising claim or number by second 2,
   motion in frame 0 (no fade-ins), and an open loop that the end closes.
-- 20-35 s, native 1080x1920, same header/footer layout as `future-self/shorts/`.
+- 20-35 s, native 1080x1920, nothing important in the bottom 420 px (Shorts UI).
 - The hook must be exactly true to the paper; teasing is fine, overclaiming is not.
-- Build standalone Shorts from `future-self/shorts-src/<name>/script.json` and
-  `node tools/prep-short.cjs <id>` entries (see the s01-s05 entries).
+- New standalone Shorts are built in `future-self/popart/<id>/` with the lemo-opuscar kits
+  (`future-self/popart/README.md`). The old HyperFrames Shorts (`shorts-src/`, `tools/prep-short.cjs`)
+  are only for cutting Shorts out of a long video.
 
 ## Storytelling (every Short and every long video)
 The channel wins on story, not on facts read aloud. Write each Short as a 25-second story:

@@ -25,22 +25,22 @@ into a `_<name>` kit, keep 1080x1920, keep the bottom 420 px clear).
 - `<id>/`: one Short: `main.js` (the film), `script.json` (voice lines), `voice/vo.json` + `vo.wav`, `index.html`, final `<id>.mp4`
 
 ## Build a new one (in a cloud run)
+The environment's setup script installs the library at `/opt/lemo-opuscar` (core deps) and ffmpeg 7 at `/opt/ffmpeg7`.
+If either is missing (a machine without the script), run these first:
 ```sh
-S=$(mktemp -d); cd $S
-git clone --depth 1 https://github.com/lemomo-ai/lemo-opuscar
-curl -sSL https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz | tar xJ   # ffmpeg 7 (Ubuntu ships 6.x)
-mv ffmpeg-*-static ffmpeg-7.0.2-amd64-static
-(cd lemo-opuscar && sh plugin/skills/lemo-opuscar/scripts/setup.sh deps)
-cp -r <repo>/future-self/popart/_kit lemo-opuscar/films/_kit
-cp -r <repo>/future-self/popart/_mc lemo-opuscar/films/_mc
-cp -r <repo>/future-self/popart/<id> lemo-opuscar/films/<id>
-# voice with our usual narrator (run from the repo root):
-python3 future-self/tools/vo-film.py lemo-opuscar/films/<id>/script.json lemo-opuscar/films/<id>/voice
-# check frames, then build
-(cd lemo-opuscar && node core/render/still.mjs films/<id> 0.1 2 10 20 --size 1080x1920 --out films/<id>/st)
-sh lemo-opuscar/films/_kit/build.sh <id>
-cp lemo-opuscar/films/<id>/<id>-web.mp4 <repo>/future-self/popart/<id>/<id>.mp4
+if [ ! -d /opt/lemo-opuscar ]; then git clone -q --depth 1 https://github.com/lemomo-ai/lemo-opuscar /opt/lemo-opuscar && (cd /opt/lemo-opuscar && sh plugin/skills/lemo-opuscar/scripts/setup.sh deps); fi
+if [ ! -x /opt/ffmpeg7/ffmpeg ]; then mkdir -p /opt/ffmpeg7 && curl -sSL https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz | tar xJ -C /opt/ffmpeg7 --strip-components=1; fi
 ```
+```sh
+L=/opt/lemo-opuscar; mkdir -p $L/films
+cp -r future-self/popart/_kit future-self/popart/_mc $L/films/
+cp -r future-self/popart/<id> $L/films/<id>          # main.js, script.json, index.html (copy _kit/index.html)
+python3 future-self/tools/vo-film.py $L/films/<id>/script.json $L/films/<id>/voice   # our narrator
+(cd $L && node core/render/still.mjs films/<id> 0.1 3 10 18 25 --size 1080x1920 --out films/<id>/st)   # look at these
+sh $L/films/_kit/build.sh <id>                       # events, mix, render, master, <id>-web.mp4
+cp $L/films/<id>/<id>-web.mp4 future-self/popart/<id>/<id>.mp4
+```
+Pop Art pages need WebGL (software rendering here: ~3 min per 30 s Short); cartoon pages are Canvas 2D (~30 s).
 
 ## Directing rules (from the style guide, kept short)
 - One subject icon per film, printed as a **wall of identical tiles**; meaning comes from repetition and from

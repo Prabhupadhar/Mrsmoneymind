@@ -114,7 +114,9 @@ When fewer than 10 items are left, add 10 new ideas from peer-reviewed money-psy
 3. Check Metricool (`getScheduledPosts`) for the coming Mon-Fri so nothing is scheduled twice.
 4. Build the next 5 Shorts from the hook bank in section 1 for next Mon-Fri at **13:00 IST in the Pop Art style**
    (`future-self/popart/README.md`): verify facts in the paper first, write `future-self/popart/<id>/script.json`
-   and `main.js`, generate the voice, check stills, build, look at frame 0. (The classic 20:30 slot ends on 4 Dec.)
+   and `main.js` (format from the story, see the README table), generate the voice, check stills, build, look at
+   frame 0. Library and ffmpeg 7 are preinstalled at `/opt/lemo-opuscar` and `/opt/ffmpeg7`. (The classic 20:30 slot ends on 4 Dec.)
+   On the first run on or after 7 Dec, apply the style-test decision rule in `CLAUDE.md` before building.
 5. If a long video in section 2 publishes within the next 13 days and is not built, build it
    (script, voice, scenes, check, full render, two Shorts, two thumbnails, upload kit).
 6. Schedule everything in Metricool with `draft: false`, at least 48 hours ahead. Media URLs:
