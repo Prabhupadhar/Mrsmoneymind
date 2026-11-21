@@ -63,6 +63,16 @@ the kid as a clearly fictional character.
 - Decision: "Two choices: [A] or [B]. Most people pick wrong." (H09, H14, H28, H44)
 Skip the client/customer frame (no clients). Frames count as hook types for the no-repeat rule.
 
+### What our data says (YouTube Studio, 21 Nov 2026, first 6 Shorts)
+"Your neighbor won. You went broke?" 497 views; "Your neighbor's new car costs YOU" 186; "You're robbing
+someone you know" 138; "Pay by card, pay DOUBLE?" 60; "Why tapping your card doesn't hurt" 48;
+"Saving feels awful? Here's why" 27. So:
+- Prefer "you lose because of someone else" hooks (a second character on screen in frame 0: the neighbor,
+  a stranger, a coworker). Reuse the neighbor as a recurring character when the study fits.
+- Never open with "Why..." or "Here's why"; turn the explanation into a conflict or a loss.
+- Always native vertical; never a cropped 16:9 clip on a blurred background.
+Re-check against YouTube Studio (Metricool lags several days) and update this list as data grows.
+
 ## Other rules
 - Voice only (Kokoro, `af_heart` mood blends); the screen never reads a line back.
 - Mark AI content as altered/synthetic; not made for kids; category Education.
