@@ -1,0 +1,38 @@
+[
+ {
+  "text": "Forty dollars. Two weekends. One felt calmer.",
+  "mood": "firm",
+  "start": 0.3,
+  "end": 3.275
+ },
+ {
+  "text": "Sixty working adults in Vancouver got forty dollars, two weekends in a row.",
+  "mood": "neutral",
+  "start": 3.625,
+  "end": 8.011
+ },
+ {
+  "text": "One weekend, they bought a thing for themselves.",
+  "mood": "neutral",
+  "start": 8.361,
+  "end": 10.764
+ },
+ {
+  "text": "The other, they bought back time. Something that saved them a chore.",
+  "mood": "curious",
+  "start": 11.114,
+  "end": 14.478
+ },
+ {
+  "text": "The time weekend won. Less time stress, and a better mood by evening.",
+  "mood": "warm",
+  "start": 14.878,
+  "end": 19.216
+ },
+ {
+  "text": "So next time you get forty dollars, which weekend do you want?",
+  "mood": "curious",
+  "start": 19.666,
+  "end": 22.996
+ }
+]

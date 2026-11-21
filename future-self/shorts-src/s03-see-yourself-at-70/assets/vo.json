@@ -1,0 +1,38 @@
+[
+ {
+  "text": "This one photo made people save twice as much.",
+  "mood": "excited",
+  "start": 0.3,
+  "end": 3.111
+ },
+ {
+  "text": "In an online experiment, some people saw an aged photo of their own face.",
+  "mood": "curious",
+  "start": 3.461,
+  "end": 7.752
+ },
+ {
+  "text": "Then they chose how to split money between now and retirement.",
+  "mood": "neutral",
+  "start": 8.052,
+  "end": 11.232
+ },
+ {
+  "text": "The ones who met their older self put about twice as much aside for later.",
+  "mood": "shocked",
+  "start": 11.632,
+  "end": 15.785
+ },
+ {
+  "text": "It was a pretend choice, not a real paycheck. But it shows how far away future you feels.",
+  "mood": "firm",
+  "start": 16.185,
+  "end": 21.808
+ },
+ {
+  "text": "So. Have you met yourself at seventy?",
+  "mood": "warm",
+  "start": 22.258,
+  "end": 24.253
+ }
+]

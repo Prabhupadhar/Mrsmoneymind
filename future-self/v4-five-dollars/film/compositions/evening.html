@@ -1,0 +1,67 @@
+<template>
+  <style>
+    @font-face { font-family: "Hand"; src: url("assets/fonts/PatrickHand-Regular.ttf"); }
+    #root { position: absolute; inset: 0; background: #1a2b66; overflow: hidden; }
+    #eh-art { position: absolute; inset: 0; }
+    .rk { stroke: #0d0f22; stroke-linecap: round; stroke-linejoin: round; }
+    .pop { font-family: Hand; font-size: 150px; fill: #ffb35c; stroke: #0d0f22; stroke-width: 14px; paint-order: stroke; stroke-linejoin: round; }
+    .lab { font-family: Hand; font-size: 56px; fill: #f4f1ff; }
+  </style>
+  <div id="root" data-composition-id="evening" data-width="1920" data-height="1080">
+    <svg id="eh-art" class="clip" data-start="0" data-duration="30" viewBox="0 0 1920 1080" data-layout-allow-overflow>
+      <defs>
+        <radialGradient id="eh-bg" cx="0.5" cy="0.55" r="0.75"><stop offset="0" stop-color="#2a4a9f"/><stop offset="1" stop-color="#111c4c"/></radialGradient><linearGradient id="eh-sunset" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a2a7a"/><stop offset="0.7" stop-color="#7a3cc4"/><stop offset="1" stop-color="#ff8a5c"/></linearGradient>
+      </defs>
+      <rect width="1920" height="1080" fill="url(#eh-bg)"/>
+      <g fill="#fff" opacity="0.06"><circle cx="300" cy="160" r="4"/><circle cx="1500" cy="960" r="5"/><circle cx="1760" cy="140" r="4"/></g>
+
+      <rect id="eh-dusk" width="1920" height="1080" fill="url(#eh-sunset)"/>
+      <circle cx="1650" cy="820" r="120" fill="#ff8a2a" opacity="0.6"/>
+      <!-- 12: the phone rings -->
+      <g transform="translate(960,560)"><g id="eh-phone" data-in="12,0,pop" data-out="12,0.6">
+        <rect class="rk" x="-150" y="-260" width="300" height="520" rx="40" fill="#141428" stroke-width="12"/>
+        <rect x="-120" y="-220" width="240" height="440" rx="18" fill="#2d4fa8"/>
+        <circle cx="0" cy="-60" r="60" fill="#7cf0a8"/>
+        <path d="M-30,-80 C-30,-50 0,-30 30,-40 L30,-55 L10,-60 L5,-48 C-5,-52 -12,-60 -14,-70 L-2,-76 L-8,-96 Z" fill="#141428"/>
+        <g id="eh-waves" fill="none" stroke="#ffd27a" stroke-width="10" stroke-linecap="round"><path d="M190,-80 C220,-40 220,20 190,60"/><path d="M240,-110 C290,-50 290,50 240,110"/><path d="M-190,-80 C-220,-40 -220,20 -190,60"/><path d="M-240,-110 C-290,-50 -290,50 -240,110"/></g>
+      </g></g>
+      <!-- 12-13: the evening scales -->
+      <g id="eh-scales" data-in="12,0.62,fade" data-out="14,0">
+        <text class="lab" x="300" y="390" text-anchor="end" style="font-size:72px">me</text>
+        <text class="lab" x="300" y="690" text-anchor="end" style="font-size:72px">others</text>
+        <g transform="translate(700,370)"><g transform="translate(-260,0)"><circle class="rk" r="52" fill="#ff5f6d" stroke-width="8"/><circle cx="-18" cy="-12" r="7" fill="#0d0f22"/><circle cx="18" cy="-12" r="7" fill="#0d0f22"/><path d="M-22,20 Q0,-2 22,20" fill="none" stroke="#0d0f22" stroke-width="7" stroke-linecap="round"/></g><g transform="translate(-130,0)"><circle class="rk" r="52" fill="#ff8a2a" stroke-width="8"/><circle cx="-18" cy="-12" r="7" fill="#0d0f22"/><circle cx="18" cy="-12" r="7" fill="#0d0f22"/><path d="M-22,20 Q0,9 22,20" fill="none" stroke="#0d0f22" stroke-width="7" stroke-linecap="round"/></g><g transform="translate(0,0)"><circle class="rk" r="52" fill="#ffd23a" stroke-width="8"/><circle cx="-18" cy="-12" r="7" fill="#0d0f22"/><circle cx="18" cy="-12" r="7" fill="#0d0f22"/><path d="M-22,20 Q0,20 22,20" fill="none" stroke="#0d0f22" stroke-width="7" stroke-linecap="round"/></g><g transform="translate(130,0)"><circle class="rk" r="52" fill="#a6e36b" stroke-width="8"/><circle cx="-18" cy="-12" r="7" fill="#0d0f22"/><circle cx="18" cy="-12" r="7" fill="#0d0f22"/><path d="M-22,20 Q0,31 22,20" fill="none" stroke="#0d0f22" stroke-width="7" stroke-linecap="round"/></g><g transform="translate(260,0)"><circle class="rk" r="52" fill="#7cf0a8" stroke-width="8"/><circle cx="-18" cy="-12" r="7" fill="#0d0f22"/><circle cx="18" cy="-12" r="7" fill="#0d0f22"/><path d="M-22,20 Q0,42 22,20" fill="none" stroke="#0d0f22" stroke-width="7" stroke-linecap="round"/></g><g transform="translate(0,-90)"><path class="rk" d="M-26,0 L-6,22 L30,-26" fill="none" style="stroke:#fff" stroke-width="14"/></g></g>
+        <g transform="translate(700,670)"><g transform="translate(-260,0)"><circle class="rk" r="52" fill="#ff5f6d" stroke-width="8"/><circle cx="-18" cy="-12" r="7" fill="#0d0f22"/><circle cx="18" cy="-12" r="7" fill="#0d0f22"/><path d="M-22,20 Q0,-2 22,20" fill="none" stroke="#0d0f22" stroke-width="7" stroke-linecap="round"/></g><g transform="translate(-130,0)"><circle class="rk" r="52" fill="#ff8a2a" stroke-width="8"/><circle cx="-18" cy="-12" r="7" fill="#0d0f22"/><circle cx="18" cy="-12" r="7" fill="#0d0f22"/><path d="M-22,20 Q0,9 22,20" fill="none" stroke="#0d0f22" stroke-width="7" stroke-linecap="round"/></g><g transform="translate(0,0)"><circle class="rk" r="52" fill="#ffd23a" stroke-width="8"/><circle cx="-18" cy="-12" r="7" fill="#0d0f22"/><circle cx="18" cy="-12" r="7" fill="#0d0f22"/><path d="M-22,20 Q0,20 22,20" fill="none" stroke="#0d0f22" stroke-width="7" stroke-linecap="round"/></g><g transform="translate(130,0)"><circle class="rk" r="52" fill="#a6e36b" stroke-width="8"/><circle cx="-18" cy="-12" r="7" fill="#0d0f22"/><circle cx="18" cy="-12" r="7" fill="#0d0f22"/><path d="M-22,20 Q0,31 22,20" fill="none" stroke="#0d0f22" stroke-width="7" stroke-linecap="round"/></g><g transform="translate(260,0)"><circle class="rk" r="52" fill="#7cf0a8" stroke-width="8"/><circle cx="-18" cy="-12" r="7" fill="#0d0f22"/><circle cx="18" cy="-12" r="7" fill="#0d0f22"/><path d="M-22,20 Q0,42 22,20" fill="none" stroke="#0d0f22" stroke-width="7" stroke-linecap="round"/></g><g id="eh-tick"><g transform="translate(0,-90)"><path class="rk" d="M-26,0 L-6,22 L30,-26" fill="none" style="stroke:#fff" stroke-width="14"/></g></g></g>
+        <text class="pop" x="1440" y="700" text-anchor="middle" style="font-size:150px" data-in="13,0.6,pop">happier</text>
+      </g>
+      <!-- 14: $20 = $5 -->
+      <g id="eh-same" data-in="14,0.15,fade">
+        <g transform="translate(560,520) rotate(-5)"><g data-in="14,0.2,pop"><rect class="rk" x="-170" y="-80" width="340" height="160" rx="14" fill="#7fd18b" stroke-width="10"/>
+          <rect x="-140" y="-54" width="280" height="108" rx="10" fill="none" stroke="#1f5a33" stroke-width="5" opacity="0.6"/>
+          <text y="34" text-anchor="middle" style="font-family:Hand;font-size:100px;fill:#1f5a33">$20</text></g></g>
+        <g transform="translate(1360,520) rotate(5)"><g data-in="14,0.55,pop"><rect class="rk" x="-170" y="-80" width="340" height="160" rx="14" fill="#7fd18b" stroke-width="10"/>
+          <rect x="-140" y="-54" width="280" height="108" rx="10" fill="none" stroke="#1f5a33" stroke-width="5" opacity="0.6"/>
+          <text y="34" text-anchor="middle" style="font-family:Hand;font-size:100px;fill:#1f5a33">$5</text></g></g>
+        <text class="pop" x="960" y="580" text-anchor="middle" style="font-size:200px" data-in="14,0.6,pop">=</text>
+      </g>
+      <g transform="translate(1720,1010) scale(0.42)"><g id="eh-kid">
+        <g data-rig="kid" data-p="hk2" data-o='{"mouth":"smile","brows":"up","look":[-50,-30]}'></g>
+      </g></g>
+    </svg>
+  </div>
+  <script>
+    Rig.fill();
+    const tl = gsap.timeline({ paused: true }), A = s => Rig.at(s, "evening");
+    Rig.run(tl, "evening");
+    Rig.blinks(tl, "hk2", 0, 12);
+    tl.to("#eh-phone", { rotation: 5, svgOrigin: "0 0", duration: 0.06, yoyo: true, repeat: 13, ease: "sine.inOut" }, A("12,0.05"));
+    tl.to("#eh-waves", { opacity: 0.2, duration: 0.15, yoyo: true, repeat: 5 }, A("12,0.05"));
+    // 13: the "others" tick climbs a face
+    tl.to("#eh-tick", { x: 130, duration: 0.4, ease: "back.out(2)" }, A("13,0.35"));
+    Rig.mouth(tl, "hk2", "smile", "grin", A("13,0.4"));
+    // 14: surprise, five works as well as twenty
+    Rig.mouth(tl, "hk2", "grin", "o", A("14,0.3"));
+    Rig.widen(tl, "hk2", A("14,0.3"));
+    tl.to("#eh-kid", { y: -30, duration: 0.15, yoyo: true, repeat: 1, ease: "power2.out" }, A("14,0.3"));
+    window.__timelines["evening"] = tl;
+  </script>
+</template>

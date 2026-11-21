@@ -1,0 +1,38 @@
+[
+ [
+  "A bigger bonus didn't make them happier.",
+  0.3,
+  1,
+  "shocked"
+ ],
+ [
+  "Sixteen employees got a work bonus. About five thousand dollars, on average.",
+  0.35,
+  1,
+  "neutral"
+ ],
+ [
+  "Six to eight weeks later, researchers asked how happy they were.",
+  0.35,
+  1,
+  "curious"
+ ],
+ [
+  "The size of the bonus didn't predict it.",
+  0.4,
+  1,
+  "firm"
+ ],
+ [
+  "What did? How much of it they spent on other people. Gifts, donations.",
+  0.4,
+  1,
+  "warm"
+ ],
+ [
+  "It's a tiny study, so hold it loosely. But where did your last bonus go?",
+  0.45,
+  1,
+  "curious"
+ ]
+]

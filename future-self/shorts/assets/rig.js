@@ -1,5 +1,5 @@
 // Shared character rig + declarative animation for "The Stranger You're Robbing".
-// Characters: <g data-rig="kid|old|sil|nb" data-p="prefix" data-o='{"look":[x,y],...}'> filled by Rig.fill().
+// Characters: <g data-rig="kid|old|sil|nb" (kid takes o.bib for the toddler) data-p="prefix" data-o='{"look":[x,y],...}'> filled by Rig.fill().
 // Animation:  data-in="line,frac[,kind]"  data-out="line,frac[,kind]"  on any element.
 // Times come from window.VO (voice timing) and window.SCENES (scene start), written by tools/prep-film.cjs.
 (function () {
@@ -58,6 +58,7 @@
       <path ${k('M-330,520 C-330,330 -200,280 0,280 C200,280 330,330 330,520 Z', `fill="${o.shirt || '#e3a63a'}" stroke-width="10"`)}/>
       <path ${k('M-150,300 C-80,360 80,360 150,300', 'fill="#c98b2c" stroke-width="8"')}/>
       <path d="M-60,340 L-66,470 M60,340 L66,470" stroke="#f4f1ff" stroke-width="9" stroke-linecap="round"/>
+      ${o.bib ? `<path ${k('M-120,290 C-130,440 130,440 120,290 C60,320 -60,320 -120,290 Z', 'fill="#f7f3ea" stroke-width="9"')}/><path d="M0,400 C-30,370 -24,345 0,362 C24,345 30,370 0,400 Z" fill="#ff8fb1"/>` : ''}
       <ellipse class="rk" cx="-292" cy="20" rx="44" ry="66" fill="#eec2a2" stroke-width="10"/>
       <ellipse class="rk" cx="292" cy="20" rx="44" ry="66" fill="#eec2a2" stroke-width="10"/>
       <circle class="rk" r="290" fill="#f4d2b6" stroke-width="10"/>

@@ -1,0 +1,50 @@
+<template>
+  <style>
+    @font-face { font-family: "Hand"; src: url("assets/fonts/PatrickHand-Regular.ttf"); }
+    #root { position: absolute; inset: 0; background: #1a2b66; overflow: hidden; }
+    #vl-art { position: absolute; inset: 0; }
+    .rk { stroke: #0d0f22; stroke-linecap: round; stroke-linejoin: round; }
+    .pop { font-family: Hand; font-size: 150px; fill: #ffb35c; stroke: #0d0f22; stroke-width: 14px; paint-order: stroke; stroke-linejoin: round; }
+    .lab { font-family: Hand; font-size: 64px; fill: #f4f1ff; }
+  </style>
+  <div id="root" data-composition-id="v4alanes" data-width="1080" data-height="1920">
+    <svg id="vl-art" class="clip" data-start="0" data-duration="40" viewBox="0 0 1080 1920" data-layout-allow-overflow>
+      <defs>
+        <radialGradient id="vl-bg" cx="0.5" cy="0.5" r="0.8"><stop offset="0" stop-color="#2a4a9f"/><stop offset="1" stop-color="#111c4c"/></radialGradient>
+      </defs>
+      <rect width="1080" height="1920" fill="url(#vl-bg)"/>
+
+      <path d="M80,965 L1000,965" stroke="#c9d3ef" stroke-width="6" stroke-dasharray="18 18" opacity="0.6"/>
+      <g data-in="10,0,up">
+        <text class="lab" x="540" y="520" text-anchor="middle" style="font-size:76px">me</text>
+        <g transform="translate(300,780) scale(0.32)"><g data-rig="kid" data-p="vll" data-o='{"mouth":"smile","brows":"flat","look":[50,0]}'></g></g>
+        <g transform="translate(680,690) scale(0.75)"><g data-in="10,0.5,pop">
+          <path class="rk" d="M-100,-130 L100,-130 L100,130 L80,110 L60,130 L40,110 L20,130 L0,110 L-20,130 L-40,110 L-60,130 L-80,110 L-100,130 Z" fill="#f7f3ea" stroke-width="9"/>
+          <text y="-60" text-anchor="middle" style="font-family:Hand;font-size:56px;fill:#b0263c">BILL</text>
+          <path d="M-60,0 L60,0 M-60,40 L30,40" stroke="#7a809c" stroke-width="10" stroke-linecap="round"/></g></g>
+        <g transform="translate(880,830) scale(0.65)"><g data-in="10,0.8,pop">
+          <circle class="rk" r="80" fill="#d9a066" stroke-width="9"/><circle cx="-30" cy="-20" r="12" fill="#5a3d2c"/><circle cx="25" cy="10" r="12" fill="#5a3d2c"/><circle cx="-5" cy="40" r="12" fill="#5a3d2c"/></g></g>
+      </g>
+      <g data-in="11,0,up">
+        <text class="lab" x="540" y="1060" text-anchor="middle" style="font-size:76px">someone else</text>
+        <g transform="translate(250,1390) scale(0.34)"><g data-rig="kid" data-p="vlr" data-o='{"mouth":"smile","brows":"up","look":[50,0]}'></g></g>
+        <g transform="translate(830,1390) scale(0.34)"><g data-rig="nb" data-p="vln" data-o='{"mouth":"smile","brows":"flat","look":[-50,0]}'></g></g>
+        <g transform="translate(400,1440)"><g id="vl-cup"><path class="rk" d="M40,-20 C80,-20 80,30 40,30" fill="none" stroke-width="14"/><path class="rk" d="M-50,-60 L50,-60 L40,70 L-40,70 Z" fill="#f7f3ea" stroke-width="9"/><rect x="-46" y="-10" width="92" height="34" fill="#8a5a3c"/><path class="rk" d="M-56,-60 L56,-60" stroke-width="12"/></g></g>
+        <g transform="translate(540,1220) scale(0.6)"><g data-in="11,0.65,pop">
+          <path class="rk" d="M-80,-90 L80,-90 L90,110 L-90,110 Z" fill="#9fe3ff" fill-opacity="0.6" stroke-width="9"/>
+          <path d="M0,40 C-50,0 -30,-40 0,-15 C30,-40 50,0 0,40 Z" fill="#ff5f6d"/></g></g>
+      </g>
+    </svg>
+  </div>
+  <script>
+    Rig.fill();
+    const tl = gsap.timeline({ paused: true }), A = s => Rig.at(s, "v4alanes");
+    Rig.run(tl, "v4alanes");
+    Rig.blinks(tl, "vll", 0, 10); Rig.blinks(tl, "vlr", A("11,0"), 10, 0.4); Rig.blinks(tl, "vln", A("11,0"), 10, 0.9);
+    Rig.look(tl, "vll", 50, -30, A("10,0.5"));
+    tl.fromTo("#vl-cup", { x: 0 }, { x: 230, duration: 0.6, ease: "power2.inOut" }, A("11,0.3"));
+    Rig.mouth(tl, "vln", "smile", "grin", A("11,0.45"));
+    Rig.mouth(tl, "vlr", "smile", "grin", A("11,0.5"));
+    window.__timelines["v4alanes"] = tl;
+  </script>
+</template>
