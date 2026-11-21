@@ -13,7 +13,8 @@ The owner does not want to approve each step. Run the pipeline end to end withou
   days at 16:00) and standalone Shorts Mon-Fri:
   - until 4 Dec 2026: the already-scheduled classic Shorts (s01-s10) at 20:30 IST **plus** a Pop Art
     Short at 13:00 IST (an A/B test of the two styles on the same days);
-  - from 7 Dec 2026: **Pop Art is the default** for all new Shorts, 5 a week at 13:00 IST. Build them
+  - from 7 Dec 2026: the **new formats** (Pop Art and cartoon, see below) are the default for new Shorts, unless the
+    style-test decision rule says otherwise; one a day in the winning slot. Build them
     with `future-self/popart/README.md`. Long videos keep the classic HyperFrames pipeline.
   - Pick each Short's format from its story (cartoon scene for people in a situation, Pop Art wall/grid for
     crowds and percentages, chart for a changing number, split frame for a choice); never the same format two days running.
