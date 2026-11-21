@@ -48,6 +48,21 @@ with a cliffhanger line before each chapter card and a callback to the cold open
 "Crazy" hooks are welcome; misleading ones are not. If the honest version of a hook is weaker, write
 the honest version better rather than stretching the claim.
 
+### Story frames (adapted from the owner's "80 storytelling hooks" swipe file)
+Pick a frame per Short and say it in the hook. The narrator never claims a personal past ("I went from...",
+"a client told me...") because none of it happened; put the "I" on the people in the study, on "you", or on
+the kid as a clearly fictional character.
+- Transformation: "[before] to [after]. Here's what changed." (H01)
+- Mistake: "The mistake that cost them [X] was..." / "One small decision created a bigger problem."
+- Turning point: "Everything changed when they tried one thing." (H11)
+- Behind the scenes: "Here's what nobody saw behind [famous study]." (H07, H15)
+- Contrarian: "Everyone says [advice]. The data disagrees." (H21, H43, H45)
+- Relatable: "You know that feeling when [money moment]?" (H06, H31)
+- Lesson: "If you could tell your younger self one money thing..." (future-self videos)
+- Curiosity: "Something didn't add up, so researchers looked closer." (H50)
+- Decision: "Two choices: [A] or [B]. Most people pick wrong." (H09, H14, H28, H44)
+Skip the client/customer frame (no clients). Frames count as hook types for the no-repeat rule.
+
 ## Other rules
 - Voice only (Kokoro, `af_heart` mood blends); the screen never reads a line back.
 - Mark AI content as altered/synthetic; not made for kids; category Education.

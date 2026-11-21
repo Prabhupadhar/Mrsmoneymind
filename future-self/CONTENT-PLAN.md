@@ -28,13 +28,13 @@ paper after reading it in full: if it does not, rewrite the hook to what the pap
 
 | ID | Type | Hook (first 3 s) | Story twist / payoff | Source | Status |
 |---|---|---|---|---|---|
-| H01 | Shocking number | "These workers 4×'d their savings. Without trying." | They agreed to save more from FUTURE raises; saving went 3.5% → 13.6% over 40 months | Thaler & Benartzi 2004, JPE | verified |
+| H01 | Transformation | "3.5% to 13.6%. Here's what changed." | They agreed to save more from FUTURE raises; saving went 3.5% → 13.6% over 40 months | Thaler & Benartzi 2004, JPE | verified |
 | H02 | Mystery | "They fined late parents. Lateness got worse." | Israeli daycares: the fine turned guilt into a price, so parents paid and came late | Gneezy & Rustichini 2000, J. Legal Studies | to verify |
 | H03 | You-accusation | "Your brain thinks future you is a stranger." | Brain scans: thinking about future self looked like thinking about someone else | Ersner-Hershfield, Wimmer & Knutson 2009, SCAN | verified |
 | H04 | Myth bust | "Lottery winners ARE happier. A tiny study fooled everyone." | The famous 1978 study had 22 winners; big Swedish lottery data found lasting life-satisfaction gains | Lindqvist, Östling & Cesarini 2020, REStud; Brickman et al. 1978 | to verify |
 | H05 | Pain | "Losing $100 hurts more than winning $100 feels good." | Loss aversion: losses weigh roughly twice as much (and the debate about how much) | Tversky & Kahneman 1992, J. Risk & Uncertainty | to verify |
-| H06 | You-accusation | "Paid by card? You've already forgotten how much." | Card payers recalled their recent spending less accurately than cash payers | Soman 2001, JCR | verified |
-| H07 | Myth bust | "A famous honesty study turned out to be faked." | The 'sign at the top' study was retracted after its data was found fabricated | Shu et al. 2012 PNAS (retracted 2021) | to verify |
+| H06 | Relatable | "That 'wait, I spent HOW much?' feeling? Science." | Card payers recalled their recent spending less accurately than cash payers | Soman 2001, JCR | verified |
+| H07 | Behind the scenes | "The famous honesty study had a secret." | The 'sign at the top' study was retracted after its data was found fabricated | Shu et al. 2012 PNAS (retracted 2021) | to verify |
 | H08 | Contrarian | "The busiest traders made the least money." | 66,465 households: the most active traders' net returns trailed the market | Barber & Odean 2000, J. Finance | to verify |
 | H09 | Dilemma | "You lost $10. Would you still buy the ticket?" | Most rebuy after losing cash, few after losing the ticket: same money, different 'account' | Tversky & Kahneman 1981, Science | to verify |
 | H10 | Timely (Dec 28-Jan 1) | "Mondays aren't the problem. They're a cheat code." | Fresh-start effect: gym visits rise after Mondays, birthdays and New Year | Dai, Milkman & Riis 2014, Management Science | to verify |
@@ -48,7 +48,7 @@ paper after reading it in full: if it does not, rewrite the hook to what the pap
 | H18 | Shocking number | "Men traded 45% more. It cost them." | Overconfidence: more trading, lower net returns | Barber & Odean 2001, QJE | to verify |
 | H19 | Story | "They paid full price. So they sat through it." | Full-price season-ticket buyers went to more plays: sunk cost | Arkes & Blumer 1985, OBHDP | to verify |
 | H20 | Quiz | "Only 1 in 3 get these 3 money questions right." | The 'Big Three' financial literacy questions (interest, inflation, diversification) | Lusardi & Mitchell 2011 / 2014, JEL | to verify |
-| H21 | Myth bust | "'Money stops buying happiness at $75k.' Not quite." | 2023 adversarial collaboration: happiness keeps rising, except for the unhappiest | Killingsworth, Kahneman & Mellers 2023, PNAS | to verify |
+| H21 | Contrarian | "Everyone says $75k is enough. The data disagrees." | 2023 adversarial collaboration: happiness keeps rising, except for the unhappiest | Killingsworth, Kahneman & Mellers 2023, PNAS | to verify |
 | H22 | You-accusation | "That 'minimum payment' line is a trap." | Showing the minimum anchored people to repay less | Stewart 2009, Psych Science (check Keys & Wang 2019) | to verify |
 | H23 | Hack | "Lock your favorite show inside the gym." | Temptation bundling: audiobooks only at the gym raised visits | Milkman, Minson & Volpp 2014, Management Science | to verify |
 | H24 | Contrast | "Your new phone gets boring. Your trip gets better." | Experiences made people happier than things | Van Boven & Gilovich 2003, JPSP | to verify |
@@ -63,21 +63,21 @@ paper after reading it in full: if it does not, rewrite the hook to what the pap
 | H33 | Hack | "One text message made people save more." | Monthly reminders raised savings | Karlan, McConnell, Mullainathan & Zinman 2016, Management Science | to verify |
 | H34 | Framing | "Call it a bonus. Watch it disappear." | Money framed as a bonus was spent more than money framed as a rebate | Epley, Mak & Idson 2006, J. Behavioral Decision Making | to verify |
 | H35 | Contrast | "Future you eats fruit. Present you eats chocolate." | Present bias: choices for next week vs right now | Read & van Leeuwen 1998, OBHDP | to verify |
-| H36 | Story | "They locked their own money away. And saved more." | Commitment savings accounts in the Philippines raised savings | Ashraf, Karlan & Yin 2006, QJE | to verify |
+| H36 | Decision | "They chose to lock their own money away. Why?" | Commitment savings accounts in the Philippines raised savings | Ashraf, Karlan & Yin 2006, QJE | to verify |
 | H37 | Free money | "Free money, every paycheck. They left it there." | Many employees didn't take their full employer match | Choi, Laibson & Madrian 2011, REStat | to verify |
 | H38 | Brain | "Same wine. Different price. Their brain tasted it." | $90 vs $10 label: ratings and brain activity changed | Plassmann et al. 2008, PNAS | to verify |
 | H39 | Myth bust | "Seeing money makes you selfish? Probably not." | Money-priming effects failed to replicate | Vohs, Mead & Goode 2006 vs Rohrer, Pashler & Harris 2015 | to verify |
 | H40 | Gamble | "Won $30? You'll gamble it differently." | House-money effect: prior gains raise risk taking | Thaler & Johnson 1990, Management Science | to verify |
 | H41 | World | "Canada or Uganda: giving felt the same." | Prosocial spending linked to happiness across countries | Aknin et al. 2013, JPSP | to verify |
 | H42 | Backfire | "Telling people their coworkers save made some save less." | Peer information backfired for low earners | Beshears et al. 2015, J. Finance | to verify |
-| H43 | Hack | "Pay off the 'dumb' debt first. It works." | Closing small accounts kept people paying (debt snowball) | Gal & McShane 2012, JMR | to verify |
+| H43 | Contrarian | "Experts say: highest interest first. Real people disagree." | Closing small accounts kept people paying (debt snowball) | Gal & McShane 2012, JMR | to verify |
 | H44 | Choice | "Time or money: which would you pick?" | People who valued time over money were happier | Hershfield, Mogilner & Barnea 2016, SPPS | to verify |
-| H45 | Myth bust | "The famous jam study? It might be wrong." | 24 vs 6 jams, and the meta-analysis that found little effect | Iyengar & Lepper 2000; Scheibehenne et al. 2010 | to verify |
+| H45 | Contrarian | "Everyone quotes the jam study. Should they?" | 24 vs 6 jams, and the meta-analysis that found little effect | Iyengar & Lepper 2000; Scheibehenne et al. 2010 | to verify |
 | H46 | Hack | "Bet your own money. Quit smoking." | Deposit contracts: putting money at stake raised quit rates | Halpern et al. 2015, NEJM | to verify |
 | H47 | Timing | "Farmers bought more on one specific day." | Offers at harvest time, when cash was on hand, raised fertilizer use | Duflo, Kremer & Robinson 2011, AER | to verify |
 | H48 | Weird | "The cheaper drink made them solve fewer puzzles." | Price-placebo effect (check replications before using) | Shiv, Carmon & Ariely 2005, JMR | to verify |
 | H49 | Small change | "One line on a payday-loan envelope cut borrowing." | Showing fees in dollars reduced borrowing | Bertrand & Morse 2011, J. Finance | to verify |
-| H50 | Myth bust | "Are rich countries happier? The famous 'no' was wrong." | Easterlin paradox vs Stevenson & Wolfers' cross-country data | Stevenson & Wolfers 2008, Brookings; Easterlin 1974 | to verify |
+| H50 | Curiosity | "Something didn't add up about rich countries." | Easterlin paradox vs Stevenson & Wolfers' cross-country data | Stevenson & Wolfers 2008, Brookings; Easterlin 1974 | to verify |
 
 When fewer than 10 items are left, add 10 new ideas from peer-reviewed money-psychology research
 (prefer large samples, field experiments and well-replicated findings; include "myth check" ideas).
