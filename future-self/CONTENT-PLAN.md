@@ -21,6 +21,16 @@ finding, but the run must read the paper in full before writing a single line; `
 | 12 | "Twenty-two months old, and already generous." | Toddlers gave away their own treats and looked happiest doing it | Aknin, Hamlin & Dunn 2012, *PLoS ONE* | dropped: duplicate of the v4b Short (toddlers, scheduled 2026-11-27) |
 | 13 | "Happier people spend a bit more on others." | 632-person survey: prosocial spending, not personal, linked to happiness | Dunn, Aknin & Norton 2008, *Science* | dropped: duplicate of s01 (632-person survey, scheduled 2026-11-27) |
 
+### Pop Art Shorts (13:00 IST; see `future-self/popart/README.md`)
+| ID | Date | Hook | Source | Status |
+|---|---|---|---|---|
+| P01 | 2026-11-23 | "Your neighbor won. Why are THEY going broke?" (remake of v3a in Pop Art: style A/B) | Agarwal, Mikhed & Scholnick 2020 | scheduled 2026-11-23 |
+| P02 | 2026-11-24 | H01 "They nearly quadrupled their savings." | Thaler & Benartzi 2004 | built |
+| P03 | 2026-11-25 | H02 "They fined late parents. Lateness got worse." | Gneezy & Rustichini 2000 (read in full) | built |
+| P04 | 2026-11-26 | H17 "Give someone a mug. Its price doubles." | Kahneman, Knetsch & Thaler 1990, exp. 6 (read in full) | built |
+| P05 | 2026-11-27 | next hook from the bank | | to build |
+The hook bank below now feeds the Pop Art slot (H01, H02 and H17 are used).
+
 ### Hook bank: 50 Shorts (build in this order)
 Every Short follows the storytelling formula in `CLAUDE.md`. The hook must stay exactly true to the
 paper after reading it in full: if it does not, rewrite the hook to what the paper says, or mark it
@@ -102,9 +112,9 @@ When fewer than 10 items are left, add 10 new ideas from peer-reviewed money-psy
 1. Fetch and check out branch `claude/loving-turing-6gvkvm` (it holds all current work) and push your work there.
 2. Read `CLAUDE.md`, this file and `VIDEO-TEMPLATE.md`.
 3. Check Metricool (`getScheduledPosts`) for the coming Mon-Fri so nothing is scheduled twice.
-4. Build the next 5 Shorts from the hook bank in section 1 for next Mon-Fri at 20:30 IST: verify facts in the paper
-   first, write `future-self/shorts-src/<id>/script.json`, generate the voice, add a
-   `tools/prep-short.cjs` entry, build the scene, check, snapshot, render, look at frame 0.
+4. Build the next 5 Shorts from the hook bank in section 1 for next Mon-Fri at **13:00 IST in the Pop Art style**
+   (`future-self/popart/README.md`): verify facts in the paper first, write `future-self/popart/<id>/script.json`
+   and `main.js`, generate the voice, check stills, build, look at frame 0. (The classic 20:30 slot ends on 4 Dec.)
 5. If a long video in section 2 publishes within the next 13 days and is not built, build it
    (script, voice, scenes, check, full render, two Shorts, two thumbnails, upload kit).
 6. Schedule everything in Metricool with `draft: false`, at least 48 hours ahead. Media URLs:

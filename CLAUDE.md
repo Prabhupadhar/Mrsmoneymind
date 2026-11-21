@@ -9,8 +9,12 @@ The owner does not want to approve each step. Run the pipeline end to end withou
 - Schedule finished posts in Metricool directly (`draft: false`), at least **48 hours ahead**,
   so the owner can still move or cancel them in the Metricool calendar. Tell the owner what
   was scheduled, with the planner links.
-- Default cadence: about 5 standalone Shorts a week (Mon-Fri, 20:30 IST) and one long video
-  every two weeks (Wednesday 16:00 IST, its Shorts on the next two days at 16:00).
+- Default cadence: one long video every two weeks (Wednesday 16:00 IST, its Shorts on the next two
+  days at 16:00) and standalone Shorts Mon-Fri:
+  - until 4 Dec 2026: the already-scheduled classic Shorts (s01-s10) at 20:30 IST **plus** a Pop Art
+    Short at 13:00 IST (an A/B test of the two styles on the same days);
+  - from 7 Dec 2026: **Pop Art is the default** for all new Shorts, 5 a week at 13:00 IST. Build them
+    with `future-self/popart/README.md`. Long videos keep the classic HyperFrames pipeline.
 - Do not merge pull requests into `main` unless the owner asks; push to `claude/loving-turing-6gvkvm`.
 - What to make next, and the weekly run's steps: `future-self/CONTENT-PLAN.md`.
 
