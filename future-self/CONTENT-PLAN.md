@@ -7,42 +7,77 @@ Status: `verified` = facts already checked against the paper in this repo; `to v
 finding, but the run must read the paper in full before writing a single line; `scheduled YYYY-MM-DD`
 = done; `dropped: <reason>` = the paper did not support the hook (replace it with a new idea).
 
-## 1. Standalone Shorts backlog (build in this order)
-Each Short: hook <= 8 words in the first 3 s with motion in frame 0, 20-35 s, open loop closed at
-the end, one source named in the caption. "Payoff" is what the end of the Short reveals.
+## 1. Shorts
 
-| # | Hook (first 3 s) | Payoff | Source | Status |
+### Done or dropped
+| # | Hook | Payoff | Source | Status |
 |---|---|---|---|---|
 | 1 | "A bigger bonus didn't make them happier." | What mattered weeks later was the share given to others (16 employees, ~$4,900 bonus) | Dunn, Aknin & Norton 2008, *Science* | scheduled 2026-11-30 (s06) |
 | 2 | "Only 2% would spend free money on this." | Buying time (chores, errands); most people never think of it | Whillans et al. 2017, *PNAS* (study 9, n = 98) | scheduled 2026-12-01 (s07) |
 | 3 | "Millionaires. Still doing their own chores." (softened: paper text says just under half, its table about 40%) | Just under half of 818 Dutch millionaires spent nothing outsourcing disliked tasks | Whillans et al. 2017, *PNAS* | scheduled 2026-12-02 (s08) |
 | 4 | "Forty dollars. Two weekends. One felt calmer." | A time-saving purchase lowered time stress vs a material one (60 adults, Vancouver) | Whillans et al. 2017, *PNAS* (study 8) | scheduled 2026-12-03 (s09) |
 | 5 | "Your brain has a price alarm." | The insula lit up at high prices and predicted not buying | Knutson et al. 2007, *Neuron* | scheduled 2026-12-04 (s10) |
-| 6 | "Can you remember what you spent this week?" | Card payers recalled their spending less accurately | Soman 2001, *J. Consumer Research* | verified |
-| 7 | "71 studies. Does cashless make you spend more?" | Yes, but the effect is small | Schomburgk, Belli & Hoffmann 2024, *J. Retailing* | verified |
 | 8 | "Your neighbor won. You bought the car." | Neighbors of Dutch postcode-lottery winners spent more on cars | Kuhn et al. 2011, *AER* | dropped: duplicate of the v3b Short (neighbor's new car, published 2026-11-20) |
-| 9 | "They saved four times more without trying." | Save More Tomorrow: saving rate 3.5% to 13.6% over 40 months | Thaler & Benartzi 2004, *JPE* | verified |
-| 10 | "This famous happiness study only partly held up." | Honest science: the $5 experiment's replications were mixed | Aknin et al. 2020 *JPSP*; Kim et al. 2022 *PLoS ONE* | verified |
-| 11 | "Your brain files future you as a stranger." | Thinking of your future self looked more like thinking of others | Ersner-Hershfield, Wimmer & Knutson 2009, *SCAN* | verified |
 | 12 | "Twenty-two months old, and already generous." | Toddlers gave away their own treats and looked happiest doing it | Aknin, Hamlin & Dunn 2012, *PLoS ONE* | dropped: duplicate of the v4b Short (toddlers, scheduled 2026-11-27) |
 | 13 | "Happier people spend a bit more on others." | 632-person survey: prosocial spending, not personal, linked to happiness | Dunn, Aknin & Norton 2008, *Science* | dropped: duplicate of s01 (632-person survey, scheduled 2026-11-27) |
-| 14 | "You'd sell this mug for double." | Endowment effect: owners asked about twice what buyers offered | Kahneman, Knetsch & Thaler 1990, *JPE* | to verify |
-| 15 | "Paying full price made them show up more." | Sunk cost: full-price season-ticket holders attended more plays | Arkes & Blumer 1985, *OBHDP* | to verify |
-| 16 | "Mondays actually work." | Fresh-start effect: gym visits rise after Mondays, birthdays, New Year | Dai, Milkman & Riis 2014, *Management Science* | to verify |
-| 17 | "One checkbox doubled retirement sign-ups." | Auto-enrollment defaults | Madrian & Shea 2001, *QJE* | to verify |
-| 18 | "Lose $10 or lose the ticket. Same thing?" | Mental accounting: people rebuy after losing cash, not after losing the ticket | Tversky & Kahneman 1981, *Science* | to verify |
-| 19 | "The famous jam study might be wrong." | Myth check: 24 vs 6 jams, and the meta-analysis that questioned it | Iyengar & Lepper 2000; Scheibehenne et al. 2010 | to verify |
-| 20 | "Lottery winners ARE happier. The old study missed it." | Myth check: Swedish lottery data vs the tiny 1978 study | Lindqvist, Östling & Cesarini 2020; Brickman et al. 1978 | to verify |
-| 21 | "Money stops buying happiness at $75k? Not quite." | Myth check: the 2023 adversarial collaboration | Killingsworth, Kahneman & Mellers 2023, *PNAS* | to verify |
-| 22 | "Things fade. Trips don't." | Experiences made people happier than material purchases | Van Boven & Gilovich 2003, *JPSP* | to verify |
-| 23 | "The best part of a trip is before you go." | Waiting for experiences feels better than waiting for things | Kumar, Killingsworth & Gilovich 2014, *Psych Science* | to verify |
-| 24 | "Next week: fruit. Right now: chocolate." | Present bias in snack choices | Read & van Leeuwen 1998, *OBHDP* | to verify |
-| 25 | "They locked away their own money. It worked." | Commitment savings accounts raised savings | Ashraf, Karlan & Yin 2006, *QJE* | to verify |
-| 26 | "Same wine. The $90 label tasted better." | Price changed both ratings and brain activity | Plassmann et al. 2008, *PNAS* | to verify |
-| 27 | "Why does everything cost $X.99?" | Left-digit effect | Thomas & Morwitz 2005, *JCR* | to verify |
-| 28 | "You'd pay more for furniture you built." | IKEA effect | Norton, Mochon & Ariely 2012, *JCP* | to verify |
-| 29 | "Pay off the smallest debt first?" | Closing accounts kept people paying (debt snowball) | Gal & McShane 2012, *JMR* | to verify |
-| 30 | "The cheaper drink made them solve fewer puzzles." | Price-placebo effect (check its replications first) | Shiv, Carmon & Ariely 2005, *JMR* | to verify |
+
+### Hook bank: 50 Shorts (build in this order)
+Every Short follows the storytelling formula in `CLAUDE.md`. The hook must stay exactly true to the
+paper after reading it in full: if it does not, rewrite the hook to what the paper says, or mark it
+`dropped: <reason>` and take the next one. Never run the same hook type two days in a row.
+
+| ID | Type | Hook (first 3 s) | Story twist / payoff | Source | Status |
+|---|---|---|---|---|---|
+| H01 | Shocking number | "These workers 4×'d their savings. Without trying." | They agreed to save more from FUTURE raises; saving went 3.5% → 13.6% over 40 months | Thaler & Benartzi 2004, JPE | verified |
+| H02 | Mystery | "They fined late parents. Lateness got worse." | Israeli daycares: the fine turned guilt into a price, so parents paid and came late | Gneezy & Rustichini 2000, J. Legal Studies | to verify |
+| H03 | You-accusation | "Your brain thinks future you is a stranger." | Brain scans: thinking about future self looked like thinking about someone else | Ersner-Hershfield, Wimmer & Knutson 2009, SCAN | verified |
+| H04 | Myth bust | "Lottery winners ARE happier. A tiny study fooled everyone." | The famous 1978 study had 22 winners; big Swedish lottery data found lasting life-satisfaction gains | Lindqvist, Östling & Cesarini 2020, REStud; Brickman et al. 1978 | to verify |
+| H05 | Pain | "Losing $100 hurts more than winning $100 feels good." | Loss aversion: losses weigh roughly twice as much (and the debate about how much) | Tversky & Kahneman 1992, J. Risk & Uncertainty | to verify |
+| H06 | You-accusation | "Paid by card? You've already forgotten how much." | Card payers recalled their recent spending less accurately than cash payers | Soman 2001, JCR | verified |
+| H07 | Myth bust | "A famous honesty study turned out to be faked." | The 'sign at the top' study was retracted after its data was found fabricated | Shu et al. 2012 PNAS (retracted 2021) | to verify |
+| H08 | Contrarian | "The busiest traders made the least money." | 66,465 households: the most active traders' net returns trailed the market | Barber & Odean 2000, J. Finance | to verify |
+| H09 | Dilemma | "You lost $10. Would you still buy the ticket?" | Most rebuy after losing cash, few after losing the ticket: same money, different 'account' | Tversky & Kahneman 1981, Science | to verify |
+| H10 | Timely (Dec 28-Jan 1) | "Mondays aren't the problem. They're a cheat code." | Fresh-start effect: gym visits rise after Mondays, birthdays and New Year | Dai, Milkman & Riis 2014, Management Science | to verify |
+| H11 | Shocking number | "One checkbox. Retirement sign-ups more than doubled." | Auto-enrollment: the default did what willpower didn't | Madrian & Shea 2001, QJE | to verify |
+| H12 | Myth bust | "The marshmallow test may have measured money, not willpower." | A bigger replication: family background explained much of the link | Watts, Duncan & Quan 2018, Psych Science | to verify |
+| H13 | Weird | "They added free plates. The set lost value." | 24 intact pieces beat 40 pieces with a few broken, when judged alone | Hsee 1998, J. Behavioral Decision Making | to verify |
+| H14 | Dilemma | "Drive 20 minutes to save $5? Depends on the price." | People drove to save $5 on a cheap item, not on an expensive one | Tversky & Kahneman 1981, Science | to verify |
+| H15 | Science-honest | "Scientists repeated a famous happiness study. Awkward." | The $5 experiment's replications were mixed: real effect, smaller than headlines | Aknin et al. 2020 JPSP; Kim et al. 2022 PLoS ONE | verified |
+| H16 | Contrarian | "Checking your investments made them poorer." | Frequent feedback made people take less risk and earn less | Thaler, Tversky, Kahneman & Schwartz 1997, QJE | to verify |
+| H17 | Gift | "Give someone a mug. Its price doubles." | Endowment effect: owners asked about twice what buyers offered | Kahneman, Knetsch & Thaler 1990, JPE | to verify |
+| H18 | Shocking number | "Men traded 45% more. It cost them." | Overconfidence: more trading, lower net returns | Barber & Odean 2001, QJE | to verify |
+| H19 | Story | "They paid full price. So they sat through it." | Full-price season-ticket buyers went to more plays: sunk cost | Arkes & Blumer 1985, OBHDP | to verify |
+| H20 | Quiz | "Only 1 in 3 get these 3 money questions right." | The 'Big Three' financial literacy questions (interest, inflation, diversification) | Lusardi & Mitchell 2011 / 2014, JEL | to verify |
+| H21 | Myth bust | "'Money stops buying happiness at $75k.' Not quite." | 2023 adversarial collaboration: happiness keeps rising, except for the unhappiest | Killingsworth, Kahneman & Mellers 2023, PNAS | to verify |
+| H22 | You-accusation | "That 'minimum payment' line is a trap." | Showing the minimum anchored people to repay less | Stewart 2009, Psych Science (check Keys & Wang 2019) | to verify |
+| H23 | Hack | "Lock your favorite show inside the gym." | Temptation bundling: audiobooks only at the gym raised visits | Milkman, Minson & Volpp 2014, Management Science | to verify |
+| H24 | Contrast | "Your new phone gets boring. Your trip gets better." | Experiences made people happier than things | Van Boven & Gilovich 2003, JPSP | to verify |
+| H25 | Shocking number | "71 studies asked: does tapping make you spend more?" | Yes, but the effect is small | Schomburgk, Belli & Hoffmann 2024, J. Retailing | verified |
+| H26 | Weird | "A raise that loses money can feel better." | Money illusion: a nominal raise with inflation felt better than a real raise without | Shafir, Diamond & Tversky 1997, QJE | to verify |
+| H27 | Story | "They gave villagers $1,000. No strings." | Kenya cash transfers: spending, assets and well-being rose | Haushofer & Shapiro 2016, QJE | to verify |
+| H28 | Dilemma | "A sure $450, or a coin flip for $1,000?" | Certainty effect: most take the sure thing | Kahneman & Tversky 1979, Econometrica | to verify |
+| H29 | Money tricks | "$3.99 isn't $4. Your brain disagrees." | Left-digit effect: the first digit dominates price judgments | Thomas & Morwitz 2005, JCR | to verify |
+| H30 | Weird | "A $20 bill is harder to spend than twenty $1s." | Denomination effect: big bills feel harder to break | Raghubir & Srivastava 2009, JCR | to verify |
+| H31 | Story | "The best part of your vacation happens before you leave." | Waiting for experiences feels better than waiting for things | Kumar, Killingsworth & Gilovich 2014, Psych Science | to verify |
+| H32 | You-accusation | "You'll overpay for anything you built yourself." | IKEA effect: self-built items valued more | Norton, Mochon & Ariely 2012, JCP | to verify |
+| H33 | Hack | "One text message made people save more." | Monthly reminders raised savings | Karlan, McConnell, Mullainathan & Zinman 2016, Management Science | to verify |
+| H34 | Framing | "Call it a bonus. Watch it disappear." | Money framed as a bonus was spent more than money framed as a rebate | Epley, Mak & Idson 2006, J. Behavioral Decision Making | to verify |
+| H35 | Contrast | "Future you eats fruit. Present you eats chocolate." | Present bias: choices for next week vs right now | Read & van Leeuwen 1998, OBHDP | to verify |
+| H36 | Story | "They locked their own money away. And saved more." | Commitment savings accounts in the Philippines raised savings | Ashraf, Karlan & Yin 2006, QJE | to verify |
+| H37 | Free money | "Free money, every paycheck. They left it there." | Many employees didn't take their full employer match | Choi, Laibson & Madrian 2011, REStat | to verify |
+| H38 | Brain | "Same wine. Different price. Their brain tasted it." | $90 vs $10 label: ratings and brain activity changed | Plassmann et al. 2008, PNAS | to verify |
+| H39 | Myth bust | "Seeing money makes you selfish? Probably not." | Money-priming effects failed to replicate | Vohs, Mead & Goode 2006 vs Rohrer, Pashler & Harris 2015 | to verify |
+| H40 | Gamble | "Won $30? You'll gamble it differently." | House-money effect: prior gains raise risk taking | Thaler & Johnson 1990, Management Science | to verify |
+| H41 | World | "Canada or Uganda: giving felt the same." | Prosocial spending linked to happiness across countries | Aknin et al. 2013, JPSP | to verify |
+| H42 | Backfire | "Telling people their coworkers save made some save less." | Peer information backfired for low earners | Beshears et al. 2015, J. Finance | to verify |
+| H43 | Hack | "Pay off the 'dumb' debt first. It works." | Closing small accounts kept people paying (debt snowball) | Gal & McShane 2012, JMR | to verify |
+| H44 | Choice | "Time or money: which would you pick?" | People who valued time over money were happier | Hershfield, Mogilner & Barnea 2016, SPPS | to verify |
+| H45 | Myth bust | "The famous jam study? It might be wrong." | 24 vs 6 jams, and the meta-analysis that found little effect | Iyengar & Lepper 2000; Scheibehenne et al. 2010 | to verify |
+| H46 | Hack | "Bet your own money. Quit smoking." | Deposit contracts: putting money at stake raised quit rates | Halpern et al. 2015, NEJM | to verify |
+| H47 | Timing | "Farmers bought more on one specific day." | Offers at harvest time, when cash was on hand, raised fertilizer use | Duflo, Kremer & Robinson 2011, AER | to verify |
+| H48 | Weird | "The cheaper drink made them solve fewer puzzles." | Price-placebo effect (check replications before using) | Shiv, Carmon & Ariely 2005, JMR | to verify |
+| H49 | Small change | "One line on a payday-loan envelope cut borrowing." | Showing fees in dollars reduced borrowing | Bertrand & Morse 2011, J. Finance | to verify |
+| H50 | Myth bust | "Are rich countries happier? The famous 'no' was wrong." | Easterlin paradox vs Stevenson & Wolfers' cross-country data | Stevenson & Wolfers 2008, Brookings; Easterlin 1974 | to verify |
 
 When fewer than 10 items are left, add 10 new ideas from peer-reviewed money-psychology research
 (prefer large samples, field experiments and well-replicated findings; include "myth check" ideas).
@@ -67,7 +102,7 @@ When fewer than 10 items are left, add 10 new ideas from peer-reviewed money-psy
 1. Fetch and check out branch `claude/loving-turing-6gvkvm` (it holds all current work) and push your work there.
 2. Read `CLAUDE.md`, this file and `VIDEO-TEMPLATE.md`.
 3. Check Metricool (`getScheduledPosts`) for the coming Mon-Fri so nothing is scheduled twice.
-4. Build the next 5 Shorts from section 1 for next Mon-Fri at 20:30 IST: verify facts in the paper
+4. Build the next 5 Shorts from the hook bank in section 1 for next Mon-Fri at 20:30 IST: verify facts in the paper
    first, write `future-self/shorts-src/<id>/script.json`, generate the voice, add a
    `tools/prep-short.cjs` entry, build the scene, check, snapshot, render, look at frame 0.
 5. If a long video in section 2 publishes within the next 13 days and is not built, build it
