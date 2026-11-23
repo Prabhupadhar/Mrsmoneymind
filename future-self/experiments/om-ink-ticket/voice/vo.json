@@ -1,0 +1,14 @@
+[
+ {
+  "text": "You lost your ticket.",
+  "mood": "curious",
+  "start": 0.1,
+  "end": 1.209
+ },
+ {
+  "text": "Most people just... go home.",
+  "mood": "shocked",
+  "start": 1.559,
+  "end": 3.425
+ }
+]

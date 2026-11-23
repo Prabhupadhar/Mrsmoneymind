@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script src="ink-theater.js"></script>
+    <script src="ink-puppet.js"></script>
+    <script src="clips.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      @font-face { font-family: "InkHand"; src: url("assets/patrickhand.ttf") format("truetype"); font-display: block; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #f6f1e6; }
+      #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; }
+      .stage { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 40%, #fbf8f1 0%, #efe8d8 100%); }
+      .stage svg { position: absolute; inset: 0; width: 1080px; height: 1920px; }
+      .cap { position: absolute; left: 0; width: 1080px; text-align: center; font-family: "InkHand", cursive; color: #2a2a2a; opacity: 0; }
+      #c1 { top: 250px; font-size: 104px; }
+      #c2 { top: 230px; font-size: 150px; }
+      #c2 b { color: #d8432f; font-weight: 400; }
+      #c3 { top: 410px; font-size: 64px; color: #6d675c; }
+      .sign { font-family: "InkHand", cursive; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="5" data-width="1080" data-height="1920">
+      <section id="scene" class="clip" data-start="0" data-duration="5" data-track-index="1">
+        <div class="stage">
+          <svg viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <filter id="boil" x="-20%" y="-20%" width="140%" height="140%">
+                <feTurbulence id="boilTurb" type="fractalNoise" baseFrequency="0.013" numOctaves="1" seed="1" result="n"/>
+                <feDisplacementMap in="SourceGraphic" in2="n" scale="3"/>
+              </filter>
+            </defs>
+            <g id="world">
+              <g id="props" filter="url(#boil)"></g>
+              <g id="walker"><g id="flip"><g id="mount"></g></g></g>
+              <g id="ticket" filter="url(#boil)">
+                <rect x="-62" y="-34" width="124" height="68" rx="6" fill="#ffd9cf" stroke="#d8432f" stroke-width="5"/>
+                <path d="M -30 -34 L -30 34" stroke="#d8432f" stroke-width="3" stroke-dasharray="7 7"/>
+                <text x="16" y="12" text-anchor="middle" class="sign" font-size="34" fill="#d8432f">$10</text>
+              </g>
+              <g id="q" filter="url(#boil)" opacity="0"><text x="0" y="0" text-anchor="middle" class="sign" font-size="170" fill="#2a2a2a">?</text></g>
+            </g>
+          </svg>
+          <div id="c1" class="cap">lost: 1 ticket</div>
+          <div id="c2" class="cap"><b>54%</b> go home</div>
+          <div id="c3" class="cap">(Tversky &amp; Kahneman, 1981)</div>
+        </div>
+      </section>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      if (document.fonts && document.fonts.load) { document.fonts.load("90px InkHand"); }
+      var IT = window.InkTheater, tl = gsap.timeline({ paused: true });
+      var GROUND = 1360, NS = "http://www.w3.org/2000/svg";
+      var props = document.getElementById("props");
+      function ink(pts, w, col, o) {
+        var p = document.createElementNS(NS, "path");
+        p.setAttribute("d", IT.inkPath(pts, Object.assign({ wobble: 1.4, step: 40 }, o || {})));
+        p.setAttribute("fill", "none"); p.setAttribute("stroke", col || "#2a2a2a");
+        p.setAttribute("stroke-width", w || 5); p.setAttribute("stroke-linecap", "round"); p.setAttribute("stroke-linejoin", "round");
+        props.appendChild(p); return p;
+      }
+      function txt(s, x, y, size, col) {
+        var t = document.createElementNS(NS, "text"); t.textContent = s;
+        t.setAttribute("x", x); t.setAttribute("y", y); t.setAttribute("text-anchor", "middle");
+        t.setAttribute("class", "sign"); t.setAttribute("font-size", size); t.setAttribute("fill", col || "#2a2a2a");
+        props.appendChild(t); return t;
+      }
+      // ground
+      var ground = ink([[40, GROUND], [540, GROUND + 5], [1040, GROUND]], 5, "#8c8576", { wobble: 2 });
+      // theater booth (right)
+      var booth = [
+        ink([[690, GROUND], [690, 930], [940, 930], [940, GROUND]], 6),
+        ink([[670, 930], [815, 840], [960, 930]], 6),
+        ink([[730, 1020], [900, 1020], [900, 1130], [730, 1130], [730, 1020]], 5),
+        ink([[710, 1200], [920, 1200]], 5)
+      ];
+      var sign = txt("TICKETS", 815, 1006, 50); var price = txt("$10", 815, 1100, 64, "#d8432f");
+      // home (left, tiny, far)
+      var home = [
+        ink([[130, GROUND], [130, 1200], [270, 1200], [270, GROUND]], 5),
+        ink([[112, 1205], [200, 1130], [288, 1205]], 5),
+        ink([[180, GROUND], [180, 1280], [220, 1280], [220, GROUND]], 4)
+      ];
+      var homeTxt = txt("home", 200, 1110, 44, "#6d675c");
+
+      // the walker: real CMU mocap retargeted onto the ink figure
+      var pup = window.InkPuppet.create(document.getElementById("mount"), { cx: 0, ground: GROUND, boil: "boil", headR: 46, strokeWidth: 7 });
+      var W = document.getElementById("walker"), F = document.getElementById("flip");
+      gsap.set(F, { svgOrigin: "0 " + GROUND });
+      gsap.set(W, { x: 330 });
+
+      // frame 0: everything is being drawn by the pencil (motion from frame 0)
+      pup.drawIn(tl, { start: 0, each: 0.22 });
+      [ground].concat(booth, home).forEach(function (p, i) {
+        var L = p.getTotalLength(); p.style.strokeDasharray = L; p.style.strokeDashoffset = L;
+        tl.to(p, { strokeDashoffset: 0, duration: 0.45, ease: "power2.out" }, 0.05 + i * 0.05);
+      });
+      tl.fromTo([sign, price, homeTxt], { opacity: 0 }, { opacity: 1, duration: 0.25, stagger: 0.08 }, 0.35);
+
+      // 0.55-1.55 walk to the booth, ticket in hand
+      window.InkPuppet.choreograph(tl, pup, [
+        { clip: "walk", dur: 1.0 },
+        { clip: "jump", dur: 0.95, loop: false },
+        { clip: "walk", dur: 2.45 }
+      ], { start: 0.55 });
+      tl.to(W, { x: 540, duration: 1.0, ease: "none" }, 0.55);
+      // ticket rides in the hand, then the wind takes it (spring ease up and away)
+      gsap.set("#ticket", { x: 402, y: GROUND - 250, rotation: -8, svgOrigin: "0 0" });
+      tl.to("#ticket", { x: 554, duration: 0.7, ease: "none" }, 0.55);
+      tl.to("#ticket", { x: 940, y: 520, rotation: 220, duration: 1.4, ease: "power2.in" }, 1.25);
+      tl.to("#ticket", { opacity: 0, duration: 0.2 }, 2.45);
+      tl.fromTo("#c1", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.3, ease: IT.ease.overshoot }, 0.9);
+      // 1.55-2.5: leaps after it
+      tl.to(W, { x: 600, duration: 0.95, ease: "power1.out" }, 1.55);
+      tl.to("#c1", { opacity: 0, duration: 0.25 }, 2.25);
+      // 2.5: a beat, "?" pops over the head
+      tl.set("#q", { x: 600, y: GROUND - 560 }, 2.4);
+      tl.fromTo("#q", { opacity: 0, scale: 0.3, svgOrigin: "0 0" }, { opacity: 1, scale: 1, duration: 0.35, ease: IT.ease.bouncy }, 2.45);
+      tl.to("#q", { opacity: 0, duration: 0.2 }, 3.05);
+      // 2.5-5: turns around and walks home
+      tl.set(F, { scaleX: -1 }, 2.5);
+      tl.to(W, { x: 300, duration: 2.45, ease: "none" }, 2.5);
+      tl.fromTo("#c2", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.4, ease: IT.ease.overshoot }, 3.0);
+      tl.fromTo("#c3", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 3.3);
+      // slow push-in for depth
+      tl.fromTo("#world", { scale: 1.22, svgOrigin: "540 1360" }, { scale: 1.32, duration: 5, ease: "none" }, 0);
+
+      IT.boil(document.getElementById("boilTurb"), tl, { duration: 5, fps: 10 });
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
