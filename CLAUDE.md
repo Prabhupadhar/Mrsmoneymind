@@ -89,6 +89,9 @@ someone you know" 138; "Pay by card, pay DOUBLE?" 60; "Why tapping your card doe
   a stranger, a coworker). Reuse the neighbor as a recurring character when the study fits.
 - Never open with "Why..." or "Here's why"; turn the explanation into a conflict or a loss.
 - Always native vertical; never a cropped 16:9 clip on a blurred background.
+Early signal (owner, Shorts tab, day 1 of the style test): the Pop Art remake of the neighbor story (P01) passed
+1k views, about 2x the classic neighbor Short (498) on the same story. One Short only, so it does not change the
+decision rule; it does suggest the style, not just the topic, drives reach.
 Re-check against YouTube Studio (Metricool lags several days) and update this list as data grows.
 
 ## Other rules
