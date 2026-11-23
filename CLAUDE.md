@@ -92,6 +92,7 @@ someone you know" 138; "Pay by card, pay DOUBLE?" 60; "Why tapping your card doe
 Early signal (owner, Shorts tab, day 1 of the style test): the Pop Art remake of the neighbor story (P01) passed
 1k views, about 2x the classic neighbor Short (498) on the same story. One Short only, so it does not change the
 decision rule; it does suggest the style, not just the topic, drives reach.
+P01 in Studio (day 2): 55.8% stayed to watch, 44.2% swiped away; retention not processed yet.
 Re-check against YouTube Studio (Metricool lags several days) and update this list as data grows.
 
 ## Other rules
