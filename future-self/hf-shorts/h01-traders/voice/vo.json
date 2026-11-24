@@ -1,0 +1,62 @@
+[
+ {
+  "text": "The busiest traders earned the least.",
+  "mood": "excited",
+  "start": 0.1,
+  "end": 1.541
+ },
+ {
+  "text": "Checking your stocks every hour? Careful.",
+  "mood": "curious",
+  "start": 1.891,
+  "end": 4.059
+ },
+ {
+  "text": "Researchers followed sixty-six thousand households at one broker, for six years.",
+  "mood": "neutral",
+  "start": 4.409,
+  "end": 8.847
+ },
+ {
+  "text": "Then they sorted them by how much they traded.",
+  "mood": "curious",
+  "start": 9.147,
+  "end": 11.383
+ },
+ {
+  "text": "The busiest fifth flipped their whole portfolio more than twice a year.",
+  "mood": "neutral",
+  "start": 11.783,
+  "end": 15.139
+ },
+ {
+  "text": "Before fees, everyone earned about the same.",
+  "mood": "curious",
+  "start": 15.539,
+  "end": 17.767
+ },
+ {
+  "text": "But after fees? The busiest traders made eleven point four percent a year.",
+  "mood": "neutral",
+  "start": 18.117,
+  "end": 22.223
+ },
+ {
+  "text": "The quietest ones? Eighteen point five.",
+  "mood": "shocked",
+  "start": 22.723,
+  "end": 24.919
+ },
+ {
+  "text": "Every trade costs a little. So more trades cost a lot.",
+  "mood": "warm",
+  "start": 25.319,
+  "end": 28.396
+ },
+ {
+  "text": "So who's busier with their money... you, or your wealth?",
+  "mood": "whisper",
+  "start": 28.796,
+  "end": 32.738
+ }
+]

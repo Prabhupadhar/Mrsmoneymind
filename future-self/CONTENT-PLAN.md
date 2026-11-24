@@ -31,6 +31,14 @@ finding, but the run must read the paper in full before writing a single line; `
 | P05 | 2026-11-27 | H09 "You lost ten bucks. Still buying the ticket?" (Pop Art grid + jars) | Tversky & Kahneman 1981, problems 8-9 (read in full) | scheduled 2026-11-27 |
 The hook bank below now feeds the 13:00 slot (H01, H02, H09 and H17 are used). H14 (drive 20 minutes, same 1981 paper: 68% vs 29%) is verified.
 
+### HyperFrames Shorts (09:30 / 18:00 IST, plus 11:00 on otherwise empty days; see `hf-shorts/README.md`)
+| ID | Date | Hook | Source | Status |
+|---|---|---|---|---|
+| h01-traders | 2026-11-27 09:30 | H08 "The busiest traders earned the least." | Barber & Odean 2000 (read in full) | scheduled |
+| h02-default | 2026-11-27 18:00 | H11 "Thirty-seven percent to eighty-six. One switch." | Madrian & Shea (NBER WP 7682, read in full) | scheduled |
+| h03-locker | 2026-11-28 18:00 | H23 "They paid to lock their own iPod away." | Milkman, Minson & Volpp 2014 (read in full) | scheduled |
+H08, H11 and H23 are used. The daily run takes the next unused hook-bank items (skip any used by P/s Shorts).
+
 ### Hook bank: 50 Shorts (build in this order)
 Every Short follows the storytelling formula in `CLAUDE.md`. The hook must stay exactly true to the
 paper after reading it in full: if it does not, rewrite the hook to what the paper says, or mark it
@@ -45,10 +53,10 @@ paper after reading it in full: if it does not, rewrite the hook to what the pap
 | H05 | Pain | "Losing $100 hurts more than winning $100 feels good." | Loss aversion: losses weigh roughly twice as much (and the debate about how much) | Tversky & Kahneman 1992, J. Risk & Uncertainty | to verify |
 | H06 | Relatable | "That 'wait, I spent HOW much?' feeling? Science." | Card payers recalled their recent spending less accurately than cash payers | Soman 2001, JCR | verified |
 | H07 | Behind the scenes | "The famous honesty study had a secret." | The 'sign at the top' study was retracted after its data was found fabricated | Shu et al. 2012 PNAS (retracted 2021) | to verify |
-| H08 | Contrarian | "The busiest traders made the least money." | 66,465 households: the most active traders' net returns trailed the market | Barber & Odean 2000, J. Finance | to verify |
+| H08 | Contrarian | "The busiest traders earned the least." | 66,465 households: the most active traders' net returns trailed the market | Barber & Odean 2000, J. Finance | used: h01-traders |
 | H09 | Dilemma | "You lost $10. Would you still buy the ticket?" | Most rebuy after losing cash, few after losing the ticket: same money, different 'account' | Tversky & Kahneman 1981, Science | to verify |
 | H10 | Timely (Dec 28-Jan 1) | "Mondays aren't the problem. They're a cheat code." | Fresh-start effect: gym visits rise after Mondays, birthdays and New Year | Dai, Milkman & Riis 2014, Management Science | to verify |
-| H11 | Shocking number | "One checkbox. Retirement sign-ups more than doubled." | Auto-enrollment: the default did what willpower didn't | Madrian & Shea 2001, QJE | to verify |
+| H11 | Shocking number | "One checkbox. Retirement sign-ups more than doubled." | Auto-enrollment: the default did what willpower didn't | Madrian & Shea 2001, QJE | used: h02-default |
 | H12 | Myth bust | "The marshmallow test may have measured money, not willpower." | A bigger replication: family background explained much of the link | Watts, Duncan & Quan 2018, Psych Science | to verify |
 | H13 | Weird | "They added free plates. The set lost value." | 24 intact pieces beat 40 pieces with a few broken, when judged alone | Hsee 1998, J. Behavioral Decision Making | to verify |
 | H14 | Dilemma | "Drive 20 minutes to save $5? Depends on the price." | People drove to save $5 on a cheap item, not on an expensive one | Tversky & Kahneman 1981, Science | to verify |
@@ -60,7 +68,7 @@ paper after reading it in full: if it does not, rewrite the hook to what the pap
 | H20 | Quiz | "Only 1 in 3 get these 3 money questions right." | The 'Big Three' financial literacy questions (interest, inflation, diversification) | Lusardi & Mitchell 2011 / 2014, JEL | to verify |
 | H21 | Contrarian | "Everyone says $75k is enough. The data disagrees." | 2023 adversarial collaboration: happiness keeps rising, except for the unhappiest | Killingsworth, Kahneman & Mellers 2023, PNAS | to verify |
 | H22 | You-accusation | "That 'minimum payment' line is a trap." | Showing the minimum anchored people to repay less | Stewart 2009, Psych Science (check Keys & Wang 2019) | to verify |
-| H23 | Hack | "Lock your favorite show inside the gym." | Temptation bundling: audiobooks only at the gym raised visits | Milkman, Minson & Volpp 2014, Management Science | to verify |
+| H23 | Hack | "Lock your favorite show inside the gym." | Temptation bundling: audiobooks only at the gym raised visits | Milkman, Minson & Volpp 2014, Management Science | used: h03-locker |
 | H24 | Contrast | "Your new phone gets boring. Your trip gets better." | Experiences made people happier than things | Van Boven & Gilovich 2003, JPSP | to verify |
 | H25 | Shocking number | "71 studies asked: does tapping make you spend more?" | Yes, but the effect is small | Schomburgk, Belli & Hoffmann 2024, J. Retailing | verified |
 | H26 | Weird | "A raise that loses money can feel better." | Money illusion: a nominal raise with inflation felt better than a real raise without | Shafir, Diamond & Tversky 1997, QJE | to verify |

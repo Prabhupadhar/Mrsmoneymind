@@ -1,0 +1,62 @@
+[
+ [
+  "The busiest traders earned the least.",
+  0.1,
+  1.15,
+  "excited"
+ ],
+ [
+  "Checking your stocks every hour? Careful.",
+  0.35,
+  1.12,
+  "curious"
+ ],
+ [
+  "Researchers followed sixty-six thousand households at one broker, for six years.",
+  0.35,
+  1.12,
+  "neutral"
+ ],
+ [
+  "Then they sorted them by how much they traded.",
+  0.3,
+  1.12,
+  "curious"
+ ],
+ [
+  "The busiest fifth flipped their whole portfolio more than twice a year.",
+  0.4,
+  1.12,
+  "neutral"
+ ],
+ [
+  "Before fees, everyone earned about the same.",
+  0.4,
+  1.12,
+  "curious"
+ ],
+ [
+  "But after fees? The busiest traders made eleven point four percent a year.",
+  0.35,
+  1.12,
+  "neutral"
+ ],
+ [
+  "The quietest ones? Eighteen point five.",
+  0.5,
+  1.12,
+  "shocked"
+ ],
+ [
+  "Every trade costs a little. So more trades cost a lot.",
+  0.4,
+  1.12,
+  "warm"
+ ],
+ [
+  "So who's busier with their money... you, or your wealth?",
+  0.4,
+  1.12,
+  "whisper"
+ ]
+]

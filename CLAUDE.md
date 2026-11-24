@@ -18,6 +18,10 @@ The owner does not want to approve each step. Run the pipeline end to end withou
     with `future-self/popart/README.md`. Long videos keep the classic HyperFrames pipeline.
   - Pick each Short's format from its story (cartoon scene for people in a situation, Pop Art wall/grid for
     crowds and percentages, chart for a changing number, split frame for a choice); never the same format two days running.
+- **Volume (owner, 24 Nov 2026): 3-4 Shorts a day, every day, each on a different topic.** Fill each day up to 4 with
+  HyperFrames character Shorts (`future-self/hf-shorts/README.md`) in the 09:30 and 18:00 IST slots (11:00 too when a day
+  has nothing else). A daily automated run builds them two days ahead. Never repeat a topic already posted or scheduled.
+  The HyperFrames Shorts are a third style; they do not change the 13:00-vs-20:30 style-test comparison.
 - Do not merge pull requests into `main` unless the owner asks; push to `claude/loving-turing-6gvkvm`.
 - What to make next, and the weekly run's steps: `future-self/CONTENT-PLAN.md`.
 
