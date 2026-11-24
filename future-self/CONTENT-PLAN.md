@@ -37,6 +37,7 @@ The hook bank below now feeds the 13:00 slot (H01, H02, H09 and H17 are used). H
 | h01-traders | 2026-11-27 09:30 | H08 "The busiest traders earned the least." | Barber & Odean 2000 (read in full) | scheduled |
 | h02-default | 2026-11-27 18:00 | H11 "Thirty-seven percent to eighty-six. One switch." | Madrian & Shea (NBER WP 7682, read in full) | scheduled |
 | h03-locker | 2026-11-28 18:00 | H23 "They paid to lock their own iPod away." | Milkman, Minson & Volpp 2014 (read in full) | scheduled |
+| h04-match | 2026-11-28 09:30 | H37 free employer match left unclaimed | Choi, Laibson & Madrian (NBER w11554) | in progress (owner session) |
 H08, H11 and H23 are used. The daily run takes the next unused hook-bank items (skip any used by P/s Shorts).
 
 ### Hook bank: 50 Shorts (build in this order)
@@ -82,7 +83,7 @@ paper after reading it in full: if it does not, rewrite the hook to what the pap
 | H34 | Framing | "Call it a bonus. Watch it disappear." | Money framed as a bonus was spent more than money framed as a rebate | Epley, Mak & Idson 2006, J. Behavioral Decision Making | to verify |
 | H35 | Contrast | "Future you eats fruit. Present you eats chocolate." | Present bias: choices for next week vs right now | Read & van Leeuwen 1998, OBHDP | to verify |
 | H36 | Decision | "They chose to lock their own money away. Why?" | Commitment savings accounts in the Philippines raised savings | Ashraf, Karlan & Yin 2006, QJE | to verify |
-| H37 | Free money | "Free money, every paycheck. They left it there." | Many employees didn't take their full employer match | Choi, Laibson & Madrian 2011, REStat | to verify |
+| H37 | Free money | "Free money, every paycheck. They left it there." | Many employees didn't take their full employer match | Choi, Laibson & Madrian 2011, REStat | in progress: h04-match |
 | H38 | Brain | "Same wine. Different price. Their brain tasted it." | $90 vs $10 label: ratings and brain activity changed | Plassmann et al. 2008, PNAS | to verify |
 | H39 | Myth bust | "Seeing money makes you selfish? Probably not." | Money-priming effects failed to replicate | Vohs, Mead & Goode 2006 vs Rohrer, Pashler & Harris 2015 | to verify |
 | H40 | Gamble | "Won $30? You'll gamble it differently." | House-money effect: prior gains raise risk taking | Thaler & Johnson 1990, Management Science | to verify |
