@@ -69,3 +69,13 @@ J. Economic Literature 2014). Read in full (WP).
   answer the factual questions.
 - Risk diversification is the hardest: 34% of US respondents said "do not know".
 - Safe hook: "Three money questions. Only 30% pass."
+
+## h08-peers: Beshears, Choi, Laibson, Madrian & Milkman, "The Effect of Providing Peer Information on Retirement Savings
+Decisions" (NBER WP 17345; J. Finance 2015). Read in full (WP).
+- Large US manufacturing firm, about 15,000 US employees; mailing on 30 July 2008 (natural field experiment).
+- Non-participants got a Quick Enrollment form: tick a box to start saving 6% of pay (default fund). Randomly, some letters
+  added "Join the A% of B-C year old employees at [company] who are already enrolled" (A ranged 77%-93%).
+- Among non-participants with a 0% default (not auto-enrolled, mostly union workers), peer information reduced enrollment
+  from 9.9% to 6.3%, about a third lower; a higher reported peer % lowered enrollment further.
+- The backfire was concentrated among employees with low relative income: discouragement from upward comparison.
+- Safe hook: "Told 'everyone saves'? They saved less." (true for that group; do not generalize to all workers).

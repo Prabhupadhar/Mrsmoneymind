@@ -1,0 +1,62 @@
+[
+ {
+  "text": "Told everyone saves? They saved less.",
+  "mood": "excited",
+  "start": 0.1,
+  "end": 2.048
+ },
+ {
+  "text": "Peer pressure should work, right? Watch.",
+  "mood": "curious",
+  "start": 2.398,
+  "end": 4.452
+ },
+ {
+  "text": "A big American manufacturing company, 2008. Workers who weren't saving got a simple form.",
+  "mood": "neutral",
+  "start": 4.802,
+  "end": 10.638
+ },
+ {
+  "text": "Tick one box. Start saving six percent.",
+  "mood": "neutral",
+  "start": 10.938,
+  "end": 13.384
+ },
+ {
+  "text": "Some letters added one line: join the coworkers your age who already save.",
+  "mood": "curious",
+  "start": 13.734,
+  "end": 17.701
+ },
+ {
+  "text": "That should help, right?",
+  "mood": "curious",
+  "start": 18.001,
+  "end": 18.983
+ },
+ {
+  "text": "Without that line, nine point nine percent of one group signed up.",
+  "mood": "neutral",
+  "start": 19.333,
+  "end": 22.713
+ },
+ {
+  "text": "With it? Six point three.",
+  "mood": "shocked",
+  "start": 23.213,
+  "end": 24.548
+ },
+ {
+  "text": "Lower earners pulled back most. Seeing everyone ahead can feel like: why bother?",
+  "mood": "warm",
+  "start": 24.948,
+  "end": 29.524
+ },
+ {
+  "text": "So compare with last month's you. Not with everyone else.",
+  "mood": "warm",
+  "start": 29.924,
+  "end": 32.786
+ }
+]

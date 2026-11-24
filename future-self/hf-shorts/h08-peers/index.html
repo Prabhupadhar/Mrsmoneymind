@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1080, height=1920" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+<script src="voice.js"></script>
+<script src="kit.js"></script>
+<link rel="stylesheet" href="base.css" />
+<style>
+  #root, html, body { background: #4a1630; }
+  .t { top: 220px; font-size: 96px; }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="34" data-width="1080" data-height="1920" data-motion-blur="on">
+  <svg id="art" class="clip" data-start="0" data-duration="34" viewBox="0 0 1080 1920">
+    <defs>
+      <radialGradient id="bg" cx="0.5" cy="0.5" r="0.85"><stop offset="0" stop-color="#b0406e"/><stop offset="1" stop-color="#2a0c1c"/></radialGradient>
+    </defs>
+    <rect width="1080" height="1920" fill="url(#bg)"/>
+    <g id="cam">
+      <g id="s1" class="scene"></g>
+      <g id="s2" class="scene"></g>
+      <g id="s3" class="scene"></g>
+      <g id="s4" class="scene"></g>
+    </g>
+  </svg>
+  <div id="t1" class="cap t clip" data-start="0" data-duration="34"></div>
+  <div id="t2" class="cap t clip" data-start="0" data-duration="34"></div>
+  <div id="t3" class="cap t clip" data-start="0" data-duration="34"></div>
+  <div id="t4" class="cap t clip" data-start="0" data-duration="34"></div>
+  <div id="t5" class="cap t clip" data-start="0" data-duration="34"></div>
+  <div id="t6" class="cap t clip" data-start="0" data-duration="34"></div>
+  <div id="t7" class="cap t clip" data-start="0" data-duration="34"></div>
+</div>
+<script>
+window.__timelines = window.__timelines || {};
+var tl = gsap.timeline({ paused: true }), V = window.VO;
+
+// ---------- S1: HOOK — coworkers with full piggy banks; the kid's piggy shrinks ----------
+var pig = function (id, x, y, s, col) {
+  return '<g transform="translate(' + x + ',' + y + ') scale(' + s + ')"><g id="' + id + '"><ellipse class="k" cx="0" cy="0" rx="120" ry="90" fill="' + col + '" stroke-width="9"/><circle class="k" cx="110" cy="-10" r="34" fill="#ffb8d6" stroke-width="7"/>' +
+    '<rect x="-30" y="-94" width="60" height="12" rx="6" fill="#0d0f22"/><circle cx="60" cy="-30" r="8" fill="#0d0f22"/></g></g>';
+};
+K.add("#s1", K.person("c1", "neighbor", { x: 180, y: 820, s: 0.3 }) + K.person("c2", "boss", { x: 540, y: 760, s: 0.3 }) + K.person("c3", "friend", { x: 900, y: 820, s: 0.3 }) +
+  pig("pg1", 180, 1030, 0.7, "#ff9ec4") + pig("pg2", 540, 970, 0.7, "#ff9ec4") + pig("pg3", 900, 1030, 0.7, "#ff9ec4") +
+  K.person("kid", "kid", { x: 540, y: 1270, s: 0.36 }) + pig("pgk", 760, 1430, 0.55, "#ff9ec4"));
+K.show(tl, "#s1", 0);
+K.hook(tl, "#t1", "told <b>everyone</b> saves? they saved <b>less.</b>", V[1] - 0.2);
+tl.fromTo(["#pg1", "#pg2", "#pg3"], { scale: 0.6, svgOrigin: "0 90" }, { scale: 1.1, duration: 0.6, stagger: 0.1, ease: "back.out(2.4)" }, 0);
+tl.fromTo("#pgk", { scale: 1, svgOrigin: "0 90" }, { scale: 0.55, duration: 0.6, ease: "power3.in" }, 0.7);
+K.face(tl, "c1", { m: "smile" }, 0); K.face(tl, "c2", { m: "smile" }, 0); K.face(tl, "c3", { m: "smile" }, 0);
+K.face(tl, "kid", { m: "frown", br: 14, look: [0, -30], sweat: 1 }, 0.6);
+K.react(tl, "kid", 0.7);
+K.words("#t2", "peer pressure <b>works?</b>"); K.title(tl, "#t2", V[1]);
+tl.to("#t2", { opacity: 0, duration: 0.2 }, V[2] - 0.2);
+
+// ---------- S2: the form: tick one box, start saving 6% ----------
+K.add("#s2",
+  '<text x="540" y="500" text-anchor="middle" class="lbl" font-size="62" fill="#ffd9e8">big US manufacturer · 2008</text>' +
+  '<g transform="translate(540,900)"><g id="form"><rect class="k" x="-330" y="-300" width="660" height="600" rx="20" fill="#fffdf6" stroke-width="10"/>' +
+  '<text y="-210" text-anchor="middle" class="num" font-size="54" fill="#4a1630">QUICK ENROLL</text>' +
+  '<rect class="k" x="-250" y="-120" width="110" height="110" rx="14" fill="#fff" stroke-width="10"/>' +
+  '<path id="tick" d="M-232,-70 L-202,-36 L-150,-110" fill="none" stroke="#18a35a" stroke-width="22" stroke-linecap="round" opacity="0"/>' +
+  '<text x="-110" y="-45" class="lbl" font-size="62" fill="#1d2a6b">save 6% of pay</text>' +
+  '<g id="peerline" opacity="0"><rect x="-300" y="60" width="600" height="190" rx="16" fill="#ffe08a"/>' +
+  '<text y="135" text-anchor="middle" class="lbl" font-size="52" fill="#4a1630">"Join the coworkers your</text><text y="200" text-anchor="middle" class="lbl" font-size="52" fill="#4a1630">age already enrolled"</text></g></g></g>');
+K.cut(tl, "#s1", "#s2", V[2] - 0.3);
+tl.fromTo("#form", { y: 700, rotation: 8 }, { y: 0, rotation: 0, duration: 0.6, ease: "back.out(1.6)", immediateRender: false }, V[2] + 0.3);
+tl.fromTo("#tick", { opacity: 0, strokeDasharray: 200, strokeDashoffset: 200 }, { opacity: 1, strokeDashoffset: 0, duration: 0.4, immediateRender: false }, V[3] + 0.3);
+K.pop(tl, "#peerline", V[4] + 0.6, 0.6);
+K.words("#t3", "one <b>extra</b> line"); K.title(tl, "#t3", V[4]);
+tl.to("#t3", { opacity: 0, duration: 0.2 }, V[5] - 0.1);
+K.words("#t4", "should <b>help</b>, right?"); K.title(tl, "#t4", V[5]);
+tl.to("#t4", { opacity: 0, duration: 0.2 }, V[6] - 0.2);
+
+// ---------- S3: 9.9% without the line vs 6.3% with it ----------
+K.add("#s3", '<text x="540" y="520" text-anchor="middle" class="lbl" font-size="58" fill="#ffd9e8">who signed up (workers not auto-enrolled)</text>' +
+  '<line x1="160" y1="1380" x2="920" y2="1380" stroke="#ffd9e8" stroke-width="6"/>' +
+  '<rect class="k" id="nb" x="220" y="' + (1380 - 9.9 * 70) + '" width="240" height="' + 9.9 * 70 + '" fill="#3fd17a" stroke-width="8"/>' +
+  '<rect class="k" id="pb" x="620" y="' + (1380 - 6.3 * 70) + '" width="240" height="' + 6.3 * 70 + '" fill="#ff4f6d" stroke-width="8"/>' +
+  '<text id="n99" x="340" y="' + (1380 - 9.9 * 70 - 30) + '" text-anchor="middle" class="num" font-size="80" fill="#fff" opacity="0">9.9%</text>' +
+  '<text id="n63" x="740" y="' + (1380 - 6.3 * 70 - 30) + '" text-anchor="middle" class="num" font-size="80" fill="#fff" opacity="0">6.3%</text>' +
+  '<text x="340" y="1450" text-anchor="middle" class="lbl" font-size="52" fill="#ffd9e8">plain form</text><text x="740" y="1450" text-anchor="middle" class="lbl" font-size="52" fill="#ffd9e8">+ "coworkers"</text>');
+K.cut(tl, "#s2", "#s3", V[6] - 0.3);
+tl.fromTo("#nb", { scaleY: 0, svgOrigin: "340 1380" }, { scaleY: 1, duration: 0.6, ease: "expo.out", immediateRender: false }, V[6] + 0.2);
+K.pop(tl, "#n99", V[6] + 0.7);
+tl.fromTo("#pb", { scaleY: 0, svgOrigin: "740 1380" }, { scaleY: 1, duration: 0.5, ease: "expo.out", immediateRender: false }, V[7]);
+K.pop(tl, "#n63", V[7] + 0.4, 1.8);
+K.camera(tl, "#cam", [[V[7] + 0.3, 1.07, -30, -20, 0.3], [V[8] - 0.3, 1, 0, 0, 0.5]]);
+K.words("#t5", "it <b>backfired</b>"); K.title(tl, "#t5", V[7] + 0.4);
+tl.to("#t5", { opacity: 0, duration: 0.2 }, V[8] - 0.2);
+
+// ---------- S4: why bother? -> compare with last month's you ----------
+K.add("#s4", K.person("kid2", "kid", { x: 330, y: 1000, s: 0.45 }) +
+  '<g id="ladder"><path d="M760,1300 L760,560 M900,1300 L900,560" stroke="#ffd9e8" stroke-width="12"/>' +
+  [0, 1, 2, 3, 4].map(function (i) { return '<path d="M760,' + (1200 - i * 150) + ' L900,' + (1200 - i * 150) + '" stroke="#ffd9e8" stroke-width="10"/>'; }).join("") + '</g>' +
+  K.person("top", "neighbor", { x: 830, y: 520, s: 0.22 }) +
+  '<g id="mirror" opacity="0"><rect class="k" x="660" y="740" width="300" height="420" rx="150" fill="#cfe9ff" stroke-width="10"/>' +
+  '<text x="810" y="1230" text-anchor="middle" class="lbl" font-size="50" fill="#ffd9e8">last month\'s you</text>' + K.person("kref", "kid", { x: 810, y: 930, s: 0.27, flip: true }) + '</g>');
+K.cut(tl, "#s3", "#s4", V[8] - 0.3);
+K.face(tl, "kid2", { m: "frown", br: 16, look: [40, -40], sweat: 1 }, V[8]);
+K.face(tl, "top", { m: "smile" }, V[8]);
+K.words("#t6", "why <b>bother?</b>"); K.title(tl, "#t6", V[8] + 1.6);
+tl.to("#t6", { opacity: 0, duration: 0.2 }, V[9] - 0.2);
+K.words("#t7", "compare with <b>you</b>"); K.title(tl, "#t7", V[9]);
+// loop: swap the ladder for a mirror
+tl.to(["#ladder", "#top"], { opacity: 0, duration: 0.3 }, V[9]);
+K.pop(tl, "#mirror", V[9] + 0.3, 0.5);
+K.face(tl, "kid2", { m: "smile", br: 0, look: [40, 0], sweat: 0, blush: 0.8 }, V[9] + 0.6);
+K.react(tl, "kid2", V[9] + 0.6);
+tl.set({}, {}, window.DUR);
+window.__timelines["main"] = tl;
+</script>
+</body>
+</html>
