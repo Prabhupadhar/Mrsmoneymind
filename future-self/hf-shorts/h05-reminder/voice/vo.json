@@ -1,0 +1,62 @@
+[
+ {
+  "text": "A text a month. They saved more.",
+  "mood": "excited",
+  "start": 0.1,
+  "end": 1.851
+ },
+ {
+  "text": "You meant to save this month. Then you forgot, right?",
+  "mood": "curious",
+  "start": 2.201,
+  "end": 4.522
+ },
+ {
+  "text": "Researchers teamed up with banks in the Philippines, Peru and Bolivia.",
+  "mood": "neutral",
+  "start": 4.872,
+  "end": 8.455
+ },
+ {
+  "text": "People had just opened savings accounts, each with a goal.",
+  "mood": "neutral",
+  "start": 8.755,
+  "end": 11.698
+ },
+ {
+  "text": "Some got a reminder every month. Some got nothing.",
+  "mood": "curious",
+  "start": 12.048,
+  "end": 14.704
+ },
+ {
+  "text": "The reminded ones saved about six percent more.",
+  "mood": "warm",
+  "start": 15.104,
+  "end": 17.851
+ },
+ {
+  "text": "But in Peru, the letters that named their own goal did even better.",
+  "mood": "curious",
+  "start": 18.201,
+  "end": 21.599
+ },
+ {
+  "text": "Sixteen percent more.",
+  "mood": "shocked",
+  "start": 22.099,
+  "end": 23.19
+ },
+ {
+  "text": "A photo of the goal? A puzzle of it? No real effect.",
+  "mood": "curious",
+  "start": 23.59,
+  "end": 26.326
+ },
+ {
+  "text": "So name your goal in the reminder. Then let your phone nag you.",
+  "mood": "warm",
+  "start": 26.726,
+  "end": 29.955
+ }
+]

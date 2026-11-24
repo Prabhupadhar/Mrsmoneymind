@@ -37,3 +37,13 @@
   their loss (median answer $1,200 a year). Contribution rates two months later: +0.16% of pay (treatment) vs +0.08%
   (control); difference 0.08% of pay, not significant. "Information did not meaningfully raise contributions."
 - Safe hook: "Free money. No catch. They left it."
+
+## h05-reminder: Karlan, McConnell, Mullainathan & Zinman, "Getting to the Top of Mind: How Reminders Increase Saving"
+(Yale EGC discussion paper 988, 2010; Management Science 2016). Read in full (discussion paper).
+- Field experiments with 3 banks (First Valley Bank, Philippines; Caja de Ica, Peru; Ecofuturo, Bolivia) with people who
+  had just opened goal-oriented savings accounts. Monthly reminders randomly assigned: text messages (Philippines,
+  Bolivia) or letters (Peru), vs no reminder.
+- Reminders: about 6% more saved (p 0.065-0.079) and 3 percentage points more likely to reach the savings goal.
+- Peru: reminders that mentioned the client's own specific goal raised savings by about 16% vs no reminder; reminders
+  without the goal had no effect. A photo of the goal or a jigsaw-puzzle piece of it did not significantly affect savings.
+- Safe hook: "A text a month. They saved more." (do not say "one text").

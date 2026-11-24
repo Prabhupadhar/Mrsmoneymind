@@ -38,7 +38,7 @@ The hook bank below now feeds the 13:00 slot (H01, H02, H09 and H17 are used). H
 | h02-default | 2026-11-27 18:00 | H11 "Thirty-seven percent to eighty-six. One switch." | Madrian & Shea (NBER WP 7682, read in full) | scheduled |
 | h03-locker | 2026-11-28 18:00 | H23 "They paid to lock their own iPod away." | Milkman, Minson & Volpp 2014 (read in full) | scheduled |
 | h04-match | 2026-11-28 09:30 | H37 "Free money. No catch. They left it." | Choi, Laibson & Madrian (NBER w11554, read in full) | scheduled |
-| h05-reminder | 2026-11-28 11:00 | H33 reminders and saving | Karlan, McConnell, Mullainathan & Zinman | in progress (owner session) |
+| h05-reminder | 2026-11-28 11:00 | H33 "A text a month. They saved more." | Karlan, McConnell, Mullainathan & Zinman (read in full) | scheduled |
 | h06-farmers | 2026-11-29 09:30 | H47 timing of the offer | Duflo, Kremer & Robinson (NBER w15131) | in progress (owner session) |
 H08, H11 and H23 are used. The daily run takes the next unused hook-bank items (skip any used by P/s Shorts).
 
@@ -81,7 +81,7 @@ paper after reading it in full: if it does not, rewrite the hook to what the pap
 | H30 | Weird | "A $20 bill is harder to spend than twenty $1s." | Denomination effect: big bills feel harder to break | Raghubir & Srivastava 2009, JCR | to verify |
 | H31 | Story | "The best part of your vacation happens before you leave." | Waiting for experiences feels better than waiting for things | Kumar, Killingsworth & Gilovich 2014, Psych Science | to verify |
 | H32 | You-accusation | "You'll overpay for anything you built yourself." | IKEA effect: self-built items valued more | Norton, Mochon & Ariely 2012, JCP | to verify |
-| H33 | Hack | "One text message made people save more." | Monthly reminders raised savings | Karlan, McConnell, Mullainathan & Zinman 2016, Management Science | in progress: h05-reminder |
+| H33 | Hack | "One text message made people save more." | Monthly reminders raised savings | Karlan, McConnell, Mullainathan & Zinman 2016, Management Science | used: h05-reminder |
 | H34 | Framing | "Call it a bonus. Watch it disappear." | Money framed as a bonus was spent more than money framed as a rebate | Epley, Mak & Idson 2006, J. Behavioral Decision Making | to verify |
 | H35 | Contrast | "Future you eats fruit. Present you eats chocolate." | Present bias: choices for next week vs right now | Read & van Leeuwen 1998, OBHDP | to verify |
 | H36 | Decision | "They chose to lock their own money away. Why?" | Commitment savings accounts in the Philippines raised savings | Ashraf, Karlan & Yin 2006, QJE | to verify |
