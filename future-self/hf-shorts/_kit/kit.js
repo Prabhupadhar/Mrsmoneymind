@@ -117,7 +117,7 @@
   function hook(tl, sel, html, until) {
     words(sel, html);
     document.querySelector(sel).classList.add("hook");
-    tl.fromTo(sel, { scale: 1.22, transformOrigin: "50% 50%" }, { scale: 1, duration: 0.5, ease: "back.out(2.2)" }, 0);
+    tl.fromTo(sel, { scale: 1.1, transformOrigin: "50% 50%" }, { scale: 1, duration: 0.5, ease: "back.out(2.2)" }, 0);
     tl.fromTo(sel + " span", { y: -22 }, { y: 0, duration: 0.35, stagger: 0.05, ease: "back.out(2.5)" }, 0);
     if (until) tl.to(sel, { opacity: 0, duration: 0.2 }, until);
   }
