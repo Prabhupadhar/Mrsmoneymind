@@ -60,8 +60,7 @@ tl.fromTo("#sw-knob", { x: -60 }, { x: 0, duration: 0.6, ease: "elastic.out(1,0.
 flipOn("sw", 1.0);
 K.counter(tl, "#pct", 37, 86, 1.0, 1.2, function (v) { return Math.round(v) + "%"; });
 tl.to("#pct", { fill: "#7dff9a", duration: 0.3 }, 1.6);
-K.words("#t1", "one <b>switch.</b>"); K.title(tl, "#t1", 0.2);
-tl.to("#t1", { opacity: 0, duration: 0.2 }, V[1] - 0.2);
+K.hook(tl, "#t1", "<b>37%</b> to <b>86%.</b> one&nbsp;switch.", V[1] - 0.2);
 // "you've probably got this switch at work": a work badge pops in
 K.add("#s1", '<g transform="translate(540,1420)"><g id="badge" opacity="0"><rect class="k" x="-210" y="-52" width="420" height="104" rx="20" fill="#fff" stroke-width="7"/><text y="18" text-anchor="middle" class="lbl" font-size="58" fill="#1d2a6b">your job, too?</text></g></g>');
 K.pop(tl, "#badge", V[1] + 0.2, 0.5);

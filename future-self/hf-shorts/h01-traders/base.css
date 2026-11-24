@@ -12,3 +12,5 @@ html, body { width: 1080px; height: 1920px; overflow: hidden; background: #14215
 .scene { opacity: 0; }
 .lbl { font-family: "Hand", cursive; }
 .num { font-family: "Archivo Black", sans-serif; }
+.hook { font-size: 104px !important; top: 200px !important; text-shadow: 0 6px 0 rgba(0,0,0,.35); }
+.hook span { margin: 0 8px; }

@@ -113,6 +113,14 @@
     tl.fromTo(sel + " span", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.14, stagger: 0.08, ease: "power4.out" }, t);
     if (hold) tl.to(sel, { opacity: 0, duration: 0.2 }, t + hold);
   }
+  // The HOOK: the whole line is readable in frame 0 and already moving (punch-in), held until `until`.
+  function hook(tl, sel, html, until) {
+    words(sel, html);
+    document.querySelector(sel).classList.add("hook");
+    tl.fromTo(sel, { scale: 1.22, transformOrigin: "50% 50%" }, { scale: 1, duration: 0.5, ease: "back.out(2.2)" }, 0);
+    tl.fromTo(sel + " span", { y: -22 }, { y: 0, duration: 0.35, stagger: 0.05, ease: "back.out(2.5)" }, 0);
+    if (until) tl.to(sel, { opacity: 0, duration: 0.2 }, until);
+  }
   function counter(tl, el, from, to, t, dur, fmt) {
     var e = typeof el === "string" ? document.querySelector(el) : el, o = { v: from };
     fmt = fmt || function (v) { return Math.round(v).toLocaleString("en-US"); };
@@ -151,6 +159,6 @@
   function camera(tl, sel, keys) {  // keys: [[t, scale, x, y, dur]]
     keys.forEach(function (k) { tl.to(sel, { scale: k[1], x: k[2] || 0, y: k[3] || 0, svgOrigin: "540 960", duration: k[4] || 0.8, ease: "power2.inOut" }, k[0]); });
   }
-  root.K = { add: add, person: person, face: face, blink: blink, react: react, sway: sway, words: words, title: title,
+  root.K = { add: add, person: person, face: face, blink: blink, react: react, sway: sway, words: words, title: title, hook: hook,
     counter: counter, grid: grid, fillGrid: fillGrid, cut: cut, show: show, pop: pop, camera: camera, INK: INK };
 })(window);

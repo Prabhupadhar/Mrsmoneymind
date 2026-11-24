@@ -43,6 +43,7 @@ Freeze formats, slots and cadence until the test ends. Test window: Shorts publi
 - A failed render, failed check, or a Metricool error that a retry does not fix.
 
 ## Shorts rules
+- **Hook first, always (owner, 24 Nov 2026):** the hook is spoken first AND fully readable on screen in frame 0.
 - The first 3 seconds carry the hook: 8 words or fewer, a surprising claim or number by second 2,
   motion in frame 0 (no fade-ins), and an open loop that the end closes.
 - 20-35 s, native 1080x1920, nothing important in the bottom 420 px (Shorts UI).

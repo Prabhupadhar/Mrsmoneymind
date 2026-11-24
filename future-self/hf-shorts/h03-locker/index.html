@@ -57,7 +57,7 @@ tl.fromTo("#ipod", { x: -520, y: -520, rotation: -260, scale: 1.2 }, { x: 0, y: 
 tl.to("#lk-door", { scaleX: 1, duration: 0.25, ease: "power4.in" }, 0.75);
 tl.fromTo("#lk-lock", { y: -40, rotation: -20, svgOrigin: "110 30" }, { y: 0, rotation: 0, duration: 0.3, ease: "back.out(3)", immediateRender: false }, 1.0);
 tl.fromTo("#coin1", { opacity: 1, y: -300, rotation: 0 }, { y: 0, rotation: 360, duration: 0.55, ease: "bounce.out", immediateRender: false }, 1.2);
-K.words("#t1", "they <b>paid</b> for this"); K.title(tl, "#t1", 0.1);
+K.hook(tl, "#t1", "they <b>paid</b> to lock their own iPod away", null);
 K.camera(tl, "#cam", [[1.0, 1.06, 0, 0, 0.15], [1.15, 1, 0, 0, 0.5]]);
 tl.to("#t1", { opacity: 0, duration: 0.2 }, V[1] - 0.2);
 K.add("#s1", K.person("kid", "kid", { x: 250, y: 1270, s: 0.36 }));

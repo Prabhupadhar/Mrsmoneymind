@@ -17,6 +17,11 @@ a small cast, smooth motion with motion blur. Owner asked (24 Nov 2026) for 3-4 
    `npx --yes hyperframes@0.9.33 snapshot <id> --at 0.3,3,8,...  --no-end -o <scratch>` and LOOK at the sheet.
 5. Build: `sh _kit/build.sh <id>` -> `<id>/<id>.mp4` (render ~5-10 min with motion blur, mix, -14 LUFS, CRF 24).
 
+## HOOK FIRST (owner's standing rule, 24 Nov 2026)
+Every Short opens with its hook: voice line 1 is the hook (8 words or fewer, surprising, true to the paper) and the
+same words are on screen and fully readable in frame 0: `K.hook(tl, "#t1", "the <b>busiest</b> traders earned the <b>least.</b>", V[1] - 0.2)`.
+Check `snapshot --at 0,0.15`: the whole hook must read at 0.0 s.
+
 ## Kit (`_kit/kit.js`, global `K`)
 - `K.person(id, look, {x,y,s,flip})` bust characters: `kid`, `neighbor`, `boss`, `friend`.
 - `K.face(tl, id, {m, e, br, look, blush, sweat}, t)` mouths `flat|smile|o|frown`, eyes `n|h(hearts)|d($)|s(swirl)`.

@@ -65,13 +65,10 @@ K.face(tl, "kid", { e: "d", br: 14, look: [0, 30], sweat: 1 }, 0);
 K.face(tl, "nb", { m: "smile" }, 0);
 tl.set("#nb-lids", { opacity: 1 }, 0);
 tl.fromTo("#zz text", { opacity: 0, y: 20 }, { opacity: 1, y: -20, duration: 0.8, stagger: 0.25, ease: "sine.out" }, 0.2);
-K.words("#t1", "the <b>busiest</b> traders"); K.title(tl, "#t1", 0.05);
-tl.to("#t1", { opacity: 0, duration: 0.15 }, 1.0);
-K.words("#t2", "earned the <b>least.</b>"); K.title(tl, "#t2", 1.05);
+K.hook(tl, "#t1", "the <b>busiest</b> traders earned the <b>least.</b>", V[1] - 0.2);
 K.react(tl, "kid", 1.1);
 // "checking every hour?" — kid's eyes go to the phone, a clock pops above
 K.add("#s1", '<g transform="translate(300,560)"><g id="clock" opacity="0"><circle class="k" r="80" fill="#fff6e0" stroke-width="9"/><path id="hand" class="k" d="M0,0 L0,-56" stroke-width="10"/><path class="k" d="M0,0 L36,0" stroke-width="10"/></g></g>');
-tl.to("#t2", { opacity: 0, duration: 0.2 }, V[1] - 0.1);
 K.pop(tl, "#clock", V[1]);
 tl.to("#hand", { rotation: 720, svgOrigin: "0 0", duration: 2.4, ease: "none" }, V[1]);
 K.face(tl, "kid", { m: "o", e: "n", look: [10, 36] }, V[1] + 0.2);
