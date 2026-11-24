@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1080, height=1920" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+<script src="voice.js"></script>
+<script src="kit.js"></script>
+<link rel="stylesheet" href="base.css" />
+<style>
+  #root, html, body { background: #2a1450; }
+  .t { top: 220px; font-size: 96px; }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="34" data-width="1080" data-height="1920" data-motion-blur="on">
+  <svg id="art" class="clip" data-start="0" data-duration="34" viewBox="0 0 1080 1920">
+    <defs>
+      <radialGradient id="bg" cx="0.5" cy="0.5" r="0.85"><stop offset="0" stop-color="#6a3cc0"/><stop offset="1" stop-color="#1a0b36"/></radialGradient>
+    </defs>
+    <rect width="1080" height="1920" fill="url(#bg)"/>
+    <g id="cam">
+      <g id="s1" class="scene"></g>
+      <g id="s2" class="scene"></g>
+      <g id="s3" class="scene"></g>
+      <g id="s4" class="scene"></g>
+    </g>
+  </svg>
+  <div id="t1" class="cap t clip" data-start="0" data-duration="34"></div>
+  <div id="t2" class="cap t clip" data-start="0" data-duration="34"></div>
+  <div id="t3" class="cap t clip" data-start="0" data-duration="34"></div>
+  <div id="t4" class="cap t clip" data-start="0" data-duration="34"></div>
+</div>
+<script>
+window.__timelines = window.__timelines || {};
+var tl = gsap.timeline({ paused: true }), V = window.VO;
+
+// ---------- S1: HOOK — three cards, a stamp: only 30% pass ----------
+K.add("#s1", [0, 1, 2].map(function (i) {
+  return '<g transform="translate(' + (220 + i * 320) + ',820)"><g class="card" id="cd' + i + '"><rect class="k" x="-130" y="-170" width="260" height="340" rx="24" fill="#fff6e0" stroke-width="9"/>' +
+    '<text y="40" text-anchor="middle" class="num" font-size="170" fill="#6a3cc0">' + (i + 1) + '</text></g></g>';
+}).join("") +
+  '<g transform="translate(540,1250)"><g id="stamp"><rect class="k" x="-300" y="-90" width="600" height="180" rx="20" fill="none" stroke="#ff4f6d" stroke-width="14"/>' +
+  '<text y="38" text-anchor="middle" class="num" font-size="100" fill="#ff4f6d">30% PASS</text></g></g>');
+K.show(tl, "#s1", 0);
+K.hook(tl, "#t1", "three money questions. only <b>30%</b> pass.", V[1] - 0.2);
+tl.fromTo(".card", { y: 500, rotation: function (i) { return [-14, 6, 16][i]; } }, { y: 0, rotation: function (i) { return [-6, 0, 6][i]; }, duration: 0.55, stagger: 0.1, ease: "back.out(1.8)" }, 0);
+tl.fromTo("#stamp", { scale: 2.2, opacity: 0, rotation: -12, svgOrigin: "0 0" }, { scale: 1, opacity: 1, rotation: -6, duration: 0.3, ease: "power4.in" }, 0.7);
+K.camera(tl, "#cam", [[1.0, 1.04, 0, 0, 0.1], [1.1, 1, 0, 0, 0.4]]);
+K.words("#t2", "answer in your <b>head</b>"); K.title(tl, "#t2", V[1]);
+tl.to("#t2", { opacity: 0, duration: 0.2 }, V[2] - 0.2);
+
+// ---------- S2: the three questions, each with options; a timer ring ----------
+var Q = [
+  ["$100 at 2% a year", "after 5 years?", ["more than $102", "exactly $102", "less than $102"], 0],
+  ["earn 1%, prices +2%", "after 1 year you can buy:", ["more", "the same", "less"], 2],
+  ["one company's stock is", "safer than a stock fund", ["true", "false"], 1]
+];
+Q.forEach(function (q, i) {
+  var m = '<g id="q' + i + '" opacity="0"><text x="540" y="560" text-anchor="middle" class="num" font-size="64" fill="#ffd36b">QUESTION ' + (i + 1) + '</text>' +
+    '<text x="540" y="680" text-anchor="middle" class="lbl" font-size="74" fill="#fff">' + q[0] + '</text><text x="540" y="770" text-anchor="middle" class="lbl" font-size="74" fill="#fff">' + q[1] + '</text>';
+  q[2].forEach(function (o, j) {
+    m += '<g transform="translate(540,' + (920 + j * 150) + ')"><g class="opt" id="o' + i + j + '"><rect class="k" x="-330" y="-56" width="660" height="112" rx="56" fill="#3b1f75" stroke="#b9a6ff" stroke-width="6"/>' +
+      '<text y="20" text-anchor="middle" class="lbl" font-size="60" fill="#fff">' + o + '</text></g></g>';
+  });
+  m += '</g>';
+  K.add("#s2", m);
+});
+K.add("#s2", '<g transform="translate(920,560)"><circle r="56" fill="none" stroke="#4b2f8a" stroke-width="14"/><circle id="ring" r="56" fill="none" stroke="#ffd36b" stroke-width="14" stroke-linecap="round" transform="rotate(-90)" stroke-dasharray="352" stroke-dashoffset="0"/></g>');
+K.cut(tl, "#s1", "#s2", V[2] - 0.3);
+[0, 1, 2].forEach(function (i) {
+  var t0 = V[2 + i], t1 = (i < 2 ? V[3 + i] : V[5]) - 0.25;
+  tl.set("#q" + i, { opacity: 1 }, t0);
+  tl.fromTo("#q" + i + " .opt", { x: 700, opacity: 0 }, { x: 0, opacity: 1, duration: 0.45, stagger: 0.12, ease: "expo.out", immediateRender: false }, t0 + 0.3);
+  tl.fromTo("#ring", { strokeDashoffset: 0 }, { strokeDashoffset: 352, duration: t1 - t0, ease: "none", immediateRender: false }, t0);
+  if (i < 2) tl.to("#q" + i, { opacity: 0, duration: 0.2 }, t1);
+});
+
+// ---------- S3: answers — all three revealed with checks ----------
+K.add("#s3", '<text x="540" y="520" text-anchor="middle" class="num" font-size="80" fill="#ffd36b">ANSWERS</text>' +
+  [["1", "more than $102"], ["2", "less"], ["3", "false"]].map(function (a, i) {
+    return '<g transform="translate(540,' + (720 + i * 220) + ')"><g class="ans" id="a' + i + '"><rect class="k" x="-400" y="-80" width="800" height="160" rx="30" fill="#3fd17a" stroke-width="8"/>' +
+      '<text x="-320" y="26" text-anchor="middle" class="num" font-size="80" fill="#0d3a1e">' + a[0] + '</text><text x="40" y="24" text-anchor="middle" class="lbl" font-size="70" fill="#0d3a1e">' + a[1] + ' ✓</text></g></g>';
+  }).join(""));
+K.cut(tl, "#s2", "#s3", V[5] - 0.3);
+tl.fromTo(".ans", { scale: 0.3, opacity: 0, svgOrigin: "0 0" }, { scale: 1, opacity: 1, duration: 0.4, stagger: 0.35, ease: "back.out(2.6)", immediateRender: false }, V[5] + 0.1);
+
+// ---------- S4: only ~30% got all three; but 70% rated themselves 4+/7 ----------
+K.add("#s4", '<text id="p30" x="300" y="640" text-anchor="middle" class="num" font-size="140" fill="#3fd17a" opacity="0">30%</text>' +
+  '<text id="l30" x="300" y="720" text-anchor="middle" class="lbl" font-size="54" fill="#e6dcff" opacity="0">got all 3 right</text>' +
+  '<text id="p70" x="790" y="640" text-anchor="middle" class="num" font-size="140" fill="#ffd36b" opacity="0">70%</text>' +
+  '<text id="l70" x="790" y="720" text-anchor="middle" class="lbl" font-size="54" fill="#e6dcff" opacity="0">rated themselves 4+/7</text>');
+K.grid("#s4", "gq", 130, 840, 10, 38, 13, "#4b2f8a");
+K.grid("#s4", "gs", 620, 840, 10, 38, 13, "#4b2f8a");
+K.add("#s4", '<g id="kidwrap" opacity="0">' + K.person("kid2", "kid", { x: 540, y: 1060, s: 0.42 }) + '</g>');
+K.cut(tl, "#s3", "#s4", V[6] - 0.3);
+K.pop(tl, "#p30", V[6] + 0.2, 1.6); tl.to("#l30", { opacity: 1, duration: 0.3 }, V[6] + 0.4);
+K.fillGrid(tl, "gq", 30, "#3fd17a", V[6] + 0.5, 1.0);
+K.pop(tl, "#p70", V[7] + 0.1, 1.8); tl.to("#l70", { opacity: 1, duration: 0.3 }, V[7] + 0.3);
+K.fillGrid(tl, "gs", 70, "#ffd36b", V[7] + 0.4, 1.0);
+K.camera(tl, "#cam", [[V[7] + 0.1, 1.06, 0, -20, 0.3], [V[8] - 0.3, 1, 0, 0, 0.5]]);
+K.words("#t3", "<b>confident</b>... not correct"); K.title(tl, "#t3", V[7] + 1.4);
+tl.to("#t3", { opacity: 0, duration: 0.2 }, V[8] - 0.2);
+// loop: the kid asks you
+tl.to([".gq", ".gs"], { opacity: 0.15, duration: 0.4 }, V[8]);
+tl.fromTo("#kidwrap", { opacity: 0, y: 200 }, { opacity: 1, y: 0, duration: 0.5, ease: "expo.out", immediateRender: false }, V[8]);
+K.face(tl, "kid2", { m: "smile", look: [0, 0], br: -6 }, V[8] + 0.3);
+K.react(tl, "kid2", V[8] + 0.4);
+K.words("#t4", "did <b>you</b> pass?"); K.title(tl, "#t4", V[8] + 0.1);
+tl.set({}, {}, window.DUR);
+window.__timelines["main"] = tl;
+</script>
+</body>
+</html>

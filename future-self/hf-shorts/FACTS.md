@@ -57,3 +57,15 @@
 - Free delivery offered later (top-dressing time): 20% bought vs 39% under SAFI at harvest; use rose 9-10 points,
   not significant, less than half SAFI's effect. A 50% subsidy late in the season: +13-14 points, similar to early free delivery.
 - Safe hook: "98% planned it. 37% did it." (rounded 97.7 / 36.8).
+
+## h07-quiz: Lusardi & Mitchell, "The Economic Importance of Financial Literacy: Theory and Evidence" (NBER WP 18952, 2013;
+J. Economic Literature 2014). Read in full (WP).
+- The "Big Three" questions: $100 at 2% for 5 years (more than $102 / exactly / less); 1% interest vs 2% inflation after
+  1 year (buy more / same / less); "Buying a single company stock usually provides a safer return than a stock mutual fund"
+  (true/false). Correct: more than $102; less; false.
+- 2004 HRS (age 50+): only about half answered the interest and inflation questions; only a third got all three.
+- Across countries, "in the U.S., only 30 percent can" answer all three correctly.
+- 2009 US Financial Capability Study: 70% rated themselves 4 or higher out of 7, but only 30% of the same people could
+  answer the factual questions.
+- Risk diversification is the hardest: 34% of US respondents said "do not know".
+- Safe hook: "Three money questions. Only 30% pass."

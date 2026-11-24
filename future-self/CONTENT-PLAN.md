@@ -40,7 +40,7 @@ The hook bank below now feeds the 13:00 slot (H01, H02, H09 and H17 are used). H
 | h04-match | 2026-11-28 09:30 | H37 "Free money. No catch. They left it." | Choi, Laibson & Madrian (NBER w11554, read in full) | scheduled |
 | h05-reminder | 2026-11-28 11:00 | H33 "A text a month. They saved more." | Karlan, McConnell, Mullainathan & Zinman (read in full) | scheduled |
 | h06-farmers | 2026-11-29 09:30 | H47 "98% planned it. 37% did it." | Duflo, Kremer & Robinson (NBER w15131, read in full) | scheduled |
-| h07-quiz | 2026-11-29 11:00 | H20 the Big Three money questions | Lusardi & Mitchell (NBER w18952) | in progress (owner session) |
+| h07-quiz | 2026-11-29 11:00 | H20 "Three money questions. Only 30% pass." | Lusardi & Mitchell (NBER w18952, read in full) | scheduled |
 H08, H11 and H23 are used. The daily run takes the next unused hook-bank items (skip any used by P/s Shorts).
 
 ### Hook bank: 50 Shorts (build in this order)
@@ -69,7 +69,7 @@ paper after reading it in full: if it does not, rewrite the hook to what the pap
 | H17 | Gift | "Give someone a mug. Its price doubles." | Endowment effect: owners asked about twice what buyers offered | Kahneman, Knetsch & Thaler 1990, JPE | to verify |
 | H18 | Shocking number | "Men traded 45% more. It cost them." | Overconfidence: more trading, lower net returns | Barber & Odean 2001, QJE | to verify |
 | H19 | Story | "They paid full price. So they sat through it." | Full-price season-ticket buyers went to more plays: sunk cost | Arkes & Blumer 1985, OBHDP | to verify |
-| H20 | Quiz | "Only 1 in 3 get these 3 money questions right." | The 'Big Three' financial literacy questions (interest, inflation, diversification) | Lusardi & Mitchell 2011 / 2014, JEL | in progress: h07-quiz |
+| H20 | Quiz | "Only 1 in 3 get these 3 money questions right." | The 'Big Three' financial literacy questions (interest, inflation, diversification) | Lusardi & Mitchell 2011 / 2014, JEL | used: h07-quiz |
 | H21 | Contrarian | "Everyone says $75k is enough. The data disagrees." | 2023 adversarial collaboration: happiness keeps rising, except for the unhappiest | Killingsworth, Kahneman & Mellers 2023, PNAS | to verify |
 | H22 | You-accusation | "That 'minimum payment' line is a trap." | Showing the minimum anchored people to repay less | Stewart 2009, Psych Science (check Keys & Wang 2019) | to verify |
 | H23 | Hack | "Lock your favorite show inside the gym." | Temptation bundling: audiobooks only at the gym raised visits | Milkman, Minson & Volpp 2014, Management Science | used: h03-locker |
