@@ -27,3 +27,13 @@
 - End of study: offered a one-month program that would hold THEIR OWN new iPod at the gym. 64% said it sounded appealing;
   61% (100% - 39.3% who said $0) stated a willingness to pay above $0; average $6.91.
 - Safe hook: "They paid to have their own iPod locked away." (they stated a willingness to pay, elicited with an incentive-compatible method).
+
+## h04-match: Choi, Laibson & Madrian, "$100 Bills on the Sidewalk" (NBER WP 11554, 2005; REStat 2011). Read in full (WP).
+- Year-end 1998 data, 7 US firms (Hewitt Associates). Sample: 5,045 match-eligible employees over 59½ who could
+  withdraw 401(k) money for any reason with no penalty, so contributing below the match threshold loses free money.
+- Between 20% and 60% (median 31%) did not get the full match (Table 3, conservative loss definition).
+- Average loss among those losing: $160 (0.66% of pay) to $782 (2.32% of pay) a year; largest single loss $7,596 (6% of pay).
+- 2004 field experiment at Company A: treatment survey explained the match, the free withdrawals and had them compute
+  their loss (median answer $1,200 a year). Contribution rates two months later: +0.16% of pay (treatment) vs +0.08%
+  (control); difference 0.08% of pay, not significant. "Information did not meaningfully raise contributions."
+- Safe hook: "Free money. No catch. They left it."

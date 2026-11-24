@@ -1,0 +1,62 @@
+[
+ {
+  "text": "Free money. No catch. They left it.",
+  "mood": "excited",
+  "start": 0.1,
+  "end": 1.796
+ },
+ {
+  "text": "Your boss matches your savings? Then watch this.",
+  "mood": "curious",
+  "start": 2.146,
+  "end": 4.672
+ },
+ {
+  "text": "Researchers checked seven big American companies, in 1998.",
+  "mood": "neutral",
+  "start": 5.022,
+  "end": 9.174
+ },
+ {
+  "text": "Save a dollar, and the company adds more. Free.",
+  "mood": "warm",
+  "start": 9.474,
+  "end": 12.191
+ },
+ {
+  "text": "These workers were over fifty-nine and a half. They could take it out any time, no penalty.",
+  "mood": "curious",
+  "start": 12.541,
+  "end": 17.295
+ },
+ {
+  "text": "So skipping the match was just losing money.",
+  "mood": "firm",
+  "start": 17.695,
+  "end": 19.779
+ },
+ {
+  "text": "Still, twenty to sixty percent left some on the table.",
+  "mood": "neutral",
+  "start": 20.179,
+  "end": 23.011
+ },
+ {
+  "text": "So researchers mailed them the math. Here's your free money.",
+  "mood": "curious",
+  "start": 23.361,
+  "end": 26.086
+ },
+ {
+  "text": "Two months later? Almost nothing changed.",
+  "mood": "shocked",
+  "start": 26.586,
+  "end": 28.597
+ },
+ {
+  "text": "Knowing isn't taking. Free money only counts when you grab it.",
+  "mood": "warm",
+  "start": 28.997,
+  "end": 32.447
+ }
+]
