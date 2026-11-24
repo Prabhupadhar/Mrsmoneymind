@@ -39,7 +39,7 @@ The hook bank below now feeds the 13:00 slot (H01, H02, H09 and H17 are used). H
 | h03-locker | 2026-11-28 18:00 | H23 "They paid to lock their own iPod away." | Milkman, Minson & Volpp 2014 (read in full) | scheduled |
 | h04-match | 2026-11-28 09:30 | H37 "Free money. No catch. They left it." | Choi, Laibson & Madrian (NBER w11554, read in full) | scheduled |
 | h05-reminder | 2026-11-28 11:00 | H33 "A text a month. They saved more." | Karlan, McConnell, Mullainathan & Zinman (read in full) | scheduled |
-| h06-farmers | 2026-11-29 09:30 | H47 timing of the offer | Duflo, Kremer & Robinson (NBER w15131) | in progress (owner session) |
+| h06-farmers | 2026-11-29 09:30 | H47 "98% planned it. 37% did it." | Duflo, Kremer & Robinson (NBER w15131, read in full) | scheduled |
 H08, H11 and H23 are used. The daily run takes the next unused hook-bank items (skip any used by P/s Shorts).
 
 ### Hook bank: 50 Shorts (build in this order)
@@ -95,7 +95,7 @@ paper after reading it in full: if it does not, rewrite the hook to what the pap
 | H44 | Choice | "Time or money: which would you pick?" | People who valued time over money were happier | Hershfield, Mogilner & Barnea 2016, SPPS | to verify |
 | H45 | Contrarian | "Everyone quotes the jam study. Should they?" | 24 vs 6 jams, and the meta-analysis that found little effect | Iyengar & Lepper 2000; Scheibehenne et al. 2010 | to verify |
 | H46 | Hack | "Bet your own money. Quit smoking." | Deposit contracts: putting money at stake raised quit rates | Halpern et al. 2015, NEJM | to verify |
-| H47 | Timing | "Farmers bought more on one specific day." | Offers at harvest time, when cash was on hand, raised fertilizer use | Duflo, Kremer & Robinson 2011, AER | in progress: h06-farmers |
+| H47 | Timing | "Farmers bought more on one specific day." | Offers at harvest time, when cash was on hand, raised fertilizer use | Duflo, Kremer & Robinson 2011, AER | used: h06-farmers |
 | H48 | Weird | "The cheaper drink made them solve fewer puzzles." | Price-placebo effect (check replications before using) | Shiv, Carmon & Ariely 2005, JMR | to verify |
 | H49 | Small change | "One line on a payday-loan envelope cut borrowing." | Showing fees in dollars reduced borrowing | Bertrand & Morse 2011, J. Finance | to verify |
 | H50 | Curiosity | "Something didn't add up about rich countries." | Easterlin paradox vs Stevenson & Wolfers' cross-country data | Stevenson & Wolfers 2008, Brookings; Easterlin 1974 | to verify |

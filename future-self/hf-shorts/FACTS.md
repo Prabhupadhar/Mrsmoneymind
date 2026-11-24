@@ -47,3 +47,13 @@
 - Peru: reminders that mentioned the client's own specific goal raised savings by about 16% vs no reminder; reminders
   without the goal had no effect. A photo of the goal or a jigsaw-puzzle piece of it did not significantly affect savings.
 - Safe hook: "A text a month. They saved more." (do not say "one text").
+
+## h06-farmers: Duflo, Kremer & Robinson, "Nudging Farmers to Use Fertilizer" (NBER WP 15131, 2009; AER 2011). Read in full (WP).
+- Busia district, Western Kenya; parents of grade 5-6 pupils at 16 schools; programme run with ICS in 2003-2004.
+- Half a teaspoon of top-dressing fertilizer per plant: about 36% return over a season (70% annualized).
+- 97.7% of farmers in the demonstration-plot programme said they planned to use fertilizer next season; only 36.8% did.
+- SAFI: a field officer visited right after harvest and offered fertilizer at the regular price with free delivery.
+  Season 1: 45% of offered farmers used fertilizer vs 34% of the comparison group (+11 points; 46-63% increase).
+- Free delivery offered later (top-dressing time): 20% bought vs 39% under SAFI at harvest; use rose 9-10 points,
+  not significant, less than half SAFI's effect. A 50% subsidy late in the season: +13-14 points, similar to early free delivery.
+- Safe hook: "98% planned it. 37% did it." (rounded 97.7 / 36.8).
