@@ -41,6 +41,8 @@ The hook bank below now feeds the 13:00 slot (H01, H02, H09 and H17 are used). H
 | h05-reminder | 2026-11-28 11:00 | H33 "A text a month. They saved more." | Karlan, McConnell, Mullainathan & Zinman (read in full) | scheduled |
 | h06-farmers | 2026-11-29 09:30 | H47 "98% planned it. 37% did it." | Duflo, Kremer & Robinson (NBER w15131, read in full) | scheduled |
 | h07-quiz | 2026-11-29 11:00 | H20 "Three money questions. Only 30% pass." | Lusardi & Mitchell (NBER w18952, read in full) | scheduled |
+| h08-peers | 2026-11-29 18:00 | H42 peer information backfired | Beshears et al. (NBER w17345) | in progress (owner session) |
+| h09-75k | 2026-11-30 09:30 | H21 money and happiness past $75k | Killingsworth, Kahneman & Mellers 2023 (PMC) | in progress (owner session) |
 H08, H11 and H23 are used. The daily run takes the next unused hook-bank items (skip any used by P/s Shorts).
 
 ### Hook bank: 50 Shorts (build in this order)
@@ -70,7 +72,7 @@ paper after reading it in full: if it does not, rewrite the hook to what the pap
 | H18 | Shocking number | "Men traded 45% more. It cost them." | Overconfidence: more trading, lower net returns | Barber & Odean 2001, QJE | to verify |
 | H19 | Story | "They paid full price. So they sat through it." | Full-price season-ticket buyers went to more plays: sunk cost | Arkes & Blumer 1985, OBHDP | to verify |
 | H20 | Quiz | "Only 1 in 3 get these 3 money questions right." | The 'Big Three' financial literacy questions (interest, inflation, diversification) | Lusardi & Mitchell 2011 / 2014, JEL | used: h07-quiz |
-| H21 | Contrarian | "Everyone says $75k is enough. The data disagrees." | 2023 adversarial collaboration: happiness keeps rising, except for the unhappiest | Killingsworth, Kahneman & Mellers 2023, PNAS | to verify |
+| H21 | Contrarian | "Everyone says $75k is enough. The data disagrees." | 2023 adversarial collaboration: happiness keeps rising, except for the unhappiest | Killingsworth, Kahneman & Mellers 2023, PNAS | in progress: h09-75k |
 | H22 | You-accusation | "That 'minimum payment' line is a trap." | Showing the minimum anchored people to repay less | Stewart 2009, Psych Science (check Keys & Wang 2019) | to verify |
 | H23 | Hack | "Lock your favorite show inside the gym." | Temptation bundling: audiobooks only at the gym raised visits | Milkman, Minson & Volpp 2014, Management Science | used: h03-locker |
 | H24 | Contrast | "Your new phone gets boring. Your trip gets better." | Experiences made people happier than things | Van Boven & Gilovich 2003, JPSP | to verify |
@@ -91,7 +93,7 @@ paper after reading it in full: if it does not, rewrite the hook to what the pap
 | H39 | Myth bust | "Seeing money makes you selfish? Probably not." | Money-priming effects failed to replicate | Vohs, Mead & Goode 2006 vs Rohrer, Pashler & Harris 2015 | to verify |
 | H40 | Gamble | "Won $30? You'll gamble it differently." | House-money effect: prior gains raise risk taking | Thaler & Johnson 1990, Management Science | to verify |
 | H41 | World | "Canada or Uganda: giving felt the same." | Prosocial spending linked to happiness across countries | Aknin et al. 2013, JPSP | to verify |
-| H42 | Backfire | "Telling people their coworkers save made some save less." | Peer information backfired for low earners | Beshears et al. 2015, J. Finance | to verify |
+| H42 | Backfire | "Telling people their coworkers save made some save less." | Peer information backfired for low earners | Beshears et al. 2015, J. Finance | in progress: h08-peers |
 | H43 | Contrarian | "Experts say: highest interest first. Real people disagree." | Closing small accounts kept people paying (debt snowball) | Gal & McShane 2012, JMR | to verify |
 | H44 | Choice | "Time or money: which would you pick?" | People who valued time over money were happier | Hershfield, Mogilner & Barnea 2016, SPPS | to verify |
 | H45 | Contrarian | "Everyone quotes the jam study. Should they?" | 24 vs 6 jams, and the meta-analysis that found little effect | Iyengar & Lepper 2000; Scheibehenne et al. 2010 | to verify |
