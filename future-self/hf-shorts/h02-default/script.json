@@ -1,0 +1,62 @@
+[
+ [
+  "Thirty-seven percent to eighty-six. One switch.",
+  0.1,
+  1.15,
+  "excited"
+ ],
+ [
+  "And you've probably got this switch at work.",
+  0.35,
+  1.12,
+  "curious"
+ ],
+ [
+  "A big American company changed one thing in its retirement plan, in April 1998.",
+  0.35,
+  1.12,
+  "neutral"
+ ],
+ [
+  "Before, new staff had to sign themselves up.",
+  0.3,
+  1.12,
+  "neutral"
+ ],
+ [
+  "After, they were signed up automatically, unless they said no.",
+  0.35,
+  1.12,
+  "curious"
+ ],
+ [
+  "Same pay. Same plan. Same match.",
+  0.4,
+  1.12,
+  "firm"
+ ],
+ [
+  "In their first year or so, thirty-seven percent of the old group had joined.",
+  0.35,
+  1.12,
+  "neutral"
+ ],
+ [
+  "The new group? Eighty-six.",
+  0.5,
+  1.12,
+  "shocked"
+ ],
+ [
+  "But most never touched the setting again. Three percent, parked in the safest fund.",
+  0.45,
+  1.12,
+  "curious"
+ ],
+ [
+  "The default decided for them. So check what your switch says.",
+  0.4,
+  1.12,
+  "warm"
+ ]
+]
