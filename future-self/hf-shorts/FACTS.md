@@ -253,3 +253,17 @@ Read (abstract, introduction with the four main results, design).
 - Structural estimate: social pressure cost of saying no is $3.5 (in-state charity), $1.4 (out-of-state). Script: "about three
   dollars fifty" for the local charity case (screen labels it local charity).
 - Safe hook: "One do-not-disturb box. Donations: −30%."
+
+## h23-bonus: Ariely, Gneezy, Loewenstein & Mazar, "Large Stakes and Big Mistakes" (Federal Reserve Bank of Boston WP 05-11, July 2005; Review of Economic Studies 2009).
+Read (abstract, introduction, Experiment 1 India and Experiment 2 MIT).
+- Experiment 1: 87 residents of a rural town in India (Madurai area), late 2002; six games (memory, creativity, motor skills);
+  randomly assigned to small, moderate or very large incentives: full payment Rs 4, 40 or 400 per game for "very good", half for "good".
+- Rs 400 "relatively close to" the rural all-India average monthly per capita consumer expenditure (Rs 495) -> "close to a month's
+  spending per person".
+- Share of games at "very good": low 25.6%, mid 22.2%, high 6.3%. Earnings share: low 35.4%, mid 36.7%, high 19.5%. Low vs mid n.s.;
+  high lower than both.
+- Experiment 2 (MIT, 24 students, within-subject): high incentives (10x) significantly improved key-pressing (pure effort) and
+  marginally reduced adding performance (p = 0.056). Script: "hurt adding up numbers" (marginal; FACTS notes it).
+- Abstract: "With some important exceptions ... high reward levels can have detrimental effects on performance." The MIT key-pressing
+  line is the exception shown in the Short.
+- Safe hook: "Biggest bonus. Worst results." (true across the three India groups)

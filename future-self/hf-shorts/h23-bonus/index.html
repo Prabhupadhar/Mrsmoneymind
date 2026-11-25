@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1080, height=1920" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+<script src="voice.js"></script>
+<script src="kit.js"></script>
+<link rel="stylesheet" href="base.css" />
+<style>
+  #root, html, body { background: #2a0f3a; }
+  .t { top: 220px; font-size: 96px; }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="35" data-width="1080" data-height="1920" data-motion-blur="on">
+  <svg id="art" class="clip" data-start="0" data-duration="35" viewBox="0 0 1080 1920">
+    <defs>
+      <radialGradient id="bg" cx="0.5" cy="0.5" r="0.85"><stop offset="0" stop-color="#6a2f9a"/><stop offset="1" stop-color="#140620"/></radialGradient>
+      <g id="bag"><path class="k" d="M-90,-60 C-130,40 -120,120 0,120 C120,120 130,40 90,-60 Z" fill="#7dd88f" stroke-width="8"/><path class="k" d="M-50,-60 L-70,-110 L70,-110 L50,-60 Z" fill="#5fbf73" stroke-width="7"/><text y="56" text-anchor="middle" class="num" font-size="64" fill="#1d5a32">₹</text></g>
+      <g id="tile"><rect class="k" x="-70" y="-70" width="140" height="140" rx="18" fill="#fff6e0" stroke-width="7"/></g>
+    </defs>
+    <rect width="1080" height="1920" fill="url(#bg)"/>
+    <g id="cam">
+      <g id="s1" class="scene"></g>
+      <g id="s2" class="scene"></g>
+      <g id="s3" class="scene"></g>
+      <g id="s4" class="scene"></g>
+      <g id="s5" class="scene"></g>
+    </g>
+  </svg>
+  <div id="t1" class="cap t clip" data-start="0" data-duration="35"></div>
+  <div id="t2" class="cap t clip" data-start="0" data-duration="35"></div>
+  <div id="t3" class="cap t clip" data-start="0" data-duration="35"></div>
+  <div id="t4" class="cap t clip" data-start="0" data-duration="35"></div>
+  <div id="t5" class="cap t clip" data-start="0" data-duration="35"></div>
+</div>
+<script>
+window.__timelines = window.__timelines || {};
+var tl = gsap.timeline({ paused: true }), V = window.VO;
+function bag(id, x, y, s) { return '<g transform="translate(' + x + ',' + y + ') scale(' + s + ')"><g id="' + id + '"><use href="#bag"/></g></g>'; }
+
+// ---------- S1: HOOK — a giant money bag drops on the kid; the score board reads LOW ----------
+K.add("#s1", bag("bg1", 760, 820, 1.6) +
+  K.person("kid", "kid", { x: 330, y: 1100, s: 0.38 }) +
+  '<g transform="translate(330,1430)"><g id="score"><rect class="k" x="-170" y="-60" width="340" height="120" rx="16" fill="#140620" stroke="#ff4f6d" stroke-width="7"/><text y="22" text-anchor="middle" class="num" font-size="60" fill="#ff4f6d">SCORE ↓</text></g></g>');
+K.show(tl, "#s1", 0);
+K.hook(tl, "#t1", "biggest <b>bonus.</b> worst <b>results.</b>", V[1] - 0.2);
+tl.fromTo("#bg1", { y: -140, rotation: -15 }, { y: 0, rotation: 0, duration: 0.6, ease: "bounce.out" }, 0);
+tl.fromTo("#score", { scale: 1.3, svgOrigin: "0 0" }, { scale: 1, duration: 0.3, ease: "back.out(3)" }, 0.5);
+tl.fromTo("#score", { x: 0 }, { x: 10, duration: 0.05, repeat: 9, yoyo: true, ease: "none", immediateRender: false }, 0.8);
+K.face(tl, "kid", { m: "o", br: 14, sweat: 1, look: [40, -30] }, 0.4);
+K.react(tl, "kid", 0.6);
+K.words("#t2", "pay more, get <b>more?</b>"); K.title(tl, "#t2", V[1]);
+tl.to("#t2", { opacity: 0, duration: 0.2 }, V[2] - 0.2);
+
+// ---------- S2: 87 people, rural India, 2002, six games; top score paid ₹4 / ₹40 / ₹400 ----------
+var icons = ['<circle r="34" fill="#ff7a5c"/>', '<rect x="-34" y="-34" width="68" height="68" rx="8" fill="#9fe3ff"/>', '<path d="M0,-40 L38,30 L-38,30 Z" fill="#ffd36b"/>',
+  '<path d="M-36,0 A36,36 0 0 1 36,0 Z" fill="#7dd88f"/>', '<text y="22" text-anchor="middle" class="num" font-size="64" fill="#6a2f9a">7</text>', '<circle r="30" fill="none" stroke="#c2185b" stroke-width="12"/>'];
+K.add("#s2", '<text id="n87" x="540" y="560" text-anchor="middle" class="num" font-size="120" fill="#fff">0</text>' +
+  '<text x="540" y="640" text-anchor="middle" class="lbl" font-size="54" fill="#ead6ff">people · rural India · 2002</text>' +
+  icons.map(function (ic, i) { return '<g transform="translate(' + (240 + (i % 3) * 300) + ',' + (830 + Math.floor(i / 3) * 180) + ')"><g class="gm"><use href="#tile"/>' + ic + '</g></g>'; }).join("") +
+  '<g id="pays" opacity="0">' + bag("p1", 260, 1330, 0.45) + bag("p2", 540, 1310, 0.7) + bag("p3", 830, 1290, 1.0) +
+  '<g class="num" font-size="54" fill="#fff"><text x="260" y="1460" text-anchor="middle">₹4</text><text x="540" y="1460" text-anchor="middle">₹40</text><text x="830" y="1460" text-anchor="middle">₹400</text></g></g>');
+K.cut(tl, "#s1", "#s2", V[2] - 0.3);
+K.counter(tl, "#n87", 0, 87, V[2] + 0.2, 1.0);
+tl.fromTo(".gm", { scale: 0, svgOrigin: "0 0" }, { scale: 1, duration: 0.35, stagger: 0.1, ease: "back.out(2.5)", immediateRender: false }, V[2] + 1.4);
+tl.fromTo("#pays", { opacity: 0, y: 200 }, { opacity: 1, y: 0, duration: 0.45, ease: "expo.out", immediateRender: false }, V[3]);
+
+// ---------- S3: ₹400 ≈ a month's spending per person ----------
+K.add("#s3", bag("b3", 300, 900, 1.3) + '<text x="300" y="1150" text-anchor="middle" class="num" font-size="80" fill="#fff">₹400</text>' +
+  '<text x="540" y="930" text-anchor="middle" class="num" font-size="90" fill="#ffd36b">≈</text>' +
+  '<g transform="translate(800,900)"><g id="cal3"><rect class="k" x="-190" y="-150" width="380" height="300" rx="20" fill="#fff6e0" stroke-width="8"/><rect x="-190" y="-150" width="380" height="80" rx="20" fill="#ff4f6d"/>' +
+  '<text y="40" text-anchor="middle" class="num" font-size="60" fill="#2a0f3a">1 month</text><text y="110" text-anchor="middle" class="lbl" font-size="34" fill="#2a0f3a">of spending, per person</text></g></g>');
+K.cut(tl, "#s2", "#s3", V[4] - 0.3);
+tl.fromTo("#cal3", { rotation: 15, y: -200 }, { rotation: 0, y: 0, duration: 0.6, ease: "bounce.out", immediateRender: false }, V[4] + 0.8);
+
+// ---------- S4: top score: small 25.6%, medium 22.2%, huge 6.3% ----------
+K.add("#s4", '<text x="540" y="560" text-anchor="middle" class="lbl" font-size="56" fill="#ead6ff">games with a top score</text>' +
+  '<line x1="140" y1="1300" x2="940" y2="1300" stroke="#ead6ff" stroke-width="6"/>' +
+  [[25.6, "small", "#9fe3ff"], [22.2, "medium", "#9fe3ff"], [6.3, "huge", "#ff4f6d"]].map(function (b, i) {
+    var x = 190 + i * 260, h = b[0] * 24;
+    return '<rect class="k bar" id="r' + i + '" x="' + x + '" y="' + (1300 - h) + '" width="180" height="' + h + '" fill="' + b[2] + '" stroke-width="7"/>' +
+      '<text id="rv' + i + '" x="' + (x + 90) + '" y="' + (1300 - h - 24) + '" text-anchor="middle" class="num" font-size="60" fill="#fff" opacity="0">' + b[0] + '%</text>' +
+      '<text x="' + (x + 90) + '" y="1360" text-anchor="middle" class="lbl" font-size="48" fill="#ead6ff">' + b[1] + '</text>';
+  }).join("") + '<text x="540" y="1430" text-anchor="middle" class="lbl" font-size="44" fill="#ead6ff">bonus size</text>');
+K.cut(tl, "#s3", "#s4", V[5] - 0.3);
+tl.set(".bar", { scaleY: 0, svgOrigin: "0 1300" }, 0);
+tl.to(["#r0", "#r1"], { scaleY: 1, duration: 0.5, stagger: 0.3, ease: "expo.out" }, V[5] + 0.3);
+K.pop(tl, "#rv0", V[5] + 0.7, 0.4); K.pop(tl, "#rv1", V[5] + 1.0, 0.4);
+tl.to("#r2", { scaleY: 1, duration: 0.6, ease: "expo.out" }, V[6] + 0.2);
+K.pop(tl, "#rv2", V[6] + 0.6, 1.6);
+K.camera(tl, "#cam", [[V[6] + 0.6, 1.07, -60, 0, 0.3], [V[7] - 0.3, 1, 0, 0, 0.3]]);
+
+// ---------- S5: MIT — big pay: key-pressing ↑, adding ↓; payoff + loop ----------
+K.add("#s5", '<text x="540" y="540" text-anchor="middle" class="num" font-size="66" fill="#fff">MIT · 10× pay</text>' +
+  '<g transform="translate(290,820)"><g id="kb"><rect class="k" x="-190" y="-110" width="380" height="220" rx="20" fill="#fff6e0" stroke-width="8"/>' +
+  '<rect x="-150" y="-60" width="80" height="70" rx="10" fill="#c9ced8"/><text x="-110" y="-12" text-anchor="middle" class="num" font-size="44" fill="#2a0f3a">V</text>' +
+  '<rect x="70" y="-60" width="80" height="70" rx="10" fill="#c9ced8"/><text x="110" y="-12" text-anchor="middle" class="num" font-size="44" fill="#2a0f3a">N</text>' +
+  '<text y="80" text-anchor="middle" class="lbl" font-size="42" fill="#2a0f3a">key-pressing</text></g></g>' +
+  '<g transform="translate(790,820)"><g id="ad"><rect class="k" x="-190" y="-110" width="380" height="220" rx="20" fill="#fff6e0" stroke-width="8"/>' +
+  '<text y="0" text-anchor="middle" class="num" font-size="58" fill="#2a0f3a">? + ? = 10</text><text y="80" text-anchor="middle" class="lbl" font-size="42" fill="#2a0f3a">adding numbers</text></g></g>' +
+  '<text id="up" x="290" y="1030" text-anchor="middle" class="num" font-size="76" fill="#7dff9a" opacity="0">better ↑</text>' +
+  '<text id="dn" x="790" y="1030" text-anchor="middle" class="num" font-size="76" fill="#ff4f6d" opacity="0">worse ↓</text>' +
+  K.person("kid2", "kid", { x: 540, y: 1260, s: 0.3 }));
+K.cut(tl, "#s4", "#s5", V[7] - 0.3);
+K.pop(tl, "#up", V[7] + 1.4, 0.5);
+K.pop(tl, "#dn", V[7] + 2.4, 0.5);
+K.words("#t4", "thinking tasks <b>choke</b>"); K.title(tl, "#t4", V[8]);
+tl.to("#t4", { opacity: 0, duration: 0.2 }, V[9] - 0.2);
+K.face(tl, "kid2", { m: "frown", br: 14, sweat: 1, look: [40, -40] }, V[8] + 0.3);
+K.react(tl, "kid2", V[8] + 0.3);
+K.face(tl, "kid2", { m: "smile", e: "n", br: 0, sweat: 0, blush: 0.5, look: [0, -20] }, V[9] + 0.8);
+K.words("#t5", "biggest bonus. worst <b>results.</b>"); K.title(tl, "#t5", V[9]);
+tl.set({}, {}, window.DUR);
+window.__timelines["main"] = tl;
+</script>
+</body>
+</html>
