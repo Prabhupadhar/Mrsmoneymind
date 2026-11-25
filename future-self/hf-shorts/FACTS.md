@@ -79,3 +79,15 @@ Decisions" (NBER WP 17345; J. Finance 2015). Read in full (WP).
   from 9.9% to 6.3%, about a third lower; a higher reported peer % lowered enrollment further.
 - The backfire was concentrated among employees with low relative income: discouragement from upward comparison.
 - Safe hook: "Told 'everyone saves'? They saved less." (true for that group; do not generalize to all workers).
+
+## h09-75k: Killingsworth, Kahneman & Mellers 2023, "Income and emotional well-being: A conflict resolved", PNAS 120(10)
+e2208661120 (open access, PMC10013834). Read in full.
+- Kahneman & Deaton 2010: more than 450,000 Gallup responses (2008-09); emotional well-being flattened beyond about
+  $75,000 (midpoint of the $60-90K category; "at or below 90K").
+- Killingsworth 2021: 1,725,994 experience-sampling reports from 33,391 employed US adults ("How do you feel right now?"
+  on their phones); average happiness rose with log(income) well beyond $200,000.
+- Adversarial collaboration reanalysis: flattening exists, but only for the least happy 15-20%; it levels off at $100,000
+  (inflation-adjusted threshold). For the happier majority, happiness keeps rising; for the happiest ~30% it rises even faster
+  above $100k.
+- The effect is small: correlation 0.09; median happiness at $15,000 vs $250,000 differs by about 5 points on a 100-point scale.
+- Safe hook: "$75k is enough? The data disagrees."

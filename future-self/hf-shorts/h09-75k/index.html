@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1080, height=1920" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+<script src="voice.js"></script>
+<script src="kit.js"></script>
+<link rel="stylesheet" href="base.css" />
+<style>
+  #root, html, body { background: #123a2e; }
+  .t { top: 220px; font-size: 96px; }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="34" data-width="1080" data-height="1920" data-motion-blur="on">
+  <svg id="art" class="clip" data-start="0" data-duration="34" viewBox="0 0 1080 1920">
+    <defs>
+      <radialGradient id="bg" cx="0.5" cy="0.5" r="0.85"><stop offset="0" stop-color="#2e8a6a"/><stop offset="1" stop-color="#0b241c"/></radialGradient>
+    </defs>
+    <rect width="1080" height="1920" fill="url(#bg)"/>
+    <g id="cam">
+      <g id="s1" class="scene"></g>
+      <g id="s2" class="scene"></g>
+      <g id="s3" class="scene"></g>
+      <g id="s4" class="scene"></g>
+    </g>
+  </svg>
+  <div id="t1" class="cap t clip" data-start="0" data-duration="34"></div>
+  <div id="t2" class="cap t clip" data-start="0" data-duration="34"></div>
+  <div id="t3" class="cap t clip" data-start="0" data-duration="34"></div>
+  <div id="t4" class="cap t clip" data-start="0" data-duration="34"></div>
+  <div id="t5" class="cap t clip" data-start="0" data-duration="34"></div>
+  <div id="t6" class="cap t clip" data-start="0" data-duration="34"></div>
+</div>
+<script>
+window.__timelines = window.__timelines || {};
+var tl = gsap.timeline({ paused: true }), V = window.VO;
+function draw(sel, t, d) { tl.fromTo(sel, { strokeDasharray: 1400, strokeDashoffset: 1400 }, { strokeDashoffset: 0, duration: d || 1, ease: "power2.inOut", immediateRender: false }, t); }
+
+// ---------- S1: HOOK — kid on a money staircase bumps a "$75K" lid, the lid pops off ----------
+K.add("#s1", '<g id="stairs">' + [0, 1, 2, 3, 4].map(function (i) {
+  return '<rect class="k" x="' + (120 + i * 170) + '" y="' + (1400 - i * 110) + '" width="170" height="' + (i * 110 + 110) + '" fill="#7dd88f" stroke-width="7"/><text x="' + (205 + i * 170) + '" y="' + (1460 - i * 110) + '" text-anchor="middle" class="num" font-size="44" fill="#1d5a32">$</text>';
+}).join("") + '</g>' +
+  '<g transform="translate(700,700)"><g id="lid"><rect class="k" x="-300" y="-46" width="600" height="92" rx="14" fill="#ff4f6d" stroke-width="8"/><text y="20" text-anchor="middle" class="num" font-size="64" fill="#fff">$75K CEILING</text></g></g>' +
+  K.person("kid", "kid", { x: 710, y: 1010, s: 0.34 }));
+K.show(tl, "#s1", 0);
+K.hook(tl, "#t1", "<b>$75K</b> is enough? the data <b>disagrees.</b>", V[1] - 0.2);
+tl.fromTo("#kid", { y: 80 }, { y: -40, duration: 0.45, ease: "power2.out" }, 0);
+tl.to("#lid", { x: 700, y: -120, rotation: 35, svgOrigin: "0 0", duration: 0.6, ease: "power3.in" }, 0.45);
+tl.to("#lid", { opacity: 0, duration: 0.3 }, 1.3);
+K.face(tl, "kid", { m: "o", e: "n", look: [0, -40] }, 0);
+K.face(tl, "kid", { m: "smile", e: "d", look: [0, -20] }, 0.6);
+K.react(tl, "kid", 0.6);
+K.words("#t2", "money <b>stops</b> at 75K?"); K.title(tl, "#t2", V[1]);
+tl.to("#t2", { opacity: 0, duration: 0.2 }, V[2] - 0.2);
+
+// ---------- S2: chart — 2010 survey flattens at $75K; phone study keeps rising ----------
+var X0 = 150, X1 = 950, Y0 = 1320;  // axis origin
+K.add("#s2",
+  '<line x1="' + X0 + '" y1="' + Y0 + '" x2="' + X1 + '" y2="' + Y0 + '" stroke="#d8f5e6" stroke-width="6"/><line x1="' + X0 + '" y1="' + Y0 + '" x2="' + X0 + '" y2="620" stroke="#d8f5e6" stroke-width="6"/>' +
+  '<g class="lbl" font-size="44" fill="#d8f5e6"><text x="230" y="1380" text-anchor="middle">$15K</text><text x="520" y="1380" text-anchor="middle">$75K</text><text x="640" y="1380" text-anchor="middle">$100K</text><text x="880" y="1380" text-anchor="middle">$200K+</text>' +
+  '<text x="120" y="600" text-anchor="start">happier</text><text x="540" y="1450" text-anchor="middle">household income</text></g>' +
+  '<path id="kd" d="M230,1200 C330,1080 430,960 520,900 L900,900" fill="none" stroke="#ffd36b" stroke-width="14" stroke-linecap="round"/>' +
+  '<text id="kdl" x="360" y="840" text-anchor="middle" class="lbl" font-size="48" fill="#ffd36b" opacity="0">2010: 450,000+ answers</text>' +
+  '<path id="mk" d="M230,1220 L900,720" fill="none" stroke="#7dff9a" stroke-width="14" stroke-linecap="round"/>' +
+  '<text id="mkl" x="520" y="700" text-anchor="middle" class="lbl" font-size="48" fill="#7dff9a" opacity="0">33,000 people, on their phones</text>' +
+  '<g transform="translate(880,560)"><g id="phone"><rect class="k" x="-60" y="-100" width="120" height="200" rx="20" fill="#141428" stroke-width="7"/><rect x="-48" y="-86" width="96" height="160" rx="10" fill="#e9f7ef"/>' +
+  '<text y="-20" text-anchor="middle" class="lbl" font-size="26" fill="#1d5a32">how do you</text><text y="12" text-anchor="middle" class="lbl" font-size="26" fill="#1d5a32">feel now?</text></g></g>');
+K.cut(tl, "#s1", "#s2", V[2] - 0.3);
+draw("#kd", V[2] + 0.3, 1.6);
+tl.to("#kdl", { opacity: 1, duration: 0.3 }, V[2] + 1.6);
+K.pop(tl, "#phone", V[3] + 0.1, 0.4);
+tl.fromTo("#phone", { rotation: -8 }, { rotation: 8, duration: 0.07, repeat: 9, yoyo: true, svgOrigin: "0 0", ease: "none", immediateRender: false }, V[3] + 0.5);
+draw("#mk", V[4], 1.4);
+tl.to("#mkl", { opacity: 1, duration: 0.3 }, V[4] + 1.0);
+K.words("#t3", "kept <b>rising</b>"); K.title(tl, "#t3", V[4]);
+tl.to("#t3", { opacity: 0, duration: 0.2 }, V[5] - 0.2);
+
+// ---------- S3: rivals team up; the twist — the plateau is only for the unhappiest 15-20% ----------
+K.add("#s3", K.person("r1", "boss", { x: 300, y: 760, s: 0.3 }) + K.person("r2", "neighbor", { x: 780, y: 760, s: 0.3, flip: true }) +
+  '<g transform="translate(540,880)"><g id="shake" opacity="0"><ellipse class="k" rx="70" ry="40" fill="#f1c9a5" stroke-width="7"/></g></g>' +
+  '<line x1="' + X0 + '" y1="' + Y0 + '" x2="' + X1 + '" y2="' + Y0 + '" stroke="#d8f5e6" stroke-width="6"/>' +
+  '<g class="lbl" font-size="44" fill="#d8f5e6"><text x="640" y="1380" text-anchor="middle">$100K</text></g>' +
+  '<path id="most" d="M230,1120 L900,820" fill="none" stroke="#7dff9a" stroke-width="14" stroke-linecap="round" opacity="0"/>' +
+  '<text id="mostl" x="560" y="840" text-anchor="middle" class="lbl" font-size="50" fill="#7dff9a" opacity="0">most people: keeps rising</text>' +
+  '<path id="low" d="M230,1310 C380,1260 520,1230 640,1220 L900,1220" fill="none" stroke="#ff9a8c" stroke-width="14" stroke-linecap="round" opacity="0"/>' +
+  '<text id="lowl" x="540" y="1470" text-anchor="middle" class="lbl" font-size="46" fill="#ff9a8c" opacity="0">unhappiest 15–20%: flat after $100K</text>');
+K.cut(tl, "#s2", "#s3", V[5] - 0.3);
+K.face(tl, "r1", { m: "smile", look: [30, 0] }, V[5]); K.face(tl, "r2", { m: "smile", look: [30, 0] }, V[5]);
+tl.to("#shake", { opacity: 1, duration: 0.2 }, V[5] + 0.5);
+tl.fromTo("#shake", { y: 0 }, { y: -16, duration: 0.12, repeat: 5, yoyo: true, ease: "sine.inOut", immediateRender: false }, V[5] + 0.6);
+K.words("#t4", "rivals <b>teamed up</b>"); K.title(tl, "#t4", V[5]);
+tl.to("#t4", { opacity: 0, duration: 0.2 }, V[6] - 0.2);
+tl.to(["#r1", "#r2", "#shake"], { opacity: 0, duration: 0.3 }, V[6] - 0.1);
+tl.set("#low", { opacity: 1 }, V[6]); draw("#low", V[6], 1.4);
+tl.to("#lowl", { opacity: 1, duration: 0.3 }, V[6] + 1.2);
+K.camera(tl, "#cam", [[V[6] + 0.2, 1.06, 0, -40, 0.3], [V[7] - 0.3, 1, 0, 0, 0.5]]);
+tl.set("#most", { opacity: 1 }, V[7]); draw("#most", V[7], 1.0);
+tl.to("#mostl", { opacity: 1, duration: 0.3 }, V[7] + 0.8);
+
+// ---------- S4: the catch — about 5 points out of 100; loop ----------
+K.add("#s4", '<text x="540" y="540" text-anchor="middle" class="lbl" font-size="58" fill="#d8f5e6">happiness, $15K vs $250K</text>' +
+  '<g transform="translate(540,900)"><rect class="k" x="-420" y="-60" width="840" height="120" rx="60" fill="#0b241c" stroke="#d8f5e6" stroke-width="6"/>' +
+  '<rect id="gap" x="-30" y="-48" width="0" height="96" rx="20" fill="#ffd36b"/></g>' +
+  '<text id="five" x="540" y="1110" text-anchor="middle" class="num" font-size="120" fill="#ffd36b" opacity="0">~5 / 100</text>' +
+  '<g id="kw" opacity="0">' + K.person("kid2", "kid", { x: 540, y: 1260, s: 0.34 }) + '</g>');
+K.cut(tl, "#s3", "#s4", V[8] - 0.3);
+tl.to("#gap", { attr: { width: 42 }, duration: 0.6, ease: "back.out(2)" }, V[8] + 0.4);
+K.pop(tl, "#five", V[8] + 0.6, 1.6);
+K.words("#t5", "the <b>catch</b>"); K.title(tl, "#t5", V[8]);
+tl.to("#t5", { opacity: 0, duration: 0.2 }, V[9] - 0.2);
+tl.fromTo("#kw", { opacity: 0, y: 200 }, { opacity: 1, y: 0, duration: 0.5, ease: "expo.out", immediateRender: false }, V[9]);
+K.face(tl, "kid2", { m: "smile", e: "n", blush: 0.8 }, V[9] + 0.4);
+K.react(tl, "kid2", V[9] + 0.4);
+K.words("#t6", "money helps. <b>less</b> than you think."); K.title(tl, "#t6", V[9]);
+tl.set({}, {}, window.DUR);
+window.__timelines["main"] = tl;
+</script>
+</body>
+</html>
