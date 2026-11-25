@@ -1,0 +1,62 @@
+[
+ {
+  "text": "A coin said quit. Six months later, they were happier.",
+  "mood": "excited",
+  "start": 0.1,
+  "end": 2.193
+ },
+ {
+  "text": "Stuck on a big choice? Like quitting your job?",
+  "mood": "curious",
+  "start": 2.493,
+  "end": 4.74
+ },
+ {
+  "text": "In 2013, an economist built a website that flipped a coin for you.",
+  "mood": "neutral",
+  "start": 5.04,
+  "end": 9.077
+ },
+ {
+  "text": "Heads: make the change. Tails: stay put.",
+  "mood": "neutral",
+  "start": 9.377,
+  "end": 11.535
+ },
+ {
+  "text": "Over twenty-two thousand flips. Top big question: should I quit my job?",
+  "mood": "neutral",
+  "start": 11.835,
+  "end": 15.726
+ },
+ {
+  "text": "And people listened. Heads made a change twenty-five points more likely.",
+  "mood": "curious",
+  "start": 16.176,
+  "end": 19.714
+ },
+ {
+  "text": "Six months on, on big choices, the ones the coin pushed to change were happier.",
+  "mood": "shocked",
+  "start": 20.164,
+  "end": 24.227
+ },
+ {
+  "text": "The coin was random, so it wasn't just who they were.",
+  "mood": "curious",
+  "start": 24.577,
+  "end": 26.863
+ },
+ {
+  "text": "On the edge of a big change, we may be too cautious.",
+  "mood": "warm",
+  "start": 27.163,
+  "end": 29.888
+ },
+ {
+  "text": "That's why a coin saying quit paid off.",
+  "mood": "warm",
+  "start": 30.238,
+  "end": 32.165
+ }
+]

@@ -173,3 +173,17 @@ Read (abstract, introduction, design, data and main results in full).
   hunt" (stated intention), not "quit".
 - "Half got sadder": below-median earners are by definition about half of each unit; the effect is an average for that group.
 - Safe hook: "They saw their coworkers' pay. Half got sadder."
+
+## h17-coin: Levitt, "Heads or Tails: The Impact of a Coin Toss on Major Life Decisions and Subsequent Happiness" (NBER WP 22487, 2016; Review of Economic Studies 2021).
+Read (abstract, introduction, design, results, biases and conclusion).
+- FreakonomicsExperiments.com launched 23 Jan 2013, ran about a year. People stuck on a decision picked a question; one choice was
+  heads, the other tails (mostly heads = make the change). About 23,500 tosses, 22,511 usable. Follow-up surveys at 2 and 6 months.
+- Most popular "important" question: "Should I quit my job?" (2,186 tosses).
+- Heads made people 24.9 percentage points more likely to report making a change at two months (all questions; about one-third as
+  large for important questions, still highly significant).
+- Important decisions (quitting a job, breaking up, ...): those who changed were happier at six months, and the 2SLS (coin as
+  instrument) estimate is large and significant at six months; job quitting and breaking up individually large, positive, significant
+  at six months. Less important decisions: no measurable effect.
+- Author: "people may be excessively cautious when facing life-changing choices"; results "merely suggestive".
+- Caveats (in description): self-selected online sample of people on the fence, self-reported happiness, survey non-response.
+- Safe hook: "A coin said quit. Six months later: happier." (the coin is the instrument; "they" = people the coin pushed to change).

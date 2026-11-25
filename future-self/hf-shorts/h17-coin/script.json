@@ -1,0 +1,12 @@
+[
+ ["A coin said quit. Six months later, they were happier.", 0.1, 1.22, "excited"],
+ ["Stuck on a big choice? Like quitting your job?", 0.3, 1.22, "curious"],
+ ["In 2013, an economist built a website that flipped a coin for you.", 0.3, 1.22, "neutral"],
+ ["Heads: make the change. Tails: stay put.", 0.3, 1.22, "neutral"],
+ ["Over twenty-two thousand flips. Top big question: should I quit my job?", 0.3, 1.22, "neutral"],
+ ["And people listened. Heads made a change twenty-five points more likely.", 0.45, 1.22, "curious"],
+ ["Six months on, on big choices, the ones the coin pushed to change were happier.", 0.45, 1.22, "shocked"],
+ ["The coin was random, so it wasn't just who they were.", 0.35, 1.22, "curious"],
+ ["On the edge of a big change, we may be too cautious.", 0.3, 1.22, "warm"],
+ ["That's why a coin saying quit paid off.", 0.35, 1.22, "warm"]
+]

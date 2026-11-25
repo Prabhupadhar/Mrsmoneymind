@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1080, height=1920" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+<script src="voice.js"></script>
+<script src="kit.js"></script>
+<link rel="stylesheet" href="base.css" />
+<style>
+  #root, html, body { background: #2a1a08; }
+  .t { top: 220px; font-size: 96px; }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="34" data-width="1080" data-height="1920" data-motion-blur="on">
+  <svg id="art" class="clip" data-start="0" data-duration="34" viewBox="0 0 1080 1920">
+    <defs>
+      <radialGradient id="bg" cx="0.5" cy="0.5" r="0.85"><stop offset="0" stop-color="#a8702a"/><stop offset="1" stop-color="#1e1206"/></radialGradient>
+      <g id="coin"><circle class="k" r="130" fill="#ffd36b" stroke-width="10"/><circle r="100" fill="none" stroke="#c98b2c" stroke-width="8"/></g>
+    </defs>
+    <rect width="1080" height="1920" fill="url(#bg)"/>
+    <g id="cam">
+      <g id="s1" class="scene"></g>
+      <g id="s2" class="scene"></g>
+      <g id="s3" class="scene"></g>
+      <g id="s4" class="scene"></g>
+      <g id="s5" class="scene"></g>
+    </g>
+  </svg>
+  <div id="t1" class="cap t clip" data-start="0" data-duration="34"></div>
+  <div id="t2" class="cap t clip" data-start="0" data-duration="34"></div>
+  <div id="t3" class="cap t clip" data-start="0" data-duration="34"></div>
+  <div id="t4" class="cap t clip" data-start="0" data-duration="34"></div>
+  <div id="t5" class="cap t clip" data-start="0" data-duration="34"></div>
+</div>
+<script>
+window.__timelines = window.__timelines || {};
+var tl = gsap.timeline({ paused: true }), V = window.VO;
+function coin(id, x, y, word, s) {
+  return '<g transform="translate(' + x + ',' + y + ') scale(' + (s || 1) + ')"><g id="' + id + '"><use href="#coin"/><text y="22" text-anchor="middle" class="num" font-size="64" fill="#2a1a08">' + word + '</text></g></g>';
+}
+
+// ---------- S1: HOOK — the coin spins, lands on QUIT; the kid lights up ----------
+K.add("#s1", coin("c1", 540, 720, "QUIT") + K.person("kid", "kid", { x: 540, y: 1200, s: 0.4 }));
+K.show(tl, "#s1", 0);
+K.hook(tl, "#t1", "a coin said <b>quit.</b> 6&nbsp;months later: <b>happier.</b>", V[1] - 0.2);
+tl.fromTo("#c1", { y: 120, scaleY: 1 }, { y: -60, duration: 0.5, ease: "power2.out" }, 0);
+tl.fromTo("#c1", { scaleY: 1 }, { scaleY: -1, duration: 0.12, repeat: 7, yoyo: true, ease: "sine.inOut", svgOrigin: "0 0" }, 0);
+tl.to("#c1", { y: 0, duration: 0.4, ease: "bounce.out" }, 0.5);
+K.face(tl, "kid", { m: "o", br: 12, look: [0, -40] }, 0);
+K.face(tl, "kid", { m: "smile", e: "h", blush: 0.8, look: [0, -40] }, 1.0);
+K.react(tl, "kid", 1.0);
+K.words("#t2", "stuck on a <b>big</b> choice?"); K.title(tl, "#t2", V[1]);
+tl.to("#t2", { opacity: 0, duration: 0.2 }, V[2] - 0.2);
+
+// ---------- S2: 2013 website flips a coin for you; heads = change, tails = stay ----------
+K.add("#s2", '<g transform="translate(540,620)"><g id="web"><rect class="k" x="-400" y="-130" width="800" height="260" rx="20" fill="#fff6e0" stroke-width="9"/>' +
+  '<rect x="-400" y="-130" width="800" height="54" rx="20" fill="#e3a63a"/><circle cx="-360" cy="-103" r="10" fill="#fff"/><circle cx="-328" cy="-103" r="10" fill="#fff"/>' +
+  '<text y="10" text-anchor="middle" class="num" font-size="56" fill="#2a1a08">FLIP A COIN</text><text y="80" text-anchor="middle" class="lbl" font-size="44" fill="#8a5a2a">for your decision · 2013</text></g></g>' +
+  '<g transform="translate(290,1080)"><g id="hd" opacity="0"><use href="#coin"/><text y="-12" text-anchor="middle" class="num" font-size="42" fill="#2a1a08">HEADS</text><text y="44" text-anchor="middle" class="lbl" font-size="42" fill="#2f8a52">change</text></g></g>' +
+  '<g transform="translate(790,1080)"><g id="tl2" opacity="0"><circle class="k" r="130" fill="#c9ced8" stroke-width="10"/><text y="-12" text-anchor="middle" class="num" font-size="42" fill="#2a1a08">TAILS</text><text y="44" text-anchor="middle" class="lbl" font-size="42" fill="#5c6477">stay put</text></g></g>');
+K.cut(tl, "#s1", "#s2", V[2] - 0.3);
+K.pop(tl, "#web", V[2] + 0.1, 0.5);
+K.pop(tl, "#hd", V[3] + 0.1, 0.5);
+K.pop(tl, "#tl2", V[3] + 1.0, 0.5);
+
+// ---------- S3: 22,511 flips; top big question; heads -> +25 pts more likely to change ----------
+K.add("#s3", '<text id="n22" x="540" y="560" text-anchor="middle" class="num" font-size="120" fill="#fff">0</text>' +
+  '<text x="540" y="640" text-anchor="middle" class="lbl" font-size="56" fill="#ffe9c9">coin flips</text>' +
+  '<g transform="translate(540,800)"><g id="q" opacity="0"><rect class="k" x="-400" y="-64" width="800" height="128" rx="64" fill="#fff6e0" stroke-width="8"/><text y="18" text-anchor="middle" class="lbl" font-size="56" fill="#2a1a08">“should I quit my job?”</text></g></g>' +
+  coin("c3", 300, 1150, "H", 0.8) +
+  '<g transform="translate(490,1150)"><g id="arr" opacity="0"><path d="M-110,0 L80,0 M30,-50 L90,0 L30,50" fill="none" stroke="#7dff9a" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/></g></g>' +
+  '<g transform="translate(830,1150)"><g id="p25" opacity="0"><text y="0" text-anchor="middle" class="num" font-size="96" fill="#7dff9a">+25 pts</text><text y="66" text-anchor="middle" class="lbl" font-size="46" fill="#ffe9c9">made the change</text></g></g>');
+K.cut(tl, "#s2", "#s3", V[4] - 0.3);
+K.counter(tl, "#n22", 0, 22511, V[4], 1.2);
+K.pop(tl, "#q", V[4] + 2.0, 0.6);
+K.pop(tl, "#c3", V[5] + 0.3, 0.4);
+tl.fromTo("#arr", { opacity: 0, x: -60 }, { opacity: 1, x: 0, duration: 0.4, ease: "expo.out", immediateRender: false }, V[5] + 1.0);
+K.pop(tl, "#p25", V[5] + 1.6, 1.6);
+
+// ---------- S4: twist — 6 months on, those pushed to change were happier; the coin was random ----------
+K.add("#s4", '<text x="540" y="540" text-anchor="middle" class="num" font-size="76" fill="#ffd36b">6 months later</text>' +
+  '<g class="lbl" font-size="48" fill="#ffe9c9"><text x="290" y="650" text-anchor="middle">coin said change</text><text x="790" y="650" text-anchor="middle">coin said stay</text></g>' +
+  K.person("ka", "kid", { x: 290, y: 980, s: 0.33 }) + K.person("kb", "kid", { x: 790, y: 980, s: 0.33 }) +
+  '<g id="hap" opacity="0"><text x="290" y="1300" text-anchor="middle" class="num" font-size="70" fill="#7dff9a">happier</text></g>' +
+  '<g transform="translate(540,1430)"><g id="rnd" opacity="0"><rect class="k" x="-330" y="-56" width="660" height="112" rx="56" fill="#1e1206" stroke="#ffd36b" stroke-width="6"/><text y="16" text-anchor="middle" class="lbl" font-size="50" fill="#ffd36b">the coin was random ✓</text></g></g>');
+K.cut(tl, "#s3", "#s4", V[6] - 0.3);
+K.face(tl, "ka", { m: "flat" }, V[6]);
+K.face(tl, "kb", { m: "flat" }, V[6]);
+K.face(tl, "ka", { m: "smile", e: "h", blush: 0.8 }, V[6] + 2.6);
+K.react(tl, "ka", V[6] + 2.6);
+K.pop(tl, "#hap", V[6] + 2.7, 1.8);
+K.camera(tl, "#cam", [[V[6] + 2.7, 1.06, 30, 0, 0.3], [V[7] - 0.2, 1, 0, 0, 0.4]]);
+K.pop(tl, "#rnd", V[7] + 0.3, 0.5);
+
+// ---------- S5: payoff + loop — the kid at the door, the coin lands QUIT again ----------
+K.add("#s5", '<g transform="translate(780,1000)"><rect class="k" x="-150" y="-300" width="300" height="560" rx="10" fill="#5c3a1a" stroke-width="9"/>' +
+  '<g id="door"><rect class="k" x="-130" y="-280" width="260" height="520" rx="6" fill="#c98b2c" stroke-width="8"/><circle cx="90" cy="0" r="16" fill="#2a1a08"/></g></g>' +
+  K.person("kid3", "kid", { x: 330, y: 1100, s: 0.38 }) + coin("c5", 330, 620, "QUIT", 0.7));
+K.cut(tl, "#s4", "#s5", V[8] - 0.3);
+K.face(tl, "kid3", { m: "flat", look: [40, -10] }, V[8]);
+K.words("#t4", "too <b>cautious?</b>"); K.title(tl, "#t4", V[8]);
+tl.to("#t4", { opacity: 0, duration: 0.2 }, V[9] - 0.2);
+tl.fromTo("#c5", { scaleY: 1 }, { scaleY: -1, duration: 0.12, repeat: 5, yoyo: true, ease: "sine.inOut", svgOrigin: "0 0", immediateRender: false }, V[8] + 0.3);
+tl.fromTo("#door", { scaleX: 1 }, { scaleX: 0.35, svgOrigin: "-130 0", duration: 0.6, ease: "power2.inOut", immediateRender: false }, V[9] + 0.3);
+K.face(tl, "kid3", { m: "smile", e: "h", blush: 0.8, look: [40, -10] }, V[9] + 0.5);
+K.react(tl, "kid3", V[9] + 0.5);
+K.words("#t5", "the coin said <b>quit.</b>"); K.title(tl, "#t5", V[9]);
+tl.set({}, {}, window.DUR);
+window.__timelines["main"] = tl;
+</script>
+</body>
+</html>
