@@ -135,3 +135,13 @@ e2208661120 (open access, PMC10013834). Read in full.
   well-being indicators were plummeting, households substituted to higher-octane gasoline.
 - Placebo: gas prices had no significant effect on quality choice for milk or orange juice brands.
 - Safe hook: "Gas got cheaper. They bought fancier gas."
+
+## h14-gym: DellaVigna & Malmendier, "Overestimating Self-Control: Evidence from the Health Club Industry"
+(NBER WP 10819, 2004; AER 2006 "Paying Not to Go to the Gym"). Read (abstract, introduction and stylized facts in full).
+- Three US health clubs; 7,978 members over three years.
+- Members on a flat monthly fee of over $70 attended on average 4.8 times per month (first six months): more than $17
+  per expected visit, although a $10-per-visit fee was available. Only 20% of monthly users paid less than $10 per visit.
+- Survey: members overestimate future usage by more than 100%.
+- Average gap of 2.29 full months between last attendance and cancelling a monthly contract, costing $185.
+- The average non-subsidized monthly user forgoes savings of about $700 per membership (of about $1,500 paid).
+- Safe hook: "$17 a visit. A $10 pass existed."
