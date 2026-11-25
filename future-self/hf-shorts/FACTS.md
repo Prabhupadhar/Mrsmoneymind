@@ -91,3 +91,14 @@ e2208661120 (open access, PMC10013834). Read in full.
   above $100k.
 - The effect is small: correlation 0.09; median happiness at $15,000 vs $250,000 differs by about 5 points on a 100-point scale.
 - Safe hook: "$75k is enough? The data disagrees."
+
+## h10-lockbox: Dupas & Robinson, "Why Don't the Poor Save More? Evidence from Health Savings Experiments"
+(NBER WP 17255, 2011; AER 2013). Read in full (WP).
+- Rural Kenya; 113 ROSCAs (savings groups) randomized to control or 4 savings devices; 771 individuals in 6- and 12-month follow-ups.
+- Safe Box: a locked metal box with a deposit slit, a padlock, the key given to the participant, plus a passbook naming the
+  health goal. Lockbox: identical, but the program officer kept the key.
+- Over 12 months, the Safe Box increased preventative health investment by about 68% vs control; the Lockbox had no effect
+  on investment over the year (liquidity cost outweighed benefits). Health Pot (ROSCA side pot): about +129%.
+- Mechanism: mental accounting; once money was set aside, people resisted unplanned spending.
+- Take-up: 71% of Safe Box group still had money in it at 12 months.
+- Safe hook: "A metal box. Health spending up 68%." (preventative health investment).
