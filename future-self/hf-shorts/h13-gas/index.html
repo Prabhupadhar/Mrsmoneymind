@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1080, height=1920" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+<script src="voice.js"></script>
+<script src="kit.js"></script>
+<link rel="stylesheet" href="base.css" />
+<style>
+  #root, html, body { background: #3a1010; }
+  .t { top: 220px; font-size: 96px; }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="31" data-width="1080" data-height="1920" data-motion-blur="on">
+  <svg id="art" class="clip" data-start="0" data-duration="31" viewBox="0 0 1080 1920">
+    <defs>
+      <radialGradient id="bg" cx="0.5" cy="0.5" r="0.85"><stop offset="0" stop-color="#b8422c"/><stop offset="1" stop-color="#240808"/></radialGradient>
+      <g id="jar"><path class="k" d="M-100,-130 L100,-130 L90,130 C88,150 -88,150 -90,130 Z" fill="#ffffff" fill-opacity="0.15" stroke="#ffe3d6" stroke-width="8"/><rect x="-110" y="-160" width="220" height="40" rx="10" fill="#ffe3d6"/></g>
+    </defs>
+    <rect width="1080" height="1920" fill="url(#bg)"/>
+    <g id="cam">
+      <g id="s1" class="scene"></g>
+      <g id="s2" class="scene"></g>
+      <g id="s3" class="scene"></g>
+      <g id="s4" class="scene"></g>
+    </g>
+  </svg>
+  <div id="t1" class="cap t clip" data-start="0" data-duration="31"></div>
+  <div id="t2" class="cap t clip" data-start="0" data-duration="31"></div>
+  <div id="t3" class="cap t clip" data-start="0" data-duration="31"></div>
+  <div id="t4" class="cap t clip" data-start="0" data-duration="31"></div>
+  <div id="t5" class="cap t clip" data-start="0" data-duration="31"></div>
+</div>
+<script>
+window.__timelines = window.__timelines || {};
+var tl = gsap.timeline({ paused: true }), V = window.VO;
+var GR = [["REGULAR", "#9fe3ff"], ["MID", "#ffd36b"], ["PREMIUM", "#ff7be6"]];
+function pump(prefix, y) {
+  return GR.map(function (g, i) {
+    return '<g transform="translate(' + (220 + i * 320) + ',' + y + ')"><g class="' + prefix + '" id="' + prefix + i + '"><rect class="k" x="-120" y="-200" width="240" height="400" rx="24" fill="#2b2f45" stroke-width="9"/>' +
+      '<rect x="-90" y="-170" width="180" height="110" rx="10" fill="' + g[1] + '"/><text y="-100" text-anchor="middle" class="num" font-size="34" fill="#1a0808">' + g[0] + '</text>' +
+      '<rect x="-30" y="-20" width="60" height="150" rx="12" fill="#5c6477"/></g></g>';
+  }).join("");
+}
+
+// ---------- S1: HOOK — price sign drops, the kid reaches for PREMIUM ----------
+K.add("#s1", '<g transform="translate(540,560)"><g id="sign"><rect class="k" x="-220" y="-70" width="440" height="140" rx="16" fill="#1a0808" stroke="#ffd36b" stroke-width="8"/><text y="24" text-anchor="middle" class="num" font-size="64" fill="#ffd36b">GAS ↓</text></g></g>' +
+  pump("p", 1010) + K.person("kid", "kid", { x: 860, y: 1330, s: 0.28 }));
+K.show(tl, "#s1", 0);
+K.hook(tl, "#t1", "gas got <b>cheaper.</b> they bought <b>fancier</b> gas.", V[1] - 0.2);
+tl.fromTo("#sign", { y: -40 }, { y: 0, duration: 0.5, ease: "bounce.out" }, 0);
+tl.fromTo(".p", { y: 160, opacity: 1 }, { y: 0, opacity: 1, duration: 0.45, stagger: 0.08, ease: "back.out(2)" }, 0);
+tl.to("#p2", { scale: 1.08, svgOrigin: "0 0", duration: 0.25, yoyo: true, repeat: 3, ease: "sine.inOut" }, 0.7);
+K.face(tl, "kid", { e: "h", m: "smile", blush: 0.8, look: [0, -40] }, 0.6);
+K.react(tl, "kid", 0.7);
+K.words("#t2", "in a <b>recession?</b>"); K.title(tl, "#t2", V[1]);
+tl.to("#t2", { opacity: 0, duration: 0.2 }, V[2] - 0.2);
+
+// ---------- S2: data; +$1 -> regular +1.4 pts; = $1,200/yr; income -$1,200 -> < 0.1 pt ----------
+K.add("#s2", '<text id="n10" x="540" y="560" text-anchor="middle" class="num" font-size="96" fill="#fff">10.5M fill-ups</text>' +
+  '<text x="540" y="640" text-anchor="middle" class="lbl" font-size="54" fill="#ffe3d6">61,494 households · 2006–2009</text>' +
+  '<g id="cmp" opacity="0"><text x="290" y="820" text-anchor="middle" class="num" font-size="52" fill="#ffd36b">gas +$1</text>' +
+  '<text x="290" y="890" text-anchor="middle" class="lbl" font-size="48" fill="#ffe3d6">≈ $1,200 a year</text>' +
+  '<text x="780" y="820" text-anchor="middle" class="num" font-size="52" fill="#9fe3ff">income −$1,200</text>' +
+  '<text x="790" y="890" text-anchor="middle" class="lbl" font-size="48" fill="#ffe3d6">from anywhere else</text>' +
+  '<line x1="140" y1="1350" x2="940" y2="1350" stroke="#ffe3d6" stroke-width="6"/>' +
+  '<rect class="k" id="bg1" x="190" y="' + (1350 - 1.4 * 250) + '" width="200" height="' + 1.4 * 250 + '" fill="#ffd36b" stroke-width="7"/>' +
+  '<rect class="k" id="bg2" x="690" y="' + (1350 - 0.08 * 250) + '" width="200" height="' + 0.08 * 250 + '" fill="#9fe3ff" stroke-width="7"/>' +
+  '<text id="v14" x="290" y="' + (1350 - 1.4 * 250 - 24) + '" text-anchor="middle" class="num" font-size="60" fill="#fff" opacity="0">+1.4 pts</text>' +
+  '<text id="v01" x="790" y="1300" text-anchor="middle" class="num" font-size="60" fill="#fff" opacity="0">&lt; 0.1 pt</text>' +
+  '<text x="540" y="1430" text-anchor="middle" class="lbl" font-size="48" fill="#ffe3d6">shift toward cheap regular</text></g>');
+K.cut(tl, "#s1", "#s2", V[2] - 0.3);
+K.pop(tl, "#n10", V[2] + 0.1, 0.5);
+tl.to("#cmp", { opacity: 1, duration: 0.3 }, V[3]);
+tl.fromTo("#bg1", { scaleY: 0, svgOrigin: "290 1350" }, { scaleY: 1, duration: 0.6, ease: "expo.out", immediateRender: false }, V[3] + 0.3);
+K.pop(tl, "#v14", V[3] + 0.8);
+tl.fromTo("#bg2", { scaleY: 0, svgOrigin: "790 1350" }, { scaleY: 1, duration: 0.4, ease: "expo.out", immediateRender: false }, V[5] + 0.3);
+K.pop(tl, "#v01", V[5] + 0.6, 1.6);
+K.camera(tl, "#cam", [[V[5] + 0.6, 1.05, 0, -20, 0.3], [V[6] - 0.3, 1, 0, 0, 0.4]]);
+
+// ---------- S3: twist — late 2008: economy crashes, gas cheaper, people upgrade ----------
+K.add("#s3", '<text x="540" y="520" text-anchor="middle" class="num" font-size="80" fill="#ffd36b">late 2008</text>' +
+  '<g class="lbl" font-size="52" fill="#ffe3d6"><text x="200" y="660" text-anchor="middle">economy</text><text x="540" y="660" text-anchor="middle">gas price</text><text x="880" y="660" text-anchor="middle">premium</text></g>' +
+  '<g transform="translate(200,850)"><g id="a1" opacity="0"><path d="M0,-120 L0,100 M-60,40 L0,110 L60,40" stroke="#ff4f6d" stroke-width="22" stroke-linecap="round" fill="none"/></g></g>' +
+  '<g transform="translate(540,850)"><g id="a2" opacity="0"><path d="M0,-120 L0,100 M-60,40 L0,110 L60,40" stroke="#ff4f6d" stroke-width="22" stroke-linecap="round" fill="none"/></g></g>' +
+  '<g transform="translate(880,850)"><g id="a3" opacity="0"><path d="M0,120 L0,-100 M-60,-40 L0,-110 L60,-40" stroke="#7dff9a" stroke-width="22" stroke-linecap="round" fill="none"/></g></g>' +
+  K.person("kid2", "kid", { x: 540, y: 1180, s: 0.32 }));
+K.cut(tl, "#s2", "#s3", V[6] - 0.3);
+K.pop(tl, "#a1", V[6] + 0.8, 0.3); K.pop(tl, "#a2", V[6] + 2.0, 0.3); K.pop(tl, "#a3", V[6] + 3.2, 0.3);
+K.face(tl, "kid2", { m: "o", br: 14 }, V[6] + 0.8);
+K.face(tl, "kid2", { e: "h", m: "smile", br: 0, blush: 0.8 }, V[6] + 3.3);
+K.react(tl, "kid2", V[6] + 3.3);
+
+// ---------- S4: the gas jar; loop question ----------
+K.add("#s4", '<g transform="translate(260,960)"><g id="j1"><use href="#jar"/><text y="40" text-anchor="middle" class="lbl" font-size="50" fill="#ffe3d6">food</text></g></g>' +
+  '<g transform="translate(540,960)"><g id="j2"><use href="#jar"/><text y="40" text-anchor="middle" class="num" font-size="54" fill="#ffd36b">GAS</text></g></g>' +
+  '<g transform="translate(820,960)"><g id="j3"><use href="#jar"/><text y="40" text-anchor="middle" class="lbl" font-size="50" fill="#ffe3d6">fun</text></g></g>' +
+  '<g transform="translate(540,1260)"><g id="q" opacity="0"><rect class="k" x="-360" y="-60" width="720" height="120" rx="60" fill="#fff6e0" stroke-width="7"/><text y="20" text-anchor="middle" class="lbl" font-size="58" fill="#3a1010">a raise, or just a jar?</text></g></g>');
+K.cut(tl, "#s3", "#s4", V[7] - 0.3);
+tl.fromTo(["#j1", "#j2", "#j3"], { y: 300, opacity: 0 }, { y: 0, opacity: 1, duration: 0.45, stagger: 0.12, ease: "back.out(2)", immediateRender: false }, V[7]);
+tl.to("#j2", { scale: 1.15, svgOrigin: "0 0", duration: 0.3, ease: "back.out(2)" }, V[7] + 0.8);
+tl.to(["#j1", "#j3"], { opacity: 0.4, duration: 0.3 }, V[7] + 0.8);
+K.words("#t4", "a separate <b>gas jar</b>"); K.title(tl, "#t4", V[7]);
+tl.to("#t4", { opacity: 0, duration: 0.2 }, V[8] - 0.2);
+K.pop(tl, "#q", V[8] + 0.4, 0.5);
+K.words("#t5", "cheap gas = <b>raise?</b>"); K.title(tl, "#t5", V[8]);
+tl.set({}, {}, window.DUR);
+window.__timelines["main"] = tl;
+</script>
+</body>
+</html>

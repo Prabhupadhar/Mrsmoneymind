@@ -123,3 +123,15 @@ e2208661120 (open access, PMC10013834). Read in full.
 - Card liquidity had fallen by $545 on average over the year before the first payday loan.
 - Taking a payday loan predicts a 92% higher serious card delinquency rate in the next year.
 - Safe hook: "Payday loan. $1,000 free on their card." (two-thirds of the matched sample).
+
+## h13-gas: Hastings & Shapiro, "Mental Accounting and Consumer Choice: Evidence from Commodity Price Shocks"
+(NBER WP 18248, 2012; QJE 2013). Read in full (WP, key sections).
+- Panel: over 10.5 million gasoline transactions from 61,494 households at a large grocery retailer with on-site gas
+  stations, 2006-2009 (plus EIA aggregate data 1990-2009).
+- A $1 increase in the price of gasoline raises a typical household's propensity to buy regular by 1.4 percentage points.
+  The average household buys about 1,200 gallons a year, so that equals a $1,200 income loss; but cross-sectionally a
+  $1,200 income reduction raises the propensity to buy regular by less than 0.1 percentage point.
+- Second half of 2008: gasoline prices fell during the financial crisis and recession; although consumer spending and
+  well-being indicators were plummeting, households substituted to higher-octane gasoline.
+- Placebo: gas prices had no significant effect on quality choice for milk or orange juice brands.
+- Safe hook: "Gas got cheaper. They bought fancier gas."

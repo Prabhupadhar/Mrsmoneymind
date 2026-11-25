@@ -46,7 +46,7 @@ The hook bank below now feeds the 13:00 slot (H01, H02, H09 and H17 are used). H
 | h10-lockbox | 2026-11-30 18:00 | H51 "A metal box. Health spending up 68%." | Dupas & Robinson (NBER w17255, read in full) | scheduled |
 | h11-age53 | 2026-12-01 09:30 | H52 "Your money brain peaks at 53." | Agarwal, Driscoll, Gabaix & Laibson (NBER w13191, read in full) | scheduled |
 | h12-payday | 2026-12-01 18:00 | H53 "Payday loan. $1,000 free on their card." | Agarwal, Skiba & Tobacman (NBER w14659, read in full) | scheduled |
-| h13-gas | 2026-12-02 09:30 | H54 gas prices and premium gas | Hastings & Shapiro (NBER w18248) | in progress (owner session) |
+| h13-gas | 2026-12-02 09:30 | H54 "Gas got cheaper. They bought fancier gas." | Hastings & Shapiro (NBER w18248, read in full) | scheduled |
 H08, H11 and H23 are used. The daily run takes the next unused hook-bank items (skip any used by P/s Shorts).
 
 ### Hook bank: 50 Shorts (build in this order)
@@ -110,7 +110,7 @@ paper after reading it in full: if it does not, rewrite the hook to what the pap
 | H51 | Hack | "A metal box made them save more." | Kenya: a simple lockbox for health savings raised health savings | Dupas & Robinson 2013, AEJ: Applied (NBER w17255) | used: h10-lockbox |
 | H52 | Shocking number | "Your money brain peaks at 53." | Financial mistakes are U-shaped in age, lowest around the early 50s | Agarwal, Driscoll, Gabaix & Laibson 2009, Brookings (NBER w13191) | used: h11-age53 |
 | H53 | Mistake | "They took a payday loan. Their card had room." | Many payday borrowers had unused credit-card liquidity | Agarwal, Skiba & Tobacman 2009, AER P&P (NBER w14659) | used: h12-payday |
-| H54 | Weird | "Gas got cheaper. They bought fancier gas." | Mental accounting: gas price drops shifted buyers to premium grades | Hastings & Shapiro 2013, AER (NBER w18248) | in progress: h13-gas |
+| H54 | Weird | "Gas got cheaper. They bought fancier gas." | Mental accounting: gas price drops shifted buyers to premium grades | Hastings & Shapiro 2013, AER (NBER w18248) | used: h13-gas |
 
 When fewer than 10 items are left, add 10 new ideas from peer-reviewed money-psychology research
 (prefer large samples, field experiments and well-replicated findings; include "myth check" ideas).

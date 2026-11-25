@@ -1,0 +1,56 @@
+[
+ {
+  "text": "Gas got cheaper. So they bought fancier gas.",
+  "mood": "excited",
+  "start": 0.1,
+  "end": 2.035
+ },
+ {
+  "text": "In a recession. Irrational? Watch.",
+  "mood": "curious",
+  "start": 2.335,
+  "end": 4.065
+ },
+ {
+  "text": "Researchers tracked ten million fill-ups from sixty-one thousand households.",
+  "mood": "neutral",
+  "start": 4.365,
+  "end": 8.07
+ },
+ {
+  "text": "When gas rose a dollar, people switched to cheap regular.",
+  "mood": "neutral",
+  "start": 8.37,
+  "end": 11.046
+ },
+ {
+  "text": "That's like losing twelve hundred dollars a year.",
+  "mood": "curious",
+  "start": 11.346,
+  "end": 13.256
+ },
+ {
+  "text": "But losing twelve hundred of other income? Less than a tenth of the effect.",
+  "mood": "curious",
+  "start": 13.606,
+  "end": 17.011
+ },
+ {
+  "text": "Then in late 2008, the economy crashed, gas got cheaper, and people upgraded to premium.",
+  "mood": "shocked",
+  "start": 17.511,
+  "end": 22.996
+ },
+ {
+  "text": "Your brain keeps a separate jar for gas money.",
+  "mood": "warm",
+  "start": 23.346,
+  "end": 25.676
+ },
+ {
+  "text": "So when gas gets cheap, ask: is this a raise, or just a jar?",
+  "mood": "warm",
+  "start": 26.026,
+  "end": 29.399
+ }
+]
