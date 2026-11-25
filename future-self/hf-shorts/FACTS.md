@@ -157,3 +157,19 @@ Read (abstract, introduction and experiment design in full).
   0.5 points: they know, but don't compute tax-inclusive prices.
 - Alcohol: state excise taxes (in the posted price) cut consumption about an order of magnitude more than sales taxes.
 - Safe hook: "Same price. Different tag. 8% fewer sales."
+
+## h16-salary: Card, Mas, Moretti & Saez, "Inequality at Work: The Effect of Peer Salaries on Job Satisfaction" (NBER WP 16396, 2010; AER 2012).
+Read (abstract, introduction, design, data and main results in full).
+- Early 2008: after a court decision on California's "right to know" law, the Sacramento Bee launched a website to search the
+  salary of any state employee, including University of California staff and faculty.
+- Oct 2008 to May 2009: a random subset of employees at UC Santa Cruz, UC San Diego and UCLA got an email telling them the site
+  existed; 3-10 days later all employees were emailed a survey.
+- Use of the site: 19.2% in the control group; the email raised it by about 28 points to about 48%. Most new users (80%)
+  looked up colleagues in their own department.
+- Main analysis sample: 6,411 respondents matched to salary data (85% staff, 15% faculty).
+- Below the median of their unit and occupation: lower pay and job satisfaction and a higher stated likelihood of looking for a
+  new job (t about 2-3). Above the median: no significant change ("report no higher satisfaction").
+- Caveats: ~20% survey response rate; no detectable effect on actual turnover 2-3 years later. Script says "more likely to job
+  hunt" (stated intention), not "quit".
+- "Half got sadder": below-median earners are by definition about half of each unit; the effect is an average for that group.
+- Safe hook: "They saw their coworkers' pay. Half got sadder."

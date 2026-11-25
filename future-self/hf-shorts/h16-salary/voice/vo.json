@@ -1,0 +1,62 @@
+[
+ {
+  "text": "They saw their coworkers' pay. Half got sadder.",
+  "mood": "excited",
+  "start": 0.1,
+  "end": 2.155
+ },
+ {
+  "text": "Would you click that link?",
+  "mood": "curious",
+  "start": 2.505,
+  "end": 3.548
+ },
+ {
+  "text": "In 2008, a newspaper put every California state salary online.",
+  "mood": "neutral",
+  "start": 3.848,
+  "end": 7.925
+ },
+ {
+  "text": "So researchers emailed random University of California staff: this site exists.",
+  "mood": "neutral",
+  "start": 8.225,
+  "end": 12.94
+ },
+ {
+  "text": "Use of the site jumped from nineteen percent to forty-eight.",
+  "mood": "neutral",
+  "start": 13.24,
+  "end": 15.992
+ },
+ {
+  "text": "And most new users looked up their own department.",
+  "mood": "curious",
+  "start": 16.342,
+  "end": 18.626
+ },
+ {
+  "text": "Over six thousand answered a survey. Paid below their team's median? Less satisfied, and more likely to job hunt.",
+  "mood": "shocked",
+  "start": 19.126,
+  "end": 25.265
+ },
+ {
+  "text": "Paid above it? No happier at all.",
+  "mood": "curious",
+  "start": 25.665,
+  "end": 27.313
+ },
+ {
+  "text": "The gap only hurt in one direction.",
+  "mood": "warm",
+  "start": 27.663,
+  "end": 29.372
+ },
+ {
+  "text": "That's why half got sadder, and the other half didn't cheer.",
+  "mood": "warm",
+  "start": 29.772,
+  "end": 32.553
+ }
+]
