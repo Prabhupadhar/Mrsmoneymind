@@ -1,0 +1,56 @@
+[
+ {
+  "text": "One do-not-disturb box. Donations fell thirty percent.",
+  "mood": "excited",
+  "start": 0.1,
+  "end": 2.543
+ },
+ {
+  "text": "Do you give because you want to, or because you can't say no?",
+  "mood": "curious",
+  "start": 2.843,
+  "end": 5.437
+ },
+ {
+  "text": "In 2008, fundraisers knocked on over seven thousand doors near Chicago.",
+  "mood": "neutral",
+  "start": 5.737,
+  "end": 9.902
+ },
+ {
+  "text": "Some homes got a flyer first: we'll knock tomorrow, at this hour.",
+  "mood": "neutral",
+  "start": 10.202,
+  "end": 13.314
+ },
+ {
+  "text": "With a do-not-disturb box, a quarter fewer opened the door.",
+  "mood": "curious",
+  "start": 13.714,
+  "end": 16.468
+ },
+ {
+  "text": "And giving fell thirty percent. Mostly gifts of ten dollars or less.",
+  "mood": "shocked",
+  "start": 16.968,
+  "end": 20.44
+ },
+ {
+  "text": "Mail or online instead? One household, out of seven thousand.",
+  "mood": "curious",
+  "start": 20.79,
+  "end": 24.126
+ },
+ {
+  "text": "That awkward no? Priced at about three dollars fifty.",
+  "mood": "warm",
+  "start": 24.476,
+  "end": 27.235
+ },
+ {
+  "text": "That's why one little box cut giving thirty percent.",
+  "mood": "warm",
+  "start": 27.635,
+  "end": 30.265
+ }
+]

@@ -240,3 +240,16 @@ Read (abstract, introduction, data, monthly patterns, hypothetical-choice and fo
   Script line "Week one just feels more urgent" paraphrases that.
 - Caveats: cross-sectional; old (1989-93) US data. "Split the money by week" is our suggestion, not the paper's.
 - Safe hook: "Money day: full plates. Day 30: up to −15% (calories)."
+
+## h22-door: DellaVigna, List & Malmendier, "Testing for Altruism and Social Pressure in Charitable Giving" (NBER WP 15629, 2009; QJE 2012).
+Read (abstract, introduction with the four main results, design).
+- Door-to-door fund-raising for a local children's hospital and an out-of-state charity; 7,668 households in towns around Chicago,
+  April-October 2008.
+- Treatments: baseline (no warning); Flyer on the doorknob the day before with the one-hour visit window; Opt-out flyer with a
+  "Do Not Disturb" box.
+- Opening the door: 41% baseline; 10% lower with the flyer, 25% lower with the opt-out flyer ("a quarter fewer").
+- Giving: 6.3% of households in baseline and Flyer; opt-out flyer cut giving 30%, driven by donations up to $10.
+- Mail/Internet: only one contacted household out of 7,668 gave that way.
+- Structural estimate: social pressure cost of saying no is $3.5 (in-state charity), $1.4 (out-of-state). Script: "about three
+  dollars fifty" for the local charity case (screen labels it local charity).
+- Safe hook: "One do-not-disturb box. Donations: −30%."

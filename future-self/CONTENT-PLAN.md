@@ -55,6 +55,7 @@ The hook bank below now feeds the 13:00 slot (H01, H02, H09 and H17 are used). H
 | h19-teacher | 2026-12-05 09:30 | H60 "$4,000 up front. Their students scored higher." | Fryer, Levitt, List & Sadoff (NBER w18237, read) | scheduled |
 | h20-photo | 2026-12-05 11:00 | H61 "A woman's photo. Men borrowed like rates dropped." | Bertrand, Karlan, Mullainathan, Shafir & Zinman (NBER w11892, read) | scheduled |
 | h21-cycle | 2026-12-05 18:00 | H62 "Money day: full plates. Day 30: up to −15%." | Shapiro (J. Public Econ 2005; 2003 working paper, read) | scheduled |
+| h22-door | 2026-12-06 09:30 | H63 "One do-not-disturb box. Donations: −30%." | DellaVigna, List & Malmendier (NBER w15629, read) | scheduled |
 H08, H11 and H23 are used. The daily run takes the next unused hook-bank items (skip any used by P/s Shorts).
 
 ### Hook bank: 50 Shorts (build in this order)
@@ -128,6 +129,7 @@ paper after reading it in full: if it does not, rewrite the hook to what the pap
 | H60 | Shocking number | "$4,000 up front. Their students scored higher." | Teachers paid the bonus in advance (to return if students fell short) raised math scores; end-of-year bonus did not | Fryer, Levitt, List & Sadoff 2012/2022 (NBER w18237) | used: h19-teacher |
 | H61 | Weird | "A woman's photo. Men borrowed like rates dropped." | On a loan offer letter, a female photo raised male take-up as much as a 4.5-point monthly rate cut | Bertrand, Karlan, Mullainathan, Shafir & Zinman 2010, QJE (NBER w11892) | used: h20-photo |
 | H62 | Relatable | "Money day: full plates. Day 30: up to −15%." | Food stamp households ate 10-15% fewer calories by the end of the benefit month | Shapiro 2005, J. Public Economics | used: h21-cycle |
+| H63 | Small change | "One do-not-disturb box. Donations: −30%." | A door flyer with an opt-out box cut door-to-door giving 30%: much giving is social pressure | DellaVigna, List & Malmendier 2012, QJE (NBER w15629) | used: h22-door |
 
 When fewer than 10 items are left, add 10 new ideas from peer-reviewed money-psychology research
 (prefer large samples, field experiments and well-replicated findings; include "myth check" ideas).
