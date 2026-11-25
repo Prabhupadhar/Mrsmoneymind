@@ -1,0 +1,62 @@
+[
+ {
+  "text": "Four thousand dollars, up front. Their students scored higher.",
+  "mood": "excited",
+  "start": 0.1,
+  "end": 2.809
+ },
+ {
+  "text": "Same bonus. The only change: when it was paid.",
+  "mood": "curious",
+  "start": 3.109,
+  "end": 5.71
+ },
+ {
+  "text": "In 2010, nine schools near Chicago tested teacher bonuses.",
+  "mood": "neutral",
+  "start": 6.01,
+  "end": 9.877
+ },
+ {
+  "text": "One group could earn up to eight thousand dollars at the end of the year.",
+  "mood": "neutral",
+  "start": 10.177,
+  "end": 13.376
+ },
+ {
+  "text": "Another got four thousand on day one, and had to give some back if students fell short.",
+  "mood": "neutral",
+  "start": 13.676,
+  "end": 17.799
+ },
+ {
+  "text": "Same money for the same results.",
+  "mood": "curious",
+  "start": 18.149,
+  "end": 19.59
+ },
+ {
+  "text": "End-of-year bonus? Math scores barely moved.",
+  "mood": "curious",
+  "start": 19.99,
+  "end": 22.449
+ },
+ {
+  "text": "Money already in hand? Math jumped about seven percentile points.",
+  "mood": "shocked",
+  "start": 22.949,
+  "end": 26.317
+ },
+ {
+  "text": "Losing money hurts more than missing it.",
+  "mood": "warm",
+  "start": 26.668,
+  "end": 28.411
+ },
+ {
+  "text": "That's why four thousand up front worked.",
+  "mood": "warm",
+  "start": 28.811,
+  "end": 30.891
+ }
+]

@@ -200,3 +200,16 @@ Read (abstract, introduction, design and main results).
   for dependents, but the help and info-only effects differ at 5%. Script: "applications didn't budge" (filing).
 - "The form was the wall" is our interpretation, in line with the authors' simplification conclusion.
 - Safe hook: "10 minutes of help. More kids in college."
+
+## h19-teacher: Fryer, Levitt, List & Sadoff, "Enhancing the Efficacy of Teacher Incentives through Loss Aversion: A Field Experiment" (NBER WP 18237, 2012).
+Read (abstract, introduction, program details, implementation and main results).
+- 2010-11 school year, Chicago Heights, IL (30 miles south of Chicago): nine K-8 schools, ~3,200 students; 150 teachers (93.75% of
+  eligible) opted in and were randomised.
+- Reward: $80 per percentile, max $8,000; expected value $4,000 (~8% of average salary).
+- "Gain": paid at the end of the year. "Loss": $4,000 at the start of the year, return the difference if performance was below average,
+  up to $4,000 more if above. Identical net pay for a given performance; only timing and framing differ.
+- Math (ThinkLink): Loss +0.220 sd, 6.84 percentile points (significant); Gain +0.092 sd, 1.88 points (insignificant). Loss and Gain
+  differ at 95%+. State tests (no incentives attached): Loss +0.201 sd.
+- "About seven percentile points" = 6.84. "Barely moved" = small, insignificant gain effect.
+- "Losing money hurts more than missing it" = loss aversion, the paper's mechanism.
+- Safe hook: "$4,000 up front. Their students scored higher."
