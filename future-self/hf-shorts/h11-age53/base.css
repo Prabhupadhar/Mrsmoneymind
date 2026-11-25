@@ -1,0 +1,16 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+@font-face { font-family: "Hand"; src: url("assets/patrickhand.ttf") format("truetype"); font-display: block; }
+@font-face { font-family: "Archivo Black"; src: url("assets/ArchivoBlack-Regular.ttf") format("truetype"); font-display: block; }
+html, body { width: 1080px; height: 1920px; overflow: hidden; background: #14215a; }
+#root { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: #14215a; }
+#art { position: absolute; inset: 0; width: 1080px; height: 1920px; }
+.k { stroke: #0d0f22; stroke-linecap: round; stroke-linejoin: round; }
+.cap { position: absolute; left: 60px; width: 960px; text-align: center; font-family: "Hand", cursive; color: #f4f1ff; line-height: 1.05; }
+.cap span { display: inline-block; }
+.cap b { color: #ffb347; font-weight: 400; }
+.big { font-family: "Archivo Black", sans-serif; }
+.scene { opacity: 0; }
+.lbl { font-family: "Hand", cursive; }
+.num { font-family: "Archivo Black", sans-serif; }
+.hook { font-size: 104px !important; top: 200px !important; text-shadow: 0 6px 0 rgba(0,0,0,.35); }
+.hook span { margin: 0 8px; }

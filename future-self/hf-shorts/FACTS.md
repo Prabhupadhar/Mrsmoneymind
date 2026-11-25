@@ -102,3 +102,14 @@ e2208661120 (open access, PMC10013834). Read in full.
 - Mechanism: mental accounting; once money was set aside, people resisted unplanned spending.
 - Take-up: 71% of Safe Box group still had money in it at 12 months.
 - Safe hook: "A metal box. Health spending up 68%." (preventative health investment).
+
+## h11-age53: Agarwal, Driscoll, Gabaix & Laibson, "The Age of Reason: Financial Decisions over the Lifecycle"
+(NBER WP 13191, 2007; Brookings Papers 2009). Read in full (WP).
+- Ten credit markets (home equity loans and lines, auto loans, card APRs, mortgages, small-business cards, late/over-limit/
+  cash-advance fees, balance-transfer use), proprietary US lender data; controls for credit risk (FICO etc.).
+- Younger and older adults paid higher interest rates and more fees than middle-aged adults; costs minimized around age 53
+  (mean "age of reason" 53.3); a peak in the 40-60 range cannot be rejected for all ten.
+- Home equity lines: 75-year-olds pay about $265 more per year than 50-year-olds; 25-year-olds about $295 more.
+- Balance-transfer "Eureka" task (14,798 borrowers): about a third never found the optimal strategy.
+- Leading explanation: experience rises with age while analytic function falls (2-3% of a standard deviation per year).
+- Safe hook: "Your money brain peaks at 53." (financial-decision costs lowest around 53 in these data).
