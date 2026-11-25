@@ -145,3 +145,15 @@ e2208661120 (open access, PMC10013834). Read in full.
 - Average gap of 2.29 full months between last attendance and cancelling a monthly contract, costing $185.
 - The average non-subsidized monthly user forgoes savings of about $700 per membership (of about $1,500 paid).
 - Safe hook: "$17 a visit. A $10 pass existed."
+
+## h15-tax: Chetty, Looney & Kroft, "Salience and Taxation: Theory and Evidence" (NBER WP 13330, 2007; AER 2009).
+Read (abstract, introduction and experiment design in full).
+- Field experiment with a major grocery chain, one supermarket, three weeks in early 2006. Shelf prices excluded a 7.375%
+  sales tax (added at the register). For 750 taxable products (cosmetics, hair care accessories, deodorants), tags showing
+  the tax-inclusive price were posted below the regular price tag.
+- Quantity sold and revenue of treated products fell by about 8% relative to control products and nearby control stores,
+  close to the effect of a 7.375% price increase.
+- Survey: the median shopper correctly reported the tax status of 7 of 8 products and the average sales tax rate within
+  0.5 points: they know, but don't compute tax-inclusive prices.
+- Alcohol: state excise taxes (in the posted price) cut consumption about an order of magnitude more than sales taxes.
+- Safe hook: "Same price. Different tag. 8% fewer sales."

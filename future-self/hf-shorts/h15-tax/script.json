@@ -1,0 +1,12 @@
+[
+ ["Same price. A different tag. Eight percent fewer sales.", 0.1, 1.2, "excited"],
+ ["Your brain skips one number at the store.", 0.35, 1.2, "curious"],
+ ["In 2006, researchers changed the tags in one grocery store, for three weeks.", 0.35, 1.2, "neutral"],
+ ["Seven hundred fifty products. Cosmetics, hair care, deodorant.", 0.3, 1.2, "neutral"],
+ ["They added one line under each price: the price with tax.", 0.3, 1.2, "neutral"],
+ ["Nothing else changed. The tax was always added at the register.", 0.35, 1.2, "curious"],
+ ["Sales of those products fell about eight percent.", 0.5, 1.2, "shocked"],
+ ["Yet asked about it, the typical shopper knew the tax rate.", 0.4, 1.2, "curious"],
+ ["They just didn't add it up in their heads.", 0.35, 1.2, "warm"],
+ ["So add the tax before you decide. Watch your cart shrink.", 0.4, 1.2, "warm"]
+]
