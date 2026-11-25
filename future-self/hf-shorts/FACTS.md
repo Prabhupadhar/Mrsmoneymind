@@ -113,3 +113,13 @@ e2208661120 (open access, PMC10013834). Read in full.
 - Balance-transfer "Eureka" task (14,798 borrowers): about a third never found the optimal strategy.
 - Leading explanation: experience rises with age while analytic function falls (2-3% of a standard deviation per year).
 - Safe hook: "Your money brain peaks at 53." (financial-decision costs lowest around 53 in these data).
+
+## h12-payday: Agarwal, Skiba & Tobacman, "Payday Loans and Credit Cards: New Liquidity and Credit Scoring Puzzles?"
+(NBER WP 14659, 2009; AER Papers & Proceedings 2009). Read in full.
+- Individual-level match of a large payday lender's loans with a major card issuer's accounts: 3,090 people with both.
+- Payday loans: typical first loan about $300, due next payday; annualized interest rates of at least several hundred percent.
+- Two-thirds of the matched sample had at least $1,000 of credit-card liquidity on the day of their first payday loan.
+- Typical card holders would have saved almost $200 (over the year after the first payday loan) by using card liquidity.
+- Card liquidity had fallen by $545 on average over the year before the first payday loan.
+- Taking a payday loan predicts a 92% higher serious card delinquency rate in the next year.
+- Safe hook: "Payday loan. $1,000 free on their card." (two-thirds of the matched sample).

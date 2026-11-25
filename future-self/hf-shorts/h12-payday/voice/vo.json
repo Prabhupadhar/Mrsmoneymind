@@ -1,0 +1,62 @@
+[
+ {
+  "text": "A payday loan. A thousand free on their card.",
+  "mood": "excited",
+  "start": 0.1,
+  "end": 1.908
+ },
+ {
+  "text": "Ever grabbed the expensive option because it was right there?",
+  "mood": "curious",
+  "start": 2.258,
+  "end": 5.064
+ },
+ {
+  "text": "Researchers matched a payday lender with a big card company. Three thousand people had both.",
+  "mood": "neutral",
+  "start": 5.414,
+  "end": 10.212
+ },
+ {
+  "text": "A typical payday loan: about three hundred dollars, due next payday.",
+  "mood": "neutral",
+  "start": 10.512,
+  "end": 13.894
+ },
+ {
+  "text": "Price? Several hundred percent a year.",
+  "mood": "neutral",
+  "start": 14.244,
+  "end": 16.04
+ },
+ {
+  "text": "Now check their cards on the day they borrowed.",
+  "mood": "curious",
+  "start": 16.39,
+  "end": 18.459
+ },
+ {
+  "text": "Two thirds had at least a thousand dollars of room.",
+  "mood": "shocked",
+  "start": 18.959,
+  "end": 21.267
+ },
+ {
+  "text": "Using the card would have saved a typical borrower almost two hundred dollars.",
+  "mood": "warm",
+  "start": 21.667,
+  "end": 25.755
+ },
+ {
+  "text": "Their card room had been shrinking. Under pressure, we grab the nearest door.",
+  "mood": "warm",
+  "start": 26.155,
+  "end": 29.979
+ },
+ {
+  "text": "So before you borrow fast, check what you have.",
+  "mood": "warm",
+  "start": 30.379,
+  "end": 32.738
+ }
+]
