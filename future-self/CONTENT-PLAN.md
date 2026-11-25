@@ -51,7 +51,7 @@ The hook bank below now feeds the 13:00 slot (H01, H02, H09 and H17 are used). H
 | h15-tax | 2026-12-03 09:30 | H56 "Same price. Different tag. 8% fewer sales." | Chetty, Looney & Kroft (NBER w13330) | scheduled |
 | h16-salary | 2026-12-03 18:00 | H57 "They saw coworkers' pay. Half got sadder." | Card, Mas, Moretti & Saez (NBER w16396) | scheduled |
 | h17-coin | 2026-12-04 09:30 | H58 "A coin said quit. Six months later: happier." | Levitt (NBER w22487, read in full) | scheduled |
-| h18-fafsa | 2026-12-04 18:00 | H59 "10 minutes of help. More kids in college." | Bettinger, Long, Oreopoulos & Sanbonmatsu (NBER w15361, read) | in progress (owner session) |
+| h18-fafsa | 2026-12-04 18:00 | H59 "10 minutes of help. More kids in college." | Bettinger, Long, Oreopoulos & Sanbonmatsu (NBER w15361, read) | scheduled |
 H08, H11 and H23 are used. The daily run takes the next unused hook-bank items (skip any used by P/s Shorts).
 
 ### Hook bank: 50 Shorts (build in this order)
@@ -121,7 +121,7 @@ paper after reading it in full: if it does not, rewrite the hook to what the pap
 | H56 | Weird | "Same price. Different tag. Fewer sales." | Showing tax-inclusive prices on shelf tags cut demand | Chetty, Looney & Kroft 2009, AER (NBER w13330) | used: h15-tax |
 | H57 | You lose because of someone else | "Your coworker's salary made you unhappier." | Learning peers' pay lowered satisfaction of those paid below the median | Card, Mas, Moretti & Saez 2012, AER (NBER w16396) | used: h16-salary |
 | H58 | Weird / story | "A coin said quit. Six months later: happier." | People a coin toss pushed to make a big change (quit a job, break up) were happier six months later | Levitt 2021, Review of Economic Studies (NBER w22487) | used: h17-coin |
-| H59 | Small change | "10 minutes of help. More kids in college." | Pre-filling the college aid form at tax time raised college enrollment; aid info alone did nothing | Bettinger et al. 2012, QJE (NBER w15361) | in progress: h18-fafsa |
+| H59 | Small change | "10 minutes of help. More kids in college." | Pre-filling the college aid form at tax time raised college enrollment; aid info alone did nothing | Bettinger et al. 2012, QJE (NBER w15361) | used: h18-fafsa |
 
 When fewer than 10 items are left, add 10 new ideas from peer-reviewed money-psychology research
 (prefer large samples, field experiments and well-replicated findings; include "myth check" ideas).

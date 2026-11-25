@@ -187,3 +187,16 @@ Read (abstract, introduction, design, results, biases and conclusion).
 - Author: "people may be excessively cautious when facing life-changing choices"; results "merely suggestive".
 - Caveats (in description): self-selected online sample of people on the fence, self-reported happiness, survey non-response.
 - Safe hook: "A coin said quit. Six months later: happier." (the coin is the instrument; "they" = people the coin pushed to change).
+
+## h18-fafsa: Bettinger, Long, Oreopoulos & Sanbonmatsu, "The Role of Simplification and Information in College Decisions: Results from the H&R Block FAFSA Experiment" (NBER WP 15361, 2009; QJE 2012).
+Read (abstract, introduction, design and main results).
+- 2008, H&R Block offices in most of Ohio and the Charlotte, North Carolina area; low- and moderate-income families.
+- The 2008 FAFSA: eight pages, over 100 questions (plus worksheets).
+- FAFSA treatment: software pre-filled the form from the tax return; the tax professional asked the remaining questions, "which
+  took less than 10 minutes"; plus a personalised aid estimate.
+- Dependent students (HS seniors / recent grads): FAFSA filing 40.2% control, +15.7 points with help. College enrollment the next
+  fall: 26.8% (control) to 34.5% (FAFSA treatment), about +29% relative.
+- Information-only group (personalised aid estimate, no help with the form): no significant effect on FAFSA filing; small sample
+  for dependents, but the help and info-only effects differ at 5%. Script: "applications didn't budge" (filing).
+- "The form was the wall" is our interpretation, in line with the authors' simplification conclusion.
+- Safe hook: "10 minutes of help. More kids in college."

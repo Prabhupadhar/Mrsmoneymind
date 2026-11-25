@@ -1,0 +1,50 @@
+[
+ {
+  "text": "Ten minutes of help. More kids went to college.",
+  "mood": "excited",
+  "start": 0.1,
+  "end": 1.99
+ },
+ {
+  "text": "The college aid form: eight pages, over a hundred questions.",
+  "mood": "curious",
+  "start": 2.29,
+  "end": 5.451
+ },
+ {
+  "text": "In 2008, tax offices in Ohio and North Carolina tried something.",
+  "mood": "neutral",
+  "start": 5.751,
+  "end": 9.847
+ },
+ {
+  "text": "While families did taxes, the aid form got pre-filled. The rest took under ten minutes.",
+  "mood": "neutral",
+  "start": 10.197,
+  "end": 14.699
+ },
+ {
+  "text": "Their teens' college enrollment: about twenty-seven percent, up to thirty-five.",
+  "mood": "curious",
+  "start": 15.199,
+  "end": 19.24
+ },
+ {
+  "text": "But families only told their aid amount, with no form help? Applications didn't budge.",
+  "mood": "shocked",
+  "start": 19.74,
+  "end": 24.119
+ },
+ {
+  "text": "The money was there. The form was the wall.",
+  "mood": "warm",
+  "start": 24.469,
+  "end": 26.561
+ },
+ {
+  "text": "Ten minutes of help beat knowing about the money.",
+  "mood": "warm",
+  "start": 26.961,
+  "end": 29.237
+ }
+]
