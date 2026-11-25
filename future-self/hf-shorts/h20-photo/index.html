@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1080, height=1920" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+<script src="voice.js"></script>
+<script src="kit.js"></script>
+<link rel="stylesheet" href="base.css" />
+<style>
+  #root, html, body { background: #2e0f22; }
+  .t { top: 220px; font-size: 96px; }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="32" data-width="1080" data-height="1920" data-motion-blur="on">
+  <svg id="art" class="clip" data-start="0" data-duration="32" viewBox="0 0 1080 1920">
+    <defs>
+      <radialGradient id="bg" cx="0.5" cy="0.5" r="0.85"><stop offset="0" stop-color="#8a2f5e"/><stop offset="1" stop-color="#1a0614"/></radialGradient>
+      <g id="paper"><rect class="k" x="-180" y="-230" width="360" height="460" rx="14" fill="#fff6e0" stroke-width="8"/>
+        <text x="-140" y="-170" class="num" font-size="38" fill="#2e0f22">LOAN OFFER</text>
+        <rect x="-140" y="-120" width="180" height="16" rx="6" fill="#d9c9b0"/><rect x="-140" y="-84" width="150" height="16" rx="6" fill="#d9c9b0"/>
+        <rect x="-140" y="120" width="280" height="16" rx="6" fill="#d9c9b0"/><rect x="-140" y="156" width="220" height="16" rx="6" fill="#d9c9b0"/>
+        <rect class="k" x="60" y="-140" width="100" height="110" rx="8" fill="#ffe3ef" stroke-width="5"/></g>
+    </defs>
+    <rect width="1080" height="1920" fill="url(#bg)"/>
+    <g id="cam">
+      <g id="s1" class="scene"></g>
+      <g id="s2" class="scene"></g>
+      <g id="s3" class="scene"></g>
+      <g id="s4" class="scene"></g>
+    </g>
+  </svg>
+  <div id="t1" class="cap t clip" data-start="0" data-duration="32"></div>
+  <div id="t2" class="cap t clip" data-start="0" data-duration="32"></div>
+  <div id="t3" class="cap t clip" data-start="0" data-duration="32"></div>
+  <div id="t4" class="cap t clip" data-start="0" data-duration="32"></div>
+  <div id="t5" class="cap t clip" data-start="0" data-duration="32"></div>
+</div>
+<script>
+window.__timelines = window.__timelines || {};
+var tl = gsap.timeline({ paused: true }), V = window.VO;
+// a loan letter with a small portrait (look: "friend" = woman, "boss" = man, null = empty frame)
+function letter(id, x, y, look, rate, s) {
+  return '<g transform="translate(' + x + ',' + y + ') scale(' + (s || 1) + ')"><g id="' + id + '"><use href="#paper"/>' +
+    (look ? K.person(id + "p", look, { x: 110, y: -78, s: 0.095 }) : "") +
+    (rate ? '<text x="-140" y="40" class="num" font-size="52" fill="#c2185b">' + rate + '</text>' : "") + '</g></g>';
+}
+
+// ---------- S1: HOOK — a letter with a woman's photo; the man borrows; the rate gauge dives ----------
+K.add("#s1", letter("L1", 330, 800, "friend", "RATE") + K.person("man", "neighbor", { x: 760, y: 1150, s: 0.36, flip: true }) +
+  '<g transform="translate(330,1230)"><g id="dive"><path d="M0,-90 L0,70 M-55,15 L0,75 L55,15" fill="none" stroke="#7dff9a" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/></g></g>' +
+  '<text id="feel" x="540" y="1440" text-anchor="middle" class="num" font-size="54" fill="#7dff9a" opacity="0">feels like a rate cut</text>');
+K.show(tl, "#s1", 0);
+K.hook(tl, "#t1", "a woman's <b>photo.</b> men borrowed like rates <b>dropped.</b>", V[1] - 0.2);
+tl.fromTo("#L1", { y: 300, rotation: -12 }, { y: 0, rotation: -3, duration: 0.5, ease: "back.out(2)" }, 0);
+tl.fromTo("#dive", { y: -60 }, { y: 40, duration: 0.3, repeat: 3, yoyo: true, ease: "sine.inOut" }, 0.3);
+K.face(tl, "man", { m: "smile", e: "h", blush: 0.9, look: [-40, -20] }, 0.5);
+K.react(tl, "man", 0.6);
+K.pop(tl, "#feel", 1.4, 0.4);
+K.words("#t2", "ads don't work on <b>you?</b>"); K.title(tl, "#t2", V[1]);
+tl.to("#t2", { opacity: 0, duration: 0.2 }, V[2] - 0.2);
+K.face(tl, "man", { m: "flat", e: "n", blush: 0, look: [0, 0] }, V[1] + 0.2);
+
+// ---------- S2: 53,194 letters; random rate 3.25%-11.75% a month; random extras like a photo ----------
+K.add("#s2", '<text id="n53" x="540" y="560" text-anchor="middle" class="num" font-size="120" fill="#fff">0</text>' +
+  '<text x="540" y="640" text-anchor="middle" class="lbl" font-size="54" fill="#ffd6ea">loan offers · South Africa</text>' +
+  letter("L2a", 300, 1000, null, "3.25%", 0.8) + letter("L2b", 780, 1000, null, "11.75%", 0.8) +
+  '<text id="rr" x="540" y="1330" text-anchor="middle" class="lbl" font-size="52" fill="#ffd36b" opacity="0">random rate, per month</text>' +
+  '<g transform="translate(780,1000) scale(0.8)"><g id="ph" opacity="0">' + K.person("php", "friend", { x: 110, y: -78, s: 0.095 }) + '</g></g>' +
+  '<text id="ex" x="540" y="1420" text-anchor="middle" class="lbl" font-size="52" fill="#ffd6ea" opacity="0">+ random extras, like a photo</text>');
+K.cut(tl, "#s1", "#s2", V[2] - 0.3);
+K.counter(tl, "#n53", 0, 53194, V[2] + 0.2, 1.4);
+tl.fromTo(["#L2a", "#L2b"], { y: 400, opacity: 0 }, { y: 0, opacity: 1, duration: 0.45, stagger: 0.15, ease: "back.out(2)", immediateRender: false }, V[3]);
+K.pop(tl, "#rr", V[3] + 1.0, 0.5);
+K.pop(tl, "#ph", V[4] + 1.4, 0.6);
+K.pop(tl, "#ex", V[4] + 0.4, 0.5);
+
+// ---------- S3: twist — man's photo vs woman's photo, for male customers = 4.5-point monthly rate cut ----------
+K.add("#s3", '<text x="540" y="530" text-anchor="middle" class="lbl" font-size="56" fill="#ffd6ea">for male customers</text>' +
+  letter("L3a", 290, 900, "boss", "", 0.8) + letter("L3b", 790, 900, "friend", "", 0.8) +
+  '<g transform="translate(540,900)"><g id="sw" opacity="0"><path d="M-70,-20 L60,-20 M20,-55 L65,-20 L20,15" fill="none" stroke="#fff" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/></g></g>' +
+  '<g transform="translate(540,1320)"><g id="eqv" opacity="0"><rect class="k" x="-430" y="-110" width="860" height="220" rx="30" fill="#1a0614" stroke="#7dff9a" stroke-width="7"/>' +
+  '<text y="-18" text-anchor="middle" class="num" font-size="68" fill="#7dff9a">= rate cut of 4.5 pts</text><text y="62" text-anchor="middle" class="lbl" font-size="50" fill="#ffd6ea">per month, in borrowers pulled in</text></g></g>');
+K.cut(tl, "#s2", "#s3", V[5] - 0.3);
+K.pop(tl, "#sw", V[5] + 1.6, 0.4);
+tl.to("#L3a", { opacity: 0.4, duration: 0.3 }, V[5] + 1.8);
+tl.to("#L3b", { scale: 1.08, svgOrigin: "0 0", duration: 0.3, ease: "back.out(2)" }, V[5] + 1.8);
+K.pop(tl, "#eqv", V[5] + 3.4, 1.8);
+K.camera(tl, "#cam", [[V[5] + 3.4, 1.05, 0, -40, 0.3], [V[6] - 0.3, 1, 0, 0, 0.3]]);
+
+// ---------- S4: same loan, just a face; loop — cover the photo, read the rate ----------
+K.add("#s4", letter("L4", 540, 880, "friend", "RATE", 1.1) +
+  '<g transform="translate(540,880) scale(1.1)"><g id="cover" opacity="0"><rect class="k" x="50" y="-150" width="120" height="130" rx="10" fill="#2b2f45" stroke-width="6"/></g></g>' +
+  '<g transform="translate(540,880) scale(1.1)"><g id="ring" opacity="0"><ellipse cx="-50" cy="24" rx="120" ry="56" fill="none" stroke="#ffd36b" stroke-width="10"/></g></g>' +
+  K.person("kid", "kid", { x: 300, y: 1300, s: 0.3 }));
+K.cut(tl, "#s3", "#s4", V[6] - 0.3);
+K.words("#t4", "same loan. just a <b>face.</b>"); K.title(tl, "#t4", V[6]);
+tl.to("#t4", { opacity: 0, duration: 0.2 }, V[7] - 0.2);
+K.face(tl, "kid", { m: "o", br: 10, look: [40, -40] }, V[6] + 0.3);
+tl.fromTo("#cover", { opacity: 0, y: -200 }, { opacity: 1, y: 0, duration: 0.4, ease: "back.out(2)", immediateRender: false }, V[7] + 0.4);
+K.pop(tl, "#ring", V[7] + 1.2, 0.5);
+K.face(tl, "kid", { m: "smile", e: "h", br: 0, blush: 0.6, look: [40, -40] }, V[7] + 1.2);
+K.react(tl, "kid", V[7] + 1.2);
+K.words("#t5", "cover the photo. read the <b>rate.</b>"); K.title(tl, "#t5", V[7]);
+tl.set({}, {}, window.DUR);
+window.__timelines["main"] = tl;
+</script>
+</body>
+</html>

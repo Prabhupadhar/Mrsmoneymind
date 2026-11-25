@@ -1,0 +1,50 @@
+[
+ {
+  "text": "A woman's photo on a loan letter. Men borrowed like the rate had dropped.",
+  "mood": "excited",
+  "start": 0.1,
+  "end": 3.489
+ },
+ {
+  "text": "Think ads don't work on you?",
+  "mood": "curious",
+  "start": 3.789,
+  "end": 4.994
+ },
+ {
+  "text": "A South African lender mailed loan offers to over fifty-three thousand past customers.",
+  "mood": "neutral",
+  "start": 5.294,
+  "end": 9.908
+ },
+ {
+  "text": "Each letter got a random interest rate, from about three to twelve percent a month.",
+  "mood": "neutral",
+  "start": 10.208,
+  "end": 14.159
+ },
+ {
+  "text": "And random little extras. Like a smiling photo in the corner.",
+  "mood": "neutral",
+  "start": 14.509,
+  "end": 17.757
+ },
+ {
+  "text": "For men, swapping a man's photo for a woman's pulled in as many borrowers as cutting the rate four and a half points a month.",
+  "mood": "shocked",
+  "start": 18.257,
+  "end": 24.335
+ },
+ {
+  "text": "Same loan. Same terms. Just a face.",
+  "mood": "curious",
+  "start": 24.685,
+  "end": 26.879
+ },
+ {
+  "text": "So next time, cover the photo. Read the rate.",
+  "mood": "warm",
+  "start": 27.279,
+  "end": 29.813
+ }
+]

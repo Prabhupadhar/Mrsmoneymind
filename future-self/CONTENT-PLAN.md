@@ -53,6 +53,7 @@ The hook bank below now feeds the 13:00 slot (H01, H02, H09 and H17 are used). H
 | h17-coin | 2026-12-04 09:30 | H58 "A coin said quit. Six months later: happier." | Levitt (NBER w22487, read in full) | scheduled |
 | h18-fafsa | 2026-12-04 18:00 | H59 "10 minutes of help. More kids in college." | Bettinger, Long, Oreopoulos & Sanbonmatsu (NBER w15361, read) | scheduled |
 | h19-teacher | 2026-12-05 09:30 | H60 "$4,000 up front. Their students scored higher." | Fryer, Levitt, List & Sadoff (NBER w18237, read) | scheduled |
+| h20-photo | 2026-12-05 11:00 | H61 "A woman's photo. Men borrowed like rates dropped." | Bertrand, Karlan, Mullainathan, Shafir & Zinman (NBER w11892, read) | scheduled |
 H08, H11 and H23 are used. The daily run takes the next unused hook-bank items (skip any used by P/s Shorts).
 
 ### Hook bank: 50 Shorts (build in this order)
@@ -124,6 +125,7 @@ paper after reading it in full: if it does not, rewrite the hook to what the pap
 | H58 | Weird / story | "A coin said quit. Six months later: happier." | People a coin toss pushed to make a big change (quit a job, break up) were happier six months later | Levitt 2021, Review of Economic Studies (NBER w22487) | used: h17-coin |
 | H59 | Small change | "10 minutes of help. More kids in college." | Pre-filling the college aid form at tax time raised college enrollment; aid info alone did nothing | Bettinger et al. 2012, QJE (NBER w15361) | used: h18-fafsa |
 | H60 | Shocking number | "$4,000 up front. Their students scored higher." | Teachers paid the bonus in advance (to return if students fell short) raised math scores; end-of-year bonus did not | Fryer, Levitt, List & Sadoff 2012/2022 (NBER w18237) | used: h19-teacher |
+| H61 | Weird | "A woman's photo. Men borrowed like rates dropped." | On a loan offer letter, a female photo raised male take-up as much as a 4.5-point monthly rate cut | Bertrand, Karlan, Mullainathan, Shafir & Zinman 2010, QJE (NBER w11892) | used: h20-photo |
 
 When fewer than 10 items are left, add 10 new ideas from peer-reviewed money-psychology research
 (prefer large samples, field experiments and well-replicated findings; include "myth check" ideas).

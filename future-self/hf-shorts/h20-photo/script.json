@@ -1,0 +1,10 @@
+[
+ ["A woman's photo on a loan letter. Men borrowed like the rate had dropped.", 0.1, 1.2, "excited"],
+ ["Think ads don't work on you?", 0.3, 1.2, "curious"],
+ ["A South African lender mailed loan offers to over fifty-three thousand past customers.", 0.3, 1.2, "neutral"],
+ ["Each letter got a random interest rate, from about three to twelve percent a month.", 0.3, 1.2, "neutral"],
+ ["And random little extras. Like a smiling photo in the corner.", 0.35, 1.2, "neutral"],
+ ["For men, swapping a man's photo for a woman's pulled in as many borrowers as cutting the rate four and a half points a month.", 0.5, 1.2, "shocked"],
+ ["Same loan. Same terms. Just a face.", 0.35, 1.2, "curious"],
+ ["So next time, cover the photo. Read the rate.", 0.4, 1.2, "warm"]
+]

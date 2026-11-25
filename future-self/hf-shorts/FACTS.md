@@ -213,3 +213,17 @@ Read (abstract, introduction, program details, implementation and main results).
 - "About seven percentile points" = 6.84. "Barely moved" = small, insignificant gain effect.
 - "Losing money hurts more than missing it" = loss aversion, the paper's mechanism.
 - Safe hook: "$4,000 up front. Their students scored higher."
+
+## h20-photo: Bertrand, Karlan, Mullainathan, Shafir & Zinman, "What's Psychology Worth? A Field Experiment in the Consumer Credit Market" (NBER WP 11892, 2005; QJE 2010 as "What's Advertising Content Worth?").
+Read (abstract, introduction, market, design and results sections).
+- A large South African consumer lender (150+ branches; experiment in 86 branches) mailed 53,194 former clients loan offers at randomly
+  assigned interest rates from 3.25% to 11.75% per month (standard rates 7.75%-11.75%). Two mailings (late Sep, late Oct); no year
+  in the WP text, so the Short gives none.
+- Independently randomised "features": comparisons, number of example loans, suggested uses, a photo of a smiling person in the
+  corner (none, or varied by race and gender), a promotional lottery.
+- Price: a 1-point rate cut raised take-up about 0.26 points (~3.5%).
+- Photo: for male customers, a female photo instead of a male photo significantly raised take-up, "about as much as dropping the
+  interest rate 4.5 percentage points" (monthly rate). No significant pattern for female customers; authors cannot say whether the
+  female photo helps or the male photo hurts. Script: "swapping a man's photo for a woman's" = exactly that comparison.
+- Also: one example loan instead of many: +9% demand (= 2.3-point monthly rate cut).
+- Safe hook: "A woman's photo. Men borrowed like rates dropped."
