@@ -227,3 +227,16 @@ Read (abstract, introduction, market, design and results sections).
   female photo helps or the male photo hurts. Script: "swapping a man's photo for a woman's" = exactly that comparison.
 - Also: one example loan instead of many: +9% demand (= 2.3-point monthly rate cut).
 - Safe hook: "A woman's photo. Men borrowed like rates dropped."
+
+## h21-cycle: Shapiro, "Is There a Daily Discount Rate? Evidence from the Food Stamp Nutrition Cycle" (working paper Aug 2003; J. Public Economics 2005).
+Read (abstract, introduction, data, monthly patterns, hypothetical-choice and food-insufficiency evidence).
+- Data: USDA Continuing Survey of Food Intake by Individuals 1989-91 (nationally representative; 24-hour recall + 2-day diaries) and
+  the Maryland EBT survey 1992-93 (1,298 food stamp households).
+- Caloric intake of food stamp recipients declines 10-15% over the 30 days after benefit receipt (0.40-0.45% per day).
+- Benefit dates: "virtually no states vary the benefit date systematically by month" (same day each month).
+- Maryland: "Would you take less than $50 today rather than $50 in a month?" In week four, seven percent more households say yes than in
+  week one (+0.35 points per day). Script: "more families" (no number on screen beyond the hook's calories figure).
+- Author's explanation: short-run impatience (time preference), rejecting food depreciation, strategic sharing and confusion.
+  Script line "Week one just feels more urgent" paraphrases that.
+- Caveats: cross-sectional; old (1989-93) US data. "Split the money by week" is our suggestion, not the paper's.
+- Safe hook: "Money day: full plates. Day 30: up to −15% (calories)."

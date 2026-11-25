@@ -1,0 +1,10 @@
+[
+ ["Money day: full plates. Thirty days later, up to fifteen percent fewer calories.", 0.1, 1.2, "excited"],
+ ["You know that end-of-month squeeze?", 0.3, 1.2, "curious"],
+ ["An economist studied food diaries from American families on food stamps.", 0.3, 1.2, "neutral"],
+ ["The benefit landed on the same day every month. No surprise.", 0.3, 1.2, "neutral"],
+ ["Yet calories fell a little every single day after it arrived. About ten to fifteen percent over the month.", 0.45, 1.2, "curious"],
+ ["And by week four, more families would take less than fifty dollars today, over fifty dollars next month.", 0.5, 1.2, "shocked"],
+ ["Week one just feels more urgent than week four.", 0.35, 1.2, "warm"],
+ ["So split the money by week. Day thirty deserves a full plate too.", 0.4, 1.2, "warm"]
+]
