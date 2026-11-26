@@ -1,0 +1,11 @@
+[
+ ["Lottery winners aren't happier. They're more satisfied.", 0.1, 1.05, "excited"],
+ ["A famous study from nineteen seventy-eight interviewed twenty-two big winners in Illinois.", 0.4, 1.08, "neutral"],
+ ["They weren't happier than people from the same area.", 0.3, 1.06, "curious"],
+ ["But twenty-two is tiny. So researchers in Sweden asked over three thousand lottery players, five to twenty-two years after the draw.", 0.4, 1.1, "curious"],
+ ["Happiness? No clear change.", 0.35, 1.06, "neutral"],
+ ["But life satisfaction?", 0.3, 1.06, "curious"],
+ ["Clearly higher. Still there more than a decade later.", 0.3, 1.0, "shocked"],
+ ["Mostly, they felt better about their money.", 0.4, 1.06, "warm"],
+ ["So winners aren't happier. They just rate their lives higher.", 0.4, 1.05, "whisper"]
+]

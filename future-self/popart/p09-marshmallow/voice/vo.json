@@ -1,0 +1,56 @@
+[
+ {
+  "text": "The marshmallow test measured more than willpower.",
+  "mood": "excited",
+  "start": 0.1,
+  "end": 2.464
+ },
+ {
+  "text": "The famous version: a Stanford preschool, and follow-ups with thirty-five to eighty-nine kids.",
+  "mood": "neutral",
+  "start": 2.864,
+  "end": 7.99
+ },
+ {
+  "text": "So researchers retested it with nine hundred eighteen kids.",
+  "mood": "curious",
+  "start": 8.29,
+  "end": 11.407
+ },
+ {
+  "text": "Age four. Wait seven minutes, get more.",
+  "mood": "curious",
+  "start": 11.707,
+  "end": 13.718
+ },
+ {
+  "text": "In the main group, waiting predicted scores at fifteen. But half as strongly.",
+  "mood": "neutral",
+  "start": 14.068,
+  "end": 18.236
+ },
+ {
+  "text": "Then they accounted for family background, the home, and early thinking skills.",
+  "mood": "curious",
+  "start": 18.586,
+  "end": 22.479
+ },
+ {
+  "text": "The link shrank by two thirds.",
+  "mood": "shocked",
+  "start": 22.779,
+  "end": 24.185
+ },
+ {
+  "text": "Kids who waited often had richer homes, and stronger early skills.",
+  "mood": "warm",
+  "start": 24.585,
+  "end": 28.503
+ },
+ {
+  "text": "So the marshmallow test measured more than willpower.",
+  "mood": "whisper",
+  "start": 28.903,
+  "end": 32.665
+ }
+]
