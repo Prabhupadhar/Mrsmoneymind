@@ -1,0 +1,55 @@
+<template>
+  <style>
+    @font-face { font-family: "Hand"; src: url("assets/fonts/PatrickHand-Regular.ttf"); }
+    #root { position: absolute; inset: 0; background: #1a2b66; overflow: hidden; }
+    #an-art { position: absolute; inset: 0; }
+    .rk { stroke: #0d0f22; stroke-linecap: round; stroke-linejoin: round; }
+    .pop { font-family: Hand; font-size: 150px; fill: #ffb35c; stroke: #0d0f22; stroke-width: 14px; paint-order: stroke; stroke-linejoin: round; }
+    .lab { font-family: Hand; font-size: 64px; fill: #f4f1ff; }
+  </style>
+  <div id="root" data-composition-id="v5aneigh" data-width="1080" data-height="1920">
+    <svg id="an-art" class="clip" data-start="0" data-duration="40" viewBox="0 0 1080 1920" data-layout-allow-overflow>
+      <defs>
+        <radialGradient id="an-bg" cx="0.5" cy="0.5" r="0.8"><stop offset="0" stop-color="#2a4a9f"/><stop offset="1" stop-color="#111c4c"/></radialGradient>
+      </defs>
+      <rect width="1080" height="1920" fill="url(#an-bg)"/>
+      <!-- neighbor's window -->
+      <rect class="rk" x="90" y="470" width="900" height="760" rx="20" fill="#ffe3b0" stroke-width="14"/>
+      <path d="M540,470 L540,1230" stroke="#0d0f22" stroke-width="12"/>
+      <rect x="90" y="1150" width="900" height="80" fill="#e8c48a"/>
+      <!-- the cleaner with a mop -->
+      <g transform="translate(800,1060) scale(0.42)"><g id="an-cl"><g data-rig="kid" data-p="anc" data-o='{"mouth":"smile","brows":"up","look":[-40,10],"shirt":"#4fb3a9"}'></g></g></g>
+      <g transform="translate(650,1050)"><g id="an-mop">
+        <path class="rk" d="M60,-260 L0,120" stroke-width="16"/>
+        <path class="rk" d="M-70,110 C-40,90 40,90 70,110 L80,150 L-80,150 Z" fill="#c9d3ef" stroke-width="9"/></g></g>
+      <g fill="#fff" id="an-shine" opacity="0"><path d="M600,1170 l8,20 20,8 -20,8 -8,20 -8,-20 -20,-8 20,-8 z"/><path d="M720,1190 l6,15 15,6 -15,6 -6,15 -6,-15 -15,-6 15,-6 z"/></g>
+      <!-- neighbor on the couch with a mug -->
+      <rect class="rk" x="130" y="990" width="380" height="160" rx="40" fill="#b0263c" stroke-width="12"/>
+      <g transform="translate(310,1010) scale(0.42)"><g id="an-nb"><g data-rig="nb" data-p="ann" data-o='{"mouth":"smile","brows":"flat","look":[30,10]}'></g></g></g>
+      <g transform="translate(430,1090)"><path class="rk" d="M24,-14 C50,-14 50,20 24,20" fill="none" stroke-width="10"/><path class="rk" d="M-30,-40 L30,-40 L24,40 L-24,40 Z" fill="#f7f3ea" stroke-width="8"/></g>
+      <!-- the kid, judging, at the front -->
+      <g transform="translate(250,1420) scale(0.42)"><g id="an-kid"><g data-rig="kid" data-p="ank" data-o='{"mouth":"flat","brows":"mad","look":[60,-30]}'></g></g></g>
+      <text class="pop" x="760" y="1400" text-anchor="middle" style="font-size:140px;fill:#ff5f6d" data-out="11,0.66,pop">lazy?</text>
+      <text class="pop" x="740" y="1400" text-anchor="middle" style="font-size:150px" data-in="11,0.8,pop">happier</text>
+    </svg>
+  </div>
+  <script>
+    Rig.fill();
+    const tl = gsap.timeline({ paused: true }), A = s => Rig.at(s, "v5aneigh");
+    Rig.run(tl, "v5aneigh");
+    // motion from frame 0: mop scrubbing, kid leaning in, the "lazy?" wobbling
+    tl.fromTo("#an-kid", { x: -30 }, { x: 0, duration: 0.6, ease: "expo.out" }, 0);
+    tl.to("#an-mop", { x: -60, duration: 0.4, yoyo: true, repeat: 11, ease: "sine.inOut" }, 0);
+    tl.to("#an-cl", { x: -40, duration: 0.4, yoyo: true, repeat: 11, ease: "sine.inOut" }, 0);
+    tl.to("#an-shine", { opacity: 1, duration: 0.3, yoyo: true, repeat: 5 }, 0.4);
+    Rig.blinks(tl, "ank", 0, 8); Rig.blinks(tl, "ann", 0, 8, 0.6); Rig.blinks(tl, "anc", 0, 8, 1.1);
+    tl.to("#an-kid", { rotation: -6, svgOrigin: "0 300", duration: 0.25, yoyo: true, repeat: 3 }, A("11,0.4"));
+    // twist: the neighbor grins, the kid is surprised
+    Rig.mouth(tl, "ann", "smile", "grin", A("11,0.8"));
+    tl.to("#an-nb", { y: -16, duration: 0.18, yoyo: true, repeat: 3 }, A("11,0.82"));
+    Rig.mouth(tl, "ank", "flat", "o", A("11,0.85"));
+    Rig.brows(tl, "ank", "up", A("11,0.85"));
+    Rig.widen(tl, "ank", A("11,0.85"));
+    window.__timelines["v5aneigh"] = tl;
+  </script>
+</template>

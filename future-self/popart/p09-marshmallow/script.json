@@ -1,0 +1,11 @@
+[
+ ["The marshmallow test measured more than willpower.", 0.1, 1.06, "excited"],
+ ["The famous version: a Stanford preschool, and follow-ups with thirty-five to eighty-nine kids.", 0.4, 1.12, "neutral"],
+ ["So researchers retested it with nine hundred eighteen kids.", 0.3, 1.1, "curious"],
+ ["Age four. Wait seven minutes, get more.", 0.3, 1.08, "curious"],
+ ["In the main group, waiting predicted scores at fifteen. But half as strongly.", 0.35, 1.1, "neutral"],
+ ["Then they accounted for family background, the home, and early thinking skills.", 0.35, 1.12, "curious"],
+ ["The link shrank by two thirds.", 0.3, 1.0, "shocked"],
+ ["Kids who waited often had richer homes, and stronger early skills.", 0.4, 1.08, "warm"],
+ ["So the marshmallow test measured more than willpower.", 0.4, 1.05, "whisper"]
+]

@@ -1,0 +1,87 @@
+<template>
+  <style>
+    @font-face { font-family: "Hand"; src: url("assets/fonts/PatrickHand-Regular.ttf"); }
+    #root { position: absolute; inset: 0; background: #1a2b66; overflow: hidden; }
+    #bk-art { position: absolute; inset: 0; }
+    .rk { stroke: #0d0f22; stroke-linecap: round; stroke-linejoin: round; }
+    .pop { font-family: Hand; font-size: 150px; fill: #ffb35c; stroke: #0d0f22; stroke-width: 14px; paint-order: stroke; stroke-linejoin: round; }
+    .lab { font-family: Hand; font-size: 60px; fill: #f4f1ff; }
+  </style>
+  <div id="root" data-composition-id="v5bkenya" data-width="1080" data-height="1920">
+    <svg id="bk-art" class="clip" data-start="0" data-duration="40" viewBox="0 0 1080 1920" data-layout-allow-overflow>
+      <defs>
+        <radialGradient id="bk-bg" cx="0.5" cy="0.5" r="0.8"><stop offset="0" stop-color="#2a4a9f"/><stop offset="1" stop-color="#111c4c"/></radialGradient>
+      </defs>
+      <rect width="1080" height="1920" fill="url(#bk-bg)"/>
+
+      <!-- 30: hook: laundry or cash, the mom between them (all visible in frame 0) -->
+      <g id="bk-q" data-out="31,0.02">
+        <g transform="translate(250,700)"><g id="bk-basket">
+          <path class="rk" d="M-140,-70 C-100,-170 100,-170 140,-70" fill="#ff8fb1" stroke-width="10"/>
+          <path class="rk" d="M-160,-70 L160,-70 L130,150 L-130,150 Z" fill="#9fe3ff" stroke-width="10"/>
+          <path d="M-100,-20 L100,-20 M-90,40 L90,40 M-80,100 L80,100" stroke="#5aa9d6" stroke-width="10" stroke-linecap="round"/></g></g>
+        <text class="pop" x="540" y="730" text-anchor="middle" style="font-size:110px">or</text>
+        <g transform="translate(820,700)"><g id="bk-cash">
+          <rect class="rk" x="-170" y="-40" width="340" height="150" rx="12" fill="#5fae6b" stroke-width="10"/>
+          <rect class="rk" x="-160" y="-80" width="340" height="150" rx="12" fill="#7fd18b" stroke-width="10"/>
+          <circle cx="10" cy="-5" r="40" fill="none" stroke="#1f5a33" stroke-width="8"/></g></g>
+        <g transform="translate(540,1180) scale(0.5)"><g id="bk-mom"><g data-rig="kid" data-p="bkm" data-o='{"mouth":"smile","brows":"up","look":[-60,-40],"shirt":"#c2477a"}'></g></g></g>
+      </g>
+      <!-- 31: ~40 h paid + ~40 h unpaid every week -->
+      <g id="bk-hours" data-in="31,0.0,fade" data-out="32,0.02">
+        <text class="lab" x="540" y="560" text-anchor="middle" style="font-size:66px">every week</text>
+        <path d="M140,1250 L940,1250" stroke="#c9d3ef" stroke-width="8" stroke-linecap="round"/>
+        <rect class="rk" x="200" y="850" width="260" height="400" rx="10" fill="#8f7dff" stroke-width="10" data-in="31,0.15,grow"/>
+        <rect class="rk" x="620" y="842" width="260" height="408" rx="10" fill="#ff8a2a" stroke-width="10" data-in="31,0.65,grow"/>
+        <text class="pop" x="330" y="800" text-anchor="middle" style="font-size:100px" data-in="31,0.25,pop">~40 h</text>
+        <text class="pop" x="750" y="790" text-anchor="middle" style="font-size:100px" data-in="31,0.75,pop">~40 h</text>
+        <text class="lab" x="330" y="1330" text-anchor="middle">paid work</text>
+        <text class="lab" x="750" y="1330" text-anchor="middle">unpaid, home</text>
+      </g>
+      <!-- 32: three groups for three weeks; 34: all rise the same -->
+      <g id="bk-groups" data-in="32,0.0,fade">
+        <text class="lab" x="540" y="520" text-anchor="middle" style="font-size:64px" data-in="32,0.05,fade">for 3 weeks</text>
+        <g data-in="32,0.1,left">
+          <g transform="translate(170,650) scale(0.5)"><path class="rk" d="M-140,-70 C-100,-170 100,-170 140,-70" fill="#ff8fb1" stroke-width="12"/><path class="rk" d="M-160,-70 L160,-70 L130,150 L-130,150 Z" fill="#9fe3ff" stroke-width="12"/></g>
+          <text class="lab" x="290" y="680">free services</text>
+        </g>
+        <g data-in="32,0.45,left">
+          <g transform="translate(170,900) scale(0.5)"><rect class="rk" x="-170" y="-40" width="340" height="150" rx="12" fill="#5fae6b" stroke-width="12"/><rect class="rk" x="-160" y="-80" width="340" height="150" rx="12" fill="#7fd18b" stroke-width="12"/></g>
+          <text class="lab" x="290" y="930">same value, cash</text>
+        </g>
+        <g data-in="32,0.8,left">
+          <g transform="translate(170,1150) scale(0.5)"><rect class="rk" x="-150" y="-100" width="300" height="190" rx="10" fill="#e9dcc6" stroke-width="12"/><path class="rk" d="M-150,-100 L0,10 L150,-100" fill="none" stroke-width="12"/></g>
+          <text class="lab" x="290" y="1180">nothing extra</text>
+        </g>
+        <!-- 34: the same rise for everyone -->
+        <rect class="rk bk-bar" x="290" y="712" width="420" height="44" rx="10" fill="#7cf0a8" stroke-width="8" data-in="34,0.3,growx"/>
+        <rect class="rk bk-bar" x="290" y="962" width="414" height="44" rx="10" fill="#7cf0a8" stroke-width="8" data-in="34,0.45,growx"/>
+        <rect class="rk bk-bar" x="290" y="1212" width="417" height="44" rx="10" fill="#7cf0a8" stroke-width="8" data-in="34,0.6,growx"/>
+        <text class="pop" x="850" y="1010" text-anchor="middle" style="font-size:150px" data-in="34,0.8,pop">=</text>
+        <g transform="translate(200,1430) scale(0.3)"><g id="bk-mom2"><g data-rig="kid" data-p="bkn" data-o='{"mouth":"smile","brows":"up","look":[60,-40],"shirt":"#c2477a"}'></g></g></g>
+        <text class="pop" x="640" y="1440" text-anchor="middle" style="font-size:110px" data-in="36,0.6,pop">didn't matter</text>
+      </g>
+    </svg>
+  </div>
+  <script>
+    Rig.fill();
+    const tl = gsap.timeline({ paused: true }), A = s => Rig.at(s, "v5bkenya");
+    Rig.run(tl, "v5bkenya");
+    // motion from frame 0: the mom looks between the two, both items wobble
+    tl.fromTo("#bk-mom", { y: 30 }, { y: 0, duration: 0.5, ease: "expo.out" }, 0);
+    tl.to("#bk-basket", { rotation: -6, svgOrigin: "0 150", duration: 0.35, yoyo: true, repeat: 5, ease: "sine.inOut" }, 0);
+    tl.to("#bk-cash", { rotation: 6, svgOrigin: "0 110", duration: 0.35, yoyo: true, repeat: 5, ease: "sine.inOut" }, 0.2);
+    Rig.blinks(tl, "bkm", 0, A("31,0"));
+    Rig.look(tl, "bkm", -60, -40, 0);
+    Rig.look(tl, "bkm", 60, -40, A("30,0.75"));
+    Rig.mouth(tl, "bkm", "smile", "o", A("30,0.75"));
+    // 34: the twist: everyone felt better, about the same
+    Rig.blinks(tl, "bkn", A("32,0"), A("36,1") + 2, 0.4);
+    Rig.mouth(tl, "bkn", "smile", "o", A("34,0.2"));
+    Rig.widen(tl, "bkn", A("34,0.2"));
+    Rig.mouth(tl, "bkn", "o", "grin", A("34,0.7"));
+    tl.to(".bk-bar", { scaleX: 1.03, transformOrigin: "0% 50%", duration: 0.3, yoyo: true, repeat: 5, ease: "sine.inOut" }, A("35,0.3"));
+    tl.to("#bk-mom2", { rotation: -6, svgOrigin: "0 300", duration: 0.25, yoyo: true, repeat: 3 }, A("36,0.5"));
+    window.__timelines["v5bkenya"] = tl;
+  </script>
+</template>

@@ -1,0 +1,57 @@
+[
+ ["Okay. Quick question.", 0.3, 1, "curious"],
+ ["Someone hands you forty dollars. What do you buy?", 0.3, 1, "curious"],
+ ["New shoes? A game? Dinner out?", 0.3, 1, "excited"],
+ ["Researchers asked ninety-eight working adults exactly that.", 0.45, 1, "neutral"],
+ ["Only two percent said: I'd use it to buy back some time.", 0.35, 1, "shocked"],
+ ["And that might be the best happiness deal most of us ignore.", 0.45, 1, "warm"],
+ ["Let's talk about buying time.", 0.4, 1, "warm"],
+
+ ["As the world got richer, people started feeling poor in something else. Time.", 1.1, 1, "curious"],
+ ["And that time stress is linked to less happiness, more anxiety, and trouble sleeping.", 0.4, 1, "sad"],
+ ["Researchers call it a time famine.", 0.4, 1, "firm"],
+ ["So they asked: can money buy some of that time back?", 0.45, 1, "curious"],
+
+ ["Your neighbor pays someone to clean. Lazy? The data says... happier.", 1.1, 1, "curious"],
+ ["Researchers surveyed over six thousand people in the US, Canada, Denmark and the Netherlands.", 0.4, 1, "neutral"],
+ ["One question. In a typical month, do you pay someone to do the daily tasks you dislike?", 0.35, 1, "curious"],
+ ["The people who did were more satisfied with their lives.", 0.4, 1, "excited"],
+ ["And it wasn't a rich-people thing. The link didn't depend on income.", 0.4, 1, "firm"],
+ ["They even asked eight hundred eighteen millionaires. A big share spent nothing on it at all.", 0.45, 1, "shocked"],
+ ["Now, when people felt short on time, their life satisfaction dropped.", 0.45, 1, "sad"],
+ ["For people who bought time, that drop was much smaller. Like a shield.", 0.35, 1, "warm"],
+ ["So... still think your neighbor's lazy?", 0.45, 1, "curious"],
+ ["But a survey can't prove cause. So they ran an experiment.", 0.5, 1, "firm"],
+
+ ["Sixty working adults in Vancouver. Two weekends in a row. Forty dollars each weekend.", 1.1, 1, "neutral"],
+ ["One weekend, the rule was: buy a thing for yourself.", 0.35, 1, "neutral"],
+ ["The other weekend: buy something that saves you time.", 0.3, 1, "curious"],
+ ["At five p.m., the phone rang. How are you feeling?", 0.4, 1, "curious"],
+ ["The time weekend won. A better mood, and less time stress.", 0.45, 1, "excited"],
+ ["And the mood boost ran through that drop in time stress.", 0.35, 1, "firm"],
+ ["So it works. But almost nobody thinks of it. Not even the experts.", 0.5, 1, "firm"],
+
+ ["Thirty current and future policymakers at Harvard were asked how to spend twenty-one dollars of aid for working women in Nairobi.", 1.1, 1, "neutral"],
+ ["Only six percent thought of buying those women time. Offered three programs, twenty-six of the thirty picked cash.", 0.4, 1, "firm"],
+ ["One thousand and seventy working moms in Nairobi. Free laundry, or cash?", 0.6, 1, "curious"],
+ ["These moms already worked about forty hours a week for pay. And about forty more, unpaid, at home.", 0.35, 1, "neutral"],
+ ["For three weeks, some got free cooking or laundry services. Some got the same value in cash. Some got nothing extra.", 0.35, 1, "neutral"],
+ ["The researchers bet on time.", 0.4, 1, "firm"],
+ ["Then... everyone felt better. All three groups. About the same.", 0.5, 1, "shocked"],
+ ["Free time didn't beat cash. And neither beat getting nothing extra.", 0.4, 1, "firm"],
+ ["So, free laundry, or cash? The honest answer: it didn't matter.", 0.45, 1, "warm"],
+
+ ["Now, honesty time.", 1.1, 1, "warm"],
+ ["A 2022 survey of over fifteen thousand Americans found the link again. Even for people living paycheck to paycheck.", 0.35, 1, "neutral"],
+ ["But it was small. About half the size of the boost linked to giving to charity.", 0.4, 1, "firm"],
+ ["So buying time looks real. But it's a small nudge, not magic.", 0.4, 1, "warm"],
+
+ ["So here's what you can try this week.", 1.1, 1, "warm"],
+ ["One. Pick the chore you dislike most, and price out skipping it. Just once.", 0.45, 1, "curious"],
+ ["Two. Next time money lands in your lap, ask: could this buy me time?", 0.5, 1, "firm"],
+ ["Three. Count the minutes. If forty dollars buys back two hours, notice how that feels.", 0.5, 1, "warm"],
+
+ ["So. Forty dollars. New shoes... or your Saturday back?", 1.1, 1, "curious"],
+ ["Buy time, not things.", 0.6, 1, "whisper"],
+ ["Subscribe, and go buy back one hour this week.", 0.9, 1, "warm"]
+]

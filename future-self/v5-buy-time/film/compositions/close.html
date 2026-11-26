@@ -1,0 +1,54 @@
+<template>
+  <style>
+    @font-face { font-family: "Hand"; src: url("assets/fonts/PatrickHand-Regular.ttf"); }
+    #root { position: absolute; inset: 0; background: #1a2b66; overflow: hidden; }
+    #cl-art { position: absolute; inset: 0; }
+    .rk { stroke: #0d0f22; stroke-linecap: round; stroke-linejoin: round; }
+    .pop { font-family: Hand; font-size: 150px; fill: #ffb35c; stroke: #0d0f22; stroke-width: 14px; paint-order: stroke; stroke-linejoin: round; }
+    .lab { font-family: Hand; font-size: 56px; fill: #f4f1ff; }
+  </style>
+  <div id="root" data-composition-id="close" data-width="1920" data-height="1080">
+    <svg id="cl-art" class="clip" data-start="0" data-duration="30" viewBox="0 0 1920 1080" data-layout-allow-overflow>
+      <defs>
+        <radialGradient id="cl-bg" cx="0.5" cy="0.55" r="0.75"><stop offset="0" stop-color="#2a4a9f"/><stop offset="1" stop-color="#111c4c"/></radialGradient>
+        <linearGradient id="cl-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7ec8ff"/><stop offset="1" stop-color="#ffe3b0"/></linearGradient>
+      </defs>
+      <rect width="1920" height="1080" fill="url(#cl-bg)"/>
+      <!-- right half: a sunny Saturday -->
+      <rect id="cl-day" x="960" y="0" width="960" height="1080" fill="url(#cl-sky)" opacity="0"/>
+      <g id="cl-sun" opacity="0"><circle cx="1720" cy="200" r="90" fill="#ffd23a"/>
+        <g stroke="#ffd23a" stroke-width="14" stroke-linecap="round"><path d="M1720,60 L1720,90 M1720,310 L1720,340 M1580,200 L1610,200 M1830,200 L1860,200 M1620,100 L1640,120 M1800,280 L1820,300 M1820,100 L1800,120 M1640,280 L1620,300"/></g></g>
+      <path d="M960,80 L960,1000" stroke="#c9d3ef" stroke-width="6" stroke-dasharray="18 18" opacity="0.6"/>
+      <!-- left: the shoes -->
+      <g id="cl-left">
+        <text class="lab" x="480" y="200" text-anchor="middle" style="font-size:80px">$40 of things</text>
+        <g transform="translate(480,600) scale(2.2)"><path class="rk" d="M-90,30 L-90,-30 L-30,-30 L0,0 L70,10 C100,15 100,40 90,40 L-90,40 Z" fill="#ff5f6d" stroke-width="6"/><path d="M-70,42 L92,42" stroke="#f7f3ea" stroke-width="6"/></g>
+      </g>
+      <!-- right: the Saturday back, kid in a hammock -->
+      <g id="cl-right">
+        <text class="lab" x="1440" y="200" text-anchor="middle" style="font-size:80px;fill:#0d0f22" opacity="0" id="cl-rlab">your Saturday</text>
+        <text class="lab" x="1440" y="200" text-anchor="middle" style="font-size:80px" id="cl-rlab0">your Saturday</text>
+        <path class="rk" d="M1140,420 L1140,900 M1740,420 L1740,900" stroke-width="16"/>
+        <path class="rk" d="M1140,520 C1300,760 1580,760 1740,520" fill="#ff8a2a" stroke-width="12"/>
+        <g transform="translate(1440,600) scale(0.36)"><g id="cl-kid"><g data-rig="kid" data-p="ck" data-o='{"mouth":"smile","brows":"up","happy":true}'></g></g></g>
+      </g>
+    </svg>
+  </div>
+  <script>
+    Rig.fill();
+    const tl = gsap.timeline({ paused: true }), A = s => Rig.at(s, "close");
+    Rig.run(tl, "close");
+    tl.to("#cl-kid", { rotation: 4, svgOrigin: "0 0", duration: 1.2, yoyo: true, repeat: 5, ease: "sine.inOut" }, 0);
+    // "new shoes..." the left glows; "...or your Saturday back?" the day breaks on the right
+    tl.fromTo("#cl-left", { scale: 1, transformOrigin: "480px 600px" }, { scale: 1.06, transformOrigin: "480px 600px", duration: 0.4, yoyo: true, repeat: 1 }, A("45,0.45"));
+    tl.to("#cl-day", { opacity: 1, duration: 0.8 }, A("45,0.7"));
+    tl.to("#cl-sun", { opacity: 1, duration: 0.8 }, A("45,0.7"));
+    tl.to("#cl-rlab", { opacity: 1, duration: 0.4 }, A("45,0.7"));
+    tl.to("#cl-rlab0", { opacity: 0, duration: 0.4 }, A("45,0.7"));
+    tl.to("#cl-sun", { rotation: 30, svgOrigin: "1720 200", duration: 4, ease: "none" }, A("45,0.7"));
+    // 46: the things side fades
+    tl.to("#cl-left", { opacity: 0.25, duration: 0.6 }, A("46,0.1"));
+    Rig.mouth(tl, "ck", "smile", "grin", A("46,0.2"));
+    window.__timelines["close"] = tl;
+  </script>
+</template>

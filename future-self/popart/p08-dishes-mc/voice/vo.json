@@ -1,0 +1,62 @@
+[
+ {
+  "text": "More good dishes. Lower price.",
+  "mood": "excited",
+  "start": 0.1,
+  "end": 1.829
+ },
+ {
+  "text": "A clearance sale. Dinner sets usually run thirty to sixty dollars.",
+  "mood": "neutral",
+  "start": 2.229,
+  "end": 5.941
+ },
+ {
+  "text": "Some students saw twenty-four pieces. All perfect.",
+  "mood": "curious",
+  "start": 6.241,
+  "end": 9.182
+ },
+ {
+  "text": "Others saw forty. The same twenty-four, plus cups and saucers. But nine were broken.",
+  "mood": "curious",
+  "start": 9.482,
+  "end": 14.383
+ },
+ {
+  "text": "What would you pay?",
+  "mood": "curious",
+  "start": 14.683,
+  "end": 15.506
+ },
+ {
+  "text": "The perfect set? About thirty-three dollars.",
+  "mood": "neutral",
+  "start": 15.856,
+  "end": 18.212
+ },
+ {
+  "text": "The bigger set, thirty-one good pieces? About twenty-three.",
+  "mood": "shocked",
+  "start": 18.612,
+  "end": 21.701
+ },
+ {
+  "text": "But side by side, the bigger set wins.",
+  "mood": "firm",
+  "start": 22.151,
+  "end": 24.382
+ },
+ {
+  "text": "Judged alone, your eye counts what's broken, not what's good.",
+  "mood": "warm",
+  "start": 24.732,
+  "end": 28.117
+ },
+ {
+  "text": "More good dishes. Lower price. Now you know why.",
+  "mood": "whisper",
+  "start": 28.517,
+  "end": 32.394
+ }
+]

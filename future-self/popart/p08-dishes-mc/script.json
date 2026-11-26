@@ -1,0 +1,12 @@
+[
+ ["More good dishes. Lower price.", 0.1, 1.05, "excited"],
+ ["A clearance sale. Dinner sets usually run thirty to sixty dollars.", 0.4, 1.06, "neutral"],
+ ["Some students saw twenty-four pieces. All perfect.", 0.3, 1.06, "curious"],
+ ["Others saw forty. The same twenty-four, plus cups and saucers. But nine were broken.", 0.3, 1.06, "curious"],
+ ["What would you pay?", 0.3, 1.06, "curious"],
+ ["The perfect set? About thirty-three dollars.", 0.35, 1.06, "neutral"],
+ ["The bigger set, thirty-one good pieces? About twenty-three.", 0.4, 1.06, "shocked"],
+ ["But side by side, the bigger set wins.", 0.45, 1.06, "firm"],
+ ["Judged alone, your eye counts what's broken, not what's good.", 0.35, 1.06, "warm"],
+ ["More good dishes. Lower price. Now you know why.", 0.4, 1.05, "whisper"]
+]

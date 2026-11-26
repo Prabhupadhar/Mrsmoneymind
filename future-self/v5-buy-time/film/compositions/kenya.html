@@ -1,0 +1,100 @@
+<template>
+  <style>
+    @font-face { font-family: "Hand"; src: url("assets/fonts/PatrickHand-Regular.ttf"); }
+    #root { position: absolute; inset: 0; background: #1a2b66; overflow: hidden; }
+    #ky-art { position: absolute; inset: 0; }
+    .rk { stroke: #0d0f22; stroke-linecap: round; stroke-linejoin: round; }
+    .pop { font-family: Hand; font-size: 150px; fill: #ffb35c; stroke: #0d0f22; stroke-width: 14px; paint-order: stroke; stroke-linejoin: round; }
+    .lab { font-family: Hand; font-size: 56px; fill: #f4f1ff; }
+  </style>
+  <div id="root" data-composition-id="kenya" data-width="1920" data-height="1080">
+    <svg id="ky-art" class="clip" data-start="0" data-duration="40" viewBox="0 0 1920 1080" data-layout-allow-overflow>
+      <defs>
+        <radialGradient id="ky-bg" cx="0.5" cy="0.55" r="0.75"><stop offset="0" stop-color="#2a4a9f"/><stop offset="1" stop-color="#111c4c"/></radialGradient>
+      </defs>
+      <rect width="1920" height="1080" fill="url(#ky-bg)"/>
+      <g fill="#fff" opacity="0.06"><circle cx="300" cy="160" r="4"/><circle cx="1500" cy="960" r="5"/><circle cx="1760" cy="140" r="4"/></g>
+
+      <!-- 30: the dilemma: laundry or cash -->
+      <g id="ky-q" data-out="31,0.02">
+        <text class="pop" x="960" y="230" text-anchor="middle" style="font-size:200px" data-in="30,0.05,pop">1,070</text>
+        <g transform="translate(960,720) scale(0.5)"><g id="ky-mom"><g data-rig="kid" data-p="km" data-o='{"mouth":"smile","brows":"up","look":[-60,0],"shirt":"#c2477a"}'></g></g></g>
+        <g transform="translate(480,620)"><g data-in="30,0.55,left">
+          <path class="rk" d="M-140,-70 C-100,-170 100,-170 140,-70" fill="#ff8fb1" stroke-width="10"/>
+          <path class="rk" d="M-160,-70 L160,-70 L130,150 L-130,150 Z" fill="#9fe3ff" stroke-width="10"/>
+          <path d="M-100,-20 L100,-20 M-90,40 L90,40 M-80,100 L80,100" stroke="#5aa9d6" stroke-width="10" stroke-linecap="round"/></g></g>
+        <text class="pop" x="960" y="460" text-anchor="middle" style="font-size:120px" data-in="30,0.78,pop">or</text>
+        <g transform="translate(1440,620)"><g data-in="30,0.85,right">
+          <rect class="rk" x="-170" y="-40" width="340" height="150" rx="12" fill="#5fae6b" stroke-width="10"/>
+          <rect class="rk" x="-160" y="-80" width="340" height="150" rx="12" fill="#7fd18b" stroke-width="10"/>
+          <circle cx="10" cy="-5" r="40" fill="none" stroke="#1f5a33" stroke-width="8"/></g></g>
+      </g>
+      <!-- 31: ~40 h paid + ~40 h unpaid a week -->
+      <g id="ky-hours" data-in="31,0.0,fade" data-out="32,0.02">
+        <g transform="translate(400,760) scale(0.5)"><g id="ky-mom2"><g data-rig="kid" data-p="km2" data-o='{"mouth":"worry","brows":"worry","sweat":true,"look":[60,-20],"shirt":"#c2477a"}'></g></g></g>
+        <path d="M820,860 L1700,860" stroke="#c9d3ef" stroke-width="8" stroke-linecap="round"/>
+        <rect class="rk" x="900" y="460" width="260" height="400" rx="10" fill="#8f7dff" stroke-width="10" data-in="31,0.15,grow"/>
+        <rect class="rk" x="1360" y="452" width="260" height="408" rx="10" fill="#ff8a2a" stroke-width="10" data-in="31,0.65,grow"/>
+        <text class="pop" x="1030" y="420" text-anchor="middle" style="font-size:110px" data-in="31,0.25,pop">~40 h</text>
+        <text class="pop" x="1490" y="410" text-anchor="middle" style="font-size:110px" data-in="31,0.75,pop">~40 h</text>
+        <text class="lab" x="1030" y="930" text-anchor="middle" style="font-size:60px">paid work</text>
+        <text class="lab" x="1490" y="930" text-anchor="middle" style="font-size:60px">unpaid, at home</text>
+        <text class="lab" x="1260" y="200" text-anchor="middle" style="font-size:64px">every week</text>
+      </g>
+      <!-- 32-36: three groups -->
+      <g id="ky-groups" data-in="32,0.0,fade">
+        <path d="M640,140 L640,980 M1280,140 L1280,980" stroke="#c9d3ef" stroke-width="6" stroke-dasharray="18 18" opacity="0.5"/>
+        <text class="lab" x="960" y="90" text-anchor="middle" style="font-size:60px" data-in="32,0.05,fade">3 weeks</text>
+        <!-- group 1: time-saving services -->
+        <g data-in="32,0.1,up">
+          <g transform="translate(250,330) scale(0.7)"><path class="rk" d="M-140,-70 C-100,-170 100,-170 140,-70" fill="#ff8fb1" stroke-width="10"/><path class="rk" d="M-160,-70 L160,-70 L130,150 L-130,150 Z" fill="#9fe3ff" stroke-width="10"/></g>
+          <g transform="translate(420,350) scale(0.8)"><path class="rk" d="M-100,-40 L100,-40 L86,80 L-86,80 Z" fill="#7a86b8" stroke-width="10"/><path class="rk" d="M-124,-40 L124,-40" stroke-width="14"/><path d="M-40,-80 C-60,-110 -20,-130 -40,-160 M20,-80 C0,-110 40,-130 20,-160" fill="none" stroke="#f4f1ff" stroke-width="8" stroke-linecap="round"/></g>
+          <text class="lab" x="320" y="520" text-anchor="middle">free services</text>
+        </g>
+        <!-- group 2: cash -->
+        <g data-in="32,0.45,up">
+          <g transform="translate(960,340) scale(0.8)"><rect class="rk" x="-170" y="-40" width="340" height="150" rx="12" fill="#5fae6b" stroke-width="10"/><rect class="rk" x="-160" y="-80" width="340" height="150" rx="12" fill="#7fd18b" stroke-width="10"/><circle cx="10" cy="-5" r="40" fill="none" stroke="#1f5a33" stroke-width="8"/></g>
+          <text class="lab" x="960" y="520" text-anchor="middle">same value, cash</text>
+        </g>
+        <!-- group 3: nothing extra -->
+        <g data-in="32,0.8,up">
+          <g transform="translate(1600,340)"><rect class="rk" x="-150" y="-100" width="300" height="190" rx="10" fill="#e9dcc6" stroke-width="10"/><path class="rk" d="M-150,-100 L0,10 L150,-100" fill="none" stroke-width="10"/></g>
+          <text class="lab" x="1600" y="520" text-anchor="middle">nothing extra</text>
+        </g>
+        <!-- 33: the bet -->
+        <g transform="translate(110,190)"><g id="ky-chip" data-in="33,0.2,pop">
+          <circle class="rk" r="62" fill="#ff8a2a" stroke-width="10"/><circle r="40" fill="none" stroke="#fff" stroke-width="8" stroke-dasharray="14 12"/>
+          <text y="16" text-anchor="middle" style="font-family:Hand;font-size:44px;fill:#fff">bet</text></g></g>
+        <!-- 34: everyone better, about the same -->
+        <g transform="translate(0,0)">
+          <path d="M140,900 L500,900 M780,900 L1140,900 M1420,900 L1780,900" stroke="#c9d3ef" stroke-width="6" stroke-linecap="round"/>
+          <rect class="rk ky-bar" x="240" y="640" width="160" height="260" rx="10" fill="#7cf0a8" stroke-width="9" data-in="34,0.3,grow"/>
+          <rect class="rk ky-bar" x="880" y="645" width="160" height="255" rx="10" fill="#7cf0a8" stroke-width="9" data-in="34,0.45,grow"/>
+          <rect class="rk ky-bar" x="1520" y="642" width="160" height="258" rx="10" fill="#7cf0a8" stroke-width="9" data-in="34,0.6,grow"/>
+          <g data-in="34,0.3,fade"><path d="M320,620 L320,570 M296,594 L320,566 L344,594" fill="none" stroke="#7cf0a8" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/></g>
+          <g data-in="34,0.45,fade"><path d="M960,620 L960,570 M936,594 L960,566 L984,594" fill="none" stroke="#7cf0a8" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/></g>
+          <g data-in="34,0.6,fade"><path d="M1600,620 L1600,570 M1576,594 L1600,566 L1624,594" fill="none" stroke="#7cf0a8" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/></g>
+          <text class="pop" x="640" y="800" text-anchor="middle" style="font-size:130px" data-in="34,0.8,pop">=</text>
+          <text class="pop" x="1280" y="800" text-anchor="middle" style="font-size:130px" data-in="34,0.85,pop">=</text>
+        </g>
+        <text class="pop" x="960" y="1040" text-anchor="middle" style="font-size:110px" data-in="36,0.6,pop">it didn't matter</text>
+      </g>
+    </svg>
+  </div>
+  <script>
+    Rig.fill();
+    const tl = gsap.timeline({ paused: true }), A = s => Rig.at(s, "kenya");
+    Rig.run(tl, "kenya");
+    tl.fromTo("#ky-mom", { y: 60 }, { y: 0, duration: 0.5, ease: "expo.out" }, 0);
+    Rig.blinks(tl, "km", 0, A("31,0"));
+    Rig.look(tl, "km", -60, 0, A("30,0.5"));
+    Rig.look(tl, "km", 60, 0, A("30,0.85"));
+    Rig.blinks(tl, "km2", A("31,0"), A("32,0"), 0.4);
+    tl.to("#ky-mom2", { x: 5, duration: 0.05, yoyo: true, repeat: 15 }, A("31,0.7"));
+    tl.to("#ky-chip", { rotation: 20, svgOrigin: "0 0", duration: 0.3, yoyo: true, repeat: 3, ease: "sine.inOut" }, A("33,0.5"));
+    // 35: the bet chip falls off
+    tl.to("#ky-chip", { y: 1100, rotation: 200, duration: 0.9, ease: "power2.in" }, A("35,0.25"));
+    tl.to(".ky-bar", { y: -8, duration: 0.3, yoyo: true, repeat: 5, ease: "sine.inOut" }, A("35,0.6"));
+    window.__timelines["kenya"] = tl;
+  </script>
+</template>

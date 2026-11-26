@@ -1,0 +1,59 @@
+<template>
+  <style>
+    @font-face { font-family: "Hand"; src: url("assets/fonts/PatrickHand-Regular.ttf"); }
+    #root { position: absolute; inset: 0; background: #1a2b66; overflow: hidden; }
+    #as-art { position: absolute; inset: 0; }
+    .rk { stroke: #0d0f22; stroke-linecap: round; stroke-linejoin: round; }
+    .pop { font-family: Hand; font-size: 150px; fill: #ffb35c; stroke: #0d0f22; stroke-width: 14px; paint-order: stroke; stroke-linejoin: round; }
+    .lab { font-family: Hand; font-size: 64px; fill: #f4f1ff; }
+  </style>
+  <div id="root" data-composition-id="v5asurvey" data-width="1080" data-height="1920">
+    <svg id="as-art" class="clip" data-start="0" data-duration="40" viewBox="0 0 1080 1920" data-layout-allow-overflow>
+      <defs>
+        <radialGradient id="as-bg" cx="0.5" cy="0.5" r="0.8"><stop offset="0" stop-color="#2a4a9f"/><stop offset="1" stop-color="#111c4c"/></radialGradient>
+        <g id="as-pin"><path class="rk" stroke="#0d0f22" d="M0,60 C-50,0 -60,-20 -60,-50 C-60,-90 -30,-115 0,-115 C30,-115 60,-90 60,-50 C60,-20 50,0 0,60 Z" fill="#ff8a2a" stroke-width="9"/><circle cy="-52" r="20" fill="#f7f3ea"/></g>
+      </defs>
+      <rect width="1080" height="1920" fill="url(#as-bg)"/>
+
+      <!-- 12: 6,271 people, four countries -->
+      <g id="as-map" data-out="13,0.02">
+        <text class="pop" x="540" y="620" text-anchor="middle" style="font-size:200px" data-in="12,-0.04,pop">6,271</text>
+        <g transform="translate(300,860)"><g data-in="12,0.35,pop"><use href="#as-pin"/><text class="lab" y="140" text-anchor="middle">US</text></g></g>
+        <g transform="translate(780,860)"><g data-in="12,0.45,pop"><use href="#as-pin"/><text class="lab" y="140" text-anchor="middle">Canada</text></g></g>
+        <g transform="translate(300,1180)"><g data-in="12,0.58,pop"><use href="#as-pin"/><text class="lab" y="140" text-anchor="middle">Denmark</text></g></g>
+        <g transform="translate(780,1180)"><g data-in="12,0.72,pop"><use href="#as-pin"/><text class="lab" y="140" text-anchor="middle">Netherlands</text></g></g>
+      </g>
+      <!-- 13: the question -->
+      <g id="as-q" data-in="13,0.0,fade" data-out="14,0.02">
+        <g transform="translate(540,930)"><g data-in="13,0.05,up">
+          <rect class="rk" x="-330" y="-330" width="660" height="660" rx="24" fill="#f7f3ea" stroke-width="12"/>
+          <g transform="translate(-150,-130)"><path class="rk" d="M0,-110 L0,40" stroke-width="12"/><path class="rk" d="M-50,40 L50,40 L70,120 L-70,120 Z" fill="#ffd27a" stroke-width="8"/></g>
+          <g transform="translate(130,-90)"><path class="rk" d="M-70,-40 C-50,-90 50,-90 70,-40" fill="#ff8fb1" stroke-width="8"/><path class="rk" d="M-80,-40 L80,-40 L65,70 L-65,70 Z" fill="#9fe3ff" stroke-width="8"/></g>
+          <text x="0" y="-250" text-anchor="middle" style="font-family:Hand;font-size:60px;fill:#7a809c">every month:</text>
+          <rect class="rk" x="-230" y="130" width="80" height="80" rx="10" fill="#fff" stroke-width="8"/>
+          <text x="-130" y="190" style="font-family:Hand;font-size:64px;fill:#0d0f22">yes</text>
+          <rect class="rk" x="50" y="130" width="80" height="80" rx="10" fill="#fff" stroke-width="8"/>
+          <text x="150" y="190" style="font-family:Hand;font-size:64px;fill:#0d0f22">no</text>
+          <path class="rk" d="M-222,170 L-196,200 L-140,120" fill="none" style="stroke:#2f7c72" stroke-width="16" data-in="13,0.85,pop"/>
+        </g></g>
+      </g>
+      <!-- 14: more satisfied -->
+      <g id="as-bars" data-in="14,0.0,fade">
+        <text class="lab" x="540" y="560" text-anchor="middle" style="font-size:70px">life satisfaction</text>
+        <path d="M140,1300 L940,1300" stroke="#c9d3ef" stroke-width="8" stroke-linecap="round"/>
+        <rect class="rk" x="220" y="900" width="240" height="400" rx="10" fill="#7a86b8" stroke-width="10" data-in="14,0.1,grow"/>
+        <rect class="rk" x="620" y="760" width="240" height="540" rx="10" fill="#7cf0a8" stroke-width="10" data-in="14,0.35,grow"/>
+        <text class="lab" x="340" y="1380" text-anchor="middle">didn't</text>
+        <text class="lab" x="740" y="1380" text-anchor="middle">paid for help</text>
+        <g transform="translate(740,670)"><g data-in="14,0.6,pop"><circle class="rk" r="62" fill="#ffd27a" stroke-width="8"/><circle cx="-20" cy="-12" r="8" fill="#0d0f22"/><circle cx="20" cy="-12" r="8" fill="#0d0f22"/><path class="rk" d="M-30,14 C-12,40 12,40 30,14" fill="none" stroke-width="8"/></g></g>
+      </g>
+    </svg>
+  </div>
+  <script>
+    Rig.fill();
+    const tl = gsap.timeline({ paused: true }), A = s => Rig.at(s, "v5asurvey");
+    Rig.run(tl, "v5asurvey");
+    tl.to("#as-map", { y: -10, duration: 0.6, yoyo: true, repeat: 5, ease: "sine.inOut" }, 0.5);
+    window.__timelines["v5asurvey"] = tl;
+  </script>
+</template>

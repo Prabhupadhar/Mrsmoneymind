@@ -1,0 +1,98 @@
+<template>
+  <style>
+    @font-face { font-family: "Hand"; src: url("assets/fonts/PatrickHand-Regular.ttf"); }
+    #root { position: absolute; inset: 0; background: #1a2b66; overflow: hidden; }
+    #wk-art { position: absolute; inset: 0; }
+    .rk { stroke: #0d0f22; stroke-linecap: round; stroke-linejoin: round; }
+    .pop { font-family: Hand; font-size: 150px; fill: #ffb35c; stroke: #0d0f22; stroke-width: 14px; paint-order: stroke; stroke-linejoin: round; }
+    .lab { font-family: Hand; font-size: 56px; fill: #f4f1ff; }
+  </style>
+  <div id="root" data-composition-id="weekends" data-width="1920" data-height="1080">
+    <svg id="wk-art" class="clip" data-start="0" data-duration="40" viewBox="0 0 1920 1080" data-layout-allow-overflow>
+      <defs>
+        <radialGradient id="wk-bg" cx="0.5" cy="0.55" r="0.75"><stop offset="0" stop-color="#2a4a9f"/><stop offset="1" stop-color="#111c4c"/></radialGradient>
+        <g id="wk-bill"><rect class="rk" stroke="#0d0f22" x="-110" y="-52" width="220" height="104" rx="10" fill="#7fd18b" stroke-width="8"/><text y="24" text-anchor="middle" style="font-family:Hand;font-size:66px;fill:#1f5a33">$40</text></g>
+        <g id="wk-cal"><rect class="rk" stroke="#0d0f22" x="-250" y="-250" width="500" height="500" rx="22" fill="#f7f3ea" stroke-width="12"/><rect class="rk" stroke="#0d0f22" x="-250" y="-250" width="500" height="100" rx="22" fill="#ff5f6d" stroke-width="12"/><circle cx="-130" cy="-250" r="14" fill="#0d0f22"/><circle cx="130" cy="-250" r="14" fill="#0d0f22"/></g>
+      </defs>
+      <rect width="1920" height="1080" fill="url(#wk-bg)"/>
+      <g fill="#fff" opacity="0.06"><circle cx="300" cy="160" r="4"/><circle cx="1500" cy="960" r="5"/><circle cx="1760" cy="140" r="4"/></g>
+
+      <!-- 21-23: two weekend calendars -->
+      <g id="wk-cals" data-out="24,0.02">
+        <text class="pop" x="960" y="200" text-anchor="middle" style="font-size:170px" data-in="21,0.05,pop">60</text>
+        <g transform="translate(480,600)"><g data-in="21,0.35,up"><use href="#wk-cal"/><text x="0" y="-182" text-anchor="middle" style="font-family:Hand;font-size:58px;fill:#fff">weekend 1</text>
+          <g transform="translate(0,-40)"><use href="#wk-bill"/></g>
+          <g transform="translate(0,130)"><g data-in="22,0.6,pop"><path class="rk" d="M-80,-50 L80,-50 L96,90 L-96,90 Z" fill="#8f7dff" stroke-width="9"/><path class="rk" d="M-36,-50 C-36,-110 36,-110 36,-50" fill="none" stroke-width="9"/></g></g>
+        </g></g>
+        <g transform="translate(1440,600)"><g data-in="21,0.5,up"><use href="#wk-cal"/><text x="0" y="-182" text-anchor="middle" style="font-family:Hand;font-size:58px;fill:#fff">weekend 2</text>
+          <g transform="translate(0,-40)"><use href="#wk-bill"/></g>
+          <g transform="translate(0,140)"><g data-in="23,0.55,pop"><circle class="rk" r="86" fill="#cfe6ff" stroke-width="9"/><g id="wk-hand"><path class="rk" d="M0,0 L0,-56" stroke-width="10"/></g><path class="rk" d="M0,0 L36,18" stroke-width="10"/>
+            <circle class="rk" cx="80" cy="-70" r="36" fill="#7cf0a8" stroke-width="7"/><path d="M80,-90 L80,-50 M60,-70 L100,-70" stroke="#0d0f22" stroke-width="9" stroke-linecap="round"/></g></g>
+        </g></g>
+        <text class="lab" x="480" y="950" text-anchor="middle" style="font-size:64px" data-in="22,0.4,up">a thing</text>
+        <text class="lab" x="1440" y="950" text-anchor="middle" style="font-size:64px" data-in="23,0.4,up">saves time</text>
+        <g transform="translate(960,640) scale(0.36)"><g id="wk-kid"><g data-rig="kid" data-p="wk" data-o='{"mouth":"smile","brows":"up","look":[-60,0]}'></g></g></g>
+      </g>
+      <!-- 24: 5 p.m. phone call -->
+      <g id="wk-call" data-in="24,0.0,fade" data-out="25,0.02">
+        <g transform="translate(620,560)"><g id="wk-phone">
+          <rect class="rk" x="-150" y="-280" width="300" height="560" rx="40" fill="#26346e" stroke-width="12"/>
+          <rect x="-120" y="-230" width="240" height="440" rx="16" fill="#9fe3ff"/>
+          <circle class="rk" cx="0" cy="40" r="70" fill="#7cf0a8" stroke-width="9"/>
+          <path d="M-30,20 C-30,60 10,80 30,70 L30,50 L10,44 L4,56 C-8,50 -16,40 -14,30 L-2,24 L-6,4 Z" fill="#0d0f22"/>
+        </g></g>
+        <g fill="none" stroke="#ffd27a" stroke-width="12" stroke-linecap="round" id="wk-ring"><path d="M820,420 C860,470 860,550 820,600"/><path d="M880,380 C940,460 940,560 880,640"/></g>
+        <g transform="translate(1360,540)">
+          <circle class="rk" r="210" fill="#f7f3ea" stroke-width="14"/>
+          <path class="rk" d="M0,0 L0,-150" stroke-width="16"/><path class="rk" d="M0,0 L70,121" stroke-width="18"/><circle r="16" fill="#0d0f22"/>
+        </g>
+        <text class="pop" x="1360" y="930" text-anchor="middle" style="font-size:140px" data-in="24,0.2,pop">5 p.m.</text>
+      </g>
+      <!-- 25-26: results -->
+      <g id="wk-res" data-in="25,0.08,fade" data-out="27,0.02">
+        <text class="lab" x="520" y="170" text-anchor="middle" style="font-size:66px">good mood</text>
+        <path d="M260,860 L780,860" stroke="#c9d3ef" stroke-width="8" stroke-linecap="round"/>
+        <rect class="rk" x="300" y="415" width="180" height="445" rx="10" fill="#8f7dff" stroke-width="10" data-in="25,0.1,grow"/>
+        <rect class="rk" x="560" y="380" width="180" height="480" rx="10" fill="#7cf0a8" stroke-width="10" data-in="25,0.2,grow"/>
+        <text class="lab" x="390" y="390" text-anchor="middle" data-in="25,0.15,fade">3.71</text>
+        <text class="lab" x="650" y="355" text-anchor="middle" data-in="25,0.25,fade">4.00</text>
+        <text class="lab" x="1400" y="170" text-anchor="middle" style="font-size:66px">time stress</text>
+        <path d="M1140,860 L1660,860" stroke="#c9d3ef" stroke-width="8" stroke-linecap="round"/>
+        <rect class="rk" x="1180" y="354" width="180" height="506" rx="10" fill="#8f7dff" stroke-width="10" data-in="25,0.5,grow"/>
+        <rect class="rk" x="1440" y="441" width="180" height="419" rx="10" fill="#7cf0a8" stroke-width="10" data-in="25,0.6,grow"/>
+        <text class="lab" x="1270" y="329" text-anchor="middle" data-in="25,0.55,fade">4.22</text>
+        <text class="lab" x="1530" y="416" text-anchor="middle" data-in="25,0.65,fade">3.49</text>
+        <g class="lab" style="font-size:46px"><text x="390" y="920" text-anchor="middle">thing</text><text x="650" y="920" text-anchor="middle">time</text><text x="1270" y="920" text-anchor="middle">thing</text><text x="1530" y="920" text-anchor="middle">time</text></g>
+        <text class="pop" x="960" y="560" text-anchor="middle" style="font-size:150px" data-in="25,0.3,pop">won</text>
+        <!-- 26: arrow: less stress drives the mood -->
+        <path d="M1530,960 C1400,1060 760,1060 650,960" fill="none" stroke="#ffb35c" stroke-width="16" stroke-linecap="round" data-len="1100" data-in="26,0.2,draw"/>
+        <path d="M640,950 L700,960 L660,1010" fill="none" stroke="#ffb35c" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" data-in="26,0.7,fade"/>
+      </g>
+      <!-- 27: almost nobody thinks of it -->
+      <g id="wk-nobody" data-in="27,0.0,fade">
+        <g transform="translate(960,760) scale(0.5)"><g id="wk-kid2"><g data-rig="kid" data-p="wn" data-o='{"mouth":"flat","brows":"flat","look":[0,-20]}'></g></g></g>
+        <text class="pop" x="960" y="260" text-anchor="middle" style="font-size:150px" data-in="27,0.15,pop">almost nobody</text>
+        <g transform="translate(1520,520)"><g data-in="27,0.7,pop">
+          <path class="rk" d="M-130,-20 L0,-80 L130,-20 L0,40 Z" fill="#26346e" stroke-width="10"/>
+          <path class="rk" d="M-70,10 L-70,80 C-40,110 40,110 70,80 L70,10" fill="#26346e" stroke-width="10"/>
+          <path class="rk" d="M130,-20 L130,70" stroke-width="8"/><circle cx="130" cy="80" r="14" fill="#ffd27a"/></g></g>
+      </g>
+    </svg>
+  </div>
+  <script>
+    Rig.fill();
+    const tl = gsap.timeline({ paused: true }), A = s => Rig.at(s, "weekends");
+    Rig.run(tl, "weekends");
+    Rig.blinks(tl, "wk", 0, 14);
+    tl.to("#wk-kid", { y: -14, duration: 0.5, yoyo: true, repeat: 5, ease: "sine.inOut" }, 1.0);
+    Rig.look(tl, "wk", -60, -30, 1.6); Rig.look(tl, "wk", 60, -30, 2.6); Rig.look(tl, "wk", -60, 0, 3.6);
+    Rig.look(tl, "wk", 60, 0, A("23,0.1"));
+    Rig.mouth(tl, "wk", "smile", "grin", A("23,0.6"));
+    tl.to("#wk-hand", { rotation: 360, svgOrigin: "0 0", duration: 1.6, ease: "none" }, A("23,0.6"));
+    tl.to("#wk-phone", { rotation: 4, svgOrigin: "0 0", duration: 0.06, yoyo: true, repeat: 19 }, A("24,0.05"));
+    tl.fromTo("#wk-ring", { opacity: 0 }, { opacity: 1, duration: 0.2, yoyo: true, repeat: 5 }, A("24,0.05"));
+    Rig.blinks(tl, "wn", A("27,0"), A("27,1") + 2);
+    tl.to("#wk-kid2", { rotation: -5, svgOrigin: "0 300", duration: 0.25, yoyo: true, repeat: 3 }, A("27,0.5"));
+    window.__timelines["weekends"] = tl;
+  </script>
+</template>

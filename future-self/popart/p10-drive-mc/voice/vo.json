@@ -1,0 +1,56 @@
+[
+ {
+  "text": "Same five dollars. Same drive. Different answer.",
+  "mood": "excited",
+  "start": 0.1,
+  "end": 2.921
+ },
+ {
+  "text": "A hundred twenty-five dollar jacket, and a fifteen dollar calculator.",
+  "mood": "neutral",
+  "start": 3.321,
+  "end": 7.024
+ },
+ {
+  "text": "The clerk says: that calculator is ten dollars at our other store, twenty minutes away.",
+  "mood": "curious",
+  "start": 7.324,
+  "end": 12.024
+ },
+ {
+  "text": "Sixty-eight percent of students would drive.",
+  "mood": "warm",
+  "start": 12.374,
+  "end": 14.533
+ },
+ {
+  "text": "Now flip it. The calculator costs a hundred twenty-five. Across town, a hundred twenty.",
+  "mood": "curious",
+  "start": 14.933,
+  "end": 19.957
+ },
+ {
+  "text": "Same five dollars. Same drive.",
+  "mood": "firm",
+  "start": 20.258,
+  "end": 22.427
+ },
+ {
+  "text": "Only twenty-nine percent would go.",
+  "mood": "shocked",
+  "start": 22.777,
+  "end": 24.441
+ },
+ {
+  "text": "We weigh five dollars against the price tag, not against our time.",
+  "mood": "warm",
+  "start": 24.841,
+  "end": 28.607
+ },
+ {
+  "text": "Five dollars is five dollars. Would you drive?",
+  "mood": "whisper",
+  "start": 29.007,
+  "end": 32.837
+ }
+]

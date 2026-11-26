@@ -1,0 +1,74 @@
+<template>
+  <style>
+    @font-face { font-family: "Hand"; src: url("assets/fonts/PatrickHand-Regular.ttf"); }
+    #root { position: absolute; inset: 0; background: #1a2b66; overflow: hidden; }
+    #fa-art { position: absolute; inset: 0; }
+    .rk { stroke: #0d0f22; stroke-linecap: round; stroke-linejoin: round; }
+    .pop { font-family: Hand; font-size: 150px; fill: #ffb35c; stroke: #0d0f22; stroke-width: 14px; paint-order: stroke; stroke-linejoin: round; }
+    .lab { font-family: Hand; font-size: 56px; fill: #f4f1ff; }
+  </style>
+  <div id="root" data-composition-id="fair" data-width="1920" data-height="1080">
+    <svg id="fa-art" class="clip" data-start="0" data-duration="30" viewBox="0 0 1920 1080" data-layout-allow-overflow>
+      <defs>
+        <radialGradient id="fa-bg" cx="0.5" cy="0.55" r="0.75"><stop offset="0" stop-color="#2a4a9f"/><stop offset="1" stop-color="#111c4c"/></radialGradient>
+      </defs>
+      <rect width="1920" height="1080" fill="url(#fa-bg)"/>
+      <g fill="#fff" opacity="0.06"><circle cx="300" cy="160" r="4"/><circle cx="1500" cy="960" r="5"/><circle cx="1760" cy="140" r="4"/></g>
+
+      <!-- 38: 15,545 Americans, link found again, even paycheck to paycheck -->
+      <g id="fa-crowd" data-out="39,0.02">
+        <g id="fa-grid" transform="translate(180,420)"></g>
+        <text class="pop" x="560" y="270" text-anchor="middle" style="font-size:190px" data-in="38,0.1,pop">15,545</text>
+        <g transform="translate(1480,520)"><g data-in="38,0.6,pop">
+          <rect class="rk" x="-260" y="-140" width="520" height="280" rx="16" fill="#f7f3ea" stroke-width="12"/>
+          <rect x="-260" y="-140" width="520" height="60" rx="16" fill="#7fd18b"/>
+          <text x="0" y="30" text-anchor="middle" style="font-family:Hand;font-size:72px;fill:#1f5a33">PAYCHECK</text>
+          <path d="M-200,90 L200,90" stroke="#c9d3ef" stroke-width="10" stroke-linecap="round"/>
+          <path d="M-280,190 C-140,260 140,260 280,190" fill="none" stroke="#ffb35c" stroke-width="12" stroke-linecap="round"/>
+          <path d="M260,170 L290,196 L250,215" fill="none" stroke="#ffb35c" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/></g></g>
+        <text class="lab" x="1480" y="860" text-anchor="middle" style="font-size:60px" data-in="38,0.75,up">to paycheck</text>
+      </g>
+      <!-- 39: small: half the size of giving -->
+      <g id="fa-bars" data-in="39,0.0,fade" data-out="40,0.02">
+        <path d="M560,860 L1360,860" stroke="#c9d3ef" stroke-width="8" stroke-linecap="round"/>
+        <rect class="rk" x="640" y="440" width="220" height="420" rx="10" fill="#ff8fb1" stroke-width="10" data-in="39,0.5,grow"/>
+        <rect class="rk" x="1060" y="650" width="220" height="210" rx="10" fill="#7cf0a8" stroke-width="10" data-in="39,0.2,grow"/>
+        <text class="lab" x="750" y="940" text-anchor="middle">giving</text>
+        <text class="lab" x="1170" y="940" text-anchor="middle">buying time</text>
+        <text class="pop" x="1170" y="580" text-anchor="middle" style="font-size:130px" data-in="39,0.75,pop">&#189;</text>
+        <text class="pop" x="960" y="240" text-anchor="middle" style="font-size:150px" data-in="39,0.15,pop">small</text>
+      </g>
+      <!-- 40: a small nudge, not magic -->
+      <g id="fa-nudge" data-in="40,0.0,fade">
+        <g transform="translate(1080,760) scale(0.5)"><g id="fa-kid"><g data-rig="kid" data-p="fk" data-o='{"mouth":"smile","brows":"up","look":[-40,0]}'></g></g></g>
+        <g transform="translate(620,700)"><g id="fa-hand">
+          <path class="rk" d="M-300,0 L0,0" stroke-width="40"/><circle class="rk" cx="20" cy="0" r="50" fill="#f4d2b6" stroke-width="10"/></g></g>
+        <text class="pop" x="960" y="250" text-anchor="middle" style="font-size:150px" data-in="40,0.55,pop">small nudge</text>
+        <g transform="translate(1600,420)"><g data-in="40,0.8,pop">
+          <path class="rk" d="M-110,60 L0,-120 L110,60 Z" fill="#8f7dff" stroke-width="10"/><circle cx="-30" cy="-10" r="10" fill="#ffd27a"/><circle cx="30" cy="20" r="8" fill="#ffd27a"/>
+          <path d="M-150,-150 L150,150" stroke="#ff3b4a" stroke-width="20" stroke-linecap="round"/></g></g>
+      </g>
+    </svg>
+  </div>
+  <script>
+    (function () {
+      var g = document.getElementById("fa-grid"), s = "";
+      for (var i = 0; i < 40; i++) {
+        var x = (i % 10) * 82, y = Math.floor(i / 10) * 110;
+        s += '<g transform="translate(' + x + ',' + y + ')"><g class="fa-p"><path d="M-26,52 C-26,26 26,26 26,52 Z" fill="#e3a63a"/><circle r="21" fill="#f4d2b6"/></g></g>';
+      }
+      g.innerHTML = s;
+    })();
+    Rig.fill();
+    const tl = gsap.timeline({ paused: true }), A = s => Rig.at(s, "fair");
+    Rig.run(tl, "fair");
+    tl.fromTo(".fa-p", { scale: 0, transformOrigin: "50% 50%" }, { scale: 1, duration: 0.25, stagger: 0.025, ease: "back.out(2)" }, 0.1);
+    tl.to(".fa-p", { y: -6, duration: 0.3, yoyo: true, repeat: 9, stagger: 0.03, ease: "sine.inOut" }, 1.4);
+    Rig.blinks(tl, "fk", A("40,0"), A("40,1") + 2);
+    tl.fromTo("#fa-hand", { x: -200 }, { x: 190, duration: 0.5, ease: "power2.out" }, A("40,0.3"));
+    tl.to("#fa-kid", { x: 40, duration: 0.3, ease: "power2.out" }, A("40,0.3") + 0.4);
+    Rig.mouth(tl, "fk", "smile", "o", A("40,0.4"));
+    Rig.mouth(tl, "fk", "o", "grin", A("40,0.7"));
+    window.__timelines["fair"] = tl;
+  </script>
+</template>

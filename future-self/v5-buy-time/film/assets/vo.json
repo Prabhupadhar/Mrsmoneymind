@@ -1,0 +1,290 @@
+[
+ {
+  "text": "Okay. Quick question.",
+  "mood": "curious",
+  "start": 0.3,
+  "end": 1.71
+ },
+ {
+  "text": "Someone hands you forty dollars. What do you buy?",
+  "mood": "curious",
+  "start": 2.01,
+  "end": 4.622
+ },
+ {
+  "text": "New shoes? A game? Dinner out?",
+  "mood": "excited",
+  "start": 4.922,
+  "end": 6.789
+ },
+ {
+  "text": "Researchers asked ninety-eight working adults exactly that.",
+  "mood": "neutral",
+  "start": 7.239,
+  "end": 10.626
+ },
+ {
+  "text": "Only two percent said: I'd use it to buy back some time.",
+  "mood": "shocked",
+  "start": 10.976,
+  "end": 14.358
+ },
+ {
+  "text": "And that might be the best happiness deal most of us ignore.",
+  "mood": "warm",
+  "start": 14.808,
+  "end": 18.004
+ },
+ {
+  "text": "Let's talk about buying time.",
+  "mood": "warm",
+  "start": 18.404,
+  "end": 20.071
+ },
+ {
+  "text": "As the world got richer, people started feeling poor in something else. Time.",
+  "mood": "curious",
+  "start": 21.171,
+  "end": 25.406
+ },
+ {
+  "text": "And that time stress is linked to less happiness, more anxiety, and trouble sleeping.",
+  "mood": "sad",
+  "start": 25.806,
+  "end": 31.749
+ },
+ {
+  "text": "Researchers call it a time famine.",
+  "mood": "firm",
+  "start": 32.149,
+  "end": 33.938
+ },
+ {
+  "text": "So they asked: can money buy some of that time back?",
+  "mood": "curious",
+  "start": 34.388,
+  "end": 37.163
+ },
+ {
+  "text": "Your neighbor pays someone to clean. Lazy? The data says... happier.",
+  "mood": "curious",
+  "start": 38.263,
+  "end": 42.216
+ },
+ {
+  "text": "Researchers surveyed over six thousand people in the US, Canada, Denmark and the Netherlands.",
+  "mood": "neutral",
+  "start": 42.616,
+  "end": 48.209
+ },
+ {
+  "text": "One question. In a typical month, do you pay someone to do the daily tasks you dislike?",
+  "mood": "curious",
+  "start": 48.559,
+  "end": 53.595
+ },
+ {
+  "text": "The people who did were more satisfied with their lives.",
+  "mood": "excited",
+  "start": 53.995,
+  "end": 56.788
+ },
+ {
+  "text": "And it wasn't a rich-people thing. The link didn't depend on income.",
+  "mood": "firm",
+  "start": 57.188,
+  "end": 60.967
+ },
+ {
+  "text": "They even asked eight hundred eighteen millionaires. A big share spent nothing on it at all.",
+  "mood": "shocked",
+  "start": 61.417,
+  "end": 66.292
+ },
+ {
+  "text": "Now, when people felt short on time, their life satisfaction dropped.",
+  "mood": "sad",
+  "start": 66.742,
+  "end": 71.572
+ },
+ {
+  "text": "For people who bought time, that drop was much smaller. Like a shield.",
+  "mood": "warm",
+  "start": 71.922,
+  "end": 75.775
+ },
+ {
+  "text": "So... still think your neighbor's lazy?",
+  "mood": "curious",
+  "start": 76.225,
+  "end": 78.101
+ },
+ {
+  "text": "But a survey can't prove cause. So they ran an experiment.",
+  "mood": "firm",
+  "start": 78.601,
+  "end": 82.076
+ },
+ {
+  "text": "Sixty working adults in Vancouver. Two weekends in a row. Forty dollars each weekend.",
+  "mood": "neutral",
+  "start": 83.176,
+  "end": 88.572
+ },
+ {
+  "text": "One weekend, the rule was: buy a thing for yourself.",
+  "mood": "neutral",
+  "start": 88.922,
+  "end": 91.815
+ },
+ {
+  "text": "The other weekend: buy something that saves you time.",
+  "mood": "curious",
+  "start": 92.115,
+  "end": 94.967
+ },
+ {
+  "text": "At five p.m., the phone rang. How are you feeling?",
+  "mood": "curious",
+  "start": 95.367,
+  "end": 98.354
+ },
+ {
+  "text": "The time weekend won. A better mood, and less time stress.",
+  "mood": "excited",
+  "start": 98.804,
+  "end": 102.152
+ },
+ {
+  "text": "And the mood boost ran through that drop in time stress.",
+  "mood": "firm",
+  "start": 102.502,
+  "end": 105.448
+ },
+ {
+  "text": "So it works. But almost nobody thinks of it. Not even the experts.",
+  "mood": "firm",
+  "start": 105.948,
+  "end": 109.881
+ },
+ {
+  "text": "Thirty current and future policymakers at Harvard were asked how to spend twenty-one dollars of aid for working women in Nairobi.",
+  "mood": "neutral",
+  "start": 110.981,
+  "end": 118.226
+ },
+ {
+  "text": "Only six percent thought of buying those women time. Offered three programs, twenty-six of the thirty picked cash.",
+  "mood": "firm",
+  "start": 118.626,
+  "end": 125.599
+ },
+ {
+  "text": "One thousand and seventy working moms in Nairobi. Free laundry, or cash?",
+  "mood": "curious",
+  "start": 126.199,
+  "end": 130.812
+ },
+ {
+  "text": "These moms already worked about forty hours a week for pay. And about forty more, unpaid, at home.",
+  "mood": "neutral",
+  "start": 131.162,
+  "end": 137.195
+ },
+ {
+  "text": "For three weeks, some got free cooking or laundry services. Some got the same value in cash. Some got nothing extra.",
+  "mood": "neutral",
+  "start": 137.545,
+  "end": 144.851
+ },
+ {
+  "text": "The researchers bet on time.",
+  "mood": "firm",
+  "start": 145.251,
+  "end": 146.746
+ },
+ {
+  "text": "Then... everyone felt better. All three groups. About the same.",
+  "mood": "shocked",
+  "start": 147.246,
+  "end": 150.735
+ },
+ {
+  "text": "Free time didn't beat cash. And neither beat getting nothing extra.",
+  "mood": "firm",
+  "start": 151.135,
+  "end": 154.985
+ },
+ {
+  "text": "So, free laundry, or cash? The honest answer: it didn't matter.",
+  "mood": "warm",
+  "start": 155.435,
+  "end": 159.395
+ },
+ {
+  "text": "Now, honesty time.",
+  "mood": "warm",
+  "start": 160.495,
+  "end": 161.891
+ },
+ {
+  "text": "A 2022 survey of over fifteen thousand Americans found the link again. Even for people living paycheck to paycheck.",
+  "mood": "neutral",
+  "start": 162.241,
+  "end": 170.204
+ },
+ {
+  "text": "But it was small. About half the size of the boost linked to giving to charity.",
+  "mood": "firm",
+  "start": 170.604,
+  "end": 175.099
+ },
+ {
+  "text": "So buying time looks real. But it's a small nudge, not magic.",
+  "mood": "warm",
+  "start": 175.499,
+  "end": 179.453
+ },
+ {
+  "text": "So here's what you can try this week.",
+  "mood": "warm",
+  "start": 180.553,
+  "end": 182.499
+ },
+ {
+  "text": "One. Pick the chore you dislike most, and price out skipping it. Just once.",
+  "mood": "curious",
+  "start": 182.949,
+  "end": 187.273
+ },
+ {
+  "text": "Two. Next time money lands in your lap, ask: could this buy me time?",
+  "mood": "firm",
+  "start": 187.773,
+  "end": 191.43
+ },
+ {
+  "text": "Three. Count the minutes. If forty dollars buys back two hours, notice how that feels.",
+  "mood": "warm",
+  "start": 191.93,
+  "end": 197.387
+ },
+ {
+  "text": "So. Forty dollars. New shoes... or your Saturday back?",
+  "mood": "curious",
+  "start": 198.487,
+  "end": 201.899
+ },
+ {
+  "text": "Buy time, not things.",
+  "mood": "whisper",
+  "start": 202.499,
+  "end": 204.274
+ },
+ {
+  "text": "Subscribe, and go buy back one hour this week.",
+  "mood": "warm",
+  "start": 205.174,
+  "end": 207.956
+ }
+]
