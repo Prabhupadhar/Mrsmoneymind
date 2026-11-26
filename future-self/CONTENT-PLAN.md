@@ -30,9 +30,9 @@ finding, but the run must read the paper in full before writing a single line; `
 | P04 | 2026-11-26 | H17 "Give someone a mug. Its price doubles." (cartoon split, `p04-mug-mc`) | Kahneman, Knetsch & Thaler 1990, exp. 6 (read in full) | scheduled 2026-11-26 |
 | P05 | 2026-11-27 | H09 "You lost ten bucks. Still buying the ticket?" (Pop Art grid + jars) | Tversky & Kahneman 1981, problems 8-9 (read in full) | scheduled 2026-11-27 |
 | P06 | 2026-11-30 | H05 "Lose $100? They needed $202." (cartoon, `p06-flip-mc`; hook rewritten: the paper measures choices, not pain) | Tversky & Kahneman 1992 (read in full, MIT Press reprint) + Brown et al. 2024 JEL | scheduled 2026-11-30 |
-| P07 | 2026-12-01 | H04 "Lottery winners aren't happier. They're more satisfied." (Pop Art wall, `p07-lottery`; hook rewritten: happiness n.s., life satisfaction up) | Lindqvist, Östling & Cesarini 2020; Brickman et al. 1978 (both read in full) | P07_STATUS |
+| P07 | 2026-12-01 | H04 "Lottery winners aren't happier. They're more satisfied." (Pop Art wall, `p07-lottery`; hook rewritten: happiness n.s., life satisfaction up) | Lindqvist, Östling & Cesarini 2020; Brickman et al. 1978 (both read in full) | scheduled 2026-12-01 |
 | P08 | 2026-12-02 | H13 "More good dishes. Lower price." (cartoon split, `p08-dishes-mc`; hook rewritten: extras were cups/saucers, not free plates) | Hsee 1998, study 4 (read in full) | scheduled 2026-12-02 |
-| P09 | 2026-12-03 | H12 "The marshmallow test measured more than willpower." (Pop Art wall + chart, `p09-marshmallow`; "money, not willpower" not supported) | Watts, Duncan & Quan 2018 (read in full) | P09_STATUS |
+| P09 | 2026-12-03 | H12 "The marshmallow test measured more than willpower." (Pop Art wall + chart, `p09-marshmallow`; "money, not willpower" not supported) | Watts, Duncan & Quan 2018 (read in full) | scheduled 2026-12-03 |
 | P10 | 2026-12-04 | H14 "Same $5. Same drive. Different answer." (cartoon split, `p10-drive-mc`) | Tversky & Kahneman 1981, problem 10 (read in full) | scheduled 2026-12-04 |
 The hook bank below now feeds the 13:00 slot (H01, H02, H04, H05, H09, H12, H13, H14 and H17 are used). H14 (drive 20 minutes, same 1981 paper: 68% vs 29%) is verified.
 
