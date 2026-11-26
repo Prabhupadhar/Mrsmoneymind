@@ -1,0 +1,103 @@
+<template>
+  <style>
+    @font-face { font-family: "Hand"; src: url("assets/fonts/PatrickHand-Regular.ttf"); }
+    #root { position: absolute; inset: 0; background: #1a2b66; overflow: hidden; }
+    #sv-art { position: absolute; inset: 0; }
+    .rk { stroke: #0d0f22; stroke-linecap: round; stroke-linejoin: round; }
+    .pop { font-family: Hand; font-size: 150px; fill: #ffb35c; stroke: #0d0f22; stroke-width: 14px; paint-order: stroke; stroke-linejoin: round; }
+    .lab { font-family: Hand; font-size: 56px; fill: #f4f1ff; }
+  </style>
+  <div id="root" data-composition-id="survey" data-width="1920" data-height="1080">
+    <svg id="sv-art" class="clip" data-start="0" data-duration="30" viewBox="0 0 1920 1080" data-layout-allow-overflow>
+      <defs>
+        <radialGradient id="sv-bg" cx="0.5" cy="0.55" r="0.75"><stop offset="0" stop-color="#2a4a9f"/><stop offset="1" stop-color="#111c4c"/></radialGradient>
+        <g id="sv-pin"><path class="rk" stroke="#0d0f22" d="M0,60 C-50,0 -60,-20 -60,-50 C-60,-90 -30,-115 0,-115 C30,-115 60,-90 60,-50 C60,-20 50,0 0,60 Z" fill="#ff8a2a" stroke-width="9"/><circle cy="-52" r="20" fill="#f7f3ea"/></g>
+      </defs>
+      <rect width="1920" height="1080" fill="url(#sv-bg)"/>
+      <g fill="#fff" opacity="0.06"><circle cx="300" cy="160" r="4"/><circle cx="1500" cy="960" r="5"/><circle cx="1760" cy="140" r="4"/></g>
+
+      <!-- 12: four countries -->
+      <g id="sv-map" data-out="13,0.02">
+        <path d="M160,700 C500,620 800,760 1100,690 C1400,620 1600,700 1760,660" fill="none" stroke="#c9d3ef" stroke-width="8" stroke-dasharray="20 22" opacity="0.5"/>
+        <g transform="translate(330,640)"><g data-in="12,0.35,pop"><use href="#sv-pin"/><text class="lab" y="150" text-anchor="middle">US</text></g></g>
+        <g transform="translate(740,690)"><g data-in="12,0.45,pop"><use href="#sv-pin"/><text class="lab" y="150" text-anchor="middle">Canada</text></g></g>
+        <g transform="translate(1160,680)"><g data-in="12,0.58,pop"><use href="#sv-pin"/><text class="lab" y="150" text-anchor="middle">Denmark</text></g></g>
+        <g transform="translate(1600,660)"><g data-in="12,0.72,pop"><use href="#sv-pin"/><text class="lab" y="150" text-anchor="middle">Netherlands</text></g></g>
+        <text class="pop" x="960" y="330" text-anchor="middle" style="font-size:210px" data-in="12,0.15,pop">6,271</text>
+      </g>
+      <!-- 13: the question: pay someone for chores you dislike? -->
+      <g id="sv-q" data-in="13,0.0,fade" data-out="14,0.02">
+        <g transform="translate(760,560)"><g data-in="13,0.05,up">
+          <rect class="rk" x="-330" y="-330" width="660" height="660" rx="24" fill="#f7f3ea" stroke-width="12"/>
+          <g transform="translate(-150,-130)"><path class="rk" d="M0,-110 L0,40" stroke-width="12"/><path class="rk" d="M-50,40 L50,40 L70,120 L-70,120 Z" fill="#ffd27a" stroke-width="8"/></g>
+          <g transform="translate(130,-90)"><path class="rk" d="M-70,-40 C-50,-90 50,-90 70,-40" fill="#ff8fb1" stroke-width="8"/><path class="rk" d="M-80,-40 L80,-40 L65,70 L-65,70 Z" fill="#9fe3ff" stroke-width="8"/></g>
+          <text x="0" y="-250" text-anchor="middle" style="font-family:Hand;font-size:60px;fill:#7a809c">every month:</text>
+          <rect class="rk" x="-230" y="130" width="80" height="80" rx="10" fill="#fff" stroke-width="8"/>
+          <text x="-130" y="190" style="font-family:Hand;font-size:64px;fill:#0d0f22">yes</text>
+          <rect class="rk" x="50" y="130" width="80" height="80" rx="10" fill="#fff" stroke-width="8"/>
+          <text x="150" y="190" style="font-family:Hand;font-size:64px;fill:#0d0f22">no</text>
+          <path class="rk" d="M-222,170 L-196,200 L-140,120" fill="none" style="stroke:#2f7c72" stroke-width="16" data-in="13,0.85,pop"/>
+        </g></g>
+        <g transform="translate(1450,640)"><g data-in="13,0.4,pop">
+          <circle class="rk" r="110" fill="#ffd27a" stroke-width="10"/><text y="40" text-anchor="middle" style="font-family:Hand;font-size:130px;fill:#8a5a1c">$</text></g></g>
+        <path d="M1310,640 L1120,640" stroke="#ffb35c" stroke-width="14" stroke-linecap="round" data-in="13,0.5,fade"/>
+      </g>
+      <!-- 14: who did it: more satisfied -->
+      <g id="sv-bars" data-in="14,0.0,fade" data-out="15,0.02">
+        <path d="M560,860 L1360,860" stroke="#c9d3ef" stroke-width="8" stroke-linecap="round"/>
+        <rect class="rk" x="640" y="500" width="220" height="360" rx="10" fill="#7a86b8" stroke-width="10" data-in="14,0.1,grow"/>
+        <rect class="rk" x="1060" y="380" width="220" height="480" rx="10" fill="#7cf0a8" stroke-width="10" data-in="14,0.35,grow"/>
+        <text class="lab" x="750" y="940" text-anchor="middle">didn't</text>
+        <text class="lab" x="1170" y="940" text-anchor="middle">paid for help</text>
+        <g transform="translate(1170,290)"><g data-in="14,0.6,pop"><circle class="rk" r="62" fill="#ffd27a" stroke-width="8"/><circle cx="-20" cy="-12" r="8" fill="#0d0f22"/><circle cx="20" cy="-12" r="8" fill="#0d0f22"/><path class="rk" d="M-30,14 C-12,40 12,40 30,14" fill="none" stroke-width="8"/></g></g>
+        <text class="lab" x="960" y="160" text-anchor="middle" style="font-size:64px">life satisfaction</text>
+      </g>
+      <!-- 15: across incomes -->
+      <g id="sv-inc" data-in="15,0.0,fade" data-out="16,0.02">
+        <g transform="translate(420,0)">
+          <path d="M-150,820 L150,820" stroke="#c9d3ef" stroke-width="6"/>
+          <rect class="rk" x="-110" y="600" width="90" height="220" rx="8" fill="#7a86b8" stroke-width="8" data-in="15,0.1,grow"/>
+          <rect class="rk" x="20" y="540" width="90" height="280" rx="8" fill="#7cf0a8" stroke-width="8" data-in="15,0.15,grow"/>
+          <text class="pop" x="0" y="930" text-anchor="middle" style="font-size:110px;fill:#ffd27a">$</text></g>
+        <g transform="translate(960,0)">
+          <path d="M-150,820 L150,820" stroke="#c9d3ef" stroke-width="6"/>
+          <rect class="rk" x="-110" y="560" width="90" height="260" rx="8" fill="#7a86b8" stroke-width="8" data-in="15,0.25,grow"/>
+          <rect class="rk" x="20" y="500" width="90" height="320" rx="8" fill="#7cf0a8" stroke-width="8" data-in="15,0.3,grow"/>
+          <text class="pop" x="0" y="930" text-anchor="middle" style="font-size:110px;fill:#ffd27a">$$</text></g>
+        <g transform="translate(1500,0)">
+          <path d="M-150,820 L150,820" stroke="#c9d3ef" stroke-width="6"/>
+          <rect class="rk" x="-110" y="520" width="90" height="300" rx="8" fill="#7a86b8" stroke-width="8" data-in="15,0.4,grow"/>
+          <rect class="rk" x="20" y="460" width="90" height="360" rx="8" fill="#7cf0a8" stroke-width="8" data-in="15,0.45,grow"/>
+          <text class="pop" x="0" y="930" text-anchor="middle" style="font-size:110px;fill:#ffd27a">$$$</text></g>
+        <text class="pop" x="960" y="300" text-anchor="middle" style="font-size:150px" data-in="15,0.7,pop">every income</text>
+      </g>
+      <!-- 16: 818 millionaires, many still scrubbing -->
+      <g id="sv-mil" data-in="16,0.0,fade">
+        <g transform="translate(620,700) scale(0.55)"><g id="sv-old"><g data-rig="old" data-p="so" data-o='{"eyes":"open","mouth":"worry","look":[50,30]}'></g>
+          <g transform="translate(0,-70)">
+          <rect class="rk" x="-200" y="-200" width="400" height="60" rx="10" fill="#0d0f22" stroke-width="8"/>
+          <rect class="rk" x="-130" y="-430" width="260" height="240" rx="12" fill="#0d0f22" stroke-width="8"/>
+          <rect x="-130" y="-250" width="260" height="40" fill="#b0263c"/></g></g></g>
+        <g transform="translate(1100,860)">
+          <rect class="rk" x="-260" y="-60" width="520" height="160" rx="16" fill="#c9d3ef" stroke-width="10"/>
+          <g id="sv-plate"><ellipse class="rk" cx="0" cy="-70" rx="120" ry="40" fill="#f7f3ea" stroke-width="8"/></g>
+          <g fill="#fff" opacity="0.8"><circle cx="-160" cy="-90" r="18"/><circle cx="-110" cy="-130" r="12"/><circle cx="150" cy="-110" r="16"/></g>
+        </g>
+        <text class="pop" x="1300" y="330" text-anchor="middle" style="font-size:200px" data-in="16,0.15,pop">818</text>
+        <text class="lab" x="1300" y="430" text-anchor="middle" style="font-size:64px" data-in="16,0.25,up">millionaires</text>
+        <g transform="translate(1640,620) rotate(10)"><g data-in="16,0.7,pop">
+          <path class="rk" d="M-110,-60 L70,-60 L130,0 L70,60 L-110,60 Z" fill="#ffd27a" stroke-width="9"/><circle cx="70" cy="0" r="12" fill="#0d0f22"/>
+          <text x="-20" y="28" text-anchor="middle" style="font-family:Hand;font-size:80px;fill:#b0263c">$0</text></g></g>
+      </g>
+    </svg>
+  </div>
+  <script>
+    Rig.fill();
+    const tl = gsap.timeline({ paused: true }), A = s => Rig.at(s, "survey");
+    Rig.run(tl, "survey");
+    Rig.blinks(tl, "so", A("16,0"), A("16,1") + 2);
+    tl.to("#sv-plate", { x: 40, rotation: 8, svgOrigin: "0 -70", duration: 0.3, yoyo: true, repeat: 9, ease: "sine.inOut" }, A("16,0.2"));
+    tl.to("#sv-old", { x: 20, duration: 0.3, yoyo: true, repeat: 9, ease: "sine.inOut" }, A("16,0.2"));
+    window.__timelines["survey"] = tl;
+  </script>
+</template>

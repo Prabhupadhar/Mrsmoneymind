@@ -1,0 +1,72 @@
+<template>
+  <style>
+    @font-face { font-family: "Hand"; src: url("assets/fonts/PatrickHand-Regular.ttf"); }
+    #root { position: absolute; inset: 0; background: #1a2b66; overflow: hidden; }
+    #ah-art { position: absolute; inset: 0; }
+    .rk { stroke: #0d0f22; stroke-linecap: round; stroke-linejoin: round; }
+    .pop { font-family: Hand; font-size: 150px; fill: #ffb35c; stroke: #0d0f22; stroke-width: 14px; paint-order: stroke; stroke-linejoin: round; }
+    .lab { font-family: Hand; font-size: 64px; fill: #f4f1ff; }
+  </style>
+  <div id="root" data-composition-id="v5ashield" data-width="1080" data-height="1920">
+    <svg id="ah-art" class="clip" data-start="0" data-duration="40" viewBox="0 0 1080 1920" data-layout-allow-overflow>
+      <defs>
+        <radialGradient id="ah-bg" cx="0.5" cy="0.5" r="0.8"><stop offset="0" stop-color="#2a4a9f"/><stop offset="1" stop-color="#111c4c"/></radialGradient>
+        <clipPath id="ah-top"><rect x="0" y="420" width="1080" height="530"/></clipPath>
+        <g id="ah-clk"><circle class="rk" stroke="#0d0f22" r="30" fill="#f7f3ea" stroke-width="7"/><path class="rk" stroke="#0d0f22" d="M0,0 L0,-18 M0,0 L12,7" stroke-width="7"/></g>
+      </defs>
+      <rect width="1080" height="1920" fill="url(#ah-bg)"/>
+      <path d="M80,955 L1000,955" stroke="#c9d3ef" stroke-width="6" stroke-dasharray="18 18" opacity="0.5"/>
+
+      <!-- top: no help -->
+      <text class="lab" x="90" y="500" style="font-size:60px">no help</text>
+      <g clip-path="url(#ah-top)">
+        <g transform="translate(400,760) scale(0.36)"><g id="ah-kid"><g data-rig="kid" data-p="ahk" data-o='{"mouth":"smile","brows":"up","look":[0,-40]}'></g></g></g>
+        <g transform="translate(320,380)"><g class="ah-dropL"><use href="#ah-clk"/></g></g>
+        <g transform="translate(460,300)"><g class="ah-dropL"><use href="#ah-clk"/></g></g>
+        <g transform="translate(380,220)"><g class="ah-dropL"><use href="#ah-clk"/></g></g>
+        <g transform="translate(500,140)"><g class="ah-dropL"><use href="#ah-clk"/></g></g>
+      </g>
+      <rect class="rk" x="920" y="540" width="80" height="380" rx="10" fill="#26346e" stroke-width="8"/>
+      <rect id="ah-barL" class="rk" x="920" y="560" width="80" height="360" rx="10" fill="#7cf0a8" stroke-width="8"/>
+      <!-- bottom: bought time -->
+      <text class="lab" x="90" y="1040" style="font-size:60px" data-in="18,0.0,up" data-out="19,0.3">bought time</text>
+      <g transform="translate(560,1330) scale(0.36)"><g id="ah-nb"><g data-rig="nb" data-p="ahn" data-o='{"mouth":"smile","brows":"up","look":[0,-40]}'></g></g></g>
+      <g transform="translate(560,1140)"><g id="ah-umb">
+        <path class="rk" d="M0,0 L0,200" stroke-width="12"/>
+        <path class="rk" d="M-220,0 C-210,-150 210,-150 220,0 C185,-26 150,-26 110,0 C76,-26 34,-26 0,0 C-34,-26 -76,-26 -110,0 C-150,-26 -185,-26 -220,0 Z" fill="#ff8a2a" stroke-width="12"/>
+      </g></g>
+      <g transform="translate(480,900)"><g class="ah-dropR"><use href="#ah-clk"/></g></g>
+      <g transform="translate(630,820)"><g class="ah-dropR"><use href="#ah-clk"/></g></g>
+      <g transform="translate(540,740)"><g class="ah-dropR"><use href="#ah-clk"/></g></g>
+      <rect class="rk" x="920" y="1080" width="80" height="380" rx="10" fill="#26346e" stroke-width="8"/>
+      <rect id="ah-barR" class="rk" x="920" y="1100" width="80" height="360" rx="10" fill="#7cf0a8" stroke-width="8"/>
+      <text class="pop" x="790" y="1480" text-anchor="middle" style="font-size:90px" data-in="18,0.82,pop">shield</text>
+      <text class="pop" x="600" y="1010" text-anchor="middle" style="font-size:140px" data-in="19,0.4,pop">still lazy?</text>
+    </svg>
+  </div>
+  <script>
+    Rig.fill();
+    const tl = gsap.timeline({ paused: true }), A = s => Rig.at(s, "v5ashield");
+    Rig.run(tl, "v5ashield");
+    Rig.blinks(tl, "ahk", 0, 14); Rig.blinks(tl, "ahn", 0, 14, 0.7);
+    tl.set(".ah-dropR", { opacity: 0 }, 0);
+    // 17: clocks rain on the kid, the bar falls far
+    tl.to(".ah-dropL", { y: 1000, duration: 1.6, stagger: 0.25, ease: "power1.in" }, A("17,0.1"));
+    Rig.mouth(tl, "ahk", "smile", "worry", A("17,0.3"));
+    Rig.brows(tl, "ahk", "worry", A("17,0.3"));
+    tl.to("#ah-kid", { x: 6, duration: 0.05, yoyo: true, repeat: 17 }, A("17,0.4"));
+    tl.to("#ah-barL", { scaleY: 0.4, transformOrigin: "50% 100%", duration: 1.2, ease: "power2.inOut" }, A("17,0.55"));
+    // 18: the umbrella opens, clocks bounce off, the bar dips a little
+    tl.fromTo("#ah-umb", { scale: 0, transformOrigin: "50% 100%" }, { scale: 1, transformOrigin: "50% 100%", duration: 0.4, ease: "back.out(2)" }, A("18,0.05"));
+    tl.set(".ah-dropR", { opacity: 1 }, A("18,0.15"));
+    tl.to(".ah-dropR", { y: 180, duration: 0.6, stagger: 0.25, ease: "power1.in" }, A("18,0.15"));
+    tl.to(".ah-dropR", { x: 360, y: 60, rotation: 90, opacity: 0, duration: 0.6, stagger: 0.25, ease: "power1.out" }, A("18,0.15") + 0.6);
+    tl.to("#ah-barR", { scaleY: 0.88, transformOrigin: "50% 100%", duration: 1.0, ease: "power2.inOut" }, A("18,0.45"));
+    Rig.mouth(tl, "ahn", "smile", "grin", A("18,0.6"));
+    // 19: loop line: the kid looks down at the neighbor
+    Rig.look(tl, "ahk", 0, 40, A("19,0.1"));
+    Rig.mouth(tl, "ahk", "worry", "o", A("19,0.4"));
+    tl.to("#ah-nb", { y: -16, duration: 0.18, yoyo: true, repeat: 3 }, A("19,0.4"));
+    window.__timelines["v5ashield"] = tl;
+  </script>
+</template>

@@ -1,0 +1,45 @@
+<template>
+  <style>
+    @font-face { font-family: "Hand"; src: url("assets/fonts/PatrickHand-Regular.ttf"); }
+    #root { position: absolute; inset: 0; background: linear-gradient(120deg, #4c86e6 0%, #6a4fd6 55%, #7a3cc4 100%); overflow: hidden; }
+    #title-art { position: absolute; inset: 0; }
+    #title-text { position: absolute; left: 0; top: 230px; width: 100%; text-align: center;
+      font-family: "Hand"; font-size: 180px; line-height: 1.12; color: #fff; text-shadow: 0 10px 0 rgba(30,20,80,0.3); }
+    #title-text span { display: inline-block; }
+    #title-text .hot { color: #ffb35c; }
+    .rk { stroke: #0d0f22; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <div id="root" data-composition-id="title" data-width="1920" data-height="1080">
+    <svg id="title-art" class="clip" data-start="0" data-duration="10" viewBox="0 0 1920 1080" data-layout-allow-overflow>
+      <g fill="#fff" opacity="0.5"><path d="M260,180 l10,26 26,10 -26,10 -10,26 -10,-26 -26,-10 26,-10 z"/><path d="M1660,220 l7,18 18,7 -18,7 -7,18 -7,-18 -18,-7 18,-7 z"/><path d="M420,860 l6,15 15,6 -15,6 -6,15 -6,-15 -15,-6 15,-6 z"/></g>
+      <g transform="translate(250,1010) scale(0.5)"><g id="title-kid"><g data-rig="kid" data-p="tk" data-o='{"look":[30,-6],"mouth":"grin","brows":"up"}'></g></g></g>
+      <g transform="translate(1660,1000) scale(0.5)"><g id="title-nb"><g data-rig="nb" data-p="tn" data-o='{"mouth":"smile","brows":"up","look":[-30,-6]}'></g></g></g>
+      <g transform="translate(1560,560)"><g id="title-clock">
+        <circle class="rk" r="110" fill="#f7f3ea" stroke-width="10"/>
+        <g id="title-hand"><path class="rk" d="M0,0 L0,-74" stroke-width="12"/></g>
+        <path class="rk" d="M0,0 L44,22" stroke-width="12"/><circle r="12" fill="#0d0f22"/>
+      </g></g>
+      <g transform="translate(380,580) rotate(-8)"><g id="title-bag">
+        <path class="rk" d="M-90,-60 L90,-60 L110,110 L-110,110 Z" fill="#8f7dff" stroke-width="10"/><path class="rk" d="M-40,-60 C-40,-130 40,-130 40,-60" fill="none" stroke-width="10"/>
+        <path d="M-120,-80 L120,140 M120,-80 L-120,140" stroke="#ff3b4a" stroke-width="22" stroke-linecap="round" opacity="0" id="title-x"/>
+      </g></g>
+    </svg>
+    <h1 id="title-text" data-layout-allow-overflow class="clip" data-start="0" data-duration="10">
+      <span>Buy</span> <span class="hot">Time,</span><br><span>Not</span> <span>Things</span>
+    </h1>
+  </div>
+  <script>
+    Rig.fill();
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#title-text span", { opacity: 0, y: 40, scale: 0.8 }, { opacity: 1, y: 0, scale: 1, duration: 0.4, stagger: 0.14, ease: "back.out(2)" }, 0.1);
+    tl.fromTo("#title-kid", { y: 260 }, { y: 0, duration: 0.6, ease: "back.out(1.6)" }, 0.5);
+    tl.fromTo("#title-nb", { y: 300 }, { y: 0, duration: 0.6, ease: "back.out(1.6)" }, 0.7);
+    tl.fromTo("#title-clock", { scale: 0.3, transformOrigin: "50% 50%" }, { scale: 1, duration: 0.35, ease: "back.out(2.2)" }, 0.4);
+    tl.to("#title-hand", { rotation: 360, svgOrigin: "0 0", duration: 2.4, ease: "none" }, 0.6);
+    tl.fromTo("#title-bag", { scale: 0.3, transformOrigin: "50% 50%" }, { scale: 1, duration: 0.35, ease: "back.out(2.2)" }, 0.6);
+    tl.to("#title-x", { opacity: 1, duration: 0.15 }, 1.1);
+    tl.to("#title-text", { scale: 1.04, transformOrigin: "50% 50%", duration: 2.5, ease: "none" }, 0.6);
+    Rig.blinks(tl, "tk", 0, 3);
+    window.__timelines["title"] = tl;
+  </script>
+</template>

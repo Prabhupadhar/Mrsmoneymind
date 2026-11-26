@@ -1,0 +1,99 @@
+<template>
+  <style>
+    @font-face { font-family: "Hand"; src: url("assets/fonts/PatrickHand-Regular.ttf"); }
+    #root { position: absolute; inset: 0; background: #1a2b66; overflow: hidden; }
+    #hk-art { position: absolute; inset: 0; }
+    .rk { stroke: #0d0f22; stroke-linecap: round; stroke-linejoin: round; }
+    .pop { font-family: Hand; font-size: 150px; fill: #ffb35c; stroke: #0d0f22; stroke-width: 14px; paint-order: stroke; stroke-linejoin: round; }
+    .lab { font-family: Hand; font-size: 56px; fill: #f4f1ff; }
+  </style>
+  <div id="root" data-composition-id="hook" data-width="1920" data-height="1080">
+    <svg id="hk-art" class="clip" data-start="0" data-duration="30" viewBox="0 0 1920 1080" data-layout-allow-overflow>
+      <defs>
+        <radialGradient id="hk-bg" cx="0.5" cy="0.55" r="0.75"><stop offset="0" stop-color="#2a4a9f"/><stop offset="1" stop-color="#111c4c"/></radialGradient>
+      </defs>
+      <rect width="1920" height="1080" fill="url(#hk-bg)"/>
+      <g fill="#fff" opacity="0.06"><circle cx="300" cy="160" r="4"/><circle cx="1500" cy="960" r="5"/><circle cx="1760" cy="140" r="4"/></g>
+
+      <!-- 0-2: close-up, the $40 slides in, thought bubbles -->
+      <g id="hk-close" data-out="3,0.02">
+        <g transform="translate(620,700) scale(0.68)"><g id="hk-kid"><g data-rig="kid" data-p="hk" data-o='{"mouth":"smile","brows":"up","look":[0,0]}'></g></g></g>
+        <g transform="translate(1380,760) rotate(-6)"><g id="hk-bill"><rect class="rk" x="-170" y="-80" width="340" height="160" rx="14" fill="#7fd18b" stroke-width="10"/>
+          <rect x="-140" y="-54" width="280" height="108" rx="10" fill="none" stroke="#1f5a33" stroke-width="5" opacity="0.6"/>
+          <text y="34" text-anchor="middle" style="font-family:Hand;font-size:100px;fill:#1f5a33">$40</text></g></g>
+        <!-- bubbles: shoes, game, dinner -->
+        <g transform="translate(1060,300)"><g data-in="2,0.0,pop">
+          <circle cx="-150" cy="150" r="16" fill="#f4f1ff"/><circle cx="-110" cy="110" r="24" fill="#f4f1ff"/>
+          <ellipse rx="150" ry="110" fill="#f4f1ff"/>
+          <path class="rk" d="M-90,30 L-90,-30 L-30,-30 L0,0 L70,10 C100,15 100,40 90,40 L-90,40 Z" fill="#ff5f6d" stroke-width="8"/>
+          <path d="M-70,42 L92,42" stroke="#f7f3ea" stroke-width="8"/>
+        </g></g>
+        <g transform="translate(1420,250)"><g data-in="2,0.32,pop">
+          <ellipse rx="150" ry="110" fill="#f4f1ff"/>
+          <rect class="rk" x="-80" y="-40" width="160" height="80" rx="40" fill="#8f7dff" stroke-width="8"/><circle cx="40" cy="-8" r="11" fill="#0d0f22"/><circle cx="58" cy="12" r="11" fill="#0d0f22"/><path d="M-55,0 h36 M-37,-18 v36" stroke="#0d0f22" stroke-width="10" stroke-linecap="round"/>
+        </g></g>
+        <g transform="translate(1720,400)"><g data-in="2,0.65,pop">
+          <ellipse rx="150" ry="110" fill="#f4f1ff"/>
+          <ellipse class="rk" rx="85" ry="42" fill="#f7f3ea" stroke-width="8"/><ellipse rx="48" ry="20" fill="#ffb35c"/><path d="M-30,-12 C-20,-30 0,-30 10,-14" fill="none" stroke="#a8483a" stroke-width="8" stroke-linecap="round"/>
+        </g></g>
+      </g>
+      <!-- 3-4: 98 working adults, only 2 think of time -->
+      <g id="hk-crowd" data-in="3,0.05,fade" data-out="5,0.0">
+        <g id="hk-grid" transform="translate(330,250)"></g>
+        <text class="pop" x="1600" y="560" text-anchor="middle" style="font-size:200px" data-in="3,0.35,pop">98</text>
+        <text class="pop" x="1600" y="820" text-anchor="middle" style="font-size:230px;fill:#ff8a2a" data-in="4,0.3,pop">2%</text>
+      </g>
+      <!-- 5: the ignored deal: a clock with a price tag, glowing -->
+      <g id="hk-deal" data-in="5,0.0,fade">
+        <circle id="hk-glow" cx="960" cy="560" r="330" fill="#ffd27a" opacity="0.25"/>
+        <g transform="translate(960,560)"><g id="hk-clock">
+          <circle class="rk" r="210" fill="#f7f3ea" stroke-width="14"/>
+          <g fill="#0d0f22"><circle cy="-170" r="10"/><circle cx="170" r="10"/><circle cy="170" r="10"/><circle cx="-170" r="10"/></g>
+          <g id="hk-hand"><path class="rk" d="M0,0 L0,-140" stroke-width="16"/></g>
+          <path class="rk" d="M0,0 L80,40" stroke-width="16"/><circle r="16" fill="#0d0f22"/>
+        </g></g>
+        <g transform="translate(1260,380) rotate(14)"><g data-in="5,0.35,pop">
+          <path class="rk" d="M-90,-50 L60,-50 L110,0 L60,50 L-90,50 Z" fill="#ffd27a" stroke-width="9"/><circle cx="60" cy="0" r="12" fill="#0d0f22"/>
+          <text x="-20" y="22" text-anchor="middle" style="font-family:Hand;font-size:64px;fill:#0d0f22">$40</text></g></g>
+        <g transform="translate(330,1000) scale(0.48)"><g id="hk-kid2" data-in="5,0.1,up"><g data-rig="kid" data-p="hk2" data-o='{"mouth":"o","brows":"up","look":[60,-30]}'></g></g></g>
+      </g>
+    </svg>
+  </div>
+  <script>
+    // 98 little heads (14 x 7); two of them light up as the time-buyers
+    (function () {
+      var g = document.getElementById("hk-grid"), s = "";
+      for (var i = 0; i < 98; i++) {
+        var x = (i % 14) * 76, y = Math.floor(i / 14) * 92, hot = (i === 31 || i === 72);
+        s += '<g transform="translate(' + x + ',' + y + ')"><g class="' + (hot ? "hk-hot" : "hk-dot") + '">' +
+          '<path d="M-26,52 C-26,26 26,26 26,52 Z" fill="' + (hot ? "#e3a63a" : "#7a86b8") + '"/>' +
+          '<circle r="21" fill="' + (hot ? "#f4d2b6" : "#c9d3ef") + '"/></g></g>';
+      }
+      g.innerHTML = s;
+    })();
+    Rig.fill();
+    const tl = gsap.timeline({ paused: true }), A = s => Rig.at(s, "hook");
+    Rig.run(tl, "hook");
+    tl.fromTo("#hk-kid", { y: 40 }, { y: 0, duration: 0.6, ease: "expo.out" }, 0);
+    Rig.blinks(tl, "hk", 0, 8);
+    tl.to("#hk-br", { y: -16, duration: 0.2, yoyo: true, repeat: 1, ease: "power2.out" }, A("0,0.5"));
+    tl.fromTo("#hk-bill", { x: 900, rotation: 20 }, { x: 0, rotation: 0, duration: 0.6, ease: "power3.out" }, A("1,0.05"));
+    Rig.look(tl, "hk", 60, 20, A("1,0.2"));
+    Rig.mouth(tl, "hk", "smile", "grin", A("1,0.4"));
+    tl.to("#hk-bill", { y: -14, duration: 0.4, yoyo: true, repeat: 5, ease: "sine.inOut" }, A("1,0.7"));
+    Rig.look(tl, "hk", 40, -50, A("2,0.05"));
+    Rig.look(tl, "hk", 70, -50, A("2,0.4"));
+    Rig.look(tl, "hk", 90, -30, A("2,0.7"));
+    // crowd pops in, then everyone but two greys out
+    tl.fromTo(".hk-dot, .hk-hot", { scale: 0, transformOrigin: "50% 50%" }, { scale: 1, duration: 0.25, stagger: 0.012, ease: "back.out(2)" }, A("3,0.1"));
+    tl.to(".hk-dot", { opacity: 0.3, duration: 0.4 }, A("4,0.2"));
+    tl.to(".hk-hot", { scale: 1.6, transformOrigin: "50% 50%", duration: 0.35, ease: "back.out(3)" }, A("4,0.25"));
+    tl.to(".hk-hot", { y: -10, duration: 0.25, yoyo: true, repeat: 5, ease: "sine.inOut" }, A("4,0.6"));
+    // the deal
+    tl.fromTo("#hk-clock", { scale: 0.4, transformOrigin: "50% 50%" }, { scale: 1, duration: 0.5, ease: "back.out(1.8)" }, A("5,0"));
+    tl.to("#hk-hand", { rotation: 360, svgOrigin: "0 0", duration: 3, ease: "none" }, A("5,0.1"));
+    tl.to("#hk-glow", { scale: 1.12, transformOrigin: "50% 50%", opacity: 0.4, duration: 0.6, yoyo: true, repeat: 3, ease: "sine.inOut" }, A("5,0.3"));
+    Rig.blinks(tl, "hk2", A("5,0"), A("5,1") + 2);
+    window.__timelines["hook"] = tl;
+  </script>
+</template>

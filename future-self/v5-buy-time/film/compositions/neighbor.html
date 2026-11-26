@@ -1,0 +1,53 @@
+<template>
+  <style>
+    @font-face { font-family: "Hand"; src: url("assets/fonts/PatrickHand-Regular.ttf"); }
+    #root { position: absolute; inset: 0; background: #1a2b66; overflow: hidden; }
+    #nh-art { position: absolute; inset: 0; }
+    .rk { stroke: #0d0f22; stroke-linecap: round; stroke-linejoin: round; }
+    .pop { font-family: Hand; font-size: 150px; fill: #ffb35c; stroke: #0d0f22; stroke-width: 14px; paint-order: stroke; stroke-linejoin: round; }
+    .lab { font-family: Hand; font-size: 56px; fill: #f4f1ff; }
+  </style>
+  <div id="root" data-composition-id="neighbor" data-width="1920" data-height="1080">
+    <svg id="nh-art" class="clip" data-start="0" data-duration="30" viewBox="0 0 1920 1080" data-layout-allow-overflow>
+      <defs>
+        <radialGradient id="nh-bg" cx="0.5" cy="0.55" r="0.75"><stop offset="0" stop-color="#2a4a9f"/><stop offset="1" stop-color="#111c4c"/></radialGradient>
+      </defs>
+      <rect width="1920" height="1080" fill="url(#nh-bg)"/>
+      <!-- neighbor's window -->
+      <rect class="rk" x="720" y="140" width="1080" height="800" rx="20" fill="#ffe3b0" stroke-width="14"/>
+      <path d="M1260,140 L1260,940" stroke="#0d0f22" stroke-width="12"/>
+      <rect x="720" y="860" width="1080" height="80" fill="#e8c48a"/>
+      <!-- the cleaner with a mop -->
+      <g transform="translate(1560,770) scale(0.4)"><g id="nh-cl"><g data-rig="kid" data-p="nc" data-o='{"mouth":"smile","brows":"up","look":[-40,10],"shirt":"#4fb3a9"}'></g></g></g>
+      <g transform="translate(1400,760)"><g id="nh-mop">
+        <path class="rk" d="M60,-260 L0,120" stroke-width="16"/>
+        <path class="rk" d="M-70,110 C-40,90 40,90 70,110 L80,150 L-80,150 Z" fill="#c9d3ef" stroke-width="9"/></g></g>
+      <g fill="#fff" id="nh-shine" opacity="0"><path d="M1330,880 l8,20 20,8 -20,8 -8,20 -8,-20 -20,-8 20,-8 z"/><path d="M1460,900 l6,15 15,6 -15,6 -6,15 -6,-15 -15,-6 15,-6 z"/></g>
+      <!-- neighbor on the couch with a mug -->
+      <rect class="rk" x="820" y="700" width="380" height="160" rx="40" fill="#b0263c" stroke-width="12"/>
+      <g transform="translate(1000,720) scale(0.42)"><g id="nh-nb"><g data-rig="nb" data-p="nn" data-o='{"mouth":"smile","brows":"flat","look":[30,10]}'></g></g></g>
+      <g transform="translate(1110,800)"><path class="rk" d="M24,-14 C50,-14 50,20 24,20" fill="none" stroke-width="10"/><path class="rk" d="M-30,-40 L30,-40 L24,40 L-24,40 Z" fill="#f7f3ea" stroke-width="8"/></g>
+      <!-- the kid peeks in, judging -->
+      <g transform="translate(330,880) scale(0.55)"><g id="nh-kid"><g data-rig="kid" data-p="nk" data-o='{"mouth":"flat","brows":"mad","look":[60,0]}'></g></g></g>
+      <text class="pop" x="360" y="300" text-anchor="middle" style="font-size:170px;fill:#ff5f6d" data-in="11,0.38,pop" data-out="11,0.66,pop">lazy?</text>
+      <text class="pop" x="1000" y="300" text-anchor="middle" style="font-size:190px" data-in="11,0.82,pop">happier</text>
+    </svg>
+  </div>
+  <script>
+    Rig.fill();
+    const tl = gsap.timeline({ paused: true }), A = s => Rig.at(s, "neighbor");
+    Rig.run(tl, "neighbor");
+    tl.fromTo("#nh-kid", { x: -60 }, { x: 0, duration: 0.5, ease: "expo.out" }, 0);
+    tl.to("#nh-mop", { x: -60, duration: 0.45, yoyo: true, repeat: 11, ease: "sine.inOut" }, 0);
+    tl.to("#nh-cl", { x: -40, duration: 0.45, yoyo: true, repeat: 11, ease: "sine.inOut" }, 0);
+    tl.to("#nh-shine", { opacity: 1, duration: 0.3, yoyo: true, repeat: 5 }, 0.6);
+    Rig.blinks(tl, "nk", 0, 8); Rig.blinks(tl, "nn", 0, 8, 0.6); Rig.blinks(tl, "nc", 0, 8, 1.1);
+    tl.to("#nh-kid", { rotation: -6, svgOrigin: "0 300", duration: 0.25, yoyo: true, repeat: 3 }, A("11,0.4"));
+    Rig.mouth(tl, "nn", "smile", "grin", A("11,0.8"));
+    tl.to("#nh-nb", { y: -16, duration: 0.18, yoyo: true, repeat: 3 }, A("11,0.82"));
+    Rig.mouth(tl, "nk", "flat", "o", A("11,0.85"));
+    Rig.brows(tl, "nk", "up", A("11,0.85"));
+    Rig.widen(tl, "nk", A("11,0.85"));
+    window.__timelines["neighbor"] = tl;
+  </script>
+</template>
