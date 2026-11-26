@@ -29,7 +29,12 @@ finding, but the run must read the paper in full before writing a single line; `
 | P03 | 2026-11-25 | H02 "They fined late parents. Lateness got worse." (cartoon scene, `p03-fine-mc`) | Gneezy & Rustichini 2000 (read in full) | scheduled 2026-11-25 |
 | P04 | 2026-11-26 | H17 "Give someone a mug. Its price doubles." (cartoon split, `p04-mug-mc`) | Kahneman, Knetsch & Thaler 1990, exp. 6 (read in full) | scheduled 2026-11-26 |
 | P05 | 2026-11-27 | H09 "You lost ten bucks. Still buying the ticket?" (Pop Art grid + jars) | Tversky & Kahneman 1981, problems 8-9 (read in full) | scheduled 2026-11-27 |
-The hook bank below now feeds the 13:00 slot (H01, H02, H09 and H17 are used). H14 (drive 20 minutes, same 1981 paper: 68% vs 29%) is verified.
+| P06 | 2026-11-30 | H05 "Lose $100? They needed $202." (cartoon, `p06-flip-mc`; hook rewritten: the paper measures choices, not pain) | Tversky & Kahneman 1992 (read in full, MIT Press reprint) + Brown et al. 2024 JEL | scheduled 2026-11-30 |
+| P07 | 2026-12-01 | H04 "Lottery winners aren't happier. They're more satisfied." (Pop Art wall, `p07-lottery`; hook rewritten: happiness n.s., life satisfaction up) | Lindqvist, Östling & Cesarini 2020; Brickman et al. 1978 (both read in full) | P07_STATUS |
+| P08 | 2026-12-02 | H13 "More good dishes. Lower price." (cartoon split, `p08-dishes-mc`; hook rewritten: extras were cups/saucers, not free plates) | Hsee 1998, study 4 (read in full) | scheduled 2026-12-02 |
+| P09 | 2026-12-03 | H12 "The marshmallow test measured more than willpower." (Pop Art wall + chart, `p09-marshmallow`; "money, not willpower" not supported) | Watts, Duncan & Quan 2018 (read in full) | P09_STATUS |
+| P10 | 2026-12-04 | H14 "Same $5. Same drive. Different answer." (cartoon split, `p10-drive-mc`) | Tversky & Kahneman 1981, problem 10 (read in full) | scheduled 2026-12-04 |
+The hook bank below now feeds the 13:00 slot (H01, H02, H04, H05, H09, H12, H13, H14 and H17 are used). H14 (drive 20 minutes, same 1981 paper: 68% vs 29%) is verified.
 
 ### HyperFrames Shorts (09:30 / 18:00 IST, plus 11:00 on otherwise empty days; see `hf-shorts/README.md`)
 | ID | Date | Hook | Source | Status |
@@ -68,18 +73,18 @@ paper after reading it in full: if it does not, rewrite the hook to what the pap
 |---|---|---|---|---|---|
 | H01 | Transformation | "3.5% to 13.6%. Here's what changed." | They agreed to save more from FUTURE raises; saving went 3.5% → 13.6% over 40 months | Thaler & Benartzi 2004, JPE | verified |
 | H02 | Mystery | "They fined late parents. Lateness got worse." | Israeli daycares: the fine turned guilt into a price, so parents paid and came late | Gneezy & Rustichini 2000, J. Legal Studies | to verify |
-| H03 | You-accusation | "Your brain thinks future you is a stranger." | Brain scans: thinking about future self looked like thinking about someone else | Ersner-Hershfield, Wimmer & Knutson 2009, SCAN | verified |
-| H04 | Myth bust | "Lottery winners ARE happier. A tiny study fooled everyone." | The famous 1978 study had 22 winners; big Swedish lottery data found lasting life-satisfaction gains | Lindqvist, Östling & Cesarini 2020, REStud; Brickman et al. 1978 | to verify |
-| H05 | Pain | "Losing $100 hurts more than winning $100 feels good." | Loss aversion: losses weigh roughly twice as much (and the debate about how much) | Tversky & Kahneman 1992, J. Risk & Uncertainty | to verify |
-| H06 | Relatable | "That 'wait, I spent HOW much?' feeling? Science." | Card payers recalled their recent spending less accurately than cash payers | Soman 2001, JCR | verified |
-| H07 | Behind the scenes | "The famous honesty study had a secret." | The 'sign at the top' study was retracted after its data was found fabricated | Shu et al. 2012 PNAS (retracted 2021) | to verify |
+| H03 | You-accusation | "Your brain thinks future you is a stranger." | Brain scans: thinking about future self looked like thinking about someone else | Ersner-Hershfield, Wimmer & Knutson 2009, SCAN | dropped: duplicate of video 1 (The Stranger You're Robbing, future self as a stranger) |
+| H04 | Myth bust | "Lottery winners ARE happier. A tiny study fooled everyone." | The famous 1978 study had 22 winners; big Swedish lottery data found lasting life-satisfaction gains | Lindqvist, Östling & Cesarini 2020, REStud; Brickman et al. 1978 | used: P07 (hook rewritten to the paper) |
+| H05 | Pain | "Losing $100 hurts more than winning $100 feels good." | Loss aversion: losses weigh roughly twice as much (and the debate about how much) | Tversky & Kahneman 1992, J. Risk & Uncertainty | used: P06 (hook rewritten to the paper) |
+| H06 | Relatable | "That 'wait, I spent HOW much?' feeling? Science." | Card payers recalled their recent spending less accurately than cash payers | Soman 2001, JCR | dropped: duplicate of video 2 (card vs cash; Soman 2001 recall already used) |
+| H07 | Behind the scenes | "The famous honesty study had a secret." | The 'sign at the top' study was retracted after its data was found fabricated | Shu et al. 2012 PNAS (retracted 2021) | to verify: deferred 26 Nov 2026, the 2012 PNAS paper is paywalled and could not be read in full (replication, retraction notice and Data Colada [98] were read); facts in the run notes |
 | H08 | Contrarian | "The busiest traders earned the least." | 66,465 households: the most active traders' net returns trailed the market | Barber & Odean 2000, J. Finance | used: h01-traders |
 | H09 | Dilemma | "You lost $10. Would you still buy the ticket?" | Most rebuy after losing cash, few after losing the ticket: same money, different 'account' | Tversky & Kahneman 1981, Science | to verify |
 | H10 | Timely (Dec 28-Jan 1) | "Mondays aren't the problem. They're a cheat code." | Fresh-start effect: gym visits rise after Mondays, birthdays and New Year | Dai, Milkman & Riis 2014, Management Science | to verify |
 | H11 | Shocking number | "One checkbox. Retirement sign-ups more than doubled." | Auto-enrollment: the default did what willpower didn't | Madrian & Shea 2001, QJE | used: h02-default |
-| H12 | Myth bust | "The marshmallow test may have measured money, not willpower." | A bigger replication: family background explained much of the link | Watts, Duncan & Quan 2018, Psych Science | to verify |
-| H13 | Weird | "They added free plates. The set lost value." | 24 intact pieces beat 40 pieces with a few broken, when judged alone | Hsee 1998, J. Behavioral Decision Making | to verify |
-| H14 | Dilemma | "Drive 20 minutes to save $5? Depends on the price." | People drove to save $5 on a cheap item, not on an expensive one | Tversky & Kahneman 1981, Science | to verify |
+| H12 | Myth bust | "The marshmallow test may have measured money, not willpower." | A bigger replication: family background explained much of the link | Watts, Duncan & Quan 2018, Psych Science | used: P09 (hook rewritten to the paper) |
+| H13 | Weird | "They added free plates. The set lost value." | 24 intact pieces beat 40 pieces with a few broken, when judged alone | Hsee 1998, J. Behavioral Decision Making | used: P08 (hook rewritten to the paper) |
+| H14 | Dilemma | "Drive 20 minutes to save $5? Depends on the price." | People drove to save $5 on a cheap item, not on an expensive one | Tversky & Kahneman 1981, Science | used: P10 |
 | H15 | Science-honest | "Scientists repeated a famous happiness study. Awkward." | The $5 experiment's replications were mixed: real effect, smaller than headlines | Aknin et al. 2020 JPSP; Kim et al. 2022 PLoS ONE | verified |
 | H16 | Contrarian | "Checking your investments made them poorer." | Frequent feedback made people take less risk and earn less | Thaler, Tversky, Kahneman & Schwartz 1997, QJE | to verify |
 | H17 | Gift | "Give someone a mug. Its price doubles." | Endowment effect: owners asked about twice what buyers offered | Kahneman, Knetsch & Thaler 1990, JPE | to verify |
@@ -139,7 +144,7 @@ When fewer than 10 items are left, add 10 new ideas from peer-reviewed money-psy
 ## 2. Long videos (every other Wednesday, 16:00 IST; two Shorts cut from it on the next two days at 16:00)
 | Publish | Topic | Main source | Status |
 |---|---|---|---|
-| 2026-12-09 | Buy Time, Not Things | Whillans et al. 2017 (+ Lok & Dunn 2022, Whillans & West 2022 in the fact check) | verified |
+| 2026-12-09 | Buy Time, Not Things | Whillans et al. 2017 (+ Lok & Dunn 2022, Whillans & West 2022 in the fact check) | scheduled 2026-12-09 16:00 (`v5-buy-time/`); Shorts v5a 10 Dec, v5b 11 Dec 16:00 |
 | 2026-12-30 | Why January 1st Actually Works | Dai, Milkman & Riis 2014 | to verify |
 | 2027-01-13 | Why You Can't Sell Your Old Stuff | Kahneman, Knetsch & Thaler 1990 | to verify |
 | 2027-01-27 | You Paid, So You Suffer | Arkes & Blumer 1985 | to verify |
