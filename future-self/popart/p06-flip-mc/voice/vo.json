@@ -1,0 +1,62 @@
+[
+ {
+  "text": "Lose a hundred? They needed two oh two.",
+  "mood": "excited",
+  "start": 0.1,
+  "end": 2.117
+ },
+ {
+  "text": "Here's the deal. Flip a coin. Heads, you lose a hundred dollars.",
+  "mood": "neutral",
+  "start": 2.517,
+  "end": 6.026
+ },
+ {
+  "text": "Tails, you win. How much would tails have to pay before you'd flip?",
+  "mood": "curious",
+  "start": 6.326,
+  "end": 9.722
+ },
+ {
+  "text": "Tversky and Kahneman asked twenty-five grad students this, at a computer.",
+  "mood": "neutral",
+  "start": 10.072,
+  "end": 14.398
+ },
+ {
+  "text": "On paper, anything over a hundred is a good bet.",
+  "mood": "firm",
+  "start": 14.748,
+  "end": 17.564
+ },
+ {
+  "text": "The typical answer?",
+  "mood": "curious",
+  "start": 17.914,
+  "end": 18.985
+ },
+ {
+  "text": "Two hundred and two dollars.",
+  "mood": "shocked",
+  "start": 19.285,
+  "end": 20.905
+ },
+ {
+  "text": "Risk twenty-five, they wanted sixty-one. Risk a hundred fifty, two eighty.",
+  "mood": "neutral",
+  "start": 21.355,
+  "end": 25.688
+ },
+ {
+  "text": "A loss weighs about twice a gain. Six hundred later estimates land near two.",
+  "mood": "warm",
+  "start": 26.088,
+  "end": 30.736
+ },
+ {
+  "text": "So, lose a hundred. What would you need?",
+  "mood": "whisper",
+  "start": 31.136,
+  "end": 34.011
+ }
+]

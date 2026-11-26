@@ -1,0 +1,11 @@
+[
+ ["Same five dollars. Same drive. Different answer.", 0.1, 1.08, "excited"],
+ ["A hundred twenty-five dollar jacket, and a fifteen dollar calculator.", 0.4, 1.1, "neutral"],
+ ["The clerk says: that calculator is ten dollars at our other store, twenty minutes away.", 0.3, 1.1, "curious"],
+ ["Sixty-eight percent of students would drive.", 0.35, 1.06, "warm"],
+ ["Now flip it. The calculator costs a hundred twenty-five. Across town, a hundred twenty.", 0.4, 1.1, "curious"],
+ ["Same five dollars. Same drive.", 0.3, 1.06, "firm"],
+ ["Only twenty-nine percent would go.", 0.35, 1.0, "shocked"],
+ ["We weigh five dollars against the price tag, not against our time.", 0.4, 1.08, "warm"],
+ ["Five dollars is five dollars. Would you drive?", 0.4, 1.05, "whisper"]
+]
