@@ -98,6 +98,16 @@ Early signal (owner, Shorts tab, day 1 of the style test): the Pop Art remake of
 1k views, about 2x the classic neighbor Short (498) on the same story. One Short only, so it does not change the
 decision rule; it does suggest the style, not just the topic, drives reach.
 P01 in Studio (day 2): 55.8% stayed to watch, 44.2% swiped away; retention not processed yet.
+Studio report 12-28 Nov 2026 (owner): 10,494 views but only 4,670 engaged views (since 16 Nov a Short's view counts
+every start/replay, so judge by engaged views), 14 subs, stayed-to-watch 46.6%, APV 56%, 176 likes, 6 comments,
+3 shares; 96% Shorts feed. Audience global and fragmented (UK 8%, PH 4%, MY 4%, IN 3%, US 3%), 55% male / 45% female,
+59% aged 25-44, 18% aged 13-17. Top: neighbor 1,127 (AVD 12 s), mug/endowment 1,054 (19 s, 32 likes), late-pickup fines
+1,019 (22 s), "Ten on you" 957 (10 s), lost-$10 ticket 787, "94 of 109" 710. So:
+- Hooks with another person/conflict win the swipe (neighbor, "Ten on you"), but those two lose viewers mid-way (AVD 10-12 s);
+  paradox stories with a backfire twist (mug, fines) hold longest. Do both: a conflict hook, then a backfire twist.
+- Dilemma questions work ("Still buying the ticket?"); explanatory "why" questions don't.
+- Comments and shares are near zero: end Shorts with an A/B question for viewers to answer, and a "send this to..." line on fits.
+- Keep topics and characters global (no single-country packaging).
 Re-check against YouTube Studio (Metricool lags several days) and update this list as data grows.
 
 ## Other rules
