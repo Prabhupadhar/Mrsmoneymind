@@ -1,0 +1,64 @@
+<!doctype html><html><body style="margin:0">
+<svg width="1920" height="1080" viewBox="0 0 1920 1080"><defs id="d"></defs><rect width="1920" height="1080" fill="#2f3270"/><g id="c"></g></svg>
+<script>
+let defs='',out='';
+const C=(cx,s)=>s.replace(/X([+-]?\d+)/g,(_,n)=>cx+ +n); // "X-30" -> cx-30
+function grad(id,a,b,type='l'){defs+= type==='r'
+  ? `<radialGradient id="${id}" cx=".42" cy=".4" r=".7"><stop offset="0" stop-color="${a}"/><stop offset="1" stop-color="${b}"/></radialGradient>`
+  : `<linearGradient id="${id}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${a}"/><stop offset="1" stop-color="${b}"/></linearGradient>`;}
+function portrait(i,cx,o){
+  grad('sk'+i,o.skin[0],o.skin[1],'r'); grad('hr'+i,o.hair[0],o.hair[1]); grad('cl'+i,o.cloth[0],o.cloth[1]); grad('bg'+i,o.bg[0],o.bg[1]);
+  grad('ir'+i,o.eye[0],o.eye[1],'r');
+  defs+=`<clipPath id="k${i}"><rect x="${cx-220}" y="110" width="440" height="760" rx="36"/></clipPath>`;
+  const L=o.line;
+  let s=`<rect x="${cx-220}" y="110" width="440" height="760" rx="36" fill="url(#bg${i})"/><g clip-path="url(#k${i})">`;
+  s+=C(cx,o.back.replace(/HR/g,`url(#hr${i})`));
+  // neck + shoulders
+  s+=C(cx,`<path d="MX-46,500 LX-50,640 QX0,668 X50,640 LX46,500Z" fill="${o.skin[1]}"/><path d="MX-46,560 QX0,600 X46,560 LX46,520 LX-46,520Z" fill="#000" opacity=".12"/>`);
+  s+=C(cx,`<path d="MX-210,880 CX-210,700 X-150,640 X-55,622 QX0,650 X55,622 CX150,640 X210,700 X210,880Z" fill="url(#cl${i})"/>`)+C(cx,o.cloth[2]||'');
+  // ears + face
+  s+=C(cx,`<ellipse cx="X-118" cy="400" rx="16" ry="28" fill="${o.skin[1]}"/><ellipse cx="X118" cy="400" rx="16" ry="28" fill="${o.skin[1]}"/>`);
+  s+=C(cx,`<path d="MX-118,380 CX-122,282 X-66,232 X0,232 CX66,232 X122,282 X118,380 CX116,468 X66,540 X0,556 CX-66,540 X-116,468 X-118,380Z" fill="url(#sk${i})"/>`);
+  // blush
+  s+=C(cx,`<ellipse cx="X-66" cy="462" rx="30" ry="16" fill="#ff6b7a" opacity=".22"/><ellipse cx="X66" cy="462" rx="30" ry="16" fill="#ff6b7a" opacity=".22"/>`);
+  // eyes
+  for(const d of [-1,1]){const x=cx+d*50,y=408;
+    s+=`<path d="M${x-30*d},${y} C${x-18*d},${y-20} ${x+16*d},${y-22} ${x+32*d},${y-4} C${x+16*d},${y+12} ${x-14*d},${y+13} ${x-30*d},${y}Z" fill="#fff"/>`;
+    s+=`<circle cx="${x+2*d}" cy="${y-2}" r="14" fill="url(#ir${i})"/><circle cx="${x+2*d}" cy="${y-2}" r="6.5" fill="#140c08"/><circle cx="${x+6*d}" cy="${y-7}" r="4" fill="#fff"/><circle cx="${x-3*d}" cy="${y+4}" r="2" fill="#fff" opacity=".8"/>`;
+    s+=`<path d="M${x-31*d},${y} C${x-18*d},${y-21} ${x+16*d},${y-23} ${x+33*d},${y-4} l${8*d},-7" stroke="${L}" stroke-width="5" fill="none" stroke-linecap="round"/>`;
+    s+=`<path d="M${x-14*d},${y+12} Q${x},${y+15} ${x+14*d},${y+10}" stroke="${L}" stroke-width="1.5" fill="none" opacity=".4"/>`;
+    s+=`<path d="M${x-30*d},${y-36} Q${x},${y-56} ${x+36*d},${y-40} Q${x},${y-46} ${x-30*d},${y-30}Z" fill="${o.brow}"/>`;}
+  // nose
+  s+=C(cx,`<path d="MX6,418 CX10,438 X14,452 X8,462" stroke="${o.skin[2]}" stroke-width="4" fill="none" stroke-linecap="round" opacity=".7"/><path d="MX-14,466 QX0,474 X14,466" stroke="${o.skin[2]}" stroke-width="3.5" fill="none" stroke-linecap="round" opacity=".8"/>`);
+  // lips (soft smile)
+  s+=C(cx,`<path d="MX-32,500 QX-14,490 X0,496 QX14,490 X32,500 QX0,508 X-32,500Z" fill="${o.lip[0]}"/><path d="MX-32,500 QX0,508 X32,500 QX0,528 X-32,500Z" fill="${o.lip[1]}"/><path d="MX-34,499 QX0,510 X34,499" stroke="${o.lip[2]}" stroke-width="2.5" fill="none" stroke-linecap="round"/><ellipse cx="X6" cy="514" rx="8" ry="3" fill="#fff" opacity=".35"/>`);
+  s+=C(cx,o.front.replace(/HR/g,`url(#hr${i})`));
+  s+=C(cx,o.extra||'');
+  s+='</g>'+`<g font-family="Arial" text-anchor="middle"><text x="${cx}" y="935" font-size="56" font-weight="900" fill="#f5c04a">${o.k}</text><text x="${cx}" y="985" font-size="26" fill="#fff">${o.d}</text></g>`;
+  return s;
+}
+// A — long wavy brown hair, denim jacket
+out+=portrait(0,240,{k:'A',d:'long brown hair, denim jacket',bg:['#a8e0d6','#5fb3a6'],skin:['#f6d0b1','#e0a983','#b97a55'],hair:['#5b3a26','#2e1b10'],eye:['#8a5a2b','#4a2c12'],brow:'#3a2416',line:'#2b1a10',lip:['#c75b66','#d9707a','#9c3d47'],
+ cloth:['#5b8fd0','#33598f',`<path d="MX-55,622 LX-20,760 LX0,650 LX20,760 LX55,622" stroke="#2a4670" stroke-width="5" fill="#fff"/>`],
+ back:`<path d="MX-135,360 CX-150,230 X-60,186 X0,186 CX80,186 X150,236 X140,380 CX150,520 X175,620 X150,720 LX-150,720 CX-175,600 X-150,500 X-135,360Z" fill="HR"/>`,
+ front:`<path d="MX-126,420 CX-134,262 X-40,212 X20,212 CX104,216 X138,282 X128,420 CX112,322 X72,280 X12,270 CX-30,302 X-92,324 X-126,420Z" fill="HR"/><path d="MX-125,390 CX-150,480 X-140,580 X-118,680 LX-92,680 CX-112,570 X-112,470 X-108,404Z" fill="HR"/><path d="MX125,390 CX150,480 X140,580 X118,680 LX92,680 CX112,570 X112,470 X108,404Z" fill="HR"/><path d="MX-60,236 CX-20,224 X40,226 X80,246 M-0,0" stroke="#9a6a48" stroke-width="5" fill="none" opacity=".6" stroke-linecap="round"/>`});
+// B — black hair bun, warm brown skin, mustard kurti-style top
+out+=portrait(1,720,{k:'B',d:'neat bun, mustard top',bg:['#ffd9b0','#f0a46a'],skin:['#d9a07a','#b87a52','#8a5434'],hair:['#2a1d18','#0d0807'],eye:['#5a3214','#24140a'],brow:'#1a100c',line:'#140a06',lip:['#a8494f','#bd5c62','#7a2e34'],
+ cloth:['#f2b33d','#c98a1c',`<path d="MX-40,626 QX0,700 X40,626" stroke="#8a5a10" stroke-width="5" fill="none"/>`],
+ back:`<circle cx="X0" cy="196" r="62" fill="HR"/>`,
+ front:`<path d="MX-124,400 CX-132,262 X-52,214 X0,214 CX52,214 X132,262 X124,400 CX112,302 X64,258 X0,256 CX-64,258 X-112,302 X-124,400Z" fill="HR"/><path d="MX0,216 LX0,256" stroke="#5a4038" stroke-width="3"/><path d="MX-50,232 QX-80,250 X-100,300 MX50,232 QX80,250 X100,300" stroke="#5a4038" stroke-width="4" fill="none" opacity=".7"/>`,
+ extra:`<circle cx="X0" cy="362" r="6" fill="#c2185b"/><circle cx="X-118" cy="428" r="6" fill="#f5c04a"/><circle cx="X118" cy="428" r="6" fill="#f5c04a"/>`});
+// C — auburn bob, fair skin, green eyes, navy blazer
+out+=portrait(2,1200,{k:'C',d:'auburn bob, blazer',bg:['#d4ccff','#9a8de8'],skin:['#fbe0cb','#ecbfa0','#c48e6a'],hair:['#b5532a','#6e2a12'],eye:['#5c9a5a','#2c5a2a'],brow:'#7a3418',line:'#3a1a0c',lip:['#d0656c','#e07f86','#a5444b'],
+ cloth:['#3a4a8a','#222c5c',`<path d="MX-55,622 LX0,720 LX55,622" fill="#fff"/><path d="MX-55,622 LX-10,760 MX55,622 LX10,760" stroke="#161d40" stroke-width="5"/>`],
+ back:`<path d="MX-142,530 CX-165,300 X-80,196 X0,196 CX80,196 X165,300 X142,530 QX100,548 X92,500 LX-92,500 QX-100,548 X-142,530Z" fill="HR"/>`,
+ front:`<path d="MX-128,430 CX-136,262 X-40,206 X30,212 CX112,220 X140,300 X130,430 CX116,330 X82,288 X30,278 CX-10,322 X-82,336 X-128,430Z" fill="HR"/><path d="MX-20,226 CX40,226 X90,250 X110,300" stroke="#e08050" stroke-width="5" fill="none" opacity=".6" stroke-linecap="round"/>`});
+// D — natural curls, deep skin, orange top
+let curls='';for(let a=140;a<=400;a+=18){const t=a*Math.PI/180;curls+=`<circle cx="X${Math.round(Math.cos(t)*148)}" cy="${Math.round(350+Math.sin(t)*165)}" r="52" fill="HR"/>`;}
+out+=portrait(3,1680,{k:'D',d:'natural curls, orange top',bg:['#ffe9a0','#f2c14a'],skin:['#a8734f','#86553a','#5e3a24'],hair:['#2a1a12','#120a06'],eye:['#4a2a14','#1e1008'],brow:'#140a06',line:'#0e0704',lip:['#8a4448','#a3575b','#5e2a2e'],
+ cloth:['#f08a3c','#c4601c',`<path d="MX-50,624 QX0,672 X50,624" stroke="#8a3e10" stroke-width="5" fill="none"/>`],
+ back:curls.replace(/X(-?\d+)/g,'X$1'),
+ front:[[-96,262],[-56,236],[-10,226],[38,230],[82,246],[112,280]].map(([x,y])=>`<circle cx="X${x}" cy="${y}" r="38" fill="HR"/>`).join(''),
+ extra:`<circle cx="X-118" cy="430" r="10" fill="none" stroke="#f5c04a" stroke-width="4"/><circle cx="X118" cy="430" r="10" fill="none" stroke="#f5c04a" stroke-width="4"/>`});
+document.getElementById('d').innerHTML=defs;document.getElementById('c').innerHTML=out;
+</script></body></html>
