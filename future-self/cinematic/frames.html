@@ -1,0 +1,76 @@
+<!doctype html><html><head>
+<link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=block" rel="stylesheet">
+<style>body{margin:0;background:#000}svg{display:block}.T{font-family:'Luckiest Guy',Impact,sans-serif;fill:#fff;stroke:#000;stroke-width:14;paint-order:stroke;letter-spacing:2px}</style></head><body>
+<div id="w"></div>
+<script>
+let uid=0;
+// Our everyman: round beige head, one orange curl (brand), big tired eyes. Head centre = (0,0).
+function who(x,y,s,o){
+  const id='h'+(uid++), L=o.light||[-1,-0.3], rim=o.rim||'#ffcf8a';
+  const lookX=(o.look||[0,0])[0], lookY=(o.look||[0,0])[1], lid=o.lid??0.25;
+  let g=`<g transform="translate(${x},${y}) scale(${s})">
+  <defs><radialGradient id="${id}s" cx="${.5+L[0]*.18}" cy="${.42+L[1]*.15}" r=".75"><stop offset="0" stop-color="#efe3cf"/><stop offset=".6" stop-color="#c9b597"/><stop offset="1" stop-color="#5e4e3c"/></radialGradient>
+  <clipPath id="${id}c"><ellipse cx="0" cy="0" rx="150" ry="142"/></clipPath>
+  <radialGradient id="${id}e" cx=".5" cy=".4" r=".7"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#cfc8bc"/></radialGradient></defs>`;
+  // body
+  g+=`<path d="M-120,120 Q-170,190 -175,340 L175,340 Q170,190 120,120 Q0,170 -120,120Z" fill="url(#${id}s)" stroke="#1a120c" stroke-width="6"/>`;
+  g+=`<path d="M-120,120 Q-170,190 -175,340 L175,340 Q170,190 120,120" fill="none" stroke="${rim}" stroke-width="5" opacity=".55" transform="translate(${L[0]*6},0)"/>`;
+  // rim light behind head
+  g+=`<ellipse cx="${L[0]*8}" cy="${L[1]*8}" rx="154" ry="146" fill="${rim}" opacity=".85"/>`;
+  g+=`<ellipse cx="0" cy="0" rx="150" ry="142" fill="url(#${id}s)" stroke="#1a120c" stroke-width="6"/>`;
+  // curl
+  g+=`<path d="M-6,-140 C-30,-190 30,-210 34,-176 C36,-156 10,-152 6,-168" fill="none" stroke="#1a120c" stroke-width="20" stroke-linecap="round"/><path d="M-6,-140 C-30,-190 30,-210 34,-176 C36,-156 10,-152 6,-168" fill="none" stroke="#f08a24" stroke-width="11" stroke-linecap="round"/>`;
+  // eyes
+  for(const d of [-1,1]){const ex=d*58,ey=-8;
+    g+=`<clipPath id="${id}k${d}"><ellipse cx="${ex}" cy="${ey}" rx="42" ry="48"/></clipPath><ellipse cx="${ex}" cy="${ey}" rx="44" ry="50" fill="url(#${id}e)" stroke="#1a120c" stroke-width="5"/>`;
+    g+=`<circle cx="${ex+lookX}" cy="${ey+lookY+6}" r="${o.pupil||13}" fill="#120c08"/><circle cx="${ex+lookX+5}" cy="${ey+lookY}" r="5" fill="#fff"/>`;
+    if(o.vein) g+=`<path d="M${ex-38},${ey+8} l12,2 l6,-6 M${ex+36},${ey+14} l-10,-2 l-4,8" stroke="#c0392b" stroke-width="2" fill="none" opacity=".7"/>`;
+    // upper lid (tiredness / anger)
+    const tilt=(o.brow||0)*d; // + = angry (inner down), - = sad
+    g+=`<path d="M${ex-48},${ey-54} L${ex+48},${ey-54} L${ex+48},${ey-50+lid*90+tilt*-14} Q${ex},${ey-50+lid*90+20} ${ex-48},${ey-50+lid*90+tilt*14} Z" fill="#cbb796" clip-path="url(#${id}k${d})"/>`;
+    g+=`<path d="M${ex-46},${ey-48+lid*90+tilt*14} Q${ex},${ey-50+lid*90+18} ${ex+46},${ey-48+lid*90+tilt*-14}" stroke="#1a120c" stroke-width="6" fill="none" stroke-linecap="round"/>`;
+    // bags
+    g+=`<path d="M${ex-36},${ey+52} Q${ex},${ey+72} ${ex+36},${ey+52}" stroke="#6a4a6a" stroke-width="7" fill="none" opacity=".45" stroke-linecap="round"/><path d="M${ex-26},${ey+64} Q${ex},${ey+78} ${ex+26},${ey+64}" stroke="#6a4a6a" stroke-width="4" fill="none" opacity=".3" stroke-linecap="round"/>`;
+    // brows
+    g+=`<path d="M${ex-40},${ey-74+tilt*16} L${ex+40},${ey-74-tilt*16}" stroke="#1a120c" stroke-width="12" stroke-linecap="round"/>`;
+  }
+  // mouth
+  const m={frown:'M-34,96 Q0,74 34,96',wobble:'M-38,96 q10,-10 19,0 t19,0 t19,0 t19,0',flat:'M-26,92 L26,92'}[o.mouth];
+  if(m) g+=`<path d="${m}" stroke="#1a120c" stroke-width="7" fill="none" stroke-linecap="round"/>`;
+  if(o.mouth==='grin') g+=`<path d="M-50,80 Q0,124 50,80 Z" fill="#fff" stroke="#1a120c" stroke-width="6" stroke-linejoin="round"/><path d="M-30,88 L-30,104 M0,90 L0,110 M30,88 L30,104" stroke="#1a120c" stroke-width="3"/>`;
+  if(o.mouth==='o') g+=`<ellipse cx="0" cy="96" rx="16" ry="20" fill="#1a120c"/>`;
+  // shading on far side
+  g+=`<ellipse cx="${-L[0]*90}" cy="${-L[1]*40+30}" rx="140" ry="150" fill="#000" opacity=".22" clip-path="url(#${id}c)"/>`;
+  if(o.sweat) g+=`<path d="M128,-70 q14,30 0,40 q-14,-10 0,-40Z" fill="#9fd8ff" stroke="#1a120c" stroke-width="3"/><path d="M-130,-30 q10,22 0,30 q-10,-8 0,-30Z" fill="#9fd8ff" stroke="#1a120c" stroke-width="3"/>`;
+  if(o.tear) g+=`<path d="M${-58+0},48 q-6,40 0,60" stroke="#9fd8ff" stroke-width="8" fill="none" stroke-linecap="round" opacity=".9"/>`;
+  if(o.glow) g+=`<ellipse cx="${o.glow[0]}" cy="${o.glow[1]}" rx="260" ry="220" fill="${o.glow[2]}" opacity=".28" clip-path="url(#${id}c)" style="mix-blend-mode:screen"/>`;
+  return g+'</g>';
+}
+const frame=(bg,body,title)=>`<svg width="1280" height="720" viewBox="0 0 1280 720"><defs>${bg}<radialGradient id="vig" cx=".5" cy=".5" r=".75"><stop offset=".55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".85"/></radialGradient></defs>${body}<rect width="1280" height="720" fill="url(#vig)"/><text class="T" x="640" y="130" text-anchor="middle" font-size="118">${title}</text></svg>`;
+let H='';
+// 1. phone at night, balance in red
+H+=frame(`<radialGradient id="p1" cx=".5" cy=".72" r=".5"><stop offset="0" stop-color="#2a4a7a"/><stop offset="1" stop-color="#05060b"/></radialGradient>`,
+ `<rect width="1280" height="720" fill="url(#p1)"/><path d="M0,560 Q640,500 1280,560 L1280,720 L0,720Z" fill="#141a2c"/>`+
+ who(640,400,1.15,{light:[0,1],rim:'#8fc4ff',lid:.42,brow:-.6,mouth:'wobble',look:[0,18],sweat:1,glow:[0,140,'#7fb8ff']})+
+ `<g transform="translate(640,610) rotate(-6)"><rect x="-78" y="-60" width="156" height="120" rx="16" fill="#111"/><rect x="-68" y="-50" width="136" height="100" rx="8" fill="#eaf3ff"/><text x="0" y="-14" text-anchor="middle" font-family="Arial" font-weight="900" font-size="20" fill="#555">BALANCE</text><text x="0" y="26" text-anchor="middle" font-family="Arial" font-weight="900" font-size="38" fill="#e0243c">-$212</text></g>`+
+ `<circle cx="640" cy="610" r="170" fill="#9fd0ff" opacity=".12"/>`,'BROKE BY THE 20TH.');
+// 2. neighbor's car glowing under a street light
+H+=frame(`<linearGradient id="p2" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#07070c"/><stop offset="1" stop-color="#2a1d08"/></linearGradient><radialGradient id="lamp" cx=".5" cy="0" r="1"><stop offset="0" stop-color="#ffd27a" stop-opacity=".55"/><stop offset="1" stop-color="#ffd27a" stop-opacity="0"/></radialGradient>`,
+ `<rect width="1280" height="720" fill="url(#p2)"/><path d="M980,0 L760,720 L1280,720 L1280,0Z" fill="url(#lamp)"/><rect x="0" y="560" width="1280" height="160" fill="#0b0a0a"/><ellipse cx="990" cy="600" rx="280" ry="22" fill="#000" opacity=".6"/>`+
+ `<g transform="translate(990,590)"><path d="M-230,0 Q-220,-70 -120,-80 L-60,-140 Q20,-160 110,-140 L170,-80 Q240,-70 240,0 Z" fill="#c4161c"/><path d="M-50,-128 L90,-128 L140,-82 L-100,-82Z" fill="#3a4a66"/><path d="M-200,-40 L220,-40" stroke="#ff8a8a" stroke-width="6" opacity=".6"/><circle cx="-120" cy="0" r="42" fill="#111" stroke="#666" stroke-width="10"/><circle cx="140" cy="0" r="42" fill="#111" stroke="#666" stroke-width="10"/><path d="M-30,-170 l10,-24 l10,24 l24,10 l-24,10 l-10,24 l-10,-24 l-24,-10z" fill="#fff"/></g>`+
+  who(330,470,1.05,{light:[1,-0.2],rim:'#ffcf7a',lid:.38,brow:.7,mouth:'flat',look:[22,-4],sweat:1})+
+ `<g fill="#2e2216" stroke="#000" stroke-width="4">${[0,1,2,3,4,5,6].map(i=>`<rect x="${70+i*80}" y="560" width="56" height="200" rx="6"/>`).join('')}<rect x="40" y="590" width="600" height="26"/></g>`,'THEY WON. I PAID.');
+// 3. guilty shopping under a neon sale sign
+H+=frame(`<radialGradient id="p3" cx=".5" cy=".3" r=".8"><stop offset="0" stop-color="#4a0a18"/><stop offset="1" stop-color="#07050a"/></radialGradient><filter id="neon"><feGaussianBlur stdDeviation="10" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>`,
+ `<rect width="1280" height="720" fill="url(#p3)"/><text x="1010" y="330" text-anchor="middle" font-family="Arial" font-weight="900" font-size="150" fill="none" stroke="#ff3b6b" stroke-width="8" filter="url(#neon)">SALE</text><text x="1010" y="430" text-anchor="middle" font-family="Arial" font-weight="900" font-size="70" fill="none" stroke="#ffd23b" stroke-width="5" filter="url(#neon)">-70%</text>`+
+ who(560,410,1.1,{light:[1,-0.4],rim:'#ff7a9a',lid:.1,brow:-.5,mouth:'grin',look:[-14,0],sweat:1})+
+ [[-210,'#f5c04a'],[-60,'#ff7eb6'],[90,'#8fd3c7'],[230,'#ffffff']].map(([dx,c],i)=>`<g transform="translate(${560+dx},${620+(i%2)*20}) rotate(${(i-1.5)*6})"><path d="M-30,-70 q30,-50 60,0" stroke="#111" stroke-width="8" fill="none"/><rect x="-62" y="-70" width="124" height="150" rx="10" fill="${c}" stroke="#111" stroke-width="6"/></g>`).join(''),'JUST ONE THING.');
+// 4. mirror — future you looks back
+H+=frame(`<radialGradient id="p4" cx=".5" cy=".5" r=".7"><stop offset="0" stop-color="#3a2410"/><stop offset="1" stop-color="#060403"/></radialGradient><clipPath id="mir"><ellipse cx="900" cy="420" rx="230" ry="290"/></clipPath>`,
+ `<rect width="1280" height="720" fill="url(#p4)"/><ellipse cx="900" cy="420" rx="246" ry="306" fill="#6a4a22" stroke="#1a120c" stroke-width="8"/><ellipse cx="900" cy="420" rx="230" ry="290" fill="#1d2430"/>`+
+ `<g clip-path="url(#mir)">`+who(900,430,.95,{light:[-1,-0.2],rim:'#ffd59a',lid:.2,brow:-.2,mouth:'flat',look:[-20,0]})+
+ `<path d="M820,470 Q900,560 980,470 Q960,600 900,610 Q840,600 820,470Z" fill="#f2f2f2" opacity=".9"/>${[845,955].map(x=>`<circle cx="${x}" cy="422" r="50" fill="none" stroke="#1a120c" stroke-width="8"/>`).join('')}<rect x="660" y="130" width="500" height="600" fill="#9fc4ff" opacity=".08"/></g>`+
+ who(340,440,1.1,{light:[1,-0.2],rim:'#ffd59a',lid:.15,brow:-.4,mouth:'o',look:[22,-2],pupil:10})+
+ `<circle cx="600" cy="380" r="200" fill="#ffb35a" opacity=".06"/>`,'MEET FUTURE YOU.');
+document.getElementById('w').innerHTML=H;
+</script></body></html>
