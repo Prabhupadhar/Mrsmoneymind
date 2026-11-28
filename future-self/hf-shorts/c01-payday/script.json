@@ -1,0 +1,12 @@
+[
+ ["Forty-five dollars in fees. Then two hundred seventy.", 0.1, 1.24, "excited"],
+ ["You're broke by the twentieth, so you grab a quick loan.", 0.3, 1.24, "curious"],
+ ["Three hundred dollars until payday. The fee? Just forty-five.", 0.3, 1.24, "neutral"],
+ ["Asked what three months would cost, many guessed just one fee.", 0.35, 1.24, "curious"],
+ ["So in 2008, researchers changed the cash envelope at 77 payday stores.", 0.3, 1.24, "neutral"],
+ ["It added the fee up. Two weeks, forty-five. Three months, two hundred seventy.", 0.35, 1.24, "neutral"],
+ ["Those borrowers were eleven percent less likely to borrow again.", 0.5, 1.24, "shocked"],
+ ["And they borrowed nearly a quarter less.", 0.3, 1.24, "curious"],
+ ["A small fee feels like peanuts, until you add it up.", 0.35, 1.24, "warm"],
+ ["So forty-five dollars? Multiply it first.", 0.35, 1.24, "warm"]
+]

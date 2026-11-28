@@ -119,7 +119,7 @@ paper after reading it in full: if it does not, rewrite the hook to what the pap
 | H46 | Hack | "Bet your own money. Quit smoking." | Deposit contracts: putting money at stake raised quit rates | Halpern et al. 2015, NEJM | to verify |
 | H47 | Timing | "Farmers bought more on one specific day." | Offers at harvest time, when cash was on hand, raised fertilizer use | Duflo, Kremer & Robinson 2011, AER | used: h06-farmers |
 | H48 | Weird | "The cheaper drink made them solve fewer puzzles." | Price-placebo effect (check replications before using) | Shiv, Carmon & Ariely 2005, JMR | to verify |
-| H49 | Small change | "One line on a payday-loan envelope cut borrowing." | Showing fees in dollars reduced borrowing | Bertrand & Morse 2011, J. Finance | to verify |
+| H49 | Small change | "One line on a payday-loan envelope cut borrowing." | Showing fees in dollars reduced borrowing | Bertrand & Morse 2011, J. Finance | used: c01-payday (cinematic pilot, read in full) |
 | H50 | Curiosity | "Something didn't add up about rich countries." | Easterlin paradox vs Stevenson & Wolfers' cross-country data | Stevenson & Wolfers 2008, Brookings; Easterlin 1974 | to verify |
 
 | H51 | Hack | "A metal box made them save more." | Kenya: a simple lockbox for health savings raised health savings | Dupas & Robinson 2013, AEJ: Applied (NBER w17255) | used: h10-lockbox |

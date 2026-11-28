@@ -1,0 +1,62 @@
+[
+ {
+  "text": "Forty-five dollars in fees. Then two hundred seventy.",
+  "mood": "excited",
+  "start": 0.1,
+  "end": 2.306
+ },
+ {
+  "text": "You're broke by the twentieth, so you grab a quick loan.",
+  "mood": "curious",
+  "start": 2.606,
+  "end": 4.943
+ },
+ {
+  "text": "Three hundred dollars until payday. The fee? Just forty-five.",
+  "mood": "neutral",
+  "start": 5.243,
+  "end": 8.556
+ },
+ {
+  "text": "Asked what three months would cost, many guessed just one fee.",
+  "mood": "curious",
+  "start": 8.906,
+  "end": 11.683
+ },
+ {
+  "text": "So in 2008, researchers changed the cash envelope at 77 payday stores.",
+  "mood": "neutral",
+  "start": 11.983,
+  "end": 16.61
+ },
+ {
+  "text": "It added the fee up. Two weeks, forty-five. Three months, two hundred seventy.",
+  "mood": "neutral",
+  "start": 16.96,
+  "end": 20.872
+ },
+ {
+  "text": "Those borrowers were eleven percent less likely to borrow again.",
+  "mood": "shocked",
+  "start": 21.372,
+  "end": 24.578
+ },
+ {
+  "text": "And they borrowed nearly a quarter less.",
+  "mood": "curious",
+  "start": 24.878,
+  "end": 26.548
+ },
+ {
+  "text": "A small fee feels like peanuts, until you add it up.",
+  "mood": "warm",
+  "start": 26.898,
+  "end": 29.653
+ },
+ {
+  "text": "So forty-five dollars? Multiply it first.",
+  "mood": "warm",
+  "start": 30.003,
+  "end": 32.515
+ }
+]

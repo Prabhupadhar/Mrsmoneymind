@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1080, height=1920" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+<script src="voice.js"></script>
+<script src="kit.js"></script>
+<link rel="stylesheet" href="base.css" />
+<style>
+  @font-face { font-family: "Lucky"; src: url("assets/LuckiestGuy-Regular.ttf") format("truetype"); font-display: block; }
+  #root, html, body { background: #050407; }
+  .t { top: 210px; font-family: "Lucky", sans-serif; font-size: 100px; color: #fff; -webkit-text-stroke: 12px #000; paint-order: stroke fill; letter-spacing: 2px; }
+  .t b { color: #ffd23b; }
+  .hook { font-size: 104px !important; top: 190px !important; }
+  .lk { font-family: "Lucky", sans-serif; paint-order: stroke; stroke: #000; }
+  .ar { font-family: "Archivo Black", sans-serif; }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="34" data-width="1080" data-height="1920" data-motion-blur="on">
+  <svg id="art" class="clip" data-start="0" data-duration="34" viewBox="0 0 1080 1920">
+    <defs>
+      <radialGradient id="vig" cx=".5" cy=".5" r=".72"><stop offset=".55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".85"/></radialGradient>
+      <filter id="neon" x="-20%" y="-50%" width="140%" height="200%"><feGaussianBlur stdDeviation="9" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+      <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="40"/></filter>
+    </defs>
+    <rect width="1080" height="1920" fill="#050407"/>
+    <g id="s1" class="scene"><g id="c1"></g></g>
+    <g id="s2" class="scene"><g id="c2"></g></g>
+    <g id="s3" class="scene"><g id="c3"></g></g>
+    <g id="s4" class="scene"><g id="c4"></g></g>
+    <g id="s5" class="scene"><g id="c5"></g></g>
+    <g id="s7" class="scene"><g id="c7"></g></g>
+    <g id="s9" class="scene"><g id="c9"></g></g>
+    <g id="s10" class="scene"><g id="c10"></g></g>
+    <rect width="1080" height="1920" fill="url(#vig)" pointer-events="none"/>
+  </svg>
+  <div id="t1" class="cap t clip" data-start="0" data-duration="34"></div>
+  <div id="t2" class="cap t clip" data-start="0" data-duration="34"></div>
+  <div id="t3" class="cap t clip" data-start="0" data-duration="34"></div>
+  <div id="t4" class="cap t clip" data-start="0" data-duration="34"></div>
+  <div id="t5" class="cap t clip" data-start="0" data-duration="34"></div>
+  <div id="t6" class="cap t clip" data-start="0" data-duration="34"></div>
+</div>
+<script>
+window.__timelines = window.__timelines || {};
+var tl = gsap.timeline({ paused: true }), V = window.VO, D = window.DUR;
+var uid = 0;
+
+// ---------- the everyman: round beige head, one orange curl, big tired eyes (head centre = 0,0) ----------
+function who(o) {
+  var id = "w" + (uid++), L = o.light || [-1, -0.3], rim = o.rim || "#ffcf8a";
+  var lx = (o.look || [0, 0])[0], ly = (o.look || [0, 0])[1], lid = o.lid == null ? 0.25 : o.lid, i, d;
+  var g = '<defs><radialGradient id="' + id + 's" cx="' + (0.5 + L[0] * 0.18) + '" cy="' + (0.42 + L[1] * 0.15) + '" r=".75"><stop offset="0" stop-color="#efe3cf"/><stop offset=".6" stop-color="#c9b597"/><stop offset="1" stop-color="#5e4e3c"/></radialGradient>' +
+    '<clipPath id="' + id + 'c"><ellipse rx="150" ry="142"/></clipPath>' +
+    '<radialGradient id="' + id + 'e" cx=".5" cy=".4" r=".7"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#cfc8bc"/></radialGradient></defs>';
+  g += '<path d="M-120,120 Q-170,190 -175,340 L175,340 Q170,190 120,120 Q0,170 -120,120Z" fill="url(#' + id + 's)" stroke="#1a120c" stroke-width="6"/>';
+  g += '<ellipse cx="' + L[0] * 8 + '" cy="' + L[1] * 8 + '" rx="154" ry="146" fill="' + rim + '" opacity=".85"/>';
+  g += '<ellipse rx="150" ry="142" fill="url(#' + id + 's)" stroke="#1a120c" stroke-width="6"/>';
+  var curl = "M-6,-140 C-30,-190 30,-210 34,-176 C36,-156 10,-152 6,-168";
+  g += '<path d="' + curl + '" fill="none" stroke="#1a120c" stroke-width="20" stroke-linecap="round"/><path d="' + curl + '" fill="none" stroke="#f08a24" stroke-width="11" stroke-linecap="round"/>';
+  for (i = 0; i < 2; i++) {
+    d = i ? 1 : -1; var ex = d * 58, ey = -8, tilt = (o.brow || 0) * d, top = ey - 50 + lid * 90;
+    g += '<clipPath id="' + id + 'k' + i + '"><ellipse cx="' + ex + '" cy="' + ey + '" rx="42" ry="48"/></clipPath>';
+    g += '<ellipse cx="' + ex + '" cy="' + ey + '" rx="44" ry="50" fill="url(#' + id + 'e)" stroke="#1a120c" stroke-width="5"/>';
+    g += '<circle cx="' + (ex + lx) + '" cy="' + (ey + ly + 6) + '" r="' + (o.pupil || 13) + '" fill="#120c08"/><circle cx="' + (ex + lx + 5) + '" cy="' + (ey + ly) + '" r="5" fill="#fff"/>';
+    g += '<path d="M' + (ex - 48) + ',' + (ey - 54) + ' L' + (ex + 48) + ',' + (ey - 54) + ' L' + (ex + 48) + ',' + (top - tilt * 14) + ' Q' + ex + ',' + (top + 20) + ' ' + (ex - 48) + ',' + (top + tilt * 14) + ' Z" fill="#cbb796" clip-path="url(#' + id + 'k' + i + ')"/>';
+    g += '<path d="M' + (ex - 46) + ',' + (top + 2 + tilt * 14) + ' Q' + ex + ',' + (top + 18) + ' ' + (ex + 46) + ',' + (top + 2 - tilt * 14) + '" stroke="#1a120c" stroke-width="6" fill="none" stroke-linecap="round"/>';
+    g += '<path d="M' + (ex - 36) + ',' + (ey + 52) + ' Q' + ex + ',' + (ey + 72) + ' ' + (ex + 36) + ',' + (ey + 52) + '" stroke="#6a4a6a" stroke-width="7" fill="none" opacity=".45" stroke-linecap="round"/>';
+    g += '<path d="M' + (ex - 40) + ',' + (ey - 74 + tilt * 16) + ' L' + (ex + 40) + ',' + (ey - 74 - tilt * 16) + '" stroke="#1a120c" stroke-width="12" stroke-linecap="round"/>';
+  }
+  var m = { frown: "M-34,96 Q0,74 34,96", wobble: "M-38,96 q10,-10 19,0 t19,0 t19,0 t19,0", flat: "M-26,92 L26,92", smile: "M-36,86 Q0,116 36,86" }[o.mouth];
+  if (m) g += '<path d="' + m + '" stroke="#1a120c" stroke-width="7" fill="none" stroke-linecap="round"/>';
+  if (o.mouth === "o") g += '<ellipse cy="96" rx="16" ry="20" fill="#1a120c"/>';
+  if (o.mouth === "grin") g += '<path d="M-50,80 Q0,124 50,80 Z" fill="#fff" stroke="#1a120c" stroke-width="6" stroke-linejoin="round"/>';
+  g += '<ellipse cx="' + (-L[0] * 90) + '" cy="' + (-L[1] * 40 + 30) + '" rx="140" ry="150" fill="#000" opacity=".22" clip-path="url(#' + id + 'c)"/>';
+  if (o.sweat) g += '<path d="M128,-70 q14,30 0,40 q-14,-10 0,-40Z" fill="#9fd8ff" stroke="#1a120c" stroke-width="3"/>';
+  if (o.glow) g += '<ellipse cx="' + o.glow[0] + '" cy="' + o.glow[1] + '" rx="260" ry="220" fill="' + o.glow[2] + '" opacity=".3" clip-path="url(#' + id + 'c)"/>';
+  return g;
+}
+// actor = body + several expressions stacked (crossfaded) + eyelids for blinks. Animate #id (breath) and #id-<exp>.
+function actor(id, x, y, s, base, exps, first) {
+  var m = '<g transform="translate(' + x + ',' + y + ') scale(' + s + ')"><g id="' + id + '">';
+  Object.keys(exps).forEach(function (k) { m += '<g id="' + id + '-' + k + '" opacity="' + (k === first ? 1 : 0) + '">' + who(Object.assign({}, base, exps[k])) + '</g>'; });
+  m += '<g id="' + id + '-lids" opacity="0">' + [-58, 58].map(function (ex) { return '<ellipse cx="' + ex + '" cy="-8" rx="46" ry="52" fill="#c4ae8c" stroke="#1a120c" stroke-width="5"/><path d="M' + (ex - 40) + ',4 Q' + ex + ',18 ' + (ex + 40) + ',4" stroke="#1a120c" stroke-width="6" fill="none"/>'; }).join("") + '</g>';
+  return m + '</g></g>';
+}
+function ex(id, from, to, t) { tl.to("#" + id + "-" + from, { opacity: 0, duration: 0.22, ease: "sine.inOut" }, t); tl.to("#" + id + "-" + to, { opacity: 1, duration: 0.22, ease: "sine.inOut" }, t); }
+function blink(id, t) { tl.set("#" + id + "-lids", { opacity: 1 }, t); tl.set("#" + id + "-lids", { opacity: 0 }, t + 0.11); }
+function breathe(id, t0, t1) { var n = Math.max(1, Math.round((t1 - t0) / 1.4)); for (var i = 0; i < n; i++) tl.to("#" + id, { scaleY: i % 2 ? 1 : 1.018, scaleX: i % 2 ? 1 : 0.995, transformOrigin: "50% 100%", duration: (t1 - t0) / n, ease: "sine.inOut" }, t0 + i * (t1 - t0) / n); }
+function react(id, t) { tl.fromTo("#" + id, { y: 0 }, { y: -26, duration: 0.14, yoyo: true, repeat: 1, ease: "power2.out", immediateRender: false }, t); }
+// smooth scene change: old one drifts forward and dissolves, new one settles in; each scene pushes in slowly
+function xf(from, to, t, life) {
+  if (from) { tl.to(from, { opacity: 0, duration: 0.5, ease: "power2.inOut" }, t); tl.to(from + " > g", { scale: 1.12, svgOrigin: "540 960", duration: 0.5, ease: "power2.in" }, t); }
+  tl.fromTo(to, { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power2.out", immediateRender: false }, t + 0.08);
+  tl.fromTo(to + " > g", { scale: 0.94, svgOrigin: "540 960" }, { scale: 1.06, svgOrigin: "540 960", duration: life, ease: "none", immediateRender: false }, t + 0.08);
+}
+function txt(sel, html, t, until) { K.words(sel, html); K.title(tl, sel, t); if (until) tl.to(sel, { opacity: 0, duration: 0.2 }, until); }
+
+// ---------- S1 HOOK: red glow, shocked face, the fee ticks 45 -> 270 ----------
+K.add("#c1", '<defs><radialGradient id="b1" cx=".5" cy=".7" r=".6"><stop offset="0" stop-color="#6a0c18"/><stop offset="1" stop-color="#060407"/></radialGradient></defs><rect width="1080" height="1920" fill="url(#b1)"/>' +
+  actor("a1", 540, 900, 1.35, { light: [0, 1], rim: "#ff6b7a", glow: [0, 160, "#ff4a5a"] }, { shock: { lid: 0.02, brow: -0.5, mouth: "o", pupil: 9, sweat: 1 } }, "shock") +
+  '<g transform="translate(540,1330) rotate(-3)"><g id="rc"><rect x="-290" y="-110" width="580" height="220" rx="18" fill="#f4efe4" stroke="#1a120c" stroke-width="8"/>' +
+  '<text x="-250" y="-40" class="ar" font-size="40" fill="#6b6257">PAYDAY FEE</text><text id="n1" x="250" y="70" text-anchor="end" class="ar" font-size="120" fill="#d61f36">$45</text></g></g>');
+K.show(tl, "#s1", 0);
+tl.fromTo("#c1", { scale: 1, svgOrigin: "540 960" }, { scale: 1.08, svgOrigin: "540 960", duration: V[1], ease: "none" }, 0);
+K.hook(tl, "#t1", "<b>$45</b> in fees. Then <b>$270.</b>", V[1] - 0.25);
+tl.fromTo("#rc", { y: 260, rotation: 8 }, { y: 0, rotation: 0, duration: 0.6, ease: "back.out(1.8)" }, 0);
+K.counter(tl, "#n1", 45, 270, 1.3, 1.0, function (v) { return "$" + Math.round(v); });
+tl.fromTo("#rc", { scale: 1 }, { scale: 1.08, duration: 0.18, yoyo: true, repeat: 1, ease: "power2.out", transformOrigin: "50% 50%", immediateRender: false }, 2.3);
+react("a1", 2.3); breathe("a1", 0, 2.4);
+
+// ---------- S2: broke by the 20th, phone glow at night ----------
+K.add("#c2", '<defs><radialGradient id="b2" cx=".5" cy=".75" r=".6"><stop offset="0" stop-color="#1e3a66"/><stop offset="1" stop-color="#04050a"/></radialGradient></defs><rect width="1080" height="1920" fill="url(#b2)"/>' +
+  '<g transform="translate(170,560)"><rect x="-90" y="-110" width="180" height="200" rx="10" fill="#141c2e" stroke="#2c3a5a" stroke-width="6"/><circle cx="30" cy="-40" r="34" fill="#dfe8ff" opacity=".85"/><circle cx="44" cy="-48" r="30" fill="#141c2e"/></g>' +
+  '<g transform="translate(860,560)"><rect x="-130" y="-140" width="260" height="280" rx="12" fill="#e9e2d2" stroke="#1a120c" stroke-width="6"/><rect x="-130" y="-140" width="260" height="60" rx="12" fill="#c2273a"/>' +
+  [16, 17, 18, 19, 20, 21, 22, 23, 24].map(function (n, i) { return '<text x="' + (-82 + (i % 3) * 82) + '" y="' + (-28 + Math.floor(i / 3) * 62) + '" text-anchor="middle" class="ar" font-size="36" fill="#3a332b">' + n + '</text>'; }).join("") +
+  '<g id="ring" opacity="0"><ellipse cx="0" cy="22" rx="44" ry="34" fill="none" stroke="#e0243c" stroke-width="7"/></g></g>' +
+  actor("a2", 540, 1000, 1.3, { light: [0, 1], rim: "#8fc4ff", glow: [0, 140, "#7fb8ff"] }, { worry: { lid: 0.42, brow: -0.6, mouth: "wobble", look: [0, 18], sweat: 1 } }, "worry") +
+  '<g transform="translate(540,1350) rotate(-5)"><g id="ph"><rect x="-90" y="-70" width="180" height="140" rx="18" fill="#0d0d12"/><rect x="-78" y="-58" width="156" height="116" rx="8" fill="#eaf3ff"/>' +
+  '<text y="-10" text-anchor="middle" class="ar" font-size="24" fill="#555">BALANCE</text><text y="30" text-anchor="middle" class="ar" font-size="30" fill="#e0243c">TOO LOW</text></g></g>' +
+  '<ellipse cx="540" cy="1340" rx="230" ry="140" fill="#9fd0ff" opacity=".13" filter="url(#glow)"/>');
+xf("#s1", "#s2", V[1] - 0.3, V[2] - V[1] + 0.6);
+txt("#t2", "broke by the <b>20th.</b>", V[1] + 0.1, V[2] - 0.25);
+K.pop(tl, "#ring", V[1] + 1.1, 0.5);
+tl.fromTo("#ph", { y: 300 }, { y: 0, duration: 0.6, ease: "power3.out", immediateRender: false }, V[1] + 0.2);
+breathe("a2", V[1], V[2]); blink("a2", V[1] + 1.6);
+
+// ---------- S3: payday store, $300 in an envelope, fee just $45 ----------
+K.add("#c3", '<defs><radialGradient id="b3" cx=".5" cy=".3" r=".75"><stop offset="0" stop-color="#3a0a3a"/><stop offset="1" stop-color="#050307"/></radialGradient></defs><rect width="1080" height="1920" fill="url(#b3)"/>' +
+  '<g id="sign"><text x="540" y="560" text-anchor="middle" class="ar" font-size="96" fill="none" stroke="#ff4fd8" stroke-width="6" filter="url(#neon)">PAYDAY</text><text x="540" y="660" text-anchor="middle" class="ar" font-size="76" fill="none" stroke="#5ad1ff" stroke-width="5" filter="url(#neon)">LOANS</text></g>' +
+  actor("a3", 540, 1010, 1.15, { light: [0, -1], rim: "#ff8fe0" }, { calm: { lid: 0.18, brow: -0.25, mouth: "smile", look: [0, 22] } }, "calm") +
+  '<rect x="0" y="1260" width="1080" height="80" fill="#2a1a12"/><rect x="0" y="1250" width="1080" height="16" fill="#5a3a24"/>' +
+  '<g transform="translate(540,1300)"><g id="env"><rect x="-230" y="-90" width="460" height="190" rx="10" fill="#d9b98a" stroke="#1a120c" stroke-width="7"/><path d="M-230,-90 L0,20 L230,-90" fill="none" stroke="#1a120c" stroke-width="5"/>' +
+  '<rect x="-180" y="-150" width="230" height="110" rx="8" fill="#7dd88f" stroke="#1a120c" stroke-width="6"/><text x="-65" y="-78" text-anchor="middle" class="ar" font-size="46" fill="#1d5a32">$300</text></g></g>' +
+  '<g transform="translate(800,1180) rotate(8)"><g id="tag" opacity="0"><rect x="-110" y="-56" width="220" height="112" rx="14" fill="#ffd23b" stroke="#1a120c" stroke-width="6"/><text y="-6" text-anchor="middle" class="ar" font-size="30" fill="#1a120c">FEE</text><text y="42" text-anchor="middle" class="ar" font-size="52" fill="#1a120c">$45</text></g></g>');
+xf("#s2", "#s3", V[2] - 0.3, V[3] - V[2] + 0.6);
+tl.fromTo("#env", { y: 220, rotation: -6 }, { y: 0, rotation: 0, duration: 0.6, ease: "back.out(1.6)", immediateRender: false }, V[2]);
+K.pop(tl, "#tag", V[2] + 2.0, 0.3);
+txt("#t3", "just <b>$45.</b>", V[2] + 2.0, V[3] - 0.25);
+tl.fromTo("#sign", { opacity: 0.75 }, { opacity: 1, duration: 0.09, repeat: 5, yoyo: true, ease: "none", immediateRender: false }, V[2] + 0.4);
+breathe("a3", V[2], V[3]); blink("a3", V[2] + 1.2);
+
+// ---------- S4: "3 months = ?" -- many guess one fee ----------
+K.add("#c4", '<defs><radialGradient id="b4" cx=".35" cy=".55" r=".7"><stop offset="0" stop-color="#2d2a18"/><stop offset="1" stop-color="#060504"/></radialGradient></defs><rect width="1080" height="1920" fill="url(#b4)"/>' +
+  actor("a4", 380, 1060, 1.15, { light: [1, -0.4], rim: "#ffd27a" }, { think: { lid: 0.3, brow: 0.15, mouth: "flat", look: [22, -22] }, sure: { lid: 0.2, brow: -0.2, mouth: "smile", look: [22, -22] } }, "think") +
+  '<g transform="translate(760,640)"><g id="bub" opacity="0"><circle cx="-190" cy="250" r="16" fill="#f4efe4"/><circle cx="-150" cy="200" r="24" fill="#f4efe4"/>' +
+  '<ellipse rx="250" ry="170" fill="#f4efe4" stroke="#1a120c" stroke-width="7"/><text y="-36" text-anchor="middle" class="ar" font-size="52" fill="#1a120c">3 MONTHS</text>' +
+  '<text id="q" y="64" text-anchor="middle" class="ar" font-size="96" fill="#1a120c">= ?</text><text id="g45" y="64" text-anchor="middle" class="ar" font-size="96" fill="#d61f36" opacity="0">= $45</text></g></g>');
+xf("#s3", "#s4", V[3] - 0.3, V[4] - V[3] + 0.6);
+K.pop(tl, "#bub", V[3] + 0.3, 0.4);
+tl.to("#q", { opacity: 0, duration: 0.2 }, V[3] + 1.7); tl.to("#g45", { opacity: 1, duration: 0.25 }, V[3] + 1.75);
+ex("a4", "think", "sure", V[3] + 1.75); react("a4", V[3] + 1.8);
+breathe("a4", V[3], V[4]); blink("a4", V[3] + 0.9);
+
+// ---------- S5: 2008, 77 stores, the envelope flips: 2 weeks $45 ... 3 months $270 ----------
+var stores = ""; for (var i = 0; i < 77; i++) stores += '<g class="st" transform="translate(' + (150 + (i % 11) * 78) + ',' + (520 + Math.floor(i / 11) * 70) + ')"><path d="M-24,0 L0,-22 L24,0 L24,30 L-24,30Z" fill="#3a3a44"/></g>';
+K.add("#c5", '<defs><radialGradient id="b5" cx=".5" cy=".6" r=".7"><stop offset="0" stop-color="#3a2410"/><stop offset="1" stop-color="#060403"/></radialGradient></defs><rect width="1080" height="1920" fill="url(#b5)"/>' +
+  '<g id="stg">' + stores + '</g><text id="yr" x="540" y="1030" text-anchor="middle" class="ar" font-size="54" fill="#ffd27a" opacity="0">2008 · 77 PAYDAY STORES</text>' +
+  '<g transform="translate(540,1250)"><g id="flip"><g id="eback"><rect x="-380" y="-190" width="760" height="380" rx="16" fill="#d9b98a" stroke="#1a120c" stroke-width="8"/><path d="M-380,-190 L0,40 L380,-190" fill="none" stroke="#1a120c" stroke-width="6"/></g>' +
+  '<g id="efront" opacity="0"><rect x="-380" y="-190" width="760" height="380" rx="16" fill="#f4efe4" stroke="#1a120c" stroke-width="8"/>' +
+  '<text x="-330" y="-110" class="ar" font-size="34" fill="#6b6257">FEES ON A $300 LOAN</text>' +
+  '<g id="r1" opacity="0"><text x="-330" y="-10" class="ar" font-size="56" fill="#1a120c">2 WEEKS</text><text x="330" y="-10" text-anchor="end" class="ar" font-size="64" fill="#1a120c">$45</text></g>' +
+  '<line x1="-330" y1="30" x2="330" y2="30" stroke="#cfc6b8" stroke-width="4"/>' +
+  '<g id="r2" opacity="0"><text x="-330" y="120" class="ar" font-size="56" fill="#1a120c">3 MONTHS</text><text id="n270" x="330" y="124" text-anchor="end" class="ar" font-size="86" fill="#d61f36">$270</text></g></g></g></g>');
+xf("#s4", "#s5", V[4] - 0.3, V[6] - V[4] + 0.6);
+tl.set(".st path", { fill: "#3a3a44" }, 0);
+tl.to(".st path", { fill: "#ffd27a", duration: 0.05, stagger: 1.4 / 77 }, V[4] + 1.2);
+K.pop(tl, "#yr", V[4] + 0.5, 0.6);
+tl.fromTo("#flip", { y: 500, rotation: -4 }, { y: 0, rotation: 0, duration: 0.7, ease: "power3.out", immediateRender: false }, V[4] + 0.3);
+// the flip (squash X to 0, swap faces, open back up) and the envelope moves up over the stores
+tl.to("#flip", { scaleX: 0, transformOrigin: "50% 50%", duration: 0.25, ease: "power2.in" }, V[5] - 0.35);
+tl.set("#eback", { opacity: 0 }, V[5] - 0.1); tl.set("#efront", { opacity: 1 }, V[5] - 0.1);
+tl.to("#flip", { scaleX: 1, transformOrigin: "50% 50%", duration: 0.3, ease: "power2.out" }, V[5] - 0.1);
+tl.to(["#stg", "#yr"], { opacity: 0, duration: 0.4 }, V[5] - 0.3);
+tl.to("#flip", { y: -380, duration: 0.6, ease: "power2.inOut" }, V[5] - 0.1);
+K.pop(tl, "#r1", V[5] + 0.9, 0.6);
+K.pop(tl, "#r2", V[5] + 2.3, 0.4);
+tl.fromTo("#n270", { scale: 1 }, { scale: 1.15, transformOrigin: "100% 50%", duration: 0.2, yoyo: true, repeat: 1, ease: "power2.out", immediateRender: false }, V[5] + 2.9);
+K.add("#c5", actor("a5", 540, 1270, 0.95, { light: [0, -1], rim: "#ffd27a" }, { read: { lid: 0.25, brow: 0, mouth: "flat", look: [0, -24] }, wide: { lid: 0.0, brow: -0.6, mouth: "o", look: [0, -26], pupil: 9, sweat: 1 } }, "read"));
+tl.set("#a5", { opacity: 0 }, 0); tl.fromTo("#a5", { opacity: 0, y: 200 }, { opacity: 1, y: 0, duration: 0.6, ease: "power3.out", immediateRender: false }, V[5] + 0.2);
+ex("a5", "read", "wide", V[5] + 2.4); react("a5", V[5] + 2.5); blink("a5", V[5] + 1.4);
+
+// ---------- S7: TWIST, 11% less likely to borrow again; then nearly a quarter less ----------
+K.add("#c7", '<defs><radialGradient id="b7" cx=".5" cy=".45" r=".7"><stop offset="0" stop-color="#0f3a24"/><stop offset="1" stop-color="#030604"/></radialGradient></defs><rect width="1080" height="1920" fill="url(#b7)"/>' +
+  '<text id="n11" x="540" y="560" text-anchor="middle" class="lk" font-size="230" fill="#7dff9a" stroke-width="16">-0%</text>' +
+  '<text id="l11" x="540" y="660" text-anchor="middle" class="ar" font-size="46" fill="#e6f5ea" opacity="0">less likely to borrow again</text>' +
+  actor("a7", 540, 1010, 1.05, { light: [0, -1], rim: "#7dff9a" }, { wide: { lid: 0.0, brow: -0.6, mouth: "o", pupil: 8 }, nod: { lid: 0.15, brow: 0.2, mouth: "smile" } }, "wide") +
+  '<g id="bars" opacity="0"><text x="130" y="1270" class="ar" font-size="34" fill="#c9d6cc">usual envelope</text><rect x="130" y="1290" width="820" height="54" rx="12" fill="#6b7a70"/>' +
+  '<text x="130" y="1400" class="ar" font-size="34" fill="#c9d6cc">added-up envelope</text><rect id="b23" x="130" y="1420" width="820" height="54" rx="12" fill="#7dff9a"/>' +
+  '<text id="p23" x="950" y="1400" text-anchor="end" class="lk" font-size="64" fill="#7dff9a" stroke-width="10" opacity="0">-23%</text></g>');
+xf("#s5", "#s7", V[6] - 0.45, V[8] - V[6] + 0.6);
+K.counter(tl, "#n11", 0, 11, V[6] + 0.1, 0.9, function (v) { return "-" + Math.round(v) + "%"; });
+tl.fromTo("#n11", { scale: 1.4, svgOrigin: "540 480" }, { scale: 1, svgOrigin: "540 480", duration: 0.6, ease: "back.out(2)", immediateRender: false }, V[6] + 0.1);
+K.pop(tl, "#l11", V[6] + 0.9, 0.7);
+react("a7", V[6] + 0.15); breathe("a7", V[6], V[8]); blink("a7", V[6] + 2.2);
+tl.to("#a7", { y: -120, duration: 0.6, ease: "power2.inOut" }, V[7] - 0.2);
+tl.to("#bars", { opacity: 1, duration: 0.35 }, V[7]);
+tl.fromTo("#b23", { scaleX: 1, svgOrigin: "130 0" }, { scaleX: 0.77, svgOrigin: "130 0", duration: 0.8, ease: "power3.inOut", immediateRender: false }, V[7] + 0.4);
+tl.to("#p23", { opacity: 1, duration: 0.3 }, V[7] + 1.0);
+ex("a7", "wide", "nod", V[7] + 0.9);
+
+// ---------- S9: peanuts that add up: six $45 coins stack to $270 ----------
+var coins = ""; for (var j = 0; j < 6; j++) coins += '<g transform="translate(' + (190 + j * 140) + ',860)"><g class="cn" opacity="0"><ellipse cy="10" rx="58" ry="20" fill="#8a6a14"/><rect x="-58" y="-14" width="116" height="24" fill="#c9971c"/><ellipse cy="-14" rx="58" ry="20" fill="#ffd23b" stroke="#1a120c" stroke-width="4"/><text y="-6" text-anchor="middle" class="ar" font-size="24" fill="#5a4208">$45</text></g></g>';
+K.add("#c9", '<defs><radialGradient id="b9" cx=".5" cy=".45" r=".7"><stop offset="0" stop-color="#3a2a08"/><stop offset="1" stop-color="#050403"/></radialGradient></defs><rect width="1080" height="1920" fill="url(#b9)"/>' +
+  '<g transform="translate(540,700)"><g id="nut"><ellipse rx="40" ry="62" fill="#d6a868" stroke="#1a120c" stroke-width="5"/><path d="M-36,0 Q0,12 36,0" stroke="#8a5a2a" stroke-width="4" fill="none"/></g></g>' +
+  coins + '<text id="tot" x="540" y="1040" text-anchor="middle" class="lk" font-size="150" fill="#ff5a6a" stroke-width="14" opacity="0">$270</text>' +
+  actor("a9", 540, 1330, 0.85, { light: [0, -1], rim: "#ffd27a" }, { up: { lid: 0.1, brow: -0.3, mouth: "o", look: [0, -26] } }, "up"));
+xf("#s7", "#s9", V[8] - 0.3, V[9] - V[8] + 0.6);
+txt("#t4", "<b>peanuts?</b>", V[8] + 0.1, V[9] - 0.25);
+tl.to("#nut", { scale: 0, opacity: 0, transformOrigin: "50% 50%", duration: 0.3, ease: "back.in(2)" }, V[8] + 1.3);
+tl.fromTo(".cn", { opacity: 0, y: -140 }, { opacity: 1, y: 0, duration: 0.3, stagger: 0.16, ease: "bounce.out", immediateRender: false }, V[8] + 1.4);
+K.pop(tl, "#tot", V[8] + 2.5, 0.5);
+react("a9", V[8] + 2.55); breathe("a9", V[8], V[9]);
+
+// ---------- S10: loop -- $45? multiply it first ----------
+K.add("#c10", '<defs><radialGradient id="b10" cx=".5" cy=".7" r=".6"><stop offset="0" stop-color="#5a0c16"/><stop offset="1" stop-color="#060407"/></radialGradient></defs><rect width="1080" height="1920" fill="url(#b10)"/>' +
+  actor("a10", 540, 900, 1.2, { light: [0, 1], rim: "#ff6b7a" }, { firm: { lid: 0.2, brow: 0.45, mouth: "flat", look: [0, 20] } }, "firm") +
+  '<g transform="translate(540,1330) rotate(-3)"><rect x="-290" y="-110" width="580" height="220" rx="18" fill="#f4efe4" stroke="#1a120c" stroke-width="8"/>' +
+  '<text x="-250" y="70" class="ar" font-size="110" fill="#1a120c">$45</text><text id="x6" x="20" y="64" class="ar" font-size="66" fill="#d61f36" opacity="0">×6 = ?</text></g>' +
+  '<g id="cta" opacity="0"><rect x="190" y="420" width="700" height="120" rx="60" fill="#000" opacity=".6"/><text x="540" y="500" text-anchor="middle" class="ar" font-size="44" fill="#fff">Would you take it? <tspan fill="#7dff9a">YES</tspan> / <tspan fill="#ff5a6a">NO</tspan></text></g>');
+xf("#s9", "#s10", V[9] - 0.3, D - V[9] + 0.6);
+txt("#t5", "multiply it <b>first.</b>", V[9] + 1.0);
+K.pop(tl, "#x6", V[9] + 1.2, 0.4);
+K.pop(tl, "#cta", V[9] + 2.3, 0.6);
+breathe("a10", V[9], D); blink("a10", V[9] + 0.7);
+
+tl.set({}, {}, D);
+window.__timelines["main"] = tl;
+</script>
+</body>
+</html>

@@ -267,3 +267,17 @@ Read (abstract, introduction, Experiment 1 India and Experiment 2 MIT).
 - Abstract: "With some important exceptions ... high reward levels can have detrimental effects on performance." The MIT key-pressing
   line is the exception shown in the Short.
 - Safe hook: "Biggest bonus. Worst results." (true across the three India groups)
+
+## c01-payday (cinematic everyman pilot): Bertrand & Morse, "Information Disclosure, Cognitive Biases and Payday Borrowing"
+Read in full: July 2010 working-paper version (J-PAL copy; published J. Finance 66, 2011, 1865-1893).
+- Field experiment at a national payday-lending chain: 77 stores (of 100 planned), 11 states, May-Sept 2008; 1,441 of 6,538 asked
+  borrowers consented (21%). Information printed on the cash envelope; store-day randomisation; ~4 months of lender records after.
+- Dollar treatment envelope: fees on a $300 payday loan = $45 for two weeks, $270 for three months (vs credit card $2.50 / $15).
+  "$45 x 6 = $270" on screen is the paper's own two numbers (6 two-week cycles in 3 months).
+- Phone survey (185 reached): many answered that 3 months costs one cycle's fee ($45-$51); ~30% answered correctly.
+  Voice says "many guessed just one fee" (not "most", because 40% did not answer).
+- Result: Dollar envelope cut the chance of borrowing in a pay cycle by 5.9 points vs 54.2% for control = ~11% less likely;
+  amount borrowed per cycle -$55 vs $235 = 23% less ("nearly a quarter less"). Only the Dollar treatment is significant in every model;
+  joint test of all info treatments p = 0.053 with store-clustered errors. Savings planner: no effect.
+- Caveats: one lender only (but same effect in stores with no nearby competitor); one-time exposure; 21% consent rate.
+- "Broke by the 20th", the calendar and the low-balance phone are a fictional set-up, not paper data.
