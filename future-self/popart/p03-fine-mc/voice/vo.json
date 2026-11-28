@@ -1,0 +1,62 @@
+[
+ {
+  "text": "They fined late parents. Lateness got worse.",
+  "mood": "shocked",
+  "start": 0.1,
+  "end": 2.738
+ },
+ {
+  "text": "Picture a daycare. Closing time is four p.m.",
+  "mood": "neutral",
+  "start": 3.138,
+  "end": 6.174
+ },
+ {
+  "text": "Some parents run late, so a teacher waits with their kid.",
+  "mood": "warm",
+  "start": 6.474,
+  "end": 9.681
+ },
+ {
+  "text": "Ten daycares in Haifa. Six got a new rule.",
+  "mood": "curious",
+  "start": 10.031,
+  "end": 12.722
+ },
+ {
+  "text": "Ten minutes late? You pay a fine.",
+  "mood": "firm",
+  "start": 13.022,
+  "end": 14.934
+ },
+ {
+  "text": "Late pickups went up. Almost doubled.",
+  "mood": "shocked",
+  "start": 15.334,
+  "end": 17.487
+ },
+ {
+  "text": "Then the fine was removed.",
+  "mood": "curious",
+  "start": 17.987,
+  "end": 19.314
+ },
+ {
+  "text": "They kept coming late anyway.",
+  "mood": "sad",
+  "start": 19.714,
+  "end": 21.511
+ },
+ {
+  "text": "The fine turned a favor into a price.",
+  "mood": "firm",
+  "start": 22.011,
+  "end": 24.007
+ },
+ {
+  "text": "Paying for it took away the guilt.",
+  "mood": "whisper",
+  "start": 24.407,
+  "end": 26.752
+ }
+]

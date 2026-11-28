@@ -1,0 +1,45 @@
+<template>
+  <style>
+    @font-face { font-family: "Hand"; src: url("assets/fonts/PatrickHand-Regular.ttf"); }
+    #root { position: absolute; inset: 0; background: #1a2b66; overflow: hidden; }
+    #cl-art { position: absolute; inset: 0; }
+    .rk { stroke: #0d0f22; stroke-linecap: round; stroke-linejoin: round; }
+    .pop { font-family: Hand; font-size: 150px; fill: #ffb35c; stroke: #0d0f22; stroke-width: 14px; paint-order: stroke; stroke-linejoin: round; }
+    .lab { font-family: Hand; font-size: 56px; fill: #f4f1ff; }
+  </style>
+  <div id="root" data-composition-id="close" data-width="1920" data-height="1080">
+    <svg id="cl-art" class="clip" data-start="0" data-duration="30" viewBox="0 0 1920 1080" data-layout-allow-overflow>
+      <defs>
+        <radialGradient id="cl-bg" cx="0.5" cy="0.55" r="0.75"><stop offset="0" stop-color="#2a4a9f"/><stop offset="1" stop-color="#111c4c"/></radialGradient>
+      </defs>
+      <rect width="1920" height="1080" fill="url(#cl-bg)"/>
+      <g fill="#fff" opacity="0.06"><circle cx="300" cy="160" r="4"/><circle cx="1500" cy="960" r="5"/><circle cx="1760" cy="140" r="4"/></g>
+
+      <defs><radialGradient id="cl-warm"><stop offset="0" stop-color="#ffb35c" stop-opacity="0.6"/><stop offset="1" stop-color="#ff8a2a" stop-opacity="0"/></radialGradient></defs>
+      <circle id="cl-glow" cx="960" cy="620" r="520" fill="url(#cl-warm)" opacity="0"/>
+      <g transform="translate(560,640) scale(0.55)"><g id="cl-kid"><g data-rig="kid" data-p="lk" data-o='{"mouth":"smile","brows":"up","look":[40,0]}'></g></g></g>
+      <g transform="translate(1360,640) scale(0.55)"><g id="cl-nb"><g data-rig="nb" data-p="ln" data-o='{"mouth":"smile","brows":"up","look":[-40,0]}'></g></g></g>
+      <g transform="translate(800,860)"><g id="cl-c1"><path class="rk" d="M40,-20 C80,-20 80,30 40,30" fill="none" stroke-width="14"/><path class="rk" d="M-50,-60 L50,-60 L40,70 L-40,70 Z" fill="#f7f3ea" stroke-width="9"/><rect x="-46" y="-10" width="92" height="34" fill="#8a5a3c"/><path class="rk" d="M-56,-60 L56,-60" stroke-width="12"/></g></g>
+      <g transform="translate(1120,860) scale(-1,1)"><g id="cl-c2"><path class="rk" d="M40,-20 C80,-20 80,30 40,30" fill="none" stroke-width="14"/><path class="rk" d="M-50,-60 L50,-60 L40,70 L-40,70 Z" fill="#f7f3ea" stroke-width="9"/><rect x="-46" y="-10" width="92" height="34" fill="#8a5a3c"/><path class="rk" d="M-56,-60 L56,-60" stroke-width="12"/></g></g>
+      <g id="cl-clink" opacity="0"><path transform="translate(960,740) scale(0.9)" d="M0,-50 L12,-12 L50,0 L12,12 L0,50 L-12,12 L-50,0 L-12,-12 Z" fill="#fff"/></g>
+    </svg>
+  </div>
+  <script>
+    Rig.fill();
+    const tl = gsap.timeline({ paused: true }), A = s => Rig.at(s, "close");
+    Rig.run(tl, "close");
+    tl.to("#cl-glow", { opacity: 1, duration: 1.2 }, 0.2);
+    Rig.blinks(tl, "lk", 0, 8); Rig.blinks(tl, "ln", 0, 8, 0.7);
+    // 34: clink
+    tl.to("#cl-c1", { x: 90, rotation: 12, svgOrigin: "0 70", duration: 0.35, ease: "power2.out" }, A("34,0.4"));
+    tl.to("#cl-c2", { x: 90, rotation: 12, svgOrigin: "0 70", duration: 0.35, ease: "power2.out" }, A("34,0.4"));
+    tl.set("#cl-clink", { opacity: 1 }, A("34,0.4") + 0.35);
+    tl.to("#cl-clink", { opacity: 0, duration: 0.4 }, A("34,0.4") + 0.75);
+    tl.to(["#cl-c1", "#cl-c2"], { x: 0, rotation: 0, duration: 0.35 }, A("34,0.4") + 0.7);
+    // 35: the neighbor grins; the kid grins more
+    Rig.mouth(tl, "ln", "smile", "grin", A("35,0.15"));
+    Rig.mouth(tl, "lk", "smile", "grin", A("35,0.55"));
+    tl.to("#cl-kid", { y: -20, duration: 0.18, yoyo: true, repeat: 1, ease: "power2.out" }, A("35,0.6"));
+    window.__timelines["close"] = tl;
+  </script>
+</template>

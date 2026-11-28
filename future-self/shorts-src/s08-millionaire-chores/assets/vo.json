@@ -1,0 +1,38 @@
+[
+ {
+  "text": "Millionaires. Still doing their own chores.",
+  "mood": "shocked",
+  "start": 0.3,
+  "end": 2.677
+ },
+ {
+  "text": "Researchers surveyed eight hundred eighteen millionaires in the Netherlands.",
+  "mood": "neutral",
+  "start": 3.027,
+  "end": 6.994
+ },
+ {
+  "text": "They asked: do you pay anyone to do the daily tasks you dislike?",
+  "mood": "curious",
+  "start": 7.344,
+  "end": 10.96
+ },
+ {
+  "text": "A big share spent nothing at all. Not a cent.",
+  "mood": "firm",
+  "start": 11.36,
+  "end": 13.945
+ },
+ {
+  "text": "And across these studies, people who paid to skip those chores were more satisfied with their lives.",
+  "mood": "warm",
+  "start": 14.345,
+  "end": 19.86
+ },
+ {
+  "text": "If millionaires won't buy back their time, will you?",
+  "mood": "curious",
+  "start": 20.31,
+  "end": 22.851
+ }
+]

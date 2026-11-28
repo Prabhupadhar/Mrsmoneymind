@@ -1,0 +1,12 @@
+[
+ ["A text a month. They saved more.", 0.1, 1.15, "excited"],
+ ["You meant to save this month. Then you forgot, right?", 0.35, 1.12, "curious"],
+ ["Researchers teamed up with banks in the Philippines, Peru and Bolivia.", 0.35, 1.12, "neutral"],
+ ["People had just opened savings accounts, each with a goal.", 0.3, 1.12, "neutral"],
+ ["Some got a reminder every month. Some got nothing.", 0.35, 1.12, "curious"],
+ ["The reminded ones saved about six percent more.", 0.4, 1.12, "warm"],
+ ["But in Peru, the letters that named their own goal did even better.", 0.35, 1.12, "curious"],
+ ["Sixteen percent more.", 0.5, 1.15, "shocked"],
+ ["A photo of the goal? A puzzle of it? No real effect.", 0.4, 1.12, "curious"],
+ ["So name your goal in the reminder. Then let your phone nag you.", 0.4, 1.12, "warm"]
+]

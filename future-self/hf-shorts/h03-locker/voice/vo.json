@@ -1,0 +1,62 @@
+[
+ {
+  "text": "They paid to lock their own iPod away.",
+  "mood": "excited",
+  "start": 0.1,
+  "end": 1.858
+ },
+ {
+  "text": "Sounds crazy. But you might want this too.",
+  "mood": "curious",
+  "start": 2.208,
+  "end": 4.34
+ },
+ {
+  "text": "In 2011, researchers gave two hundred twenty-six students and staff a deal.",
+  "mood": "neutral",
+  "start": 4.69,
+  "end": 9.567
+ },
+ {
+  "text": "Addictive audiobooks. Think Hunger Games.",
+  "mood": "excited",
+  "start": 9.867,
+  "end": 11.935
+ },
+ {
+  "text": "But the iPod lived in a locker at the gym. Listen only while you work out.",
+  "mood": "neutral",
+  "start": 12.285,
+  "end": 16.457
+ },
+ {
+  "text": "Want the next chapter? Get on the treadmill.",
+  "mood": "curious",
+  "start": 16.807,
+  "end": 18.796
+ },
+ {
+  "text": "The first week, they went to the gym fifty-one percent more.",
+  "mood": "warm",
+  "start": 19.196,
+  "end": 22.222
+ },
+ {
+  "text": "It faded by Thanksgiving. But here's the twist.",
+  "mood": "curious",
+  "start": 22.672,
+  "end": 25.262
+ },
+ {
+  "text": "Sixty-one percent said they'd pay to have their own iPod locked up again.",
+  "mood": "shocked",
+  "start": 25.762,
+  "end": 29.782
+ },
+ {
+  "text": "Lock the fun to the chore. And you'll want the chore.",
+  "mood": "warm",
+  "start": 30.182,
+  "end": 32.715
+ }
+]

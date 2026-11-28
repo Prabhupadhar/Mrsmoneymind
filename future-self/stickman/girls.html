@@ -1,0 +1,42 @@
+<!doctype html><html><body style="margin:0;background:#0f1220">
+<svg width="1920" height="1080" viewBox="0 0 1920 1080">
+<defs>
+ <radialGradient id="bg" cx=".5" cy=".45" r=".8"><stop offset="0" stop-color="#3b3f7a"/><stop offset="1" stop-color="#11132b"/></radialGradient>
+ <filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="1920" height="1080" fill="url(#bg)"/>
+<line x1="0" y1="860" x2="1920" y2="860" stroke="#4a4f8a" stroke-width="4"/>
+<g id="figs"></g>
+<g font-family="Arial Black,Arial" font-weight="900" text-anchor="middle">
+ <g fill="#f5c04a" font-size="64"><text x="250" y="150">A</text><text x="730" y="150">B</text><text x="1200" y="150">C</text><text x="1670" y="150">D</text></g>
+ <g fill="#e6e8ff" font-size="32"><text x="250" y="940">PONYTAIL</text><text x="730" y="940">BUN + RIBBON</text><text x="1200" y="940">LONG HAIR + SKIRT</text><text x="1670" y="940">BOB + GOLD SCARF</text></g>
+ <g fill="#9aa0d8" font-size="24" font-family="Arial" font-weight="400"><text x="250" y="980">fast, sporty, hair whips on kicks</text><text x="730" y="980">martial-arts look, ribbon trails</text><text x="1200" y="980">clearest "girl" read at a glance</text><text x="1670" y="980">ties to the gold "Money" brand color</text></g>
+</g>
+</svg>
+<script>
+const stance={hip:[0,0],neck:[10,-190],head:[18,-250],eF:[70,-140],hF:[110,-190],eB:[-30,-130],hB:[30,-160],kF:[60,90],fF:[100,190],kB:[-60,90],fB:[-90,190]};
+function fig(x,y,col,back,front){
+  const p=stance,P=k=>[x+p[k][0],y+p[k][1]],L=(a,b)=>`<line x1="${P(a)[0]}" y1="${P(a)[1]}" x2="${P(b)[0]}" y2="${P(b)[1]}"/>`;
+  const [hx,hy]=P('head');
+  return back(hx,hy,x,y)+`<g stroke="${col}" stroke-width="22" stroke-linecap="round" filter="url(#glow)">`+
+   L('hip','neck')+L('neck','eB')+L('eB','hB')+L('hip','kB')+L('kB','fB')+L('neck','eF')+L('eF','hF')+L('hip','kF')+L('kF','fF')+
+   `<circle cx="${hx}" cy="${hy}" r="42" fill="${col}" stroke="none"/></g>`+front(hx,hy,x,y)+
+   `<circle cx="${hx+18}" cy="${hy+2}" r="6" fill="#11132b"/><path d="M${hx+12},${hy-10} l10,-8 M${hx+20},${hy-8} l12,-5" stroke="#11132b" stroke-width="3" stroke-linecap="round"/>`+
+   `<circle cx="${hx+22}" cy="${hy+18}" r="7" fill="#ff8fb1" opacity=".7"/>`;
+}
+const none=()=>'';
+const W='#f6f7ff';
+document.getElementById('figs').innerHTML=
+ // A ponytail (gold) with pink tie
+ fig(250,670,W,(x,y)=>`<path d="M${x-20},${y-38} C${x-80},${y-70} ${x-130},${y-20} ${x-120},${y+50} C${x-110},${y+10} ${x-80},${y-10} ${x-40},${y-20}Z" fill="#f5c04a"/>`,
+   (x,y)=>`<path d="M${x-42},${y-6} A42 42 0 0 1 ${x+38},${y-18} Q${x},${y-30} ${x-42},${y-6}Z" fill="#f5c04a"/><circle cx="${x-36}" cy="${y-30}" r="10" fill="#ff5c93"/>`)+
+ // B bun + red ribbon
+ fig(730,670,W,(x,y)=>`<circle cx="${x-22}" cy="${y-48}" r="26" fill="#f39a2b"/><path d="M${x-40},${y-56} q-50,-20 -80,10 M${x-40},${y-50} q-40,20 -60,50" stroke="#ff3b5c" stroke-width="10" fill="none" stroke-linecap="round"/>`,
+   (x,y)=>`<path d="M${x-42},${y} A42 42 0 0 1 ${x+40},${y-12} Q${x},${y-26} ${x-42},${y}Z" fill="#f39a2b"/>`)+
+ // C long pink hair + skirt
+ fig(1200,670,W,(x,y)=>`<path d="M${x-30},${y-30} C${x-90},${y-10} ${x-100},${y+90} ${x-70},${y+140} L${x-30},${y+120} C${x-50},${y+60} ${x-40},${y+20} ${x},${y-20}Z" fill="#ff7eb6"/>`,
+   (x,y,hx,hy)=>`<path d="M${x-42},${y+4} A42 42 0 0 1 ${x+42},${y-8} Q${x+10},${y-30} ${x-42},${y+4}Z" fill="#ff7eb6"/><path d="M${hx-10},${hy-60} L${hx+40},${hy-60} L${hx+80},${hy+40} L${hx-60},${hy+40}Z" fill="#ff7eb6" stroke="${W}" stroke-width="6" stroke-linejoin="round"/>`)+
+ // D purple bob + gold scarf
+ fig(1670,670,W,(x,y)=>`<path d="M${x-54},${y+38} L${x-56},${y-6} A56 56 0 0 1 ${x+52},${y-14} L${x+48},${y+4} L${x-6},${y-8} L${x-20},${y+40}Z" fill="#8a6bff"/>`,
+   (x,y,hx,hy)=>`<path d="M${x-44},${y-10} A44 44 0 0 1 ${x+44},${y-14} L${x-4},${y-14}Z" fill="#8a6bff"/><path d="M${hx-10},${hy-196} q20,12 36,0" stroke="#f5c04a" stroke-width="18" fill="none" stroke-linecap="round"/><path d="M${hx-6},${hy-190} q-50,10 -90,-10 M${hx-6},${hy-186} q-40,30 -80,30" stroke="#f5c04a" stroke-width="12" fill="none" stroke-linecap="round"/>`);
+</script></body></html>

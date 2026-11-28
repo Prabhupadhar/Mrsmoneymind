@@ -1,0 +1,56 @@
+<template>
+  <style>
+    @font-face { font-family: "Hand"; src: url("assets/fonts/PatrickHand-Regular.ttf"); }
+    #root { position: absolute; inset: 0; background: #1a2b66; overflow: hidden; }
+    #sc-art { position: absolute; inset: 0; }
+    .rk { stroke: #0d0f22; stroke-linecap: round; stroke-linejoin: round; }
+    .pop { font-family: Hand; font-size: 150px; fill: #ffb35c; stroke: #0d0f22; stroke-width: 14px; paint-order: stroke; stroke-linejoin: round; }
+    .lab { font-family: Hand; font-size: 64px; fill: #f4f1ff; }
+  </style>
+  <div id="root" data-composition-id="s03" data-width="1080" data-height="1920">
+    <svg id="sc-art" class="clip" data-start="0" data-duration="40" viewBox="0 0 1080 1920" data-layout-allow-overflow>
+      <defs>
+        <radialGradient id="sc-bg" cx="0.5" cy="0.5" r="0.8"><stop offset="0" stop-color="#2a4a9f"/><stop offset="1" stop-color="#111c4c"/></radialGradient>
+      </defs>
+      <rect width="1080" height="1920" fill="url(#sc-bg)"/>
+
+      <g transform="translate(540,860) rotate(-5)"><g id="sc-photo" data-out="2,0">
+        <rect class="rk" x="-230" y="-260" width="460" height="540" rx="10" fill="#f7f3ea" stroke-width="12"/>
+        <rect x="-195" y="-225" width="390" height="400" fill="#2d4fa8"/>
+        <g transform="translate(0,-20) scale(0.36)"><g data-rig="old" data-p="sco" data-o='{"mouth":"smile"}'></g></g>
+        <text y="240" text-anchor="middle" style="font-family:Hand;font-size:60px;fill:#0d0f22">me, at 70</text>
+      </g></g>
+      <rect id="sc-flash" width="1080" height="1920" fill="#fff" opacity="0"/>
+      <g transform="translate(300,1360) scale(0.3)"><g id="sc-kid" data-in="1,0.2,up" data-out="2,0"><g data-rig="kid" data-p="sck" data-o='{"mouth":"o","brows":"up","look":[40,-40]}'></g></g></g>
+      <g id="sc-jars" data-in="2,0.1,fade" data-out="5,0">
+        <g transform="translate(320,1080)"><path class="rk" d="M-110,-160 L110,-160 L120,160 L-120,160 Z" fill="#9fe3ff" fill-opacity="0.35" stroke-width="10"/>
+          <rect id="sc-now" x="-112" y="40" width="224" height="118" fill="#ffd27a"/>
+          <rect class="rk" x="-80" y="-190" width="160" height="36" rx="10" fill="#7a86b8" stroke-width="8"/>
+          <text y="230" text-anchor="middle" style="font-family:Hand;font-size:64px;fill:#f4f1ff">now</text></g>
+        <g transform="translate(760,1080)"><path class="rk" d="M-110,-160 L110,-160 L120,160 L-120,160 Z" fill="#9fe3ff" fill-opacity="0.35" stroke-width="10"/>
+          <rect id="sc-later" x="-112" y="40" width="224" height="118" fill="#ffd27a"/>
+          <rect class="rk" x="-80" y="-190" width="160" height="36" rx="10" fill="#7a86b8" stroke-width="8"/>
+          <text y="230" text-anchor="middle" style="font-family:Hand;font-size:64px;fill:#f4f1ff">later</text></g>
+        <text class="pop" x="760" y="760" text-anchor="middle" style="font-size:170px" data-in="3,0.65,pop">2&#215;</text>
+        <text class="lab" x="540" y="1440" text-anchor="middle" style="font-size:52px;fill:#c9d3ef" data-in="4,0.15,up">a hypothetical choice</text>
+      </g>
+      <g data-in="5,0,fade">
+        <g transform="translate(330,1080) scale(0.38)"><g data-rig="kid" data-p="sc2" data-o='{"mouth":"grin","brows":"up","look":[50,0]}'></g></g>
+        <g transform="translate(760,1080) scale(0.38)"><g data-rig="old" data-p="sc3" data-o='{"mouth":"grin"}'></g></g>
+      </g>
+    </svg>
+  </div>
+  <script>
+    Rig.fill();
+    const tl = gsap.timeline({ paused: true }), A = s => Rig.at(s, "s03");
+    Rig.run(tl, "s03");
+    // frame 0: camera flash, the photo slams in
+    tl.fromTo("#sc-flash", { opacity: 0.9 }, { opacity: 0, duration: 0.45, ease: "power2.out" }, 0);
+    tl.fromTo("#sc-photo", { scale: 1.5, rotation: 12, transformOrigin: "50% 50%" }, { scale: 1, rotation: 0, duration: 0.35, ease: "back.out(1.8)" }, 0);
+    // 3: "later" fills to twice "now"
+    tl.to("#sc-later", { scaleY: 2.3, transformOrigin: "50% 100%", duration: 0.8, ease: "power2.out" }, A("3,0.3"));
+    tl.to("#sc-now", { scaleY: 1.15, transformOrigin: "50% 100%", duration: 0.8, ease: "power2.out" }, A("3,0.3"));
+    Rig.blinks(tl, "sc2", A("5,0"), A("5,1") + 2);
+    window.__timelines["s03"] = tl;
+  </script>
+</template>

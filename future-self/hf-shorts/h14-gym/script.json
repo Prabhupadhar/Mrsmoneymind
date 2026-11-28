@@ -1,0 +1,12 @@
+[
+ ["Seventeen dollars a visit. A ten dollar pass existed.", 0.1, 1.2, "excited"],
+ ["Your gym membership. Feeling it yet?", 0.35, 1.2, "curious"],
+ ["Researchers followed almost eight thousand members at three US gyms, for three years.", 0.35, 1.2, "neutral"],
+ ["Monthly members paid over seventy dollars a month.", 0.3, 1.2, "neutral"],
+ ["But they went about four point eight times a month.", 0.3, 1.2, "neutral"],
+ ["That's over seventeen dollars a visit, when a ten dollar visit pass was right there.", 0.35, 1.2, "curious"],
+ ["And after their last visit, they kept paying for over two months before cancelling.", 0.35, 1.2, "curious"],
+ ["Money left on the table: about seven hundred dollars each.", 0.5, 1.2, "shocked"],
+ ["We pay for the person we plan to be.", 0.4, 1.2, "warm"],
+ ["So count your visits. Then pay for the person you are.", 0.4, 1.2, "warm"]
+]

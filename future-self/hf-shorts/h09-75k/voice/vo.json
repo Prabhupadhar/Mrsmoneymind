@@ -1,0 +1,62 @@
+[
+ {
+  "text": "Seventy-five K is enough? The data disagrees.",
+  "mood": "excited",
+  "start": 0.1,
+  "end": 2.624
+ },
+ {
+  "text": "Heard it? Money stops buying happiness at seventy-five K.",
+  "mood": "curious",
+  "start": 2.924,
+  "end": 5.987
+ },
+ {
+  "text": "That came from a 2010 study of over four hundred fifty thousand survey answers.",
+  "mood": "neutral",
+  "start": 6.287,
+  "end": 10.973
+ },
+ {
+  "text": "But another researcher pinged thirty-three thousand people on their phones.",
+  "mood": "neutral",
+  "start": 11.273,
+  "end": 14.821
+ },
+ {
+  "text": "Happiness kept rising, even past two hundred thousand.",
+  "mood": "curious",
+  "start": 15.121,
+  "end": 17.965
+ },
+ {
+  "text": "So the rivals teamed up.",
+  "mood": "neutral",
+  "start": 18.265,
+  "end": 19.575
+ },
+ {
+  "text": "The plateau was real. But only for the unhappiest fifteen to twenty percent.",
+  "mood": "shocked",
+  "start": 20.075,
+  "end": 24.264
+ },
+ {
+  "text": "For most people, happiness kept climbing.",
+  "mood": "warm",
+  "start": 24.564,
+  "end": 26.772
+ },
+ {
+  "text": "The catch? It's small. About five points out of a hundred.",
+  "mood": "firm",
+  "start": 27.122,
+  "end": 30.082
+ },
+ {
+  "text": "So money helps. Just less than you'd think.",
+  "mood": "warm",
+  "start": 30.432,
+  "end": 32.621
+ }
+]

@@ -1,0 +1,11 @@
+[
+ ["Three money questions. Only thirty percent pass.", 0.1, 1.15, "excited"],
+ ["Ready? Answer in your head.", 0.3, 1.15, "curious"],
+ ["One. A hundred dollars at two percent a year, for five years. More than a hundred and two, exactly, or less?", 0.4, 1.15, "neutral"],
+ ["Two. You earn one percent. Prices rise two percent. Can you buy more, the same, or less?", 0.4, 1.15, "neutral"],
+ ["Three. True or false: one company's stock is safer than a stock fund.", 0.4, 1.15, "curious"],
+ ["Answers: more. Less. False.", 0.45, 1.12, "firm"],
+ ["In a big US survey, only about thirty percent got all three.", 0.35, 1.15, "neutral"],
+ ["But seventy percent rated their own money knowledge four or higher, out of seven.", 0.5, 1.15, "shocked"],
+ ["So did you pass? Tell me in the comments.", 0.4, 1.15, "warm"]
+]

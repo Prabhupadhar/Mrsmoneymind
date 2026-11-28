@@ -1,0 +1,12 @@
+[
+ ["Seventy-five K is enough? The data disagrees.", 0.1, 1.15, "excited"],
+ ["Heard it? Money stops buying happiness at seventy-five K.", 0.3, 1.15, "curious"],
+ ["That came from a 2010 study of over four hundred fifty thousand survey answers.", 0.3, 1.15, "neutral"],
+ ["But another researcher pinged thirty-three thousand people on their phones.", 0.3, 1.15, "neutral"],
+ ["Happiness kept rising, even past two hundred thousand.", 0.3, 1.15, "curious"],
+ ["So the rivals teamed up.", 0.3, 1.15, "neutral"],
+ ["The plateau was real. But only for the unhappiest fifteen to twenty percent.", 0.5, 1.15, "shocked"],
+ ["For most people, happiness kept climbing.", 0.3, 1.15, "warm"],
+ ["The catch? It's small. About five points out of a hundred.", 0.35, 1.15, "firm"],
+ ["So money helps. Just less than you'd think.", 0.35, 1.15, "warm"]
+]

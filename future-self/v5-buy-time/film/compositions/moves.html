@@ -1,0 +1,73 @@
+<template>
+  <style>
+    @font-face { font-family: "Hand"; src: url("assets/fonts/PatrickHand-Regular.ttf"); }
+    #root { position: absolute; inset: 0; background: #1a2b66; overflow: hidden; }
+    #mv-art { position: absolute; inset: 0; }
+    .rk { stroke: #0d0f22; stroke-linecap: round; stroke-linejoin: round; }
+    .pop { font-family: Hand; font-size: 150px; fill: #ffb35c; stroke: #0d0f22; stroke-width: 14px; paint-order: stroke; stroke-linejoin: round; }
+    .lab { font-family: Hand; font-size: 56px; fill: #f4f1ff; }
+  </style>
+  <div id="root" data-composition-id="moves" data-width="1920" data-height="1080">
+    <svg id="mv-art" class="clip" data-start="0" data-duration="30" viewBox="0 0 1920 1080" data-layout-allow-overflow>
+      <defs>
+        <radialGradient id="mv-bg" cx="0.5" cy="0.55" r="0.75"><stop offset="0" stop-color="#2a4a9f"/><stop offset="1" stop-color="#111c4c"/></radialGradient>
+        <g id="mv-badge"><circle class="rk" stroke="#0d0f22" r="90" fill="#ff8a2a" stroke-width="10"/></g>
+      </defs>
+      <rect width="1920" height="1080" fill="url(#mv-bg)"/>
+      <g fill="#fff" opacity="0.06"><circle cx="300" cy="160" r="4"/><circle cx="1500" cy="960" r="5"/><circle cx="1760" cy="140" r="4"/></g>
+
+      <g transform="translate(1460,650) scale(0.55)"><g id="mv-kid"><g data-rig="kid" data-p="mk" data-o='{"mouth":"smile","brows":"up","look":[-40,0]}'></g></g></g>
+      <!-- 42: the chore you dislike most, priced -->
+      <g id="mv-s1" data-in="42,0,fade" data-out="43,0">
+        <g transform="translate(240,200)"><g data-in="42,0.02,pop"><use href="#mv-badge"/><text y="42" text-anchor="middle" style="font-family:Hand;font-size:120px;fill:#fff">1</text></g></g>
+        <g transform="translate(720,600)"><g data-in="42,0.12,up">
+          <rect class="rk" x="-260" y="-280" width="520" height="560" rx="22" fill="#f7f3ea" stroke-width="12"/>
+          <text x="-190" y="-160" style="font-family:Hand;font-size:62px;fill:#7a809c">dishes</text>
+          <text x="-190" y="-50" style="font-family:Hand;font-size:62px;fill:#7a809c">laundry</text>
+          <text x="-190" y="60" style="font-family:Hand;font-size:62px;fill:#7a809c">cleaning</text>
+          <text x="-190" y="170" style="font-family:Hand;font-size:62px;fill:#7a809c">errands</text>
+          <ellipse cx="-80" cy="-68" rx="150" ry="56" fill="none" stroke="#ff3b4a" stroke-width="10" data-in="42,0.3,fade"/>
+          <g transform="translate(160,-70) rotate(12)"><g data-in="42,0.55,pop"><path class="rk" d="M-70,-40 L40,-40 L80,0 L40,40 L-70,40 Z" fill="#ffd27a" stroke-width="8"/><text x="-14" y="20" text-anchor="middle" style="font-family:Hand;font-size:56px;fill:#0d0f22">$?</text></g></g>
+        </g></g>
+        <text class="pop" x="720" y="990" text-anchor="middle" style="font-size:120px" data-in="42,0.82,pop">just once</text>
+      </g>
+      <!-- 43: money lands: could it buy time? -->
+      <g id="mv-s2" data-in="43,0,fade" data-out="44,0">
+        <g transform="translate(240,200)"><g data-in="43,0.02,pop"><use href="#mv-badge"/><text y="42" text-anchor="middle" style="font-family:Hand;font-size:120px;fill:#fff">2</text></g></g>
+        <g transform="translate(520,560)"><g id="mv-bill"><rect class="rk" x="-150" y="-70" width="300" height="140" rx="12" fill="#7fd18b" stroke-width="10"/><text y="30" text-anchor="middle" style="font-family:Hand;font-size:90px;fill:#1f5a33">$</text></g></g>
+        <path d="M700,560 L820,560" stroke="#c9d3ef" stroke-width="12" stroke-linecap="round" data-in="43,0.6,growx"/>
+        <g transform="translate(960,560)"><g data-in="43,0.65,pop">
+          <path class="rk" d="M-90,-150 L90,-150 L90,-130 C90,-50 20,-15 20,0 C20,15 90,50 90,130 L90,150 L-90,150 L-90,130 C-90,50 -20,15 -20,0 C-20,-15 -90,-50 -90,-130 Z" fill="#cfe6ff" stroke-width="10"/>
+          <path d="M-60,-90 L60,-90 C50,-50 15,-25 0,-10 C-15,-25 -50,-50 -60,-90 Z" fill="#ffb35c"/></g></g>
+        <text class="pop" x="960" y="900" text-anchor="middle" style="font-size:140px" data-in="43,0.8,pop">time?</text>
+      </g>
+      <!-- 44: count the minutes -->
+      <g id="mv-s3" data-in="44,0,fade">
+        <g transform="translate(240,200)"><g data-in="44,0.02,pop"><use href="#mv-badge"/><text y="42" text-anchor="middle" style="font-family:Hand;font-size:120px;fill:#fff">3</text></g></g>
+        <g transform="translate(480,580) rotate(-6)"><g data-in="44,0.35,pop"><rect class="rk" x="-170" y="-80" width="340" height="160" rx="14" fill="#7fd18b" stroke-width="10"/><text y="34" text-anchor="middle" style="font-family:Hand;font-size:100px;fill:#1f5a33">$40</text></g></g>
+        <text class="pop" x="760" y="610" text-anchor="middle" style="font-size:140px" data-in="44,0.45,pop">=</text>
+        <g transform="translate(1000,560)"><g data-in="44,0.5,pop">
+          <circle class="rk" r="150" fill="#f7f3ea" stroke-width="12"/><rect class="rk" x="-30" y="-200" width="60" height="44" rx="8" fill="#ff8a2a" stroke-width="8"/>
+          <path id="mv-arc" d="M0,-110 A110,110 0 0 1 0,110" fill="none" stroke="#7cf0a8" stroke-width="30"/>
+          <g id="mv-hand"><path class="rk" d="M0,0 L0,-110" stroke-width="12"/></g><circle r="12" fill="#0d0f22"/>
+          <text y="250" text-anchor="middle" style="font-family:Hand;font-size:90px;fill:#fff">2 h</text></g></g>
+      </g>
+    </svg>
+  </div>
+  <script>
+    Rig.fill();
+    const tl = gsap.timeline({ paused: true }), A = s => Rig.at(s, "moves");
+    Rig.run(tl, "moves");
+    tl.fromTo("#mv-kid", { opacity: 0, x: 60 }, { opacity: 1, x: 0, duration: 0.45, ease: "expo.out" }, 0);
+    Rig.blinks(tl, "mk", 0, 20);
+    Rig.look(tl, "mk", -60, 0, A("42,0.4"));
+    Rig.mouth(tl, "mk", "smile", "grin", A("42,0.6"));
+    tl.fromTo("#mv-bill", { y: -700, rotation: -30 }, { y: 0, rotation: 0, duration: 0.7, ease: "bounce.out" }, A("43,0.1"));
+    Rig.mouth(tl, "mk", "grin", "o", A("43,0.3"));
+    Rig.mouth(tl, "mk", "o", "smile", A("43,0.8"));
+    tl.to("#mv-kid", { y: 18, duration: 0.18, yoyo: true, repeat: 1 }, A("43,0.85"));
+    tl.to("#mv-hand", { rotation: 180, svgOrigin: "0 0", duration: 1.5, ease: "power1.inOut" }, A("44,0.55"));
+    Rig.mouth(tl, "mk", "smile", "grin", A("44,0.8"));
+    window.__timelines["moves"] = tl;
+  </script>
+</template>

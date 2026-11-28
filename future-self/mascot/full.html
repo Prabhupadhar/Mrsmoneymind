@@ -1,0 +1,77 @@
+<!doctype html><html><body style="margin:0">
+<svg width="1920" height="1200" viewBox="0 0 1920 1200"><defs id="d"></defs><rect width="1920" height="1200" fill="#f6f1ec"/><g id="c"></g></svg>
+<script>
+let defs='';
+const lg=(id,a,b,x2=0,y2=1)=>defs+=`<linearGradient id="${id}" x1="0" y1="0" x2="${x2}" y2="${y2}"><stop offset="0" stop-color="${a}"/><stop offset="1" stop-color="${b}"/></linearGradient>`;
+const rg=(id,a,b)=>defs+=`<radialGradient id="${id}" cx=".45" cy=".4" r=".7"><stop offset="0" stop-color="${a}"/><stop offset="1" stop-color="${b}"/></radialGradient>`;
+const P=(cx,s)=>s.replace(/X([+-]?\d+(?:\.\d+)?)/g,(_,n)=>(cx+ +n).toFixed(1));
+const limb=(pts,w,col)=>`<polyline points="${pts.map(p=>p.join(',')).join(' ')}" fill="none" stroke="${col}" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round"/>`;
+function face(cx,o){ // head center cx,190
+  let s=P(cx,`<path d="MX-44,182 CX-46,140 X-24,128 X0,128 CX24,128 X46,140 X44,182 CX43,218 X24,246 X0,252 CX-24,246 X-43,218 X-44,182Z" fill="url(#sk${o.i})"/>`);
+  s+=P(cx,`<ellipse cx="X-26" cy="214" rx="10" ry="5" fill="#ff6b7a" opacity=".25"/><ellipse cx="X26" cy="214" rx="10" ry="5" fill="#ff6b7a" opacity=".25"/>`);
+  for(const d of [-1,1]){const x=cx+d*19,y=192;
+    s+=`<path d="M${x-10*d},${y} C${x-6*d},${y-7} ${x+6*d},${y-8} ${x+11*d},${y-1} C${x+5*d},${y+4} ${x-5*d},${y+4} ${x-10*d},${y}Z" fill="#fff"/>`+
+       `<circle cx="${x+1*d}" cy="${y-1}" r="5" fill="${o.eye}"/><circle cx="${x+1*d}" cy="${y-1}" r="2.3" fill="#120a06"/><circle cx="${x+2.5*d}" cy="${y-3}" r="1.5" fill="#fff"/>`+
+       `<path d="M${x-11*d},${y} C${x-6*d},${y-8} ${x+6*d},${y-9} ${x+12*d},${y-1} l${3*d},-3" stroke="#1a0e08" stroke-width="2.2" fill="none" stroke-linecap="round"/>`+
+       `<path d="M${x-10*d},${y-13} Q${x},${y-20} ${x+13*d},${y-15} Q${x},${y-17} ${x-10*d},${y-11}Z" fill="${o.brow}"/>`;}
+  s+=P(cx,`<path d="MX2,196 QX5,210 X2,216" stroke="${o.skin[2]}" stroke-width="1.8" fill="none" opacity=".7" stroke-linecap="round"/><path d="MX-5,218 QX0,221 X5,218" stroke="${o.skin[2]}" stroke-width="1.6" fill="none" opacity=".8"/>`);
+  s+=P(cx,`<path d="MX-11,230 QX-5,226 X0,228 QX5,226 X11,230 QX0,233 X-11,230Z" fill="${o.lip[0]}"/><path d="MX-11,230 QX0,233 X11,230 QX0,239 X-11,230Z" fill="${o.lip[1]}"/>`);
+  return s;
+}
+function girl(i,cx,o){
+  rg('sk'+i,o.skin[0],o.skin[1]);lg('hr'+i,o.hair[0],o.hair[1]);lg('tp'+i,o.top[0],o.top[1],1,1);lg('bt'+i,o.bottom[0],o.bottom[1]);
+  o.i=i;const S=o.skin[1],HR=`url(#hr${i})`;
+  let s=P(cx,`<ellipse cx="X0" cy="1000" rx="150" ry="16" fill="#000" opacity=".08"/>`);
+  s+=P(cx,o.backHair).replace(/HR/g,HR);
+  // legs / bottoms
+  s+=P(cx,o.bottomShape).replace(/BT/g,`url(#bt${i})`);
+  s+=P(cx,`<path d="MX-46,992 QX-44,968 X-30,962 LX-14,964 QX-10,980 X-12,994Z" fill="${o.shoe}"/><path d="MX46,992 QX44,968 X30,962 LX14,964 QX10,980 X12,994Z" fill="${o.shoe}"/>`);
+  // hanging arms (behind torso edge)
+  for(const a of o.armsBack) s+=limb(a.map(([x,y])=>[cx+x,y]),26,S)+`<ellipse cx="${cx+a[a.length-1][0]}" cy="${a[a.length-1][1]+12}" rx="10" ry="15" fill="${S}"/>`;
+  for(const a of o.armsBack) s+=limb(a.slice(0,o.sleeveLen).map(([x,y])=>[cx+x,y]),32,o.top[1]);
+  // neck + torso
+  s+=P(cx,`<path d="MX-13,236 LX-15,288 QX0,300 X15,288 LX13,236Z" fill="${S}"/><path d="MX-14,250 QX0,262 X14,250 LX14,240 LX-14,240Z" fill="#000" opacity=".12"/>`);
+  s+=P(cx,o.topShape).replace(/TP/g,`url(#tp${i})`);
+  s+=face(cx,o);
+  s+=P(cx,o.frontHair).replace(/HR/g,HR);
+  for(const a of o.armsFront) s+=limb(a.map(([x,y])=>[cx+x,y]),26,S)+`<ellipse cx="${cx+a[a.length-1][0]}" cy="${a[a.length-1][1]}" rx="12" ry="14" fill="${S}"/>`;
+  for(const a of o.armsFront) s+=limb(a.slice(0,2).map(([x,y])=>[cx+x,y]),32,o.top[1]);
+  s+=P(cx,o.prop||'');
+  s+=`<g font-family="Arial" text-anchor="middle"><text x="${cx}" y="1080" font-size="56" font-weight="900" fill="#e08a1e">${o.k}</text><text x="${cx}" y="1125" font-size="26" fill="#3a3550">${o.d}</text></g>`;
+  return s;
+}
+const torso=`<path d="MX-58,284 QX0,302 X58,284 LX86,298 QX96,318 X88,356 LX70,412 LX68,546 QX0,556 X-68,546 LX-70,412 LX-88,356 QX-96,318 X-86,298Z" fill="TP"/><path d="MX20,300 LX68,546 QX40,552 X20,552Z" fill="#000" opacity=".08"/>`;
+const jeans=`<path d="MX-70,536 LX70,536 QX80,620 X64,720 LX48,964 LX12,964 LX4,622 LX-4,622 LX-12,964 LX-48,964 LX-64,720 QX-80,620 X-70,536Z" fill="BT"/><path d="MX4,622 LX12,964 LX30,964 LX40,700Z" fill="#000" opacity=".1"/><rect x="X-70" y="532" width="140" height="14" rx="4" fill="#3a2418"/><rect x="X-10" y="531" width="20" height="16" rx="3" fill="none" stroke="#d8b46a" stroke-width="3"/>`;
+let out='';
+// A — wavy brown hair, orange sweater, jeans, checking phone
+let wavesL='',wavesR='';for(let k=0;k<7;k++){const y=170+k*40,w=(k%2?10:0);wavesL+=`<ellipse cx="X${-50-w}" cy="${y}" rx="22" ry="28" fill="HR"/>`;wavesR+=`<ellipse cx="X${50+w}" cy="${y}" rx="22" ry="28" fill="HR"/>`;}
+out+=girl(0,330,{k:'A',d:'wavy hair, orange sweater, jeans',skin:['#f7d3b6','#e6ae8a','#b9805c'],hair:['#7a3a1c','#3e1a0a'],eye:'#6b4423',brow:'#4a2412',lip:['#c8585e','#d9737a'],
+ top:['#ff9a3c','#e0701c'],bottom:['#8aa0c0','#5a6f92'],shoe:'#6b3a1e',sleeveLen:2,
+ backHair:`<path d="MX-54,180 CX-60,110 X-20,96 X0,96 CX40,96 X62,120 X56,190 LX60,450 LX-60,450Z" fill="HR"/>`+wavesL+wavesR,
+ frontHair:`<path d="MX-48,200 CX-58,120 X-10,100 X10,106 CX50,110 X58,150 X50,200 CX44,160 X26,132 X4,130 CX-14,150 X-36,162 X-48,200Z" fill="HR"/><path d="MX-20,108 CX10,104 X36,118 X46,150" stroke="#b5643a" stroke-width="3" fill="none" opacity=".7"/>`,
+ topShape:torso+`<path d="MX-24,288 QX0,304 X24,288" stroke="#c45e10" stroke-width="3" fill="none"/>`,bottomShape:jeans,
+ armsBack:[[[-82,302],[-98,440],[-102,566]]],
+ armsFront:[[[82,302],[100,436],[40,400]]],
+ prop:`<rect x="X8" y="352" width="34" height="58" rx="6" fill="#26283a" transform="rotate(-12 X25 381)"/><rect x="X12" y="357" width="26" height="46" rx="3" fill="#9fd8ff" transform="rotate(-12 X25 381)"/>`});
+// B — dark low ponytail, taupe blazer, navy top, cream trousers, tablet
+out+=girl(1,960,{k:'B',d:'low ponytail, blazer, wide trousers',skin:['#f5d4bc','#e3b192','#b8846a'],hair:['#4a3550','#1e1424'],eye:'#3f7a5a',brow:'#2e2030',lip:['#c46470','#d6808a'],
+ top:['#8c7a6e','#5e5048'],bottom:['#f2ede4','#cfc6b8'],shoe:'#2a2430',sleeveLen:3,
+ backHair:`<path d="MX-50,190 CX-56,112 X-20,98 X0,98 CX36,98 X58,118 X52,196Z" fill="HR"/><path d="MX40,210 CX74,250 X70,320 X46,380 CX56,320 X44,270 X28,240Z" fill="HR"/>`,
+ frontHair:`<path d="MX-46,214 CX-60,120 X-14,98 X14,104 CX52,112 X56,170 X46,214 CX40,160 X24,132 X-6,128 CX-26,150 X-40,170 X-46,214Z" fill="HR"/><path d="MX-6,104 CX-30,120 X-40,150 X-44,200" stroke="#7a5a86" stroke-width="3" fill="none" opacity=".7"/>`,
+ topShape:`<path d="MX-40,290 LX40,290 LX52,540 LX-52,540Z" fill="#232844"/>`+torso.replace('X68,546 QX0,556 X-68,546','X70,470 QX0,476 X-70,470').replace('LX70,412','LX72,412')+`<path d="MX-40,290 LX-14,420 LX-20,470 LX-70,470 LX-70,412 LX-62,320Z M40,0" fill="#000" opacity="0"/><path d="MX-36,290 LX-12,400 LX-30,300Z" fill="#6a5a50"/><path d="MX36,290 LX12,400 LX30,300Z" fill="#6a5a50"/><path d="MX-26,290 LX-10,420 LX-10,470 MX26,290 LX10,420 LX10,470" stroke="#4a3e38" stroke-width="3" fill="none"/>`,
+ bottomShape:`<path d="MX-66,466 LX66,466 LX84,960 LX20,960 LX4,600 LX-4,600 LX-20,960 LX-84,960Z" fill="BT"/><path d="MX4,600 LX20,960 LX46,960 LX34,640Z" fill="#000" opacity=".07"/><rect x="X-66" y="464" width="132" height="12" rx="4" fill="#2a2430"/>`,
+ armsBack:[[[82,302],[98,440],[102,566]]],
+ armsFront:[[[-82,302],[-98,440],[-30,410]]],
+ prop:`<rect x="X-80" y="360" width="90" height="118" rx="8" fill="#d9dde8" stroke="#8a90a8" stroke-width="3" transform="rotate(-16 X-35 419)"/><rect x="X106" y="540" width="12" height="18" rx="3" fill="#222"/>`});
+// C — long black braid, teal kurta, slim jeans, coffee cup
+out+=girl(2,1590,{k:'C',d:'long braid, teal kurta, coffee',skin:['#e0aa82','#c4875e','#8e5a3a'],hair:['#2a1c16','#0c0605'],eye:'#4a2a14',brow:'#140a06',lip:['#a54a52','#bb6068'],
+ top:['#2fa39a','#1c7a72'],bottom:['#3a4a7a','#252f55'],shoe:'#c9a25a',sleeveLen:3,
+ backHair:`<path d="MX-50,190 CX-56,112 X-20,98 X0,98 CX36,98 X58,118 X52,196Z" fill="HR"/>`,
+ frontHair:`<path d="MX-46,206 CX-56,116 X-20,100 X0,102 CX20,100 X56,116 X46,206 CX42,150 X22,126 X0,124 CX-22,126 X-42,150 X-46,206Z" fill="HR"/><path d="MX0,102 LX0,124" stroke="#5a4038" stroke-width="2"/>`+[0,1,2,3,4,5,6].map(k=>`<ellipse cx="X${-46+(k%2?6:0)}" cy="${250+k*30}" rx="15" ry="19" fill="HR"/>`).join('')+`<path d="MX-46,460 LX-46,490" stroke="#1a0e0a" stroke-width="6" stroke-linecap="round"/><circle cx="X0" cy="172" r="3" fill="#c2185b"/>`,
+ topShape:`<path d="MX-58,284 QX0,302 X58,284 LX86,298 QX96,318 X88,356 LX74,420 LX96,700 QX0,716 X-96,700 LX-74,420 LX-88,356 QX-96,318 X-86,298Z" fill="TP"/><path d="MX-10,290 LX0,350 LX10,290" stroke="#f5c04a" stroke-width="4" fill="none"/><path d="MX-96,690 QX0,706 X96,690" stroke="#f5c04a" stroke-width="6" fill="none"/><path d="MX20,300 LX96,700 QX60,710 X30,712Z" fill="#000" opacity=".08"/>`,
+ bottomShape:`<path d="MX-60,600 LX60,600 LX46,964 LX12,964 LX4,700 LX-4,700 LX-12,964 LX-46,964Z" fill="BT"/>`,
+ armsBack:[[[-82,302],[-98,440],[-102,566]]],
+ armsFront:[[[82,302],[104,440],[70,500]]],
+ prop:`<path d="MX52,470 LX92,470 LX86,530 LX58,530Z" fill="#fff" stroke="#c9b8a8" stroke-width="2"/><rect x="X54" y="462" width="40" height="10" rx="3" fill="#7a4a2a"/><rect x="X58" y="488" width="28" height="18" fill="#e08a1e"/>`});
+document.getElementById('d').innerHTML=defs;document.getElementById('c').innerHTML=out;
+</script></body></html>

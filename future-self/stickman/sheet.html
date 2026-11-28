@@ -1,0 +1,35 @@
+<!doctype html><html><body style="margin:0;background:#0f1220">
+<svg id="s" width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+<defs>
+ <radialGradient id="bg" cx=".5" cy=".45" r=".8"><stop offset="0" stop-color="#2a3150"/><stop offset="1" stop-color="#0b0e1a"/></radialGradient>
+ <filter id="glow"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="1920" height="1080" fill="url(#bg)"/>
+<line x1="0" y1="880" x2="1920" y2="880" stroke="#3b4470" stroke-width="4"/>
+<g id="figs"></g>
+<g font-family="Arial Black,Arial" font-weight="900" fill="#c9d2ff" font-size="34" text-anchor="middle">
+ <text x="300" y="960">HERO · STANCE</text><text x="760" y="960">HERO · PUNCH</text><text x="1180" y="960">HERO · KICK</text><text x="1620" y="960">RIVAL · STANCE</text>
+</g>
+</svg>
+<script>
+// pose = joint coords relative to hip (0,0); y up is negative
+function fig(x,y,p,col,band){
+  const P=k=>[x+p[k][0],y+p[k][1]], L=(a,b)=>`<line x1="${P(a)[0]}" y1="${P(a)[1]}" x2="${P(b)[0]}" y2="${P(b)[1]}"/>`;
+  const h=P('head');
+  let g=`<g stroke="${col}" stroke-width="22" stroke-linecap="round" filter="url(#glow)">`+
+   L('hip','neck')+L('neck','eB')+L('eB','hB')+L('hip','kB')+L('kB','fB')+
+   L('neck','eF')+L('eF','hF')+L('hip','kF')+L('kF','fF')+
+   `<circle cx="${h[0]}" cy="${h[1]}" r="42" fill="${col}" stroke="none"/></g>`;
+  if(band) g+=`<rect x="${h[0]-44}" y="${h[1]-20}" width="88" height="16" rx="6" fill="${band}"/><path d="M${h[0]-40},${h[1]-12} q-50,-6 -80,22 M${h[0]-40},${h[1]-12} q-46,14 -66,46" stroke="${band}" stroke-width="10" fill="none" stroke-linecap="round"/>`;
+  g+=`<circle cx="${h[0]+16}" cy="${h[1]-4}" r="6" fill="#0b0e1a"/>`;
+  return g;
+}
+const stance={hip:[0,0],neck:[10,-190],head:[18,-250],eF:[70,-140],hF:[110,-190],eB:[-30,-130],hB:[30,-160],kF:[60,90],fF:[100,190],kB:[-60,90],fB:[-90,190]};
+const punch={hip:[0,0],neck:[40,-180],head:[56,-238],eF:[140,-178],hF:[240,-182],eB:[-20,-120],hB:[30,-150],kF:[80,80],fF:[130,190],kB:[-50,90],fB:[-110,190]};
+const kick={hip:[0,0],neck:[-50,-175],head:[-70,-232],eF:[10,-150],hF:[60,-190],eB:[-100,-110],hB:[-150,-150],kF:[110,-60],fF:[230,-110],kB:[-10,100],fB:[-20,190]};
+const mirror=p=>Object.fromEntries(Object.entries(p).map(([k,v])=>[k,[-v[0],v[1]]]));
+document.getElementById('figs').innerHTML=
+ fig(300,690,stance,'#f4f6ff','#ff3b5c')+fig(720,690,punch,'#f4f6ff','#ff3b5c')+
+ `<g stroke="#ffd36b" stroke-width="8" stroke-linecap="round"><line x1="985" y1="490" x2="1030" y2="470"/><line x1="985" y1="510" x2="1040" y2="512"/><line x1="985" y1="530" x2="1030" y2="552"/></g>`+
+ fig(1160,690,kick,'#f4f6ff','#ff3b5c')+fig(1620,690,mirror(stance),'#5ad1ff',null);
+</script></body></html>

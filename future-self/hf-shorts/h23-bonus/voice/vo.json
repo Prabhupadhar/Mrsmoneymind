@@ -1,0 +1,62 @@
+[
+ {
+  "text": "The biggest bonus got the worst results.",
+  "mood": "excited",
+  "start": 0.1,
+  "end": 1.897
+ },
+ {
+  "text": "Everyone says pay more, get more. The data disagrees.",
+  "mood": "curious",
+  "start": 2.197,
+  "end": 5.11
+ },
+ {
+  "text": "In 2002, eighty-seven people in a town in rural India played six simple games.",
+  "mood": "neutral",
+  "start": 5.41,
+  "end": 10.342
+ },
+ {
+  "text": "A top score paid four rupees, forty, or four hundred.",
+  "mood": "neutral",
+  "start": 10.642,
+  "end": 13.563
+ },
+ {
+  "text": "Four hundred was close to a month's spending per person there.",
+  "mood": "curious",
+  "start": 13.913,
+  "end": 16.753
+ },
+ {
+  "text": "Small or medium bonus: top score in about a quarter of the games.",
+  "mood": "neutral",
+  "start": 17.153,
+  "end": 20.663
+ },
+ {
+  "text": "Huge bonus? Just six percent.",
+  "mood": "shocked",
+  "start": 21.163,
+  "end": 22.913
+ },
+ {
+  "text": "At MIT, big pay helped plain key-pressing, but hurt adding up numbers.",
+  "mood": "curious",
+  "start": 23.263,
+  "end": 27.126
+ },
+ {
+  "text": "When a task needs thinking, too much pressure backfires.",
+  "mood": "warm",
+  "start": 27.476,
+  "end": 30.229
+ },
+ {
+  "text": "That's why the biggest bonus got the worst results.",
+  "mood": "warm",
+  "start": 30.629,
+  "end": 33.071
+ }
+]

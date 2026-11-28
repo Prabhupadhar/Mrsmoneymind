@@ -1,0 +1,11 @@
+[
+ ["They nearly quadrupled their savings.", 0.1, 1, "excited"],
+ ["You know the feeling. Every dollar already has a job.", 0.4, 1, "warm"],
+ ["So a savings program asked workers for something easier.", 0.35, 1, "curious"],
+ ["Not money today. Just a slice of their future raises.", 0.3, 1, "firm"],
+ ["Each raise, a little more went to savings.", 0.35, 1, "neutral"],
+ ["About three years later?", 0.45, 1, "curious"],
+ ["Three and a half percent had become thirteen point six.", 0.5, 1, "shocked"],
+ ["Don't fight today's paycheck. Promise tomorrow's.", 0.5, 1, "warm"],
+ ["Same people. Same willpower. A different promise.", 0.4, 1, "whisper"]
+]

@@ -1,0 +1,104 @@
+<template>
+  <style>
+    @font-face { font-family: "Hand"; src: url("assets/fonts/PatrickHand-Regular.ttf"); }
+    #root { position: absolute; inset: 0; background: #1a2b66; overflow: hidden; }
+    #fm-art { position: absolute; inset: 0; }
+    .rk { stroke: #0d0f22; stroke-linecap: round; stroke-linejoin: round; }
+    .pop { font-family: Hand; font-size: 150px; fill: #ffb35c; stroke: #0d0f22; stroke-width: 14px; paint-order: stroke; stroke-linejoin: round; }
+    .lab { font-family: Hand; font-size: 56px; fill: #f4f1ff; }
+  </style>
+  <div id="root" data-composition-id="famine" data-width="1920" data-height="1080">
+    <svg id="fm-art" class="clip" data-start="0" data-duration="30" viewBox="0 0 1920 1080" data-layout-allow-overflow>
+      <defs>
+        <radialGradient id="fm-bg" cx="0.5" cy="0.55" r="0.75"><stop offset="0" stop-color="#2a4a9f"/><stop offset="1" stop-color="#111c4c"/></radialGradient>
+      </defs>
+      <rect width="1920" height="1080" fill="url(#fm-bg)"/>
+      <g fill="#fff" opacity="0.06"><circle cx="300" cy="160" r="4"/><circle cx="1500" cy="960" r="5"/><circle cx="1760" cy="140" r="4"/></g>
+
+      <!-- 7: money grows, the clock shrinks -->
+      <g id="fm-trade" data-out="8,0.02">
+        <path d="M200,880 L1720,880" stroke="#c9d3ef" stroke-width="8" stroke-linecap="round"/>
+        <g transform="translate(560,880)"><g id="fm-coins">
+          <ellipse class="rk fm-c" cx="0" cy="-20" rx="120" ry="32" fill="#ffd27a" stroke-width="7"/>
+          <ellipse class="rk fm-c" cx="0" cy="-60" rx="120" ry="32" fill="#ffd27a" stroke-width="7"/>
+          <ellipse class="rk fm-c" cx="0" cy="-100" rx="120" ry="32" fill="#ffd27a" stroke-width="7"/>
+          <ellipse class="rk fm-c" cx="0" cy="-140" rx="120" ry="32" fill="#ffd27a" stroke-width="7"/>
+          <ellipse class="rk fm-c" cx="0" cy="-180" rx="120" ry="32" fill="#ffd27a" stroke-width="7"/>
+          <ellipse class="rk fm-c" cx="0" cy="-220" rx="120" ry="32" fill="#ffd27a" stroke-width="7"/>
+          <ellipse class="rk fm-c" cx="0" cy="-260" rx="120" ry="32" fill="#ffd27a" stroke-width="7"/>
+          <ellipse class="rk fm-c" cx="0" cy="-300" rx="120" ry="32" fill="#ffd27a" stroke-width="7"/>
+          <ellipse class="rk fm-c" cx="0" cy="-340" rx="120" ry="32" fill="#ffd27a" stroke-width="7"/>
+          <ellipse class="rk fm-c" cx="0" cy="-380" rx="120" ry="32" fill="#ffd27a" stroke-width="7"/>
+        </g></g>
+        <text class="lab" x="560" y="960" text-anchor="middle" style="font-size:72px">money</text>
+        <path d="M800,500 L860,380 L920,500" fill="none" stroke="#7cf0a8" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" data-in="7,0.2,up"/>
+        <g transform="translate(1360,640)"><g id="fm-clock">
+          <circle class="rk" r="200" fill="#f7f3ea" stroke-width="14"/>
+          <g fill="#0d0f22"><circle cy="-160" r="10"/><circle cx="160" r="10"/><circle cy="160" r="10"/><circle cx="-160" r="10"/></g>
+          <g id="fm-hand"><path class="rk" d="M0,0 L0,-130" stroke-width="16"/></g>
+          <path class="rk" d="M0,0 L70,36" stroke-width="16"/><circle r="16" fill="#0d0f22"/>
+        </g></g>
+        <text class="lab" x="1360" y="960" text-anchor="middle" style="font-size:72px">time</text>
+        <text class="pop" x="1360" y="300" text-anchor="middle" style="font-size:170px" data-in="7,0.86,pop">time.</text>
+      </g>
+      <!-- 8: time stress: kid sweats, three symptoms pop -->
+      <g id="fm-stress" data-in="8,0.0,fade" data-out="9,0.02">
+        <g transform="translate(560,760) scale(0.55)"><g id="fm-kid"><g data-rig="kid" data-p="fk" data-o='{"mouth":"worry","brows":"worry","sweat":true,"look":[40,-20]}'></g></g></g>
+        <g transform="translate(1150,300)"><g data-in="8,0.3,pop">
+          <circle class="rk" r="80" fill="#ffd27a" stroke-width="9"/><circle cx="-26" cy="-14" r="9" fill="#0d0f22"/><circle cx="26" cy="-14" r="9" fill="#0d0f22"/>
+          <path class="rk" d="M-34,36 C-12,14 12,14 34,36" fill="none" stroke-width="9"/></g></g>
+        <g transform="translate(1480,450)"><g data-in="8,0.55,pop">
+          <circle class="rk" r="80" fill="#ff8fb1" stroke-width="9"/>
+          <path d="M-60,0 L-30,0 L-15,-40 L5,40 L20,-20 L30,0 L60,0" fill="none" stroke="#0d0f22" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/></g></g>
+        <g transform="translate(1250,720)"><g data-in="8,0.8,pop">
+          <circle class="rk" r="80" fill="#8f7dff" stroke-width="9"/>
+          <path d="M-10,-50 C-60,-30 -60,40 -10,55 C30,62 52,40 58,22 C20,40 -20,10 -10,-50 Z" fill="#f7f3ea"/>
+          <text x="40" y="-24" style="font-family:Hand;font-size:44px;fill:#fff">z</text>
+          <path d="M-90,-90 L90,90" stroke="#ff3b4a" stroke-width="14" stroke-linecap="round"/></g></g>
+      </g>
+      <!-- 9: time famine: an empty plate with a clock on it -->
+      <g id="fm-plate" data-in="9,0.0,fade" data-out="10,0.02">
+        <g transform="translate(960,640)">
+          <ellipse class="rk" rx="380" ry="150" fill="#f7f3ea" stroke-width="12"/><ellipse rx="260" ry="96" fill="#e4dccb"/>
+          <g transform="translate(-480,0)"><path class="rk" d="M0,-180 L0,170 M-26,-180 L-26,-90 M26,-180 L26,-90 M-26,-90 C-26,-60 26,-60 26,-90" fill="none" stroke-width="12"/></g>
+          <g transform="translate(480,0)"><path class="rk" d="M0,-180 C40,-130 40,-40 0,-20 L0,170" fill="#c9d3ef" stroke-width="12"/></g>
+          <g transform="translate(0,-30) scale(0.55)"><g id="fm-mini" data-in="9,0.4,pop">
+            <circle class="rk" r="120" fill="#fff" stroke-width="12"/><path class="rk" d="M0,0 L0,-80 M0,0 L50,26" stroke-width="14"/></g></g>
+        </g>
+        <text class="pop" x="960" y="290" text-anchor="middle" style="font-size:190px" data-in="9,0.5,pop">time famine</text>
+      </g>
+      <!-- 10: can money buy it back? a coin rolls into an hourglass -->
+      <g id="fm-buy" data-in="10,0.0,fade">
+        <g transform="translate(1200,600)"><g id="fm-glass">
+          <path class="rk" d="M-120,-200 L120,-200 L120,-170 C120,-60 26,-20 26,0 C26,20 120,60 120,170 L120,200 L-120,200 L-120,170 C-120,60 -26,20 -26,0 C-26,-20 -120,-60 -120,-170 Z" fill="#cfe6ff" stroke-width="12"/>
+          <path id="fm-sandtop" d="M-80,-120 L80,-120 C70,-60 20,-30 0,-14 C-20,-30 -70,-60 -80,-120 Z" fill="#ffb35c"/>
+          <path d="M-90,180 C-60,120 60,120 90,180 Z" fill="#ffb35c"/>
+          <rect class="rk" x="-150" y="-230" width="300" height="34" rx="12" fill="#a8673e" stroke-width="10"/>
+          <rect class="rk" x="-150" y="196" width="300" height="34" rx="12" fill="#a8673e" stroke-width="10"/>
+        </g></g>
+        <g transform="translate(560,820)"><g id="fm-coin">
+          <circle class="rk" r="80" fill="#ffd27a" stroke-width="10"/><text y="30" text-anchor="middle" style="font-family:Hand;font-size:90px;fill:#8a5a1c">$</text></g></g>
+        <text class="pop" x="1560" y="330" text-anchor="middle" style="font-size:220px" data-in="10,0.6,pop">?</text>
+      </g>
+    </svg>
+  </div>
+  <script>
+    Rig.fill();
+    const tl = gsap.timeline({ paused: true }), A = s => Rig.at(s, "famine");
+    Rig.run(tl, "famine");
+    tl.fromTo(".fm-c", { opacity: 0 }, { opacity: 1, duration: 0.08, stagger: 0.12 }, 0.05);
+    tl.to("#fm-hand", { rotation: 720, svgOrigin: "0 0", duration: 2.5, ease: "power1.in" }, 0.1);
+    tl.to("#fm-clock", { scale: 0.45, transformOrigin: "50% 50%", duration: 1.6, ease: "power2.inOut" }, A("7,0.45"));
+    tl.to("#fm-clock", { x: 6, duration: 0.05, yoyo: true, repeat: 15 }, A("7,0.8"));
+    Rig.blinks(tl, "fk", A("8,0"), A("9,0"));
+    tl.to("#fm-kid", { x: 5, duration: 0.05, yoyo: true, repeat: 21 }, A("8,0.3"));
+    Rig.squint(tl, "fk", A("8,0.75"), 0.4);
+    tl.to("#fm-mini", { rotation: -10, svgOrigin: "0 0", duration: 0.3, yoyo: true, repeat: 5, ease: "sine.inOut" }, A("9,0.6"));
+    // 10: the coin rolls into the hourglass, sand refills
+    tl.to("#fm-coin", { x: 520, y: -460, rotation: 360, scale: 0.4, duration: 1.1, ease: "power2.inOut" }, A("10,0.2"));
+    tl.to("#fm-coin", { opacity: 0, duration: 0.15 }, A("10,0.2") + 1.05);
+    tl.fromTo("#fm-sandtop", { scaleY: 0.3, transformOrigin: "50% 0%" }, { scaleY: 1, transformOrigin: "50% 0%", duration: 0.8, ease: "power2.out" }, A("10,0.2") + 1.1);
+    tl.to("#fm-glass", { rotation: 6, svgOrigin: "0 200", duration: 0.3, yoyo: true, repeat: 5, ease: "sine.inOut" }, A("10,0.9"));
+    window.__timelines["famine"] = tl;
+  </script>
+</template>

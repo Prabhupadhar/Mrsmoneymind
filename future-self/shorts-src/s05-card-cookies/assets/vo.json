@@ -1,0 +1,32 @@
+[
+ {
+  "text": "Your card is buying you cookies.",
+  "mood": "shocked",
+  "start": 0.3,
+  "end": 1.89
+ },
+ {
+  "text": "Researchers tracked the shopping of a thousand households for six months.",
+  "mood": "neutral",
+  "start": 2.24,
+  "end": 6.047
+ },
+ {
+  "text": "When people paid by card, more unhealthy, impulse foods ended up in the cart.",
+  "mood": "curious",
+  "start": 6.447,
+  "end": 11.069
+ },
+ {
+  "text": "Their idea: cash makes you feel the price. A card doesn't. So the craving wins.",
+  "mood": "curious",
+  "start": 11.469,
+  "end": 16.048
+ },
+ {
+  "text": "Next grocery run, try cash for the snack aisle. See what's left in your cart.",
+  "mood": "warm",
+  "start": 16.498,
+  "end": 21.148
+ }
+]

@@ -1,0 +1,54 @@
+<template>
+  <style>
+    @font-face { font-family: "Hand"; src: url("assets/fonts/PatrickHand-Regular.ttf"); }
+    #root { position: absolute; inset: 0; background: #1a2b66; overflow: hidden; }
+    #ex-art { position: absolute; inset: 0; }
+    .rk { stroke: #0d0f22; stroke-linecap: round; stroke-linejoin: round; }
+    .pop { font-family: Hand; font-size: 150px; fill: #ffb35c; stroke: #0d0f22; stroke-width: 14px; paint-order: stroke; stroke-linejoin: round; }
+    .lab { font-family: Hand; font-size: 56px; fill: #f4f1ff; }
+  </style>
+  <div id="root" data-composition-id="experts" data-width="1920" data-height="1080">
+    <svg id="ex-art" class="clip" data-start="0" data-duration="30" viewBox="0 0 1920 1080" data-layout-allow-overflow>
+      <defs>
+        <radialGradient id="ex-bg" cx="0.5" cy="0.55" r="0.75"><stop offset="0" stop-color="#2a4a9f"/><stop offset="1" stop-color="#111c4c"/></radialGradient>
+      </defs>
+      <rect width="1920" height="1080" fill="url(#ex-bg)"/>
+      <g fill="#fff" opacity="0.06"><circle cx="300" cy="160" r="4"/><circle cx="1500" cy="960" r="5"/><circle cx="1760" cy="140" r="4"/></g>
+
+      <!-- 30 policymakers with grad caps (10 x 3) -->
+      <g id="ex-grid" transform="translate(240,420)"></g>
+      <text class="pop" x="1340" y="200" text-anchor="middle" style="font-size:170px" data-in="28,0.08,pop">30</text>
+      <g transform="translate(1560,560) rotate(-6)"><g data-in="28,0.55,pop">
+        <rect class="rk" x="-170" y="-80" width="340" height="160" rx="14" fill="#7fd18b" stroke-width="10"/>
+        <text y="30" text-anchor="middle" style="font-family:Hand;font-size:96px;fill:#1f5a33">$21</text></g></g>
+      <text class="lab" x="1560" y="720" text-anchor="middle" style="font-size:60px" data-in="28,0.75,up">aid, Nairobi</text>
+      <text class="pop" x="560" y="250" text-anchor="middle" style="font-size:190px;fill:#ff8a2a" data-in="29,0.15,pop">6%</text>
+      <text class="pop" x="1400" y="940" text-anchor="middle" style="font-size:120px" data-in="29,0.7,pop">26 of 30: cash</text>
+    </svg>
+  </div>
+  <script>
+    (function () {
+      var g = document.getElementById("ex-grid"), s = "";
+      for (var i = 0; i < 30; i++) {
+        var x = (i % 10) * 92, y = Math.floor(i / 10) * 150, cash = i < 26;
+        s += '<g transform="translate(' + x + ',' + y + ')"><g class="ex-p">' +
+          '<path d="M-30,64 C-30,34 30,34 30,64 Z" fill="#7a86b8"/>' +
+          '<circle r="26" fill="#f4d2b6"/>' +
+          '<path d="M-34,-22 L0,-38 L34,-22 L0,-8 Z" fill="#0d0f22"/>' +
+          '<g class="ex-tag" opacity="0"><circle cx="0" cy="-70" r="24" fill="' + (cash ? "#7fd18b" : "#f7f3ea") + '" stroke="#0d0f22" stroke-width="5"/>' +
+          (cash ? '<text x="0" y="-58" text-anchor="middle" style="font-family:Hand;font-size:36px;fill:#0d0f22">$</text>'
+                : '<path d="M0,-70 L0,-84 M0,-70 L10,-64" stroke="#0d0f22" stroke-width="5" stroke-linecap="round"/>') +
+          '</g></g></g>';
+      }
+      g.innerHTML = s;
+    })();
+    Rig.fill();
+    const tl = gsap.timeline({ paused: true }), A = s => Rig.at(s, "experts");
+    Rig.run(tl, "experts");
+    tl.fromTo(".ex-p", { scale: 0, transformOrigin: "50% 50%" }, { scale: 1, duration: 0.25, stagger: 0.03, ease: "back.out(2)" }, 0.1);
+    tl.to(".ex-p", { y: -6, duration: 0.3, yoyo: true, repeat: 7, stagger: 0.05, ease: "sine.inOut" }, 1.4);
+    // 29: given three programs, 26 pick cash, 4 pick the time program
+    tl.to(".ex-tag", { opacity: 1, duration: 0.15, stagger: 0.04 }, A("29,0.6"));
+    window.__timelines["experts"] = tl;
+  </script>
+</template>

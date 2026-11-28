@@ -1,0 +1,50 @@
+[
+ {
+  "text": "Money day: full plates. Thirty days later, up to fifteen percent fewer calories.",
+  "mood": "excited",
+  "start": 0.1,
+  "end": 4.031
+ },
+ {
+  "text": "You know that end-of-month squeeze?",
+  "mood": "curious",
+  "start": 4.331,
+  "end": 5.712
+ },
+ {
+  "text": "An economist studied food diaries from American families on food stamps.",
+  "mood": "neutral",
+  "start": 6.012,
+  "end": 10.046
+ },
+ {
+  "text": "The benefit landed on the same day every month. No surprise.",
+  "mood": "neutral",
+  "start": 10.346,
+  "end": 13.638
+ },
+ {
+  "text": "Yet calories fell a little every single day after it arrived. About ten to fifteen percent over the month.",
+  "mood": "curious",
+  "start": 14.088,
+  "end": 19.119
+ },
+ {
+  "text": "And by week four, more families would take less than fifty dollars today, over fifty dollars next month.",
+  "mood": "shocked",
+  "start": 19.619,
+  "end": 24.971
+ },
+ {
+  "text": "Week one just feels more urgent than week four.",
+  "mood": "warm",
+  "start": 25.321,
+  "end": 27.765
+ },
+ {
+  "text": "So split the money by week. Day thirty deserves a full plate too.",
+  "mood": "warm",
+  "start": 28.165,
+  "end": 31.785
+ }
+]

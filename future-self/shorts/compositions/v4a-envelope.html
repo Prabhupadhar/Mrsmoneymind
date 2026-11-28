@@ -1,0 +1,43 @@
+<template>
+  <style>
+    @font-face { font-family: "Hand"; src: url("assets/fonts/PatrickHand-Regular.ttf"); }
+    #root { position: absolute; inset: 0; background: #1a2b66; overflow: hidden; }
+    #ve-art { position: absolute; inset: 0; }
+    .rk { stroke: #0d0f22; stroke-linecap: round; stroke-linejoin: round; }
+    .pop { font-family: Hand; font-size: 150px; fill: #ffb35c; stroke: #0d0f22; stroke-width: 14px; paint-order: stroke; stroke-linejoin: round; }
+    .lab { font-family: Hand; font-size: 64px; fill: #f4f1ff; }
+  </style>
+  <div id="root" data-composition-id="v4aenv" data-width="1080" data-height="1920">
+    <svg id="ve-art" class="clip" data-start="0" data-duration="40" viewBox="0 0 1080 1920" data-layout-allow-overflow>
+      <defs>
+        <radialGradient id="ve-bg" cx="0.5" cy="0.5" r="0.8"><stop offset="0" stop-color="#2a4a9f"/><stop offset="1" stop-color="#111c4c"/></radialGradient>
+      </defs>
+      <rect width="1080" height="1920" fill="url(#ve-bg)"/>
+
+      <g id="ve-envs" data-out="9,0">
+        <g transform="translate(540,760)"><g data-in="8,0,pop"><rect class="rk" x="-180" y="-110" width="360" height="230" rx="12" fill="#e9dcc6" stroke-width="10"/><g id="ve-b5"><g transform="scale(0.8)"><rect class="rk" x="-170" y="-80" width="340" height="160" rx="14" fill="#7fd18b" stroke-width="10"/>
+          <rect x="-140" y="-54" width="280" height="108" rx="10" fill="none" stroke="#1f5a33" stroke-width="5" opacity="0.6"/>
+          <text y="34" text-anchor="middle" style="font-family:Hand;font-size:100px;fill:#1f5a33">$5</text></g></g><path class="rk" d="M-180,-40 L0,60 L180,-40 L180,120 L-180,120 Z" fill="#f3e6c8" stroke-width="10"/></g></g>
+        <g transform="translate(540,1220)"><g data-in="8,0.3,pop"><rect class="rk" x="-180" y="-110" width="360" height="230" rx="12" fill="#e9dcc6" stroke-width="10"/><g id="ve-b20"><g transform="scale(0.8)"><rect class="rk" x="-170" y="-80" width="340" height="160" rx="14" fill="#7fd18b" stroke-width="10"/>
+          <rect x="-140" y="-54" width="280" height="108" rx="10" fill="none" stroke="#1f5a33" stroke-width="5" opacity="0.6"/>
+          <text y="34" text-anchor="middle" style="font-family:Hand;font-size:100px;fill:#1f5a33">$20</text></g></g><path class="rk" d="M-180,-40 L0,60 L180,-40 L180,120 L-180,120 Z" fill="#f3e6c8" stroke-width="10"/></g></g>
+      </g>
+      <g transform="translate(540,1020) scale(0.9)"><g id="ve-clock" data-in="9,0.1,pop">
+        <path class="rk" d="M-130,-200 C-170,-240 -230,-180 -190,-140 Z M130,-200 C170,-240 230,-180 190,-140 Z" fill="#ffd23a" stroke-width="9"/>
+        <circle class="rk" r="210" fill="#f7f3ea" stroke-width="14"/>
+        <g fill="#0d0f22"><circle cx="0" cy="-170" r="10"/><circle cx="170" cy="0" r="10"/><circle cx="0" cy="170" r="10"/><circle cx="-170" cy="0" r="10"/></g>
+        <path d="M0,0 L0,-150" stroke="#0d0f22" stroke-width="14" stroke-linecap="round"/><path d="M0,0 L55,95" stroke="#0d0f22" stroke-width="20" stroke-linecap="round"/><circle r="16" fill="#ff5f6d"/>
+      </g></g>
+      <text class="pop" x="540" y="620" text-anchor="middle" style="font-size:140px" data-in="9,0.55,pop">by 5 p.m.</text>
+    </svg>
+  </div>
+  <script>
+    Rig.fill();
+    const tl = gsap.timeline({ paused: true }), A = s => Rig.at(s, "v4aenv");
+    Rig.run(tl, "v4aenv");
+    tl.fromTo("#ve-b5", { y: 60 }, { y: -110, duration: 0.5, ease: "back.out(1.6)" }, A("8,0.1"));
+    tl.fromTo("#ve-b20", { y: 60 }, { y: -110, duration: 0.5, ease: "back.out(1.6)" }, A("8,0.4"));
+    tl.to("#ve-clock", { rotation: 6, svgOrigin: "0 0", duration: 0.06, yoyo: true, repeat: 11, ease: "sine.inOut" }, A("9,0.5"));
+    window.__timelines["v4aenv"] = tl;
+  </script>
+</template>

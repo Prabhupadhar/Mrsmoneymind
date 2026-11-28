@@ -1,0 +1,62 @@
+[
+ [
+  "Lose a hundred? They needed two oh two.",
+  0.1,
+  1.05,
+  "excited"
+ ],
+ [
+  "Here's the deal. Flip a coin. Heads, you lose a hundred dollars.",
+  0.4,
+  1.06,
+  "neutral"
+ ],
+ [
+  "Tails, you win. How much would tails have to pay before you'd flip?",
+  0.3,
+  1.06,
+  "curious"
+ ],
+ [
+  "Tversky and Kahneman asked twenty-five grad students this, at a computer.",
+  0.35,
+  1.06,
+  "neutral"
+ ],
+ [
+  "On paper, anything over a hundred is a good bet.",
+  0.35,
+  1.06,
+  "firm"
+ ],
+ [
+  "The typical answer?",
+  0.35,
+  1.06,
+  "curious"
+ ],
+ [
+  "Two hundred and two dollars.",
+  0.3,
+  1.0,
+  "shocked"
+ ],
+ [
+  "Risk twenty-five, they wanted sixty-one. Risk a hundred fifty, two eighty.",
+  0.45,
+  1.06,
+  "neutral"
+ ],
+ [
+  "A loss weighs about twice a gain. Six hundred later estimates land near two.",
+  0.4,
+  1.06,
+  "warm"
+ ],
+ [
+  "So, lose a hundred. What would you need?",
+  0.4,
+  1.05,
+  "whisper"
+ ]
+]

@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1080, height=1920" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+<script src="voice.js"></script>
+<script src="kit.js"></script>
+<link rel="stylesheet" href="base.css" />
+<style>
+  #root, html, body { background: #3a2410; }
+  .t { top: 220px; font-size: 96px; }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="34" data-width="1080" data-height="1920" data-motion-blur="on">
+  <svg id="art" class="clip" data-start="0" data-duration="34" viewBox="0 0 1080 1920">
+    <defs>
+      <radialGradient id="bg" cx="0.5" cy="0.5" r="0.85"><stop offset="0" stop-color="#c47a2c"/><stop offset="1" stop-color="#2a1708"/></radialGradient>
+      <g id="box"><rect class="k" x="-150" y="-110" width="300" height="220" rx="18" fill="#9aa6b8" stroke-width="9"/><rect x="-150" y="-110" width="300" height="40" rx="18" fill="#b8c2d2"/>
+        <rect x="-60" y="-98" width="120" height="14" rx="7" fill="#0d0f22"/><g><path d="M-30,10 C-30,-40 30,-40 30,10" fill="none" stroke="#c9ced8" stroke-width="12"/><rect class="k" x="-46" y="6" width="92" height="76" rx="12" fill="#ffd36b" stroke-width="6"/></g></g>
+      <g id="key"><circle class="k" cx="0" cy="0" r="26" fill="#ffd36b" stroke-width="6"/><circle cx="0" cy="0" r="10" fill="#3a2410"/><path class="k" d="M24,0 L90,0 M70,0 L70,18 M84,0 L84,14" fill="none" stroke="#ffd36b" stroke-width="10"/></g>
+    </defs>
+    <rect width="1080" height="1920" fill="url(#bg)"/>
+    <g id="cam">
+      <g id="s1" class="scene"></g>
+      <g id="s2" class="scene"></g>
+      <g id="s3" class="scene"></g>
+      <g id="s4" class="scene"></g>
+    </g>
+  </svg>
+  <div id="t1" class="cap t clip" data-start="0" data-duration="34"></div>
+  <div id="t2" class="cap t clip" data-start="0" data-duration="34"></div>
+  <div id="t3" class="cap t clip" data-start="0" data-duration="34"></div>
+  <div id="t4" class="cap t clip" data-start="0" data-duration="34"></div>
+  <div id="t5" class="cap t clip" data-start="0" data-duration="34"></div>
+</div>
+<script>
+window.__timelines = window.__timelines || {};
+var tl = gsap.timeline({ paused: true }), V = window.VO;
+
+// ---------- S1: HOOK — coins drop into a metal box, +68% ----------
+K.add("#s1", '<g transform="translate(540,1050) scale(1.4)"><g id="b1"><use href="#box"/></g></g>' +
+  [0, 1, 2, 3].map(function (i) { return '<g transform="translate(540,780)"><g class="cn" id="cn' + i + '"><circle class="k" r="34" fill="#ffd36b" stroke-width="7"/><text y="13" text-anchor="middle" class="num" font-size="34" fill="#c98b2c">$</text></g></g>'; }).join("") +
+  '<text id="p68" x="540" y="1380" text-anchor="middle" class="num" font-size="150" fill="#7dff9a" opacity="0">+68%</text>' +
+  '<text id="p68l" x="540" y="1460" text-anchor="middle" class="lbl" font-size="52" fill="#ffe3c7" opacity="0">preventive health spending</text>');
+K.show(tl, "#s1", 0);
+K.hook(tl, "#t1", "a <b>metal box.</b> health spending up <b>68%.</b>", V[1] - 0.2);
+[0, 1, 2, 3].forEach(function (i) {
+  tl.fromTo("#cn" + i, { y: -40 - i * 70, opacity: 1 }, { y: 150, duration: 0.45, ease: "power2.in" }, i * 0.18);
+  tl.to("#cn" + i, { opacity: 0, duration: 0.05 }, 0.45 + i * 0.18);
+  tl.fromTo("#b1", { scaleY: 1, svgOrigin: "0 110" }, { scaleY: 0.92, duration: 0.07, yoyo: true, repeat: 1, immediateRender: false }, 0.45 + i * 0.18);
+});
+K.pop(tl, "#p68", 1.2, 1.8); tl.to("#p68l", { opacity: 1, duration: 0.3 }, 1.4);
+K.words("#t2", "money <b>leaks</b> away?"); K.title(tl, "#t2", V[1]);
+tl.to("#t2", { opacity: 0, duration: 0.2 }, V[2] - 0.2);
+tl.to(["#p68", "#p68l"], { opacity: 0, duration: 0.2 }, V[1]);
+K.add("#s1", '<g id="leak" opacity="0">' + [0, 1, 2].map(function (i) { return '<g transform="translate(' + (480 + i * 60) + ',1220)"><g class="lk" id="lk' + i + '"><circle class="k" r="24" fill="#ffd36b" stroke-width="6"/></g></g>'; }).join("") + '</g>');
+tl.set("#leak", { opacity: 1 }, V[1] + 0.3);
+tl.fromTo(".lk", { y: 0, x: 0 }, { y: 400, x: function (i) { return (i - 1) * 160; }, duration: 0.8, stagger: 0.15, ease: "power2.in", immediateRender: false }, V[1] + 0.3);
+
+// ---------- S2: Kenya, savings groups, 771 people; two boxes ----------
+K.add("#s2", '<text x="540" y="520" text-anchor="middle" class="lbl" font-size="64" fill="#ffe3c7">rural Kenya · savings groups</text>' +
+  '<text id="n771" x="540" y="660" text-anchor="middle" class="num" font-size="130" fill="#fff">0</text>' +
+  '<text x="540" y="730" text-anchor="middle" class="lbl" font-size="50" fill="#ffe3c7">people followed</text>' +
+  '<g transform="translate(290,1060)"><g id="bA" opacity="0"><use href="#box"/><text y="180" text-anchor="middle" class="lbl" font-size="54" fill="#ffe3c7">you keep the key</text></g></g>' +
+  '<g transform="translate(450,960)"><g id="kA" opacity="0"><use href="#key"/></g></g>' +
+  '<g transform="translate(790,1060)"><g id="bB" opacity="0"><use href="#box"/><text y="180" text-anchor="middle" class="lbl" font-size="54" fill="#ffe3c7">officer keeps it</text></g></g>' +
+  K.person("off", "boss", { x: 930, y: 860, s: 0.18 }));
+K.cut(tl, "#s1", "#s2", V[2] - 0.3);
+K.counter(tl, "#n771", 0, 771, V[2] + 0.2, 1.2);
+K.pop(tl, "#bA", V[3] + 0.1, 0.4);
+tl.fromTo("#kA", { opacity: 0, y: -200, rotation: -90 }, { opacity: 1, y: 0, rotation: 0, duration: 0.5, ease: "back.out(2)", immediateRender: false }, V[3] + 1.2);
+K.pop(tl, "#bB", V[4] + 0.1, 0.4);
+K.face(tl, "off", { m: "smile" }, V[4] + 0.6);
+
+// ---------- S3: results — keep-the-key +68% vs locked: no effect ----------
+K.add("#s3", '<text x="540" y="520" text-anchor="middle" class="lbl" font-size="56" fill="#ffe3c7">preventive health spending, after 1 year</text>' +
+  '<line x1="160" y1="1300" x2="920" y2="1300" stroke="#ffe3c7" stroke-width="6"/>' +
+  '<rect class="k" id="ctl" x="160" y="' + (1300 - 300) + '" width="200" height="300" fill="#a9a29a" stroke-width="7"/>' +
+  '<rect class="k" id="sb" x="440" y="' + (1300 - 300 * 1.68) + '" width="200" height="' + 300 * 1.68 + '" fill="#7dd88f" stroke-width="7"/>' +
+  '<rect class="k" id="lb" x="720" y="' + (1300 - 300) + '" width="200" height="300" fill="#ff9a8c" stroke-width="7"/>' +
+  '<text id="l68" x="540" y="' + (1300 - 300 * 1.68 - 30) + '" text-anchor="middle" class="num" font-size="72" fill="#7dff9a" opacity="0">+68%</text>' +
+  '<text id="lno" x="820" y="' + (1300 - 300 - 30) + '" text-anchor="middle" class="num" font-size="56" fill="#ffd0cc" opacity="0">no effect</text>' +
+  '<g class="lbl" font-size="44" fill="#ffe3c7"><text x="260" y="1360" text-anchor="middle">no box</text><text x="540" y="1360" text-anchor="middle">your key</text><text x="820" y="1360" text-anchor="middle">no key</text></g>');
+K.cut(tl, "#s2", "#s3", V[5] - 0.3);
+tl.fromTo("#ctl", { scaleY: 0, svgOrigin: "260 1300" }, { scaleY: 1, duration: 0.5, ease: "expo.out", immediateRender: false }, V[5] + 0.2);
+tl.fromTo("#sb", { scaleY: 0, svgOrigin: "540 1300" }, { scaleY: 1, duration: 0.7, ease: "expo.out", immediateRender: false }, V[5] + 0.6);
+K.pop(tl, "#l68", V[5] + 1.2, 1.6);
+K.words("#t3", "the box they <b>couldn't</b> open?"); K.title(tl, "#t3", V[6]);
+tl.to("#t3", { opacity: 0, duration: 0.2 }, V[7] - 0.1);
+tl.fromTo("#lb", { scaleY: 0, svgOrigin: "820 1300" }, { scaleY: 1, duration: 0.5, ease: "expo.out", immediateRender: false }, V[7]);
+K.pop(tl, "#lno", V[7] + 0.3, 1.6);
+K.words("#t4", "<b>no</b> effect"); K.title(tl, "#t4", V[7]);
+K.camera(tl, "#cam", [[V[7], 1.07, -40, 0, 0.3], [V[8] - 0.2, 1, 0, 0, 0.5]]);
+tl.to("#t4", { opacity: 0, duration: 0.2 }, V[8] - 0.2);
+
+// ---------- S4: name it, keep the key ----------
+K.add("#s4", K.person("kid", "kid", { x: 330, y: 1020, s: 0.45 }) +
+  '<g transform="translate(780,1080)"><g id="b4"><use href="#box"/><rect class="k" x="-130" y="-190" width="260" height="70" rx="12" fill="#fff6e0" stroke-width="6"/><text y="-142" text-anchor="middle" class="lbl" font-size="44" fill="#3a2410">health fund</text></g></g>' +
+  '<g transform="translate(470,1250)"><g id="k4" opacity="0"><use href="#key"/></g></g>');
+K.cut(tl, "#s3", "#s4", V[8] - 0.3);
+K.words("#t5", "<b>name</b> it. keep the <b>key.</b>"); K.title(tl, "#t5", V[9]);
+K.face(tl, "kid", { m: "smile", look: [40, 10] }, V[8] + 0.3);
+tl.fromTo("#k4", { opacity: 0, y: -160, rotation: -60 }, { opacity: 1, y: 0, rotation: 0, duration: 0.5, ease: "back.out(2.4)", immediateRender: false }, V[9] + 0.6);
+K.face(tl, "kid", { m: "smile", e: "h", blush: 0.8 }, V[9] + 1.0);
+K.react(tl, "kid", V[9] + 1.0);
+tl.set({}, {}, window.DUR);
+window.__timelines["main"] = tl;
+</script>
+</body>
+</html>

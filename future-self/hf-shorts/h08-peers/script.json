@@ -1,0 +1,12 @@
+[
+ ["Told everyone saves? They saved less.", 0.1, 1.15, "excited"],
+ ["Peer pressure should work, right? Watch.", 0.35, 1.12, "curious"],
+ ["A big American manufacturing company, 2008. Workers who weren't saving got a simple form.", 0.35, 1.12, "neutral"],
+ ["Tick one box. Start saving six percent.", 0.3, 1.12, "neutral"],
+ ["Some letters added one line: join the coworkers your age who already save.", 0.35, 1.12, "curious"],
+ ["That should help, right?", 0.3, 1.12, "curious"],
+ ["Without that line, nine point nine percent of one group signed up.", 0.35, 1.12, "neutral"],
+ ["With it? Six point three.", 0.5, 1.15, "shocked"],
+ ["Lower earners pulled back most. Seeing everyone ahead can feel like: why bother?", 0.4, 1.12, "warm"],
+ ["So compare with last month's you. Not with everyone else.", 0.4, 1.12, "warm"]
+]

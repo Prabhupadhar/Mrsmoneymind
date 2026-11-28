@@ -1,0 +1,62 @@
+[
+ {
+  "text": "Your money brain peaks at fifty-three.",
+  "mood": "excited",
+  "start": 0.1,
+  "end": 1.598
+ },
+ {
+  "text": "Too young? Too old? Either way, you pay more.",
+  "mood": "curious",
+  "start": 1.948,
+  "end": 4.252
+ },
+ {
+  "text": "Researchers checked ten kinds of loans and card fees.",
+  "mood": "neutral",
+  "start": 4.601,
+  "end": 7.394
+ },
+ {
+  "text": "Same credit risk. Different ages.",
+  "mood": "neutral",
+  "start": 7.694,
+  "end": 9.681
+ },
+ {
+  "text": "Young and old borrowers paid higher rates and more fees.",
+  "mood": "neutral",
+  "start": 10.031,
+  "end": 12.776
+ },
+ {
+  "text": "The lowest costs? Around fifty-three.",
+  "mood": "curious",
+  "start": 13.176,
+  "end": 15.08
+ },
+ {
+  "text": "On home equity lines, twenty-five-year-olds paid about two ninety-five a year more than fifty-year-olds.",
+  "mood": "neutral",
+  "start": 15.43,
+  "end": 20.769
+ },
+ {
+  "text": "Seventy-five-year-olds? About two hundred sixty-five more.",
+  "mood": "shocked",
+  "start": 21.269,
+  "end": 24.26
+ },
+ {
+  "text": "Experience grows. Quick thinking fades. Around fifty-three, they cross.",
+  "mood": "warm",
+  "start": 24.66,
+  "end": 28.646
+ },
+ {
+  "text": "So at any age: borrow slowly, and compare twice.",
+  "mood": "warm",
+  "start": 29.046,
+  "end": 31.91
+ }
+]

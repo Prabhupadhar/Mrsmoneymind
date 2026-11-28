@@ -1,0 +1,12 @@
+[
+ ["Four thousand dollars, up front. Their students scored higher.", 0.1, 1.2, "excited"],
+ ["Same bonus. The only change: when it was paid.", 0.3, 1.2, "curious"],
+ ["In 2010, nine schools near Chicago tested teacher bonuses.", 0.3, 1.2, "neutral"],
+ ["One group could earn up to eight thousand dollars at the end of the year.", 0.3, 1.2, "neutral"],
+ ["Another got four thousand on day one, and had to give some back if students fell short.", 0.3, 1.2, "neutral"],
+ ["Same money for the same results.", 0.35, 1.2, "curious"],
+ ["End-of-year bonus? Math scores barely moved.", 0.4, 1.2, "curious"],
+ ["Money already in hand? Math jumped about seven percentile points.", 0.5, 1.2, "shocked"],
+ ["Losing money hurts more than missing it.", 0.35, 1.2, "warm"],
+ ["That's why four thousand up front worked.", 0.4, 1.2, "warm"]
+]

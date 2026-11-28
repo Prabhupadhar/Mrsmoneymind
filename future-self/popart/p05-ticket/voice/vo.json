@@ -1,0 +1,62 @@
+[
+ {
+  "text": "You lost ten bucks. Still buying the ticket?",
+  "mood": "curious",
+  "start": 0.1,
+  "end": 2.668
+ },
+ {
+  "text": "Picture it. You're at the theater. A ticket costs ten dollars.",
+  "mood": "neutral",
+  "start": 3.068,
+  "end": 6.444
+ },
+ {
+  "text": "You open your wallet, and a ten dollar bill is gone.",
+  "mood": "sad",
+  "start": 6.744,
+  "end": 10.159
+ },
+ {
+  "text": "Researchers asked students. Would you still buy the ticket?",
+  "mood": "curious",
+  "start": 10.509,
+  "end": 13.552
+ },
+ {
+  "text": "Eighty-eight percent said yes.",
+  "mood": "warm",
+  "start": 13.952,
+  "end": 15.521
+ },
+ {
+  "text": "But change one thing. You already bought the ticket, and you lost the ticket.",
+  "mood": "curious",
+  "start": 15.971,
+  "end": 19.783
+ },
+ {
+  "text": "Same ten dollars gone.",
+  "mood": "firm",
+  "start": 20.183,
+  "end": 21.524
+ },
+ {
+  "text": "Now only forty-six percent would buy another.",
+  "mood": "shocked",
+  "start": 22.024,
+  "end": 24.59
+ },
+ {
+  "text": "Your brain keeps money in separate jars. A second ticket feels like paying twenty.",
+  "mood": "warm",
+  "start": 25.04,
+  "end": 30.178
+ },
+ {
+  "text": "So you lost ten bucks. Which ten was it?",
+  "mood": "whisper",
+  "start": 30.578,
+  "end": 34.135
+ }
+]

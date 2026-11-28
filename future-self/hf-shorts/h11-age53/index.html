@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1080, height=1920" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+<script src="voice.js"></script>
+<script src="kit.js"></script>
+<link rel="stylesheet" href="base.css" />
+<style>
+  #root, html, body { background: #10243f; }
+  .t { top: 220px; font-size: 96px; }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="34" data-width="1080" data-height="1920" data-motion-blur="on">
+  <svg id="art" class="clip" data-start="0" data-duration="34" viewBox="0 0 1080 1920">
+    <defs>
+      <radialGradient id="bg" cx="0.5" cy="0.5" r="0.85"><stop offset="0" stop-color="#2d5b9a"/><stop offset="1" stop-color="#0a1628"/></radialGradient>
+    </defs>
+    <rect width="1080" height="1920" fill="url(#bg)"/>
+    <g id="cam">
+      <g id="s1" class="scene"></g>
+      <g id="s2" class="scene"></g>
+      <g id="s3" class="scene"></g>
+      <g id="s4" class="scene"></g>
+    </g>
+  </svg>
+  <div id="t1" class="cap t clip" data-start="0" data-duration="34"></div>
+  <div id="t2" class="cap t clip" data-start="0" data-duration="34"></div>
+  <div id="t3" class="cap t clip" data-start="0" data-duration="34"></div>
+  <div id="t4" class="cap t clip" data-start="0" data-duration="34"></div>
+  <div id="t5" class="cap t clip" data-start="0" data-duration="34"></div>
+  <div id="t6" class="cap t clip" data-start="0" data-duration="34"></div>
+</div>
+<script>
+window.__timelines = window.__timelines || {};
+var tl = gsap.timeline({ paused: true }), V = window.VO;
+function draw(sel, t, d) { tl.fromTo(sel, { strokeDasharray: 1600, strokeDashoffset: 1600 }, { strokeDashoffset: 0, duration: d || 1, ease: "power2.inOut", immediateRender: false }, t); }
+// age axis: 20 -> 150px, 80 -> 930px ; x(age) = 150 + (age-20)*13
+function ax(a) { return 150 + (a - 20) * 13; }
+var U = "M" + ax(20) + ",820 C" + ax(35) + ",1150 " + ax(45) + ",1240 " + ax(53) + ",1250 C" + ax(61) + ",1240 " + ax(71) + ",1150 " + ax(80) + ",820";
+
+// ---------- S1: HOOK — a U curve, a dot slides to the bottom: 53 ----------
+K.add("#s1", '<line x1="150" y1="1330" x2="930" y2="1330" stroke="#dbe7ff" stroke-width="6"/>' +
+  '<g class="lbl" font-size="46" fill="#dbe7ff"><text x="' + ax(20) + '" y="1390" text-anchor="middle">20</text><text x="' + ax(53) + '" y="1390" text-anchor="middle">53</text><text x="' + ax(80) + '" y="1390" text-anchor="middle">80</text>' +
+  '<text x="540" y="1460" text-anchor="middle">age</text><text x="140" y="790">cost of borrowing</text></g>' +
+  '<path id="u1" d="' + U + '" fill="none" stroke="#ffd36b" stroke-width="14" stroke-linecap="round"/>' +
+  '<g transform="translate(' + ax(53) + ',1250)"><g id="star" opacity="0"><circle r="40" fill="#7dff9a" class="k" stroke-width="7"/><text y="14" text-anchor="middle" class="num" font-size="36" fill="#0a3a1e">53</text></g></g>');
+K.show(tl, "#s1", 0);
+K.hook(tl, "#t1", "your money brain <b>peaks at 53.</b>", V[1] - 0.2);
+draw("#u1", 0, 0.9);
+K.pop(tl, "#star", 0.9, 0.3);
+tl.to("#star", { scale: 1.25, svgOrigin: "0 0", duration: 0.2, yoyo: true, repeat: 3 }, 1.3);
+
+// ---------- S2: too young / too old pay more ----------
+K.add("#s2", K.person("y", "kid", { x: 200, y: 1040, s: 0.32 }) + K.person("m", "boss", { x: 540, y: 1040, s: 0.32 }) +
+  K.person("o", "boss", { x: 880, y: 1040, s: 0.32, look: { hair: "#f2f2f6", skin: "#f3d4bd" } }) +
+  '<g class="num" font-size="64" fill="#dbe7ff"><text x="200" y="1300" text-anchor="middle">25</text><text x="540" y="1300" text-anchor="middle">53</text><text x="880" y="1300" text-anchor="middle">75</text></g>' +
+  '<g transform="translate(200,770)"><g id="py" opacity="0"><rect class="k" x="-120" y="-44" width="240" height="88" rx="16" fill="#ff4f6d" stroke-width="6"/><text y="16" text-anchor="middle" class="lbl" font-size="46" fill="#fff">pays more</text></g></g>' +
+  '<g transform="translate(880,770)"><g id="po" opacity="0"><rect class="k" x="-120" y="-44" width="240" height="88" rx="16" fill="#ff4f6d" stroke-width="6"/><text y="16" text-anchor="middle" class="lbl" font-size="46" fill="#fff">pays more</text></g></g>');
+K.cut(tl, "#s1", "#s2", V[1] - 0.3);
+K.pop(tl, "#py", V[1] + 0.4, 0.4); K.pop(tl, "#po", V[1] + 0.8, 0.4);
+K.face(tl, "y", { m: "o", sweat: 1 }, V[1] + 0.4); K.face(tl, "o", { m: "o", sweat: 1 }, V[1] + 0.8); K.face(tl, "m", { m: "smile" }, V[1] + 1.0);
+
+// ---------- S3: ten credit markets, same risk; the U again with 53 ----------
+K.add("#s3", '<text x="540" y="520" text-anchor="middle" class="lbl" font-size="60" fill="#dbe7ff">10 kinds of loans &amp; card fees</text>' +
+  '<g id="cards">' + [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map(function (i) {
+    var x = 190 + (i % 5) * 175, y = 640 + Math.floor(i / 5) * 140;
+    return '<g transform="translate(' + x + ',' + y + ')"><g class="cd" id="cd' + i + '"><rect class="k" x="-70" y="-46" width="140" height="92" rx="12" fill="' + ["#ffd36b", "#9fe3ff", "#ff9a8c", "#7dd88f", "#c9a7ff"][i % 5] + '" stroke-width="6"/><rect x="-70" y="-26" width="140" height="18" fill="#0d0f22" opacity="0.6"/></g></g>';
+  }).join("") + '</g>' +
+  '<g transform="translate(540,1000)"><g id="risk" opacity="0"><rect class="k" x="-260" y="-50" width="520" height="100" rx="50" fill="#0a1628" stroke="#7dff9a" stroke-width="6"/><text y="17" text-anchor="middle" class="lbl" font-size="52" fill="#7dff9a">same credit risk</text></g></g>' +
+  '<line x1="150" y1="1430" x2="930" y2="1430" stroke="#dbe7ff" stroke-width="6"/>' +
+  '<path id="u2" d="' + U.replace(/,(\d+)/g, function (m, y) { return "," + (Number(y) + 100); }) + '" fill="none" stroke="#ffd36b" stroke-width="12" stroke-linecap="round" opacity="0"/>' +
+  '<text id="low" x="' + ax(53) + '" y="1410" text-anchor="middle" class="num" font-size="52" fill="#7dff9a" opacity="0">lowest ≈ 53</text>');
+K.cut(tl, "#s2", "#s3", V[2] - 0.3);
+tl.fromTo(".cd", { scale: 0, svgOrigin: "0 0" }, { scale: 1, duration: 0.3, stagger: 0.07, ease: "back.out(3)", immediateRender: false }, V[2] + 0.2);
+K.pop(tl, "#risk", V[3] + 0.1, 0.5);
+tl.set("#u2", { opacity: 1 }, V[4]); draw("#u2", V[4], 1.2);
+tl.to("#low", { opacity: 1, duration: 0.3 }, V[5]);
+tl.fromTo("#low", { scale: 1.6, svgOrigin: ax(53) + " 1410" }, { scale: 1, duration: 0.4, ease: "back.out(2.5)", immediateRender: false }, V[5]);
+
+// ---------- S4: $295 (age 25) and $265 (age 75) more a year vs 50; then why, then loop ----------
+K.add("#s4", '<g id="chart4"><text x="540" y="520" text-anchor="middle" class="lbl" font-size="56" fill="#dbe7ff">home equity lines: extra cost per year vs age 50</text>' +
+  '<line x1="160" y1="1200" x2="920" y2="1200" stroke="#dbe7ff" stroke-width="6"/>' +
+  '<rect class="k" id="b25" x="200" y="' + (1200 - 295 * 1.5) + '" width="240" height="' + 295 * 1.5 + '" fill="#ff9a8c" stroke-width="8"/>' +
+  '<rect class="k" id="b75" x="640" y="' + (1200 - 265 * 1.5) + '" width="240" height="' + 265 * 1.5 + '" fill="#ff9a8c" stroke-width="8"/>' +
+  '<text id="v25" x="320" y="' + (1200 - 295 * 1.5 - 30) + '" text-anchor="middle" class="num" font-size="76" fill="#fff" opacity="0">+$295</text>' +
+  '<text id="v75" x="760" y="' + (1200 - 265 * 1.5 - 30) + '" text-anchor="middle" class="num" font-size="76" fill="#fff" opacity="0">+$265</text>' +
+  '<g class="lbl" font-size="54" fill="#dbe7ff"><text x="320" y="1270" text-anchor="middle">age 25</text><text x="760" y="1270" text-anchor="middle">age 75</text></g></g>' +
+  '<g id="why" opacity="0"><path id="exp" d="M150,1450 C400,1280 600,1200 930,1150" fill="none" stroke="#7dff9a" stroke-width="12"/><path id="qk" d="M150,1150 C400,1180 600,1260 930,1450" fill="none" stroke="#9fe3ff" stroke-width="12"/>' +
+  '<text x="900" y="1120" text-anchor="end" class="lbl" font-size="46" fill="#7dff9a">experience</text><text x="900" y="1490" text-anchor="end" class="lbl" font-size="46" fill="#9fe3ff">quick thinking</text></g>');
+K.cut(tl, "#s3", "#s4", V[6] - 0.3);
+tl.fromTo("#b25", { scaleY: 0, svgOrigin: "320 1200" }, { scaleY: 1, duration: 0.6, ease: "expo.out", immediateRender: false }, V[6] + 0.3);
+K.pop(tl, "#v25", V[6] + 0.8);
+tl.fromTo("#b75", { scaleY: 0, svgOrigin: "760 1200" }, { scaleY: 1, duration: 0.6, ease: "expo.out", immediateRender: false }, V[7]);
+K.pop(tl, "#v75", V[7] + 0.4, 1.8);
+K.camera(tl, "#cam", [[V[7] + 0.2, 1.06, 0, -30, 0.3], [V[8] - 0.3, 1, 0, 0, 0.5]]);
+// why: experience up, quick thinking down, they cross
+tl.to("#chart4", { opacity: 0, duration: 0.3 }, V[8]);
+tl.set("#why", { opacity: 1 }, V[8]); draw("#exp", V[8] + 0.2, 1.0); draw("#qk", V[8] + 0.2, 1.0);
+K.words("#t5", "they <b>cross</b> near 53"); K.title(tl, "#t5", V[8] + 0.8);
+tl.to("#t5", { opacity: 0, duration: 0.2 }, V[9] - 0.2);
+tl.to("#why", { opacity: 0, duration: 0.3 }, V[9]);
+K.add("#s4", '<g id="endk" opacity="0">' + K.person("kid", "kid", { x: 330, y: 1020, s: 0.42 }) +
+  '<g transform="translate(760,900)"><rect class="k" x="-120" y="-60" width="240" height="120" rx="14" fill="#fff6e0" stroke-width="7"/><text y="18" text-anchor="middle" class="num" font-size="48" fill="#1d2a6b">offer A</text></g>' +
+  '<g transform="translate(760,1100)"><rect class="k" x="-120" y="-60" width="240" height="120" rx="14" fill="#7dff9a" stroke-width="7"/><text y="18" text-anchor="middle" class="num" font-size="48" fill="#0a3a1e">offer B ✓</text></g></g>');
+tl.fromTo("#endk", { opacity: 0, y: 200 }, { opacity: 1, y: 0, duration: 0.5, ease: "expo.out", immediateRender: false }, V[9]);
+K.face(tl, "kid", { m: "smile", look: [40, 10] }, V[9] + 0.4);
+K.react(tl, "kid", V[9] + 0.5);
+K.words("#t6", "borrow slow. <b>compare twice.</b>"); K.title(tl, "#t6", V[9]);
+tl.set({}, {}, window.DUR);
+window.__timelines["main"] = tl;
+</script>
+</body>
+</html>

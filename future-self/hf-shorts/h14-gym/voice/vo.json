@@ -1,0 +1,62 @@
+[
+ {
+  "text": "Seventeen dollars a visit. A ten dollar pass existed.",
+  "mood": "excited",
+  "start": 0.1,
+  "end": 2.875
+ },
+ {
+  "text": "Your gym membership. Feeling it yet?",
+  "mood": "curious",
+  "start": 3.225,
+  "end": 5.027
+ },
+ {
+  "text": "Researchers followed almost eight thousand members at three US gyms, for three years.",
+  "mood": "neutral",
+  "start": 5.377,
+  "end": 9.978
+ },
+ {
+  "text": "Monthly members paid over seventy dollars a month.",
+  "mood": "neutral",
+  "start": 10.278,
+  "end": 12.603
+ },
+ {
+  "text": "But they went about four point eight times a month.",
+  "mood": "neutral",
+  "start": 12.903,
+  "end": 14.985
+ },
+ {
+  "text": "That's over seventeen dollars a visit, when a ten dollar visit pass was right there.",
+  "mood": "curious",
+  "start": 15.335,
+  "end": 19.211
+ },
+ {
+  "text": "And after their last visit, they kept paying for over two months before cancelling.",
+  "mood": "curious",
+  "start": 19.561,
+  "end": 23.327
+ },
+ {
+  "text": "Money left on the table: about seven hundred dollars each.",
+  "mood": "shocked",
+  "start": 23.827,
+  "end": 26.594
+ },
+ {
+  "text": "We pay for the person we plan to be.",
+  "mood": "warm",
+  "start": 26.994,
+  "end": 28.882
+ },
+ {
+  "text": "So count your visits. Then pay for the person you are.",
+  "mood": "warm",
+  "start": 29.282,
+  "end": 32.072
+ }
+]

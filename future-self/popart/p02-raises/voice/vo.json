@@ -1,0 +1,56 @@
+[
+ {
+  "text": "They nearly quadrupled their savings.",
+  "mood": "excited",
+  "start": 0.1,
+  "end": 1.883
+ },
+ {
+  "text": "You know the feeling. Every dollar already has a job.",
+  "mood": "warm",
+  "start": 2.283,
+  "end": 5.488
+ },
+ {
+  "text": "So a savings program asked workers for something easier.",
+  "mood": "curious",
+  "start": 5.838,
+  "end": 9.116
+ },
+ {
+  "text": "Not money today. Just a slice of their future raises.",
+  "mood": "firm",
+  "start": 9.416,
+  "end": 12.73
+ },
+ {
+  "text": "Each raise, a little more went to savings.",
+  "mood": "neutral",
+  "start": 13.08,
+  "end": 15.224
+ },
+ {
+  "text": "About three years later?",
+  "mood": "curious",
+  "start": 15.674,
+  "end": 16.967
+ },
+ {
+  "text": "Three and a half percent had become thirteen point six.",
+  "mood": "shocked",
+  "start": 17.467,
+  "end": 20.368
+ },
+ {
+  "text": "Don't fight today's paycheck. Promise tomorrow's.",
+  "mood": "warm",
+  "start": 20.868,
+  "end": 23.816
+ },
+ {
+  "text": "Same people. Same willpower. A different promise.",
+  "mood": "whisper",
+  "start": 24.216,
+  "end": 28.326
+ }
+]

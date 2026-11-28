@@ -1,0 +1,56 @@
+[
+ {
+  "text": "Lottery winners aren't happier. They're more satisfied.",
+  "mood": "excited",
+  "start": 0.1,
+  "end": 2.647
+ },
+ {
+  "text": "A famous study from nineteen seventy-eight interviewed twenty-two big winners in Illinois.",
+  "mood": "neutral",
+  "start": 3.047,
+  "end": 7.758
+ },
+ {
+  "text": "They weren't happier than people from the same area.",
+  "mood": "curious",
+  "start": 8.059,
+  "end": 10.478
+ },
+ {
+  "text": "But twenty-two is tiny. So researchers in Sweden asked over three thousand lottery players, five to twenty-two years after the draw.",
+  "mood": "curious",
+  "start": 10.878,
+  "end": 18.697
+ },
+ {
+  "text": "Happiness? No clear change.",
+  "mood": "neutral",
+  "start": 19.047,
+  "end": 20.704
+ },
+ {
+  "text": "But life satisfaction?",
+  "mood": "curious",
+  "start": 21.004,
+  "end": 22.21
+ },
+ {
+  "text": "Clearly higher. Still there more than a decade later.",
+  "mood": "shocked",
+  "start": 22.51,
+  "end": 25.294
+ },
+ {
+  "text": "Mostly, they felt better about their money.",
+  "mood": "warm",
+  "start": 25.694,
+  "end": 28.047
+ },
+ {
+  "text": "So winners aren't happier. They just rate their lives higher.",
+  "mood": "whisper",
+  "start": 28.447,
+  "end": 33.138
+ }
+]

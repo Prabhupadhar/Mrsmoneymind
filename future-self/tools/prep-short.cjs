@@ -1,5 +1,5 @@
 // Builds one vertical Short (1080x1920) in shorts/: cuts the film voice, writes timing + index.html.
-//   node tools/prep-short.cjs v1a|v1b|v2a|v2b|v3a|v3b    then: cd shorts && npx hyperframes render -o renders/<out>.mp4
+//   node tools/prep-short.cjs v1a|v1b|v2a|v2b|v3a|v3b|v4a|v4b|v5a|v5b|s01..s10    then: cd shorts && npx hyperframes render -o renders/<out>.mp4
 // VO keeps the film's line numbers, so scenes use the same data-in="line,frac" as the film.
 const fs = require('fs'), path = require('path'), { execFileSync } = require('child_process');
 const root = path.join(__dirname, '..'), dir = path.join(root, 'shorts');
@@ -20,6 +20,26 @@ const SHORTS = {
          scenes: L => [['v3ahook', 'v3a-hook', 0], ['v3acrack', 'v3a-crack', L(5) - 0.15], ['v3abars', 'v3a-bars', L(14) - 0.2]] },
   v3b: { film: 'v3-neighbor-lottery/film', out: 'v3-short2-neighbors-new-car', lines: [[18, 26]], head: ["Your neighbor's new car", 'costs ' + O('YOU')],
          scenes: L => [['v3bowned', 'v3b-owned', 0], ['v3bjoneses', 'v3b-joneses', L(23) - 0.2], ['v3bwindow', 'v3b-window', L(25) - 0.2]] },
+  v4a: { film: 'v4-five-dollars/film', out: 'v4-short1-spend-five', lines: [[0, 2], [8, 14]], head: ['Spend $5 on someone.', O("Here's what happened.")],
+         scenes: L => [['v4aask', 'v4a-ask', 0], ['v4aenv', 'v4a-envelope', L(8) - 0.2], ['v4alanes', 'v4a-lanes', L(10) - 0.2], ['v4aeve', 'v4a-evening', L(12) - 0.2]] },
+  v4b: { film: 'v4-five-dollars/film', out: 'v4-short2-toddlers-know', lines: [[21, 25]], head: ['Toddlers already', O('know this')],
+         scenes: L => [['v4btod', 'v4b-toddler', 0]] },
+  // v5: hook readable in frame 0 (still: true = header shown at t 0 with a scale pulse, no fade-in)
+  v5a: { film: 'v5-buy-time/film', out: 'v5-short1-neighbor-cleaner', lines: [[11, 14], [17, 19]], still: true, head: ['Neighbor pays a cleaner?', 'Lazy? ' + O('Data: happier.')],
+         scenes: L => [['v5aneigh', 'v5a-neighbor', 0], ['v5asurvey', 'v5a-survey', L(12) - 0.2], ['v5ashield', 'v5a-shield', L(17) - 0.2]] },
+  v5b: { film: 'v5-buy-time/film', out: 'v5-short2-laundry-or-cash', lines: [[30, 32], [34, 36]], still: true, head: ['1,070 moms.', O('Free laundry, or cash?')],
+         scenes: L => [['v5bkenya', 'v5b-kenya', 0]] },
+  // standalone Shorts: voice made by tools/vo-film.py from shorts-src/<name>/script.json
+  s01: { film: 'shorts-src/s01-ten-times', out: 's01-ten-times', lines: [[0, 4]], head: ['Ten on you.', O('One on others.')], scenes: L => [['s01', 's01-ten-times', 0]] },
+  s02: { film: 'shorts-src/s02-twenty-or-five', out: 's02-twenty-or-five', lines: [[0, 5]], head: ['94 of 109', O('got this wrong.')], scenes: L => [['s02', 's02-twenty-or-five', 0]] },
+  s03: { film: 'shorts-src/s03-see-yourself-at-70', out: 's03-see-yourself-at-70', lines: [[0, 5]], head: ['One photo.', O('Twice the savings?')], scenes: L => [['s03', 's03-see-yourself-at-70', 0]] },
+  s04: { film: 'shorts-src/s04-same-pay-poorer', out: 's04-same-pay-poorer', lines: [[0, 4]], head: ["Your neighbor's raise", O('makes you sadder?')], scenes: L => [['s04', 's04-same-pay-poorer', 0]] },
+  s05: { film: 'shorts-src/s05-card-cookies', out: 's05-card-cookies', lines: [[0, 4]], head: ['Your card is', O('buying you cookies.')], scenes: L => [['s05', 's05-card-cookies', 0]] },
+  s06: { film: 'shorts-src/s06-bigger-bonus', out: 's06-bigger-bonus', lines: [[0, 5]], head: ['Bigger bonus.', O('Not happier.')], scenes: L => [['s06', 's06-bigger-bonus', 0]] },
+  s07: { film: 'shorts-src/s07-two-percent', out: 's07-two-percent', lines: [[0, 5]], head: ['Free money. Only 2%', O('would buy this.')], scenes: L => [['s07', 's07-two-percent', 0]] },
+  s08: { film: 'shorts-src/s08-millionaire-chores', out: 's08-millionaire-chores', lines: [[0, 5]], head: ['Millionaires. Still', O('doing their chores.')], scenes: L => [['s08', 's08-millionaire-chores', 0]] },
+  s09: { film: 'shorts-src/s09-forty-dollars', out: 's09-forty-dollars', lines: [[0, 5]], head: ['$40. Two weekends.', O('One felt calmer.')], scenes: L => [['s09', 's09-forty-dollars', 0]] },
+  s10: { film: 'shorts-src/s10-price-alarm', out: 's10-price-alarm', lines: [[0, 5]], head: ['Your brain has', O('a price alarm.')], scenes: L => [['s10', 's10-price-alarm', 0]] },
 };
 const S = SHORTS[process.argv[2]];
 if (!S) throw new Error('usage: prep-short.cjs ' + Object.keys(SHORTS).join('|'));
@@ -86,7 +106,8 @@ ${hosts}
     <script>
       window.__timelines = window.__timelines || {};
       const tl = gsap.timeline({ paused: true });
-      tl.fromTo("#head text:not(#foot)", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.35, stagger: 0.12, ease: "back.out(2)" }, 0);
+      ${S.still ? 'tl.fromTo("#head text:not(#foot)", { scale: 1.08, transformOrigin: "50% 50%" }, { scale: 1, transformOrigin: "50% 50%", duration: 0.5, stagger: 0.1, ease: "back.out(2)" }, 0);'
+        : 'tl.fromTo("#head text:not(#foot)", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.35, stagger: 0.12, ease: "back.out(2)" }, 0);'}
       tl.fromTo("#foot", { opacity: 0 }, { opacity: 1, duration: 0.4 }, ${r(total - tail - 1.5)});
       window.__timelines["main"] = tl;
     </script>

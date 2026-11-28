@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1080, height=1920" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+<script src="voice.js"></script>
+<script src="kit.js"></script>
+<link rel="stylesheet" href="base.css" />
+<style>
+  #root, html, body { background: #2a1036; }
+  .t { top: 220px; font-size: 96px; }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="34" data-width="1080" data-height="1920" data-motion-blur="on">
+  <svg id="art" class="clip" data-start="0" data-duration="34" viewBox="0 0 1080 1920">
+    <defs>
+      <radialGradient id="bg" cx="0.5" cy="0.5" r="0.85"><stop offset="0" stop-color="#6b2a8a"/><stop offset="1" stop-color="#1a0824"/></radialGradient>
+      <g id="card"><rect class="k" x="-170" y="-105" width="340" height="210" rx="22" fill="#9fe3ff" stroke-width="8"/><rect x="-170" y="-60" width="340" height="36" fill="#0d0f22" opacity="0.7"/><rect x="-140" y="10" width="70" height="50" rx="8" fill="#ffd36b"/></g>
+    </defs>
+    <rect width="1080" height="1920" fill="url(#bg)"/>
+    <g id="cam">
+      <g id="s1" class="scene"></g>
+      <g id="s2" class="scene"></g>
+      <g id="s3" class="scene"></g>
+      <g id="s4" class="scene"></g>
+    </g>
+  </svg>
+  <div id="t1" class="cap t clip" data-start="0" data-duration="34"></div>
+  <div id="t2" class="cap t clip" data-start="0" data-duration="34"></div>
+  <div id="t3" class="cap t clip" data-start="0" data-duration="34"></div>
+  <div id="t4" class="cap t clip" data-start="0" data-duration="34"></div>
+  <div id="t5" class="cap t clip" data-start="0" data-duration="34"></div>
+  <div id="t6" class="cap t clip" data-start="0" data-duration="34"></div>
+</div>
+<script>
+window.__timelines = window.__timelines || {};
+var tl = gsap.timeline({ paused: true }), V = window.VO;
+
+// ---------- S1: HOOK — neon PAYDAY LOANS sign, kid grabs $300; the card in the pocket glows $1,000 free ----------
+K.add("#s1",
+  '<g transform="translate(540,620)"><g id="neon"><rect class="k" x="-330" y="-80" width="660" height="160" rx="24" fill="#1a0824" stroke="#ff4fd8" stroke-width="10"/><text y="26" text-anchor="middle" class="num" font-size="76" fill="#ff7be6">PAYDAY LOANS</text></g></g>' +
+  K.person("kid", "kid", { x: 330, y: 1040, s: 0.45 }) +
+  '<g transform="translate(330,1300)"><g id="cash"><rect class="k" x="-110" y="-50" width="220" height="100" rx="12" fill="#7dd88f" stroke-width="7"/><text y="20" text-anchor="middle" class="num" font-size="56" fill="#1d5a32">$300</text></g></g>' +
+  '<g transform="translate(790,1080)"><g id="c1"><use href="#card"/><text y="-150" text-anchor="middle" class="num" font-size="60" fill="#7dff9a">$1,000 free</text></g></g>');
+K.show(tl, "#s1", 0);
+K.hook(tl, "#t1", "<b>payday loan.</b> $1,000 free on their <b>card.</b>", V[1] - 0.2);
+tl.fromTo("#neon", { opacity: 0.4 }, { opacity: 1, duration: 0.06, repeat: 7, yoyo: true, ease: "none" }, 0);
+tl.fromTo("#cash", { x: -420, rotation: -20 }, { x: 0, rotation: 0, duration: 0.5, ease: "back.out(2)" }, 0);
+tl.fromTo("#c1", { scale: 0.6, svgOrigin: "0 0" }, { scale: 1, duration: 0.5, ease: "back.out(2.5)" }, 0.3);
+tl.to("#c1", { scale: 1.08, svgOrigin: "0 0", duration: 0.25, yoyo: true, repeat: 3, ease: "sine.inOut" }, 0.9);
+K.face(tl, "kid", { m: "smile", look: [-30, 40] }, 0);
+K.face(tl, "kid", { m: "o", look: [40, 0], br: 12 }, 1.2);
+// "the expensive option because it was right there" — two doors
+K.words("#t2", "the <b>nearest</b> door"); K.title(tl, "#t2", V[1]);
+tl.to("#t2", { opacity: 0, duration: 0.2 }, V[2] - 0.2);
+
+// ---------- S2: payday lender x card company: 3,000 people; $300 due next payday; several hundred % a year ----------
+K.add("#s2",
+  '<g transform="translate(260,760)"><g id="pl"><rect class="k" x="-150" y="-140" width="300" height="280" rx="12" fill="#ff7be6" stroke-width="8"/><text y="10" text-anchor="middle" class="num" font-size="46" fill="#1a0824">PAYDAY</text></g></g>' +
+  '<g transform="translate(820,760)"><g id="cc"><rect class="k" x="-150" y="-140" width="300" height="280" rx="12" fill="#9fe3ff" stroke-width="8"/><text y="10" text-anchor="middle" class="num" font-size="46" fill="#1a0824">CARDS</text></g></g>' +
+  '<path id="link" d="M420,760 L660,760" stroke="#fff" stroke-width="10" stroke-dasharray="20 14"/>' +
+  '<text id="n3k" x="540" y="980" text-anchor="middle" class="num" font-size="80" fill="#fff" opacity="0">3,090 matched</text>' +
+  '<g transform="translate(540,1220)"><g id="tick" opacity="0"><rect class="k" x="-300" y="-90" width="600" height="180" rx="20" fill="#fff6e0" stroke-width="8"/>' +
+  '<text y="-10" text-anchor="middle" class="num" font-size="64" fill="#2a1036">$300</text><text y="56" text-anchor="middle" class="lbl" font-size="48" fill="#2a1036">due next payday</text></g></g>' +
+  '<text id="apr" x="540" y="1440" text-anchor="middle" class="num" font-size="70" fill="#ff4f6d" opacity="0">several hundred % / year</text>');
+K.cut(tl, "#s1", "#s2", V[2] - 0.3);
+K.pop(tl, "#pl", V[2] + 0.1, 0.4); K.pop(tl, "#cc", V[2] + 0.3, 0.4);
+tl.fromTo("#link", { strokeDashoffset: 300, opacity: 0 }, { strokeDashoffset: 0, opacity: 1, duration: 0.6, immediateRender: false }, V[2] + 0.8);
+K.pop(tl, "#n3k", V[2] + 1.6, 0.6);
+K.pop(tl, "#tick", V[3] + 0.1, 0.5);
+K.pop(tl, "#apr", V[4] + 0.3, 1.6);
+tl.fromTo("#apr", { x: 0 }, { x: 10, duration: 0.05, repeat: 9, yoyo: true, ease: "none", immediateRender: false }, V[4] + 0.8);
+
+// ---------- S3: check the card that day — two thirds had $1,000+ room; ~$200 saved ----------
+K.add("#s3", '<text x="540" y="520" text-anchor="middle" class="lbl" font-size="58" fill="#f2dcff">card room on payday-loan day</text>' +
+  '<g transform="translate(540,760)"><g id="c3"><use href="#card"/></g></g>' +
+  '<text id="p23" x="540" y="1030" text-anchor="middle" class="num" font-size="96" fill="#7dff9a" opacity="0">2 in 3</text>' +
+  '<text id="p23l" x="540" y="1100" text-anchor="middle" class="lbl" font-size="54" fill="#f2dcff" opacity="0">had $1,000+ unused</text>' +
+  '<text id="s200" x="540" y="1300" text-anchor="middle" class="num" font-size="80" fill="#ffd36b" opacity="0">~$200 saved</text>' +
+  '<text id="s200l" x="540" y="1370" text-anchor="middle" class="lbl" font-size="50" fill="#f2dcff" opacity="0">typical borrower, using the card instead</text>');
+K.cut(tl, "#s2", "#s3", V[5] - 0.3);
+tl.fromTo("#c3", { rotationY: 0, scale: 0.6, svgOrigin: "0 0" }, { scale: 1, duration: 0.5, ease: "back.out(2)", immediateRender: false }, V[5] + 0.1);
+K.pop(tl, "#p23", V[6], 1.8); tl.to("#p23l", { opacity: 1, duration: 0.3 }, V[6] + 0.3);
+K.camera(tl, "#cam", [[V[6], 1.07, 0, -20, 0.3], [V[7] - 0.3, 1, 0, 0, 0.5]]);
+K.pop(tl, "#s200", V[7] + 0.2, 1.4); tl.to("#s200l", { opacity: 1, duration: 0.3 }, V[7] + 0.5);
+
+// ---------- S4: card room shrinking for months; loop — check what you have ----------
+K.add("#s4", '<text x="540" y="520" text-anchor="middle" class="lbl" font-size="58" fill="#f2dcff">card room, year before the loan</text>' +
+  '<g transform="translate(540,760)"><rect class="k" x="-380" y="-50" width="760" height="100" rx="50" fill="#1a0824" stroke="#f2dcff" stroke-width="6"/><rect id="room" x="-372" y="-42" width="744" height="84" rx="42" fill="#9fe3ff"/></g>' +
+  '<text id="m545" x="540" y="900" text-anchor="middle" class="num" font-size="64" fill="#ff9a8c" opacity="0">−$545 on average</text>' +
+  '<g id="endk" opacity="0">' + K.person("kid2", "kid", { x: 330, y: 1180, s: 0.4 }) + '<g transform="translate(770,1220)"><g id="c4"><use href="#card"/><text y="-140" text-anchor="middle" class="lbl" font-size="50" fill="#7dff9a">check first ✓</text></g></g></g>');
+K.cut(tl, "#s3", "#s4", V[8] - 0.3);
+tl.to("#room", { attr: { width: 300 }, duration: 1.8, ease: "power1.in" }, V[8] + 0.2);
+K.pop(tl, "#m545", V[8] + 1.6, 0.6);
+tl.fromTo("#endk", { opacity: 0, y: 200 }, { opacity: 1, y: 0, duration: 0.5, ease: "expo.out", immediateRender: false }, V[9]);
+K.face(tl, "kid2", { m: "smile", look: [40, 10], blush: 0.7 }, V[9] + 0.3);
+K.react(tl, "kid2", V[9] + 0.4);
+K.words("#t6", "check what you <b>have</b>"); K.title(tl, "#t6", V[9]);
+tl.set({}, {}, window.DUR);
+window.__timelines["main"] = tl;
+</script>
+</body>
+</html>

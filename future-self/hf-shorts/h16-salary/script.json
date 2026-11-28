@@ -1,0 +1,12 @@
+[
+ ["They saw their coworkers' pay. Half got sadder.", 0.1, 1.2, "excited"],
+ ["Would you click that link?", 0.35, 1.2, "curious"],
+ ["In 2008, a newspaper put every California state salary online.", 0.3, 1.2, "neutral"],
+ ["So researchers emailed random University of California staff: this site exists.", 0.3, 1.2, "neutral"],
+ ["Use of the site jumped from nineteen percent to forty-eight.", 0.3, 1.2, "neutral"],
+ ["And most new users looked up their own department.", 0.35, 1.2, "curious"],
+ ["Over six thousand answered a survey. Paid below their team's median? Less satisfied, and more likely to job hunt.", 0.5, 1.2, "shocked"],
+ ["Paid above it? No happier at all.", 0.4, 1.2, "curious"],
+ ["The gap only hurt in one direction.", 0.35, 1.2, "warm"],
+ ["That's why half got sadder, and the other half didn't cheer.", 0.4, 1.2, "warm"]
+]

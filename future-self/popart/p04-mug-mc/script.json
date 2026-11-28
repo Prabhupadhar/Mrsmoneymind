@@ -1,0 +1,12 @@
+[
+ ["Give someone a mug. Its price doubles.", 0.1, 1, "excited"],
+ ["Same mug. Same classroom. Two very different prices.", 0.4, 1, "curious"],
+ ["Researchers gave coffee mugs to some students. The rest got nothing.", 0.35, 1, "neutral"],
+ ["Then they asked. Owners, what would you sell it for?", 0.3, 1, "curious"],
+ ["Everyone else, what would you pay?", 0.3, 1, "curious"],
+ ["Buyers said about three dollars.", 0.45, 1, "neutral"],
+ ["Owners? About seven.", 0.5, 1, "shocked"],
+ ["They had owned it for a few minutes.", 0.5, 1, "whisper"],
+ ["That's why your old stuff feels worth more than anyone will pay.", 0.4, 1, "warm"],
+ ["Owning it was enough to double it.", 0.4, 1, "firm"]
+]

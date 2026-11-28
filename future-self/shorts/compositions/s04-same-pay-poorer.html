@@ -1,0 +1,57 @@
+<template>
+  <style>
+    @font-face { font-family: "Hand"; src: url("assets/fonts/PatrickHand-Regular.ttf"); }
+    #root { position: absolute; inset: 0; background: #1a2b66; overflow: hidden; }
+    #sd-art { position: absolute; inset: 0; }
+    .rk { stroke: #0d0f22; stroke-linecap: round; stroke-linejoin: round; }
+    .pop { font-family: Hand; font-size: 150px; fill: #ffb35c; stroke: #0d0f22; stroke-width: 14px; paint-order: stroke; stroke-linejoin: round; }
+    .lab { font-family: Hand; font-size: 64px; fill: #f4f1ff; }
+  </style>
+  <div id="root" data-composition-id="s04" data-width="1080" data-height="1920">
+    <svg id="sd-art" class="clip" data-start="0" data-duration="40" viewBox="0 0 1080 1920" data-layout-allow-overflow>
+      <defs>
+        <radialGradient id="sd-bg" cx="0.5" cy="0.5" r="0.8"><stop offset="0" stop-color="#2a4a9f"/><stop offset="1" stop-color="#111c4c"/></radialGradient>
+      </defs>
+      <rect width="1080" height="1920" fill="url(#sd-bg)"/>
+
+      <g transform="translate(320,1000) scale(0.36)"><g id="sd-kid"><g data-rig="kid" data-p="sdk" data-o='{"mouth":"smile","brows":"up","look":[50,-10]}'></g></g></g>
+      <g transform="translate(770,1000) scale(0.36)"><g id="sd-nb"><g data-rig="nb" data-p="sdn" data-o='{"mouth":"grin","brows":"up","happy":true}'></g></g></g>
+      <g id="sd-fence">
+        <rect class="rk" x="0" y="1230" width="1080" height="30" fill="#f3e6c8" stroke-width="8"/>
+        <path class="rk" d="M60,1480 L60,1190 L95,1155 L130,1190 L130,1480 Z M240,1480 L240,1190 L275,1155 L310,1190 L310,1480 Z M420,1480 L420,1190 L455,1155 L490,1190 L490,1480 Z M600,1480 L600,1190 L635,1155 L670,1190 L670,1480 Z M780,1480 L780,1190 L815,1155 L850,1190 L850,1480 Z M960,1480 L960,1190 L995,1155 L1030,1190 L1030,1480 Z" fill="#f7f3ea" stroke-width="8"/>
+      </g>
+      <g transform="translate(770,680) rotate(6)"><g id="sd-sign" data-out="1,0">
+        <rect class="rk" x="-150" y="-80" width="300" height="160" rx="14" fill="#7fd18b" stroke-width="10"/>
+        <text y="38" text-anchor="middle" style="font-family:Hand;font-size:110px;fill:#1f5a33">+$$</text>
+      </g></g>
+      <g id="sd-checks" data-in="1,0.1,fade" data-out="3,0">
+        <g transform="translate(320,700)"><g id="sd-mine"><rect class="rk" x="-150" y="-80" width="300" height="160" rx="10" fill="#f7f3ea" stroke-width="9"/><rect x="-150" y="-80" width="300" height="34" rx="10" fill="#7fd18b"/>
+          <text y="40" text-anchor="middle" style="font-family:Hand;font-size:56px;fill:#1f5a33">mine</text></g></g>
+        <g transform="translate(770,700)"><g id="sd-theirs"><rect class="rk" x="-150" y="-80" width="300" height="160" rx="10" fill="#f7f3ea" stroke-width="9"/><rect x="-150" y="-80" width="300" height="34" rx="10" fill="#7fd18b"/>
+          <text y="40" text-anchor="middle" style="font-family:Hand;font-size:56px;fill:#1f5a33">theirs</text></g></g>
+        <text class="lab" x="320" y="830" text-anchor="middle" style="font-size:52px;fill:#c9d3ef" data-in="2,0.65,up">same</text>
+      </g>
+      <text class="pop" x="540" y="680" text-anchor="middle" style="font-size:130px" data-in="3,0.5,pop">your street did.</text>
+    </svg>
+  </div>
+  <script>
+    Rig.fill();
+    const tl = gsap.timeline({ paused: true }), A = s => Rig.at(s, "s04");
+    Rig.run(tl, "s04");
+    Rig.blinks(tl, "sdk", 0, 20);
+    // frame 0: the neighbor pops over the fence with a raise
+    tl.fromTo("#sd-nb", { y: 900 }, { y: 0, duration: 0.35, ease: "back.out(1.6)" }, 0);
+    tl.fromTo("#sd-sign", { scale: 0.2, rotation: -30, transformOrigin: "50% 50%" }, { scale: 1, rotation: 0, duration: 0.35, ease: "back.out(2.2)" }, 0.1);
+    tl.to("#sd-nb", { y: -40, duration: 0.2, yoyo: true, repeat: 5, ease: "power2.out" }, 0.45);
+    // the kid's smile drops
+    Rig.mouth(tl, "sdk", "smile", "worry", A("0,0.6"));
+    Rig.brows(tl, "sdk", "worry", A("0,0.6"));
+    // 1: the neighbor's paycheck grows, the kid's stays the same
+    tl.to("#sd-theirs", { scale: 1.45, transformOrigin: "50% 100%", duration: 1, ease: "power2.out" }, A("1,0.45"));
+    Rig.mouth(tl, "sdk", "worry", "sad", A("2,0.3"));
+    tl.to("#sd-kid", { scale: 0.9, transformOrigin: "50% 100%", duration: 1.5, ease: "sine.inOut" }, A("2,0.3"));
+    Rig.look(tl, "sdk", 50, -40, A("4,0.2"));
+    Rig.brows(tl, "sdk", "up", A("4,0.2"));
+    window.__timelines["s04"] = tl;
+  </script>
+</template>

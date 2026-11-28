@@ -1,0 +1,62 @@
+[
+ {
+  "text": "Ninety-eight percent planned it. Thirty-seven did it.",
+  "mood": "excited",
+  "start": 0.1,
+  "end": 2.49
+ },
+ {
+  "text": "Sound like your savings plan? Watch this.",
+  "mood": "curious",
+  "start": 2.84,
+  "end": 5.055
+ },
+ {
+  "text": "Farmers in western Kenya. A little fertilizer paid back about thirty-six percent in one season.",
+  "mood": "neutral",
+  "start": 5.405,
+  "end": 11.047
+ },
+ {
+  "text": "Almost all of them said: next season, I'll buy it.",
+  "mood": "neutral",
+  "start": 11.347,
+  "end": 14.101
+ },
+ {
+  "text": "But by planting time, the harvest money was gone.",
+  "mood": "sad",
+  "start": 14.451,
+  "end": 17.645
+ },
+ {
+  "text": "So researchers tried one thing. Right after harvest, normal price, free delivery.",
+  "mood": "curious",
+  "start": 17.995,
+  "end": 22.744
+ },
+ {
+  "text": "Fertilizer use jumped, about eleven points.",
+  "mood": "warm",
+  "start": 23.144,
+  "end": 25.742
+ },
+ {
+  "text": "The same offer, a few months later?",
+  "mood": "curious",
+  "start": 26.092,
+  "end": 27.906
+ },
+ {
+  "text": "About half as many buyers.",
+  "mood": "shocked",
+  "start": 28.406,
+  "end": 29.713
+ },
+ {
+  "text": "So decide while the money is in your hand. Not someday.",
+  "mood": "warm",
+  "start": 30.113,
+  "end": 33.205
+ }
+]

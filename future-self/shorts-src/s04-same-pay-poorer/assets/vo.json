@@ -1,0 +1,32 @@
+[
+ {
+  "text": "Your neighbor's raise can make you less happy.",
+  "mood": "shocked",
+  "start": 0.3,
+  "end": 2.472
+ },
+ {
+  "text": "An economist compared how happy people were with what their neighbors earned.",
+  "mood": "neutral",
+  "start": 2.822,
+  "end": 7.032
+ },
+ {
+  "text": "When the neighbors earned more, people said they were less happy. Even with the exact same income.",
+  "mood": "sad",
+  "start": 7.432,
+  "end": 13.971
+ },
+ {
+  "text": "Your paycheck didn't change. Your street did.",
+  "mood": "firm",
+  "start": 14.421,
+  "end": 16.964
+ },
+ {
+  "text": "So whose raise are you really feeling?",
+  "mood": "curious",
+  "start": 17.414,
+  "end": 19.272
+ }
+]

@@ -1,0 +1,38 @@
+[
+ [
+  "Your brain has a price alarm.",
+  0.3,
+  1,
+  "excited"
+ ],
+ [
+  "Researchers scanned shoppers' brains as they decided what to buy.",
+  0.35,
+  1,
+  "neutral"
+ ],
+ [
+  "When a price looked too high, one region lit up. The insula.",
+  0.35,
+  1,
+  "shocked"
+ ],
+ [
+  "It's an area tied to pain, and to expecting a loss.",
+  0.4,
+  1,
+  "neutral"
+ ],
+ [
+  "And that signal helped predict when they'd walk away without buying.",
+  0.4,
+  1,
+  "firm"
+ ],
+ [
+  "So that sting you feel at a high price? It might be your brain saying no.",
+  0.45,
+  1,
+  "warm"
+ ]
+]

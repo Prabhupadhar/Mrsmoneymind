@@ -1,0 +1,32 @@
+[
+ [
+  "Ten dollars on you. One on everyone else.",
+  0.3,
+  1,
+  "firm"
+ ],
+ [
+  "That's what a survey of over six hundred Americans found about how people spend.",
+  0.35,
+  1,
+  "neutral"
+ ],
+ [
+  "But the money they spent on themselves? Not linked to happiness at all.",
+  0.4,
+  1,
+  "shocked"
+ ],
+ [
+  "The money they spent on other people was.",
+  0.4,
+  1,
+  "warm"
+ ],
+ [
+  "So which dollar is working harder for you?",
+  0.45,
+  1,
+  "curious"
+ ]
+]

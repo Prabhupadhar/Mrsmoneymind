@@ -1,0 +1,62 @@
+[
+ {
+  "text": "Same price. A different tag. Eight percent fewer sales.",
+  "mood": "excited",
+  "start": 0.1,
+  "end": 3.045
+ },
+ {
+  "text": "Your brain skips one number at the store.",
+  "mood": "curious",
+  "start": 3.395,
+  "end": 5.026
+ },
+ {
+  "text": "In 2006, researchers changed the tags in one grocery store, for three weeks.",
+  "mood": "neutral",
+  "start": 5.376,
+  "end": 10.223
+ },
+ {
+  "text": "Seven hundred fifty products. Cosmetics, hair care, deodorant.",
+  "mood": "neutral",
+  "start": 10.523,
+  "end": 14.17
+ },
+ {
+  "text": "They added one line under each price: the price with tax.",
+  "mood": "neutral",
+  "start": 14.47,
+  "end": 17.375
+ },
+ {
+  "text": "Nothing else changed. The tax was always added at the register.",
+  "mood": "curious",
+  "start": 17.725,
+  "end": 21.021
+ },
+ {
+  "text": "Sales of those products fell about eight percent.",
+  "mood": "shocked",
+  "start": 21.521,
+  "end": 23.61
+ },
+ {
+  "text": "Yet asked about it, the typical shopper knew the tax rate.",
+  "mood": "curious",
+  "start": 24.01,
+  "end": 26.732
+ },
+ {
+  "text": "They just didn't add it up in their heads.",
+  "mood": "warm",
+  "start": 27.082,
+  "end": 28.693
+ },
+ {
+  "text": "So add the tax before you decide. Watch your cart shrink.",
+  "mood": "warm",
+  "start": 29.093,
+  "end": 32.117
+ }
+]

@@ -1,0 +1,62 @@
+[
+ {
+  "text": "Thirty-seven percent to eighty-six. One switch.",
+  "mood": "excited",
+  "start": 0.1,
+  "end": 2.357
+ },
+ {
+  "text": "And you've probably got this switch at work.",
+  "mood": "curious",
+  "start": 2.707,
+  "end": 4.542
+ },
+ {
+  "text": "A big American company changed one thing in its retirement plan, in April 1998.",
+  "mood": "neutral",
+  "start": 4.892,
+  "end": 10.596
+ },
+ {
+  "text": "Before, new staff had to sign themselves up.",
+  "mood": "neutral",
+  "start": 10.896,
+  "end": 13.088
+ },
+ {
+  "text": "After, they were signed up automatically, unless they said no.",
+  "mood": "curious",
+  "start": 13.438,
+  "end": 16.497
+ },
+ {
+  "text": "Same pay. Same plan. Same match.",
+  "mood": "firm",
+  "start": 16.897,
+  "end": 18.966
+ },
+ {
+  "text": "In their first year or so, thirty-seven percent of the old group had joined.",
+  "mood": "neutral",
+  "start": 19.316,
+  "end": 23.097
+ },
+ {
+  "text": "The new group? Eighty-six.",
+  "mood": "shocked",
+  "start": 23.597,
+  "end": 24.982
+ },
+ {
+  "text": "But most never touched the setting again. Three percent, parked in the safest fund.",
+  "mood": "curious",
+  "start": 25.432,
+  "end": 29.814
+ },
+ {
+  "text": "The default decided for them. So check what your switch says.",
+  "mood": "warm",
+  "start": 30.214,
+  "end": 33.369
+ }
+]

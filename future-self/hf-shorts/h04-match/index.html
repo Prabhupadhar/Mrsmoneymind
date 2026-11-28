@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1080, height=1920" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+<script src="voice.js"></script>
+<script src="kit.js"></script>
+<link rel="stylesheet" href="base.css" />
+<style>
+  #root, html, body { background: #4a2a10; }
+  .t { top: 220px; font-size: 96px; }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="34" data-width="1080" data-height="1920" data-motion-blur="on">
+  <svg id="art" class="clip" data-start="0" data-duration="34" viewBox="0 0 1080 1920">
+    <defs>
+      <radialGradient id="bg" cx="0.5" cy="0.55" r="0.8"><stop offset="0" stop-color="#b8662a"/><stop offset="1" stop-color="#3a1d08"/></radialGradient>
+      <g id="bill"><rect class="k" x="-90" y="-44" width="180" height="88" rx="10" fill="#7dd88f" stroke-width="7"/><circle cx="0" cy="0" r="26" fill="#a8eab4" stroke="#2f8a52" stroke-width="5"/><text y="14" text-anchor="middle" class="num" font-size="38" fill="#2f8a52">$</text></g>
+    </defs>
+    <rect width="1080" height="1920" fill="url(#bg)"/>
+    <g id="cam">
+      <g id="s1" class="scene"></g>
+      <g id="s2" class="scene"></g>
+      <g id="s3" class="scene"></g>
+      <g id="s4" class="scene"></g>
+      <g id="s5" class="scene"></g>
+    </g>
+  </svg>
+  <div id="t1" class="cap t clip" data-start="0" data-duration="34"></div>
+  <div id="t2" class="cap t clip" data-start="0" data-duration="34"></div>
+  <div id="t3" class="cap t clip" data-start="0" data-duration="34"></div>
+  <div id="t4" class="cap t clip" data-start="0" data-duration="34"></div>
+  <div id="t5" class="cap t clip" data-start="0" data-duration="34"></div>
+  <div id="t6" class="cap t clip" data-start="0" data-duration="34"></div>
+</div>
+<script>
+window.__timelines = window.__timelines || {};
+var tl = gsap.timeline({ paused: true }), V = window.VO;
+
+// ---------- S1: HOOK — bills slide across the table to the kid, the kid doesn't take them ----------
+K.add("#s1", '<rect x="80" y="1290" width="920" height="40" rx="12" fill="#6b3a14" class="k" stroke-width="8"/>' +
+  K.person("kid", "kid", { x: 300, y: 1010, s: 0.5 }) + K.person("boss", "boss", { x: 800, y: 1010, s: 0.5, flip: true }) +
+  '<g id="pile">' + [0, 1, 2, 3, 4].map(function (i) { return '<g transform="translate(' + (560 + i * 6) + ',' + (1250 - i * 22) + ')"><g class="bl" id="bl' + i + '"><use href="#bill"/></g></g>'; }).join("") + '</g>');
+K.show(tl, "#s1", 0);
+K.hook(tl, "#t1", "<b>free</b> money. no catch. they <b>left</b> it.", V[1] - 0.2);
+tl.fromTo(".bl", { x: 420, rotation: 20 }, { x: 0, rotation: 0, duration: 0.6, stagger: 0.07, ease: "expo.out" }, 0);
+K.face(tl, "boss", { m: "smile", look: [-30, 10] }, 0);
+K.face(tl, "kid", { m: "flat", look: [30, -40] }, 0);  // looking away, at the ceiling
+K.react(tl, "boss", 0.7);
+tl.to(".bl", { x: -60, duration: 0.25, stagger: 0.04, ease: "power2.out" }, 1.2);  // pushed toward the kid... ignored
+K.blink(tl, "kid", 1.6);
+K.face(tl, "boss", { m: "o", br: 14 }, V[1] - 0.4);
+K.face(tl, "kid", { look: [-20, 30], m: "o" }, V[1]);
+K.words("#t2", "your boss <b>matches</b> savings?"); K.title(tl, "#t2", V[1] + 0.1);
+tl.to("#t2", { opacity: 0, duration: 0.2 }, V[2] - 0.2);
+
+// ---------- S2: 7 companies, 1998; save $1, the company adds more ----------
+K.add("#s2", '<g id="towers">' + [0, 1, 2, 3, 4, 5, 6].map(function (i) {
+  var h = [260, 340, 220, 380, 300, 240, 320][i];
+  return '<g transform="translate(' + (150 + i * 130) + ',820)"><g class="tw" id="tw' + i + '"><rect class="k" x="-50" y="' + (-h) + '" width="100" height="' + h + '" fill="#e9eef5" stroke-width="7"/>' +
+    '<g fill="#7fb0d6"><rect x="-32" y="' + (-h + 24) + '" width="24" height="22"/><rect x="8" y="' + (-h + 24) + '" width="24" height="22"/><rect x="-32" y="' + (-h + 70) + '" width="24" height="22"/><rect x="8" y="' + (-h + 70) + '" width="24" height="22"/></g></g></g>';
+}).join("") + '</g>' +
+  '<text x="540" y="900" text-anchor="middle" class="lbl" font-size="64" fill="#ffe3c7">7 companies · 1998</text>' +
+  '<g transform="translate(330,1200)"><g id="mine"><use href="#bill"/></g></g>' +
+  '<text x="330" y="1300" text-anchor="middle" class="lbl" font-size="56" fill="#ffe3c7">you save</text>' +
+  '<text id="plus" x="540" y="1220" text-anchor="middle" class="num" font-size="110" fill="#fff" opacity="0">+</text>' +
+  '<g transform="translate(750,1200)"><g id="theirs" opacity="0"><use href="#bill"/></g></g>' +
+  '<text id="free" x="750" y="1300" text-anchor="middle" class="lbl" font-size="56" fill="#7dff9a" opacity="0">company adds: free</text>');
+K.cut(tl, "#s1", "#s2", V[2] - 0.3);
+tl.fromTo(".tw", { scaleY: 0, svgOrigin: "0 0" }, { scaleY: 1, duration: 0.5, stagger: 0.08, ease: "back.out(1.8)", immediateRender: false }, V[2] + 0.1);
+tl.fromTo("#mine", { y: -300, opacity: 0 }, { y: 0, opacity: 1, duration: 0.45, ease: "bounce.out", immediateRender: false }, V[3]);
+K.pop(tl, "#plus", V[3] + 0.6);
+tl.fromTo("#theirs", { opacity: 0, x: 300, rotation: 30 }, { opacity: 1, x: 0, rotation: 0, duration: 0.5, ease: "back.out(2)", immediateRender: false }, V[3] + 0.9);
+K.pop(tl, "#free", V[3] + 1.4, 0.6);
+
+// ---------- S3: 59½+, withdraw any time, no penalty ----------
+K.add("#s3",
+  '<g transform="translate(540,700)"><g id="badge"><circle class="k" r="200" fill="#ffd36b" stroke-width="10"/><text y="30" text-anchor="middle" class="num" font-size="120" fill="#5a3a00">59½+</text><text y="110" text-anchor="middle" class="lbl" font-size="50" fill="#5a3a00">years old</text></g></g>' +
+  '<g transform="translate(540,1160)"><g id="padlock"><g id="shackle"><path d="M-70,-20 C-70,-120 70,-120 70,-20" fill="none" stroke="#c9ced8" stroke-width="26" stroke-linecap="round"/></g>' +
+  '<rect class="k" x="-110" y="-30" width="220" height="190" rx="24" fill="#7dd88f" stroke-width="9"/><circle cx="0" cy="50" r="22" fill="#2f8a52"/></g></g>' +
+  '<text id="nopen" x="540" y="1420" text-anchor="middle" class="lbl" font-size="64" fill="#7dff9a" opacity="0">take it out any time · no penalty</text>');
+K.cut(tl, "#s2", "#s3", V[4] - 0.3);
+K.pop(tl, "#badge", V[4] + 0.1, 0.3);
+K.pop(tl, "#padlock", V[4] + 1.6, 0.4);
+tl.to("#shackle", { y: -60, rotation: -25, svgOrigin: "70 -20", duration: 0.4, ease: "back.out(2.5)" }, V[4] + 2.6);
+K.pop(tl, "#nopen", V[4] + 2.8, 0.7);
+K.words("#t3", "skip it = <b>lose</b> money"); K.title(tl, "#t3", V[5]);
+tl.to("#t3", { opacity: 0, duration: 0.2 }, V[6] - 0.2);
+
+// ---------- S4: 20%-60% left some on the table ----------
+K.add("#s4", '<text id="rng" x="540" y="640" text-anchor="middle" class="num" font-size="170" fill="#fff">20–60%</text>' +
+  '<text x="540" y="740" text-anchor="middle" class="lbl" font-size="60" fill="#ffe3c7">left some match on the table</text>' +
+  '<text x="540" y="810" text-anchor="middle" class="lbl" font-size="46" fill="#e8b98c">(depending on the company)</text>' +
+  '<rect x="120" y="1290" width="840" height="40" rx="12" fill="#6b3a14" class="k" stroke-width="8"/>' +
+  [0, 1, 2, 3, 4, 5].map(function (i) { return '<g transform="translate(' + (230 + i * 125) + ',' + (1240 - (i % 2) * 30) + ')"><g class="lost" id="lost' + i + '"><use href="#bill"/></g></g>'; }).join("") +
+  '<g transform="translate(540,1020)"><g id="fan"><path d="M-160,40 C-120,-60 120,-60 160,40" fill="none" stroke="#ffe3c7" stroke-width="10" stroke-dasharray="20 18"/></g></g>');
+K.cut(tl, "#s3", "#s4", V[6] - 0.3);
+K.pop(tl, "#rng", V[6] + 0.2, 1.6);
+tl.fromTo(".lost", { y: -500, opacity: 0, rotation: 40 }, { y: 0, opacity: 1, rotation: 0, duration: 0.5, stagger: 0.09, ease: "bounce.out", immediateRender: false }, V[6] + 0.6);
+tl.to(".lost", { y: -14, duration: 0.5, yoyo: true, repeat: 3, stagger: 0.1, ease: "sine.inOut" }, V[6] + 1.6);
+
+// ---------- S5: the letter, the twist, and the grab ----------
+K.add("#s5",
+  '<g transform="translate(540,760)"><g id="env"><rect class="k" x="-260" y="-170" width="520" height="340" rx="16" fill="#fff6e0" stroke-width="10"/><path class="k" d="M-260,-170 L0,40 L260,-170" fill="none" stroke-width="10"/>' +
+  '<text y="120" text-anchor="middle" class="lbl" font-size="56" fill="#8a3a00">here\'s your free money</text></g></g>' +
+  '<g transform="translate(540,1170)"><g id="gauge"><path d="M-260,0 A260,260 0 0 1 260,0" fill="none" stroke="#ffe3c7" stroke-width="40" stroke-linecap="round"/>' +
+  '<g id="needle"><path d="M0,0 L-230,-30" stroke="#ff4f6d" stroke-width="18" stroke-linecap="round"/><circle class="k" r="30" fill="#ff4f6d" stroke-width="8"/></g>' +
+  '<text y="100" text-anchor="middle" class="lbl" font-size="60" fill="#ffe3c7">savings rate</text></g></g>');
+K.cut(tl, "#s4", "#s5", V[7] - 0.3);
+tl.fromTo("#env", { y: -700, rotation: -15 }, { y: 0, rotation: 0, duration: 0.6, ease: "back.out(1.6)", immediateRender: false }, V[7]);
+K.words("#t4", "they <b>told</b> them"); K.title(tl, "#t4", V[7]);
+tl.to("#t4", { opacity: 0, duration: 0.2 }, V[8] - 0.3);
+// the needle twitches... and barely moves
+tl.to("#needle", { rotation: 3, svgOrigin: "0 0", duration: 0.3, ease: "power2.out" }, V[8] + 0.3);
+tl.to("#needle", { rotation: 1, svgOrigin: "0 0", duration: 0.6, ease: "elastic.out(1,0.3)" }, V[8] + 0.6);
+K.words("#t5", "almost <b>nothing</b> changed"); K.title(tl, "#t5", V[8] + 0.2);
+K.camera(tl, "#cam", [[V[8], 1.08, 0, 40, 0.3], [V[9] - 0.3, 1, 0, 0, 0.5]]);
+tl.to("#t5", { opacity: 0, duration: 0.2 }, V[9] - 0.2);
+// loop: the kid grabs the money
+K.add("#s5", '<g id="kidwrap" opacity="0">' + K.person("kid3", "kid", { x: 540, y: 980, s: 0.45 }) + '</g>');
+K.add("#s5", '<g transform="translate(540,1270)"><g id="grab" opacity="0"><use href="#bill" transform="translate(-60,0) rotate(-10)"/><use href="#bill" transform="translate(60,10) rotate(12)"/><use href="#bill" transform="translate(0,-30)"/></g></g>');
+tl.to(["#env", "#gauge"], { opacity: 0, duration: 0.3 }, V[9]);
+tl.fromTo("#kidwrap", { opacity: 0, y: 300 }, { opacity: 1, y: 0, duration: 0.5, ease: "expo.out", immediateRender: false }, V[9] + 0.2);
+K.face(tl, "kid3", { e: "d", m: "smile", blush: 0.8 }, V[9] + 1.0);
+K.react(tl, "kid3", V[9] + 1.0);
+K.pop(tl, "#grab", V[9] + 0.4, 0.3);
+tl.to("#grab", { y: -30, scale: 1.15, svgOrigin: "0 0", duration: 0.6, ease: "back.out(2)" }, V[9] + 1.0);
+K.words("#t6", "<b>grab</b> the match"); K.title(tl, "#t6", V[9] + 0.3);
+tl.set({}, {}, window.DUR);
+window.__timelines["main"] = tl;
+</script>
+</body>
+</html>

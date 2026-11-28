@@ -1,0 +1,12 @@
+[
+ ["Ninety-eight percent planned it. Thirty-seven did it.", 0.1, 1.15, "excited"],
+ ["Sound like your savings plan? Watch this.", 0.35, 1.12, "curious"],
+ ["Farmers in western Kenya. A little fertilizer paid back about thirty-six percent in one season.", 0.35, 1.12, "neutral"],
+ ["Almost all of them said: next season, I'll buy it.", 0.3, 1.12, "neutral"],
+ ["But by planting time, the harvest money was gone.", 0.35, 1.12, "sad"],
+ ["So researchers tried one thing. Right after harvest, normal price, free delivery.", 0.35, 1.12, "curious"],
+ ["Fertilizer use jumped, about eleven points.", 0.4, 1.12, "warm"],
+ ["The same offer, a few months later?", 0.35, 1.12, "curious"],
+ ["About half as many buyers.", 0.5, 1.15, "shocked"],
+ ["So decide while the money is in your hand. Not someday.", 0.4, 1.12, "warm"]
+]

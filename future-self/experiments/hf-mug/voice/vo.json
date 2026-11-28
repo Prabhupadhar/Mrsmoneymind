@@ -1,0 +1,14 @@
+[
+ {
+  "text": "Give someone a mug.",
+  "mood": "excited",
+  "start": 0.1,
+  "end": 1.01
+ },
+ {
+  "text": "Now it's worth double.",
+  "mood": "shocked",
+  "start": 1.31,
+  "end": 2.433
+ }
+]

@@ -1,0 +1,62 @@
+[
+ {
+  "text": "A metal box. Health spending up sixty-eight percent.",
+  "mood": "excited",
+  "start": 0.1,
+  "end": 2.529
+ },
+ {
+  "text": "Ever save for something, and the money just leaks away?",
+  "mood": "curious",
+  "start": 2.879,
+  "end": 5.435
+ },
+ {
+  "text": "In rural Kenya, researchers worked with savings groups: seven hundred seventy-one people.",
+  "mood": "neutral",
+  "start": 5.785,
+  "end": 10.59
+ },
+ {
+  "text": "Some got a simple metal box. A slot, a padlock, and the key.",
+  "mood": "neutral",
+  "start": 10.89,
+  "end": 14.144
+ },
+ {
+  "text": "Others got the same box. But an officer kept the key.",
+  "mood": "curious",
+  "start": 14.494,
+  "end": 17.272
+ },
+ {
+  "text": "A year later, the keep-your-key box raised preventive health spending about sixty-eight percent.",
+  "mood": "warm",
+  "start": 17.672,
+  "end": 22.681
+ },
+ {
+  "text": "And the box they couldn't open?",
+  "mood": "curious",
+  "start": 23.031,
+  "end": 24.32
+ },
+ {
+  "text": "No effect.",
+  "mood": "shocked",
+  "start": 24.82,
+  "end": 25.43
+ },
+ {
+  "text": "Naming the money was enough. Locking it too tight hurt in emergencies.",
+  "mood": "warm",
+  "start": 25.829,
+  "end": 29.644
+ },
+ {
+  "text": "So give your savings a box and a name. And keep the key.",
+  "mood": "warm",
+  "start": 30.044,
+  "end": 32.908
+ }
+]

@@ -1,0 +1,12 @@
+[
+ ["The biggest bonus got the worst results.", 0.1, 1.2, "excited"],
+ ["Everyone says pay more, get more. The data disagrees.", 0.3, 1.2, "curious"],
+ ["In 2002, eighty-seven people in a town in rural India played six simple games.", 0.3, 1.2, "neutral"],
+ ["A top score paid four rupees, forty, or four hundred.", 0.3, 1.2, "neutral"],
+ ["Four hundred was close to a month's spending per person there.", 0.35, 1.2, "curious"],
+ ["Small or medium bonus: top score in about a quarter of the games.", 0.4, 1.2, "neutral"],
+ ["Huge bonus? Just six percent.", 0.5, 1.2, "shocked"],
+ ["At MIT, big pay helped plain key-pressing, but hurt adding up numbers.", 0.35, 1.2, "curious"],
+ ["When a task needs thinking, too much pressure backfires.", 0.35, 1.2, "warm"],
+ ["That's why the biggest bonus got the worst results.", 0.4, 1.2, "warm"]
+]

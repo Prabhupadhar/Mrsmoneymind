@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1080, height=1920" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+<script src="voice.js"></script>
+<script src="kit.js"></script>
+<link rel="stylesheet" href="base.css" />
+<style>
+  #root, html, body { background: #0f3650; }
+  .t { top: 220px; font-size: 96px; }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="32" data-width="1080" data-height="1920" data-motion-blur="on">
+  <svg id="art" class="clip" data-start="0" data-duration="32" viewBox="0 0 1080 1920">
+    <defs>
+      <radialGradient id="bg" cx="0.5" cy="0.55" r="0.8"><stop offset="0" stop-color="#2b7fb0"/><stop offset="1" stop-color="#0a2236"/></radialGradient>
+    </defs>
+    <rect width="1080" height="1920" fill="url(#bg)"/>
+    <g id="cam">
+      <g id="s1" class="scene"></g>
+      <g id="s2" class="scene"></g>
+      <g id="s3" class="scene"></g>
+      <g id="s4" class="scene"></g>
+      <g id="s5" class="scene"></g>
+    </g>
+  </svg>
+  <div id="t1" class="cap t clip" data-start="0" data-duration="32"></div>
+  <div id="t2" class="cap t clip" data-start="0" data-duration="32"></div>
+  <div id="t3" class="cap t clip" data-start="0" data-duration="32"></div>
+  <div id="t4" class="cap t clip" data-start="0" data-duration="32"></div>
+  <div id="t5" class="cap t clip" data-start="0" data-duration="32"></div>
+</div>
+<script>
+window.__timelines = window.__timelines || {};
+var tl = gsap.timeline({ paused: true }), V = window.VO;
+function phone(id, x, y, s, msg) {
+  return '<g transform="translate(' + x + ',' + y + ') scale(' + s + ')"><g id="' + id + '">' +
+    '<rect class="k" x="-150" y="-260" width="300" height="520" rx="40" fill="#141428" stroke-width="10"/><rect x="-128" y="-230" width="256" height="450" rx="20" fill="#e9f3fb"/>' +
+    '<g id="' + id + '-msg"><rect class="k" x="-112" y="-170" width="224" height="130" rx="22" fill="#3fd17a" stroke-width="6"/>' +
+    '<text x="0" y="-118" text-anchor="middle" class="lbl" font-size="40" fill="#fff">' + msg[0] + '</text><text x="0" y="-70" text-anchor="middle" class="lbl" font-size="40" fill="#fff">' + msg[1] + '</text></g></g></g>';
+}
+
+// ---------- S1: HOOK — phone buzzes, the piggy bank fills ----------
+K.add("#s1", K.person("kid", "kid", { x: 330, y: 1060, s: 0.5 }) + phone("ph", 790, 1080, 0.85, ["time to", "save!"]) +
+  '<g transform="translate(330,1390)"><g id="pig"><ellipse class="k" cx="0" cy="0" rx="120" ry="90" fill="#ff9ec4" stroke-width="9"/><circle class="k" cx="110" cy="-10" r="34" fill="#ffb8d6" stroke-width="7"/>' +
+  '<rect x="-30" y="-94" width="60" height="12" rx="6" fill="#0d0f22"/><circle cx="60" cy="-30" r="8" fill="#0d0f22"/></g></g>' +
+  '<g id="coins1">' + [0, 1, 2].map(function (i) { return '<g transform="translate(330,1140)"><g class="cn" id="cn' + i + '" opacity="0"><circle class="k" r="28" fill="#ffd36b" stroke-width="6"/></g></g>'; }).join("") + '</g>');
+K.show(tl, "#s1", 0);
+K.hook(tl, "#t1", "a <b>text</b> a month. they saved <b>more.</b>", V[1] - 0.2);
+tl.fromTo("#ph", { rotation: -8 }, { rotation: 8, duration: 0.06, repeat: 9, yoyo: true, ease: "none", svgOrigin: "0 0" }, 0);
+tl.fromTo("#ph-msg", { scale: 0.3, opacity: 0, transformOrigin: "50% 50%" }, { scale: 1, opacity: 1, duration: 0.4, ease: "back.out(3)" }, 0.05);
+K.face(tl, "kid", { look: [40, 0], m: "o" }, 0);
+[0, 1, 2].forEach(function (i) {
+  tl.fromTo("#cn" + i, { opacity: 1, y: -60 }, { y: 180, duration: 0.4, ease: "power2.in", immediateRender: false }, 0.7 + i * 0.35);
+  tl.to("#cn" + i, { opacity: 0, duration: 0.05 }, 1.1 + i * 0.35);
+  tl.fromTo("#pig", { scaleY: 1, svgOrigin: "0 90" }, { scaleY: 0.9, duration: 0.08, yoyo: true, repeat: 1, immediateRender: false }, 1.1 + i * 0.35);
+});
+K.face(tl, "kid", { m: "smile", e: "d" }, 1.4);
+K.react(tl, "kid", 1.4);
+// "you meant to save... then forgot"
+K.face(tl, "kid", { e: "s", m: "flat", br: 12, look: [0, 0] }, V[1] + 0.2);
+K.words("#t2", "then you <b>forgot?</b>"); K.title(tl, "#t2", V[1] + 0.2);
+tl.to("#t2", { opacity: 0, duration: 0.2 }, V[2] - 0.2);
+
+// ---------- S2: 3 banks, new savings accounts with a goal ----------
+K.add("#s2", ["Philippines", "Peru", "Bolivia"].map(function (n, i) {
+  return '<g transform="translate(' + (220 + i * 320) + ',820)"><g class="bank" id="bank' + i + '"><path class="k" d="M-120,-140 L0,-220 L120,-140 Z" fill="#e9eef5" stroke-width="8"/>' +
+    '<rect class="k" x="-110" y="-140" width="220" height="200" fill="#e9eef5" stroke-width="8"/><g fill="#7fb0d6"><rect x="-80" y="-110" width="30" height="140"/><rect x="-15" y="-110" width="30" height="140"/><rect x="50" y="-110" width="30" height="140"/></g>' +
+    '<text y="120" text-anchor="middle" class="lbl" font-size="54" fill="#dff1ff">' + n + '</text></g></g>';
+}).join("") +
+  '<g transform="translate(540,1250)"><g id="book"><rect class="k" x="-200" y="-130" width="400" height="260" rx="18" fill="#fff6e0" stroke-width="9"/>' +
+  '<text y="-60" text-anchor="middle" class="num" font-size="44" fill="#1d2a6b">SAVINGS</text><text y="10" text-anchor="middle" class="lbl" font-size="50" fill="#1d2a6b">my goal:</text>' +
+  '<path d="M-130,70 L130,70" stroke="#c9ced8" stroke-width="6" stroke-dasharray="14 10"/></g></g>');
+K.cut(tl, "#s1", "#s2", V[2] - 0.3);
+tl.fromTo(".bank", { y: 200, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, stagger: 0.18, ease: "back.out(2)", immediateRender: false }, V[2] + 0.2);
+K.pop(tl, "#book", V[3] + 0.1, 0.4);
+
+// ---------- S3: reminder vs nothing: +6% ----------
+K.add("#s3", phone("ph2", 300, 820, 0.62, ["every", "month"]) +
+  '<g transform="translate(780,820)"><g id="silent"><rect class="k" x="-93" y="-161" width="186" height="322" rx="25" fill="#141428" stroke-width="8"/><rect x="-79" y="-143" width="158" height="279" rx="12" fill="#3a4658"/>' +
+  '<text y="10" text-anchor="middle" class="lbl" font-size="44" fill="#9aa6b8">nothing</text></g></g>' +
+  '<line x1="140" y1="1400" x2="940" y2="1400" stroke="#dff1ff" stroke-width="6"/>' +
+  '<rect class="k" id="rb" x="190" y="' + (1400 - 318) + '" width="220" height="318" fill="#3fd17a" stroke-width="8"/>' +
+  '<rect class="k" id="nb" x="670" y="' + (1400 - 300) + '" width="220" height="300" fill="#9aa6b8" stroke-width="8"/>' +
+  '<text id="six" x="300" y="1050" text-anchor="middle" class="num" font-size="92" fill="#7dff9a" opacity="0">+6%</text>' +
+  '<text x="300" y="1470" text-anchor="middle" class="lbl" font-size="54" fill="#dff1ff">reminded</text><text x="780" y="1470" text-anchor="middle" class="lbl" font-size="54" fill="#dff1ff">no reminder</text>');
+K.cut(tl, "#s2", "#s3", V[4] - 0.3);
+tl.fromTo("#ph2", { rotation: -6 }, { rotation: 6, duration: 0.07, repeat: 7, yoyo: true, ease: "none", svgOrigin: "0 0", immediateRender: false }, V[4] + 0.5);
+tl.fromTo("#rb", { scaleY: 0, svgOrigin: "300 1400" }, { scaleY: 1, duration: 0.6, ease: "expo.out", immediateRender: false }, V[5]);
+tl.fromTo("#nb", { scaleY: 0, svgOrigin: "780 1400" }, { scaleY: 1, duration: 0.6, ease: "expo.out", immediateRender: false }, V[5] + 0.1);
+K.pop(tl, "#six", V[5] + 0.6, 1.6);
+
+// ---------- S4: Peru — the letter that named the goal: +16%; photo / puzzle: no real effect ----------
+K.add("#s4",
+  '<g transform="translate(540,760)"><g id="letter"><rect class="k" x="-250" y="-190" width="500" height="380" rx="16" fill="#fff6e0" stroke-width="9"/>' +
+  '<text y="-100" text-anchor="middle" class="lbl" font-size="50" fill="#1d2a6b">Dear saver,</text><text y="-20" text-anchor="middle" class="lbl" font-size="50" fill="#1d2a6b">deposit for</text>' +
+  '<text y="70" text-anchor="middle" class="num" font-size="54" fill="#d8432f">YOUR GOAL</text></g></g>' +
+  '<text id="sixteen" x="540" y="1110" text-anchor="middle" class="num" font-size="200" fill="#7dff9a" opacity="0">+16%</text>' +
+  '<g id="others" opacity="0">' +
+  '<g transform="translate(330,1340)"><rect class="k" x="-120" y="-100" width="240" height="190" rx="10" fill="#fff" stroke-width="8"/><rect x="-96" y="-78" width="192" height="120" fill="#8ec5e8"/><path d="M-96,42 L-30,-20 L20,20 L60,-10 L96,42 Z" fill="#3fae6a"/></g>' +
+  '<g transform="translate(750,1340)"><path class="k" d="M-100,-80 L0,-80 C0,-110 40,-110 40,-80 L100,-80 L100,80 L-100,80 Z" fill="#ffd36b" stroke-width="8"/></g>' +
+  '<text x="540" y="1490" text-anchor="middle" class="lbl" font-size="58" fill="#dff1ff">photo · puzzle: no real effect</text></g>');
+K.cut(tl, "#s3", "#s4", V[6] - 0.3);
+K.words("#t3", "in <b>Peru</b>"); K.title(tl, "#t3", V[6]);
+tl.fromTo("#letter", { y: -600, rotation: -10 }, { y: 0, rotation: 0, duration: 0.6, ease: "back.out(1.6)", immediateRender: false }, V[6] + 0.2);
+tl.to("#t3", { opacity: 0, duration: 0.2 }, V[7] - 0.2);
+K.pop(tl, "#sixteen", V[7] + 0.05, 2);
+K.camera(tl, "#cam", [[V[7], 1.07, 0, 0, 0.3], [V[8] - 0.2, 1, 0, 0, 0.5]]);
+tl.fromTo("#others", { opacity: 0, y: 80 }, { opacity: 1, y: 0, duration: 0.4, ease: "back.out(2)", immediateRender: false }, V[8] + 0.1);
+tl.to("#sixteen", { scale: 0.7, y: -40, svgOrigin: "540 1110", duration: 0.4 }, V[8]);
+
+// ---------- S5: loop — the kid names the goal in a reminder ----------
+K.add("#s5", K.person("kid2", "kid", { x: 330, y: 1060, s: 0.5 }) + phone("ph3", 790, 1080, 0.85, ["save for:", "my trip"]));
+K.cut(tl, "#s4", "#s5", V[9] - 0.3);
+K.words("#t4", "<b>name</b> your goal"); K.title(tl, "#t4", V[9]);
+tl.fromTo("#ph3-msg", { scale: 0.3, opacity: 0, transformOrigin: "50% 50%" }, { scale: 1, opacity: 1, duration: 0.4, ease: "back.out(3)", immediateRender: false }, V[9] + 0.6);
+tl.fromTo("#ph3", { rotation: -8 }, { rotation: 8, duration: 0.06, repeat: 9, yoyo: true, ease: "none", svgOrigin: "0 0", immediateRender: false }, V[9] + 1.2);
+K.face(tl, "kid2", { m: "smile", e: "h", look: [40, 0], blush: 0.8 }, V[9] + 1.0);
+K.react(tl, "kid2", V[9] + 1.0);
+K.sway(tl, "kid2", V[9] + 1.8, window.DUR);
+tl.set({}, {}, window.DUR);
+window.__timelines["main"] = tl;
+</script>
+</body>
+</html>
