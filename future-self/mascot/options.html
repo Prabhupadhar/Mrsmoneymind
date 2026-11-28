@@ -1,0 +1,61 @@
+<!doctype html><html><body style="margin:0">
+<svg width="1920" height="1080" viewBox="0 0 1920 1080">
+<defs><radialGradient id="bg" cx=".5" cy=".4" r=".8"><stop offset="0" stop-color="#5a5aa8"/><stop offset="1" stop-color="#23244f"/></radialGradient></defs>
+<rect width="1920" height="1080" fill="url(#bg)"/>
+<g id="c"></g>
+</svg>
+<script>
+const O='#2b1d14';
+function girl(cx,o){
+  const hy=320,r=120;
+  const line=(pts,w,col)=>`<polyline points="${pts.map(p=>p.join(',')).join(' ')}" fill="none" stroke="${O}" stroke-width="${w+12}" stroke-linecap="round" stroke-linejoin="round"/><polyline points="${pts.map(p=>p.join(',')).join(' ')}" fill="none" stroke="${col}" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round"/>`;
+  let s=`<rect x="${cx-215}" y="90" width="430" height="900" rx="40" fill="#ffffff" opacity=".07"/>`;
+  s+=`<ellipse cx="${cx}" cy="862" rx="120" ry="16" fill="#000" opacity=".25"/>`;
+  s+=(o.back||'')
+  // legs + shoes
+  s+=line([[cx-38,670],[cx-46,840]],40,o.pants)+line([[cx+38,670],[cx+46,840]],40,o.pants);
+  s+=`<ellipse cx="${cx-56}" cy="850" rx="38" ry="20" fill="#fff" stroke="${O}" stroke-width="6"/><ellipse cx="${cx+56}" cy="850" rx="38" ry="20" fill="#fff" stroke="${O}" stroke-width="6"/>`;
+  // arms (behind torso edges)
+  s+=line([[cx-78,500],[cx-112,600],[cx-118,660]],38,o.top);
+  s+=line([[cx+78,500],[cx+150,560],[cx+150,470]],38,o.top);
+  s+=`<circle cx="${cx-118}" cy="672" r="24" fill="${o.skin}" stroke="${O}" stroke-width="6"/><circle cx="${cx+150}" cy="452" r="28" fill="${o.skin}" stroke="${O}" stroke-width="6"/>`;
+  // torso
+  s+=`<rect x="${cx-22}" y="420" width="44" height="50" fill="${o.skin}" stroke="${O}" stroke-width="6"/>`;
+  s+=`<path d="M${cx-95},690 L${cx-85},490 Q${cx},450 ${cx+85},490 L${cx+95},690 Z" fill="${o.top}" stroke="${O}" stroke-width="7" stroke-linejoin="round"/>`+(o.torso||'');
+  // head
+  s+=`<circle cx="${cx}" cy="${hy}" r="${r}" fill="${o.skin}" stroke="${O}" stroke-width="7"/>`;
+  // eyes
+  for(const dx of [-44,44]) s+=`<ellipse cx="${cx+dx}" cy="${hy+20}" rx="27" ry="31" fill="#fff" stroke="${O}" stroke-width="5"/><circle cx="${cx+dx+3}" cy="${hy+24}" r="18" fill="${O}"/><circle cx="${cx+dx+9}" cy="${hy+15}" r="7" fill="#fff"/><path d="M${cx+dx-24},${hy-24} q24,-14 48,0" stroke="${O}" stroke-width="6" fill="none" stroke-linecap="round"/><path d="M${cx+dx+(dx<0?-24:24)},${hy+2} l${dx<0?-10:10},-8" stroke="${O}" stroke-width="5" stroke-linecap="round"/>`;
+  s+=`<circle cx="${cx-78}" cy="${hy+62}" r="17" fill="#ff8fa3" opacity=".7"/><circle cx="${cx+78}" cy="${hy+62}" r="17" fill="#ff8fa3" opacity=".7"/>`;
+  s+=`<path d="M${cx-22},${hy+70} q22,22 44,0" stroke="${O}" stroke-width="6" fill="#d94a5a" stroke-linecap="round"/>`;
+  s+=(o.front||'');
+  s+=`<g font-family="Arial Black,Arial" text-anchor="middle"><text x="${cx-165}" y="160" font-size="60" font-weight="900" fill="#f5c04a">${o.k}</text>
+   <text x="${cx}" y="925" font-size="34" font-weight="900" fill="#fff">${o.name}</text>
+   <text x="${cx}" y="965" font-size="22" font-family="Arial" fill="#d4d6ff">${o.d1}</text><text x="${cx}" y="993" font-size="22" font-family="Arial" fill="#d4d6ff">${o.d2}</text></g>`;
+  return s;
+}
+const fringe=(cx,col)=>`<path d="M${cx-126},${350} A126 126 0 0 1 ${cx+126},${350} L${cx+118},${300} Q${cx+60},${236} ${cx-10},${262} Q${cx-70},${280} ${cx-120},${310} Z" fill="${col}" stroke="${O}" stroke-width="7" stroke-linejoin="round"/>`;
+let html='';
+// A — the wise saver: bun, round glasses, mustard cardigan
+html+=girl(240,{k:'A',name:'THE WISE SAVER',d1:'bun, round glasses, cardigan',d2:'calm, smart, "Mrs." vibe',skin:'#ffd9b8',top:'#f5c04a',pants:'#3b3f6e',
+ back:`<circle cx="240" cy="190" r="56" fill="#5a3422" stroke="${O}" stroke-width="7"/>`,
+ front:fringe(240,'#5a3422')+[196,284].map(x=>`<circle cx="${x}" cy="340" r="40" fill="none" stroke="${O}" stroke-width="6"/>`).join('')+`<line x1="236" y1="340" x2="244" y2="340" stroke="${O}" stroke-width="6"/>`,
+ torso:`<path d="M240,470 L240,690" stroke="${O}" stroke-width="5"/><circle cx="228" cy="540" r="6" fill="${O}"/><circle cx="228" cy="600" r="6" fill="${O}"/>`});
+// B — the action heroine: high ponytail, gold headband, red sport jacket
+html+=girl(720,{k:'B',name:'THE ACTION HEROINE',d1:'high ponytail, gold headband',d2:'built for action scenes',skin:'#f1c19b',top:'#ff4f6d',pants:'#2b2f45',
+ back:`<path d="M780,230 C960,200 980,430 900,560 C930,430 880,320 790,300 Z" fill="#241a1a" stroke="${O}" stroke-width="7" stroke-linejoin="round"/>`,
+ front:fringe(720,'#241a1a')+`<path d="M604,290 Q720,200 836,290" stroke="#f5c04a" stroke-width="20" fill="none" stroke-linecap="round"/>`,
+ torso:`<path d="M690,478 L700,690 M750,478 L740,690" stroke="#f5c04a" stroke-width="10"/>`});
+// C — the money pro: auburn bob, teal blazer, gold earrings
+html+=girl(1200,{k:'C',name:'THE MONEY PRO',d1:'sleek bob, blazer, gold earrings',d2:'confident finance expert',skin:'#e9b48e',top:'#1f8a8a',pants:'#2b2f45',
+ back:`<path d="M1056,450 L1056,330 A144 144 0 0 1 1344,330 L1344,450 Q1300,470 1290,430 L1110,430 Q1100,470 1056,450 Z" fill="#a0421f" stroke="${O}" stroke-width="7" stroke-linejoin="round"/>`,
+ front:`<path d="M1074,350 A126 126 0 0 1 1326,350 L1320,300 Q1260,240 1200,250 Q1130,250 1080,300 Z" fill="#a0421f" stroke="${O}" stroke-width="7"/><path d="M1200,252 Q1160,300 1086,320" stroke="${O}" stroke-width="5" fill="none"/>`+[1078,1322].map(x=>`<circle cx="${x}" cy="400" r="12" fill="#f5c04a" stroke="${O}" stroke-width="4"/>`).join(''),
+ torso:`<path d="M1170,470 L1200,560 L1230,470" fill="#fff" stroke="${O}" stroke-width="5"/><circle cx="1200" cy="520" r="9" fill="#f5c04a"/>`});
+// D — the big sister: curly hair, orange hoodie
+const curls=[];for(let a=150;a<=390;a+=20){const t=a*Math.PI/180;curls.push(`<circle cx="${1680+Math.cos(t)*130}" cy="${320+Math.sin(t)*130}" r="48" fill="#2b1d14" stroke="${O}" stroke-width="5"/>`)}
+html+=girl(1680,{k:'D',name:'THE BIG SISTER',d1:'curly hair, orange hoodie',d2:'warm, friendly, relatable',skin:'#b87a54',top:'#f39a2b',pants:'#3b3f6e',
+ back:curls.join(''),
+ front:[[-80,240],[-30,214],[24,212],[76,236],[110,270],[-110,272]].map(([dx,y])=>`<circle cx="${1680+dx}" cy="${y}" r="36" fill="#2b1d14"/>`).join(''),
+ torso:`<path d="M1640,600 L1720,600 L1712,650 L1648,650 Z" fill="none" stroke="${O}" stroke-width="5"/><path d="M1662,490 l-6,60 M1698,490 l6,60" stroke="#fff" stroke-width="5" stroke-linecap="round"/>`});
+document.getElementById('c').innerHTML=html;
+</script></body></html>
